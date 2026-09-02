@@ -1,0 +1,84 @@
+diff --git a/app/globals.css b/app/globals.css
+--- a/app/globals.css
++++ b/app/globals.css
+@@ -1974,6 +1974,11 @@ video {
+ 
+   .story-villa-film {
+     width: 100%;
++    aspect-ratio: 9 / 16;
++  }
++
++  .story-villa-film video {
++    aspect-ratio: 9 / 16;
+   }
+ 
+   .story-editorial-statement {
+diff --git a/tests/rendered-html.test.mjs b/tests/rendered-html.test.mjs
+--- a/tests/rendered-html.test.mjs
++++ b/tests/rendered-html.test.mjs
+@@ -228,6 +228,8 @@ test("keeps the approved composition, media behavior, and delivery controls", as
+     /@media \(max-width: 560px\)[\s\S]*\.story-origin\s*\{[\s\S]*grid-template-columns:\s*minmax\(0, 3fr\) minmax\(0, 2fr\)/,
+     /@media \(max-width: 560px\)[\s\S]*\.story-home-chapter\s*\{[\s\S]*grid-template-columns:\s*minmax\(0, 2fr\) minmax\(0, 1fr\)/,
+     /@media \(max-width: 560px\)[\s\S]*\.story-award-proof img\s*\{[\s\S]*aspect-ratio:\s*3 \/ 4/,
++    /@media \(max-width: 560px\)[\s\S]*\.story-villa-film\s*\{[\s\S]*aspect-ratio:\s*9 \/ 16/,
++    /@media \(max-width: 560px\)[\s\S]*\.story-villa-film video\s*\{[\s\S]*aspect-ratio:\s*9 \/ 16/,
+   ]) assert.match(css, pattern);
+   for (const pattern of [
+     /@media \(max-width: 560px\)[\s\S]*\.hero-chef-portrait\s*\{[\s\S]*right:\s*-5%;[\s\S]*bottom:\s*-2%;[\s\S]*width:\s*64%;[\s\S]*height:\s*auto/,
+diff --git a/docs/DESIGN_REFERENCE_MAP.md b/docs/DESIGN_REFERENCE_MAP.md
+--- a/docs/DESIGN_REFERENCE_MAP.md
++++ b/docs/DESIGN_REFERENCE_MAP.md
+@@ -9,8 +9,9 @@ This file records only the active interface. Superseded proposals and implement
+ 
+ | Reference | Active use | Deliberate exclusions |
+ |---|---|---|
++| User’s direct responsive correction from 2026-08-31: the story video remains 9:16 on mobile and every other mobile decision stays as it was; the horizontal change applies only to the web version | Limit the approved horizontal `4 / 3` film aperture to desktop/tablet. At the existing phone breakpoint, restore the original vertical `9 / 16` aperture while preserving the current mobile columns, text, ornament, facts, playback behavior and square edges | No mobile re-layout, reordered content, new crop, replacement film, change to desktop/tablet 4:3, new control, decoration or unrelated page change |
+ | User-supplied chef-story screenshot and direct correction from 2026-08-31: make the MasterChef block, its text and photograph smaller; keep it as a modest horizontal rectangle directly below the hero; render the two supplied biography paragraphs in one typeface | Supersedes only the scale and mixed body typography of the current award row. Constrain that row independently inside the wider story layout, reduce its heading and body rhythm, use a shallow landscape award crop, and give both biography paragraphs the same Onest size/leading while retaining their semantic separation | No removal or shortening of the supplied copy, replacement photograph, caption, card surface, radius, shadow, new decoration, change to the following film/home chapter or whole-page restyle |
+ | User-supplied 2278 × 1510 outdoor cooking photograph and direct instruction from 2026-08-31 to use it for `Приватные мероприятия` while concealing the upper-left source mark | Replace only the second event-format photograph. Keep the supplied bitmap intact and use the already approved central `4 / 5` stage crop so the chef, both working hands, crêpe plate and outdoor service context remain visible while the upper-left mark stays outside the rendered aperture | No generative reconstruction, watermark inpainting, face/body retouch, stretch, new caption inside the photograph, change to format order/copy, card restyle or unrelated page change |
+ | User-supplied inquiry screenshot at 15:54 and direct feedback from 2026-08-31 that the web version feels slightly empty | Recompose only the wide-screen vertical rhythm: keep the heading and Instagram action as one upper-left invitation group instead of pinning the action to the bottom edge, while the complete brush-villa canvas continues to occupy the full closing field | No new copy, eyebrow, metadata, line, icon, decorative filler, larger/cropped illustration, image edit, mobile reordering, footer change or new visual style |
+-| User-supplied chef-story capture, direct layout instruction and immediate aspect-ratio clarification from 2026-08-31: immediately below the hero place the award text at left and award photograph at right, include `Теперь я превращаю этот опыт в ваш идеальный гастрономический вечер.` with that text, then create a separate row with video at left and text at right and make the video horizontal 4:3 | Supersedes the earlier merged desktop spread, phone-only reorder and mistaken 3:4 interpretation. The first story row is one text/photo relationship directly after the hero; the second is one dominant horizontal 4:3 film aperture at left and narrower working-day text at right. Keep the existing award image, exact biography, exact close, `Я — у вас дома` statement, three workday facts, film, captions and square edges | No equal cards, interleaved chronology, text beneath the award photograph, narrow 9:16 or vertical 3:4 film tile, crop that removes the chef or working action, invented copy, new media, icon, rounded panel, shadow, gradient, glass, decorative connector or unrelated change below the story |
++| User-supplied chef-story capture, direct layout instruction and immediate aspect-ratio clarification from 2026-08-31: immediately below the hero place the award text at left and award photograph at right, include `Теперь я превращаю этот опыт в ваш идеальный гастрономический вечер.` with that text, then create a separate row with video at left and text at right and make the web video horizontal 4:3 | Supersedes the earlier merged desktop spread and mistaken desktop 3:4 interpretation. The first story row is one text/photo relationship directly after the hero; the second uses one dominant horizontal 4:3 film aperture at left and narrower working-day text at right on web widths. The later direct mobile correction keeps the phone aperture at 9:16. Keep the existing award image, exact biography, exact close, `Я — у вас дома` statement, three workday facts, film, captions and square edges | No equal cards, interleaved chronology, text beneath the award photograph, desktop 9:16 or vertical 3:4 film tile, phone-wide 4:3 override, crop that removes the chef or working action, invented copy, new media, icon, rounded panel, shadow, gradient, glass, decorative connector or unrelated change below the story |
+ | User’s inquiry-close screenshot and direct correction from 2026-08-31: the complete brush-villa drawing must remain visible; reduce or recompose the text instead of cropping the artwork | Supersedes the earlier desktop/right and mobile/full-width crop treatment. Preserve the original 1536 × 1024 illustration canvas at every width with `contain` fitting; use its authored paper reserve for the heading on desktop and reduce the display scale where needed | No crop, zoom, negative image offset, image edit, replacement illustration, text over dense brushwork, added copy, new action or change outside inquiry/footer geometry |
+diff --git a/docs/DESIGN_SYSTEM.md b/docs/DESIGN_SYSTEM.md
+--- a/docs/DESIGN_SYSTEM.md
++++ b/docs/DESIGN_SYSTEM.md
+@@ -94,8 +94,8 @@ Media reference swatches are `--media-shadow: #121318`, `--media-charcoal: #2729
+ 
+ - The section begins immediately after the hero with a compact two-column award row. It is a modest horizontal rectangle rather than a viewport-scale chapter: desktop width is capped at `1080px`, vertical padding stays restrained, and neither text nor image is allowed to dominate the next screen.
+ - Its text column contains the heading `От MasterChef к вашему столу`, the exact award/origin paragraph and the exact close `Теперь я превращаю этот опыт в ваш идеальный гастрономический вечер.`; the documentary award photograph occupies the right column in a shallow `16 / 9` aperture. The title remains Oranienbaum, but both supplied biography paragraphs use the same Onest size, weight and line height. Difference in meaning comes from spacing and color, not a second body typeface or display-sized closing sentence.
+-- A separately ruled present-day row follows. A horizontal `4 / 3` film aperture occupies the dominant left field and the text occupies the narrower right field. The right rail contains `Я — у вас дома`, the approved Cyprus tapestry and the three existing working-day facts.
+-- The vertical source film uses a restrained center crop inside the requested horizontal 4:3 aperture. The chef and working action must remain visible throughout playback; the media must not be stretched.
+-- Desktop and tablet preserve those two relationships. Phone retains the same semantic order and uses a compact adaptation: text/photo first, then the horizontal 4:3 film at left and workday text at right. It may reduce type and ornament depth, but it may not put the home chapter ahead of the award story or turn either row into equal cards.
++- A separately ruled present-day row follows. On desktop and tablet, a horizontal `4 / 3` film aperture occupies the dominant left field and the text occupies the narrower right field. The right rail contains `Я — у вас дома`, the approved Cyprus tapestry and the three existing working-day facts.
++- The vertical source film uses a restrained center crop inside the requested horizontal 4:3 web aperture. The chef and working action must remain visible throughout playback; the media must not be stretched.
++- Phone retains the current semantic order, columns, type, ornament and workday rail, but the film aperture returns to the directly required vertical `9 / 16`. The horizontal `4 / 3` change must not cascade into the phone breakpoint.
+ - The rejected eyebrow `мой путь` is absent; no substitute label, chapter number, arrow or connector is introduced.
+ - The “документальный фрагмент” label, local pause overlay, section folio and fact indices are absent.
+diff --git a/docs/DESIGN_AUDIT.md b/docs/DESIGN_AUDIT.md
+--- a/docs/DESIGN_AUDIT.md
++++ b/docs/DESIGN_AUDIT.md
+@@ -2,6 +2,24 @@
+ 
+ Audit date: 2026-08-31
+ 
++## Mobile story-film 9:16 restoration plan — 2026-08-31
++
++The user directly clarified that the horizontal story-film change belongs only to the web version: on mobile the video must remain `9:16` and everything else must stay as it was. Before interface edits, the active story markup, film source/poster/captions, global `4 / 3` rule, the existing `560px` phone breakpoint, current mobile two-column composition, reference map, design system, regression assertions and dirty worktree were audited. The defect is a cascade leak: the desktop aspect ratio currently applies at every width because the phone rule changes width but does not restore an aspect ratio.
++
++| Existing element | Why it needs rework | Confirmed replacement | Retained |
++|---|---|---|---|
++| Story film computes to `4 / 3` at phone widths | The global web rule reaches mobile and contradicts the direct correction | At `max-width: 560px`, set both the aperture and video to `aspect-ratio: 9 / 16` | Desktop/tablet `4 / 3`, current phone columns and spacing, exact MP4/poster/VTT, center crop, muted viewport playback, facts, ornament and square edges |
++
++Templated elements found: none. This is a responsive containment correction inside the approved project-specific story, not a new composition. Components retained: the complete `ChefStoryVideo`, story markup and all non-phone CSS. Components reworked: two phone-only declarations and their regression assertion. New components, assets, copy, controls, decoration and UI-library primitives required: none.
++
++Implementation sequence: update the active reference map and design system; add the scoped phone aspect-ratio override; update regression coverage to require web `4 / 3` and mobile `9 / 16`; run the focused source test, ESLint, production build and `git diff --check`; verify the required widths if browser access is available. Decisions without references: none. The breakpoint, source and all geometry except the explicitly supplied mobile ratio remain unchanged.
++
++Implementation result: the global story-film aperture and video remain `4 / 3`. Inside the existing `@media (max-width: 560px)` block, both now explicitly resolve to `9 / 16`. No width, grid, gap, type, ornament, source, crop position, playback rule or markup changed, so the current phone composition is preserved apart from the corrected vertical aperture.
++
++Verification result: ESLint, the production Vinext build, the focused composition/media regression and `git diff --check` pass. The complete five-test file has three passing source/palette/media suites; its two existing generated-worker integration tests retain the previously documented `default is not a function` failure in `dist/server/ssr/index.js`, and no worker/runtime source changed. Structural coverage now requires the default web `4 / 3` pair and the phone-only `9 / 16` pair. Per the active Sites workflow, browser screenshots, DOM inspection and resizing were not performed without an explicit browser-testing request; visual confirmation at 1440, 1280, 1024, 768, 430, 390 and 375 px therefore remains the open definition-of-done limitation.
++
++Final anti-template audit: the correction adds two phone-only aspect-ratio declarations and no section, card, repeated composition, radius, shadow, gradient, glass, glow, icon, copy, decoration, animation, generated media or library-default component. Files created: none. Files changed for this correction: `app/globals.css`, `tests/rendered-html.test.mjs`, `docs/DESIGN_REFERENCE_MAP.md`, `docs/DESIGN_SYSTEM.md` and this audit. References used: the user’s direct mobile/web distinction, the existing 560px phone breakpoint and the exact existing film implementation. Decisions without references: none. UI libraries introduced or used as visible primitives: none. Remaining limitations and risks: the seven-width visual pass above and the unrelated generated-worker failures; no commit or publication was performed.
++
+ ## Supporting-label removals plan — 2026-08-31
+ 
+ The user directly removed five visible supporting lines: `мой путь`, `у меня нет готового меню`, `я готовлю для компаний до 20 гостей`, `первый шаг`, and `Я провожу частные ужины, приватные мероприятия и мастер-классы · до 20 гостей`. The active route, story heading, bespoke-menu heading and format heading, inquiry grid, footer grid, responsive rules, active reference map, design system and rendered-HTML coverage were audited before implementation.

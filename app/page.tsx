@@ -75,6 +75,7 @@ const eventFormats = [
     width: 1152,
     height: 1572,
     alt: "Евгений Грыбенюк готовит блюдо на сковороде для частного ужина",
+    drawingSrc: "/media/blueprint-backgrounds/private-dinner-seven-course.png",
   },
   {
     name: "Приватные мероприятия",
@@ -84,6 +85,7 @@ const eventFormats = [
     width: 2278,
     height: 1510,
     alt: "Евгений Грыбенюк готовит блины перед гостями на приватном мероприятии",
+    drawingSrc: "/media/blueprint-backgrounds/private-event-canape-studies.png",
   },
   {
     name: "Мастер-классы",
@@ -93,6 +95,7 @@ const eventFormats = [
     width: 1144,
     height: 770,
     alt: "Евгений Грыбенюк показывает участникам мастер-класса профессиональные приёмы",
+    drawingSrc: null,
   },
 ];
 
@@ -159,6 +162,18 @@ function EventFormats() {
               <h3>{format.name}</h3>
               <p>{format.description}</p>
             </div>
+            {format.drawingSrc ? (
+              <figure className="format-drawing block-drawing" aria-hidden="true">
+                <img
+                  src={format.drawingSrc}
+                  width="1774"
+                  height="887"
+                  loading="lazy"
+                  decoding="async"
+                  alt=""
+                />
+              </figure>
+            ) : null}
           </li>
         ))}
       </ol>
@@ -267,6 +282,16 @@ export default function Home() {
                 </p>
               </div>
             </div>
+            <figure className="story-origin-drawing block-drawing" aria-hidden="true">
+              <img
+                src="/media/blueprint-backgrounds/masterchef-recipes-europe.png"
+                width="1774"
+                height="887"
+                loading="lazy"
+                decoding="async"
+                alt=""
+              />
+            </figure>
             <EventFormats />
           </div>
         </section>

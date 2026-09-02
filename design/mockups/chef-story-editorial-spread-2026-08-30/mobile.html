@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Chef story — mobile editorial poster</title>
+  <style>
+    @font-face { font-family:Oranienbaum; src:url('/public/fonts/oranienbaum-cyrillic.woff2') format('woff2'); }
+    @font-face { font-family:Onest; src:url('/public/fonts/onest-cyrillic.woff2') format('woff2'); }
+    :root { --paper:#f5f1e8; --ink:#221d1a; --muted:#746c64; --rust:#a34f2b; --rule:rgba(51,41,45,.18); }
+    * { box-sizing:border-box; }
+    html, body { width:100%; min-height:100%; margin:0; }
+    body { background:var(--paper); color:var(--ink); font-family:Onest, sans-serif; }
+    .page { width:100%; min-height:100vh; padding:28px 20px 70px; background:var(--paper); }
+    .poster { position:relative; width:100%; aspect-ratio:9 / 16; border-block:1px solid var(--rule); }
+    .index { position:absolute; top:18px; left:0; margin:0; color:var(--muted); font-size:9px; letter-spacing:.16em; text-transform:uppercase; }
+    .index span { margin-right:12px; color:var(--rust); }
+    .title { position:absolute; z-index:3; top:56px; left:0; margin:0; font-family:Oranienbaum, serif; font-size:53px; font-weight:400; letter-spacing:-.04em; line-height:.86; }
+    .title em { display:block; margin-top:6px; color:var(--rust); font-style:normal; }
+    .film { position:absolute; z-index:2; top:164px; right:0; width:68%; aspect-ratio:9 / 16; margin:0; overflow:hidden; background:#120d09; }
+    .film video { display:block; width:100%; height:100%; object-fit:contain; background:#120d09; }
+    .caption { position:absolute; left:8px; right:8px; bottom:9px; margin:0; padding:3px 4px; background:rgba(18,13,9,.8); color:#fffdf8; font-size:8px; line-height:1.2; text-align:center; }
+    .fact-rail { position:absolute; top:236px; left:0; width:26%; margin:0; padding:0 14px 0 0; border-right:1px solid var(--rust); list-style:none; }
+    .fact-rail li { padding:0 0 18px; color:var(--muted); font-size:8px; letter-spacing:.11em; line-height:1.45; text-transform:uppercase; }
+    .fact-rail li::before { content:attr(data-index); display:block; margin-bottom:5px; color:var(--rust); font-size:8px; }
+    .film-note { position:absolute; right:0; bottom:16px; margin:0; color:var(--muted); font-size:8px; letter-spacing:.13em; text-transform:uppercase; }
+    .biography { margin-top:36px; padding-top:27px; border-top:1px solid var(--rule); }
+    .biography > p { margin:0 0 16px; color:var(--rust); font-size:9px; letter-spacing:.16em; text-transform:uppercase; }
+    .biography h2 { margin:0; font-family:Oranienbaum, serif; font-size:43px; font-weight:400; letter-spacing:-.035em; line-height:.94; }
+    .biography h2 em { color:var(--rust); font-style:normal; }
+  </style>
+</head>
+<body>
+  <main class="page" aria-label="Макет блока о шефе для мобильного экрана">
+    <section class="poster">
+      <p class="index"><span>01</span>я — у вас дома</p>
+      <h1 class="title">Я —<em>у вас дома.</em></h1>
+      <ol class="fact-rail" aria-label="Проверенные факты">
+        <li data-index="01">победитель<br />MasterChef</li>
+        <li data-index="02">готовлю<br />лично</li>
+        <li data-index="03">до 20<br />гостей</li>
+      </ol>
+      <figure class="film">
+        <video autoplay muted loop playsinline poster="/public/media/chef-story-img-5399-poster.jpg">
+          <source src="/public/media/chef-story-img-5399-no-grill.mp4" type="video/mp4" />
+        </video>
+        <figcaption class="caption">[Музыкальное сопровождение]</figcaption>
+      </figure>
+      <p class="film-note">документальный фрагмент</p>
+    </section>
+    <section class="biography">
+      <p>мой путь</p>
+      <h2>От MasterChef<br /><em>к вашему столу.</em></h2>
+    </section>
+  </main>
+</body>
+</html>
