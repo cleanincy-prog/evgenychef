@@ -1,10 +1,4 @@
 import Image from "next/image";
-import {
-  MenuComposition,
-  PreparationSequence,
-  SourceContour,
-  WorkdayTrajectory,
-} from "./blueprint-diagrams";
 import ChefStoryVideo from "./chef-story-video";
 
 /* eslint-disable @next/next/no-img-element -- local documentary images use CSS-directed editorial crops */
@@ -105,7 +99,6 @@ const eventFormats = [
 const sourceChapters = [
   {
     id: "source-meat-title",
-    kind: "meat",
     category: "Мясо",
     statement: "Хотите ягнёнка? — еду за ним в горы.",
     images: [
@@ -119,7 +112,6 @@ const sourceChapters = [
   },
   {
     id: "source-fish-title",
-    kind: "fish",
     category: "Рыба",
     statement: "Нужна рыба? — еду в порт к рыбакам.",
     images: [
@@ -133,7 +125,6 @@ const sourceChapters = [
   },
   {
     id: "source-produce-title",
-    kind: "produce",
     category: "Овощи и фрукты",
     statement: "Свежие овощи и фрукты? — только с кипрских ферм.",
     images: [
@@ -150,7 +141,6 @@ const sourceChapters = [
 function EventFormats() {
   return (
     <div className="format-chapter">
-      <PreparationSequence />
       <ol className="format-list">
         {eventFormats.map((format, index) => (
           <li className={`format-row format-row-${index + 1}`} key={format.name}>
@@ -295,7 +285,6 @@ export default function Home() {
                 <li><span>вечер</span> готовлю у вас дома для вас и ваших гостей</li>
               </ul>
             </div>
-            <WorkdayTrajectory />
             <figure className="story-film">
               <ChefStoryVideo />
             </figure>
@@ -315,7 +304,16 @@ export default function Home() {
                 Расскажите мне о любимых вкусах и ограничениях, я соберу для вас персональное меню.
               </p>
             </div>
-            <MenuComposition />
+            <figure className="menu-dish">
+              <img
+                src="/media/optimized/gallery-dish.webp"
+                width="512"
+                height="640"
+                loading="lazy"
+                decoding="async"
+                alt="Авторское блюдо Евгения Грыбенюка, вокруг которого выстроен персональный план меню"
+              />
+            </figure>
           </header>
 
           <div className="source-list">
@@ -339,7 +337,6 @@ export default function Home() {
                     />
                   ))}
                 </div>
-                <SourceContour kind={chapter.kind} />
               </article>
             ))}
           </div>

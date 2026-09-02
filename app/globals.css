@@ -710,70 +710,8 @@ button:focus-visible,
   font-weight: 300;
 }
 
-.blueprint-figure {
-  margin: 0;
-  color: var(--ink);
-  pointer-events: none;
-}
-
-.blueprint-figure svg {
-  display: block;
-  width: 100%;
-  height: 100%;
-  overflow: visible;
-}
-
-.blueprint-primary,
-.blueprint-construction,
-.blueprint-accent,
-.blueprint-ring {
-  fill: none;
-  stroke-linecap: butt;
-  stroke-linejoin: miter;
-}
-
-.blueprint-primary {
-  stroke: currentColor;
-  stroke-width: 1.35;
-  opacity: .82;
-}
-
-.blueprint-construction {
-  stroke: var(--rule);
-  stroke-width: 1;
-}
-
-.blueprint-accent {
-  stroke: var(--accent-small);
-  stroke-width: 1.4;
-  opacity: .9;
-}
-
-.blueprint-ring {
-  fill: var(--paper-light);
-  stroke: var(--accent);
-  stroke-width: 1;
-}
-
-.blueprint-node {
-  fill: var(--accent-small);
-  stroke: none;
-}
-
-.blueprint-dashed { stroke-dasharray: 5 8; }
-.preparation-mobile-nodes,
-.workday-trajectory .workday-mobile-svg { display: none; }
-
 .format-chapter {
   position: relative;
-}
-
-.preparation-sequence {
-  height: clamp(128px, 13vw, 172px);
-  margin-top: clamp(34px, 4vw, 52px);
-  padding: 4px 0;
-  border-top: 1px solid var(--rule);
-  border-bottom: 1px solid var(--rule);
 }
 
 .format-list {
@@ -890,6 +828,9 @@ button:focus-visible,
 }
 
 .present-day {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
   padding: clamp(72px, 7vw, 108px) var(--gutter);
   border-top: 1px solid var(--rule);
   background: var(--paper-light);
@@ -900,6 +841,21 @@ button:focus-visible,
   position: relative;
   gap: 0;
   align-items: center;
+}
+
+.story-present::before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  top: -24px;
+  bottom: -24px;
+  left: 24%;
+  right: 25%;
+  background-image: url("/media/blueprint-backgrounds/workday-plan.webp");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  pointer-events: none;
 }
 
 .story-present-copy {
@@ -946,15 +902,6 @@ button:focus-visible,
   font-weight: 600;
 }
 
-.workday-trajectory {
-  position: relative;
-  z-index: 1;
-  grid-column: 4 / 9;
-  grid-row: 1;
-  align-self: center;
-  height: clamp(500px, 50vw, 700px);
-}
-
 .story-film {
   position: relative;
   z-index: 2;
@@ -987,10 +934,25 @@ button:focus-visible,
 
 .sources-intro {
   position: relative;
+  isolation: isolate;
+  overflow: hidden;
   grid-template-columns: repeat(12, minmax(0, 1fr));
   gap: clamp(24px, 3.6vw, 56px);
   align-items: center;
+  min-height: clamp(520px, 50vw, 650px);
   margin-bottom: clamp(38px, 4.5vw, 62px);
+}
+
+.sources-intro::before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  inset: 0 0 0 32%;
+  background-image: url("/media/blueprint-backgrounds/menu-plate-plan.webp");
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: contain;
+  pointer-events: none;
 }
 
 .sources-heading {
@@ -1010,33 +972,25 @@ button:focus-visible,
   font: 300 16px/1.8 var(--font-sans);
 }
 
-.menu-composition {
-  grid-column: 4 / 13;
-  position: relative;
-  justify-self: end;
-  width: min(100%, 760px);
-  height: auto;
-  aspect-ratio: 720 / 560;
-}
-
-.menu-composition svg {
-  position: relative;
-  z-index: 2;
-}
-
-.menu-note {
+.menu-dish {
   position: absolute;
-  padding: 4px 7px;
-  background: var(--paper);
-  color: var(--accent-small);
-  font: 500 11.2px/1.4 var(--font-sans);
-  letter-spacing: .12em;
-  text-transform: uppercase;
+  z-index: 1;
+  top: 50%;
+  left: 68.5%;
+  width: clamp(170px, 17vw, 236px);
+  aspect-ratio: 1;
+  margin: 0;
+  overflow: hidden;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
 }
 
-.menu-note-taste { top: 15%; left: 0; }
-.menu-note-limits { top: 17%; right: 0; }
-.menu-note-result { right: 0; bottom: 14%; }
+.menu-dish img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 58%;
+}
 
 .source-list {
   position: relative;
@@ -1059,6 +1013,8 @@ button:focus-visible,
 .source-row {
   position: relative;
   z-index: 1;
+  isolation: isolate;
+  overflow: hidden;
   display: grid;
   grid-template-columns: repeat(12, minmax(0, 1fr));
   gap: clamp(18px, 2.2vw, 32px);
@@ -1068,17 +1024,40 @@ button:focus-visible,
   border-bottom: 1px solid var(--rule);
 }
 
-.source-copy { grid-column: 1 / 4; }
-
-.source-images {
-  grid-column: 4 / 8;
-  grid-row: 1;
+.source-row::before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  inset: 18px 0 18px 61%;
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: contain;
+  pointer-events: none;
 }
 
-.source-contour {
-  grid-column: 8 / 13;
+.source-row-1::before {
+  background-image: url("/media/blueprint-backgrounds/meat-cut-plan.webp");
+}
+
+.source-row-2::before {
+  background-image: url("/media/blueprint-backgrounds/fish-cut-plan.webp");
+}
+
+.source-row-3::before {
+  background-image: url("/media/blueprint-backgrounds/produce-balance-plan.webp");
+}
+
+.source-copy {
+  position: relative;
+  z-index: 1;
+  grid-column: 1 / 4;
+}
+
+.source-images {
+  position: relative;
+  z-index: 1;
+  grid-column: 4 / 8;
   grid-row: 1;
-  height: clamp(170px, 17vw, 235px);
 }
 
 .source-copy h3 {
@@ -1125,6 +1104,7 @@ button:focus-visible,
 
 .contact {
   position: relative;
+  isolation: isolate;
   min-height: clamp(520px, 47vw, 680px);
   overflow: hidden;
   padding: clamp(76px, 8vw, 120px) var(--gutter);
@@ -1132,15 +1112,28 @@ button:focus-visible,
   color: var(--ink);
 }
 
+.contact::before {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  inset: 26% 30% 27% 22%;
+  background-image: url("/media/blueprint-backgrounds/contact-spoon-plan.webp");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  opacity: .86;
+  pointer-events: none;
+}
+
 .contact .section-kicker {
   position: relative;
-  z-index: 2;
+  z-index: 3;
   color: var(--accent-small);
 }
 
 .contact h2 {
   position: relative;
-  z-index: 2;
+  z-index: 3;
   width: min(38vw, 500px);
   max-width: 1180px;
   margin-top: clamp(28px, 3.5vw, 48px);
@@ -1172,7 +1165,7 @@ button:focus-visible,
 
 .contact-action {
   position: relative;
-  z-index: 2;
+  z-index: 3;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -1248,7 +1241,6 @@ button:focus-visible,
   .format-row-1 .format-copy { grid-column: 8 / 13; }
   .format-row-3 .format-media { grid-column: 2 / 8; }
   .format-row-3 .format-copy { grid-column: 9 / 13; }
-  .workday-trajectory { height: clamp(460px, 56vw, 610px); }
 }
 
 @media (max-width: 1024px) {
@@ -1315,15 +1307,11 @@ button:focus-visible,
   .sources-intro {
     grid-template-columns: repeat(12, minmax(0, 1fr));
     gap: 20px;
+    min-height: 520px;
   }
   .sources-heading { grid-column: 1 / 6; }
-  .menu-composition { grid-column: 5 / 13; }
-  .menu-note,
-  .menu-corner-mark,
-  .menu-crosshair,
-  .menu-leader { display: none; }
-  .preparation-sequence .blueprint-dashed { display: none; }
-  .preparation-sequence { height: 128px; }
+  .sources-intro::before { left: 25%; }
+  .menu-dish { left: 69%; }
 
   .format-row {
     grid-template-columns: 1fr;
@@ -1349,7 +1337,6 @@ button:focus-visible,
   .story-copy,
   .story-award { grid-column: 1; }
   .story-present-copy { grid-column: 1 / 5; }
-  .workday-trajectory { grid-column: 4 / 9; }
   .story-film { grid-column: 9 / 13; width: 100%; margin-left: 0; }
 
   .site-footer { grid-template-columns: 1fr; gap: 18px; }
@@ -1391,7 +1378,7 @@ button:focus-visible,
   .format-row-3 .format-media { aspect-ratio: 4 / 3; }
 
   .story-present-copy { grid-column: 1 / 5; }
-  .workday-trajectory { grid-column: 4 / 9; height: clamp(410px, 62vw, 490px); }
+  .story-present::before { left: 22%; right: 24%; }
   .story-film { grid-column: 9 / 13; width: 100%; margin-left: 0; }
 
   .source-row {
@@ -1402,7 +1389,6 @@ button:focus-visible,
   }
   .source-copy { grid-column: 1 / 4; }
   .source-images { grid-column: 4 / 8; grid-row: 1; }
-  .source-contour { grid-column: 8 / 13; grid-row: 1; height: 160px; }
   .source-copy { display: block; }
   .source-copy blockquote { grid-column: auto; margin-top: 28px; }
   .source-images { width: 100%; }
@@ -1443,6 +1429,7 @@ button:focus-visible,
     grid-template-columns: repeat(12, minmax(0, 1fr));
     gap: 0;
     align-items: start;
+    min-height: 700px;
   }
 
   .story-present-copy {
@@ -1472,18 +1459,15 @@ button:focus-visible,
     margin-bottom: 2px;
   }
 
-  .workday-trajectory {
-    grid-column: 6 / 9;
-    grid-row: 1;
-    justify-self: center;
-    align-self: start;
-    width: 48px;
-    height: 300px;
-    margin-top: 86px;
+  .story-present::before {
+    top: 300px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-position: center bottom;
+    background-size: auto 390px;
+    opacity: .78;
   }
-
-  .workday-trajectory .workday-desktop-svg { display: none; }
-  .workday-trajectory .workday-mobile-svg { display: block; }
 
   .story-film {
     grid-column: 8 / 13;
@@ -1533,15 +1517,6 @@ button:focus-visible,
     line-height: 1.55;
   }
 
-  .preparation-sequence {
-    height: 96px;
-    margin-top: 30px;
-    padding: 0;
-  }
-  .preparation-sequence .blueprint-dashed { display: none; }
-  .preparation-mobile-nodes { display: block; }
-  .preparation-mobile-nodes .blueprint-ring { fill: none; }
-
   .story-origin {
     display: grid;
     grid-template-columns: repeat(12, minmax(0, 1fr));
@@ -1578,39 +1553,51 @@ button:focus-visible,
   .sources-intro {
     grid-template-columns: repeat(12, minmax(0, 1fr));
     gap: 14px 10px;
+    align-items: start;
+    min-height: 600px;
     margin-bottom: 16px;
+  }
+  .sources-intro::before {
+    inset: 230px 0 10px;
+    background-position: center bottom;
+    background-size: contain;
+    opacity: .74;
   }
   .sources-heading {
     grid-column: 1 / -1;
-    display: grid;
-    grid-template-columns: repeat(12, minmax(0, 1fr));
-    gap: 14px 10px;
+    display: block;
   }
-  .sources-heading .section-kicker { grid-column: 1 / -1; }
   .sources-heading h2 {
-    grid-column: 1 / 8;
-    margin-top: 0;
+    margin-top: 18px;
     font-size: clamp(30px, 8vw, 34px);
     line-height: 1.12;
   }
   .sources-lede {
-    grid-column: 8 / 13;
-    align-self: end;
-    margin-top: 0;
+    width: min(310px, 92%);
+    margin-top: 18px;
     font-size: 13.6px;
     line-height: 1.6;
   }
-  .menu-composition {
-    grid-column: 1 / -1;
-    width: min(72vw, 260px);
-    height: auto;
-    margin-top: 4px;
+  .menu-dish {
+    top: 76%;
+    left: 50%;
+    width: 86px;
   }
   .source-row {
     grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
     gap: 16px;
-    align-items: center;
-    padding-block: 26px;
+    align-items: start;
+    min-height: 392px;
+    padding: 26px 0 154px;
+  }
+  .source-row::before {
+    top: auto;
+    right: 0;
+    bottom: 8px;
+    left: 18px;
+    height: 132px;
+    background-position: center bottom;
+    opacity: .86;
   }
   .source-copy {
     grid-column: 1;
@@ -1619,7 +1606,6 @@ button:focus-visible,
     column-gap: 8px;
     align-content: center;
   }
-  .source-contour { display: none; }
   .source-copy > p {
     grid-column: 1;
     display: grid;
@@ -1660,8 +1646,17 @@ button:focus-visible,
   .contact {
     padding: 34px 18px 24px;
   }
+  .contact::before {
+    top: 150px;
+    right: 18px;
+    bottom: auto;
+    left: 18px;
+    height: 150px;
+    background-position: center;
+    opacity: .9;
+  }
   .contact h2 { margin-top: 14px; }
-  .contact-art { margin-top: 12px; }
+  .contact-art { margin-top: 150px; }
   .contact-action { margin-top: 14px; }
   .site-footer {
     grid-template-columns: minmax(0, 1fr) auto;
@@ -1699,7 +1694,7 @@ button:focus-visible,
   .source-row { padding-block: 26px; }
   .contact { padding-block: 32px 22px; }
   .contact h2 { margin-top: 12px; }
-  .contact-art { margin-top: 10px; }
+  .contact-art { margin-top: 150px; }
   .contact-action { margin-top: 12px; }
   .contact-action { gap: 16px; }
   .site-footer { gap: 0 14px; min-height: 0; padding-block: 12px 16px; }
