@@ -4201,3 +4201,79 @@ glass, glow, stock icon, placeholder copy, repeated image, new CTA, decorative a
 theme. Each approved sheet has a distinct content role, and the rejected abstract private-event route
 is absent. Remaining limitation: this is intentionally a partial review; Masterclass and later
 per-block replacements await one-by-one user approval.
+
+## Process-first correction audit and approval plan — 2026-09-02
+
+The user rejected the conceptual role of the current per-block imagery: a blueprint must project the
+process that produces the photographed outcome, sit behind the photograph, and remain slightly visible
+below it. The route, stylesheet, exact copy, current documentary media, six earlier raster backgrounds,
+three newly approved sheets, selected mockup and required responsive widths were re-audited before any
+new interface edit.
+
+### What currently fails
+
+- `masterchef-recipes-europe.png` contains sources of experience but does not show their transformation
+  into an authored dish or service format.
+- `private-dinner-seven-course.png` shows a course sequence and table but omits the guest brief, menu
+  choice, parallel preparation and service control.
+- `private-event-canape-studies.png` explains bite assembly but not batch production, tray loading,
+  circulation and replenishment.
+- The six earlier CSS backgrounds isolate a clock, plate, cut or spoon motif. They are closer to the
+  selected reference but still do not each express a complete input-to-result process.
+- The three newly added sheets are separate grid fields or follow-on rows. That makes them editorial
+  illustrations, not the process layer beneath the documentary evidence.
+
+### Elements retained
+
+Header, Hero wording and identity portrait, all documentary photographs, MasterChef proof, exact
+Russian copy, numbering/order, 9:16 film, complete villa, Instagram actions, font files, cream palette,
+square edges, content grid, focus behavior and reduced-motion behavior remain. No photograph is
+regenerated, recolored or replaced.
+
+### Process map
+
+Eleven meaningful media compositions require a unique process: full-evening system; MasterChef
+experience-to-authorship; private dinner; private-event production loop; masterclass learning loop;
+workday logistics; personal-menu decision route; lamb sourcing-to-service; fish harbour-to-service;
+produce farm-to-menu; and inquiry-to-table. The reference map records the inputs, transformations and
+outcomes for each.
+
+### Approval sequence and first implementation slice
+
+1. Prototype `Частный ужин`, because its existing seven-course promise makes process success easiest to
+   judge. Generate one text-free raster background using the selected mockup only as material/style
+   guidance, not as subject matter.
+2. Locally place the unchanged dinner photograph above that background. Keep meaningful linework on
+   the sides and 10–15% below; keep the existing copy adjacent and above the background layer.
+3. Show the actual block at wide and phone widths. Do not publish or propagate the system to other
+   blocks until the user approves this composition.
+4. After approval, repeat generation and approval one block at a time, then perform the required build,
+   lint, source tests, seven-width browser verification, anti-template audit and review-site publish.
+
+No visible UI library is needed; React/Next/Vinext remain infrastructure. Neutral decisions awaiting
+the first prototype are the exact media cover percentage, side offset, lower-strip height and whether
+phone requires a separate raster composition. These remain undecided rather than being applied to all
+blocks prematurely.
+
+### First private-dinner prototype result
+
+The first approval slice is now implemented locally and prepared for the independent review Site.
+`private-dinner-process-v2.png` is a 1774 × 887 built-in ImageGen raster with an explicit quiet aperture
+for the unchanged cooking photograph. The drawing maps guest inputs, a two-way menu decision,
+parallel preparation lanes, one control handoff, exactly seven service stages and a shared-table
+outcome. `app/page.tsx` mounts it inside `format-process-field`; `app/globals.css` keeps the raster at
+z-index 0, the documentary photo at z-index 1 and live copy at z-index 2. The plan remains visible on
+both sides and beneath the photograph instead of occupying a separate drawing field.
+
+Files created: `public/media/blueprint-backgrounds/private-dinner-process-v2.png` and
+`design/process-blueprints-2026-09-02/PROMPTS.md`. Files changed: `app/page.tsx`, `app/globals.css`,
+`tests/rendered-html.test.mjs`, `docs/DESIGN_REFERENCE_MAP.md`, `docs/DESIGN_SYSTEM.md` and this audit.
+The previous private-dinner raster remains in the repository but is no longer referenced by the page.
+No UI library supplies visible styling.
+
+The production build and all eight source tests pass; ESLint and `git diff --check` pass. Direct visual
+review at 1280 × 900 and 390 × 844 confirms the input cluster, transformation photo, seven-stage route,
+table outcome and lower blueprint strip remain visible with no horizontal overflow. This is not the
+final all-block audit: the remaining ten media compositions deliberately retain their current state
+until the user approves the private-dinner direction, after which every block still requires its own
+asset and the mandatory seven-width verification.

@@ -184,7 +184,7 @@ test("keeps the three exact event scenarios in editorial rows", async () => {
     cursor = next;
   }
 
-  assert.match(page, /className={`format-row format-row-\$\{index \+ 1\}`}/);
+  assert.match(page, /className={`format-row format-row-\$\{index \+ 1\}\$\{format\.processBackground/);
   assert.doesNotMatch(page, /menu-stages|format-weave|triptych|carousel/i);
 
   const workdayFacts = [
@@ -198,7 +198,7 @@ test("keeps the three exact event scenarios in editorial rows", async () => {
   assert.match(page, /<ul aria-label="Мой рабочий день">/);
 });
 
-test("uses measured raster backgrounds plus the three approved per-block images", async () => {
+test("uses measured raster backgrounds plus the first process-first photo overlay", async () => {
   const [page, css] = await Promise.all([
     source("app/page.tsx"),
     source("app/globals.css"),
@@ -213,7 +213,7 @@ test("uses measured raster backgrounds plus the three approved per-block images"
   ];
   const approvedBlockImages = [
     "masterchef-recipes-europe.png",
-    "private-dinner-seven-course.png",
+    "private-dinner-process-v2.png",
     "private-event-canape-studies.png",
   ];
 
@@ -240,9 +240,16 @@ test("uses measured raster backgrounds plus the three approved per-block images"
   }
   assert.match(page, /className="story-origin-drawing block-drawing" aria-hidden="true"/);
   assert.match(page, /className="format-drawing block-drawing" aria-hidden="true"/);
+  assert.match(page, /className="format-process-field"/);
+  assert.match(page, /className="format-process-plan"/);
+  assert.match(page, /processBackground:\s*true/);
   assert.match(page, /drawingSrc:\s*null/);
+  assert.doesNotMatch(page, /private-dinner-seven-course\.png/);
   assert.match(css, /\.block-drawing img\s*\{[^}]*aspect-ratio:\s*2 \/ 1;[^}]*object-fit:\s*contain/);
   assert.match(css, /\.story-origin-drawing\s*\{[^}]*width:\s*min\(100%, 1120px\)/);
+  assert.match(css, /\.format-process-field\s*\{[^}]*position:\s*relative;[^}]*aspect-ratio:\s*2 \/ 1/);
+  assert.match(css, /\.format-process-plan\s*\{[^}]*position:\s*absolute;[^}]*z-index:\s*0;[^}]*object-fit:\s*contain/);
+  assert.match(css, /\.format-row-1\.format-row-process \.format-media\s*\{[^}]*position:\s*absolute;[^}]*z-index:\s*1;[^}]*top:\s*8%;[^}]*left:\s*18\.5%;[^}]*height:\s*68%/);
 });
 
 test("uses the measured Trivium typography on the approved editorial surfaces", async () => {

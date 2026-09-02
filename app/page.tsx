@@ -75,7 +75,8 @@ const eventFormats = [
     width: 1152,
     height: 1572,
     alt: "Евгений Грыбенюк готовит блюдо на сковороде для частного ужина",
-    drawingSrc: "/media/blueprint-backgrounds/private-dinner-seven-course.png",
+    drawingSrc: "/media/blueprint-backgrounds/private-dinner-process-v2.png",
+    processBackground: true,
   },
   {
     name: "Приватные мероприятия",
@@ -86,6 +87,7 @@ const eventFormats = [
     height: 1510,
     alt: "Евгений Грыбенюк готовит блины перед гостями на приватном мероприятии",
     drawingSrc: "/media/blueprint-backgrounds/private-event-canape-studies.png",
+    processBackground: false,
   },
   {
     name: "Мастер-классы",
@@ -96,6 +98,7 @@ const eventFormats = [
     height: 770,
     alt: "Евгений Грыбенюк показывает участникам мастер-класса профессиональные приёмы",
     drawingSrc: null,
+    processBackground: false,
   },
 ];
 
@@ -146,23 +149,52 @@ function EventFormats() {
     <div className="format-chapter">
       <ol className="format-list">
         {eventFormats.map((format, index) => (
-          <li className={`format-row format-row-${index + 1}`} key={format.name}>
-            <figure className="format-media">
-              <img
-                src={format.src}
-                width={format.width}
-                height={format.height}
-                loading="lazy"
-                decoding="async"
-                alt={format.alt}
-              />
-            </figure>
+          <li
+            className={`format-row format-row-${index + 1}${format.processBackground ? " format-row-process" : ""}`}
+            id={index === 0 ? "private-dinner" : undefined}
+            key={format.name}
+          >
+            {format.processBackground ? (
+              <div className="format-process-field">
+                <img
+                  className="format-process-plan"
+                  src={format.drawingSrc ?? undefined}
+                  width="1774"
+                  height="887"
+                  loading="lazy"
+                  decoding="async"
+                  alt=""
+                  aria-hidden="true"
+                />
+                <figure className="format-media">
+                  <img
+                    src={format.src}
+                    width={format.width}
+                    height={format.height}
+                    loading="lazy"
+                    decoding="async"
+                    alt={format.alt}
+                  />
+                </figure>
+              </div>
+            ) : (
+              <figure className="format-media">
+                <img
+                  src={format.src}
+                  width={format.width}
+                  height={format.height}
+                  loading="lazy"
+                  decoding="async"
+                  alt={format.alt}
+                />
+              </figure>
+            )}
             <div className="format-copy">
               <span aria-hidden="true">0{index + 1}</span>
               <h3>{format.name}</h3>
               <p>{format.description}</p>
             </div>
-            {format.drawingSrc ? (
+            {format.drawingSrc && !format.processBackground ? (
               <figure className="format-drawing block-drawing" aria-hidden="true">
                 <img
                   src={format.drawingSrc}

@@ -620,3 +620,34 @@ the user. It is a partial review map; unapproved blocks retain their current imp
 Neutral fitting decisions are limited to the vertical gap around each complete 2:1 image and the
 responsive maximum width needed to preserve the existing reading order. No visible UI-library styling
 is used.
+
+## Process-first blueprint correction — 2026-09-02
+
+The user clarified that the blueprint concept means designing the process, not illustrating the
+subject. This correction supersedes the detached photo/copy/drawing three-field treatment and the
+object-only meaning of the three recently approved raster sheets. Photographs and film remain the
+documentary foreground; a unique raster blueprint behind each meaningful media block must explain how
+that photographed result is planned and produced. The blueprint must remain visible around the
+foreground media and in a 10–15% strip below it. Work continues one block at a time, with the private
+dinner as the first approval prototype.
+
+| Project element | Reference | Principle used | What is not copied | Planned project implementation |
+|---|---|---|---|---|
+| Hero — personal chef | Direct process-first correction; current Hero copy and documentary collage | Design the complete evening as request → sourcing → mise en place → cooking → service, with Evgen as the foreground control point | Generic service funnel, dashboard flowchart, labels inside generated art, replacement portrait or redesigned collage | One restrained master-process raster behind the existing identity layer; the 94-image field remains documentary context rather than 94 separate diagrams |
+| MasterChef origin | Same correction; exact biography; selected `04-mise-en-place-blueprint.png` | Show victory → European/Mediterranean learning → recipe/technique archive → transformation into an authored dish and service formats | Trophy poster, travel map alone, flags, copied countries, invented venues or biography changes | Rework the recipe/map sheet into a causal route; keep the award photograph above it and expose the final transformation below the photo |
+| Private dinner | Same correction; exact seven-course copy; current dinner photograph | Show preferences/restrictions → menu choice → parallel mise en place → seven-course rhythm → shared table | A decorative row of plates, fixed guest count, invented dishes, restaurant floor plan or readable generated labels | First prototype: a process raster behind the unchanged photograph, with critical stages at the sides and a visible service route below it |
+| Private event | Same correction; exact small-bite/free-conversation copy | Show batch preparation → assembly rules → tray loading → circulation → replenishment | Canapé anatomy alone, cocktail-table ornament, invented guest count, venue plan or menu claims | Extend the accepted canapé language into a production-and-replenishment loop behind the unchanged action photograph |
+| Masterclass | Same correction; exact demonstration/participation/shared-table copy | Show chef demonstration → guest repetition → correction → joint finish → shared table | Classroom icon set, certificate, fixed participant count, copied lesson text or replacement photo | Create one process raster behind the unchanged masterclass photograph; the route must visibly pass from chef station to participant stations and finish below at the table |
+| `Я — у вас дома` | Same correction; exact morning/day/evening list; current portrait film | Show sourcing → preparation → packing/transport → on-site cooking → evening service | Clock ornament alone, invented times, delivery claim, new steps in HTML or replacement film | Replace the isolated day arc with a logistics route behind the live 9:16 film; preserve the three authoritative HTML phases |
+| Personal menu | Same correction; exact preference/restriction copy; current plated dish | Show brief → compatible seasonal ingredients → flavor/texture decisions → course sequence → final plate | Plate diameters alone, decorative circles, invented allergens, ingredients or menu | Build the decision route around and beneath the unchanged circular dish foreground; factual labels remain HTML only |
+| Meat sourcing | Same correction; exact mountain-lamb statement and current market image | Show request → source journey → inspection → butchery → selected cut → cooking/service | Cow anatomy copied from the mockup, supplier claim, temperature, weight, certification or new provenance | A lamb-specific process raster behind the unchanged photograph; inspection and cut-selection nodes remain visible at the edge and below |
+| Fish sourcing | Same correction; exact port statement and current harbour image | Show request → harbour selection → freshness check → filleting → portioning → cooking/service | Fish silhouette alone, named boat/vendor, catch time, weight, species claim or invented scale | A harbour-to-plate process raster behind the unchanged photograph, with check and portioning stages visible outside the media safe zone |
+| Produce sourcing | Same correction; exact Cyprus-farm statement and current grape image | Show season/farm → harvest → ripeness check → sorting → pairing → menu component | Produce icons alone, invented farm, season, variety, taste score or replacement photograph | A farm-to-component process raster behind the unchanged grape photograph; sorting and pairing branches continue into the lower visible strip |
+| Inquiry close | Same correction; exact invitation and Instagram action; approved complete villa art | Show guest wish → conversation → evening brief → menu/sourcing/preparation → table encounter | Decorative spoon alone, contact-form fiction, response-time promise, booking status or a second CTA | Keep the complete villa as the final foreground atmosphere and add a single closing process route behind it, ending at the table |
+
+The only confirmed generated-art vocabulary is warm ivory paper, thin graphite construction,
+graphite dash for hidden/preparatory relationships and one muted-brass main route. Empty rings denote
+stages, double rings denote checks/handoffs, filled dots denote inputs and a target denotes the outcome.
+Generated raster art contains no readable words, letters, numbers, supplier facts, temperatures,
+weights or timings. Exact factual labels remain live HTML. Hero treatment and mobile overlap values
+remain explicitly undecided until the first private-dinner composition is approved.

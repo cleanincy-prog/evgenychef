@@ -962,3 +962,52 @@ time. Only drawings explicitly approved in chat may enter the review page.
   added.
 - Masterclass and all later blocks remain unchanged until their own drawings are shown and approved.
   Rejected generation attempts are not copied into the project and may not appear in the review build.
+
+## Process blueprint + documentary foreground system — 2026-09-02
+
+This section supersedes the detached 2:1 drawing-sheet placement. A blueprint is now a causal process
+layer belonging to the same visual object as its photograph or film.
+
+### Meaning grammar
+
+- Every blueprint describes one process with three to seven states: input → transformation → check or
+  handoff → result. A drawing that only depicts a dish, table, ingredient, map or utensil is incomplete.
+- One muted-brass line with an arrow is the primary route. Thin solid graphite defines construction
+  and components; graphite dash defines preparation, hidden dependency or an alternate branch.
+- A filled graphite dot is an input, an empty ring is a stage, a double ring is a check/handoff and a
+  target is the final outcome. Axes, ticks, section cuts and dimension leaders appear only where they
+  express an actual decision.
+- Generated background rasters contain no readable typography. Copy, names, claims, timings and
+  accessibility meaning remain in HTML.
+
+### Layer order and overlap
+
+1. Existing cream section surface.
+2. Unique raster blueprint, square-edged and unfiltered, at `z-index: 0`.
+3. Existing documentary photograph or film at `z-index: 1`.
+4. Existing live heading, body copy and actions at `z-index: 2` or higher.
+
+- The photo covers approximately 55–60% of its blueprint canvas. Its top and side placement may vary
+  with the block, but the blueprint remains visibly active on at least two sides.
+- The raster canvas must extend 10–15% of its height below the photo. A meaningful part of the route,
+  not empty paper, occupies this lower strip so the real scene reads as the result of the plan.
+- Critical nodes stay outside the photo safe zone. The main route may disappear behind the photo and
+  re-emerge, but its order must remain inferable.
+- Blueprints are backgrounds of their media compositions, never separate third-column illustrations
+  or full-width sheets beneath unrelated content.
+
+### Responsive contract
+
+- Wide layout uses an asymmetrical media/blueprint composition beside its copy; alternating sections
+  may mirror the media field while preserving process direction.
+- Tablet retains the overlap and lower exposed strip; media may cover less of the raster when labels
+  and process nodes need room.
+- Phone receives a deliberately recomposed arrangement, not a scaled desktop sheet. The exact photo
+  cover ratio, vertical safe zone and whether each final asset needs a dedicated phone raster remain
+  undecided until the private-dinner prototype is approved at 430, 390 and 375 px.
+- No crop may hide the input, the check/handoff and the final node simultaneously. No horizontal scroll,
+  card frame, rounded mask, shadow, blend mode, decorative animation or pseudo-vector substitute.
+
+The first validation target is the private-dinner process. It must visibly connect the guest brief,
+menu choice, parallel preparation, seven-course service rhythm and shared-table outcome while the
+original cooking photograph remains untouched in the foreground.
