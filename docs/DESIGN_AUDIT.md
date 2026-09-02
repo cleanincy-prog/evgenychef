@@ -4277,3 +4277,73 @@ table outcome and lower blueprint strip remain visible with no horizontal overfl
 final all-block audit: the remaining ten media compositions deliberately retain their current state
 until the user approves the private-dinner direction, after which every block still requires its own
 asset and the mandatory seven-width verification.
+
+## Emergency review correction after mobile rejection — 2026-09-02
+
+The user's latest 390 px capture exposed a review-state error: superseded drawings were still
+published while only the private-dinner process prototype should have been active. In the fish row the
+old `fish-cut-plan.webp` pseudo-element combined with `min-height: 392px` and a drawing reserve below
+the photo/text pair, producing the large blank band visible in the capture. The same failure pattern
+exists in the produce, meat, workday, menu and inquiry blocks; MasterChef and private event also retain
+detached `<figure>` drawings.
+
+Templated or invalid elements to remove:
+
+1. The detached MasterChef recipe/map and private-event canapé sheets: they are separate editorial
+   illustrations rather than backgrounds that project a process.
+2. The workday, menu, source and inquiry pseudo-elements: they show isolated subjects and do not satisfy
+   the causal input → transformation → handoff → result rule.
+3. Mobile `min-height`, bottom padding and top margin values whose only purpose is to reserve space for
+   those inactive drawings.
+
+Elements retained: the Header/Hero, all exact copy, every original documentary photograph, the portrait
+film, menu dish, source numbering/order, villa artwork, actions, focus behavior, fonts and palette. The
+private-dinner layered prototype remains because it is the only current image that follows the revised
+process/background rule.
+
+Implementation plan:
+
+1. Remove the two detached drawing nodes and stop supplying a drawing to the private-event data row.
+2. Remove every superseded blueprint URL from active page/CSS rendering while retaining asset files as
+   historical inputs.
+3. Restore natural-height copy/photo layouts at wide, tablet and phone widths; specifically remove the
+   700 px workday, 600 px menu, 392 px source-row and 150 px inquiry reserves on phone.
+4. Update source tests to enforce exactly one active blueprint and to reject all stale asset URLs and
+   detached drawing hooks.
+5. Run lint, tests, production build and `git diff --check`; visually inspect 1440, 1280, 1024, 768,
+   430, 390 and 375 px before replacing the public review version.
+
+The latest user capture is the direct reference for this cleanup. Neutral compact geometry is the only
+decision without a new drawing reference. No visible UI library is introduced.
+
+### Correction verification and anti-template audit
+
+Files created: none. Files changed: `app/page.tsx`, `app/globals.css`,
+`tests/rendered-html.test.mjs`, `docs/DESIGN_REFERENCE_MAP.md`, `docs/DESIGN_SYSTEM.md` and this audit.
+The retired raster files remain in the repository only as review history and are not referenced by the
+rendered page or active stylesheet.
+
+The detached MasterChef and private-event drawings are removed. The six old CSS backgrounds and every
+responsive rule that reserved space for them are removed. Ordinary event rows now contain only their
+documentary photo and exact copy; sourcing rows use the screenshot-grounded compact text-left/photo-right
+composition; workday returns to a direct list/film pair; personal menu keeps the real dish in normal
+flow; and inquiry returns the complete villa immediately after the heading. The only active blueprint
+is the private-dinner process raster behind its original photograph.
+
+ESLint, the production build, all eight source tests and `git diff --check` pass. Browser inspection was
+completed at 1440, 1280, 1024, 768, 430, 390 and 375 px. At every width the document `scrollWidth`
+equals the viewport width, exactly one blueprint URL is rendered, the retired source-row pseudo-layer
+computes to `none`, and the photo/copy pairs have zero geometric overlap. Source rows now measure
+609/596/478/394 px on wide and tablet layouts, then 218/201/194–196 px at 430/390/375 px instead of the
+forced 392 px plus 154 px reserve. The menu introduction measures 221–244 px and the workday pair
+344–550 px without fixed placeholder height. Visual captures confirm readable headings, uncropped
+source photographs, the process blueprint below and around the private-dinner photo, compact phone
+chapters, the complete villa, and no horizontal overflow.
+
+The final anti-template audit passes for this correction: there are no new cards, repeated drawing
+fields, gradients, shadows, glows, stock icons, placeholder copy, invented claims, new CTA or library
+theme. References used are the user's latest rejected phone capture, the existing approved documentary
+interface and the approved private-dinner process prototype. The only decision without a drawing
+reference is neutral spacing while a block awaits approval. Remaining limitation: ten unique
+process-first backgrounds still require one-by-one generation and user approval; they are intentionally
+absent from this review version.

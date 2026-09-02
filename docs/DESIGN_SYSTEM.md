@@ -1011,3 +1011,17 @@ layer belonging to the same visual object as its photograph or film.
 The first validation target is the private-dinner process. It must visibly connect the guest brief,
 menu choice, parallel preparation, seven-course service rhythm and shared-table outcome while the
 original cooking photograph remains untouched in the foreground.
+
+## Review-state gate for process blueprints — 2026-09-02
+
+- Only a process-first raster explicitly approved for its block may be visible in the review build.
+- An unapproved or superseded drawing must be removed from rendering, not hidden with opacity, and no
+  fixed height, padding or margin may remain as a placeholder for it.
+- While a block awaits its process drawing, its existing documentary photo/film, exact live copy and
+  established reading order form the neutral fallback.
+- The current review exception list contains exactly one active blueprint:
+  `private-dinner-process-v2.png`. All earlier MasterChef, event, workday, menu, sourcing and inquiry
+  drawings are inactive regardless of whether their asset files remain available for audit history.
+- At phone width, source chapters remain a compact two-column text/photo composition; workday remains
+  a copy/film pair; personal menu keeps its real dish in the layout; inquiry places the complete villa
+  immediately after its heading. None may contain a blank reserved band.

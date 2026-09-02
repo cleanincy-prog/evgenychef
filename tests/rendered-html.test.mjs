@@ -198,12 +198,12 @@ test("keeps the three exact event scenarios in editorial rows", async () => {
   assert.match(page, /<ul aria-label="Мой рабочий день">/);
 });
 
-test("uses measured raster backgrounds plus the first process-first photo overlay", async () => {
+test("keeps only the approved process-first blueprint active in the interface", async () => {
   const [page, css] = await Promise.all([
     source("app/page.tsx"),
     source("app/globals.css"),
   ]);
-  const backgrounds = [
+  const retiredPseudoBackgrounds = [
     "workday-plan.webp",
     "menu-plate-plan.webp",
     "meat-cut-plan.webp",
@@ -211,42 +211,37 @@ test("uses measured raster backgrounds plus the first process-first photo overla
     "produce-balance-plan.webp",
     "contact-spoon-plan.webp",
   ];
-  const approvedBlockImages = [
+  const retiredDetachedDrawings = [
     "masterchef-recipes-europe.png",
-    "private-dinner-process-v2.png",
+    "private-dinner-seven-course.png",
     "private-event-canape-studies.png",
   ];
+  const activeBlueprint = "/media/blueprint-backgrounds/private-dinner-process-v2.png";
+  const activeBlueprintReferences = `${page}\n${css}`.match(/\/media\/blueprint-backgrounds\/[^"')\s]+/g) ?? [];
 
-  await Promise.all(backgrounds.map((name) => access(new URL(`public/media/blueprint-backgrounds/${name}`, root))));
-  await Promise.all(approvedBlockImages.map((name) => access(new URL(`public/media/blueprint-backgrounds/${name}`, root))));
+  await access(new URL(`public${activeBlueprint}`, root));
   await assert.rejects(access(new URL("app/blueprint-diagrams.tsx", root)));
 
-  for (const name of backgrounds) {
-    assert.ok(css.includes(`background-image: url("/media/blueprint-backgrounds/${name}")`));
-  }
-
+  assert.deepEqual(activeBlueprintReferences, [activeBlueprint]);
   assert.doesNotMatch(page, /PreparationSequence|WorkdayTrajectory|MenuComposition|SourceContour|<svg/);
   assert.doesNotMatch(css, /url\([^)]*\.svg|blueprint-figure|workday-trajectory|menu-composition|source-contour/);
   assert.match(page, /className="menu-dish"[\s\S]*?src="\/media\/optimized\/gallery-dish\.webp"/);
-  assert.match(css, /\.story-present::before\s*\{[^}]*workday-plan\.webp/);
-  assert.match(css, /\.sources-intro::before\s*\{[^}]*menu-plate-plan\.webp/);
-  assert.match(css, /\.source-row-1::before\s*\{[^}]*meat-cut-plan\.webp/);
-  assert.match(css, /\.source-row-2::before\s*\{[^}]*fish-cut-plan\.webp/);
-  assert.match(css, /\.source-row-3::before\s*\{[^}]*produce-balance-plan\.webp/);
-  assert.match(css, /\.contact::before\s*\{[^}]*contact-spoon-plan\.webp/);
   assert.match(css, /\.source-list::before\s*\{[^}]*background:\s*var\(--rule\)/);
-  for (const name of approvedBlockImages) {
-    assert.ok(page.includes(`/media/blueprint-backgrounds/${name}`));
+
+  for (const name of [...retiredPseudoBackgrounds, ...retiredDetachedDrawings]) {
+    assert.ok(!`${page}\n${css}`.includes(name), `retired blueprint must not be active: ${name}`);
   }
-  assert.match(page, /className="story-origin-drawing block-drawing" aria-hidden="true"/);
-  assert.match(page, /className="format-drawing block-drawing" aria-hidden="true"/);
+
+  assert.doesNotMatch(page, /block-drawing|format-drawing|story-origin-drawing/);
+  assert.doesNotMatch(css, /\.block-drawing|\.format-drawing|\.story-origin-drawing/);
+  assert.doesNotMatch(css, /\.story-present::before|\.sources-intro::before|\.source-row(?:(?:-[123])?)::before|\.contact::before/);
   assert.match(page, /className="format-process-field"/);
   assert.match(page, /className="format-process-plan"/);
-  assert.match(page, /processBackground:\s*true/);
-  assert.match(page, /drawingSrc:\s*null/);
-  assert.doesNotMatch(page, /private-dinner-seven-course\.png/);
-  assert.match(css, /\.block-drawing img\s*\{[^}]*aspect-ratio:\s*2 \/ 1;[^}]*object-fit:\s*contain/);
-  assert.match(css, /\.story-origin-drawing\s*\{[^}]*width:\s*min\(100%, 1120px\)/);
+  assert.equal((page.match(/processBackground:\s*true/g) ?? []).length, 1);
+  assert.equal((page.match(/processBackground:\s*false/g) ?? []).length, 2);
+  assert.equal((page.match(/drawingSrc:\s*null/g) ?? []).length, 2);
+  assert.match(page, /\) : \(\s*<figure className="format-media">[\s\S]*?<div className="format-copy">/);
+  assert.match(page, /<header className="source-copy">[\s\S]*?<div className="source-images">/);
   assert.match(css, /\.format-process-field\s*\{[^}]*position:\s*relative;[^}]*aspect-ratio:\s*2 \/ 1/);
   assert.match(css, /\.format-process-plan\s*\{[^}]*position:\s*absolute;[^}]*z-index:\s*0;[^}]*object-fit:\s*contain/);
   assert.match(css, /\.format-row-1\.format-row-process \.format-media\s*\{[^}]*position:\s*absolute;[^}]*z-index:\s*1;[^}]*top:\s*8%;[^}]*left:\s*18\.5%;[^}]*height:\s*68%/);
@@ -425,7 +420,7 @@ test("preserves the approved story, sourcing evidence and accessibility", async 
   }
   assert.equal((page.match(/\/media\/sourcing\//g) ?? []).length, 3);
   assert.doesNotMatch(page, /cyprus-sheep-herd|larnaca-fish-market-seller|kissonerga-meat-counter|fishermen-catch|cyprus-strawberry-greenhouse/);
-  assert.match(await source("app/globals.css"), /\.source-images\s*\{[^}]*width:\s*100%;[^}]*aspect-ratio:\s*16 \/ 10;[^}]*overflow:\s*hidden;[^}]*background:\s*var\(--paper\)/);
+  assert.match(await source("app/globals.css"), /\.source-images\s*\{[^}]*width:\s*min\(100%, 640px\);[^}]*aspect-ratio:\s*4 \/ 3;[^}]*overflow:\s*hidden;[^}]*background:\s*var\(--paper\)/);
   assert.match(await source("app/globals.css"), /\.source-images img\s*\{[^}]*object-fit:\s*cover/);
   assert.match(await source("app/globals.css"), /\.source-row-3 \.source-images img\s*\{[^}]*object-fit:\s*contain/);
 
@@ -449,15 +444,14 @@ test("keeps readability-specific desktop, tablet and narrow-phone geometry", asy
   const css = await source("app/globals.css");
 
   assert.match(css, /\.format-row\s*\{[^}]*grid-template-columns:\s*repeat\(12,[^}]*padding:\s*clamp\(30px, 3\.4vw, 46px\) 0/);
-  assert.match(css, /\.format-row-3 \.format-media\s*\{\s*grid-column:\s*2 \/ 8/);
+  assert.match(css, /\.format-row-3 \.format-media\s*\{\s*grid-column:\s*1 \/ 8/);
   assert.match(css, /\.format-row-3 \.format-copy\s*\{\s*grid-column:\s*9 \/ 13/);
-  assert.match(css, /\.format-row-1 \.format-drawing\s*\{\s*grid-column:\s*8 \/ 13/);
-  assert.match(css, /\.format-row-2 \.format-drawing\s*\{\s*grid-column:\s*1 \/ 6/);
   assert.match(css, /\.story-intro\s*\{\s*margin-bottom:\s*clamp\(48px, 5vw, 72px\)/);
-  assert.match(css, /\.source-row\s*\{[^}]*grid-template-columns:\s*repeat\(12, minmax\(0, 1fr\)\);[^}]*align-items:\s*center/);
-  assert.match(css, /\.source-copy\s*\{\s*position:\s*relative;\s*z-index:\s*1;\s*grid-column:\s*1 \/ 4/);
-  assert.match(css, /\.source-images\s*\{\s*position:\s*relative;\s*z-index:\s*1;\s*grid-column:\s*4 \/ 8;\s*grid-row:\s*1/);
-  assert.match(css, /\.source-row::before\s*\{[^}]*inset:\s*18px 0 18px 61%;[^}]*background-size:\s*contain/);
+  assert.match(css, /\.source-row\s*\{[^}]*grid-template-columns:\s*minmax\(260px, 5fr\) minmax\(0, 7fr\);[^}]*align-items:\s*center/);
+  assert.match(css, /\.source-copy\s*\{\s*grid-column:\s*1/);
+  assert.match(css, /\.source-images\s*\{\s*grid-column:\s*2;\s*grid-row:\s*1/);
+  assert.doesNotMatch(css, /min-height:\s*(?:700|600|392)px/);
+  assert.doesNotMatch(css, /padding:\s*26px 0 154px/);
 
   const tablet = css.slice(css.indexOf("@media (min-width: 561px) and (max-width: 820px)"), css.indexOf("@media (max-width: 560px)"));
   assert.match(tablet, /\.hero-stage\s*\{\s*aspect-ratio:\s*8 \/ 5/);
@@ -469,36 +463,32 @@ test("keeps readability-specific desktop, tablet and narrow-phone geometry", asy
   assert.match(tablet, /\.story-copy\s*\{\s*grid-column:\s*6 \/ 13/);
   assert.match(tablet, /\.format-row-1 \.format-media,[\s\S]*?grid-column:\s*1 \/ 6;\s*grid-row:\s*1/);
   assert.match(tablet, /\.format-row-2 \.format-copy\s*\{\s*grid-column:\s*1 \/ 8;\s*grid-row:\s*1/);
-  assert.match(tablet, /\.format-row \.format-drawing\s*\{\s*grid-column:\s*1 \/ -1;\s*grid-row:\s*2/);
-  assert.match(tablet, /\.story-present-copy\s*\{\s*grid-column:\s*1 \/ 5/);
-  assert.match(tablet, /\.story-present::before\s*\{\s*left:\s*22%;\s*right:\s*24%/);
-  assert.match(tablet, /\.story-film\s*\{\s*grid-column:\s*9 \/ 13;\s*width:\s*100%/);
-  assert.match(tablet, /\.source-row\s*\{[^}]*grid-template-columns:\s*repeat\(12, minmax\(0, 1fr\)\)/);
-  assert.match(tablet, /\.source-images\s*\{\s*grid-column:\s*4 \/ 8;\s*grid-row:\s*1/);
+  assert.match(tablet, /\.story-present-copy\s*\{\s*grid-column:\s*1 \/ 6/);
+  assert.match(tablet, /\.story-film\s*\{\s*grid-column:\s*6 \/ 13;\s*width:\s*100%/);
+  assert.match(tablet, /\.source-row\s*\{[^}]*grid-template-columns:\s*minmax\(0, 5fr\) minmax\(0, 7fr\)/);
+  assert.match(tablet, /\.source-images\s*\{\s*grid-column:\s*2;\s*grid-row:\s*1/);
 
   const phone = css.slice(css.indexOf("@media (max-width: 560px)"), css.indexOf("@media (max-width: 430px)"));
+  const narrowPhone = css.slice(css.indexOf("@media (max-width: 430px)"), css.indexOf("@media (max-width: 400px)"));
   assert.match(phone, /\.present-day\s*\{\s*padding:\s*34px 18px 30px/);
-  assert.match(phone, /\.story-present\s*\{[^}]*grid-template-columns:\s*repeat\(12, minmax\(0, 1fr\)\);[^}]*gap:\s*0;[^}]*align-items:\s*start;[^}]*min-height:\s*700px/);
-  assert.match(phone, /\.story-present-copy\s*\{[^}]*grid-column:\s*1 \/ 7;[^}]*max-width:\s*none/);
+  assert.match(phone, /\.story-present\s*\{[^}]*grid-template-columns:\s*repeat\(12, minmax\(0, 1fr\)\);[^}]*gap:\s*10px;[^}]*align-items:\s*start/);
+  assert.match(phone, /\.story-present-copy\s*\{[^}]*grid-column:\s*1 \/ 6;[^}]*max-width:\s*none/);
   assert.match(phone, /\.story-present ul\s*\{\s*margin-top:\s*14px/);
-  assert.match(phone, /\.story-present li\s*\{[^}]*display:\s*block;[^}]*min-height:\s*82px;[^}]*padding:\s*8px 0;[^}]*font-size:\s*13\.6px;[^}]*font-weight:\s*300;[^}]*line-height:\s*1\.45/);
-  assert.match(phone, /\.story-present::before\s*\{[^}]*top:\s*300px;[^}]*left:\s*0;[^}]*right:\s*0;[^}]*background-size:\s*auto 390px;[^}]*opacity:\s*\.78/);
-  assert.match(phone, /\.story-film\s*\{[^}]*grid-column:\s*8 \/ 13;[^}]*grid-row:\s*1;[^}]*width:\s*100%;[^}]*margin-left:\s*0/);
-  assert.match(phone, /\.format-row \.format-drawing\s*\{[^}]*grid-column:\s*1 \/ -1;[^}]*grid-row:\s*2;[^}]*margin-top:\s*12px/);
+  assert.match(phone, /\.story-present li\s*\{[^}]*display:\s*block;[^}]*padding:\s*8px 0;[^}]*font-size:\s*13\.6px;[^}]*font-weight:\s*300;[^}]*line-height:\s*1\.45/);
+  assert.match(phone, /\.story-film\s*\{[^}]*grid-column:\s*6 \/ 13;[^}]*grid-row:\s*1;[^}]*width:\s*100%;[^}]*margin-left:\s*0/);
   assert.match(phone, /\.sources-intro\s*\{[^}]*grid-template-columns:\s*repeat\(12, minmax\(0, 1fr\)\);[^}]*gap:\s*14px 10px;[^}]*margin-bottom:\s*16px/);
-  assert.match(phone, /\.sources-intro::before\s*\{[^}]*inset:\s*230px 0 10px;[^}]*background-size:\s*contain/);
   assert.match(phone, /\.sources-heading h2\s*\{[^}]*margin-top:\s*18px/);
   assert.match(phone, /\.sources-lede\s*\{[^}]*width:\s*min\(310px, 92%\);[^}]*font-size:\s*13\.6px;[^}]*line-height:\s*1\.6/);
-  assert.match(phone, /\.source-row\s*\{[^}]*grid-template-columns:\s*minmax\(0, 5fr\) minmax\(0, 7fr\);[^}]*gap:\s*16px;[^}]*min-height:\s*392px;[^}]*padding:\s*26px 0 154px/);
-  assert.match(phone, /\.source-row::before\s*\{[^}]*bottom:\s*8px;[^}]*height:\s*132px;[^}]*opacity:\s*\.86/);
+  assert.match(phone, /\.menu-dish\s*\{[^}]*grid-column:\s*10 \/ 13;[^}]*width:\s*100%;[^}]*margin-top:\s*50px/);
+  assert.match(phone, /\.source-row\s*\{[^}]*grid-template-columns:\s*minmax\(0, 5fr\) minmax\(0, 7fr\);[^}]*gap:\s*16px;[^}]*align-items:\s*center;[^}]*padding:\s*26px 0/);
   assert.match(phone, /\.source-copy\s*\{[^}]*grid-template-columns:\s*30px minmax\(0, 1fr\);[^}]*column-gap:\s*8px/);
   assert.match(phone, /\.source-copy blockquote\s*\{[^}]*grid-column:\s*1 \/ -1;[^}]*color:\s*var\(--accent-small\);[^}]*font-size:\s*clamp\(18px, 4\.8vw, 20px\);[^}]*line-height:\s*1\.35/);
   assert.match(phone, /\.source-images\s*\{[^}]*grid-column:\s*2;[^}]*grid-row:\s*1;[^}]*aspect-ratio:\s*4 \/ 3/);
   assert.match(css, /\.source-list::before\s*\{[^}]*left:\s*16px/);
   assert.doesNotMatch(phone, /\.source-row-2\s*\{/);
   assert.match(phone, /\.contact\s*\{\s*padding:\s*34px 18px 24px/);
-  assert.match(phone, /\.contact::before\s*\{[^}]*top:\s*150px;[^}]*height:\s*150px;[^}]*opacity:\s*\.9/);
-  assert.match(phone, /\.contact-art\s*\{\s*margin-top:\s*150px/);
+  assert.match(phone, /\.contact-art\s*\{\s*margin-top:\s*12px/);
+  assert.match(narrowPhone, /\.contact-art\s*\{\s*margin-top:\s*10px/);
   assert.match(phone, /\.site-footer\s*\{[^}]*grid-template-columns:\s*minmax\(0, 1fr\) auto;[^}]*padding:\s*14px 18px 18px/);
   assert.match(css, /@media \(max-width: 1024px\)[\s\S]*?\.contact-art\s*\{[^}]*position:\s*relative;[^}]*aspect-ratio:\s*3 \/ 2/);
   assert.match(css, /\.contact-art img\s*\{[^}]*object-fit:\s*contain;[^}]*object-position:\s*right bottom/);

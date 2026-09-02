@@ -651,3 +651,25 @@ stages, double rings denote checks/handoffs, filled dots denote inputs and a tar
 Generated raster art contains no readable words, letters, numbers, supplier facts, temperatures,
 weights or timings. Exact factual labels remain live HTML. Hero treatment and mobile overlap values
 remain explicitly undecided until the first private-dinner composition is approved.
+
+## Rejected detached drawings removed from review — 2026-09-02
+
+The user's phone capture and direct rejection of the published fish/produce composition supersede the
+earlier raster-background and approved-preview maps for the current review state. The problem is not
+the documentary content: it is the detached subject drawing and the large space reserved for it. Until
+a process-first replacement is separately shown and approved, a block must contain no blueprint layer
+and must reserve no blueprint space.
+
+| Project element | Reference | Principle used | What is not copied | Current review implementation |
+|---|---|---|---|---|
+| Private dinner | Approved process-first prototype and direct instruction to apply it | One causal blueprint sits behind the unchanged cooking photograph and remains visible at its sides and below | Detached illustration, fixed guest count, replacement photo or added copy | Retain `private-dinner-process-v2.png` inside the layered media field |
+| MasterChef proof | Latest rejection plus the original photo/biography pair | Return to documentary proof while its causal process drawing awaits approval | Recipe/map sheet as a separate follow-on illustration | Remove the detached drawing from rendered markup; retain award photo and exact biography |
+| Private event and Masterclass | Latest rejection; existing approved photo/copy pairs | Keep the event rows compact and documentary until each process background is approved | Canapé study or any third drawing field | Render only the unchanged photo and text |
+| Workday | Latest rejection; exact three-phase HTML list and original portrait film | Keep the authoritative phases and film together without an empty drawing reserve | Isolated clock arc | Remove the old pseudo-element and its reserved mobile height |
+| Personal menu | Latest rejection; existing dish photograph and exact menu copy | Keep the real dish as foreground evidence in a compact composition | Plate-diameter drawing and its empty canvas | Remove the pseudo-element; return the dish to the live layout |
+| Meat, fish and produce | Latest phone capture; exact source statements and current documentary images | Each source remains one compact text/photo chapter pending its own process approval | Detached animal, fish or produce study and all space allocated to it | Remove the three pseudo-elements and reset their fixed mobile height/padding |
+| Inquiry | Latest rejection; existing complete villa and Instagram action | Preserve the original closing image and action without an unapproved intermediate drawing | Spoon drawing and its 150 px mobile reserve | Remove the pseudo-element and return the villa to normal flow |
+
+No new visual principle is invented in this correction. The temporary no-blueprint state is the most
+neutral implementation permitted by the project policy, and the one-by-one approval sequence remains
+authoritative.
