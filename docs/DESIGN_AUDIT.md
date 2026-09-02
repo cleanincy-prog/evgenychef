@@ -4525,3 +4525,61 @@ output. It calculates one demonstration kit plus two working kits and 18 partici
 - **Remaining limitation:** tiny raster annotations become atmospheric support on narrow phones; exact
   service meaning remains in live HTML. The next unapproved block is `Я — у вас дома`; Hero, personal
   menu, meat, fish, produce and inquiry also remain documentary-only pending their own approval.
+
+## Approved text-free workday composition — implementation plan — 2026-09-02
+
+Three workday candidates were reviewed. The user rejected the detailed critical-path/manifest version,
+then rejected the horizontal miniature sequence, and finally corrected the composition to contain no
+visible text: the unchanged vertical film is on the left and four drawings run top-to-bottom on the
+right. The final monochrome preview was explicitly approved.
+
+1. Save only the approved 1774 × 887 raster as `workday-four-step-vertical.png`. Do not reference the
+   manifest/vehicle candidate or either earlier horizontal candidate.
+2. Replace the current visible heading/list composition with one layered 2:1 process field. Keep the
+   existing heading and exact three-phase copy as screen-reader context so the section remains named,
+   but remove them from visible flow as explicitly requested.
+3. Keep the original 720 × 1280 documentary film and playback behavior. Restore its native 9:16 shape,
+   position it in the raster's quiet left zone and place it above the background at `z-index: 1`.
+4. Leave the four generated miniatures unobscured on the right in their approved vertical order:
+   purchase, preparations, marinade and cooking at home. Add no live labels, cards or duplicate icons.
+5. Preserve the section's paper surface and rules. Add no fixed-height blank reserve, SVG, colour,
+   shadow, gradient, blended filter or animation.
+6. Update source assertions and asset records to require the raster, the process field, left film and
+   accessibility-only copy.
+7. Verify lint, production build, all eight tests, `git diff --check` and the required seven widths
+   before publishing to the same public review URL.
+
+### Implemented and verified
+
+- **File created:** `public/media/blueprint-backgrounds/workday-four-step-vertical.png`
+  (1774 × 887 monochrome raster).
+- **Files changed:** `app/page.tsx`, `app/globals.css`, `tests/rendered-html.test.mjs`,
+  `docs/DESIGN_REFERENCE_MAP.md`, `docs/DESIGN_SYSTEM.md` and `docs/DESIGN_AUDIT.md`.
+- **Templated/rejected elements kept inactive:** the critical-path/manifest/vehicle sheet and both
+  horizontal miniature candidates are not referenced by the project. The former visible heading/list
+  rail is removed from layout rather than converted into a card or timeline.
+- **Reference used:** the user's explicit approval of the text-free preview and direct placement rule:
+  unchanged portrait video on the left; purchase, preparations, marinade and cooking-at-home drawings
+  stacked vertically on the right.
+- **Neutral fitting decisions without a separate reference:** the single process field spans the complete
+  grid. The film uses `top: 5%`, `left: 12%`, `width: 25.3125%` and `height: 90%`; this preserves its exact
+  `9 / 16` ratio while fitting the raster's authored quiet zone.
+- **Accessibility:** the exact original `Я — / у вас дома` heading and three workday facts remain in a
+  one-pixel clipped semantic wrapper. The decorative raster uses empty alt text and `aria-hidden`; the
+  video retains its existing accessible label and caption track.
+- **UI libraries:** none introduced or used for visible styling; the existing page grid and video
+  component are reused as technical primitives.
+- **Automated verification:** ESLint, production build, all eight source tests and `git diff --check`
+  pass.
+- **Responsive verification:** at 1440/1280/1024/768/430/390/375 px, process field dimensions are
+  1308 × 654, 1162 × 581, 930 × 465, 724 × 362, 394 × 197, 354 × 177 and 339 × 170. Film dimensions are
+  331 × 588, 294 × 523, 235 × 418, 183 × 326, 100 × 177, 90 × 159 and 86 × 153; the measured ratio is
+  `0.5625` at every width. The 1774 px raster loads at every size and document width always equals the
+  viewport. Screenshot review at all seven widths confirmed the film remains left, all four drawings
+  remain visible top-to-bottom at right and no live text appears in the section.
+- **Anti-template result:** the workday is one content-specific process composite, with no cards,
+  generic timeline, labels, icons, colour, gradient, shadow, SVG, decorative animation or desktop-only
+  restacking behavior.
+- **Remaining limitation:** the four miniatures intentionally become atmospheric at narrow-phone size,
+  while the exact process remains available to assistive technology. Personal menu, meat, fish, produce,
+  inquiry and Hero still await their own independently approved process drawings.

@@ -320,7 +320,7 @@ export default function Home() {
 
         <section className="present-day" aria-labelledby="present-title">
           <div className="story-present">
-            <div className="story-present-copy">
+            <div className="present-day-accessible">
               <h2 id="present-title">
                 Я —
                 <br />
@@ -332,9 +332,21 @@ export default function Home() {
                 <li><span>вечер</span> готовлю у вас дома для вас и ваших гостей</li>
               </ul>
             </div>
-            <figure className="story-film">
-              <ChefStoryVideo />
-            </figure>
+            <div className="story-present-process-field">
+              <img
+                className="story-present-process-plan"
+                src="/media/blueprint-backgrounds/workday-four-step-vertical.png"
+                width="1774"
+                height="887"
+                loading="lazy"
+                decoding="async"
+                alt=""
+                aria-hidden="true"
+              />
+              <figure className="story-film">
+                <ChefStoryVideo />
+              </figure>
+            </div>
           </div>
         </section>
 

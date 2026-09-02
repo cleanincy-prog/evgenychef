@@ -104,20 +104,31 @@ Media reference swatches are `--media-shadow: #121318`, `--media-charcoal: #2729
 
 ### Chef-story editorial spread
 
-> Blueprint-branch override — 2026-09-02: the earlier desktop/tablet `4 / 3` film rule below is
-> retained only as release history. On `codex/mise-en-place-blueprint`, the selected reference's
-> portrait-film relationship and the later branch decision supersede it: the documentary film is
-> `9 / 16` at every width and remains paired with the workday copy and trajectory.
+> Text-free workday override — 2026-09-02: the earlier visible-copy and desktop/tablet `4 / 3`
+> rules below are retained only as release history. The approved workday composition supersedes them:
+> one proportional `2 / 1` raster field contains the unchanged `9 / 16` film at the left and four
+> text-free process miniatures in a vertical column at the right at every width.
 
 - The section begins immediately after the hero with a compact two-column award row. It is a modest horizontal rectangle rather than a viewport-scale chapter: desktop width is capped at `1080px`, vertical padding stays restrained, and neither text nor image is allowed to dominate the next screen.
 - Its text column contains the heading `От MasterChef к вашему столу` and the exact user-supplied two-paragraph biography. The second paragraph is `Теперь я провожу частные ужины, приватные мероприятия и мастер-классы и превращаю этот опыт в ваш идеальный гастрономический вечер.`; the documentary award photograph occupies the right column in a shallow `16 / 9` aperture. The title remains Oranienbaum. Both biography paragraphs share the same Onest base class, size, weight and line height at every breakpoint; difference in meaning comes only from spacing and color, not a second body typeface or display-sized closing sentence.
-- A separately ruled present-day row follows. On desktop and tablet, the left text rail contains `Я — у вас дома` and the three existing working-day facts; a horizontal `4 / 3` film aperture occupies the larger right field. No ornament or extra caption separates the copy from the film.
-- The vertical source film uses a restrained center crop inside the requested horizontal 4:3 web aperture. The chef and working action must remain visible throughout playback; the media must not be stretched.
-- Phone keeps the complete heading and working-day list beside the film in one compact two-column field. The text occupies columns `1 / 8`, the film columns `8 / 13`, and the gap is `12px`; the film returns to the directly required vertical `9 / 16` and never expands to the content width. The horizontal `4 / 3` change must not cascade into the phone breakpoint. The list uses a compact `44px + 1fr` internal grid and a readable `12px / 1.45` treatment; both biography paragraphs retain their approved shared body treatment.
+- A separately ruled present-day row follows as one proportional `2 / 1` process field. The original
+  heading and three working-day facts remain in the document as visually hidden screen-reader context;
+  no live text is visible in the approved composition.
+- The unchanged vertical source film stays at its native `9 / 16` ratio in the quiet left zone and is
+  never stretched. Four graphite miniatures remain unobscured at the right in the approved top-to-bottom
+  order: purchase, preparations, marinade, cooking at home.
+- Phone retains the same authored composite instead of restacking it. The field scales proportionally,
+  preserves the left-film/right-drawings relationship and creates no horizontal overflow or blank reserve.
 - The rejected eyebrow `мой путь` is absent; no substitute label, chapter number, arrow or connector is introduced.
 - The “документальный фрагмент” label, local pause overlay, section folio and fact indices are absent.
 - No explanatory caption appears beneath the film; the MasterChef-and-Europe paragraph and the concise present-day close belong together in the first text column.
-- The story fact rail is a three-part working-day sequence supplied directly by the user: `утро: закупаю продукты`, `день: делаю заготовки, маринады и соусы`, `вечер: готовлю у вас дома для вас и ваших гостей`. It keeps the existing unnumbered list structure and geometry; no timeline component, icons or decorative separators are added. The biography uses the user’s concise two-paragraph replacement: the MasterChef win opens the route to the cuisines of Europe and the Mediterranean, and that experience becomes the guest’s gastronomic evening. It must not add the superseded visible prize paragraph, invent workplaces, or depict or imply an unverified plate, statuette, cup, net payout or present-day currency equivalent.
+- The three-part working-day sequence supplied directly by the user remains exact in hidden semantic
+  HTML: `утро: закупаю продукты`, `день: делаю заготовки, маринады и соусы`, `вечер: готовлю у вас дома
+  для вас и ваших гостей`. Its former visible rail geometry is superseded by the approved text-free raster.
+  The biography uses the user’s concise two-paragraph replacement: the MasterChef win opens the route
+  to the cuisines of Europe and the Mediterranean, and that experience becomes the guest’s gastronomic
+  evening. It must not add the superseded visible prize paragraph, invent workplaces, or depict or imply
+  an unverified plate, statuette, cup, net payout or present-day currency equivalent.
 - The biography includes one contemporaneous award photograph requested by the user: Evgen in his season-two chef jacket holding the black branded winner envelope. It remains a square-edged documentary figure without a visible caption, trophy card, gallery or decorative background; the later direct removal instruction supersedes the earlier caption requirement.
 - The award image may use an editorial crop but must keep Evgen’s face, jacket and complete envelope visible. No caption, replacement badge or empty caption reserve remains beneath it; the prose stays in the facing left column.
 - The local source ledger records that the file was published by Fakty and credited in contemporaneous coverage to STB. The user has explicitly requested its use, but commercial publication authorization remains unconfirmed and must be resolved before treating the asset as cleared.
@@ -1044,17 +1055,25 @@ This section supersedes the statement that `private-dinner-process-v2.png` is th
   practice, a control gate returns errors through a correction loop, and the accepted route resolves into
   three dish outputs. The sheet calculates three ingredient kits and 18 participant portions. It contains
   no classroom furniture, certificate motif, event tray/batch logic or colour.
+- `workday-four-step-vertical.png` is the approved text-free workday grammar. The unchanged portrait
+  film occupies the left safe zone; four graphite miniatures form one vertical column on the right in the
+  order purchase → preparations → marinade → cooking at home. The raster contains no title, labels,
+  numbers, calculations, vehicle, clock or colour. The live workday copy is removed from visual flow at
+  the user's direction but retained as screen-reader context.
 - The blueprint and documentary media form one composite. The raster is absolute at `z-index: 0`; the
-  unchanged photograph or film is above it at `z-index: 1`; live copy remains above both. The photo
-  occupies the quiet area intentionally designed into the sheet.
-- The raster must stay legible on at least two sides and in a meaningful lower strip. The strip shows
-  actual process content, never empty paper introduced by a fixed `min-height`, padding or margin.
+  unchanged photograph or film is above it at `z-index: 1`. Live copy remains above both for the three
+  event-format sheets; the workday is the explicitly approved text-free exception. Media occupies the
+  quiet area intentionally designed into each sheet.
+- Event-format calculation rasters must stay legible on at least two sides and in a meaningful lower
+  strip. The text-free workday instead preserves its four-step right column. Neither grammar may create
+  empty paper through a fixed `min-height`, padding or margin.
 - The former detached `<figure>` drawing pattern remains prohibited. SVG, generated vector markup,
   gradients, filters, shadows, blend modes and decorative animation remain prohibited.
 - Candidate files may remain for audit history, but only the currently approved filename for a block
   may be referenced by rendered JSX or CSS.
-- Phone composition is designed independently: retain the overlapping media/process relationship,
-  preserve the left calculation total and lower service sequence, and avoid horizontal scrolling.
+- Phone composition is designed independently for event formats: retain the overlapping media/process
+  relationship, preserve the left calculation total and lower service sequence, and avoid horizontal
+  scrolling. The workday exception scales its single `2 / 1` composite proportionally at every width.
 
 All other blocks remain in documentary fallback while their unique process sheet is awaiting the
 user's explicit yes/no decision.

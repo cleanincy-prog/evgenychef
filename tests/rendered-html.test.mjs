@@ -149,7 +149,8 @@ test("keeps the three exact event scenarios in editorial rows", async () => {
   const formatsCall = home.indexOf("<EventFormats />");
   const storyClose = home.indexOf("</section>", formatsCall);
   const presentDay = home.indexOf('className="present-day"');
-  const presentCopy = home.indexOf('className="story-present-copy"');
+  const presentAccessible = home.indexOf('className="present-day-accessible"');
+  const presentProcess = home.indexOf('className="story-present-process-field"');
   const presentFilm = home.indexOf('className="story-film"');
 
   assert.ok(storyStart < formatsCall);
@@ -157,12 +158,13 @@ test("keeps the three exact event scenarios in editorial rows", async () => {
   assert.ok(sequenceStart < home.indexOf('className="story-origin"'));
   assert.ok(formatsCall < storyClose);
   assert.ok(storyClose < presentDay);
-  assert.ok(presentDay < presentCopy);
-  assert.ok(presentCopy < presentFilm);
+  assert.ok(presentDay < presentAccessible);
+  assert.ok(presentAccessible < presentProcess);
+  assert.ok(presentProcess < presentFilm);
   assert.ok(presentFilm < home.indexOf('className="sources"'));
   assert.ok(home.indexOf('className="story-award"') < home.indexOf('className="story-copy"'));
   assert.ok(home.indexOf('className="story-copy"') < formatsCall);
-  assert.ok(formatsCall < presentCopy);
+  assert.ok(formatsCall < presentProcess);
   assert.match(page, /const eventFormats = \[/);
   assert.match(page, /<div className="story-sequence" id="menu" aria-label="Победа MasterChef и форматы мероприятий"/);
   assert.match(page, /<ol className="format-list">/);
@@ -220,6 +222,7 @@ test("keeps only the approved process-first blueprints active in the interface",
     "/media/blueprint-backgrounds/private-dinner-calculation-process.png",
     "/media/blueprint-backgrounds/private-event-production-calculation.png",
     "/media/blueprint-backgrounds/masterclass-six-person-learning-process.png",
+    "/media/blueprint-backgrounds/workday-four-step-vertical.png",
   ];
   const activeBlueprintReferences = `${page}\n${css}`.match(/\/media\/blueprint-backgrounds\/[^"')\s]+/g) ?? [];
 
@@ -240,6 +243,7 @@ test("keeps only the approved process-first blueprints active in the interface",
   assert.doesNotMatch(css, /\.block-drawing|\.format-drawing|\.story-origin-drawing/);
   assert.doesNotMatch(css, /\.story-present::before|\.sources-intro::before|\.source-row(?:(?:-[123])?)::before|\.contact::before/);
   assert.match(page, /className="story-origin-process-field"[\s\S]*?className="story-origin-process-plan"[\s\S]*?masterchef-recipes-europe\.png[\s\S]*?className="story-award"/);
+  assert.match(page, /className="present-day-accessible"[\s\S]*?className="story-present-process-field"[\s\S]*?className="story-present-process-plan"[\s\S]*?workday-four-step-vertical\.png[\s\S]*?className="story-film"/);
   assert.match(page, /className="format-process-field"/);
   assert.match(page, /className="format-process-plan"/);
   assert.equal((page.match(/processBackground:\s*true/g) ?? []).length, 3);
@@ -250,6 +254,10 @@ test("keeps only the approved process-first blueprints active in the interface",
   assert.match(css, /\.format-process-field\s*\{[^}]*position:\s*relative;[^}]*aspect-ratio:\s*2 \/ 1/);
   assert.match(css, /\.format-process-plan\s*\{[^}]*position:\s*absolute;[^}]*z-index:\s*0;[^}]*object-fit:\s*contain/);
   assert.match(css, /\.story-origin-process-plan\s*\{[^}]*position:\s*absolute;[^}]*z-index:\s*0;[^}]*object-fit:\s*contain/);
+  assert.match(css, /\.story-present-process-field\s*\{[^}]*position:\s*relative;[^}]*grid-column:\s*1 \/ -1;[^}]*aspect-ratio:\s*2 \/ 1/);
+  assert.match(css, /\.story-present-process-plan\s*\{[^}]*position:\s*absolute;[^}]*z-index:\s*0;[^}]*object-fit:\s*contain/);
+  assert.match(css, /\.story-present-process-field \.story-film\s*\{[^}]*position:\s*absolute;[^}]*z-index:\s*1;[^}]*top:\s*5%;[^}]*left:\s*12%;[^}]*width:\s*25\.3125%;[^}]*height:\s*90%/);
+  assert.match(css, /\.present-day-accessible\s*\{[^}]*position:\s*absolute;[^}]*clip:\s*rect\(0 0 0 0\);[^}]*white-space:\s*nowrap/);
   assert.match(css, /\.format-row-1\.format-row-process \.format-media\s*\{[^}]*position:\s*absolute;[^}]*z-index:\s*1;[^}]*top:\s*3%;[^}]*left:\s*36%;[^}]*height:\s*64%/);
   assert.match(css, /\.format-row-2\.format-row-process \.format-process-field\s*\{[^}]*grid-column:\s*1 \/ 10/);
   assert.match(css, /\.format-row-2\.format-row-process \.format-media\s*\{[^}]*position:\s*absolute;[^}]*z-index:\s*1;[^}]*top:\s*4%;[^}]*left:\s*28%;[^}]*height:\s*57%/);
@@ -348,7 +356,7 @@ test("uses the measured Trivium typography on the approved editorial surfaces", 
   assert.doesNotMatch(css, /\.format-list\s*\{[^}]*border-top/);
   assert.doesNotMatch(css, /\.story-origin\s*\{[^}]*border-bottom/);
   assert.match(css, /\.present-day\s*\{[^}]*background:\s*var\(--paper-light\)/);
-  assert.match(css, /\.story-film,\s*\.story-film video\s*\{\s*aspect-ratio:\s*9 \/ 16/);
+  assert.match(css, /\.story-present-process-field \.story-film,\s*\.story-present-process-field \.story-film video\s*\{\s*aspect-ratio:\s*9 \/ 16/);
   assert.match(css, /\.format-row \.format-media\s*\{[^}]*height:\s*clamp\(164px, 46vw, 184px\);[^}]*aspect-ratio:\s*auto/);
   assert.match(css, /\.story-origin\s*\{\s*display:\s*grid;\s*grid-template-columns:\s*repeat\(12, minmax\(0, 1fr\)\);\s*gap:\s*14px;\s*align-items:\s*start/);
   assert.match(css, /\.story-award\s*\{[^}]*grid-column:\s*1 \/ 5;[^}]*grid-row:\s*1;[^}]*width:\s*auto/);
@@ -479,19 +487,15 @@ test("keeps readability-specific desktop, tablet and narrow-phone geometry", asy
   assert.match(tablet, /\.story-copy\s*\{\s*grid-column:\s*6 \/ 13/);
   assert.match(tablet, /\.format-row-1 \.format-media,[\s\S]*?grid-column:\s*1 \/ 6;\s*grid-row:\s*1/);
   assert.match(tablet, /\.format-row-2 \.format-copy\s*\{\s*grid-column:\s*1 \/ 8;\s*grid-row:\s*1/);
-  assert.match(tablet, /\.story-present-copy\s*\{\s*grid-column:\s*1 \/ 6/);
-  assert.match(tablet, /\.story-film\s*\{\s*grid-column:\s*6 \/ 13;\s*width:\s*100%/);
+  assert.doesNotMatch(tablet, /\.story-present-copy|\.story-film\s*\{\s*grid-column/);
   assert.match(tablet, /\.source-row\s*\{[^}]*grid-template-columns:\s*minmax\(0, 5fr\) minmax\(0, 7fr\)/);
   assert.match(tablet, /\.source-images\s*\{\s*grid-column:\s*2;\s*grid-row:\s*1/);
 
   const phone = css.slice(css.indexOf("@media (max-width: 560px)"), css.indexOf("@media (max-width: 430px)"));
   const narrowPhone = css.slice(css.indexOf("@media (max-width: 430px)"), css.indexOf("@media (max-width: 400px)"));
   assert.match(phone, /\.present-day\s*\{\s*padding:\s*34px 18px 30px/);
-  assert.match(phone, /\.story-present\s*\{[^}]*grid-template-columns:\s*repeat\(12, minmax\(0, 1fr\)\);[^}]*gap:\s*10px;[^}]*align-items:\s*start/);
-  assert.match(phone, /\.story-present-copy\s*\{[^}]*grid-column:\s*1 \/ 6;[^}]*max-width:\s*none/);
-  assert.match(phone, /\.story-present ul\s*\{\s*margin-top:\s*14px/);
-  assert.match(phone, /\.story-present li\s*\{[^}]*display:\s*block;[^}]*padding:\s*8px 0;[^}]*font-size:\s*13\.6px;[^}]*font-weight:\s*300;[^}]*line-height:\s*1\.45/);
-  assert.match(phone, /\.story-film\s*\{[^}]*grid-column:\s*6 \/ 13;[^}]*grid-row:\s*1;[^}]*width:\s*100%;[^}]*margin-left:\s*0/);
+  assert.match(phone, /\.story-present\s*\{\s*display:\s*block/);
+  assert.doesNotMatch(phone, /\.story-present-copy|\.story-present ul|\.story-present li|\.story-film\s*\{\s*grid-column/);
   assert.match(phone, /\.sources-intro\s*\{[^}]*grid-template-columns:\s*repeat\(12, minmax\(0, 1fr\)\);[^}]*gap:\s*14px 10px;[^}]*margin-bottom:\s*16px/);
   assert.match(phone, /\.sources-heading h2\s*\{[^}]*margin-top:\s*18px/);
   assert.match(phone, /\.sources-lede\s*\{[^}]*width:\s*min\(310px, 92%\);[^}]*font-size:\s*13\.6px;[^}]*line-height:\s*1\.6/);
@@ -536,6 +540,7 @@ test("keeps records and rejects the obsolete visible-system files", async () => 
     "public/media/blueprint-backgrounds/private-event-canape-studies.png",
     "public/media/blueprint-backgrounds/private-event-production-calculation.png",
     "public/media/blueprint-backgrounds/masterclass-six-person-learning-process.png",
+    "public/media/blueprint-backgrounds/workday-four-step-vertical.png",
     "public/media/chef-hero-apron.jpg",
     "public/media/chef-story-img-5399-no-grill.mp4",
     "public/media/chef-story-img-5399-poster.jpg",
