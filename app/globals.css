@@ -1806,55 +1806,96 @@ button:focus-visible,
 }
 
 @media (max-width: 560px) {
+  .story-origin {
+    position: relative;
+    display: block;
+  }
+
   .story-origin-process-field {
-    grid-column: 1 / 13;
-    grid-row: 1;
     width: 100%;
+    aspect-ratio: .82 / 1;
   }
 
   .story-origin > .story-copy {
-    grid-column: 1 / 13;
-    grid-row: 2;
+    position: absolute;
+    inset: 0 0 41%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+    border: 1px solid var(--rule);
+  }
+
+  .story-origin-process-plan {
+    top: auto;
+    bottom: 0;
+    height: 41%;
   }
 
   .story-origin-process-field .story-award {
-    top: 10%;
+    top: 63.1%;
     left: 5%;
     width: 42%;
-    height: 44%;
+    height: 18.04%;
   }
 
   .format-row-process {
-    gap: 14px;
+    display: block;
+  }
+
+  .format-row-process .format-process-field {
+    width: 100%;
+    aspect-ratio: .82 / 1;
+  }
+
+  .format-row-process .format-process-plan {
+    top: auto;
+    bottom: 0;
+    height: 41%;
   }
 
   .format-row-1.format-row-process .format-copy,
-  .format-row-2.format-row-process .format-copy {
-    max-width: 310px;
+  .format-row-2.format-row-process .format-copy,
+  .format-row-3.format-row-process .format-copy {
+    position: absolute;
+    inset: 0 0 41%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: auto;
+    max-width: none;
+    padding: 20px;
+    border: 1px solid var(--rule);
   }
 
-  .format-row-3.format-row-process .format-copy {
-    max-width: 310px;
+  .format-row-process .format-copy h3 {
+    margin-top: 10px;
+  }
+
+  .format-row-process .format-copy p {
+    margin-top: 10px;
+    font-size: 13.6px;
+    line-height: 1.6;
   }
 
   .format-row-1.format-row-process .format-media {
-    top: 5%;
+    top: 61.05%;
     left: 58%;
     width: 27.1145%;
-    height: 74%;
+    height: 30.34%;
   }
 
   .format-row-2.format-row-process .format-media {
-    top: 8%;
+    top: 62.28%;
     left: 52%;
     width: 37%;
-    height: 49.1%;
+    height: 20.131%;
   }
 
   .format-row-3.format-row-process .format-media {
-    top: 10%;
+    top: 63.1%;
     left: 2%;
     width: 32%;
-    height: 43.1%;
+    height: 17.671%;
   }
 }

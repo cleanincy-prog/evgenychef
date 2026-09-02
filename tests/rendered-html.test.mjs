@@ -293,6 +293,11 @@ test("keeps only the approved process-first blueprints active in the interface",
   assert.match(css, /@media \(max-width:\s*820px\)[\s\S]*?\.format-row-2\.format-row-process \.format-process-field\s*\{[^}]*grid-column:\s*1;[^}]*grid-row:\s*2;[^}]*width:\s*100%/);
   assert.match(css, /@media \(max-width:\s*820px\)[\s\S]*?\.format-row-3\.format-row-process \.format-copy\s*\{[^}]*grid-column:\s*1;[^}]*grid-row:\s*2/);
   assert.match(css, /@media \(max-width:\s*820px\)[\s\S]*?\.format-row-3\.format-row-process \.format-process-field\s*\{[^}]*grid-column:\s*1;[^}]*grid-row:\s*1;[^}]*width:\s*100%/);
+  assert.match(css, /@media \(max-width: 560px\)[\s\S]*?\.story-origin-process-field\s*\{[^}]*aspect-ratio:\s*\.82 \/ 1/);
+  assert.match(css, /@media \(max-width: 560px\)[\s\S]*?\.story-origin > \.story-copy\s*\{[^}]*position:\s*absolute;[^}]*inset:\s*0 0 41%;[^}]*border:\s*1px solid var\(--rule\)/);
+  assert.match(css, /@media \(max-width: 560px\)[\s\S]*?\.format-row-process \.format-process-field\s*\{[^}]*aspect-ratio:\s*\.82 \/ 1/);
+  assert.match(css, /@media \(max-width: 560px\)[\s\S]*?\.format-row-3\.format-row-process \.format-copy\s*\{[^}]*position:\s*absolute;[^}]*inset:\s*0 0 41%;[^}]*border:\s*1px solid var\(--rule\)/);
+  assert.match(css, /@media \(max-width: 560px\)[\s\S]*?\.format-row-1\.format-row-process \.format-media\s*\{[^}]*top:\s*61\.05%;[^}]*height:\s*30\.34%/);
 });
 
 test("uses the measured Trivium typography on the approved editorial surfaces", async () => {

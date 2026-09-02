@@ -4746,3 +4746,23 @@ The review screenshot exposed the actual failure: a complete precomposed calcula
 - **Responsive handling:** desktop and tablet use the authored integrated fields; at narrow phone widths copy is deliberately separated from the 2:1 field to preserve reading size while the photo remains inside its reserved zone.
 - **Anti-template result:** no cards, rounded masks, stock icon library, SVG, gradient, shadow or decorative animation was added. Each underlay carries a different subject-specific planning grammar.
 - **Remaining limitation:** the final browser appearance awaits review on the published Site because the active Sites workflow does not permit browser-based visual QA unless explicitly requested.
+
+## Put mobile copy inside the process cell — implementation plan — 2026-09-02
+
+The user's phone screenshot shows the copy detached above the drawing while the drawing retains an unused blank cell. This is a responsive composition defect, not an asset-content defect.
+
+1. Keep desktop and tablet composition unchanged.
+2. At 560 px and below, combine each live-copy region and its existing process/photo composite into one taller relative field.
+3. Place live copy in a bordered upper technical cell; anchor the existing 2:1 raster to the lower half and translate the photo coordinates into that lower-half coordinate system.
+4. Preserve live text, source-photo aspect ratios, process assets and reading order; introduce no new generated asset or UI library.
+
+### Implemented and verified
+
+- **Files created:** none.
+- **Files changed:** `app/globals.css`, `tests/rendered-html.test.mjs`, `docs/DESIGN_REFERENCE_MAP.md`, `docs/DESIGN_SYSTEM.md` and `docs/DESIGN_AUDIT.md`.
+- **Defect corrected:** below 560 px, MasterChef and all three event-format copy blocks now occupy a bordered upper cell inside the same relative technical-paper field as their process drawing and photograph.
+- **Reference used:** the user's supplied phone screenshot and direct correction that text must be in the cell.
+- **Decisions without a separate reference:** the mobile field uses a `.82 / 1` ratio; its lower 41% preserves the original 2:1 raster without distortion and the upper 59% gives live copy sufficient reading height.
+- **UI libraries:** none introduced.
+- **Verification:** production build, all eight source tests, ESLint and `git diff --check` pass. Assertions lock the unified mobile field, upper copy-cell border and translated complete-photo coordinates.
+- **Remaining limitation:** final appearance awaits user review of the published phone layout; no browser screenshots were taken under the active Sites workflow.

@@ -1140,3 +1140,9 @@ reconstructions.
 - Every desktop underlay contains two authored quiet zones matching the live copy and the complete documentary photograph. No label, calculation, line, arrow or food study may sit behind either foreground zone.
 - Different calculations and combinations occupy the remaining centre gap, outer margins and lower end-of-block band; they must not form one large hidden table.
 - Copy and photographs remain live foreground elements. Text is never rasterised into the underlay, and photography is never baked into the generated drawing.
+
+## Narrow-screen copy cell — 2026-09-02
+
+- At 560 px and below, every primary process block is one continuous technical-paper field rather than two detached stacked blocks.
+- The live copy occupies a bordered upper cell with normal reading width and size. The 2:1 process raster is anchored immediately below, and its foreground photo remains in the authored quiet zone.
+- The cell border uses the existing blueprint rule colour; no card radius, shadow, fill, icon or ornamental frame is added.

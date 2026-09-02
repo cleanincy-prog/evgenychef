@@ -758,3 +758,9 @@ The user's screenshot rejects a precomposed full calculation sheet placed behind
 | Private dinner | User's rejected screenshot plus photo-right/copy-left rule | Portrait photo receives a tall right-hand quiet zone; guest/menu calculations occupy centre, far-right margin and bottom | Table, timeline or dishes running behind the chef's face/body | Regenerate a 2:1 calculation underlay around the real portrait geometry |
 | Private event | Direct correction plus photo-right/copy-left rule | Landscape event photo receives a wide upper-right quiet zone; batch/menu calculations remain in centre, edge and bottom | Production cells or food sketches behind the photo | Regenerate a 2:1 event-production underlay around the foreground geometry |
 | Master class | Direct correction plus photo-left/copy-right rule | Landscape teaching photo receives a wide upper-left quiet zone; station arithmetic and dish outcomes occupy the centre and lower band | Station flow or labels hidden behind the photo/copy | Regenerate a 2:1 learning underlay around the foreground geometry |
+
+## Mobile copy cell — direct correction — 2026-09-02
+
+| Project element | Reference | Principle used | What is not copied | Project implementation |
+|---|---|---|---|---|
+| MasterChef and three event-format rows on narrow screens | User-supplied phone screenshot and direct statement “Текст не в ячейке” | Keep live readable copy inside the same technical-paper field as the process drawing; place copy in an upper cell and the 2:1 drawing/photo composite directly below it | Detached text above the drawing, tiny copy squeezed into the desktop reserved rectangle, rasterised marketing copy | At 560 px and below, the field becomes a taller unified wrapper; live copy overlays its bordered upper cell while the original 2:1 process raster and complete photo occupy the lower half |
