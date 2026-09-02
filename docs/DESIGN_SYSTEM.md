@@ -1146,3 +1146,20 @@ reconstructions.
 - At 560 px and below, every primary process block is one continuous technical-paper field rather than two detached stacked blocks.
 - The live copy occupies a bordered upper cell with normal reading width and size. The 2:1 process raster is anchored immediately below, and its foreground photo remains in the authored quiet zone.
 - The cell border uses the existing blueprint rule colour; no card radius, shadow, fill, icon or ornamental frame is added.
+- The duplicate desktop copy reserve is not shown in the lower mobile raster. Dinner/event rasters expose source x 30–100%; MasterChef/master-class rasters expose source x 0–70%. The active portion scales proportionally and is clipped by the unified field.
+
+## Foreground-first process rendering — 2026-09-03
+
+- Live copy and the complete documentary photograph are laid out and measured before any replacement underlay is rendered.
+- Desktop process fields remain 2:1. Narrow-phone fields may become taller, but the photograph and live copy remain side-by-side rather than stacking.
+- Each breakpoint family receives its own raster underlay. Desktop rasters are not cropped or stretched into mobile compositions.
+- Copy and photo rectangles are immutable exclusion zones for image generation. All calculations, combinations and process marks must remain outside them.
+- A photograph frame must match the source ratio exactly and be filled edge-to-edge. Cropping and letterboxing are both prohibited; only proportional scaling is allowed.
+- High-resolution process masters use lossless PNG at no less than 2× the maximum rendered dimensions. Any optimized delivery derivative must preserve visibly crisp construction lines and readable numbers.
+
+### Authoritative side rule
+
+- MasterChef and master class: complete photograph left, live copy right.
+- Private dinner and private event: live copy left, complete photograph right.
+- This relationship is preserved at desktop, tablet and phone widths. “Top-to-bottom” applies only to the separate workday-step imagery and must not be generalized to these four process blocks.
+- Photo and copy exclusion zones have no visible border, bracket, registration mark or placeholder frame. They read as unmarked paper within the one shared composition.

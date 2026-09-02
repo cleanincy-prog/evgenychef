@@ -764,3 +764,31 @@ The user's screenshot rejects a precomposed full calculation sheet placed behind
 | Project element | Reference | Principle used | What is not copied | Project implementation |
 |---|---|---|---|---|
 | MasterChef and three event-format rows on narrow screens | User-supplied phone screenshot and direct statement “Текст не в ячейке” | Keep live readable copy inside the same technical-paper field as the process drawing; place copy in an upper cell and the 2:1 drawing/photo composite directly below it | Detached text above the drawing, tiny copy squeezed into the desktop reserved rectangle, rasterised marketing copy | At 560 px and below, the field becomes a taller unified wrapper; live copy overlays its bordered upper cell while the original 2:1 process raster and complete photo occupy the lower half |
+
+| Duplicate empty desktop copy reserve on mobile | User-supplied follow-up screenshot pointing to the unused rectangle | Once mobile copy has its readable upper cell, remove the second empty desktop reserve and let only the active calculation/photo portion fill the lower field | Leaving a visibly unused square or shrinking live copy until it becomes unreadable | Crop the lower raster to its active 70% segment at 560 px and below; translate photo coordinates to that cropped segment |
+
+## Layout-first rendering workflow — direct correction — 2026-09-03
+
+The latest instruction supersedes crop-based attempts. Text and complete documentary photography must be composed first as live foreground elements at each target breakpoint. Their measured rectangles then become immutable exclusion zones used to render separate desktop and mobile process underlays.
+
+| Project element | Reference | Principle used | What is not copied | Project implementation |
+|---|---|---|---|---|
+| Four primary process blocks | Direct user instruction: “сначала расположишь текст как надо и картинку как надо, а потом по размерам зарендеришь” | Foreground composition determines background geometry, never the reverse | Scaling or cropping a pre-existing desktop sheet until its empty cells happen to align | Refactor each row into one shared positioning field; measure live copy/photo rectangles at required widths; generate desktop and mobile rasters from those exclusion zones |
+| Documentary photographs | Direct user instruction: photographs must not be cropped and must run edge-to-edge | The CSS frame always has the exact intrinsic aspect ratio of its source photograph; resizing changes only the overall frame size | `object-fit: cover`, arbitrary fixed aspect ratios, letterboxing or baked-in photography | Use measured percentage width/height pairs that reproduce 1719:900, 1152:1572, 2278:1510 and 1144:770 exactly, with `object-fit: contain` filling the matched frame |
+| Final underlay quality | Direct user instruction that layouts must be rendered in excellent quality | Keep master rasters at least twice their maximum CSS display size, with lossless line/text edges | Low-resolution screenshot crops, JPEG masters or browser-scaled one-size assets | Retain high-resolution PNG masters and create optimized delivery files only after visual approval |
+
+## Side-by-side rule at every width — direct correction — 2026-09-03
+
+The latest direction supersedes the earlier narrow-screen “copy first/photo second” interpretation.
+These four blocks never become a vertical text/photo stack: MasterChef and master class keep the
+photograph on the left and live copy on the right; private dinner and private event keep live copy on
+the left and the photograph on the right. On narrow screens both elements may become smaller and the
+field may become taller, but their left/right relationship is immutable. The currently approved
+process rasters are used for this trial; replacement underlays are deferred until visual review.
+
+## Unframed foreground zones — direct correction — 2026-09-03
+
+The process drawing must never outline the live photograph or copy with a reserved-cell border,
+registration rectangle, guide line or decorative strip. Their areas remain plain paper. Process
+arrows and calculations may approach and visually connect the two foreground elements only from the
+genuinely free centre, edge and lower zones; no underlay line may continue beneath either element.

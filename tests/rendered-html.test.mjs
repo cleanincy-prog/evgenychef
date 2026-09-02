@@ -262,7 +262,7 @@ test("keeps only the approved process-first blueprints active in the interface",
   assert.equal((page.match(/processBackground:\s*true/g) ?? []).length, 3);
   assert.equal((page.match(/processBackground:\s*false/g) ?? []).length, 0);
   assert.equal((page.match(/drawingSrc:\s*null/g) ?? []).length, 0);
-  assert.match(page, /\) : \(\s*<figure className="format-media">[\s\S]*?<div className="format-copy">/);
+  assert.match(page, /className="format-process-field"[\s\S]*?className="format-process-plan"[\s\S]*?className="format-media"[\s\S]*?className="format-copy"/);
   assert.match(page, /<header className="source-copy">[\s\S]*?<div className="source-images">/);
   assert.equal((page.match(/className="source-reference-plan"/g) ?? []).length, 1);
   assert.match(page, /className="source-reference-plan"[\s\S]*?src=\{chapter\.drawingSrc\}/);
@@ -293,11 +293,20 @@ test("keeps only the approved process-first blueprints active in the interface",
   assert.match(css, /@media \(max-width:\s*820px\)[\s\S]*?\.format-row-2\.format-row-process \.format-process-field\s*\{[^}]*grid-column:\s*1;[^}]*grid-row:\s*2;[^}]*width:\s*100%/);
   assert.match(css, /@media \(max-width:\s*820px\)[\s\S]*?\.format-row-3\.format-row-process \.format-copy\s*\{[^}]*grid-column:\s*1;[^}]*grid-row:\s*2/);
   assert.match(css, /@media \(max-width:\s*820px\)[\s\S]*?\.format-row-3\.format-row-process \.format-process-field\s*\{[^}]*grid-column:\s*1;[^}]*grid-row:\s*1;[^}]*width:\s*100%/);
-  assert.match(css, /@media \(max-width: 560px\)[\s\S]*?\.story-origin-process-field\s*\{[^}]*aspect-ratio:\s*\.82 \/ 1/);
-  assert.match(css, /@media \(max-width: 560px\)[\s\S]*?\.story-origin > \.story-copy\s*\{[^}]*position:\s*absolute;[^}]*inset:\s*0 0 41%;[^}]*border:\s*1px solid var\(--rule\)/);
-  assert.match(css, /@media \(max-width: 560px\)[\s\S]*?\.format-row-process \.format-process-field\s*\{[^}]*aspect-ratio:\s*\.82 \/ 1/);
-  assert.match(css, /@media \(max-width: 560px\)[\s\S]*?\.format-row-3\.format-row-process \.format-copy\s*\{[^}]*position:\s*absolute;[^}]*inset:\s*0 0 41%;[^}]*border:\s*1px solid var\(--rule\)/);
-  assert.match(css, /@media \(max-width: 560px\)[\s\S]*?\.format-row-1\.format-row-process \.format-media\s*\{[^}]*top:\s*61\.05%;[^}]*height:\s*30\.34%/);
+  const foregroundPass = css.slice(css.lastIndexOf("/* Foreground-first process composition."));
+  assert.match(foregroundPass, /\.story-origin-process-field \{ aspect-ratio: \.62 \/ 1; \}/);
+  assert.match(foregroundPass, /\.format-row-process \.format-process-field \{ aspect-ratio: \.85 \/ 1; \}/);
+  assert.match(foregroundPass, /\.story-origin-process-field > \.story-copy\s*\{[^}]*left:\s*53%;[^}]*width:\s*43%/);
+  assert.match(foregroundPass, /\.story-origin-process-field \.story-award\s*\{[^}]*left:\s*4%;[^}]*width:\s*45%/);
+  assert.match(foregroundPass, /\.format-row-1\.format-row-process \.format-copy,[\s\S]*?\.format-row-2\.format-row-process \.format-copy\s*\{[^}]*left:\s*4%;[^}]*width:\s*45%/);
+  assert.match(foregroundPass, /\.format-row-1\.format-row-process \.format-media\s*\{[^}]*left:\s*55%;[^}]*width:\s*41%/);
+  assert.match(foregroundPass, /\.format-row-2\.format-row-process \.format-media\s*\{[^}]*left:\s*53%;[^}]*width:\s*43%/);
+  assert.match(foregroundPass, /\.format-row-3\.format-row-process \.format-media\s*\{[^}]*left:\s*4%;[^}]*width:\s*45%/);
+  assert.match(foregroundPass, /\.format-row-3\.format-row-process \.format-copy\s*\{[^}]*left:\s*53%;[^}]*width:\s*43%/);
+  assert.match(foregroundPass, /aspect-ratio:\s*1719 \/ 900/);
+  assert.match(foregroundPass, /aspect-ratio:\s*1152 \/ 1572/);
+  assert.match(foregroundPass, /aspect-ratio:\s*2278 \/ 1510/);
+  assert.match(foregroundPass, /aspect-ratio:\s*1144 \/ 770/);
 });
 
 test("uses the measured Trivium typography on the approved editorial surfaces", async () => {

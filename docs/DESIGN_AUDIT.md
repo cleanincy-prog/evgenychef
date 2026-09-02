@@ -4766,3 +4766,57 @@ The user's phone screenshot shows the copy detached above the drawing while the 
 - **UI libraries:** none introduced.
 - **Verification:** production build, all eight source tests, ESLint and `git diff --check` pass. Assertions lock the unified mobile field, upper copy-cell border and translated complete-photo coordinates.
 - **Remaining limitation:** final appearance awaits user review of the published phone layout; no browser screenshots were taken under the active Sites workflow.
+
+## Remove the duplicate empty mobile reserve — implementation plan — 2026-09-02
+
+The follow-up screenshot identifies the remaining defect: after moving copy into a readable mobile cell, the lower 2:1 raster still shows its original desktop copy reserve as an unused square.
+
+1. Keep the live upper copy cell and all desktop behavior.
+2. On mobile, proportionally enlarge and clip the lower raster to its active 70% segment, excluding only the now-redundant desktop copy reserve.
+3. Recalculate every foreground-photo coordinate against the cropped segment so complete image ratios remain unchanged.
+4. Preserve calculations, dishes, routes and process content; introduce no replacement asset, distortion, UI library or additional copy.
+
+### Implemented and verified
+
+- **Files created:** none.
+- **Files changed:** `app/globals.css`, `tests/rendered-html.test.mjs`, `docs/DESIGN_REFERENCE_MAP.md`, `docs/DESIGN_SYSTEM.md` and `docs/DESIGN_AUDIT.md`.
+- **Defect corrected:** the redundant blank desktop copy rectangle is excluded from the lower mobile composite. Dinner/event use the right active 70% of their sheet; MasterChef/master-class use the left active 70%.
+- **Photo preservation:** foreground coordinates were translated to the cropped sheet rather than cropped independently, so all four photographs keep their intrinsic ratios and full contents.
+- **Reference used:** the user's follow-up screenshot identifying the unused square.
+- **Decisions without a separate reference:** the unified mobile field changes to `.72 / 1`; its lower `51.43%` is mathematically the natural height of a 2:1 sheet enlarged to show 70% of its width.
+- **UI libraries:** none introduced.
+- **Verification:** production build, all eight source tests, ESLint and `git diff --check` pass.
+- **Remaining limitation:** the published phone layout still requires the user's final visual confirmation.
+
+## Foreground-first rerender — implementation plan — 2026-09-03
+
+The user rejected the sequence in which an existing drawing was manipulated before the final text/photo geometry was fixed. The unpublished crop-based version is superseded.
+
+1. Refactor each primary row so process image, live copy and photograph share one positioning field.
+2. Compose desktop text/photo pairs according to the approved left/right directions.
+3. Compose narrow-phone text and photo side-by-side in the same left/right direction as desktop; use the existing approved process rasters for the first visual trial.
+4. Render locally at 1440, 1280, 430, 390 and 375 px and record the actual copy/photo bounding rectangles.
+5. Generate one desktop and one mobile underlay per block from those measured exclusion zones.
+6. Insert the responsive rasters, verify all seven required widths, then publish. No intermediate layout is published.
+
+Additional direct constraints: every photograph frame must match its source ratio exactly and fill edge-to-edge without cropping; final process assets must be retained as high-resolution lossless masters and verified at device-pixel-density scale.
+
+### Latest correction before implementation
+
+The phone composition must not stack text above photography. MasterChef/master class remain photo-left/copy-right; dinner/event remain copy-left/photo-right at every breakpoint. This explicitly cancels the earlier mobile 4:5 stacked instruction while retaining the foreground-first measurement workflow.
+
+### Implemented trial with the approved underlays
+
+- MasterChef and master class now keep complete photography at left and live copy at right at every verified width.
+- Private dinner and private event now keep live copy at left and complete photography at right at every verified width.
+- The four image wrappers use the exact source ratios (`1719:900`, `1152:1572`, `2278:1510`, `1144:770`) and `object-fit: contain`; no source photograph is cropped.
+- At narrow widths, the current 2:1 underlay is placed in the remaining lower area of a taller field so it cannot compete with the live pair. This is the user-authorized trial with the existing assets; a purpose-rendered narrow underlay remains an optional next iteration after review.
+- Browser verification at 1440, 1280, 1024, 768, 430, 390 and 375 px found no text/photo collisions, no foreground element outside its field and no horizontal document overflow.
+- No UI library, new card pattern, radius, shadow, SVG or decorative effect was introduced.
+
+### Foreground approval gate — latest direct correction
+
+Mobile underlay integration is paused. At 820 px and below, the process rasters are temporarily hidden
+while the complete photographs and live copy are reviewed inside one shared 2:3 rectangle. Only after
+those foreground rectangles are approved may their measured exclusion zones be used for a new integrated
+process drawing. Generated candidates created before this approval are not active site assets.

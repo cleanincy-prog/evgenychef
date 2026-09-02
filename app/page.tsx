@@ -185,24 +185,31 @@ function EventFormats() {
                     alt={format.alt}
                   />
                 </figure>
+                <div className="format-copy">
+                  <span aria-hidden="true">0{index + 1}</span>
+                  <h3>{format.name}</h3>
+                  <p>{format.description}</p>
+                </div>
               </div>
             ) : (
-              <figure className="format-media">
-                <img
-                  src={format.src}
-                  width={format.width}
-                  height={format.height}
-                  loading="lazy"
-                  decoding="async"
-                  alt={format.alt}
-                />
-              </figure>
+              <>
+                <figure className="format-media">
+                  <img
+                    src={format.src}
+                    width={format.width}
+                    height={format.height}
+                    loading="lazy"
+                    decoding="async"
+                    alt={format.alt}
+                  />
+                </figure>
+                <div className="format-copy">
+                  <span aria-hidden="true">0{index + 1}</span>
+                  <h3>{format.name}</h3>
+                  <p>{format.description}</p>
+                </div>
+              </>
             )}
-            <div className="format-copy">
-              <span aria-hidden="true">0{index + 1}</span>
-              <h3>{format.name}</h3>
-              <p>{format.description}</p>
-            </div>
           </li>
         ))}
       </ol>
@@ -310,17 +317,17 @@ export default function Home() {
                     alt="Евгений Грыбенюк после победы в МастерШеф. Профессионалы — 2 держит фирменный конверт победителя"
                   />
                 </figure>
-              </div>
-              <div className="story-copy">
-                <p>
-                  Победа в «МастерШеф. Профессионалы» открыла мне путь к новым кухням Европы
-                  и Средиземноморья, где я собирал рецепты, техники и сочетания для будущих
-                  авторских блюд.
-                </p>
-                <p>
-                  Теперь я провожу частные ужины, приватные мероприятия и мастер-классы и
-                  превращаю этот опыт в ваш идеальный гастрономический вечер.
-                </p>
+                <div className="story-copy">
+                  <p>
+                    Победа в «МастерШеф. Профессионалы» открыла мне путь к новым кухням Европы
+                    и Средиземноморья, где я собирал рецепты, техники и сочетания для будущих
+                    авторских блюд.
+                  </p>
+                  <p>
+                    Теперь я провожу частные ужины, приватные мероприятия и мастер-классы и
+                    превращаю этот опыт в ваш идеальный гастрономический вечер.
+                  </p>
+                </div>
               </div>
             </div>
             <EventFormats />
