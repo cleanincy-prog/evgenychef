@@ -1,0 +1,5 @@
+<svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Евгений Грыбенюк">
+  <rect width="64" height="64" fill="#193D32"/>
+  <path d="M10 12H54" stroke="#B24F2F" stroke-width="4"/>
+  <text x="32" y="45" fill="#FFF9EE" font-family="Georgia, serif" font-size="27" text-anchor="middle">ЕГ</text>
+</svg>
