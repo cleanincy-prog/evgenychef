@@ -86,8 +86,8 @@ const eventFormats = [
     width: 2278,
     height: 1510,
     alt: "Евгений Грыбенюк готовит блины перед гостями на приватном мероприятии",
-    drawingSrc: null,
-    processBackground: false,
+    drawingSrc: "/media/blueprint-backgrounds/private-event-production-calculation.png",
+    processBackground: true,
   },
   {
     name: "Мастер-классы",

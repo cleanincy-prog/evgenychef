@@ -4410,3 +4410,60 @@ lower service sequence visible without a detached blank band or horizontal overf
 - **Remaining limitation:** calculations become supporting visual detail at narrow-phone size rather
   than body-readable copy; the authoritative service description remains live HTML. Every remaining
   block still requires its own one-by-one process drawing and explicit approval before insertion.
+
+## Approved private-event production sheet — implementation plan — 2026-09-02
+
+The first private-event candidate was conditionally accepted, then corrected by direct user feedback:
+venue tables and service-floor mapping are irrelevant; menu, calculations, dishes and quantities are
+the required subject; the drawing must not be coloured. The revised monochrome preview was explicitly
+approved.
+
+1. Retain the event's exact live copy, outdoor cooking photograph, numbering and alternating editorial
+   rhythm.
+2. Add no new component. Reuse `format-process-field` and extend its row-specific positioning so the
+   second row mirrors the dinner composition without duplicating its visual metaphor.
+3. Replace only `eventFormats[1].drawingSrc` and `processBackground`; do not reactivate
+   `private-event-canape-studies.png` or any venue-map candidate.
+4. Place the photo over the quiet upper-middle zone. Keep the left guest/count calculation, right menu
+   specification and lower batch/timeline band exposed.
+5. On tablet/phone, put the event copy first and the same layered field second. Do not add fixed blank
+   reserves, detached drawings, horizontal scroll or furniture symbols.
+6. Update source tests to require three active approved rasters and two process event rows, while the
+   masterclass remains the sole documentary fallback in the event list.
+7. Verify lint, build, source tests, `git diff --check` and 1440/1280/1024/768/430/390/375 px before
+   publishing the existing review URL.
+
+### Implemented and verified
+
+- **File created:** `public/media/blueprint-backgrounds/private-event-production-calculation.png`
+  (1774 × 887 monochrome raster).
+- **Files changed:** `app/page.tsx`, `app/globals.css`, `tests/rendered-html.test.mjs`,
+  `docs/DESIGN_REFERENCE_MAP.md`, `docs/DESIGN_SYSTEM.md` and `docs/DESIGN_AUDIT.md`.
+- **Rejected elements kept inactive:** the venue plan, furniture/table layout, coloured marks and the
+  former `private-event-canape-studies.png` do not appear in rendered JSX or CSS. The approved sheet is
+  about menu allocation, quantities, production batches, tray loading and timed service.
+- **Reference used:** the user's explicit approval of the corrected monochrome preview. The unchanged
+  outdoor cooking photograph, exact live copy, numbering and alternating editorial rhythm remain from
+  the existing approved interface.
+- **Neutral fitting decisions without a separate reference:** on wide layouts the photo uses `top: 4%`,
+  `left: 28%`, `width: 39%`, `height: 57%`; at 560 px and below it uses `top: 3%`, `left: 38%`,
+  `width: 52%`, `height: 68%`. Wide layout places the process field at columns `1 / 10` and copy at
+  columns `10 / 13`; at 820 px and below the copy moves to row 1 and the full-width process field to row
+  2. These percentages fit the supplied raster's quiet centre while retaining the left calculation and
+  lower service sequence rather than introducing a new visual style.
+- **UI libraries:** no visible component library, stock theme or new component was introduced. The
+  existing React/Next markup and `format-process-field` primitive are reused.
+- **Automated verification:** ESLint, the production build, all eight source tests and
+  `git diff --check` pass.
+- **Responsive verification:** browser geometry was checked at all required widths and the raster
+  reported `naturalWidth = 1774` throughout. At 1440 px the field/media measured 968 × 484 / 377 ×
+  276; at 1280 px, 860 × 430 / 335 × 245; at 1024 px, 688 × 344 / 268 × 196; at 768 px,
+  724 × 362 / 282 × 206; at 430 px, 394 × 197 / 205 × 134; at 390 px, 354 × 177 / 184 ×
+  120; and at 375 px, 339 × 170 / 176 × 115. `documentElement.scrollWidth` equalled the viewport
+  at every width. Screenshot review at 1280, 1024, 768, 430 and 375 px confirmed the wide right-hand
+  copy, the mobile copy-first order, the foreground photo and the exposed process sheet.
+- **Anti-template result:** no cards, detached third-column illustration, fixed blank reserve, gradient,
+  shadow, furniture symbol, placeholder copy or library-default styling was added.
+- **Remaining limitation:** calculations are supporting visual detail at narrow-phone size; the exact
+  commercial description remains live HTML. Masterclass remains the only documentary fallback in the
+  event list, and all later blocks still await their own one-by-one raster approval.

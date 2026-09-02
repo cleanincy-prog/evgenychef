@@ -1036,6 +1036,9 @@ This section supersedes the statement that `private-dinner-process-v2.png` is th
 - `private-dinner-calculation-process.png` replaces the rejected private-dinner prototype. Its grammar
   is a chef's calculation sheet: inputs, quantities, yield/loss, time, heat/equipment dependency and
   ordered service. This grammar is specific to the dinner block and must not be mechanically repeated.
+- `private-event-production-calculation.png` is the approved private-event grammar: guest count and
+  reserve, four-item menu allocation, batch and tray quantities, production handoffs and timed service.
+  It contains no venue plan, furniture or coloured drawing marks.
 - The blueprint and documentary media form one composite. The raster is absolute at `z-index: 0`; the
   unchanged photograph or film is above it at `z-index: 1`; live copy remains above both. The photo
   occupies the quiet area intentionally designed into the sheet.
@@ -1050,3 +1053,7 @@ This section supersedes the statement that `private-dinner-process-v2.png` is th
 
 All other blocks remain in documentary fallback while their unique process sheet is awaiting the
 user's explicit yes/no decision.
+
+New candidates after the private-event correction use monochrome graphite construction, hatching and
+type on neutral paper. No antique-gold route or coloured food is added unless the user later approves
+that colour for a specific block. Earlier approved assets remain unchanged unless separately revised.
