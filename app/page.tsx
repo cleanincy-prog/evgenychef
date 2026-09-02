@@ -75,7 +75,7 @@ const eventFormats = [
     width: 1152,
     height: 1572,
     alt: "Евгений Грыбенюк готовит блюдо на сковороде для частного ужина",
-    drawingSrc: "/media/blueprint-backgrounds/private-dinner-calculation-process.png",
+    drawingSrc: "/media/blueprint-backgrounds/private-dinner-layout-color-v2.png",
     processBackground: true,
   },
   {
@@ -86,7 +86,7 @@ const eventFormats = [
     width: 2278,
     height: 1510,
     alt: "Евгений Грыбенюк готовит блины перед гостями на приватном мероприятии",
-    drawingSrc: "/media/blueprint-backgrounds/private-event-production-calculation.png",
+    drawingSrc: "/media/blueprint-backgrounds/private-event-layout-color-v2.png",
     processBackground: true,
   },
   {
@@ -97,7 +97,7 @@ const eventFormats = [
     width: 1144,
     height: 770,
     alt: "Евгений Грыбенюк показывает участникам мастер-класса профессиональные приёмы",
-    drawingSrc: "/media/blueprint-backgrounds/masterclass-six-person-learning-process.png",
+    drawingSrc: "/media/blueprint-backgrounds/masterclass-six-person-layout-color-v2.png",
     processBackground: true,
   },
 ];
@@ -292,7 +292,7 @@ export default function Home() {
               <div className="story-origin-process-field">
                 <img
                   className="story-origin-process-plan"
-                  src="/media/blueprint-backgrounds/masterchef-recipes-europe.png"
+                  src="/media/blueprint-backgrounds/masterchef-recipes-europe-layout-color-v2.png"
                   width="1774"
                   height="887"
                   loading="lazy"

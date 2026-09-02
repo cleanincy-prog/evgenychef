@@ -1111,3 +1111,32 @@ reconstructions.
   not a proportional shrink of the desktop sheet.
 - MasterChef, dinner, private event, masterclass and workday keep their separately approved assets and
   geometry. Hero has no drawing in this supplied reference and receives none.
+
+## Process-background row direction — 2026-09-02
+
+- The four process rows after Hero use one directional rule: MasterChef photo-left/copy-right; private
+  dinner photo-right/copy-left; private event photo-right/copy-left; masterclass photo-left/copy-right.
+- The approved 2:1 drawing is always the lowest visual layer. It is never a detached third column and
+  must remain visible around the photograph and in the lower end-of-block band.
+- Documentary photographs use their complete intrinsic aspect ratio. Their wrappers are sized from the
+  source ratio and images use `object-fit: contain`; no face, hands, cookware or venue edge is removed to
+  force a uniform crop.
+- At 820 px and below, private dinner and private event preserve copy-first reading order before their
+  process field. Masterclass preserves process-field-first order before its copy. MasterChef remains a
+  left/right proof pair at tablet width and becomes field-first/copy-second at phone width.
+- No change is made to the approved raster files, copy, numbering, typography, colour or square-edge
+  treatment. No card, frame, shadow, gradient, mask, SVG or new illustration is added.
+
+## Muted process-background colour — 2026-09-02
+
+- The four primary process underlays use colour, but remain technical drawings subordinate to the documentary photographs and live copy.
+- Allowed colour family: paper beige, warm graphite, desaturated olive, dusty herb green, muted terracotta and the site's soft ochre/gold.
+- Colour is selective and low-saturation. Fine construction lines, Russian copy, quantities, scales and diagram geometry remain unchanged and legible.
+- Vivid primary colours, rainbow palettes, neon tones, broad opaque fills and high-contrast gradients are prohibited.
+
+## Collision-free process field — 2026-09-02
+
+- The process image spans the complete twelve-column editorial row and is the lowest visual layer.
+- Every desktop underlay contains two authored quiet zones matching the live copy and the complete documentary photograph. No label, calculation, line, arrow or food study may sit behind either foreground zone.
+- Different calculations and combinations occupy the remaining centre gap, outer margins and lower end-of-block band; they must not form one large hidden table.
+- Copy and photographs remain live foreground elements. Text is never rasterised into the underlay, and photography is never baked into the generated drawing.

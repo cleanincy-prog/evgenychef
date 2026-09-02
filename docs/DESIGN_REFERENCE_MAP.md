@@ -723,3 +723,38 @@ private event, masterclass and the already approved text-free workday composite 
 The exact pixel crops retain their original opaque paper, line weight, handwritten marks, colour and
 embedded labels. They are not regenerated, traced, recoloured, cleaned, made transparent, sharpened or
 combined with the rejected transparent WebP assets.
+
+## Process-background row direction — direct approval — 2026-09-02
+
+The user established one explicit composition rule for the four process-background rows immediately
+after the Hero. The documentary photograph remains foreground evidence, the approved drawing is the
+background/underlay and continues visibly below the photograph to the end of the block. This rule
+supersedes the previous alternation of the second and third event rows and the previous cropped-photo
+treatment.
+
+| Project element | Reference | Principle used | What is not copied | Project implementation |
+|---|---|---|---|---|
+| MasterChef proof | Direct instruction: photograph left, text right, drawing as background | The award photograph is the left foreground proof; the recipes/Europe sheet remains visible behind it and below it | New map, changed biography, crop of the award photograph or detached drawing | Keep `masterchef-recipes-europe.png` as the process field; fit the complete award image at left and keep both paragraphs at right |
+| Private dinner | Direct instruction: complete photograph right, text left, drawing as background and end-of-block underlay | The uncropped portrait cooking image is the right foreground outcome of the calculation sheet | Landscape crop, changed copy, new calculation sheet or separate lower illustration | Keep `private-dinner-calculation-process.png` across the field; fit the complete portrait photograph at right, retain text at left and expose the lower calculation/service band |
+| Private event | Direct instruction: same as private dinner — photograph right, text left, layout as underlay | The outdoor cooking photograph remains right of the copy while the production sheet continues beneath it | Reversed copy/photo order, venue plan, changed photo or detached sheet | Move the existing process field to the right-hand side of the copy and fit the complete landscape photo over its quiet area |
+| Masterclass | Direct instruction: photograph left, text right, layout as underlay | The teaching photograph is the left foreground proof; the six-person learning sheet remains the block background | Twelve-person version, classroom furniture, changed copy or right-hand photograph | Move the process field to the left and the live copy to the right; keep the complete teaching photograph over the approved sheet |
+
+No asset is regenerated. Exact overlay percentages are neutral fitting decisions derived from each
+photograph's intrinsic ratio and the already approved quiet area in its process sheet.
+
+## Muted colour treatment for process backgrounds — direct approval — 2026-09-02
+
+| Project element | Reference | Principle used | What is not copied | Project implementation |
+|---|---|---|---|---|
+| Four primary process underlays | Direct user instruction in this task and the existing site palette | Preserve each approved planning drawing while adding restrained culinary colour: dusty herb green, muted terracotta, soft ochre, warm olive and paper beige | No vivid rainbow palette, no new objects, no changed labels, calculations, routes or geometry | Save non-destructive coloured raster versions and use them only as the MasterChef, dinner, event and master-class underlays |
+
+## Collision-free process compositions — direct correction — 2026-09-02
+
+The user's screenshot rejects a precomposed full calculation sheet placed behind an unrelated photograph. The approved principle is now one integrated field spanning the whole row: a clean reserved zone for live copy, a clean reserved zone for the complete documentary photograph, and different planning calculations/combinations arranged only in the remaining areas and lower band.
+
+| Project element | Reference | Principle used | What is not copied | Project implementation |
+|---|---|---|---|---|
+| MasterChef | Direct correction plus the established photo-left/copy-right rule | Landscape proof at left, live copy at right, recipe/route studies only in the centre, margins and lower band | A complete old sheet hidden by the proof photograph | Regenerate a 2:1 underlay with exact quiet zones matching the two foreground elements |
+| Private dinner | User's rejected screenshot plus photo-right/copy-left rule | Portrait photo receives a tall right-hand quiet zone; guest/menu calculations occupy centre, far-right margin and bottom | Table, timeline or dishes running behind the chef's face/body | Regenerate a 2:1 calculation underlay around the real portrait geometry |
+| Private event | Direct correction plus photo-right/copy-left rule | Landscape event photo receives a wide upper-right quiet zone; batch/menu calculations remain in centre, edge and bottom | Production cells or food sketches behind the photo | Regenerate a 2:1 event-production underlay around the foreground geometry |
+| Master class | Direct correction plus photo-left/copy-right rule | Landscape teaching photo receives a wide upper-left quiet zone; station arithmetic and dish outcomes occupy the centre and lower band | Station flow or labels hidden behind the photo/copy | Regenerate a 2:1 learning underlay around the foreground geometry |

@@ -4661,3 +4661,88 @@ reference is rejected and remains outside the project.
 - **Remaining limitation:** the approved source is a screenshot, so fine raster annotations are naturally
   smaller on narrow phones. They remain intact and uncropped; upscaling or redrawing would violate the
   explicit requirement to keep the drawings unchanged.
+
+## Correct process-background row direction — implementation plan — 2026-09-02
+
+The user's latest direction applies to the four process-backed rows immediately after Hero and does not
+replace any approved photograph, copy or drawing.
+
+1. **Incorrect elements found:** the private-event row currently places its process/photo field left and
+   copy right; the masterclass row currently does the opposite of the newly stated rule. The private-dinner
+   portrait is forced into a landscape wrapper with `object-fit: cover`, cutting away source pixels. The
+   MasterChef proof is also cropped inside a wrapper whose ratio differs from its source.
+2. **Confirmed replacement:** MasterChef photo left/copy right; private dinner photo right/copy left;
+   private event photo right/copy left; masterclass photo left/copy right. In all four, the existing
+   approved raster remains the background and extends visibly below the foreground photograph.
+3. **Components retained:** all four approved rasters, all four documentary photographs, exact live copy,
+   event numbers, semantic order, section surfaces, typography and existing process-field primitives.
+4. **Components reworked:** only row-specific grid placement, stack order below 820 px and photograph
+   wrapper geometry. Each wrapper is recalculated from the source photograph's intrinsic ratio and every
+   image uses `object-fit: contain`.
+5. **New components required:** none. No UI library, new asset, generated image or duplicate markup is
+   needed.
+6. **Verification target:** build, lint, eight source tests, `git diff --check`, intrinsic-ratio assertions
+   and required-width geometry at 1440, 1280, 1024, 768, 430, 390 and 375 px. The lower blueprint band must
+   remain exposed and no horizontal overflow may be introduced.
+
+### Anti-template target before implementation
+
+- Remove the accidental left/right alternation that contradicts content direction; do not replace it with
+  cards or a generic repeated media component.
+- Preserve different subject-specific process sheets while applying only the user's explicit directional
+  relationship.
+- Keep square edges, natural photograph ratios and one background sheet per block. Add no crop, radius,
+  shadow, gradient, iconography, animation or placeholder content.
+
+### Implemented and verified
+
+- **Files created:** none.
+- **Files changed:** `app/globals.css`, `tests/rendered-html.test.mjs`,
+  `docs/DESIGN_REFERENCE_MAP.md`, `docs/DESIGN_SYSTEM.md` and `docs/DESIGN_AUDIT.md`.
+- **Incorrect/template-like behavior corrected:** the private-event field no longer reverses the requested
+  photo-right/copy-left relationship; masterclass now uses photo-left/copy-right. The portrait dinner photo
+  and landscape MasterChef proof no longer use a mismatched wrapper with `object-fit: cover`.
+- **Reference used:** the user's direct row rule in this turn. All four previously approved drawings,
+  documentary photographs and live copy remain unchanged.
+- **Decisions without a separate reference:** wrapper percentages were calculated from the four source
+  aspect ratios and the existing quiet zones in their approved 2:1 rasters. At 820 px and below, dinner and
+  event keep copy-first stacking while masterclass keeps process-field-first stacking.
+- **UI libraries:** none introduced; existing CSS Grid and React markup remain technical primitives only.
+- **Automated verification:** ESLint, production build, all eight source tests and `git diff --check` pass.
+  Assertions require the new directional grid mapping, `object-fit: contain`, complete-ratio wrapper
+  geometry and the lower exposed drawing band.
+- **Desktop/mobile verification:** source rules cover 1440, 1280 and 1024 px with the approved left/right
+  grid, 768 px with authored stacking/order, and 430, 390 and 375 px with phone-specific complete-ratio
+  placements. Browser screenshots were not taken in this turn because the active Sites workflow restricts
+  visual browser QA unless explicitly requested; final visual confirmation therefore remains the user's
+  review of the published page.
+- **Anti-template result:** no card system, repeated stock media block, crop mask, radius, shadow, gradient,
+  SVG, generated art, icon or new copy was introduced.
+- **Remaining limitation/risk:** the exact visual balance of the revised overlays remains subject to review
+  in the user's already open Site tab. If the user requests browser testing, all seven mandated widths can
+  be visually inspected in a follow-up turn.
+
+## Colour the approved process underlays — implementation plan — 2026-09-02
+
+1. The four approved process sheets currently read almost entirely as graphite and paper, so they do not meet the user's new request for colour.
+2. Keep the composition, calculations, labels and linework exact; edit only the colour treatment of the existing raster assets.
+3. Use the approved site palette at low saturation and keep the drawings quieter than the photographs and copy.
+4. Save non-destructive versioned raster files and point only the four primary process sections to them.
+5. Verify intrinsic dimensions, build output, source references and the absence of obsolete monochrome references before publishing.
+
+### Correction after visual review
+
+The review screenshot exposed the actual failure: a complete precomposed calculation page was used as if it were wallpaper, so the portrait obscured a timeline, table and dish sequence. Simple recolouring is cancelled. Each of the four 2:1 assets must instead be regenerated around the exact live copy/photo positions, and the CSS process field must span the full row. The background may contain planning information only in confirmed free zones.
+
+### Implemented and verified
+
+- **Files created:** four versioned 1774 × 887 raster underlays: `masterchef-recipes-europe-layout-color-v2.png`, `private-dinner-layout-color-v2.png`, `private-event-layout-color-v2.png` and `masterclass-six-person-layout-color-v2.png`.
+- **Files changed:** `app/page.tsx`, `app/globals.css`, `tests/rendered-html.test.mjs`, `docs/DESIGN_REFERENCE_MAP.md`, `docs/DESIGN_SYSTEM.md` and `docs/DESIGN_AUDIT.md`.
+- **Failure corrected:** the complete old worksheets no longer sit behind arbitrary photographs. Each new underlay has two authored quiet zones for the real copy and complete photograph, while its calculation clusters occupy centre, outer edge and lower-band free space.
+- **Reference used:** the user's rejected desktop screenshot determines what must not overlap; the user's directional rules determine the four photo/copy sides; the earlier approved process content determines each diagram's subject; the site's palette determines the low-saturation colour treatment.
+- **Decisions without a separate reference:** exact quiet-zone percentages are derived from the four source-photo aspect ratios and the existing twelve-column row. They are recorded in CSS and source assertions.
+- **UI libraries:** none introduced. CSS Grid and ordinary raster images remain technical primitives only.
+- **Automated verification:** ESLint, production build, all eight source tests and `git diff --check` pass. Tests require all four versioned assets, full-row process fields, complete-photo `object-fit: contain` and the authored foreground coordinates.
+- **Responsive handling:** desktop and tablet use the authored integrated fields; at narrow phone widths copy is deliberately separated from the 2:1 field to preserve reading size while the photo remains inside its reserved zone.
+- **Anti-template result:** no cards, rounded masks, stock icon library, SVG, gradient, shadow or decorative animation was added. Each underlay carries a different subject-specific planning grammar.
+- **Remaining limitation:** the final browser appearance awaits review on the published Site because the active Sites workflow does not permit browser-based visual QA unless explicitly requested.
