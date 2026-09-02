@@ -4583,3 +4583,81 @@ right. The final monochrome preview was explicitly approved.
 - **Remaining limitation:** the four miniatures intentionally become atmospheric at narrow-phone size,
   while the exact process remains available to assistive technology. Personal menu, meat, fish, produce,
   inquiry and Hero still await their own independently approved process drawings.
+
+## Exact remaining drawings from the supplied screenshot — implementation plan — 2026-09-02
+
+The user supplied one 1066 × 2306 screenshot and explicitly approved its remaining drawings without
+changes. Audit of the project found five similarly named transparent WebP assets, but pixel/geometry
+inspection confirmed they are simplified reconstructions: the plate lacks the reference dish, the cow,
+fish and produce studies omit construction detail, and the spoon trajectory is different. Reusing them
+would violate the word "exact". The generated personal-menu matrix shown immediately before this new
+reference is rejected and remains outside the project.
+
+1. Preserve the supplied PNG inside `docs/references/` and make five deterministic, lossless PNG crops
+   using the approved source coordinates. Do not use generative editing, tracing, background removal,
+   recolouring, cleanup, sharpening or replacement typography.
+2. Keep all already approved blocks unchanged. Apply "remaining" to personal menu, meat, fish, produce
+   and inquiry; the supplied screenshot contains no Hero drawing and therefore does not authorize one.
+3. Rework the documentary-only personal-menu intro into live copy plus the exact plate crop. Remove the
+   separate different circular dish from this block because the approved crop already contains its own
+   real plated composition.
+4. Replace the repeated two-column source rows with the reference-grounded three-part relationship:
+   live chapter copy, unchanged sourcing photograph, exact subject drawing. Keep categories, statements,
+   numbers, image provenance and alt text unchanged.
+5. Replace the oversized villa close with the supplied bordered invitation/spoon/action relationship.
+   Keep the verified Instagram destination and accessible label; add no form or second action.
+6. Use normal raster `<img>` elements so each crop is present as an ordinary image. Preserve complete
+   intrinsic ratios, source pixels and the sampled `#f7f4ef` sheet surface; add no pseudo-element art,
+   SVG, opacity, filter, blend, shadow, mask, generated text or fixed blank reserve.
+7. Update assertions to require all five exact PNGs and reject the retired simplified WebPs in rendered
+   JSX/CSS. Verify lint, production build, all tests, `git diff --check` and 1440/1280/1024/768/430/390/
+   375 px before publishing the same review URL.
+
+### Anti-template target before implementation
+
+- **Templated elements found:** the current meat/fish/produce rows repeat one generic 5/7 text-photo
+  composition; the menu intro uses a small generic floating circle; the inquiry is an oversized
+  illustration-plus-bordered-button composition unrelated to the exact supplied close.
+- **Confirmed replacement:** the user-supplied plate, cow/cuts, fish/fillets, produce/sensory and
+  sauce/spoon drawings, plus their exact relative visual roles in the supplied screenshot.
+- **Components retained:** live menu copy, all three source headings/statements/numbers, their current
+  documentary photographs, the single Instagram action, section semantics and the established type
+  system.
+- **Components reworked:** menu visual field, source row grid and final inquiry grid. The previous menu
+  dish figure and villa figure leave rendered output; no new JavaScript component or UI library is needed.
+- **Genuinely new elements:** five semantic-free ordinary raster image nodes, one per approved remaining
+  block. All visuals come from the supplied source rather than a library or model template.
+
+### Implemented and verified
+
+- **Files created:** `docs/references/ideal-remaining-blueprints-2026-09-02.png` plus five literal crops:
+  `personal-menu-reference-exact.png` (645 × 555), `meat-reference-exact.png` (480 × 143),
+  `fish-reference-exact.png` (489 × 157), `produce-reference-exact.png` (501 × 155) and
+  `inquiry-spoon-reference-exact.png` (417 × 157).
+- **Files changed:** `app/page.tsx`, `app/globals.css`, `tests/rendered-html.test.mjs`,
+  `docs/DESIGN_REFERENCE_MAP.md`, `docs/DESIGN_SYSTEM.md` and `docs/DESIGN_AUDIT.md`.
+- **Templated elements found and reworked:** the floating circular menu image was replaced by the complete
+  approved plate sheet; three repeated 5/7 source rows became reference-grounded copy/photo/drawing rows;
+  the oversized villa close became the compact bordered invitation/spoon/action close shown in the
+  supplied reference.
+- **Reference used:** only the exact user-supplied 1066 × 2306 screenshot for these five blocks. Its source
+  pixels were cropped deterministically and were not generated, traced, recoloured, cleaned, sharpened,
+  filtered or made transparent. SHA-256 assertions now lock every delivered crop byte-for-byte.
+- **Decisions without a separate reference:** at 560 px and below, the shallow source drawing receives a
+  full-width second row beneath the existing copy/photo pair. This neutral responsive reflow preserves the
+  complete source aspect ratio and line detail without adding decoration. The section surface uses sampled
+  `#f7f4ef` so the immutable crop rectangles do not form false frames.
+- **UI libraries:** none introduced or used for visible styling. Existing React/Next markup and the project
+  grid are used only as technical primitives.
+- **Automated verification:** ESLint, production build, all eight source tests and `git diff --check` pass.
+  The five files load at their exact natural dimensions; the old simplified WebPs, separate gallery dish
+  and villa are absent from rendered JSX/CSS.
+- **Responsive verification:** at 1440, 1280, 1024, 768, 430, 390 and 375 px every exact image preserved its
+  intrinsic ratio, `documentElement.scrollWidth` equalled the viewport and no overflowing element was
+  found. Screenshot review at 1440 and 390 px confirmed the complete plate, cow/cuts, fish/fillets,
+  produce/sensory and spoon-trajectory drawings remain visible with no blank reserved bands.
+- **Anti-template result:** there are no cards, stock icons, SVG diagrams, gradients, shadows, rounded
+  masks, filters, blend modes or generic illustration substitutions in the five revised blocks.
+- **Remaining limitation:** the approved source is a screenshot, so fine raster annotations are naturally
+  smaller on narrow phones. They remain intact and uncropped; upscaling or redrawing would violate the
+  explicit requirement to keep the drawings unchanged.

@@ -1081,3 +1081,33 @@ user's explicit yes/no decision.
 New candidates after the private-event correction use monochrome graphite construction, hatching and
 type on neutral paper. No antique-gold route or coloured food is added unless the user later approves
 that colour for a specific block. Earlier approved assets remain unchanged unless separately revised.
+
+## Exact screenshot-crop grammar — remaining blocks — 2026-09-02
+
+The direct approval of `docs/references/ideal-remaining-blueprints-2026-09-02.png` replaces the generated
+candidate workflow for personal menu, meat, fish, produce and inquiry. These five visuals use literal
+opaque PNG crops from the approved source, not ImageGen output and not the retired transparent WebP
+reconstructions.
+
+- Source crop geometry is immutable: personal menu `645 × 555`, meat `480 × 143`, fish `489 × 157`,
+  produce `501 × 155`, inquiry spoon `417 × 157`.
+- Each crop is rendered at its complete intrinsic ratio with `object-fit: contain`. No secondary crop,
+  mask, opacity, filter, blend mode, shadow, SVG, generated overlay or colour correction is allowed.
+- The sampled source-sheet paper is `#f7f4ef`. The containing menu/source/inquiry surfaces use that
+  reference-grounded paper so the immutable rectangular crops do not acquire artificial frames.
+- Personal menu uses the crop's embedded real dish as the final food image. The previous separate
+  circular `gallery-dish.webp` figure is not layered over it because that would change the approved
+  drawing and show a different dish.
+- Meat, fish and produce use one three-part editorial row: live chapter copy, unchanged documentary
+  sourcing photograph and the complete exact drawing. The three rows share a grid but retain distinct
+  subject-specific drawings and source crops.
+- Inquiry is the compact bordered close shown in the reference: live invitation at left, exact spoon
+  crop in the middle and the existing verified Instagram action at right. The villa is no longer
+  rendered in this block; no second image competes with the approved spoon.
+- At 821 px and above these relationships remain side-by-side. At 820 px and below the menu visual moves
+  beneath its live copy. At 560 px and below each source row places its live chapter copy beside the
+  documentary photograph, then gives the exact drawing the complete second row so its construction
+  details remain readable; inquiry becomes invitation → spoon → action. This is an authored mobile order,
+  not a proportional shrink of the desktop sheet.
+- MasterChef, dinner, private event, masterclass and workday keep their separately approved assets and
+  geometry. Hero has no drawing in this supplied reference and receives none.

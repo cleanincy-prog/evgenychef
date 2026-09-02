@@ -702,3 +702,24 @@ values for the drawing and do not modify the live commercial copy.
 The latest colour correction is authoritative for newly generated candidates: graphite line, graphite
 hatching and neutral paper only. It does not retroactively invalidate the separately approved
 MasterChef and private-dinner rasters.
+
+## Exact remaining-drawing set — direct approval — 2026-09-02
+
+The user supplied `docs/references/ideal-remaining-blueprints-2026-09-02.png` (1066 × 2306) and
+explicitly declared its remaining drawings ideal, required without changes and exact. This latest
+approval supersedes the earlier instruction to keep the remaining menu/source/inquiry blocks in
+documentary fallback and also supersedes the simplified transparent WebP reconstructions. The wording
+"all remaining blocks" is applied to the five blocks still awaiting approval; MasterChef, dinner,
+private event, masterclass and the already approved text-free workday composite remain unchanged.
+
+| Project element | Reference | Principle used | What is not copied | Project implementation |
+|---|---|---|---|---|
+| Personal menu | Exact user-supplied crop `(355, 800, 1000, 1355)` | The complete plate construction, real plated food, diameter callouts and three handwritten relationships are the approved menu-design drawing | The rejected generated taste/texture matrix candidate; the old simplified transparent plate reconstruction; surrounding screenshot typography as raster text | Save the 645 × 555 source pixels unchanged as `personal-menu-reference-exact.png`; keep live heading/copy at left and render this exact crop as the facing visual |
+| Meat | Exact user-supplied crop `(558, 1420, 1038, 1563)` | Cow section, three cut studies, separator and 0–20 cm scale remain one inseparable measured drawing | The simplified cow/cut WebP, new anatomy claims, changed sourcing photograph or changed live copy | Save the 480 × 143 source pixels unchanged as `meat-reference-exact.png`; place it beside the unchanged meat photograph and live chapter copy |
+| Fish | Exact user-supplied crop `(533, 1602, 1022, 1759)` | Whole-fish construction, four fillet studies, separator and 0–20 cm scale remain one inseparable measured drawing | The simplified lens-shaped fish WebP, species claims, changed sourcing photograph or changed live copy | Save the 489 × 157 source pixels unchanged as `fish-reference-exact.png`; place it beside the unchanged fish photograph and live chapter copy |
+| Produce | Exact user-supplied crop `(543, 1789, 1044, 1944)` | Tomato/onion/garlic/artichoke studies and the four-part sensory section remain one inseparable drawing | The simplified leaf/radial WebP, added percentages or farm claims, changed sourcing photograph or changed live copy | Save the 501 × 155 source pixels unchanged as `produce-reference-exact.png`; place it beside the unchanged produce photograph and live chapter copy |
+| Inquiry | Exact user-supplied crop `(366, 2041, 783, 2198)` | The sauce trajectory resolves into the perspective spoon exactly as shown in the approved close | The simplified spoon WebP, the previously rendered villa, a form, second CTA or new contact channel | Save the 417 × 157 source pixels unchanged as `inquiry-spoon-reference-exact.png`; make it the central visual between the existing invitation and verified Instagram action |
+
+The exact pixel crops retain their original opaque paper, line weight, handwritten marks, colour and
+embedded labels. They are not regenerated, traced, recoloured, cleaned, made transparent, sharpened or
+combined with the rejected transparent WebP assets.

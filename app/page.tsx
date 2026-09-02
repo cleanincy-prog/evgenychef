@@ -107,6 +107,9 @@ const sourceChapters = [
     id: "source-meat-title",
     category: "Мясо",
     statement: "Хотите ягнёнка? — еду за ним в горы.",
+    drawingSrc: "/media/blueprint-backgrounds/meat-reference-exact.png",
+    drawingWidth: 480,
+    drawingHeight: 143,
     images: [
       {
         src: "/media/sourcing/evgen-half-lamb-market-v1.webp",
@@ -120,6 +123,9 @@ const sourceChapters = [
     id: "source-fish-title",
     category: "Рыба",
     statement: "Нужна рыба? — еду в порт к рыбакам.",
+    drawingSrc: "/media/blueprint-backgrounds/fish-reference-exact.png",
+    drawingWidth: 489,
+    drawingHeight: 157,
     images: [
       {
         src: "/media/sourcing/evgen-fish-harbour-market-v1.webp",
@@ -133,6 +139,9 @@ const sourceChapters = [
     id: "source-produce-title",
     category: "Овощи и фрукты",
     statement: "Свежие овощи и фрукты? — только с кипрских ферм.",
+    drawingSrc: "/media/blueprint-backgrounds/produce-reference-exact.png",
+    drawingWidth: 501,
+    drawingHeight: 155,
     images: [
       {
         src: "/media/sourcing/evgen-grape-harvest.webp",
@@ -363,14 +372,14 @@ export default function Home() {
                 Расскажите мне о любимых вкусах и ограничениях, я соберу для вас персональное меню.
               </p>
             </div>
-            <figure className="menu-dish">
+            <figure className="menu-reference-plan" aria-hidden="true">
               <img
-                src="/media/optimized/gallery-dish.webp"
-                width="512"
-                height="640"
+                src="/media/blueprint-backgrounds/personal-menu-reference-exact.png"
+                width="645"
+                height="555"
                 loading="lazy"
                 decoding="async"
-                alt="Авторское блюдо Евгения Грыбенюка, вокруг которого выстроен персональный план меню"
+                alt=""
               />
             </figure>
           </header>
@@ -396,6 +405,16 @@ export default function Home() {
                     />
                   ))}
                 </div>
+                <img
+                  className="source-reference-plan"
+                  src={chapter.drawingSrc}
+                  width={chapter.drawingWidth}
+                  height={chapter.drawingHeight}
+                  loading="lazy"
+                  decoding="async"
+                  alt=""
+                  aria-hidden="true"
+                />
               </article>
             ))}
           </div>
@@ -408,11 +427,11 @@ export default function Home() {
             <br />
             <em>чего хочется.</em>
           </h2>
-          <figure className="contact-art" aria-hidden="true">
+          <figure className="contact-reference-plan" aria-hidden="true">
             <img
-              src="/media/chef-story-brush-villa.png"
-              width="1536"
-              height="1024"
+              src="/media/blueprint-backgrounds/inquiry-spoon-reference-exact.png"
+              width="417"
+              height="157"
               loading="lazy"
               decoding="async"
               alt=""

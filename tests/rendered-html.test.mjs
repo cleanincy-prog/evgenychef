@@ -40,6 +40,14 @@ const exactTriviumSubsetRanges = {
   latin: "U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD",
 };
 
+const exactRemainingReferenceCrops = {
+  "public/media/blueprint-backgrounds/personal-menu-reference-exact.png": "413c019ecc94bcbabb58069becedb9c2ce4517fe95e024fa40ebd45cd42c3ff2",
+  "public/media/blueprint-backgrounds/meat-reference-exact.png": "99b731e4236552fc70a6b1b93e700315e07b2f4bea2b4691f56489e7eb6cf6af",
+  "public/media/blueprint-backgrounds/fish-reference-exact.png": "01b4cb016f0dfffeb1211a9900cca215c533c82f088972da506aff4dbba96a08",
+  "public/media/blueprint-backgrounds/produce-reference-exact.png": "d88877c9277a1c7fffd898d08e129bba70522aea2d9fb41f5060a15e35cc0cca",
+  "public/media/blueprint-backgrounds/inquiry-spoon-reference-exact.png": "6a4dad6b4e4dc1929946abbd5478d80f8a3e5734fb5bbe63ad20980a494fedb7",
+};
+
 const obsoleteTtfFonts = [
   "public/fonts/cormorant-garamond-300.ttf",
   "public/fonts/cormorant-garamond-400.ttf",
@@ -137,8 +145,8 @@ test("layers the approved collage behind the smaller chef portrait", async () =>
   assert.doesNotMatch(page, /hero-collage-anchor/);
   assert.doesNotMatch(page, /className="hero-left"/);
   assert.doesNotMatch(css, /\.cyprus-|\.page-rail|\.pattern-module|\.format-weave|backdrop-filter/i);
-  assert.equal((css.match(/border-radius\s*:/g) ?? []).length, 1);
-  assert.match(css, /\.menu-dish\s*\{[^}]*border-radius:\s*50%/);
+  assert.equal((css.match(/border-radius\s*:/g) ?? []).length, 0);
+  assert.doesNotMatch(css, /\.menu-dish/);
 });
 
 test("keeps the three exact event scenarios in editorial rows", async () => {
@@ -223,6 +231,11 @@ test("keeps only the approved process-first blueprints active in the interface",
     "/media/blueprint-backgrounds/private-event-production-calculation.png",
     "/media/blueprint-backgrounds/masterclass-six-person-learning-process.png",
     "/media/blueprint-backgrounds/workday-four-step-vertical.png",
+    "/media/blueprint-backgrounds/personal-menu-reference-exact.png",
+    "/media/blueprint-backgrounds/meat-reference-exact.png",
+    "/media/blueprint-backgrounds/fish-reference-exact.png",
+    "/media/blueprint-backgrounds/produce-reference-exact.png",
+    "/media/blueprint-backgrounds/inquiry-spoon-reference-exact.png",
   ];
   const activeBlueprintReferences = `${page}\n${css}`.match(/\/media\/blueprint-backgrounds\/[^"')\s]+/g) ?? [];
 
@@ -232,7 +245,7 @@ test("keeps only the approved process-first blueprints active in the interface",
   assert.deepEqual(activeBlueprintReferences.toSorted(), activeBlueprints.toSorted());
   assert.doesNotMatch(page, /PreparationSequence|WorkdayTrajectory|MenuComposition|SourceContour|<svg/);
   assert.doesNotMatch(css, /url\([^)]*\.svg|blueprint-figure|workday-trajectory|menu-composition|source-contour/);
-  assert.match(page, /className="menu-dish"[\s\S]*?src="\/media\/optimized\/gallery-dish\.webp"/);
+  assert.match(page, /className="menu-reference-plan" aria-hidden="true"[\s\S]*?src="\/media\/blueprint-backgrounds\/personal-menu-reference-exact\.png"/);
   assert.match(css, /\.source-list::before\s*\{[^}]*background:\s*var\(--rule\)/);
 
   for (const name of [...retiredPseudoBackgrounds, ...retiredDetachedDrawings]) {
@@ -251,6 +264,9 @@ test("keeps only the approved process-first blueprints active in the interface",
   assert.equal((page.match(/drawingSrc:\s*null/g) ?? []).length, 0);
   assert.match(page, /\) : \(\s*<figure className="format-media">[\s\S]*?<div className="format-copy">/);
   assert.match(page, /<header className="source-copy">[\s\S]*?<div className="source-images">/);
+  assert.equal((page.match(/className="source-reference-plan"/g) ?? []).length, 1);
+  assert.match(page, /className="source-reference-plan"[\s\S]*?src=\{chapter\.drawingSrc\}/);
+  assert.match(page, /className="contact-reference-plan" aria-hidden="true"[\s\S]*?inquiry-spoon-reference-exact\.png/);
   assert.match(css, /\.format-process-field\s*\{[^}]*position:\s*relative;[^}]*aspect-ratio:\s*2 \/ 1/);
   assert.match(css, /\.format-process-plan\s*\{[^}]*position:\s*absolute;[^}]*z-index:\s*0;[^}]*object-fit:\s*contain/);
   assert.match(css, /\.story-origin-process-plan\s*\{[^}]*position:\s*absolute;[^}]*z-index:\s*0;[^}]*object-fit:\s*contain/);
@@ -374,10 +390,10 @@ test("uses the measured Trivium typography on the approved editorial surfaces", 
   assert.doesNotMatch(css, /overflow-x:\s*auto/);
   assert.doesNotMatch(css, /--forest|#18382f|#193d32|#153f37/i);
   assert.match(css, /\.story\s*\{[^}]*background:\s*var\(--paper\)/);
-  assert.match(css, /\.contact\s*\{[^}]*background:\s*var\(--paper\)/);
+  assert.match(css, /\.contact\s*\{[^}]*background:\s*#f7f4ef/);
   assert.match(css, /\.site-footer\s*\{[^}]*background:\s*var\(--paper-light\)/);
   assert.match(css, /\.format-copy p\s*\{[^}]*font:\s*300 14\.08px\/1\.8 var\(--font-sans\)/);
-  assert.match(css, /\.contact-action\s*\{[^}]*border:\s*1px solid var\(--ink\);[^}]*color:\s*var\(--ink\);[^}]*font:\s*600 12px\/1\.7 var\(--font-sans\)/);
+  assert.match(css, /\.contact-action\s*\{[^}]*border:\s*0;[^}]*color:\s*var\(--ink\);[^}]*font:\s*600 12px\/1\.7 var\(--font-sans\)/);
   assert.match(css, /\.header-action\s*\{[^}]*font-family:\s*var\(--font-sans\);[^}]*font-size:\s*11\.2px/);
   assert.match(css, /\.header-action\s*\{[^}]*color:\s*var\(--accent-small\);[^}]*font-size:\s*11\.2px;[^}]*font-weight:\s*600;[^}]*line-height:\s*1\.35;[^}]*letter-spacing:\s*\.14em/);
   assert.match(css, /\.site-footer > a:first-child\s*\{[^}]*font:\s*600 24px\/1\.1 var\(--font-display\)/);
@@ -444,13 +460,14 @@ test("preserves the approved story, sourcing evidence and accessibility", async 
   }
   assert.equal((page.match(/\/media\/sourcing\//g) ?? []).length, 3);
   assert.doesNotMatch(page, /cyprus-sheep-herd|larnaca-fish-market-seller|kissonerga-meat-counter|fishermen-catch|cyprus-strawberry-greenhouse/);
-  assert.match(await source("app/globals.css"), /\.source-images\s*\{[^}]*width:\s*min\(100%, 640px\);[^}]*aspect-ratio:\s*4 \/ 3;[^}]*overflow:\s*hidden;[^}]*background:\s*var\(--paper\)/);
+  assert.match(await source("app/globals.css"), /\.source-images\s*\{[^}]*width:\s*100%;[^}]*aspect-ratio:\s*16 \/ 10;[^}]*overflow:\s*hidden;[^}]*background:\s*#f7f4ef/);
   assert.match(await source("app/globals.css"), /\.source-images img\s*\{[^}]*object-fit:\s*cover/);
   assert.match(await source("app/globals.css"), /\.source-row-3 \.source-images img\s*\{[^}]*object-fit:\s*contain/);
 
   assert.match(page, /className="skip-link" href="#main-content"/);
-  assert.match(page, /className="contact-art" aria-hidden="true"/);
-  assert.match(page, /src="\/media\/chef-story-brush-villa\.png"/);
+  assert.match(page, /className="contact-reference-plan" aria-hidden="true"/);
+  assert.match(page, /src="\/media\/blueprint-backgrounds\/inquiry-spoon-reference-exact\.png"/);
+  assert.doesNotMatch(page, /className="contact-art"|chef-story-brush-villa\.png/);
   assert.match(page, /target="_blank"[\s\S]*?rel="noreferrer"/);
   assert.match(layout, /<html lang="ru">/);
   assert.match(layout, /metadataBase: new URL\(SITE_URL\)/);
@@ -471,9 +488,10 @@ test("keeps readability-specific desktop, tablet and narrow-phone geometry", asy
   assert.match(css, /\.format-row-3 \.format-media\s*\{\s*grid-column:\s*1 \/ 8/);
   assert.match(css, /\.format-row-3 \.format-copy\s*\{\s*grid-column:\s*9 \/ 13/);
   assert.match(css, /\.story-intro\s*\{\s*margin-bottom:\s*clamp\(48px, 5vw, 72px\)/);
-  assert.match(css, /\.source-row\s*\{[^}]*grid-template-columns:\s*minmax\(260px, 5fr\) minmax\(0, 7fr\);[^}]*align-items:\s*center/);
-  assert.match(css, /\.source-copy\s*\{\s*grid-column:\s*1/);
-  assert.match(css, /\.source-images\s*\{\s*grid-column:\s*2;\s*grid-row:\s*1/);
+  assert.match(css, /\.source-row\s*\{[^}]*grid-template-columns:\s*repeat\(12, minmax\(0, 1fr\)\);[^}]*align-items:\s*center/);
+  assert.match(css, /\.source-copy\s*\{\s*grid-column:\s*1 \/ 4/);
+  assert.match(css, /\.source-images\s*\{\s*grid-column:\s*4 \/ 8;\s*grid-row:\s*1/);
+  assert.match(css, /\.source-reference-plan\s*\{[^}]*grid-column:\s*8 \/ 13;[^}]*grid-row:\s*1;[^}]*width:\s*100%;[^}]*height:\s*auto/);
   assert.doesNotMatch(css, /min-height:\s*(?:700|600|392)px/);
   assert.doesNotMatch(css, /padding:\s*26px 0 154px/);
 
@@ -488,8 +506,9 @@ test("keeps readability-specific desktop, tablet and narrow-phone geometry", asy
   assert.match(tablet, /\.format-row-1 \.format-media,[\s\S]*?grid-column:\s*1 \/ 6;\s*grid-row:\s*1/);
   assert.match(tablet, /\.format-row-2 \.format-copy\s*\{\s*grid-column:\s*1 \/ 8;\s*grid-row:\s*1/);
   assert.doesNotMatch(tablet, /\.story-present-copy|\.story-film\s*\{\s*grid-column/);
-  assert.match(tablet, /\.source-row\s*\{[^}]*grid-template-columns:\s*minmax\(0, 5fr\) minmax\(0, 7fr\)/);
-  assert.match(tablet, /\.source-images\s*\{\s*grid-column:\s*2;\s*grid-row:\s*1/);
+  assert.match(tablet, /\.source-row\s*\{[^}]*grid-template-columns:\s*repeat\(12, minmax\(0, 1fr\)\)/);
+  assert.match(tablet, /\.source-images\s*\{\s*grid-column:\s*4 \/ 8;\s*grid-row:\s*1/);
+  assert.match(tablet, /\.source-reference-plan\s*\{\s*grid-column:\s*8 \/ 13;\s*grid-row:\s*1/);
 
   const phone = css.slice(css.indexOf("@media (max-width: 560px)"), css.indexOf("@media (max-width: 430px)"));
   const narrowPhone = css.slice(css.indexOf("@media (max-width: 430px)"), css.indexOf("@media (max-width: 400px)"));
@@ -499,19 +518,20 @@ test("keeps readability-specific desktop, tablet and narrow-phone geometry", asy
   assert.match(phone, /\.sources-intro\s*\{[^}]*grid-template-columns:\s*repeat\(12, minmax\(0, 1fr\)\);[^}]*gap:\s*14px 10px;[^}]*margin-bottom:\s*16px/);
   assert.match(phone, /\.sources-heading h2\s*\{[^}]*margin-top:\s*18px/);
   assert.match(phone, /\.sources-lede\s*\{[^}]*width:\s*min\(310px, 92%\);[^}]*font-size:\s*13\.6px;[^}]*line-height:\s*1\.6/);
-  assert.match(phone, /\.menu-dish\s*\{[^}]*grid-column:\s*10 \/ 13;[^}]*width:\s*100%;[^}]*margin-top:\s*50px/);
-  assert.match(phone, /\.source-row\s*\{[^}]*grid-template-columns:\s*minmax\(0, 5fr\) minmax\(0, 7fr\);[^}]*gap:\s*16px;[^}]*align-items:\s*center;[^}]*padding:\s*26px 0/);
+  assert.match(phone, /\.menu-reference-plan\s*\{[^}]*grid-column:\s*1 \/ -1;[^}]*grid-row:\s*2;[^}]*width:\s*100%;[^}]*margin-top:\s*4px/);
+  assert.match(phone, /\.source-row\s*\{[^}]*grid-template-columns:\s*repeat\(12, minmax\(0, 1fr\)\);[^}]*gap:\s*14px;[^}]*align-items:\s*center;[^}]*padding:\s*26px 0/);
   assert.match(phone, /\.source-copy\s*\{[^}]*grid-template-columns:\s*30px minmax\(0, 1fr\);[^}]*column-gap:\s*8px/);
   assert.match(phone, /\.source-copy blockquote\s*\{[^}]*grid-column:\s*1 \/ -1;[^}]*color:\s*var\(--accent-small\);[^}]*font-size:\s*clamp\(18px, 4\.8vw, 20px\);[^}]*line-height:\s*1\.35/);
-  assert.match(phone, /\.source-images\s*\{[^}]*grid-column:\s*2;[^}]*grid-row:\s*1;[^}]*aspect-ratio:\s*4 \/ 3/);
+  assert.match(phone, /\.source-images\s*\{[^}]*grid-column:\s*6 \/ 13;[^}]*grid-row:\s*1;[^}]*aspect-ratio:\s*16 \/ 10/);
+  assert.match(phone, /\.source-reference-plan\s*\{[^}]*grid-column:\s*1 \/ -1;[^}]*grid-row:\s*2;[^}]*width:\s*100%/);
   assert.match(css, /\.source-list::before\s*\{[^}]*left:\s*16px/);
   assert.doesNotMatch(phone, /\.source-row-2\s*\{/);
-  assert.match(phone, /\.contact\s*\{\s*padding:\s*34px 18px 24px/);
-  assert.match(phone, /\.contact-art\s*\{\s*margin-top:\s*12px/);
-  assert.match(narrowPhone, /\.contact-art\s*\{\s*margin-top:\s*10px/);
+  assert.match(phone, /\.contact\s*\{[^}]*margin:\s*0 18px 24px;[^}]*padding:\s*34px 18px 24px/);
+  assert.match(phone, /\.contact-reference-plan\s*\{\s*margin-top:\s*8px/);
+  assert.match(narrowPhone, /\.contact-reference-plan\s*\{\s*margin-top:\s*6px/);
   assert.match(phone, /\.site-footer\s*\{[^}]*grid-template-columns:\s*minmax\(0, 1fr\) auto;[^}]*padding:\s*14px 18px 18px/);
-  assert.match(css, /@media \(max-width: 1024px\)[\s\S]*?\.contact-art\s*\{[^}]*position:\s*relative;[^}]*aspect-ratio:\s*3 \/ 2/);
-  assert.match(css, /\.contact-art img\s*\{[^}]*object-fit:\s*contain;[^}]*object-position:\s*right bottom/);
+  assert.match(css, /\.contact-reference-plan\s*\{[^}]*grid-column:\s*5 \/ 10;[^}]*grid-row:\s*1 \/ 3;[^}]*width:\s*100%/);
+  assert.match(css, /\.contact-reference-plan img\s*\{[^}]*width:\s*100%;[^}]*height:\s*auto/);
 
   assert.match(css, /@media \(max-width: 400px\)[\s\S]*?\.wordmark\s*\{[^}]*font-size:\s*18px;[^}]*letter-spacing:\s*\.08em/);
   assert.match(css, /@media \(max-width: 820px\)[\s\S]*?\.site-header\s*\{[^}]*min-height:\s*70px/);
@@ -541,6 +561,12 @@ test("keeps records and rejects the obsolete visible-system files", async () => 
     "public/media/blueprint-backgrounds/private-event-production-calculation.png",
     "public/media/blueprint-backgrounds/masterclass-six-person-learning-process.png",
     "public/media/blueprint-backgrounds/workday-four-step-vertical.png",
+    "public/media/blueprint-backgrounds/personal-menu-reference-exact.png",
+    "public/media/blueprint-backgrounds/meat-reference-exact.png",
+    "public/media/blueprint-backgrounds/fish-reference-exact.png",
+    "public/media/blueprint-backgrounds/produce-reference-exact.png",
+    "public/media/blueprint-backgrounds/inquiry-spoon-reference-exact.png",
+    "docs/references/ideal-remaining-blueprints-2026-09-02.png",
     "public/media/chef-hero-apron.jpg",
     "public/media/chef-story-img-5399-no-grill.mp4",
     "public/media/chef-story-img-5399-poster.jpg",
@@ -567,5 +593,9 @@ test("keeps records and rejects the obsolete visible-system files", async () => 
     const bytes = await readFile(new URL(path, root));
     assert.equal(bytes.subarray(0, 4).toString("ascii"), "wOF2", `${path} must be a WOFF2 binary`);
     assert.equal(await sha256(path), expectedHash, `${path} must stay byte-identical to Trivium's served payload`);
+  }
+
+  for (const [path, expectedHash] of Object.entries(exactRemainingReferenceCrops)) {
+    assert.equal(await sha256(path), expectedHash, `${path} must stay byte-identical to the approved screenshot crop`);
   }
 });
