@@ -1039,6 +1039,11 @@ This section supersedes the statement that `private-dinner-process-v2.png` is th
 - `private-event-production-calculation.png` is the approved private-event grammar: guest count and
   reserve, four-item menu allocation, batch and tray quantities, production handoffs and timed service.
   It contains no venue plan, furniture or coloured drawing marks.
+- `masterclass-six-person-learning-process.png` is the approved learning-production grammar: exactly
+  six participants are divided into two stations of three; one demonstration branches into synchronized
+  practice, a control gate returns errors through a correction loop, and the accepted route resolves into
+  three dish outputs. The sheet calculates three ingredient kits and 18 participant portions. It contains
+  no classroom furniture, certificate motif, event tray/batch logic or colour.
 - The blueprint and documentary media form one composite. The raster is absolute at `z-index: 0`; the
   unchanged photograph or film is above it at `z-index: 1`; live copy remains above both. The photo
   occupies the quiet area intentionally designed into the sheet.

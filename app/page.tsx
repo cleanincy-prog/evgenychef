@@ -97,8 +97,8 @@ const eventFormats = [
     width: 1144,
     height: 770,
     alt: "Евгений Грыбенюк показывает участникам мастер-класса профессиональные приёмы",
-    drawingSrc: null,
-    processBackground: false,
+    drawingSrc: "/media/blueprint-backgrounds/masterclass-six-person-learning-process.png",
+    processBackground: true,
   },
 ];
 

@@ -4467,3 +4467,61 @@ approved.
 - **Remaining limitation:** calculations are supporting visual detail at narrow-phone size; the exact
   commercial description remains live HTML. Masterclass remains the only documentary fallback in the
   event list, and all later blocks still await their own one-by-one raster approval.
+
+## Approved six-person masterclass sheet — implementation plan — 2026-09-02
+
+The first masterclass preview incorrectly planned twelve participants across four stations. The user
+corrected the capacity to six people, then explicitly approved the revised monochrome raster. The
+approved sheet now expresses a different process from dinner and event production: demonstration,
+two synchronized stations of three, technique control with a correction loop and a shared three-dish
+output. It calculates one demonstration kit plus two working kits and 18 participant portions.
+
+1. Retain the exact live masterclass copy, documentary teaching photograph, row number and established
+   process-first event sequence.
+2. Add no new component. Reuse `format-process-field`, set only the third event row to the approved
+   raster and extend row-specific fitting rules.
+3. Place the unchanged photograph over the quiet upper-middle zone as the demonstration source. Keep
+   the six-person calculation and ingredient totals visible at left, station-equipment specification at
+   right, and the practice/control/timing route visible below.
+4. Alternate the wide composition after the second row: masterclass copy on the left and the layered
+   process field on the right. At 820 px and below, keep live copy first and the full-width composite
+   second.
+5. Do not reference the rejected twelve-person preview, restore the old decorative masterclass image,
+   or add colour, furniture, certificate motifs, cards, shadows, fixed blank reserves or SVG.
+6. Update source assertions and asset records so all three event rows are process composites and no
+   documentary-only fallback remains in `eventFormats`.
+7. Run lint, production build, eight source tests and `git diff --check`; visually verify 1440, 1280,
+   1024, 768, 430, 390 and 375 px before updating the existing public review URL.
+
+### Implemented and verified
+
+- **File created:** `public/media/blueprint-backgrounds/masterclass-six-person-learning-process.png`
+  (1774 × 887 monochrome raster).
+- **Files changed:** `app/page.tsx`, `app/globals.css`, `tests/rendered-html.test.mjs`,
+  `docs/DESIGN_REFERENCE_MAP.md`, `docs/DESIGN_SYSTEM.md` and `docs/DESIGN_AUDIT.md`.
+- **Rejected element kept inactive:** the earlier twelve-person/four-station preview is not stored in or
+  referenced by the project. The approved version contains exactly six participants, two stations of
+  three, three ingredient kits, six participant portions per dish and 18 participant portions total.
+- **Reference used:** the user's explicit approval of the corrected six-person preview. The photograph,
+  exact live copy, event numbering and graphite process language come from the approved interface and
+  immediately preceding approved raster system.
+- **Neutral fitting decisions without a separate reference:** the wide process field occupies columns
+  `4 / 13`, with live copy at `1 / 4`; the photograph uses `top: 4%`, `left: 29%`, `width: 42%` and
+  `height: 53%` at every 2:1 size. These values fit the raster's quiet demonstration zone while exposing
+  both calculation columns and the complete lower practice/control/timing route.
+- **UI libraries:** none introduced or used for visible styling; the existing React/Next process-field
+  primitive is reused.
+- **Automated verification:** ESLint, production build, all eight source tests and `git diff --check`
+  pass.
+- **Responsive verification:** at 1440/1280/1024 px, field/media measure 968 × 484 / 406 × 256,
+  860 × 430 / 361 × 228 and 688 × 344 / 289 × 182. At 768/430/390/375 px, the copy moves to row 1
+  and the full-width field to row 2, measuring 724 × 362, 394 × 197, 354 × 177 and 339 × 170.
+  The 1774 px source loaded at every width and `documentElement.scrollWidth` equalled the viewport.
+  Screenshot review at 1280 and 390 px confirmed the unchanged teaching photograph remains over the
+  drawing while “6 участников”, both station lanes, equipment, control and timing stay visible.
+- **Anti-template result:** the sheet adds no classroom card grid, certificate, generic icon row, colour,
+  gradient, shadow, SVG or detached illustration; its demonstration/practice/correction topology is not
+  reused from dinner or event production.
+- **Remaining limitation:** tiny raster annotations become atmospheric support on narrow phones; exact
+  service meaning remains in live HTML. The next unapproved block is `Я — у вас дома`; Hero, personal
+  menu, meat, fish, produce and inquiry also remain documentary-only pending their own approval.

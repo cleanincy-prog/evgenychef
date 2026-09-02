@@ -219,6 +219,7 @@ test("keeps only the approved process-first blueprints active in the interface",
     "/media/blueprint-backgrounds/masterchef-recipes-europe.png",
     "/media/blueprint-backgrounds/private-dinner-calculation-process.png",
     "/media/blueprint-backgrounds/private-event-production-calculation.png",
+    "/media/blueprint-backgrounds/masterclass-six-person-learning-process.png",
   ];
   const activeBlueprintReferences = `${page}\n${css}`.match(/\/media\/blueprint-backgrounds\/[^"')\s]+/g) ?? [];
 
@@ -241,9 +242,9 @@ test("keeps only the approved process-first blueprints active in the interface",
   assert.match(page, /className="story-origin-process-field"[\s\S]*?className="story-origin-process-plan"[\s\S]*?masterchef-recipes-europe\.png[\s\S]*?className="story-award"/);
   assert.match(page, /className="format-process-field"/);
   assert.match(page, /className="format-process-plan"/);
-  assert.equal((page.match(/processBackground:\s*true/g) ?? []).length, 2);
-  assert.equal((page.match(/processBackground:\s*false/g) ?? []).length, 1);
-  assert.equal((page.match(/drawingSrc:\s*null/g) ?? []).length, 1);
+  assert.equal((page.match(/processBackground:\s*true/g) ?? []).length, 3);
+  assert.equal((page.match(/processBackground:\s*false/g) ?? []).length, 0);
+  assert.equal((page.match(/drawingSrc:\s*null/g) ?? []).length, 0);
   assert.match(page, /\) : \(\s*<figure className="format-media">[\s\S]*?<div className="format-copy">/);
   assert.match(page, /<header className="source-copy">[\s\S]*?<div className="source-images">/);
   assert.match(css, /\.format-process-field\s*\{[^}]*position:\s*relative;[^}]*aspect-ratio:\s*2 \/ 1/);
@@ -253,8 +254,13 @@ test("keeps only the approved process-first blueprints active in the interface",
   assert.match(css, /\.format-row-2\.format-row-process \.format-process-field\s*\{[^}]*grid-column:\s*1 \/ 10/);
   assert.match(css, /\.format-row-2\.format-row-process \.format-media\s*\{[^}]*position:\s*absolute;[^}]*z-index:\s*1;[^}]*top:\s*4%;[^}]*left:\s*28%;[^}]*height:\s*57%/);
   assert.match(css, /\.format-row-2\.format-row-process \.format-copy\s*\{[^}]*grid-column:\s*10 \/ 13;[^}]*grid-row:\s*1/);
+  assert.match(css, /\.format-row-3\.format-row-process \.format-process-field\s*\{[^}]*grid-column:\s*4 \/ 13/);
+  assert.match(css, /\.format-row-3\.format-row-process \.format-media\s*\{[^}]*position:\s*absolute;[^}]*z-index:\s*1;[^}]*top:\s*4%;[^}]*left:\s*29%;[^}]*height:\s*53%/);
+  assert.match(css, /\.format-row-3\.format-row-process \.format-copy\s*\{[^}]*grid-column:\s*1 \/ 4;[^}]*grid-row:\s*1/);
   assert.match(css, /@media \(max-width:\s*820px\)[\s\S]*?\.format-row-2\.format-row-process \.format-copy\s*\{[^}]*grid-column:\s*1;[^}]*grid-row:\s*1/);
   assert.match(css, /@media \(max-width:\s*820px\)[\s\S]*?\.format-row-2\.format-row-process \.format-process-field\s*\{[^}]*grid-column:\s*1;[^}]*grid-row:\s*2;[^}]*width:\s*100%/);
+  assert.match(css, /@media \(max-width:\s*820px\)[\s\S]*?\.format-row-3\.format-row-process \.format-copy\s*\{[^}]*grid-column:\s*1;[^}]*grid-row:\s*1/);
+  assert.match(css, /@media \(max-width:\s*820px\)[\s\S]*?\.format-row-3\.format-row-process \.format-process-field\s*\{[^}]*grid-column:\s*1;[^}]*grid-row:\s*2;[^}]*width:\s*100%/);
 });
 
 test("uses the measured Trivium typography on the approved editorial surfaces", async () => {
@@ -529,6 +535,7 @@ test("keeps records and rejects the obsolete visible-system files", async () => 
     "public/media/blueprint-backgrounds/private-dinner-calculation-process.png",
     "public/media/blueprint-backgrounds/private-event-canape-studies.png",
     "public/media/blueprint-backgrounds/private-event-production-calculation.png",
+    "public/media/blueprint-backgrounds/masterclass-six-person-learning-process.png",
     "public/media/chef-hero-apron.jpg",
     "public/media/chef-story-img-5399-no-grill.mp4",
     "public/media/chef-story-img-5399-poster.jpg",
