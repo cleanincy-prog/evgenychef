@@ -1,0 +1,77 @@
+{
+  "status": "READY",
+  "project_type": "Targeted subtractive edit to one already-shipped section (the personal-menu 'sourcing' rows: Мясо / Рыба / Овощи и фрукты) of an existing bespoke chef-portfolio one-pager. Not a new site, not a redesign — the surrounding page, palette, typography and blueprint-diagram visual language documented in docs/DESIGN_SYSTEM.md stay untouched. The only change is removing three elements from three already-approved rows: the 01/02/03 index numerals, the vertical guide rule that runs the height of the row list, and the three documentary photographs.",
+  "audience": "Prospective private-dinner clients on evgen-chef's Cyprus one-pager, reading the sourcing rows as proof the chef personally selects meat/fish/produce. Same audience as the rest of the approved site: warm, editorial, evidence-led, no stock imagery or marketing filler.",
+  "primary_user_goal": "Read three short proof statements ('за ягнёнком — в горы', 'за рыбой — в порт', etc.) alongside the technical reference drawing that already carries the sourcing evidence (cow/fish/produce diagrams with cut lines, cross-sections, flavor wheel). The photographs were redundant evidence sitting between the text and the diagram; removing them lets the diagram itself carry more visual weight instead of competing with a third element.",
+  "user_journey": "Visitor scrolls from the personal-menu heading into the three sourcing rows. Previously: read category word → read italic statement → see a documentary photo → see a technical diagram to its right. After the edit: read category word → read italic statement → see one enlarged technical diagram carrying the same cut-line/fillet/flavor-wheel information, now the sole visual per row. No information is lost — the diagrams already named the cuts/species/flavor axes independent of the photos.",
+  "information_architecture": [
+    {
+      "name": "source-copy (category word + italic statement)",
+      "user_need": "Know which ingredient chapter this row is and hear the chef's one-line sourcing claim.",
+      "reason": "Unchanged — this is the row's only text and stays exactly as approved.",
+      "presentation_format": "Small-caps category label + serif italic statement, unchanged from the shipped version."
+    },
+    {
+      "name": "source-reference-plan (technical diagram)",
+      "user_need": "See concrete evidence of what 'sourcing' means for this ingredient — where on the animal, which cut, which produce, which flavor axis — without stock photography.",
+      "reason": "Once the photograph column is removed, the diagram is the row's only remaining visual. It must absorb the freed grid width rather than leave a blank column, so the row stays a deliberate two-part composition (text | diagram) instead of text-plus-empty-air.",
+      "presentation_format": "Enlarged line-drawing occupying the full freed width (grid columns 4–13 instead of 8–13). Not a card, not a cropped photo substitute — the existing hairline-drawing style scales up because it was already the row's factual content, not a decorative accompaniment."
+    },
+    {
+      "name": "source-list vertical guide removal (structural, not content)",
+      "user_need": "Not a reader-facing need directly — it removes a layout artifact that only made sense while an index-numeral column existed to its right. A visible rule with nothing left to delimit reads as a stray leftover line, which is worse for scanning than no rule.",
+      "reason": "The `.source-list::before` hairline was positioned at `left: 16px` specifically to run past the 0{index+1} numerals in `.source-copy`. Deleting the numerals without deleting the rule would leave a vertical line floating in front of plain heading text with no column it is separating, which is the 'leftover artifact' failure mode Vercel's own Grid guidance names explicitly.",
+      "presentation_format": "Deleted outright rather than restyled — there is no remaining two-column split on the left edge of the row for it to delimit, so no replacement rule is needed."
+    }
+  ],
+  "references": [
+    {
+      "source": "https://siiimple.com/hardware-operations/",
+      "extracted_principle": "A single precisely-rendered technical object sits alone on a restrained field, framed only by small labels — no second competing image is added to 'balance' the composition. Restraint in the object count matches the restraint of the subject matter.",
+      "adaptation": "Applied to why the photo is dropped rather than resized down: once the line-diagram is the row's factual evidence, keeping a documentary photo next to it splits attention across two evidence types for one claim. The row keeps one visual (the diagram) enlarged, not two visuals fighting for the same freed space."
+    },
+    {
+      "source": "https://vercel.com/geist/grid",
+      "extracted_principle": "Geist's grid guidance: 'hide row or column guides only when their absence improves clarity' — a guide line is kept only while it is separating two things that still need separating; and adjacent cells that no longer hold distinct content should merge ('solid cells... occlude guides') rather than leave a stub guide behind an empty cell.",
+      "adaptation": "Directly justifies removing `.source-list::before` (the vertical hairline that ran past the index numerals) once the numerals and photo column it separated are both gone — keeping it would guide the eye toward a column that no longer exists. The freed photo column merges into the diagram's column span instead of staying as a phantom empty track."
+    },
+    {
+      "source": "https://eatcabalar.com/ (via https://minimal.gallery/cabalar-meat-co/)",
+      "extracted_principle": "The nearest real butcher/meat-sourcing site on the curated gallery solves 'prove we source carefully' with prose storytelling (a founder legend, a 'friends in farm places' paragraph) plus generic hero photography — exactly the marketing-copy-and-stock-photo pattern this project's own policy and docs/DESIGN_SYSTEM.md already reject.",
+      "adaptation": "Used as a contrast case, not a pattern to copy: confirms that dropping the photo and leaning on the technical diagram + one italic sentence is the position-appropriate choice for this project, not an arbitrary reduction — the alternative (Cabalar's) is the generic version this codebase has deliberately been avoiding since the 2026-09-01/02 sourcing-row revisions in docs/DESIGN_SYSTEM.md."
+    }
+  ],
+  "concepts": [
+    {
+      "name": "A — Diagram expands into freed columns",
+      "structure": "source-copy stays at columns 1–4; source-images is deleted; source-reference-plan widens from columns 8–13 to columns 4–13, so it now starts where the photo used to start.",
+      "visual_language": "The line-drawing is the row's only image, enlarged, keeping the same hairline hand-drawn style already established for all three rows.",
+      "interaction_model": "None — static row, same as shipped. No new interaction is introduced by removing elements."
+    },
+    {
+      "name": "B — Diagram stays original size, freed space becomes air",
+      "structure": "source-copy at 1–4, source-reference-plan stays fixed at 8–13, columns 4–8 become empty gutter.",
+      "visual_language": "Maximizes whitespace between text and diagram; quietest option but leaves the diagram visually small relative to the now-wider row.",
+      "interaction_model": "Static, no hover/focus/scroll behavior anywhere in this row today, so this concept introduces none either. Considered and rejected: the extra gutter has no affordance (it's not a click target, not a scroll-reveal zone, not a caption slot) so a reader has no reason to interact with the empty columns — it would just read as unfinished-looking dead space between the two remaining elements, which is worse than either merging or explicitly narrowing the row."
+    },
+    {
+      "name": "C — Two-column spread, diagram becomes full secondary column",
+      "structure": "Collapse to two explicit zones: copy in a narrow left rail, diagram as one large right-hand column spanning the rest, with its own generous internal padding rather than sharing a 12-col track with copy.",
+      "visual_language": "Most editorial/'spec sheet' feeling; closest to a technical data sheet layout.",
+      "interaction_model": "Static, same as A and B — none of the three concepts add interaction since the shipped row has none today and nothing about removing three elements creates a reason to add any. Considered and rejected specifically here: reworking the row into two hard-edged zones would touch the shared 12-column grid definition that source-row inherits alongside format-row and other sections, risking drift from the one grid vocabulary docs/DESIGN_SYSTEM.md documents as consistent across the page — a bigger structural change than a subtractive edit warrants."
+    }
+  ],
+  "selected_concept": {
+    "name": "A — Diagram expands into freed columns",
+    "reason": "Keeps the existing 12-column grid, existing breakpoints and existing `.source-reference-plan` sizing logic intact (only the column span changes), so it doesn't touch any other approved rule in docs/DESIGN_SYSTEM.md's sourcing section. Concept B wastes the freed width as dead air, which reads as an accidental gap rather than a decision. Concept C would require restructuring the row's grid semantics beyond what a subtractive edit calls for. A also matches the Geist grid principle above: the freed track merges into the surviving content instead of staying a stub."
+  },
+  "visual_direction": "No new visual system — this edit operates entirely inside the already-approved cream/ink/copper editorial system and the existing hand-drawn blueprint diagrams (meat-reference-exact.png, fish-reference-exact.png, produce-reference-exact.png). The only visual change is the diagram's rendered width per row and the removal of the numeral badge and vertical hairline guide.",
+  "mobile_strategy": "Mobile currently stacks source-copy (with the 30×30 numeral badge) above source-images/source-reference-plan. With the numeral and photo removed, .source-copy drops its two-column (badge + heading) grid and becomes a single block (heading, then blockquote), and .source-reference-plan becomes the row's only image, full-width, directly below the copy — same stacked order as before, just one fewer image and no badge column to reserve space for.",
+  "anti_template_checks": {
+    "transplantation_test": "PASS",
+    "generic_sequence_avoided": true,
+    "card_usage_justified": true,
+    "mobile_recomposed": true,
+    "references_traceable": true
+  }
+}

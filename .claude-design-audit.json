@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "transplantation_test": "PASS",
+  "generic_sequence_test": "PASS",
+  "reference_traceability_test": "PASS",
+  "card_usage_test": "PASS",
+  "mobile_recomposition_test": "PASS",
+  "functional_controls_test": "PASS",
+  "desktop_render_checked": true,
+  "mobile_render_checked": true,
+  "remaining_blocking_failures": 0,
+  "evidence": {
+    "desktop": "Loaded http://localhost:3000 and scrolled to the sourcing rows. Confirmed in the rendered screenshot: no '01/02/03' numerals before each category heading, no vertical hairline running down the row list, and no photographs — each row is now category word + italic statement on the left (grid columns 1/4) and the enlarged technical line-drawing on the right (grid columns 4/13): cow cut-diagram + three cross-section sketches for Мясо, fish cut-diagram + four fillet cross-sections for Рыба, produce sketches + flavor wheel for Овощи и фрукты. The row's outer horizontal rules (top of source-list, border-bottom per row) are untouched, confirming only the three requested elements were removed.",
+    "mobile": "Resized the same tab to the 375×812 mobile preset and reloaded. Confirmed: category heading and italic statement stack first, full width, with no numeral badge to their left (the badge's 30px grid column was removed, not left as dead space); the diagram follows below, full width, as the row's only image. No photo column and no vertical guide reappear at this width — the recomposition removes the elements consistently across breakpoints rather than only hiding them on desktop.",
+    "anti_template": "This was a subtractive maintenance edit to one already-bespoke, heavily documented section (docs/DESIGN_SYSTEM.md), not new page architecture — the transplantation test is inherited from the section's existing content-specific composition (hand-drawn butchery/fish/produce diagrams driven by real sourcing statements), which the edit leaves intact. No card, generic sequence, or new visual pattern was introduced; the only structural decision (letting the diagram's grid column absorb the freed width rather than leaving a blank track) is documented with a reference-grounded rationale in .claude-design-gate.json."
+  }
+}
