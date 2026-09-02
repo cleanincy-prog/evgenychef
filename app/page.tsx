@@ -75,7 +75,7 @@ const eventFormats = [
     width: 1152,
     height: 1572,
     alt: "Евгений Грыбенюк готовит блюдо на сковороде для частного ужина",
-    drawingSrc: "/media/blueprint-backgrounds/private-dinner-process-v2.png",
+    drawingSrc: "/media/blueprint-backgrounds/private-dinner-calculation-process.png",
     processBackground: true,
   },
   {
@@ -280,16 +280,28 @@ export default function Home() {
 
           <div className="story-sequence" id="menu" aria-label="Победа MasterChef и форматы мероприятий">
             <div className="story-origin">
-              <figure className="story-award">
+              <div className="story-origin-process-field">
                 <img
-                  src="/media/masterchef/evgen-grybenyk-winner-envelope-2020.jpg"
-                  width="1719"
-                  height="900"
+                  className="story-origin-process-plan"
+                  src="/media/blueprint-backgrounds/masterchef-recipes-europe.png"
+                  width="1774"
+                  height="887"
                   loading="lazy"
                   decoding="async"
-                  alt="Евгений Грыбенюк после победы в МастерШеф. Профессионалы — 2 держит фирменный конверт победителя"
+                  alt=""
+                  aria-hidden="true"
                 />
-              </figure>
+                <figure className="story-award">
+                  <img
+                    src="/media/masterchef/evgen-grybenyk-winner-envelope-2020.jpg"
+                    width="1719"
+                    height="900"
+                    loading="lazy"
+                    decoding="async"
+                    alt="Евгений Грыбенюк после победы в МастерШеф. Профессионалы — 2 держит фирменный конверт победителя"
+                  />
+                </figure>
+              </div>
               <div className="story-copy">
                 <p>
                   Победа в «МастерШеф. Профессионалы» открыла мне путь к новым кухням Европы

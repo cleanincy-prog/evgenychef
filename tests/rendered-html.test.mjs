@@ -198,7 +198,7 @@ test("keeps the three exact event scenarios in editorial rows", async () => {
   assert.match(page, /<ul aria-label="Мой рабочий день">/);
 });
 
-test("keeps only the approved process-first blueprint active in the interface", async () => {
+test("keeps only the approved process-first blueprints active in the interface", async () => {
   const [page, css] = await Promise.all([
     source("app/page.tsx"),
     source("app/globals.css"),
@@ -212,17 +212,19 @@ test("keeps only the approved process-first blueprint active in the interface", 
     "contact-spoon-plan.webp",
   ];
   const retiredDetachedDrawings = [
-    "masterchef-recipes-europe.png",
     "private-dinner-seven-course.png",
     "private-event-canape-studies.png",
   ];
-  const activeBlueprint = "/media/blueprint-backgrounds/private-dinner-process-v2.png";
+  const activeBlueprints = [
+    "/media/blueprint-backgrounds/masterchef-recipes-europe.png",
+    "/media/blueprint-backgrounds/private-dinner-calculation-process.png",
+  ];
   const activeBlueprintReferences = `${page}\n${css}`.match(/\/media\/blueprint-backgrounds\/[^"')\s]+/g) ?? [];
 
-  await access(new URL(`public${activeBlueprint}`, root));
+  await Promise.all(activeBlueprints.map((path) => access(new URL(`public${path}`, root))));
   await assert.rejects(access(new URL("app/blueprint-diagrams.tsx", root)));
 
-  assert.deepEqual(activeBlueprintReferences, [activeBlueprint]);
+  assert.deepEqual(activeBlueprintReferences.toSorted(), activeBlueprints.toSorted());
   assert.doesNotMatch(page, /PreparationSequence|WorkdayTrajectory|MenuComposition|SourceContour|<svg/);
   assert.doesNotMatch(css, /url\([^)]*\.svg|blueprint-figure|workday-trajectory|menu-composition|source-contour/);
   assert.match(page, /className="menu-dish"[\s\S]*?src="\/media\/optimized\/gallery-dish\.webp"/);
@@ -235,6 +237,7 @@ test("keeps only the approved process-first blueprint active in the interface", 
   assert.doesNotMatch(page, /block-drawing|format-drawing|story-origin-drawing/);
   assert.doesNotMatch(css, /\.block-drawing|\.format-drawing|\.story-origin-drawing/);
   assert.doesNotMatch(css, /\.story-present::before|\.sources-intro::before|\.source-row(?:(?:-[123])?)::before|\.contact::before/);
+  assert.match(page, /className="story-origin-process-field"[\s\S]*?className="story-origin-process-plan"[\s\S]*?masterchef-recipes-europe\.png[\s\S]*?className="story-award"/);
   assert.match(page, /className="format-process-field"/);
   assert.match(page, /className="format-process-plan"/);
   assert.equal((page.match(/processBackground:\s*true/g) ?? []).length, 1);
@@ -244,7 +247,8 @@ test("keeps only the approved process-first blueprint active in the interface", 
   assert.match(page, /<header className="source-copy">[\s\S]*?<div className="source-images">/);
   assert.match(css, /\.format-process-field\s*\{[^}]*position:\s*relative;[^}]*aspect-ratio:\s*2 \/ 1/);
   assert.match(css, /\.format-process-plan\s*\{[^}]*position:\s*absolute;[^}]*z-index:\s*0;[^}]*object-fit:\s*contain/);
-  assert.match(css, /\.format-row-1\.format-row-process \.format-media\s*\{[^}]*position:\s*absolute;[^}]*z-index:\s*1;[^}]*top:\s*8%;[^}]*left:\s*18\.5%;[^}]*height:\s*68%/);
+  assert.match(css, /\.story-origin-process-plan\s*\{[^}]*position:\s*absolute;[^}]*z-index:\s*0;[^}]*object-fit:\s*contain/);
+  assert.match(css, /\.format-row-1\.format-row-process \.format-media\s*\{[^}]*position:\s*absolute;[^}]*z-index:\s*1;[^}]*top:\s*3%;[^}]*left:\s*36%;[^}]*height:\s*64%/);
 });
 
 test("uses the measured Trivium typography on the approved editorial surfaces", async () => {
@@ -515,6 +519,8 @@ test("keeps records and rejects the obsolete visible-system files", async () => 
     "public/media/blueprint-backgrounds/contact-spoon-plan.webp",
     "public/media/blueprint-backgrounds/masterchef-recipes-europe.png",
     "public/media/blueprint-backgrounds/private-dinner-seven-course.png",
+    "public/media/blueprint-backgrounds/private-dinner-process-v2.png",
+    "public/media/blueprint-backgrounds/private-dinner-calculation-process.png",
     "public/media/blueprint-backgrounds/private-event-canape-studies.png",
     "public/media/chef-hero-apron.jpg",
     "public/media/chef-story-img-5399-no-grill.mp4",

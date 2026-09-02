@@ -1025,3 +1025,28 @@ original cooking photograph remains untouched in the foreground.
 - At phone width, source chapters remain a compact two-column text/photo composition; workday remains
   a copy/film pair; personal menu keeps its real dish in the layout; inquiry places the complete villa
   immediately after its heading. None may contain a blank reserved band.
+
+## Approved-raster lifecycle and calculation-sheet grammar — 2026-09-02
+
+This section supersedes the statement that `private-dinner-process-v2.png` is the active exception.
+
+- Every meaningful block ultimately receives exactly one process raster, approved independently in
+  chat before insertion. A rejected candidate is never rendered.
+- `masterchef-recipes-europe.png` remains approved by explicit user instruction and is not regenerated.
+- `private-dinner-calculation-process.png` replaces the rejected private-dinner prototype. Its grammar
+  is a chef's calculation sheet: inputs, quantities, yield/loss, time, heat/equipment dependency and
+  ordered service. This grammar is specific to the dinner block and must not be mechanically repeated.
+- The blueprint and documentary media form one composite. The raster is absolute at `z-index: 0`; the
+  unchanged photograph or film is above it at `z-index: 1`; live copy remains above both. The photo
+  occupies the quiet area intentionally designed into the sheet.
+- The raster must stay legible on at least two sides and in a meaningful lower strip. The strip shows
+  actual process content, never empty paper introduced by a fixed `min-height`, padding or margin.
+- The former detached `<figure>` drawing pattern remains prohibited. SVG, generated vector markup,
+  gradients, filters, shadows, blend modes and decorative animation remain prohibited.
+- Candidate files may remain for audit history, but only the currently approved filename for a block
+  may be referenced by rendered JSX or CSS.
+- Phone composition is designed independently: retain the overlapping media/process relationship,
+  preserve the left calculation total and lower service sequence, and avoid horizontal scrolling.
+
+All other blocks remain in documentary fallback while their unique process sheet is awaiting the
+user's explicit yes/no decision.

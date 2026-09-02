@@ -4347,3 +4347,66 @@ interface and the approved private-dinner process prototype. The only decision w
 reference is neutral spacing while a block awaits approval. Remaining limitation: ten unique
 process-first backgrounds still require one-by-one generation and user approval; they are intentionally
 absent from this review version.
+
+## Approved private-dinner calculation sheet — implementation plan — 2026-09-02
+
+### Audit correction
+
+The user clarified that the unwanted drawings must be replaced one by one, not globally deleted. The
+first abstract private-dinner route and the later architectural kitchen plan were rejected. The newly
+generated culinary calculation sheet was explicitly approved. The MasterChef recipes/Europe raster was
+also explicitly retained. Other old object studies are not reinstated as process drawings.
+
+### Pre-code anti-template and implementation plan
+
+1. **Templated or incorrect element found:** the previous private-dinner raster reads as a generic node
+   network and does not expose the requested calculations; the emergency cleanup incorrectly treated
+   missing drawings as the desired final state.
+2. **Reference replacing it:** the approved 2:1 calculation sheet with guest/course totals, portion and
+   yield table, ingredient loss, preparation timeline, heat-load diagram and seven-course service row.
+3. **Elements retained:** exact Russian copy, original private-dinner photograph, event numbering,
+   editorial grid, warm paper palette and existing layered media-field semantics.
+4. **Elements reworked:** only the private-dinner raster source and its photo-safe overlay geometry.
+5. **New component requirement:** none. The existing `format-process-field` is the correct semantic
+   primitive; adding a card, gallery, third column or duplicate illustration would be unjustified.
+6. **MasterChef:** the previously approved recipes/Europe raster remains authoritative and will not be
+   regenerated. Restore it in the same layered-media system while preserving the existing proof photo
+   and biography.
+7. **Unapproved blocks:** remain in their compact documentary fallback until their individual preview
+   receives an explicit approval.
+
+Implementation verification must cover lint, source tests, production build, `git diff --check`, and
+browser checks at 1440, 1280, 1024, 768, 430, 390 and 375 px. At every width the dinner photograph must
+cover the quiet upper-middle area while leaving the calculation totals, equipment/temperature plan and
+lower service sequence visible without a detached blank band or horizontal overflow.
+
+### Implemented and verified
+
+- **File created:** `public/media/blueprint-backgrounds/private-dinner-calculation-process.png`
+  (1774 × 887 raster).
+- **Files changed:** `app/page.tsx`, `app/globals.css`, `tests/rendered-html.test.mjs`,
+  `docs/DESIGN_REFERENCE_MAP.md`, `docs/DESIGN_SYSTEM.md` and `docs/DESIGN_AUDIT.md`.
+- **Incorrect/templated element removed:** the generic node-route dinner prototype is no longer
+  referenced. The approved calculation sheet now expresses real planning dependencies. The previously
+  approved MasterChef recipes/Europe sheet is restored as a background rather than as a detached row.
+- **Reference decisions:** the two active rasters come only from explicit user approvals; documentary
+  photographs, copy, typography, paper palette and editorial grid come from the approved site.
+- **Neutral decisions without a separate reference:** the dinner photo uses `top: 3%`, `left: 36%`,
+  `width: 35%`, `height: 64%` on larger layouts and a wider mobile crop so the left calculations,
+  right equipment plan and lower service sequence stay visible. The MasterChef photo uses its raster's
+  quiet centre. These are fitting decisions, not a new visual style.
+- **UI libraries:** no visual component library or stock theme was introduced; existing React/Next
+  primitives only.
+- **Automated verification:** ESLint, production build, all eight source tests and `git diff --check`
+  pass.
+- **Visual verification:** 1440, 1280, 1024, 768, 430, 390 and 375 px were inspected in the local
+  production build. Both rasters loaded at native 1774 px width, media stayed inside each 2:1 field,
+  and `documentElement.scrollWidth` equalled the viewport at every width. Wide layouts preserve the
+  editorial side copy; 430/390/375 use full-width process fields with the photographs above the plans,
+  visible drawing on multiple sides and a real lower process band.
+- **Anti-template result:** no cards, repeated three-column drawing rows, gradients, glows, shadows,
+  decorative icons, placeholder copy or library defaults were added. MasterChef and dinner deliberately
+  use different process metaphors.
+- **Remaining limitation:** calculations become supporting visual detail at narrow-phone size rather
+  than body-readable copy; the authoritative service description remains live HTML. Every remaining
+  block still requires its own one-by-one process drawing and explicit approval before insertion.

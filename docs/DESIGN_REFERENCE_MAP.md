@@ -673,3 +673,22 @@ and must reserve no blueprint space.
 No new visual principle is invented in this correction. The temporary no-blueprint state is the most
 neutral implementation permitted by the project policy, and the one-by-one approval sequence remains
 authoritative.
+
+## One-by-one process approval — calculation-sheet direction — 2026-09-02
+
+This amendment supersedes both the blanket-removal interpretation above and the rejected
+`private-dinner-process-v2.png` prototype. The user requires exactly one raster drawing for each
+meaningful block, each drawing must explain how that block is planned or produced, and every drawing
+must be shown and approved separately before it is inserted. Rejection removes only that candidate;
+it is not permission to remove already approved drawings from other blocks.
+
+| Project element | Reference | Principle used | What is not copied | Project implementation |
+|---|---|---|---|---|
+| MasterChef proof | Direct user instruction to keep the previous recipes and Europe map; previously approved `masterchef-recipes-europe.png` | Culinary knowledge is expressed through recipe development and the Europe/Mediterranean route | New map, flags, invented places, replacement photo or a generic travel graphic | Keep the existing approved raster and layer it beneath the unchanged award photograph; do not regenerate it |
+| Private dinner | Direct approval of the new calculation-sheet preview after rejection of the abstract route and architectural-plan alternatives | Express professional planning through guest count, seven-course portion/yield calculations, ingredient loss, temperatures, equipment load, preparation timing and service sequence | The rejected node route, the rejected house floor plan, decorative plate anatomy, changed copy or changed documentary photo | Store the approved raster as `private-dinner-calculation-process.png`; layer the unchanged dinner photograph over its quiet upper-middle zone so calculations remain visible at the left, right and below |
+| Remaining blocks | Direct instruction to work one drawing at a time | No drawing enters the interface before its own explicit approval | Restoring the old object-only meat, fish, produce, menu, workday or spoon drawings as if they were approved process sheets | Keep the documentary fallback until the next candidate is approved |
+
+The approved visual language remains warm ivory paper, graphite construction lines and restrained
+antique-gold process accents. Unlike the rejected first prototype, factual calculations may appear in
+the raster when they are the central meaning of the approved sheet. They remain illustrative planning
+values for the drawing and do not modify the live commercial copy.
