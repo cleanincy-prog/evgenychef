@@ -2021,5 +2021,16 @@ button:focus-visible,
     object-fit: cover;
     object-position: center;
   }
+
+  /* Now that the diagram fills the box (see above), copy sitting
+     directly on the linework and small icons reads as clutter rather
+     than an intentional overlay. Give it a translucent paper backdrop
+     — a note pinned to the blueprint — so it stays legible without
+     hiding the art it sits on. */
+  .format-row-process .format-copy {
+    background: rgba(244, 239, 229, 0.93);
+    padding: 16px 18px;
+    box-shadow: 0 1px 14px rgba(10, 10, 10, 0.07);
+  }
 }
 
