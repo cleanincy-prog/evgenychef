@@ -162,7 +162,6 @@ function EventFormats() {
                   />
                 </figure>
                 <div className="format-copy">
-                  <span aria-hidden="true">0{index + 1}</span>
                   <h3>{format.name}</h3>
                   <p>{format.description}</p>
                 </div>
@@ -180,7 +179,6 @@ function EventFormats() {
                   />
                 </figure>
                 <div className="format-copy">
-                  <span aria-hidden="true">0{index + 1}</span>
                   <h3>{format.name}</h3>
                   <p>{format.description}</p>
                 </div>
