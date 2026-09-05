@@ -108,24 +108,24 @@ const sourceChapters = [
     category: "Мясо",
     statement: "Хотите ягнёнка? — еду за ним в горы.",
     drawingSrc: "/media/blueprint-backgrounds/meat-reference-exact.png",
-    drawingWidth: 480,
-    drawingHeight: 143,
+    drawingWidth: 1672,
+    drawingHeight: 941,
   },
   {
     id: "source-fish-title",
     category: "Рыба",
     statement: "Нужна рыба? — еду в порт к рыбакам.",
     drawingSrc: "/media/blueprint-backgrounds/fish-reference-exact.png",
-    drawingWidth: 489,
-    drawingHeight: 157,
+    drawingWidth: 1672,
+    drawingHeight: 941,
   },
   {
     id: "source-produce-title",
     category: "Овощи и фрукты",
     statement: "Свежие овощи и фрукты? — только с кипрских ферм.",
     drawingSrc: "/media/blueprint-backgrounds/produce-reference-exact.png",
-    drawingWidth: 501,
-    drawingHeight: 155,
+    drawingWidth: 1672,
+    drawingHeight: 941,
   },
 ] as const;
 
@@ -356,8 +356,8 @@ export default function Home() {
             <figure className="menu-reference-plan" aria-hidden="true">
               <img
                 src="/media/blueprint-backgrounds/personal-menu-reference-exact.png"
-                width="645"
-                height="555"
+                width="1015"
+                height="1549"
                 loading="lazy"
                 decoding="async"
                 alt=""
