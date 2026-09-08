@@ -76,6 +76,7 @@ const eventFormats = [
     height: 1572,
     alt: "Евгений Грыбенюк готовит блюдо на сковороде для частного ужина",
     drawingSrc: "/media/blueprint-backgrounds/private-dinner-layout-color-v2.png",
+    mobileDrawingSrc: "/media/blueprint-backgrounds/private-dinner-mobile.png",
     processBackground: true,
   },
   {
@@ -87,6 +88,7 @@ const eventFormats = [
     height: 1510,
     alt: "Евгений Грыбенюк готовит блины перед гостями на приватном мероприятии",
     drawingSrc: "/media/blueprint-backgrounds/private-event-layout-color-v2.png",
+    mobileDrawingSrc: "/media/blueprint-backgrounds/private-event-mobile.png",
     processBackground: true,
   },
   {
@@ -98,6 +100,7 @@ const eventFormats = [
     height: 770,
     alt: "Евгений Грыбенюк показывает участникам мастер-класса профессиональные приёмы",
     drawingSrc: "/media/blueprint-backgrounds/masterclass-six-person-layout-color-v2.png",
+    mobileDrawingSrc: "/media/blueprint-backgrounds/masterclass-mobile.png",
     processBackground: true,
   },
 ];
@@ -141,16 +144,21 @@ function EventFormats() {
           >
             {format.processBackground ? (
               <div className="format-process-field">
-                <img
-                  className="format-process-plan"
-                  src={format.drawingSrc ?? undefined}
-                  width="1774"
-                  height="887"
-                  loading="lazy"
-                  decoding="async"
-                  alt=""
-                  aria-hidden="true"
-                />
+                <picture>
+                  {format.mobileDrawingSrc ? (
+                    <source media="(max-width: 820px)" srcSet={format.mobileDrawingSrc} />
+                  ) : null}
+                  <img
+                    className="format-process-plan"
+                    src={format.drawingSrc ?? undefined}
+                    width="1774"
+                    height="887"
+                    loading="lazy"
+                    decoding="async"
+                    alt=""
+                    aria-hidden="true"
+                  />
+                </picture>
                 <figure className="format-media">
                   <img
                     src={format.src}
