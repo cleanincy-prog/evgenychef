@@ -1936,9 +1936,9 @@ button:focus-visible,
 }
 
 .story-origin-process-field > .story-copy {
-  top: 16%;
-  left: 70%;
-  width: 27%;
+  top: 3%;
+  left: 55%;
+  width: 42%;
 }
 
 .format-row-1.format-row-process .format-copy,
@@ -1997,6 +1997,17 @@ button:focus-visible,
   height: 100%;
   object-fit: contain;
   object-position: center;
+}
+
+@media (min-width: 821px) and (max-width: 1100px) {
+  .story-origin-process-field > .story-copy p {
+    font-size: 12px;
+    line-height: 1.52;
+  }
+
+  .story-origin-process-field > .story-copy p + p {
+    margin-top: 12px;
+  }
 }
 
 @media (max-width: 820px) {
