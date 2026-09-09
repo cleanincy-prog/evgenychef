@@ -305,7 +305,7 @@ test("keeps the approved process drawings and mapped photoreal plate journey act
   assert.doesNotMatch(page, /mobileDrawingSrc|mobile-v4/);
   assert.match(css, /The rejected tall posters[\s\S]*?@media \(min-width: 561px\) and \(max-width: 820px\)[\s\S]*?aspect-ratio:\s*1 \/ 1;[\s\S]*?@media \(min-width: 821px\) and \(max-width: 940px\)[\s\S]*?aspect-ratio:\s*2 \/ 1;[\s\S]*?@media \(max-width: 560px\)[\s\S]*?aspect-ratio:\s*1 \/ 1;/);
   assert.doesNotMatch(page, /PreparationSequence|WorkdayTrajectory|MenuComposition|SourceContour/);
-  assert.equal((page.match(/<svg/g) ?? []).length, 3);
+  assert.equal((page.match(/<svg/g) ?? []).length, 4);
   assert.match(page, /className="chef-journey-map-layer"[\s\S]*?viewBox="150 100 1450 600"[\s\S]*?role="img"/);
   assert.match(page, /<image[\s\S]*?href="\/media\/masterchef\/culinary-archive\/map-mediterranean-full-cc-by-sa\.svg"/);
   assert.match(page, /className="chef-journey-route"[\s\S]*?<polyline points="234,386 425,190 650,159 1088,454 1275,318 1430,585"/);
@@ -410,7 +410,11 @@ test("keeps the approved process drawings and mapped photoreal plate journey act
   assert.match(css, /\.format-process-field\s*\{[^}]*position:\s*relative;[^}]*aspect-ratio:\s*2 \/ 1/);
   assert.match(css, /\.format-process-plan\s*\{[^}]*position:\s*absolute;[^}]*z-index:\s*0;[^}]*object-fit:\s*contain/);
   const archivePass = css.slice(css.lastIndexOf("/* Real-photo culinary archive."));
-  const journeyPass = css.slice(css.lastIndexOf("/* Integrated transparent-plate route."));
+  const journeyStart = css.lastIndexOf("/* Integrated transparent-plate route.");
+  const journeyPass = css.slice(
+    journeyStart,
+    css.indexOf("/* Approved event-specific drawings remain", journeyStart),
+  );
   assert.match(archivePass, /\.story-origin-archive-field\s*\{[^}]*grid-column:\s*1 \/ -1/);
   assert.match(archivePass, /\.story-origin-lead\s*\{[^}]*display:\s*block;[^}]*height:\s*clamp\(520px, 43vw, 620px\);[^}]*isolation:\s*isolate/);
   assert.match(archivePass, /\.story-origin-lead \.story-award\s*\{[^}]*position:\s*absolute;[^}]*left:\s*0;[^}]*width:\s*46%;[^}]*overflow:\s*visible/);
@@ -709,8 +713,9 @@ test("keeps readability-specific desktop, tablet and narrow-phone geometry", asy
   assert.match(css, /\.format-row-3 \.format-media\s*\{\s*grid-column:\s*1 \/ 8/);
   assert.match(css, /\.format-row-3 \.format-copy\s*\{\s*grid-column:\s*9 \/ 13/);
   assert.match(css, /\.story-intro\s*\{\s*margin-bottom:\s*clamp\(48px, 5vw, 72px\)/);
-  assert.match(css, /\.sources-heading\s*\{\s*grid-column:\s*1 \/ 7/);
-  assert.match(css, /\.sources-story\s*\{[^}]*grid-column:\s*8 \/ 13/);
+  const personalMenuPass = css.slice(css.lastIndexOf("/* The approved real plate"));
+  assert.match(personalMenuPass, /\.sources-copy\s*\{[^}]*grid-column:\s*1 \/ 5/);
+  assert.match(personalMenuPass, /\.menu-plate-composition\s*\{[^}]*grid-column:\s*5 \/ 13/);
   assert.match(css, /\.source-gallery\s*\{[^}]*grid-template-columns:\s*minmax\(0, 5fr\) minmax\(0, 4fr\) minmax\(0, 3fr\)/);
   assert.match(css, /\.source-scene figcaption\s*\{[^}]*position:\s*absolute;[^}]*background:\s*#f7f4ef/);
   assert.doesNotMatch(css, /\.source-(?:list|row|copy|images|reference-plan)\b|\.menu-reference-plan\b/);
@@ -836,4 +841,37 @@ test("keeps records and rejects the obsolete visible-system files", async () => 
   for (const [path, expectedHash] of Object.entries(exactRemainingReferenceCrops)) {
     assert.equal(await sha256(path), expectedHash, `${path} must stay byte-identical to the approved screenshot crop`);
   }
+});
+
+test("uses the approved real plate and live responsive explanations in personal menu", async () => {
+  const [page, css] = await Promise.all([source("app/page.tsx"), source("app/globals.css")]);
+
+  await Promise.all([
+    "public/media/menu/personal-menu-duck-plate-cutout-v1.webp",
+    "public/media/menu/CREDITS.md",
+  ].map((path) => access(new URL(path, root))));
+
+  assert.match(page, /function PersonalMenuPlate\(\)/);
+  assert.match(page, /className="menu-plate-composition" aria-labelledby="menu-plate-caption"/);
+  assert.match(page, /src="\/media\/menu\/personal-menu-duck-plate-cutout-v1\.webp"/);
+  assert.match(page, /width="1800"[\s\S]*?height="1665"[\s\S]*?alt="Белая тарелка с нарезанным мясом, гарниром, зеленью и несколькими соусами"/);
+  assert.match(page, /className="menu-plate-leaders"[\s\S]*?viewBox="0 0 1000 760"[\s\S]*?aria-hidden="true"/);
+  assert.equal((page.match(/<circle cx=/g) ?? []).length, 3);
+
+  for (const explanation of [
+    "баланс текстур",
+    "и температур",
+    "локальные продукты",
+    "· сезон",
+    "соус связывает",
+    "вкус и блюдо",
+  ]) assert.ok(page.includes(explanation), `missing plate explanation: ${explanation}`);
+
+  const personalMenuPass = css.slice(css.lastIndexOf("/* The approved real plate"));
+  assert.match(personalMenuPass, /\.sources-copy\s*\{[^}]*grid-column:\s*1 \/ 5/);
+  assert.match(personalMenuPass, /\.menu-plate-composition\s*\{[^}]*grid-column:\s*5 \/ 13/);
+  assert.match(personalMenuPass, /\.menu-plate-photo\s*\{[^}]*width:\s*70%;[^}]*height:\s*auto/);
+  assert.match(personalMenuPass, /\.menu-plate-leaders path\s*\{[^}]*stroke:\s*var\(--accent-small\);[^}]*stroke-width:\s*1\.15/);
+  assert.match(personalMenuPass, /@media \(max-width:\s*940px\)[\s\S]*?\.menu-plate-composition\s*\{[^}]*grid-column:\s*1 \/ -1/);
+  assert.match(personalMenuPass, /@media \(max-width:\s*560px\)[\s\S]*?\.menu-plate-stage\s*\{[^}]*aspect-ratio:\s*1 \/ 1\.08/);
 });

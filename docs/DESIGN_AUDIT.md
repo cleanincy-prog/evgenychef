@@ -6119,3 +6119,58 @@ gradient, glass, blur, glow, icon, stock/generated media, placeholder copy, deco
 library-default appearance was added. The phone composition is independently authored. Remaining risk:
 commercial publication rights for third-party images already present in the 94-source archive remain the
 project's existing unresolved media-rights consideration. Publication is handled separately from the interface implementation.
+
+## Approved real plate for the personal-menu introduction — pre-code audit and plan — 2026-09-09
+
+The user selected the supplied real overhead restaurant photograph and explicitly requested that it replace
+the previous personal-menu image, lose only the marble outside the plate, receive explanatory leaders and be
+integrated into the existing personal-menu block. Before implementation, the active `sources` structure,
+copy, sequence, sourcing strip, responsive cascade, both user references and current design records were
+audited. The newer approved collage-frame Hero remains untouched.
+
+### Audit findings and implementation plan
+
+1. The active introduction had copy and the `ваш вкус → продукты → меню вечера` sequence but no approved
+   real plate. Earlier generated dish trials were visibly synthetic and are not referenced by the page.
+2. The approved photograph already provides the required meat, garnish, sauces, microgreens and natural
+   plating irregularities. These source pixels must not be regenerated or beautified.
+3. Only marble outside the rim needs removal. Plate, food, reflections, colour and shadows within the rim
+   are invariants.
+4. The first user reference supplies the compositional principle—copy facing one isolated plate with fine
+   explanatory leaders—but not its dish, handwriting, dimensions or measurement marks.
+5. Implement a versioned transparent asset, preserve all current copy and proof imagery, add three live HTML
+   explanations with one decorative SVG leader layer, and author distinct desktop, tablet and phone geometry.
+6. Update source tests and all three design records, run lint/build/tests and verify 1440, 1280, 1024, 768,
+   430, 390 and 375 px before publication.
+
+Templated or unsuccessful elements found: the rejected generated dish experiments. Components retained:
+the entire existing personal-menu content and sourcing gallery, the approved collage-frame Hero, global
+paper/ink/gold palette, typography and square-edge system. Components reworked: `sources-intro` and its
+responsive placement only. New component required: one content-specific annotated plate figure. Exact
+leader coordinates and breakpoint figure depth have no separate visual reference and remain neutral fitting
+decisions constrained by the approved photograph. No UI library is introduced.
+
+### Implementation result and final anti-template audit
+
+The personal-menu introduction now uses a four-column copy rail facing an eight-column annotated plate. The
+marble outside the complete rim is removed through deterministic alpha; no food, colour, texture or lighting
+is generated or retouched. Three live italic explanations—`баланс текстур и температур`, `локальные
+продукты · сезон` and `соус связывает вкус и блюдо`—use a single inline SVG whose endpoints land on the
+meat, microgreens and lower sauce arc. Below 940 px the figure follows the copy; below 560 px it receives a
+taller phone-specific composition.
+
+Files created: `public/media/menu/personal-menu-duck-plate-cutout-v1.webp` and
+`public/media/menu/CREDITS.md`. Files changed: `app/page.tsx`, `app/globals.css`,
+`tests/rendered-html.test.mjs`, `docs/DESIGN_REFERENCE_MAP.md`, `docs/DESIGN_SYSTEM.md` and this audit.
+The generated trials remain inactive and are not copied to the publication branch. References used: both
+user screenshots, the matching high-resolution restaurant photograph, the current personal-menu block and
+the established project design system. UI libraries used as visible components: none; semantic HTML, CSS
+and inline SVG are technical primitives.
+
+Visual verification at 1440 × 1000, 1280 × 900, 1024 × 900, 768 × 1024, 430 × 932, 390 × 844 and
+375 × 812 found complete 1800 × 1665 image loading, three readable labels without mutual overlap, three
+leader paths and endpoints, and no horizontal overflow or browser errors. ESLint, the production build,
+focused tests and `git diff --check` pass. The anti-template audit found no card grid, radius, gradient,
+glass, shadow, glow, generic icon, filler copy, generated food or desktop-only phone stacking. Remaining
+risk: the selected third-party restaurant photograph has no independently verified commercial licence; it
+is described only as an example of plate composition and not as Evgen's dish.

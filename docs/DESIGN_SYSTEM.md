@@ -1613,3 +1613,32 @@ Direction `04 · Коллаж-рамка` is user-approved and becomes the activ
   remove its baked black bands. Archive tiles retain the approved restrained saturation/contrast treatment.
 - **Prohibitions:** no new copy, CTA, icon, generated media, stock image, gradient, blur, glass, shadow,
   radius, hover spectacle or UI-library appearance belongs to the Hero.
+
+## Annotated real plate amendment — 2026-09-09
+
+This amendment adds one approved real plate to the personal-menu introduction and supersedes only the
+rejected generated dish experiments. The active sourcing reset and its three-photo proof strip remain.
+
+- **Photographic invariant:** inside the plate rim, preserve the selected source photograph exactly in
+  subject, geometry, colour and texture. Remove only the marble outside the plate. Do not regenerate,
+  relight, retouch, rearrange, sharpen or add food; retain genuine transparency outside the rim.
+- **Wide layout:** the personal-menu introduction becomes a twelve-column editorial pair. Copy occupies
+  columns 1–4 and the annotated plate occupies columns 5–12; the plate remains the dominant visual object.
+- **Tablet and phone layout:** below 940 px, copy precedes the figure. The figure receives independent
+  height and label positions; it is not the desktop composition scaled down. Important meat, sauce and
+  garnish regions must remain unobscured at 768, 430, 390 and 375 px.
+- **Callout vocabulary:** exactly three live relationships are active: `баланс текстур и температур`,
+  `соус связывает вкус и блюдо`, and `локальные продукты · сезон`. They describe menu-composition
+  principles, not verified ingredients, suppliers or provenance of the pictured plate.
+- **Leader style:** use deterministic inline SVG only. Lines are unfilled, round-capped, `1–1.25px`, and
+  use the existing `--accent-small` at restrained opacity; small endpoint dots use the same colour. Labels
+  use the established accent italic face and remain live text. No arrow icon library or baked raster text.
+- **Surface and effects:** the figure stays on the existing `#f7f4ef` section paper with no card fill,
+  radius, shadow, gradient, glass, glow, border frame or animation. The plate edge itself supplies all
+  required depth; no synthetic shadow is added after background removal.
+- **Accessibility:** the plate has a literal alt describing the visible meat, sauces and greens. Leaders
+  are decorative and hidden from assistive technology; the three explanations remain readable HTML in
+  DOM order. The source note does not claim that Evgen prepared or served the photographed dish.
+- **Delivery:** serve a versioned alpha WebP/PNG from `public/media/menu/`; keep source/provenance details
+  in project records. The rejected `personal-menu-photo-v1.png` and `personal-menu-photo-celeriac-v2.png`
+  remain inactive design history and must never be referenced by the live page.
