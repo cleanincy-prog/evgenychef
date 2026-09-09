@@ -6501,3 +6501,124 @@ user's explicit comparison and mandatory viewport checks.
 - **Remaining limitations:** the phone portrait still uses a cover crop from the original 576 × 1280
   phone-origin file; producing a materially wider crop without losing more vertical context would require
   a different real source photograph. No such replacement is necessary for the requested scale correction.
+
+## Private-event editorial canapé sheet — pre-code audit and plan — 2026-09-10
+
+The user supplied a phone reference for `Приватные мероприятия` and requested additional partitions between
+the photograph, live text and canapés, with the composition held on one colour field. Before interface code,
+the active row data and DOM, full responsive CSS cascade, exact Russian copy, 2278 × 1510 documentary event
+photograph, all private-event raster candidates, source tests, reference map, design system, site lifecycle
+instructions and the two unrelated untracked personal-menu experiments were audited.
+
+### Audit findings
+
+1. The current row uses a dense full-field circulation drawing with foliage, lights, repeated guests,
+   arrows and service equipment. It competes with the simple editorial hierarchy in the new reference and
+   does not create explicit boundaries between the three requested content zones.
+2. The existing `private-event-canape-studies.png` is the closest approved project-owned supporting asset:
+   it shows a tray plus canapé assemblies without new live wording or a client claim. It was retired only by
+   an earlier process-sheet direction; the new direct request for a canapé-led reference reauthorises its
+   content role while superseding the circulation sheet.
+3. The reference uses natural-colour imagery on one ivory field. “One colour” is therefore implemented as
+   one `--paper` surface and one `--rule` stroke colour, not a photographic recolour or CSS filter.
+4. The current live copy, documentary photograph, event order, typography and `--paper`/`--rule` tokens
+   already cover the factual and visual foundations. No new copy, bitmap generation, dependency or
+   interactive component is required.
+
+### Implementation plan recorded before interface edits
+
+1. Extend only the second format record with the existing canapé-study asset and a row-specific class;
+   remove its active wide/compact circulation underlay references while leaving rows 01 and 03 untouched.
+2. Add one decorative `aria-hidden` rule layer with an inset perimeter, empty top/bottom rails, a vertical
+   copy/photo partition and a horizontal upper/canapé partition. Every stroke uses `1px var(--rule)`.
+3. Keep live copy upper left and the unchanged chef photograph upper right. Place the canapé study in the
+   lower band with a centred wide crop only on shallow layouts and progressively reveal its full 2:1
+   composition on tablet and phone.
+4. Author separate wide, intermediate, tablet and phone field ratios. At phone widths retain the side-by-side
+   upper pair rather than stacking the desktop blocks, keep body copy at 12 px or larger and allocate roughly
+   half the field to the canapé study.
+5. Update focused regressions for the new asset, inactive circulation files, empty divider semantics and
+   row-specific responsive contract. Run `git diff --check`, ESLint, production build and tests. Because the
+   user did not request browser testing, the Sites workflow prohibits screenshots, DOM inspection and
+   viewport resizing; the mandatory 1440/1280/1024/768/430/390/375 visual sign-off remains an explicit open
+   limitation unless separately authorised.
+
+Templated/unsuccessful element found: an overdrawn process underlay whose repeated guests, arrows and foliage
+obscure the simple content hierarchy requested for this row. Retained: exact live wording, documentary image,
+semantic ordered-list structure, event order, fonts, square edges and all neighbouring sections. Reworked:
+row 02's supporting image, field geometry and structural rules only. New components and UI libraries: none;
+semantic HTML and project CSS remain the technical primitives. Decisions without direct numeric references
+are limited to responsive percentages and the wide lower-image crop needed to protect the supplied hierarchy.
+
+### Implementation result and anti-template audit
+
+- **Files created:** none. The existing local canapé-study raster is reused.
+- **Files changed:** `app/page.tsx`, `app/globals.css`, `tests/rendered-html.test.mjs`,
+  `docs/DESIGN_REFERENCE_MAP.md`, `docs/DESIGN_SYSTEM.md` and this audit.
+- **Templated/unsuccessful element found:** row 02's full-field circulation illustration repeated guests,
+  arrows, foliage and service props around the live content, weakening the simple reference-led hierarchy.
+- **Rework:** row 02 now has copy at upper left, its unchanged documentary cooking photograph at upper right
+  and the existing tray/assembly canapé study below. One vertical and one horizontal divider explicitly
+  separate those zones. The inset perimeter and empty upper/lower rails complete the sheet; every stroke uses
+  `1px var(--rule)` on one `var(--paper)` surface. The circulation and compact circulation rasters are no
+  longer referenced by the live row.
+- **References used:** the user's supplied `Photo 1.jpg`, the exact existing service copy and photograph,
+  the previously approved local canapé study and the established paper/ink/rule design system.
+- **Decisions without references:** only the four responsive field ratios, zone percentages and the shallow
+  wide-screen crop. They are content-fitting values and add no visual language.
+- **UI libraries:** none added or exposed. Semantic HTML and CSS are the only interface primitives.
+- **Automated verification:** the local route returns `200`; `git diff --check`, ESLint, the Vinext production
+  build and all eight regression tests pass. Regressions require the new decorative/empty line layer, one
+  active canapé raster, inactive row-02 circulation sources, responsive ratios and the absence of filter,
+  blend mode, radius, shadow or gradient in the new block.
+- **Desktop/mobile verification:** source-level responsive contracts are present for wide, 821–1100,
+  561–820, 560-and-below and 380-and-below ranges. The user did not explicitly request browser testing, so
+  the Sites workflow forbids screenshots, DOM inspection and viewport resizing; visual sign-off at 1440,
+  1280, 1024, 768, 430, 390 and 375 px remains open and this change is not represented as fully visually
+  verified under the repository definition of done.
+- **Final anti-template result:** the change adds no card grid, repeated panel system, radius, shadow,
+  gradient, glass, glow, icon, CTA, placeholder text, generic marketing section or decorative motion. Mobile
+  preserves the side-by-side copy/photo relationship and deepens the canapé zone rather than stacking a
+  reduced desktop composition.
+- **Remaining risks:** the lower raster is an illustrative study, not documentary proof of a delivered event;
+  this is communicated through empty decorative semantics and unchanged factual live copy. The two unrelated
+  untracked personal-menu experiment files present before the task were not edited or referenced.
+
+## Private-event abundance and palette correction — pre-code audit and plan — 2026-09-10
+
+The user clarified the previous request: the lower field must visibly contain many canapés, the two images
+must share one colour palette and the partitions must remain. The current row already has the requested
+divider topology, but its retired canapé-study illustration is not the photorealistic abundant field shown
+by the reference, and the two image sources do not share an explicit grade.
+
+Implementation plan recorded before interface edits: generate one original 2:1 photorealistic field with
+many distinct canapés in the reference's restrained warm palette; save it as a versioned local WebP; replace
+only row 02's lower asset; apply one restrained warm/desaturated grade to both row-02 images; preserve the
+copy/photo/canapé partitions and all adjacent rows; update regressions and records; then rerun lint, build,
+tests and the anti-template audit. No new copy, component, interaction or UI library is required. The exact
+grade values and crop positions are the only neutral fitting decisions.
+
+### Implementation result and anti-template audit
+
+- **File created:** `public/media/event-formats/private-event-canapes-v1.webp`, an original 1774 × 887
+  photorealistic field containing 23 distinct canapés in three rows.
+- **Files changed:** `app/page.tsx`, `app/globals.css`, `tests/rendered-html.test.mjs`,
+  `docs/DESIGN_REFERENCE_MAP.md`, `docs/DESIGN_SYSTEM.md` and `docs/DESIGN_AUDIT.md`.
+- **Element reworked:** the sparse illustrated assembly study was replaced in the live row by the abundant
+  canapé photograph; the existing chef image was cropped into the reference's compact upper-right field.
+- **Reference and palette:** the supplied capture governs the three-zone composition. Both photographs now
+  receive the same restrained row-only grade, while the perimeter, vertical partition and horizontal
+  partitions all use the single existing `--rule` colour on `--paper`.
+- **Unreferenced fitting decisions:** only the precise crop position, filter values and responsive percentages.
+  No new design language or business claim was introduced.
+- **UI libraries:** none added; semantic HTML and CSS remain the only primitives.
+- **Verification:** `git diff --check`, ESLint, all eight regression tests and the Vinext production build pass.
+  Source contracts cover wide, 821–1100, 561–820, 560-and-below and 380-and-below ranges. Browser screenshot,
+  DOM and viewport testing were not requested, so visual sign-off at the repository's seven mandatory widths
+  remains open under the Sites workflow constraint.
+- **Anti-template result:** no card grid, radius, shadow, gradient, glass, glow, icon, CTA, placeholder,
+  generated copy or decorative motion was added. Mobile retains the deliberate copy/photo pair over the
+  abundant canapé field rather than mechanically stacking desktop panels.
+- **Remaining risk:** the canapé photograph is an original representative visualization, not documentary
+  evidence of a delivered menu; it remains decorative with empty alternative text. The two unrelated
+  pre-existing untracked personal-menu experiments were not edited or referenced.

@@ -1135,3 +1135,23 @@ copy, portrait source, archive and desktop/tablet composition remain approved.
 
 No supplied reference fixes the exact numeric reduction. The mobile font clamp, side inset and portrait cap
 are neutral fitting decisions that must be checked at 430, 390 and 375 px and must not alter 561 px or wider.
+
+## Private-event editorial canapé sheet — 2026-09-10
+
+The user's supplied `Photo 1.jpg` is the confirmed composition reference for `Приватные мероприятия`.
+The instruction adds explicit partitions between copy, documentary photograph and canapé material and asks
+for one continuous palette. The user's follow-up explicitly confirms that the lower field must contain many
+canapés and that both images must share one warm colour treatment.
+
+| Project element | Reference | Principle used | What is not copied | Project implementation |
+|---|---|---|---|---|
+| Whole private-event field | User-supplied `Photo 1.jpg`; existing approved paper/ink system | Treat copy, chef photograph and canapé study as one square-edged editorial sheet on a single warm surface | Phone screenshot chrome, black gallery margins, another brand's exact typography, copied chef or canapé photography | Replace only row 02's dense circulation underlay with one `var(--paper)` field; retain the existing live copy and documentary Evgen photograph |
+| Upper copy/photo pair | Same reference and exact current `Приватные мероприятия` content | Keep copy on the left and the working chef image on the right with deliberate unequal widths | No centred hero, card pair, new claim, CTA, badge, stock chef image or rewritten paragraph | Position the unchanged copy and `/media/event-formats/private-event-outdoor-crepes.png` in the upper zone at every breakpoint |
+| Canapé field | Same reference's abundant wide lower food photograph; user's direct follow-up `много канапе` | Fill one wide supporting photograph with many distinct bite-size canapés and no second text hierarchy | No screenshot crop, copied food photograph, quantity claim, menu name, repeated card grid or reactivation of the event-circulation scene | Use the original generated 1774 × 887 `private-event-canapes-v1.webp`, containing 23 distinct complete bites in three rows, as the decorative lower field |
+| Shared image palette | User's direct follow-up `одна цветовая палитра`; reference's restrained warm ivory food photography | Bring the documentary chef image and canapé field into one warm ivory/olive/terracotta/wine register | No monochrome black-and-white conversion, neon colour, cool-blue cast, gradient overlay or separate coloured panel | Apply one restrained warm/desaturated CSS grade to the two row-02 images only; text, paper and rules retain the approved tokens |
+| Partitions | User's direct request for dividers between text, photograph and canapés; existing `1px --rule` drafting vocabulary | A vertical rule separates copy from photo and a horizontal rule separates the upper pair from the lower canapé field | No arrows, endpoints, timeline, labels, measurements, icons or pseudo-technical route | Add an empty `aria-hidden` perimeter/rule layer; all structural strokes use the same `--rule` colour on the same paper surface |
+| Responsive composition | Supplied phone reference; project's deliberate-mobile rule | Preserve the same three reading zones while giving the lower canapé field more depth on narrow screens | No mechanical one-column stack, horizontal scroll, clipped live copy or desktop-only proportions | Use a shallow landscape field on wide screens, a square tablet field and a slightly portrait phone field; copy and chef photograph remain side by side above the canapé study |
+
+Exact breakpoint percentages and the desktop canapé crop are neutral collision-fitting decisions. They must
+keep every divider in a quiet gap, retain the live paragraph at 12 px or larger on phones and avoid changing
+the adjacent private-dinner and masterclass rows.

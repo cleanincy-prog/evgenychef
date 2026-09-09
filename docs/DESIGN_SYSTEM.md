@@ -1735,3 +1735,31 @@ the inline map, route polyline, flag layer, point-label layer or leader layer.
   active collage-frame contract.
 - Add no replacement image, generated crop, radius, shadow, gradient, blur, animation, CTA or UI-library
   component for this correction.
+
+## Private-event editorial canapé-field amendment — 2026-09-10
+
+This amendment supersedes the active private-event circulation underlays only. The private-dinner plate
+field, masterclass process field and all content outside event row 02 remain unchanged.
+
+- `Приватные мероприятия` is one square-edged editorial sheet with three content zones: live copy at upper
+  left, the existing documentary cooking photograph at upper right and the approved local canapé study in a
+  wide lower field.
+- The complete surface uses `--paper: #f4efe5`. Structural marks use one colour only,
+  `--rule: #c8c0b3`; no accent-colour spine, multicolour panel, second paper tile or tinted card is added.
+- The documentary chef photograph and canapé photograph use the same restrained warm grade:
+  `sepia(.22) saturate(.72) contrast(.95) brightness(1.02)`. This row-specific treatment fulfils the user's
+  explicit single-palette correction and must not leak into the other event formats.
+- One vertical `1px` rule divides copy and chef photograph only through the upper zone. One horizontal
+  `1px` rule separates the full upper pair from the canapé field. An inset perimeter plus short empty top and
+  bottom rails may unify the sheet; all marks are decorative and `aria-hidden`.
+- The lower visual is `/media/event-formats/private-event-canapes-v1.webp`: an original generated 1774 × 887
+  editorial photograph with 23 distinct canapés in three rows. It remains decorative with empty alternative
+  text and does not assert delivered menu items, quantities or a specific client event. The former canapé
+  illustration plus circulation/guest-route and compact circulation rasters are no longer active for row 02.
+- Above 1100 px the field is a shallow landscape composition and the canapé raster may use a centred
+  content crop to fit the lower band. From 561–820 px the field is square. Through 560 px it becomes slightly
+  portrait so the exact paragraph remains legible while copy and photo stay side by side above a deeper
+  canapé field.
+- Apart from the exact shared row-02 colour grade above, no gradient, shadow, radius, glass, glow, icon,
+  badge, animation, UI-library theme or new business copy is introduced. The adjacent event rows preserve
+  their separately approved visual grammars.

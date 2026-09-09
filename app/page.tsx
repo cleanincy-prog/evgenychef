@@ -88,6 +88,7 @@ const eventFormats = [
     drawingSrc: "/media/blueprint-backgrounds/private-dinner-event-concept-v3.png",
     compactDrawingSrc: "/media/blueprint-backgrounds/private-dinner-compact-mobile-v5.webp",
     courseImageSrc: "/media/event-formats/private-dinner-seven-plates-v1.jpg",
+    canapeImageSrc: null,
     processBackground: true,
   },
   {
@@ -98,9 +99,10 @@ const eventFormats = [
     width: 2278,
     height: 1510,
     alt: "Евгений Грыбенюк готовит блины перед гостями на приватном мероприятии",
-    drawingSrc: "/media/blueprint-backgrounds/private-event-circulation-concept-v3.png",
-    compactDrawingSrc: "/media/blueprint-backgrounds/private-event-compact-mobile-v5.webp",
+    drawingSrc: null,
+    compactDrawingSrc: null,
     courseImageSrc: null,
+    canapeImageSrc: "/media/event-formats/private-event-canapes-v1.webp",
     processBackground: true,
   },
   {
@@ -114,6 +116,7 @@ const eventFormats = [
     drawingSrc: "/media/blueprint-backgrounds/masterclass-learning-concept-v3.png",
     compactDrawingSrc: "/media/blueprint-backgrounds/masterclass-compact-mobile-v5.webp",
     courseImageSrc: null,
+    canapeImageSrc: null,
     processBackground: true,
   },
 ];
@@ -228,7 +231,7 @@ function EventFormats() {
       <ol className="format-list">
         {eventFormats.map((format, index) => (
           <li
-            className={`format-row format-row-${index + 1}${format.processBackground ? " format-row-process" : ""}${format.courseImageSrc ? " format-row-menu" : ""}`}
+            className={`format-row format-row-${index + 1}${format.processBackground ? " format-row-process" : ""}${format.courseImageSrc ? " format-row-menu" : ""}${format.canapeImageSrc ? " format-row-canape" : ""}`}
             id={index === 0 ? "private-dinner" : undefined}
             key={format.name}
           >
@@ -243,9 +246,21 @@ function EventFormats() {
                     <span className="format-menu-drafting-spine" />
                   </span>
                 ) : null}
-                {!format.courseImageSrc ? (
+                {format.canapeImageSrc ? (
+                  <span className="format-event-drafting-lines" aria-hidden="true">
+                    <span className="format-event-drafting-frame" />
+                    <span className="format-event-drafting-rule format-event-drafting-rule-top" />
+                    <span className="format-event-drafting-rule format-event-drafting-rule-divider" />
+                    <span className="format-event-drafting-rule format-event-drafting-rule-bottom" />
+                    <span className="format-event-drafting-spine" />
+                  </span>
+                ) : null}
+                {!format.courseImageSrc && !format.canapeImageSrc ? (
                   <picture className="format-process-plan">
-                    <source media="(max-width: 940px)" srcSet={format.compactDrawingSrc} />
+                    <source
+                      media="(max-width: 940px)"
+                      srcSet={format.compactDrawingSrc ?? undefined}
+                    />
                     <img
                       src={format.drawingSrc ?? undefined}
                       width="1774"
@@ -262,6 +277,18 @@ function EventFormats() {
                       src={format.courseImageSrc}
                       width="1200"
                       height="800"
+                      loading="lazy"
+                      decoding="async"
+                      alt=""
+                    />
+                  </figure>
+                ) : null}
+                {format.canapeImageSrc ? (
+                  <figure className="format-event-canape-spread" aria-hidden="true">
+                    <img
+                      src={format.canapeImageSrc}
+                      width="1774"
+                      height="887"
                       loading="lazy"
                       decoding="async"
                       alt=""

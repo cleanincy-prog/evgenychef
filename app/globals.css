@@ -3453,6 +3453,234 @@ button:focus-visible,
   }
 }
 
+/* Private events follow the user-supplied editorial reference: one continuous
+   paper field, a copy/photo pair above and an abundant canapé photograph below.
+   One restrained grade unifies both photographs; every divider uses --rule. */
+.format-row-2.format-row-canape .format-process-field {
+  overflow: hidden;
+  aspect-ratio: 1.65 / 1;
+  background: var(--paper);
+}
+
+.format-event-drafting-lines,
+.format-event-drafting-frame,
+.format-event-drafting-rule,
+.format-event-drafting-spine {
+  position: absolute;
+  display: block;
+  pointer-events: none;
+}
+
+.format-event-drafting-lines {
+  z-index: 2;
+  inset: 0;
+}
+
+.format-event-drafting-frame {
+  inset: 1.5%;
+  border: 1px solid var(--rule);
+}
+
+.format-event-drafting-rule {
+  left: 3%;
+  right: 3%;
+  height: 1px;
+  background: var(--rule);
+}
+
+.format-event-drafting-rule-top {
+  top: 4%;
+}
+
+.format-event-drafting-rule-divider {
+  top: 44%;
+}
+
+.format-event-drafting-rule-bottom {
+  bottom: 4%;
+}
+
+.format-event-drafting-spine {
+  top: 5.5%;
+  left: 63.5%;
+  width: 1px;
+  height: 38.5%;
+  background: var(--rule);
+}
+
+.format-event-canape-spread {
+  position: absolute;
+  z-index: 1;
+  top: 48%;
+  right: 3%;
+  bottom: 5%;
+  left: 3%;
+  margin: 0;
+  overflow: hidden;
+  background: var(--paper);
+  pointer-events: none;
+}
+
+.format-event-canape-spread img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 50% 48%;
+}
+
+.format-row-2.format-row-canape .format-media img,
+.format-row-2.format-row-canape .format-event-canape-spread img {
+  filter: sepia(.22) saturate(.72) contrast(.95) brightness(1.02);
+}
+
+.format-row-2.format-row-canape .format-copy {
+  z-index: 3;
+  top: 7%;
+  left: 3%;
+  width: 56%;
+}
+
+.format-row-2.format-row-canape .format-media {
+  z-index: 3;
+  top: 6%;
+  left: 68%;
+  width: 28%;
+  height: auto;
+  aspect-ratio: 6 / 5;
+}
+
+.format-row-2.format-row-canape .format-media img {
+  object-fit: cover;
+  object-position: 60% 50%;
+}
+
+@media (min-width: 821px) and (max-width: 1100px) {
+  .format-row-2.format-row-canape .format-process-field {
+    aspect-ratio: 1.45 / 1;
+  }
+
+  .format-row-2.format-row-canape .format-copy {
+    top: 6%;
+    width: 52%;
+  }
+
+  .format-row-2.format-row-canape .format-media {
+    top: 6%;
+    left: 63%;
+    width: 33%;
+  }
+
+  .format-row-2.format-row-canape .format-event-drafting-spine {
+    left: 57.5%;
+    height: 37.5%;
+  }
+
+  .format-row-2.format-row-canape .format-event-drafting-rule-divider {
+    top: 43%;
+  }
+
+  .format-row-2.format-row-canape .format-event-canape-spread {
+    top: 47%;
+  }
+}
+
+@media (min-width: 561px) and (max-width: 820px) {
+  .format-row-2.format-row-canape .format-process-field {
+    aspect-ratio: 1 / 1;
+  }
+
+  .format-row-2.format-row-canape .format-copy {
+    top: 5%;
+    left: 3%;
+    width: 48%;
+  }
+
+  .format-row-2.format-row-canape .format-media {
+    top: 5%;
+    left: 56%;
+    width: 41%;
+  }
+
+  .format-row-2.format-row-canape .format-event-drafting-spine {
+    top: 4.5%;
+    left: 53.5%;
+    height: 34.5%;
+  }
+
+  .format-row-2.format-row-canape .format-event-drafting-rule-divider {
+    top: 39%;
+  }
+
+  .format-row-2.format-row-canape .format-event-canape-spread {
+    top: 43%;
+    bottom: auto;
+    aspect-ratio: 2 / 1;
+  }
+}
+
+@media (max-width: 560px) {
+  .format-row-2.format-row-canape .format-process-field {
+    aspect-ratio: .86 / 1;
+  }
+
+  .format-row-2.format-row-canape .format-copy {
+    top: 5%;
+    left: 3%;
+    width: 49%;
+  }
+
+  .format-row-2.format-row-canape .format-media {
+    top: 5%;
+    left: 57%;
+    width: 40%;
+  }
+
+  .format-row-2.format-row-canape .format-copy h3 {
+    font-size: 17px;
+    line-height: 1.18;
+  }
+
+  .format-row-2.format-row-canape .format-copy p {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+
+  .format-row-2.format-row-canape .format-event-drafting-frame {
+    inset: 1.25%;
+  }
+
+  .format-row-2.format-row-canape .format-event-drafting-rule-top {
+    top: 3.5%;
+  }
+
+  .format-row-2.format-row-canape .format-event-drafting-rule-divider {
+    top: 45%;
+  }
+
+  .format-row-2.format-row-canape .format-event-drafting-rule-bottom {
+    bottom: 3.5%;
+  }
+
+  .format-row-2.format-row-canape .format-event-drafting-spine {
+    top: 4.5%;
+    left: 54.5%;
+    height: 40.5%;
+  }
+
+  .format-row-2.format-row-canape .format-event-canape-spread {
+    top: 48.5%;
+    bottom: auto;
+    aspect-ratio: 2 / 1;
+  }
+}
+
+@media (max-width: 380px) {
+  .format-row-2.format-row-canape .format-process-field {
+    aspect-ratio: .82 / 1;
+  }
+}
+
 /* The approved real plate replaces the rejected generated menu-photo trials.
    Explanations stay live and responsive; only the photograph's outer marble is removed. */
 .sources-intro {

@@ -273,10 +273,8 @@ test("keeps the approved process drawings, private-dinner plates and mapped plat
     "/media/blueprint-backgrounds/masterchef-route-underlay-v3-tablet.webp",
     "/media/blueprint-backgrounds/masterchef-route-underlay-v3-mobile.webp",
     "/media/blueprint-backgrounds/private-dinner-event-concept-v3.png",
-    "/media/blueprint-backgrounds/private-event-circulation-concept-v3.png",
     "/media/blueprint-backgrounds/masterclass-learning-concept-v3.png",
     "/media/blueprint-backgrounds/private-dinner-compact-mobile-v5.webp",
-    "/media/blueprint-backgrounds/private-event-compact-mobile-v5.webp",
     "/media/blueprint-backgrounds/masterclass-compact-mobile-v5.webp",
     "/media/blueprint-backgrounds/inquiry-spoon-reference-exact.png",
   ];
@@ -289,6 +287,7 @@ test("keeps the approved process drawings, private-dinner plates and mapped plat
   ];
   const activeMenuMedia = [
     "/media/event-formats/private-dinner-seven-plates-v1.jpg",
+    "/media/event-formats/private-event-canapes-v1.webp",
     "/media/menu/personal-menu-duck-plate-cutout-v1.webp",
   ];
   const activeBlueprintReferences = `${page}\n${css}`.match(/\/media\/blueprint-backgrounds\/[^"')\s]+/g) ?? [];
@@ -302,11 +301,14 @@ test("keeps the approved process drawings, private-dinner plates and mapped plat
 
   assert.deepEqual(activeBlueprintReferences.toSorted(), activeBlueprints.toSorted());
   assert.equal((page.match(/<picture className="format-process-plan"/g) ?? []).length, 1);
-  assert.match(page, /<source media="\(max-width: 940px\)" srcSet=\{format\.compactDrawingSrc\}/);
+  assert.match(page, /<source[\s\S]*?media="\(max-width: 940px\)"[\s\S]*?srcSet=\{format\.compactDrawingSrc \?\? undefined\}/);
   assert.match(page, /courseImageSrc: "\/media\/event-formats\/private-dinner-seven-plates-v1\.jpg"/);
   assert.equal((page.match(/courseImageSrc: null/g) ?? []).length, 2);
+  assert.match(page, /canapeImageSrc: "\/media\/event-formats\/private-event-canapes-v1\.webp"/);
+  assert.equal((page.match(/canapeImageSrc: null/g) ?? []).length, 2);
   assert.match(page, /format\.courseImageSrc \? " format-row-menu" : ""/);
-  assert.match(page, /!format\.courseImageSrc \? \([\s\S]*?className="format-process-plan"/);
+  assert.match(page, /format\.canapeImageSrc \? " format-row-canape" : ""/);
+  assert.match(page, /!format\.courseImageSrc && !format\.canapeImageSrc \? \([\s\S]*?className="format-process-plan"/);
   assert.match(page, /className="format-menu-spread" aria-hidden="true"[\s\S]*?width="1200"[\s\S]*?height="800"[\s\S]*?alt=""/);
   assert.equal((page.match(/className="format-menu-drafting-lines" aria-hidden="true"/g) ?? []).length, 1);
   for (const className of [
@@ -318,6 +320,17 @@ test("keeps the approved process drawings, private-dinner plates and mapped plat
   ]) {
     assert.match(page, new RegExp(`className="${className}"`));
   }
+  assert.equal((page.match(/className="format-event-drafting-lines" aria-hidden="true"/g) ?? []).length, 1);
+  for (const className of [
+    "format-event-drafting-frame",
+    "format-event-drafting-rule format-event-drafting-rule-top",
+    "format-event-drafting-rule format-event-drafting-rule-divider",
+    "format-event-drafting-rule format-event-drafting-rule-bottom",
+    "format-event-drafting-spine",
+  ]) {
+    assert.match(page, new RegExp(`className="${className}"`));
+  }
+  assert.match(page, /className="format-event-canape-spread" aria-hidden="true"[\s\S]*?width="1774"[\s\S]*?height="887"[\s\S]*?alt=""/);
   assert.doesNotMatch(page, /Стартер|Холодная закуска|Горячая закуска|Основное блюдо|Десерт/);
   assert.doesNotMatch(page, /mobileDrawingSrc|mobile-v4/);
   assert.match(css, /The rejected tall posters[\s\S]*?@media \(min-width: 561px\) and \(max-width: 820px\)[\s\S]*?aspect-ratio:\s*1 \/ 1;[\s\S]*?@media \(min-width: 821px\) and \(max-width: 940px\)[\s\S]*?aspect-ratio:\s*2 \/ 1;[\s\S]*?@media \(max-width: 560px\)[\s\S]*?aspect-ratio:\s*1 \/ 1;/);
@@ -376,7 +389,8 @@ test("keeps the approved process drawings, private-dinner plates and mapped plat
   assert.match(page, /className="format-process-plan"/);
   assert.equal((page.match(/processBackground:\s*true/g) ?? []).length, 3);
   assert.equal((page.match(/processBackground:\s*false/g) ?? []).length, 0);
-  assert.equal((page.match(/drawingSrc:\s*null/g) ?? []).length, 0);
+  assert.equal((page.match(/drawingSrc:\s*null/g) ?? []).length, 1);
+  assert.equal((page.match(/compactDrawingSrc:\s*null/g) ?? []).length, 1);
   assert.match(page, /className="format-process-field"[\s\S]*?className="format-process-plan"[\s\S]*?className="format-media"[\s\S]*?className="format-copy"/);
   assert.match(page, /className="source-gallery" role="group"[\s\S]*?sourceScenes\.map/);
   assert.ok(page.includes('className={`source-scene source-scene-${scene.id}`}'));
@@ -472,6 +486,21 @@ test("keeps the approved process drawings, private-dinner plates and mapped plat
   assert.match(privateDinnerMenuPass, /@media \(min-width: 821px\) and \(max-width: 1100px\)[\s\S]*?aspect-ratio:\s*1\.5 \/ 1;[\s\S]*?width:\s*52%/);
   assert.match(privateDinnerMenuPass, /@media \(min-width: 561px\) and \(max-width: 820px\)[\s\S]*?aspect-ratio:\s*1 \/ 1;[\s\S]*?width:\s*76%/);
   assert.match(privateDinnerMenuPass, /@media \(max-width: 560px\)[\s\S]*?aspect-ratio:\s*\.92 \/ 1;[\s\S]*?width:\s*88%/);
+  const privateEventCanapePass = css.slice(css.lastIndexOf("/* Private events follow"));
+  assert.match(privateEventCanapePass, /\.format-row-2\.format-row-canape \.format-process-field\s*\{[^}]*overflow:\s*hidden;[^}]*aspect-ratio:\s*1\.65 \/ 1;[^}]*background:\s*var\(--paper\)/);
+  assert.match(privateEventCanapePass, /\.format-event-drafting-frame\s*\{[^}]*inset:\s*1\.5%;[^}]*border:\s*1px solid var\(--rule\)/);
+  assert.match(privateEventCanapePass, /\.format-event-drafting-rule-divider\s*\{[^}]*top:\s*44%/);
+  assert.match(privateEventCanapePass, /\.format-event-drafting-spine\s*\{[^}]*left:\s*63\.5%;[^}]*width:\s*1px;[^}]*background:\s*var\(--rule\)/);
+  assert.match(privateEventCanapePass, /\.format-event-canape-spread\s*\{[^}]*top:\s*48%;[^}]*right:\s*3%;[^}]*bottom:\s*5%;[^}]*left:\s*3%;[^}]*background:\s*var\(--paper\)/);
+  assert.match(privateEventCanapePass, /\.format-row-2\.format-row-canape \.format-copy\s*\{[^}]*left:\s*3%;[^}]*width:\s*56%/);
+  assert.match(privateEventCanapePass, /\.format-row-2\.format-row-canape \.format-media\s*\{[^}]*left:\s*68%;[^}]*width:\s*28%;[^}]*aspect-ratio:\s*6 \/ 5/);
+  assert.match(privateEventCanapePass, /\.format-row-2\.format-row-canape \.format-media img,\s*\.format-row-2\.format-row-canape \.format-event-canape-spread img\s*\{[^}]*filter:\s*sepia\(\.22\) saturate\(\.72\) contrast\(\.95\) brightness\(1\.02\)/);
+  assert.match(privateEventCanapePass, /\.format-row-2\.format-row-canape \.format-media img\s*\{[^}]*object-fit:\s*cover;[^}]*object-position:\s*60% 50%/);
+  assert.match(privateEventCanapePass, /@media \(min-width: 821px\) and \(max-width: 1100px\)[\s\S]*?aspect-ratio:\s*1\.45 \/ 1/);
+  assert.match(privateEventCanapePass, /@media \(min-width: 561px\) and \(max-width: 820px\)[\s\S]*?aspect-ratio:\s*1 \/ 1;[\s\S]*?top:\s*43%;[^}]*bottom:\s*auto;[^}]*aspect-ratio:\s*2 \/ 1/);
+  assert.match(privateEventCanapePass, /@media \(max-width: 560px\)[\s\S]*?aspect-ratio:\s*\.86 \/ 1;[\s\S]*?font-size:\s*12px[\s\S]*?top:\s*48\.5%;[^}]*bottom:\s*auto;[^}]*aspect-ratio:\s*2 \/ 1/);
+  assert.match(privateEventCanapePass, /@media \(max-width: 380px\)[\s\S]*?aspect-ratio:\s*\.82 \/ 1/);
+  assert.doesNotMatch(privateEventCanapePass, /mix-blend-mode:|border-radius:|box-shadow:|linear-gradient|radial-gradient/i);
 });
 
 test("uses the measured Trivium typography on the approved editorial surfaces", async () => {
@@ -806,6 +835,7 @@ test("keeps records and rejects the obsolete visible-system files", async () => 
     "public/media/masterchef/evgen-grybenyk-winner-envelope-2020.jpg",
     "public/media/event-formats/private-dinner.jpg",
     "public/media/event-formats/private-event-outdoor-crepes.png",
+    "public/media/event-formats/private-event-canapes-v1.webp",
     "public/media/event-formats/masterclass.jpg",
     "public/media/optimized/gallery-dish.webp",
     "public/fonts/CORMORANT-GARAMOND-OFL.txt",
