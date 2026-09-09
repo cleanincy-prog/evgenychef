@@ -162,10 +162,10 @@ test("builds the approved collage frame around one central identity spread", asy
   assert.match(tabletHeroCss, /\.hero-collage-tile--wide-desktop\s*\{\s*grid-column:\s*auto/);
   assert.match(tabletHeroCss, /\.hero-collage-tile--wide-compact\s*\{\s*grid-column:\s*span 2/);
   assert.match(narrowTabletHeroCss, /\.hero-central-spread\s*\{[^}]*grid-template-columns:\s*minmax\(0, 56fr\) minmax\(0, 44fr\)/);
-  assert.match(phoneHeroCss, /\.hero-central-spread\s*\{[^}]*grid-template-columns:\s*1fr;[^}]*grid-template-rows:\s*auto minmax\(0, 1fr\)/);
-  assert.match(phoneHeroCss, /\.hero h1\s*\{[^}]*font-size:\s*clamp\(38px, 10\.3vw, 42px\);[^}]*line-height:\s*\.9/);
+  assert.match(phoneHeroCss, /\.hero-central-spread\s*\{[^}]*top:\s*50%;[^}]*right:\s*clamp\(42px, 12vw, 66px\);[^}]*bottom:\s*auto;[^}]*left:\s*clamp\(42px, 12vw, 66px\);[^}]*grid-template-columns:\s*1fr;[^}]*grid-template-rows:\s*auto auto;[^}]*transform:\s*translateY\(-50%\)/);
+  assert.match(phoneHeroCss, /\.hero h1\s*\{[^}]*font-size:\s*clamp\(30px, 8\.2vw, 34px\);[^}]*line-height:\s*\.9/);
   assert.match(phoneHeroCss, /\.hero-collage-grid\s*\{[^}]*grid-template-columns:\s*repeat\(8,[^}]*grid-template-rows:\s*repeat\(15,/);
-  assert.match(phoneHeroCss, /\.hero-apron\s*\{[^}]*border-top:\s*2px solid var\(--paper-light\);[^}]*border-left:\s*0/);
+  assert.match(phoneHeroCss, /\.hero-apron\s*\{[^}]*max-height:\s*430px;[^}]*aspect-ratio:\s*4 \/ 5;[^}]*border-top:\s*2px solid var\(--paper-light\);[^}]*border-left:\s*0/);
   assert.doesNotMatch(css, /\.site-nav|\.hero-eyebrow/);
   assert.doesNotMatch(page, /hero-collage-anchor/);
   assert.doesNotMatch(page, /className="hero-left"/);

@@ -386,7 +386,7 @@ export default function Home() {
                   src="/media/chef-hero-apron.jpg"
                   alt="Евгений Грыбенюк в форме шефа"
                   fill
-                  sizes="(max-width: 560px) calc(100vw - 36px), (max-width: 820px) 40vw, 38vw"
+                  sizes="(max-width: 560px) 76vw, (max-width: 820px) 40vw, 38vw"
                   preload
                   fetchPriority="high"
                   decoding="async"

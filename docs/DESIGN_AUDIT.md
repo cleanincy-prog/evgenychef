@@ -6431,3 +6431,73 @@ underlays (landscape, square and portrait). No UI library or template component 
 - **Remaining limitations:** the itinerary still requires confirmation from the chef; the five dishes are
   clearly disclosed visualizations rather than documentary photographs of food cooked by Evgen; commercial
   publication rights for the award photograph require independent confirmation.
+
+## Mobile Hero scale correction — pre-code audit and plan — 2026-09-10
+
+The user supplies a current phone capture, says that the text and photograph are too large, and clarifies
+`Меньше текст и меньше квадрат с фото шефа`. The complete active Hero JSX, final responsive cascade,
+header, 94-source archive, real 576 × 1280 apron source, selected collage-frame board, prior verification
+captures, tests, reference map and design system were audited before interface code was changed.
+
+### Audit findings
+
+1. At 560 px and below, the central spread is inset only 18 px horizontally and is stretched from roughly
+   50–58 px below the top to the same distance above the bottom of a 720–866 px stage.
+2. The title remains `38–42px`; its five controlled lines plus padding occupy a large paper panel, while the
+   portrait automatically consumes every remaining grid row. The combined identity object therefore masks
+   most of the frame and matches the oversized state in the supplied capture.
+3. The selected `04 · Коллаж-рамка` direction is still valid. The problem is phone scale, not content,
+   palette, source choice, tile count, typography family, desktop composition or the copy-over-photo order.
+4. Existing CSS Grid, Next Image delivery, square edges, `--paper` and 2 px seam rules fully cover the
+   correction. No new asset, component, library, copy or decorative effect is required.
+
+### Implementation plan recorded before interface edits
+
+1. Limit the change to `max-width: 560px`; preserve all tablet and desktop declarations.
+2. Make the phone central spread intrinsic-height and vertically centred, with wider bounded side rails so
+   the entire copy/portrait unit becomes visibly smaller and the collage remains visible on every side.
+3. Reduce the phone title clamp from `38–42px` to `30–34px`, contract its padding and internal offsets,
+   and keep the exact five visible lines plus the unchanged accessible label.
+4. Give the apron figure its retained `4 / 5` authored aperture and a `430px` height cap, without changing
+   the source, focal point, caption, image semantics or loading priority.
+5. Update focused source assertions. Run `git diff --check`, ESLint, production build and tests; visually
+   verify 1440, 1280, 1024, 768, 430, 390 and 375 px for title containment, face/hands crop, four-sided
+   archive visibility, image completion, header targets, overflow and the Hero-to-story boundary.
+
+Templated elements found: none; this is a scale imbalance inside the user-approved project-specific Hero.
+Components retained: header, Hero structure, exact copy, all 94 archive sources, apron source/caption and
+every later section. Components reworked: phone-only `.hero-central-spread`, `.hero-copy`, title rhythm and
+`.hero-apron` geometry. New components and visible UI-library primitives required: none. Decisions without
+a numeric reference are limited to the reduced clamp, side inset and height cap, all constrained by the
+user's explicit comparison and mandatory viewport checks.
+
+### Implementation result and final anti-template audit
+
+- **Files created:** none.
+- **Files changed:** `app/globals.css`, `app/page.tsx`, `tests/rendered-html.test.mjs`,
+  `docs/DESIGN_REFERENCE_MAP.md`, `docs/DESIGN_SYSTEM.md` and this audit.
+- **Templated elements found:** none. The diagnosed issue was excessive phone scale inside the already
+  approved, project-specific archive frame.
+- **Rework:** through 560 px, the central spread is now a vertically centred intrinsic-height unit with
+  bounded 12 vw side rails. The display clamp is `30–34px` instead of `38–42px`; padding and the italic
+  offset contract with it. The original portrait remains unchanged in a `4 / 5` square-edged aperture
+  capped at 430 px, and its responsive image hint now matches the approximately 76 vw rendered width.
+- **References used:** the user's `Photo 1.jpg`, the direct instruction to make both text and chef-photo
+  block smaller, the approved `04 · Коллаж-рамка` board, current 94-source archive and active cream system.
+- **Decisions without references:** the exact `30–34px` clamp, bounded 12 vw rails and 430 px cap are
+  measured fitting choices. They introduce no new style and apply only below the established 561 px switch.
+- **UI libraries:** none added or visibly used. React, CSS Grid and existing Next Image delivery remain
+  technical primitives.
+- **Desktop/mobile verification:** visual and geometry checks passed at 1440 × 1000, 1280 × 900,
+  1024 × 900, 768 × 1024, 430 × 932, 390 × 844 and 375 × 812. At the three phone widths the spread is
+  respectively 327 × 598, 296 × 551 and 285 × 532 px; the portrait is 323 × 404, 292 × 366 and
+  281 × 351 px; the title resolves to 34, 31.98 and 30.75 px. Every width keeps all 94 tiles, reports no
+  incomplete Hero image, no browser error and no horizontal overflow. The five title lines stay inside
+  their paper field, the face and hands stay visible, the caption remains contained, and archive rails
+  remain visible on all four sides. Header targets remain 66 px on phones. Hover/focus rules and all later
+  sections are unchanged; no new loading, empty or error state exists for this static Hero.
+- **Validation:** `git diff --check`, ESLint, the eight-test focused suite and the production Vinext build
+  pass.
+- **Remaining limitations:** the phone portrait still uses a cover crop from the original 576 × 1280
+  phone-origin file; producing a materially wider crop without losing more vertical context would require
+  a different real source photograph. No such replacement is necessary for the requested scale correction.

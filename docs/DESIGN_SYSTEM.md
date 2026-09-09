@@ -1719,3 +1719,19 @@ the inline map, route polyline, flag layer, point-label layer or leader layer.
   the stage ratio.
 - Active JSX must not reference the historic Mediterranean SVG or route-flag files. Those files and their
   credits remain stored only as historical source records.
+
+## Mobile Hero compact-scale amendment — 2026-09-10
+
+- At 560 px and below, the existing copy-over-portrait Hero spread is a centred intrinsic-height object;
+  it no longer stretches between the former shallow top and bottom insets.
+- The phone display title uses the existing Cormorant Garamond ink/gold roles at `30–34px`, `.9` leading,
+  with reduced internal spacing. Its exact five controlled lines and accessible label remain unchanged.
+- The central spread keeps square edges and uses approximately 12 vw side rails, bounded to prevent either
+  edge crowding or excessive width. The apron aperture preserves the existing cover crop and is capped at
+  `430px` high.
+- The complete 94-photo archive, 8 × 15 mobile partition, 2 px seams, portrait source, caption and masthead
+  remain unchanged. The newly exposed area is documentary collage, not blank or decorative filler.
+- From 561 px upward, Hero size, 56/44 relationship, type scale and media geometry remain governed by the
+  active collage-frame contract.
+- Add no replacement image, generated crop, radius, shadow, gradient, blur, animation, CTA or UI-library
+  component for this correction.

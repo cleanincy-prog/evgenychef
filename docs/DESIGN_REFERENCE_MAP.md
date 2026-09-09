@@ -1120,3 +1120,18 @@ This table supersedes the active inline-map and proportional-field rows immediat
 | Mobile underlay | User's requirement for a deliberate mobile composition with the same photo-left/text-right relationship | Recompose the same visual grammar vertically and keep the route complete from Spain to Cyprus | No mechanically shrunken desktop map, horizontal scroll, hidden endpoint or stacked photo-over-text layout | `masterchef-route-underlay-v3-mobile.webp`, 1086 × 1448, uses a protected upper 58% and lower map band |
 | Route evidence | User's approved map-and-car concept and five country dishes | One continuous ochre line and vintage car connect the countries; food remains a separate realistic overlay | No active flag badges, leader network, country words baked into the image or SVG fragments | Underlay supplies map/route/car; five v2 native-alpha plate assets sit only in the lower band; live captions identify country and dish |
 | Accessibility and provenance | Existing approved semantic itinerary and explicit disclosure | Decorative raster stays hidden from assistive technology while itinerary remains readable HTML | No essential words in the generated asset and no misleading documentary-food claim | Empty-alt `picture`; semantic ordered list/captions; disclose generated underlay and plate visualizations plus unconfirmed itinerary |
+
+## Mobile Hero scale correction — 2026-09-10
+
+The user's supplied phone capture and direct follow-up `Меньше текст и меньше квадрат с фото шефа` are
+authoritative for the scale of the existing phone Hero only. The selected collage-frame direction, exact
+copy, portrait source, archive and desktop/tablet composition remain approved.
+
+| Project element | Reference | Principle used | What is not copied | Project implementation |
+|---|---|---|---|---|
+| Phone title | User-supplied `Photo 1.jpg` and direct scale correction from 2026-09-10 | Preserve the five-line identity hierarchy but lower its visual dominance inside the central paper field | No rewritten heading, extra line, substitute font, tighter tracking or desktop typography change | Reduce only the `max-width: 560px` display clamp and its supporting mobile insets |
+| Phone portrait field | Same capture and direct request; approved `04-collage-frame.png`; unchanged `chef-hero-apron.jpg` | Make the central identity object visibly smaller so the surrounding documentary archive reads as a frame | No new crop asset, retouching, rounded card, shadow, hidden portrait or reduction of the archive | Narrow and vertically centre the stacked spread; cap the existing cover aperture while preserving its square edges and caption |
+| Archive rails | Approved collage-frame direction and complete 94-source local archive | The space released by the smaller copy/portrait unit belongs to visible photographic evidence on all four sides | No deleted, duplicated, blurred or replaced tile and no generic decorative background | Keep the 8 × 15 phone partition unchanged and expose more of it around the centred unit |
+
+No supplied reference fixes the exact numeric reduction. The mobile font clamp, side inset and portrait cap
+are neutral fitting decisions that must be checked at 430, 390 and 375 px and must not alter 561 px or wider.

@@ -1432,26 +1432,34 @@ button:focus-visible,
 
   .hero-stage { height: clamp(720px, calc(100svh - 66px), 866px); }
   .hero-central-spread {
-    inset: clamp(50px, 7vw, 58px) 18px;
+    top: 50%;
+    right: clamp(42px, 12vw, 66px);
+    bottom: auto;
+    left: clamp(42px, 12vw, 66px);
     grid-template-columns: 1fr;
-    grid-template-rows: auto minmax(0, 1fr);
+    grid-template-rows: auto auto;
     height: auto;
-    transform: none;
+    transform: translateY(-50%);
   }
-  .hero-copy { padding: 20px 24px 22px; }
+  .hero-copy { padding: 15px 18px 17px; }
   .hero h1 {
     max-width: none;
-    font-size: clamp(38px, 10.3vw, 42px);
+    font-size: clamp(30px, 8.2vw, 34px);
     line-height: .9;
   }
-  .hero-name { margin-bottom: 10px; }
-  .hero h1 em { margin: 0 0 8px 34px; font-size: .92em; }
+  .hero-name { margin-bottom: 8px; }
+  .hero h1 em { margin: 0 0 6px 26px; font-size: .92em; }
   .hero-service { font-size: .88em; line-height: .92; }
   .hero-collage-grid {
     grid-template-columns: repeat(8, minmax(0, 1fr));
     grid-template-rows: repeat(15, minmax(0, 1fr));
   }
-  .hero-apron { border-top: 2px solid var(--paper-light); border-left: 0; }
+  .hero-apron {
+    max-height: 430px;
+    aspect-ratio: 4 / 5;
+    border-top: 2px solid var(--paper-light);
+    border-left: 0;
+  }
   .hero-apron figcaption { right: 10px; bottom: 10px; padding: 7px 9px 6px; font-size: 11px; }
 
   .story,
