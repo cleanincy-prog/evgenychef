@@ -159,6 +159,7 @@ test("keeps the three exact event scenarios in editorial rows", async () => {
   const presentDay = home.indexOf('className="present-day"');
   const homeStory = home.indexOf('className="home-story"');
   const homeCopy = home.indexOf('className="home-story-copy"');
+  const homeDay = home.indexOf('className="home-story-day"');
   const presentFilm = home.indexOf('className="home-story-film"');
 
   assert.ok(storyStart < formatsCall);
@@ -168,7 +169,8 @@ test("keeps the three exact event scenarios in editorial rows", async () => {
   assert.ok(storyClose < presentDay);
   assert.ok(presentDay < homeStory);
   assert.ok(homeStory < homeCopy);
-  assert.ok(homeCopy < presentFilm);
+  assert.ok(homeCopy < homeDay);
+  assert.ok(homeDay < presentFilm);
   assert.ok(presentFilm < home.indexOf('className="sources"'));
   assert.ok(home.indexOf('className="story-award"') < home.indexOf('className="story-copy"'));
   assert.ok(home.indexOf('className="story-copy"') < formatsCall);
@@ -199,10 +201,16 @@ test("keeps the three exact event scenarios in editorial rows", async () => {
 
   const workdayFacts = [
     "частный ужин",
-    "Я приезжаю с подготовленным mise en place и беру кухню на себя.",
-    "Вы встречаете гостей и остаётесь частью собственного вечера.",
+    "Подготовка начинается задолго до прихода гостей: я закупаю продукты,",
+    "делаю заготовки, маринады и соусы. К вам приезжаю с готовым mise en place",
+    "и беру на себя огонь и подачу. Вы встречаете гостей и остаётесь частью",
+    "собственного вечера.",
     "Чтобы вы были дома —",
     "со своими.",
+    "Как проходит день частного ужина",
+    "закупаю продукты",
+    "делаю заготовки, маринады и соусы",
+    "готовлю и подаю у вас дома",
     "домашняя кухня · подготовка, огонь, подача",
   ];
   for (const fact of workdayFacts) {
@@ -225,6 +233,10 @@ test("keeps the approved process drawings and mapped photoreal plate journey act
     "fish-cut-plan.webp",
     "produce-balance-plan.webp",
     "contact-spoon-plan.webp",
+    "personal-menu-reference-exact.png",
+    "meat-reference-exact.png",
+    "fish-reference-exact.png",
+    "produce-reference-exact.png",
   ];
   const retiredDetachedDrawings = [
     "private-dinner-seven-course.png",
@@ -237,10 +249,6 @@ test("keeps the approved process drawings and mapped photoreal plate journey act
     "/media/blueprint-backgrounds/private-dinner-compact-mobile-v5.webp",
     "/media/blueprint-backgrounds/private-event-compact-mobile-v5.webp",
     "/media/blueprint-backgrounds/masterclass-compact-mobile-v5.webp",
-    "/media/blueprint-backgrounds/personal-menu-reference-exact.png",
-    "/media/blueprint-backgrounds/meat-reference-exact.png",
-    "/media/blueprint-backgrounds/fish-reference-exact.png",
-    "/media/blueprint-backgrounds/produce-reference-exact.png",
     "/media/blueprint-backgrounds/inquiry-spoon-reference-exact.png",
   ];
   const activeArchiveMedia = [
@@ -321,8 +329,6 @@ test("keeps the approved process drawings and mapped photoreal plate journey act
     assert.ok(Math.hypot(targetX - startX, targetY - startY) < 225, `${id} leader stays local`);
   });
   assert.doesNotMatch(css, /url\([^)]*\.svg|blueprint-figure|workday-trajectory|menu-composition|source-contour/);
-  assert.match(page, /className="menu-reference-plan" aria-hidden="true"[\s\S]*?src="\/media\/blueprint-backgrounds\/personal-menu-reference-exact\.png"/);
-  assert.match(css, /\.source-list::before\s*\{[^}]*background:\s*var\(--rule\)/);
 
   for (const name of [...retiredPseudoBackgrounds, ...retiredDetachedDrawings]) {
     assert.ok(!`${page}\n${css}`.includes(name), `retired blueprint must not be active: ${name}`);
@@ -339,7 +345,7 @@ test("keeps the approved process drawings and mapped photoreal plate journey act
   assert.doesNotMatch(css, /\.story-present::before|\.sources-intro::before|\.source-row(?:(?:-[123])?)::before|\.contact::before/);
   const archiveSources = page.slice(
     page.indexOf("const chefJourneyStops"),
-    page.indexOf("const sourceChapters"),
+    page.indexOf("const sourceScenes"),
   );
   assert.equal((archiveSources.match(/\/media\/masterchef\/route-plates\/[^"]+-512\.webp/g) ?? []).length, 5);
   assert.equal((archiveSources.match(/\/media\/masterchef\/route-flags\/[^"]+\.svg/g) ?? []).length, 6);
@@ -367,7 +373,7 @@ test("keeps the approved process drawings and mapped photoreal plate journey act
   assert.match(credits, /CC BY-SA 3\.0/);
   assert.match(credits, /editorial working set/);
   assert.match(credits, /not photographs of\s+Evgen Grybenyk/);
-  assert.match(page, /className="home-story-copy"[\s\S]*?className="home-story-film"[\s\S]*?<ChefStoryVideo \/>[\s\S]*?домашняя кухня · подготовка, огонь, подача/);
+  assert.match(page, /className="home-story-copy"[\s\S]*?className="home-story-day"[\s\S]*?className="home-story-film"[\s\S]*?<ChefStoryVideo \/>[\s\S]*?домашняя кухня · подготовка, огонь, подача/);
   const homeChapter = page.slice(page.indexOf('className="present-day"'), page.indexOf('className="sources"'));
   assert.doesNotMatch(homeChapter, /home-story-(?:media|illustration|stages)|workday-four-step-vertical\.png/);
   assert.match(page, /className="format-process-field"/);
@@ -376,9 +382,11 @@ test("keeps the approved process drawings and mapped photoreal plate journey act
   assert.equal((page.match(/processBackground:\s*false/g) ?? []).length, 0);
   assert.equal((page.match(/drawingSrc:\s*null/g) ?? []).length, 0);
   assert.match(page, /className="format-process-field"[\s\S]*?className="format-process-plan"[\s\S]*?className="format-media"[\s\S]*?className="format-copy"/);
-  assert.match(page, /<header className="source-copy">[\s\S]*?<div className="source-images">/);
-  assert.equal((page.match(/className="source-reference-plan"/g) ?? []).length, 1);
-  assert.match(page, /className="source-reference-plan"[\s\S]*?src=\{chapter\.drawingSrc\}/);
+  assert.match(page, /className="source-gallery" role="group"[\s\S]*?sourceScenes\.map/);
+  assert.ok(page.includes('className={`source-scene source-scene-${scene.id}`}'));
+  assert.match(page, /className="source-sequence" aria-label="Как создаётся меню"/);
+  assert.match(page, /className="source-provenance"/);
+  assert.doesNotMatch(`${page}\n${css}`, /source-(?:list|row|copy|images|reference-plan)|menu-reference-plan/);
   assert.match(page, /className="contact-reference-plan" aria-hidden="true"[\s\S]*?inquiry-spoon-reference-exact\.png/);
   assert.match(css, /\.format-process-field\s*\{[^}]*position:\s*relative;[^}]*aspect-ratio:\s*2 \/ 1/);
   assert.match(css, /\.format-process-plan\s*\{[^}]*position:\s*absolute;[^}]*z-index:\s*0;[^}]*object-fit:\s*contain/);
@@ -419,9 +427,11 @@ test("keeps the approved process drawings and mapped photoreal plate journey act
   assert.match(journeyPass, /@media \(max-width:\s*560px\)[\s\S]*?\.chef-journey-stop figcaption span,[\s\S]*?font-size:\s*11px/);
   assert.match(journeyPass, /@media \(max-width:\s*560px\)[\s\S]*?\.chef-journey-point\s*\{[^}]*display:\s*none;[^}]*\}[\s\S]*?\.chef-journey-point-cyprus\s*\{[^}]*display:\s*flex/);
   assert.match(css, /\.home-story\s*\{[^}]*display:\s*grid;[^}]*grid-template-columns:\s*repeat\(12,[^}]*max-width:\s*var\(--content\)/);
-  assert.match(css, /\.home-story-copy\s*\{[^}]*grid-column:\s*1 \/ 6;[^}]*max-width:\s*470px/);
-  assert.match(css, /\.home-story-film\s*\{[^}]*grid-column:\s*8 \/ 12;[^}]*width:\s*min\(100%, 340px\)/);
-  assert.match(css, /\.home-story-film video\s*\{[^}]*aspect-ratio:\s*9 \/ 16;[^}]*object-fit:\s*cover/);
+  assert.match(css, /\.home-story-copy\s*\{[^}]*grid-column:\s*1 \/ 5;[^}]*max-width:\s*470px/);
+  assert.match(css, /\.home-story-day\s*\{[^}]*grid-column:\s*1 \/ 5;[^}]*grid-row:\s*2;[^}]*border-top:\s*1px solid var\(--rule\)/);
+  assert.match(css, /\.home-story-day > div\s*\{[^}]*grid-template-columns:\s*58px minmax\(0, 1fr\);[^}]*border-bottom:\s*1px solid var\(--rule\)/);
+  assert.match(css, /\.home-story-film\s*\{[^}]*grid-column:\s*5 \/ 13;[^}]*width:\s*100%/);
+  assert.match(css, /\.home-story-film video\s*\{[^}]*aspect-ratio:\s*4 \/ 3;[^}]*object-fit:\s*cover/);
   assert.doesNotMatch(css, /\.home-story-(?:media|illustration|stages)/);
   assert.doesNotMatch(css, /\.present-day-accessible|\.story-present-process-/);
   assert.match(css, /\.format-process-field\s*\{[^}]*grid-column:\s*1 \/ 13;[^}]*aspect-ratio:\s*2 \/ 1/);
@@ -472,7 +482,7 @@ test("uses the measured Trivium typography on the approved editorial surfaces", 
     ".format-row-3 .format-media",
     ".story-origin",
     ".home-story",
-    ".source-row",
+    ".source-gallery",
   ]) assert.ok(css.includes(value), `missing editorial-system marker: ${value}`);
 
   assert.doesNotMatch(css, /font-family:\s*"(?:Roboto Flex|Literata|Oranienbaum|Onest)"|--rust/);
@@ -526,7 +536,8 @@ test("uses the measured Trivium typography on the approved editorial surfaces", 
   assert.match(css, /\.section-intro h2\s*\{[^}]*font:\s*400 clamp\(32px, 4vw, 48px\)\/1\.2 var\(--font-display\)/);
   assert.match(css, /\.format-copy h3\s*\{[^}]*font:\s*400 20px\/1\.3 var\(--font-display\)/);
   assert.match(css, /\.story-copy p\s*\{[^}]*font:\s*300 16px\/1\.7 var\(--font-sans\)/);
-  assert.match(css, /\.source-copy blockquote\s*\{[^}]*color:\s*var\(--accent-small\);[^}]*font:\s*300 clamp\(20px, 2vw, 27px\)\/1\.4 var\(--font-accent\)/);
+  assert.match(css, /\.sources-lede\s*\{[^}]*color:\s*var\(--muted\);[^}]*font:\s*300 16px\/1\.8 var\(--font-sans\)/);
+  assert.match(css, /\.source-sequence\s*\{[^}]*color:\s*var\(--accent-small\);[^}]*font:\s*600 11px\/1\.5 var\(--font-sans\)/);
   assert.match(css, /\.contact h2\s*\{[^}]*font:\s*400 clamp\(32px, 4vw, 48px\)\/1\.2 var\(--font-display\)/);
   assert.match(css, /\.story-award\s*\{[^}]*grid-column:\s*1 \/ 7/);
   assert.match(css, /\.story-copy\s*\{[^}]*grid-column:\s*8 \/ 13/);
@@ -537,7 +548,7 @@ test("uses the measured Trivium typography on the approved editorial surfaces", 
   assert.doesNotMatch(css, /\.format-list\s*\{[^}]*border-top/);
   assert.doesNotMatch(css, /\.story-origin\s*\{[^}]*border-bottom/);
   assert.match(css, /\.present-day\s*\{[^}]*background:\s*var\(--paper-light\)/);
-  assert.match(css, /\.home-story-film video\s*\{[^}]*aspect-ratio:\s*9 \/ 16/);
+  assert.match(css, /\.home-story-film video\s*\{[^}]*aspect-ratio:\s*4 \/ 3/);
   assert.match(css, /\.format-row \.format-media\s*\{[^}]*height:\s*clamp\(164px, 46vw, 184px\);[^}]*aspect-ratio:\s*auto/);
   assert.match(css, /\.story-origin\s*\{\s*display:\s*grid;\s*grid-template-columns:\s*repeat\(12, minmax\(0, 1fr\)\);\s*gap:\s*14px;\s*align-items:\s*start/);
   assert.match(css, /\.story-award\s*\{[^}]*grid-column:\s*1 \/ 5;[^}]*grid-row:\s*1;[^}]*width:\s*auto/);
@@ -606,12 +617,23 @@ test("preserves the approved story, sourcing evidence and accessibility", async 
   for (const text of [
     "От MasterChef",
     "Я —",
+    "Меню появляется",
+    "после разговора.",
+    "Вы рассказываете, что любите и что важно учесть.",
+    "ваш вкус",
+    "продукты",
+    "меню вечера",
+    "ягнёнок · горы",
+    "рыба · порт",
+    "урожай · фермы Кипра",
+    "Расскажите мне,",
+  ]) assert.ok(page.includes(text));
+  for (const rejected of [
     "Я не работаю по меню",
     "Хотите ягнёнка? — еду за ним в горы.",
     "Нужна рыба? — еду в порт к рыбакам.",
     "Свежие овощи и фрукты? — только с кипрских ферм.",
-    "Расскажите мне,",
-  ]) assert.ok(page.includes(text));
+  ]) assert.ok(!page.includes(rejected), `rejected sourcing copy must be absent: ${rejected}`);
   assert.doesNotMatch(page, /Победитель «МастерШеф\. Профессионалы — 2»/);
 
   const sourceOrder = [
@@ -627,9 +649,12 @@ test("preserves the approved story, sourcing evidence and accessibility", async 
   }
   assert.equal((page.match(/\/media\/sourcing\//g) ?? []).length, 3);
   assert.doesNotMatch(page, /cyprus-sheep-herd|larnaca-fish-market-seller|kissonerga-meat-counter|fishermen-catch|cyprus-strawberry-greenhouse/);
-  assert.match(await source("app/globals.css"), /\.source-images\s*\{[^}]*width:\s*100%;[^}]*aspect-ratio:\s*16 \/ 10;[^}]*overflow:\s*hidden;[^}]*background:\s*#f7f4ef/);
-  assert.match(await source("app/globals.css"), /\.source-images img\s*\{[^}]*object-fit:\s*cover/);
-  assert.match(await source("app/globals.css"), /\.source-row-3 \.source-images img\s*\{[^}]*object-fit:\s*contain/);
+  const sourcingCss = await source("app/globals.css");
+  assert.match(sourcingCss, /\.source-gallery\s*\{[^}]*display:\s*grid;[^}]*grid-template-columns:\s*minmax\(0, 5fr\) minmax\(0, 4fr\) minmax\(0, 3fr\)/);
+  assert.match(sourcingCss, /\.source-scene\s*\{[^}]*height:\s*clamp\(250px, 26vw, 370px\);[^}]*overflow:\s*hidden/);
+  assert.match(sourcingCss, /\.source-scene img\s*\{[^}]*width:\s*100%;[^}]*height:\s*100%;[^}]*object-fit:\s*cover/);
+  assert.match(page, /Рыночные сцены — визуализации; сбор винограда — личный архив\./);
+  assert.doesNotMatch(`${page}\n${sourcingCss}`, /source-(?:list|row|copy|images|reference-plan)|menu-reference-plan/);
 
   assert.match(page, /className="skip-link" href="#main-content"/);
   assert.match(page, /className="contact-reference-plan" aria-hidden="true"/);
@@ -659,10 +684,11 @@ test("keeps readability-specific desktop, tablet and narrow-phone geometry", asy
   assert.match(css, /\.format-row-3 \.format-media\s*\{\s*grid-column:\s*1 \/ 8/);
   assert.match(css, /\.format-row-3 \.format-copy\s*\{\s*grid-column:\s*9 \/ 13/);
   assert.match(css, /\.story-intro\s*\{\s*margin-bottom:\s*clamp\(48px, 5vw, 72px\)/);
-  assert.match(css, /\.source-row\s*\{[^}]*grid-template-columns:\s*repeat\(12, minmax\(0, 1fr\)\);[^}]*align-items:\s*center/);
-  assert.match(css, /\.source-copy\s*\{\s*grid-column:\s*1 \/ 4/);
-  assert.match(css, /\.source-images\s*\{\s*grid-column:\s*4 \/ 8;\s*grid-row:\s*1/);
-  assert.match(css, /\.source-reference-plan\s*\{[^}]*grid-column:\s*8 \/ 13;[^}]*grid-row:\s*1;[^}]*width:\s*100%;[^}]*height:\s*auto/);
+  assert.match(css, /\.sources-heading\s*\{\s*grid-column:\s*1 \/ 7/);
+  assert.match(css, /\.sources-story\s*\{[^}]*grid-column:\s*8 \/ 13/);
+  assert.match(css, /\.source-gallery\s*\{[^}]*grid-template-columns:\s*minmax\(0, 5fr\) minmax\(0, 4fr\) minmax\(0, 3fr\)/);
+  assert.match(css, /\.source-scene figcaption\s*\{[^}]*position:\s*absolute;[^}]*background:\s*#f7f4ef/);
+  assert.doesNotMatch(css, /\.source-(?:list|row|copy|images|reference-plan)\b|\.menu-reference-plan\b/);
   assert.doesNotMatch(css, /min-height:\s*(?:700|600|392)px/);
   assert.doesNotMatch(css, /padding:\s*26px 0 154px/);
 
@@ -677,30 +703,27 @@ test("keeps readability-specific desktop, tablet and narrow-phone geometry", asy
   assert.match(tablet, /\.story-copy\s*\{\s*grid-column:\s*6 \/ 13/);
   assert.match(tablet, /\.format-row-1 \.format-media,[\s\S]*?grid-column:\s*1 \/ 6;\s*grid-row:\s*1/);
   assert.match(tablet, /\.format-row-2 \.format-copy\s*\{\s*grid-column:\s*1 \/ 8;\s*grid-row:\s*1/);
-  assert.match(tabletDown, /\.home-story-copy\s*\{[^}]*grid-column:\s*1 \/ 7/);
-  assert.match(tabletDown, /\.home-story-film\s*\{[^}]*grid-column:\s*8 \/ 13;[^}]*width:\s*min\(100%, 280px\)/);
-  assert.match(tablet, /\.source-row\s*\{[^}]*grid-template-columns:\s*repeat\(12, minmax\(0, 1fr\)\)/);
-  assert.match(tablet, /\.source-images\s*\{\s*grid-column:\s*4 \/ 8;\s*grid-row:\s*1/);
-  assert.match(tablet, /\.source-reference-plan\s*\{\s*grid-column:\s*8 \/ 13;\s*grid-row:\s*1/);
+  assert.match(tabletDown, /\.home-story-copy\s*\{[^}]*grid-column:\s*1 \/ 6/);
+  assert.match(tabletDown, /\.home-story-film\s*\{[^}]*grid-column:\s*6 \/ 13;[^}]*width:\s*100%/);
+  assert.match(css.slice(css.indexOf("@media (max-width: 1100px)"), css.indexOf("@media (max-width: 1024px)")), /\.home-story-day\s*\{[^}]*grid-column:\s*1 \/ -1;[^}]*grid-template-columns:\s*repeat\(3,/);
+  assert.match(tablet, /\.source-gallery\s*\{\s*gap:\s*6px/);
+  assert.match(tablet, /\.source-scene\s*\{\s*height:\s*clamp\(230px, 31vw, 255px\)/);
 
   const phone = css.slice(css.indexOf("@media (max-width: 560px)"), css.indexOf("@media (max-width: 430px)"));
   const narrowPhone = css.slice(css.indexOf("@media (max-width: 430px)"), css.indexOf("@media (max-width: 400px)"));
   assert.match(phone, /\.present-day\s*\{\s*padding:\s*34px 18px 30px/);
   assert.match(phone, /\.home-story\s*\{[^}]*grid-template-columns:\s*repeat\(12,[^}]*gap:\s*28px 10px/);
-  assert.match(phone, /\.home-story-film\s*\{[^}]*grid-column:\s*1 \/ -1;[^}]*width:\s*min\(100%, 280px\)/);
+  assert.match(phone, /\.home-story-film\s*\{[^}]*grid-column:\s*1 \/ -1;[^}]*width:\s*100%/);
+  assert.match(phone, /\.home-story-day\s*\{[^}]*grid-column:\s*1 \/ -1;[^}]*grid-row:\s*2;[^}]*display:\s*block/);
   assert.doesNotMatch(phone, /\.home-story-(?:media|illustration|stages)/);
   assert.doesNotMatch(phone, /\.present-day-accessible|\.story-present-process-/);
-  assert.match(phone, /\.sources-intro\s*\{[^}]*grid-template-columns:\s*repeat\(12, minmax\(0, 1fr\)\);[^}]*gap:\s*14px 10px;[^}]*margin-bottom:\s*16px/);
+  assert.match(phone, /\.sources-intro\s*\{[^}]*display:\s*block;[^}]*margin-bottom:\s*26px/);
   assert.match(phone, /\.sources-heading h2\s*\{[^}]*margin-top:\s*18px/);
-  assert.match(phone, /\.sources-lede\s*\{[^}]*width:\s*min\(310px, 92%\);[^}]*font-size:\s*13\.6px;[^}]*line-height:\s*1\.6/);
-  assert.match(phone, /\.menu-reference-plan\s*\{[^}]*grid-column:\s*1 \/ -1;[^}]*grid-row:\s*2;[^}]*width:\s*100%;[^}]*margin-top:\s*4px/);
-  assert.match(phone, /\.source-row\s*\{[^}]*grid-template-columns:\s*repeat\(12, minmax\(0, 1fr\)\);[^}]*gap:\s*14px;[^}]*align-items:\s*center;[^}]*padding:\s*26px 0/);
-  assert.match(phone, /\.source-copy\s*\{[^}]*grid-template-columns:\s*30px minmax\(0, 1fr\);[^}]*column-gap:\s*8px/);
-  assert.match(phone, /\.source-copy blockquote\s*\{[^}]*grid-column:\s*1 \/ -1;[^}]*color:\s*var\(--accent-small\);[^}]*font-size:\s*clamp\(18px, 4\.8vw, 20px\);[^}]*line-height:\s*1\.35/);
-  assert.match(phone, /\.source-images\s*\{[^}]*grid-column:\s*6 \/ 13;[^}]*grid-row:\s*1;[^}]*aspect-ratio:\s*16 \/ 10/);
-  assert.match(phone, /\.source-reference-plan\s*\{[^}]*grid-column:\s*1 \/ -1;[^}]*grid-row:\s*2;[^}]*width:\s*100%/);
-  assert.match(css, /\.source-list::before\s*\{[^}]*left:\s*16px/);
-  assert.doesNotMatch(phone, /\.source-row-2\s*\{/);
+  assert.match(phone, /\.sources-lede\s*\{[^}]*font-size:\s*13\.6px;[^}]*line-height:\s*1\.6/);
+  assert.match(phone, /\.sources-story\s*\{[^}]*max-width:\s*330px;[^}]*margin-top:\s*20px/);
+  assert.match(phone, /\.source-gallery\s*\{[^}]*grid-template-columns:\s*minmax\(0, 7fr\) minmax\(0, 5fr\);[^}]*grid-template-rows:\s*repeat\(2, clamp\(126px, 39vw, 168px\)\)/);
+  assert.match(phone, /\.source-scene-produce\s*\{\s*grid-column:\s*2;\s*grid-row:\s*1 \/ 3/);
+  assert.match(phone, /\.source-scene figcaption\s*\{[^}]*font-size:\s*11px/);
   assert.match(phone, /\.contact\s*\{[^}]*margin:\s*0 18px 24px;[^}]*padding:\s*34px 18px 24px/);
   assert.match(phone, /\.contact-reference-plan\s*\{\s*margin-top:\s*8px/);
   assert.match(narrowPhone, /\.contact-reference-plan\s*\{\s*margin-top:\s*6px/);

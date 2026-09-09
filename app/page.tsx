@@ -147,54 +147,30 @@ const chefJourneyFlags = [
   { id: "cyprus", country: "Кипр", x: 1430, y: 585, src: "/media/masterchef/route-flags/cyprus.svg" },
 ] as const;
 
-const sourceChapters = [
+const sourceScenes = [
   {
-    id: "source-meat-title",
-    category: "Мясо",
-    statement: "Хотите ягнёнка? — еду за ним в горы.",
-    drawingSrc: "/media/blueprint-backgrounds/meat-reference-exact.png",
-    drawingWidth: 480,
-    drawingHeight: 143,
-    images: [
-      {
-        src: "/media/sourcing/evgen-half-lamb-market-v1.webp",
-        width: 1448,
-        height: 1086,
-        alt: "Евгений Грыбенюк осматривает половину барана в мясной лавке",
-      },
-    ],
+    id: "meat",
+    caption: "ягнёнок · горы",
+    src: "/media/sourcing/evgen-half-lamb-market-v1.webp",
+    width: 1448,
+    height: 1086,
+    alt: "Евгений Грыбенюк осматривает половину барана в мясной лавке",
   },
   {
-    id: "source-fish-title",
-    category: "Рыба",
-    statement: "Нужна рыба? — еду в порт к рыбакам.",
-    drawingSrc: "/media/blueprint-backgrounds/fish-reference-exact.png",
-    drawingWidth: 489,
-    drawingHeight: 157,
-    images: [
-      {
-        src: "/media/sourcing/evgen-fish-harbour-market-v1.webp",
-        width: 1448,
-        height: 1086,
-        alt: "Евгений Грыбенюк выбирает свежую рыбу у гавани",
-      },
-    ],
+    id: "fish",
+    caption: "рыба · порт",
+    src: "/media/sourcing/evgen-fish-harbour-market-v1.webp",
+    width: 1448,
+    height: 1086,
+    alt: "Евгений Грыбенюк выбирает свежую рыбу у гавани",
   },
   {
-    id: "source-produce-title",
-    category: "Овощи и фрукты",
-    statement: "Свежие овощи и фрукты? — только с кипрских ферм.",
-    drawingSrc: "/media/blueprint-backgrounds/produce-reference-exact.png",
-    drawingWidth: 501,
-    drawingHeight: 155,
-    images: [
-      {
-        src: "/media/sourcing/evgen-grape-harvest.webp",
-        width: 1794,
-        height: 1898,
-        alt: "Евгений Грыбенюк с ящиком собранного винограда",
-      },
-    ],
+    id: "produce",
+    caption: "урожай · фермы Кипра",
+    src: "/media/sourcing/evgen-grape-harvest.webp",
+    width: 1794,
+    height: 1898,
+    alt: "Евгений Грыбенюк с ящиком собранного винограда",
   },
 ] as const;
 
@@ -528,8 +504,10 @@ export default function Home() {
                 <em>у вас дома.</em>
               </h2>
               <p className="home-story-lede">
-                Я приезжаю с подготовленным mise en place и беру кухню на себя.
-                Вы встречаете гостей и остаётесь частью собственного вечера.
+                Подготовка начинается задолго до прихода гостей: я закупаю продукты,
+                делаю заготовки, маринады и соусы. К вам приезжаю с готовым mise en place
+                и беру на себя огонь и подачу. Вы встречаете гостей и остаётесь частью
+                собственного вечера.
               </p>
               <p className="home-story-promise">
                 Чтобы вы были дома —
@@ -537,6 +515,21 @@ export default function Home() {
                 <em>со своими.</em>
               </p>
             </header>
+
+            <dl className="home-story-day" aria-label="Как проходит день частного ужина">
+              <div>
+                <dt>утро</dt>
+                <dd>закупаю продукты</dd>
+              </div>
+              <div>
+                <dt>день</dt>
+                <dd>делаю заготовки, маринады и соусы</dd>
+              </div>
+              <div>
+                <dt>вечер</dt>
+                <dd>готовлю и подаю у вас дома</dd>
+              </div>
+            </dl>
 
             <figure className="home-story-film">
               <ChefStoryVideo />
@@ -550,60 +543,42 @@ export default function Home() {
             <div className="sources-heading">
               <p className="section-kicker">персональное меню</p>
               <h2 id="sources-title">
-                Я не работаю по меню,
+                Меню появляется
                 <br />
-                <em>я его создаю.</em>
+                <em>после разговора.</em>
               </h2>
-              <p className="sources-lede">
-                Расскажите мне о любимых вкусах и ограничениях, я соберу для вас персональное меню.
-              </p>
             </div>
-            <figure className="menu-reference-plan" aria-hidden="true">
-              <img
-                src="/media/blueprint-backgrounds/personal-menu-reference-exact.png"
-                width="645"
-                height="555"
-                loading="lazy"
-                decoding="async"
-                alt=""
-              />
-            </figure>
+            <div className="sources-story">
+              <p className="sources-lede">
+                Вы рассказываете, что любите и что важно учесть. Я выбираю продукты под этот вечер —
+                и только потом собираю меню.
+              </p>
+              <ol className="source-sequence" aria-label="Как создаётся меню">
+                <li>ваш вкус</li>
+                <li>продукты</li>
+                <li>меню вечера</li>
+              </ol>
+            </div>
           </header>
 
-          <div className="source-list">
-            {sourceChapters.map((chapter, index) => (
-              <article className={`source-row source-row-${index + 1}`} key={chapter.category} aria-labelledby={chapter.id}>
-                <header className="source-copy">
-                  <p>0{index + 1}</p>
-                  <h3 id={chapter.id}>{chapter.category}</h3>
-                  <blockquote>{chapter.statement}</blockquote>
-                </header>
-                <div className="source-images">
-                  {chapter.images.map((image) => (
-                    <img
-                      key={image.src}
-                      src={image.src}
-                      width={image.width}
-                      height={image.height}
-                      loading="lazy"
-                      decoding="async"
-                      alt={image.alt}
-                    />
-                  ))}
-                </div>
+          <div className="source-gallery" role="group" aria-label="Выбор продуктов для персонального меню">
+            {sourceScenes.map((scene) => (
+              <figure className={`source-scene source-scene-${scene.id}`} key={scene.id}>
                 <img
-                  className="source-reference-plan"
-                  src={chapter.drawingSrc}
-                  width={chapter.drawingWidth}
-                  height={chapter.drawingHeight}
+                  src={scene.src}
+                  width={scene.width}
+                  height={scene.height}
                   loading="lazy"
                   decoding="async"
-                  alt=""
-                  aria-hidden="true"
+                  alt={scene.alt}
                 />
-              </article>
+                <figcaption>{scene.caption}</figcaption>
+              </figure>
             ))}
           </div>
+          <p className="source-provenance">
+            Рыночные сцены — визуализации; сбор винограда — личный архив.
+          </p>
         </section>
 
         <section className="contact" id="contact" aria-labelledby="contact-title">

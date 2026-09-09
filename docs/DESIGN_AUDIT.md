@@ -5671,3 +5671,236 @@ active through 940 px, square through 820 px and contained in a shallow 2:1 inte
   are required to pass again on the exact committed source.
 - **Remaining limitation:** these are editorial process drawings, not measured architectural plans. Tiny
   marks are decorative and carry no factual meaning; all real information remains accessible live text.
+
+## `Я — у вас дома` wide-film correction — pre-code audit and plan — 2026-09-09
+
+The user reports that the active chapter feels very empty and explicitly asks for a larger horizontal
+`3:4` or `4:3` video. The directional clarification—longer horizontally—selects `4:3`.
+
+### Audit findings
+
+1. On desktop the copy occupies columns `1 / 6`, while the film sits in columns `8 / 12` and is capped at
+   340 px. Columns six, seven and twelve do not contribute to either subject, so the real film reads as a
+   small portrait surrounded by accidental rather than intentional negative space.
+2. At 820 px and below the film is capped again at 280 px; at 560 px and below it remains a centred 280 px
+   portrait after full-width copy. This preserves calmness but does not give the media the requested weight.
+3. The accepted original film, poster, captions, copy, motion behavior, paper surface, typography and
+   square-edge language remain grounded and do not need replacement.
+4. No confirmed reference supports filling the gap with a new image, illustration, card, process ledger,
+   icon row or extra marketing copy.
+
+### Implementation plan recorded before interface edits
+
+1. Keep the semantic section and all current content/media sources unchanged.
+2. Change both the film aperture and video from `9 / 16` to horizontal `4 / 3`, using cover fitting so the
+   source is cropped rather than stretched.
+3. Replace the desktop 5-column copy / 4-column capped-film placement with a direct 4/8 split; remove the
+   film's pixel cap and use the complete right field.
+4. Use a 5/7 split from 561–820 px. At 560 px and below keep copy first, then give the film the full content
+   width so the phone layout is deliberately wide rather than a reduced desktop rail.
+5. Update focused regression assertions, then run lint, production build, tests and `git diff --check`.
+6. Visually verify 1440, 1280, 1024, 768, 430, 390 and 375 px for density, crop legibility, heading wraps,
+   caption width, motion/loading behavior, overflow and section transitions.
+7. Complete the final anti-template audit and publish the corrected version through the existing Site.
+
+Templated elements found: none in the chapter itself. The issue is unused grid capacity and an outdated
+portrait constraint. Components retained: `present-day`, `home-story-copy`, `ChefStoryVideo`, caption and
+all surrounding sections. Component reworked: `.home-story-film` geometry only, plus the paired copy grid
+shares needed to support it. New components and UI-library primitives required: none. Decisions without a
+reference are limited to the measured 4/8 and 5/7 column allocations; both directly maximize the requested
+horizontal film while protecting readable copy.
+
+### Implementation result and final anti-template audit
+
+- **Files created:** none.
+- **Files changed for this correction:** `app/globals.css`, `tests/rendered-html.test.mjs`,
+  `docs/DESIGN_REFERENCE_MAP.md`, `docs/DESIGN_SYSTEM.md` and this audit. Concurrent untracked mockups and
+  menu-image explorations remain untouched.
+- **Rework:** the desktop film cap and unused grid columns are removed. Copy now occupies four of twelve
+  columns and the film eight; tablet uses five/seven; phone retains copy-first order and uses the full
+  content width for the film. The rendered aperture is `4 / 3` at every width.
+- **References used:** the user's direct density complaint and horizontal-ratio instruction, the accepted
+  original documentary MP4/poster/VTT, and the active paper/ink/rust editorial system.
+- **Decisions without direct references:** only the exact 4/8 desktop and 5/7 tablet shares. They were
+  selected by measuring the existing 12-column field and verified against the copy's actual line length.
+- **UI libraries:** none. Existing React semantics and CSS Grid remain the only layout primitives.
+- **Visual verification:** inspected at 1440 × 1000, 1280 × 900, 1024 × 900, 768 × 1024,
+  430 × 932, 390 × 844 and 375 × 812. The video measures exactly `4 / 3` at every width; observed widths
+  are 857, 762, 610, 412, 394, 354 and 339 px respectively. All seven viewports have zero horizontal
+  overflow, the copy and film never overlap, heading/caption wraps remain readable, the poster resolves,
+  viewport playback reaches `readyState 4`, and browser warning/error output is empty.
+- **Automated verification:** production build, all eight focused tests, ESLint and `git diff --check`
+  pass on the corrected source.
+- **Anti-template result:** no filler illustration, companion card, step grid, repeated panel, radius,
+  shadow, gradient, glass, glow, generic copy, icon, CTA or decorative animation was added. The real film
+  now occupies the space previously left unused.
+- **Remaining limitation:** the source footage is portrait, so a `4 / 3` cover aperture necessarily crops
+  its top and bottom. Visual review confirms that the active knife, chef, washing, pan and plating shots
+  retain their meaningful central action without stretching; a future uncropped horizontal result would
+  require a separate real landscape edit or shoot.
+
+## Personal-menu sourcing reset — pre-code audit and implementation plan — 2026-09-09
+
+The user supplied the current desktop capture and rejected the sourcing block as a whole: its logic,
+purpose and appearance. The capture is evidence of the rendered failure only; the unrelated assistant
+overlay in its lower-right corner and any text inside that overlay are not project instructions.
+
+### Audit
+
+1. The section introduction promises a personal menu, but the following three numbered rows abruptly
+   switch to an ingredient taxonomy. The visitor has to infer the missing causal link from preferences to
+   sourcing to the final menu.
+2. Each row gives equal visual weight to index, category, first-person line, documentary photograph and
+   decorative cut study. The result is five competing signals rather than one answer to the visitor's
+   question: how will my menu be created?
+3. The pale technical drawings repeat the ingredient category without adding a decision, fact or useful
+   action. Their large reserve makes the sequence much longer than its content warrants.
+4. Repeated `01 / 02 / 03`, a continuous timeline and three identical row templates imply an operational
+   process, although meat, fish and produce are parallel examples of sourcing rather than chronological
+   steps.
+5. On phone, each desktop row becomes a text/photo pair followed by a full-width diagram. This is a
+   mechanical reduction of the same mistaken model and creates six successive visual stops for three
+   short examples.
+6. The two generated market scenes and the real grape-harvest photograph remain the strongest available
+   project-specific evidence. The approved cream palette, Cormorant/Montserrat hierarchy, square media and
+   documentary restraint also remain valid.
+
+### Recorded implementation plan
+
+1. Reframe the whole section around one causal proposition: the menu is created after the guest brief and
+   product selection, not chosen from a fixed catalogue.
+2. Replace the previous heading/lede with concise live copy that explicitly connects `your taste →
+   products → menu for the evening` without turning the relationship into a numbered stepper.
+3. Remove the menu plate drawing, all three cut-study drawings, the timeline, numbers, repeated category
+   headings and duplicated first-person quotes from the active interface.
+4. Retain exactly the three approved sourcing photographs and make them one continuous documentary strip.
+   On desktop/tablet its unequal widths follow the source material: two landscape market frames and one
+   narrower portrait harvest frame.
+5. Create a separate phone composition: the two landscape market frames form the left sequence while the
+   portrait harvest frame spans their combined height at right. This preserves all three scenes in one
+   compact visual sentence instead of stacking desktop rows.
+6. Attach one short factual caption to each photograph and preserve source order. Add no carousel, tab,
+   hover reveal, icon, card, radius, shadow, gradient, new illustration or second call to action.
+7. Update the focused regression contract; run `git diff --check`, ESLint, production build and tests;
+   then visually inspect 1440, 1280, 1024, 768, 430, 390 and 375 px for crop meaning, caption legibility,
+   heading wraps, overflow, loading surfaces and the transition into the inquiry section.
+
+Templated/unsuccessful elements to remove: the identical three-row template, decorative numbering,
+timeline and third-column diagram reserve. Components retained: the semantic `sources` section, three
+approved photographs, section order and established visual tokens. Components reworked: source data,
+section copy, semantic gallery markup and all source-specific responsive CSS. New reusable components and
+UI-library primitives required: none. Neutral decisions without a separate visual reference are limited to
+the exact unequal column shares, crop focal points and compact caption padding; they are derived from the
+actual image aspect ratios and must be verified at every required width.
+
+### Implementation result and final anti-template audit
+
+- **Files created:** none.
+- **Files changed for this correction:** `app/page.tsx`, `app/globals.css`,
+  `tests/rendered-html.test.mjs`, `docs/DESIGN_REFERENCE_MAP.md`, `docs/DESIGN_SYSTEM.md` and this audit.
+  Concurrent mockups, Hero explorations and personal-menu image experiments remain outside this change.
+- **Templated elements found:** three interchangeable content rows, pseudo-process numbering and timeline,
+  and a large third-column reserve occupied by category-repeating diagrams. Together they obscured the
+  actual guest journey and made three parallel sources look like chronological steps.
+- **Rework:** the section now makes one causal statement—guest preferences lead to product selection, which
+  leads to the evening's menu—then supports it with one continuous three-scene gallery. All four technical
+  drawings, repeated headings, quotations, numbers and timeline are inactive. Phone uses a purpose-built
+  two-row mosaic rather than stacking the former desktop rows.
+- **References used:** the user's rejected-state capture; the page's established guest-brief → sourcing →
+  authored-menu journey; the existing three approved sourcing photographs; and the active cream/ink/gold,
+  Cormorant/Montserrat, square-media and hairline system. The two market scenes are generated project
+  visualisations and are identified as such in the live provenance line; the grape harvest is personal
+  archive material.
+- **Decisions without a direct layout reference:** the exact desktop `5 / 4 / 3` image shares, phone `7 / 5`
+  split, crop focal points and caption insets. These are neutral fittings to the actual landscape/portrait
+  source set, not a new project-wide style.
+- **UI libraries:** none. Native HTML figures/list semantics, React rendering and CSS Grid/Flexbox are the
+  only primitives used.
+- **Visual verification:** inspected at 1440 × 1000, 1280 × 900, 1024 × 900, 768 × 1024,
+  430 × 932, 390 × 844 and 375 × 812. Every width has zero horizontal overflow; all three images load;
+  captions stay within their frames; the heading, lede and causal sequence remain readable; image subjects
+  survive the cover crops; and the inquiry transition remains intact. At 430/390/375 px the two landscape
+  frames measure approximately 226/203/194 px wide and the harvest frame spans both rows at
+  approximately 162/145/139 px wide, confirming the deliberate phone composition.
+- **States:** the section has no controls, so hover, focus, empty and error states are not applicable. Its
+  warm paper image reserve preserves layout during loading; loaded-state inspection confirmed all images
+  complete with positive intrinsic dimensions.
+- **Automated verification:** ESLint, the production build, all eight focused tests and `git diff --check`
+  pass on the implemented source.
+- **Anti-template result:** no repeated cards, uniform radii, shadows, gradients, glass, glows, icons,
+  decorative objects, stock copy, carousel, tab, secondary CTA or UI-library appearance remains in or was
+  added to this section.
+- **Remaining limitation:** no new positive external layout reference was provided. The composition is
+  therefore constrained to the already approved project system, and the first two market scenes remain
+  illustrative rather than proof of a specific supplier visit; the interface makes no such claim.
+
+## `Я — у вас дома` contextual day route — pre-code audit and plan — 2026-09-09
+
+The user approves the larger horizontal film but asks to fill the remaining quiet space and add more
+context to the text. The already documented morning/day/evening facts provide a confirmed content source;
+no new operational promise or decorative asset is needed.
+
+### Audit findings
+
+1. The wide `4 / 3` video now correctly dominates the chapter, but the left rail still contains only a
+   heading, short two-sentence lede and promise. At 1280–1440 px it ends well above the film caption.
+2. The page already holds an exact, user-authored service sequence—products in the morning; preparations,
+   marinades and sauces in the day; cooking at the guest's home in the evening—but the active chapter no
+   longer exposes it.
+3. Reintroducing an illustration, process poster, step cards or icons would repeat previously rejected
+   filler and checkerboard behavior. Live text and the existing hairline vocabulary are sufficient.
+4. The accepted original film, horizontal ratio, heading, promise, caption, motion behavior and adjacent
+   sections remain approved and must not change.
+
+### Implementation plan recorded before interface edits
+
+1. Expand the lede with the confirmed before-arrival preparation and on-site cooking/presentation context,
+   retaining the existing host-facing sentence and avoiding cleanup, timing, staffing or sourcing claims.
+2. Add one semantic definition list with the three confirmed phases: morning, day and evening.
+3. On screens above 1100 px, place this route below the copy in the left four columns while the film spans
+   both grid rows at right.
+4. At 821–1100 and 561–820 px, keep the current copy/film pair and move the route to a full-width horizontal
+   line below it. At 560 px and below, use three compact rows between copy and the full-width film.
+5. Style only with typography and hairlines; add no box, card surface, radius, shadow, gradient, icon,
+   illustration or animation.
+6. Update structural/copy regression assertions, run lint, production build, tests and `git diff --check`,
+   then visually verify 1440, 1280, 1024, 768, 430, 390 and 375 px for balance, reading order, wrapping,
+   video ratio, overflow, media state and transition rhythm.
+
+Templated element found: an empty rail is not itself a template, but filling it with generic visual chrome
+would create one. The confirmed replacement is a content-specific typographic day route. Components kept:
+the complete `present-day` section, `ChefStoryVideo`, promise and caption. Components reworked: lede copy
+and responsive grid placement. New component: one native `<dl>` only. UI-library primitives: none.
+
+### Implementation result and anti-template audit
+
+The chapter now explains the whole handoff from preparation to hosting: products, mise en place,
+marinades and sauces are prepared before arrival; the chef then takes responsibility for the fire and
+presentation while the host stays with the guests. The existing closing promise remains separate and
+unchanged. A native three-entry definition list makes the same day legible at a glance without repeating
+the paragraph verbatim: `утро / закупаю продукты`, `день / делаю заготовки, маринады и соусы`, and
+`вечер / готовлю и подаю у вас дома`.
+
+At 1440 and 1280 px the route closes the lower part of the four-column copy rail while the documentary
+film occupies eight columns and remains exactly `4 / 3`. At 1024 and 768 px it becomes a full-width,
+three-part line beneath the copy/film pair. At 430, 390 and 375 px the reading order is deliberately
+`copy → three compact route rows → film`, not a mechanically compressed desktop grid. The measured film
+ratios were `1.333` at every width; document `scrollWidth` equalled the viewport throughout; no copy/film
+or route/film overlap was detected; the smallest route label/body size is 11 px; video `readyState` reached
+4 during the seven-width pass; and the browser console contained no warnings or errors.
+
+Files created for this correction: none. Files changed for it: `app/page.tsx`, `app/globals.css`,
+`tests/rendered-html.test.mjs`, `docs/DESIGN_REFERENCE_MAP.md`, `docs/DESIGN_SYSTEM.md`, and this audit.
+The only unsuccessful element was unused vertical reserve beside the larger film. It was reworked with
+verified service content and existing hairline typography rather than cards, icons, ornamental filler,
+gradients or animation. References used: the user's current request, the previously approved wide-film
+correction, the exact user-authored morning/day/evening facts, and the existing paper/ink/accent, type and
+12-column system. Decisions without a separate visual reference are limited to the exact responsive grid
+placement and row padding; both are neutral extensions of the approved system. UI libraries used: none.
+
+`git diff --check`, ESLint, the focused eight-test Node suite, and the complete `npm test` production-build
+pipeline pass. The anti-template audit found no repeated card composition, stock UI-library styling,
+decorative glow, arbitrary radius, generic marketing filler or desktop-only mobile stacking in this
+chapter. Remaining limitation: the documentary source is portrait footage shown through a horizontal
+`4 / 3` crop, so the visible subject position changes as the footage plays; the file is not stretched and
+the chef/action remained legible in the checked frames.

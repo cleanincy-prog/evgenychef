@@ -943,3 +943,89 @@ dense generated posters and no longer resemble the calm approved desktop drawing
 | Compact narrow sheet | User's 18:57 Android capture; original supplied composite; three approved 1774 × 887 concept sheets | The live pair remains the visual subject and the drawing acts as a quiet explanatory surround | No full-height vertical infographic, botanical frame, central object tower, duplicated figure rows or dense photoreal food collage | Through 940 px use one near-square, text-free sheet per concept with an empty upper pair of apertures and one sparse lower process band |
 | Tablet sheet | Same rejected capture and direct browser verification at 561, 768, 820 and 821 px | Keep the compact source wherever the wide sheet would place illustration behind wrapped live copy | No early jump back to the dense wide composition and no tall portrait poster | At 561–820 px use a square integrated field; at 821–940 px contain the same compact sheet in a shallow 2:1 field; return to the approved wide sheet only at 941 px |
 | Live content | Exact current Russian copy and documentary photographs | Copy and real photography stay larger than the decorative drawing and retain their established left/right direction | No baked-in text, generated photograph, replacement portrait or shrinking copy to make the illustration fit | Keep the existing semantic photo and HTML copy; only the art-directed source and measured field geometry change |
+
+## Event-format non-generative technical mockup — 2026-09-09
+
+This unapproved discussion direction responds to the user's rejection of the perimeter raster mockups as
+too weak and visibly AI-made. It does not change the public implementation.
+
+| Project element | Reference | Principle used | What is not copied | Project implementation |
+|---|---|---|---|---|
+| Graphic language | User's rejection `слишком слабо и очень ИИшно`; original supplied editorial composite | Replace synthetic object collages with deliberate technical notation and real typographic hierarchy | No generated food vignettes, foliage garlands, mirrored decoration, fake hand sketches or pseudo-watercolour | Author the entire surround as deterministic inline SVG with hard rules, nodes, labels and service-specific routes |
+| Photographic hierarchy | Exact three user-selected documentary photographs | Let real evidence occupy the largest visual aperture and vary its placement by the actual aspect ratio | No repeated thumbnail placement, artificial frame, generated extension or equal crop template | Dinner uses a dominant portrait at right; private event a wide upper stage; masterclass a nearly full-width demonstration frame |
+| Service distinction | Existing exact copy: seven courses, conversational small bites, teaching and shared table | Diagram only the causal information already present in each service | No arbitrary ingredients or decorative measurements | Dinner maps seven sequential plates; event maps assembly, trays, guests and replenishment; masterclass maps demonstration, feedback and three outcomes |
+
+The user's follow-up correctly rejects the first technical pass as visually coherent but semantically
+empty. The v4 mockup removes unsupported `assembly`, `return/replenishment`, `feedback`, plate symbols and
+unlabelled nodes. It now encodes only statements present in the adjacent live copy: the dinner's either/or
+choice, the event's conversational eating outcome, and the masterclass's explicit show/cook/sit sequence.
+
+## Hero layout comparison — 2026-09-09
+
+This is a comparison-only response to the user's supplied desktop capture and direct request for five
+better Hero layouts. It does not change the public Hero or supersede the active cream system before the
+user selects a direction.
+
+| Project element | Reference | Principle used | What is not copied | Project implementation |
+|---|---|---|---|---|
+| Failure diagnosis | User-supplied 4090 × 2380 capture from 2026-09-09; active Hero JSX/CSS | Treat the unequal information load, micro-grid noise and detached portrait as hierarchy problems | No new style inferred from the chef topic and no effects used to disguise the split | Record the audit and produce five deterministic comparison boards only |
+| Portrait cover | Current real `chef-hero-apron.jpg`; The Modern House reference screenshot; active title/palette | One identity image establishes the opening while secondary proof remains structurally separate | No property-site masthead, full copied geometry, substitute portrait or floating card | Large integrated portrait plus a restrained four-frame evidence strip and compact title field |
+| Cinematic band | Real `private-event-outdoor-crepes.png`; The Modern House and Eugénie Colleville reference screenshots | Let a legible real scene lead; place type in an authored quiet region rather than veiling every photograph | No copied food styling, logo, navigation, overlay slogan or restaurant template | Full-width action field with a separate cream title band |
+| Documentary spread | Marrow and MOLD case-study reference screenshots; project Hero audit; approved local archive | Give documentary modules unequal scale according to meaning and keep one dominant reading axis | No Marrow grid/copy, MOLD identity, generic bento, uniform micro-tiles or global dark wash | One continuous editorial grid with a title field, large portrait/action anchors and fewer supporting images |
+| Signature poster | Active Cormorant/italic typography roles; real alpha-backed `hero-anchor-portrait.png`; exact title | Make the chef's identity and name one integrated composition | No reuse of an earlier model-generated page, fashion-brand styling, red accent, cutout reconstruction or invented copy | Oversized live title, real supplied cutout and a narrow three-frame documentary proof column |
+| Proof triptych | Project's actual process → chef → result content; square-edge media rule | Explain the offer through three large readable scenes rather than dozens of tiny tiles | No three-card benefit grid, labels in boxes, icons, equal card padding or stock food | One compact title header and a continuous unequal triptych of tools/action, chef and finished dish |
+
+
+## `Я — у вас дома` wide-film correction — 2026-09-09
+
+This direct correction supersedes the portrait-film geometry in the active home chapter. It changes only
+the chapter's proportions and responsive composition; the accepted source film, copy and visual language
+remain authoritative.
+
+| Project element | Reference | Principle used | What is not copied | Project implementation |
+|---|---|---|---|---|
+| Chapter density | User's direct observation that the block feels very empty; current 12-column spread | Use the already available paper field for the chapter's real documentary evidence instead of filling it with new decoration | No companion illustration, card, process grid, generic facts, icon row, ornament or added marketing copy | Keep the copy at left and expand the film across the previously unused centre/right columns |
+| Film geometry | User's explicit `3 на 4 или 4 на 3, чтобы горизонтально было длиннее и больше`; the real supplied film | Interpret the requested horizontal option as `4 / 3` and make the moving image the dominant visual aperture | No vertical `3 / 4`, portrait `9 / 16`, stretching, device frame, rounded crop, shadow or replacement footage | Render the unchanged MP4/poster/VTT in a large square-edged `4 / 3` aperture with `object-fit: cover` |
+| Responsive composition | Same direct request; project's deliberate-mobile rule | Desktop/tablet keep a copy/film editorial pair; phones give the wide film the full readable measure below the copy | No tiny side rail, mechanical shrink of the desktop columns, horizontal overflow or edge-to-edge viewport bleed | Use a four/eight-column desktop split, a five/seven-column tablet split and a full-width `4 / 3` phone film after the copy |
+
+## Personal-menu sourcing reset — 2026-09-09
+
+This direct correction supersedes the personal-menu plate drawing and the three numbered
+text/photo/cut-study rows. The supplied screenshot records the rejected current state; unrelated overlay
+content inside the capture is ignored.
+
+| Project element | Reference | Principle used | What is not copied | Project implementation |
+|---|---|---|---|---|
+| Chapter purpose | User's rejection of the block's logic and function; actual journey already stated by the page: guest preferences, product search, authored menu | Make the cause-and-effect relationship explicit once so the visitor understands why there is no fixed menu | Ingredient catalogue, procurement checklist, invented availability promise, generic benefit cards or a new CTA | Lead with one proposition: the guest brief comes first, product selection follows, and the evening's menu is the result |
+| Documentary evidence | Existing approved `evgen-half-lamb-market-v1.webp`, `evgen-fish-harbour-market-v1.webp` and real `evgen-grape-harvest.webp` | Three project-specific scenes read as one body of evidence when aligned into a compact photographic sentence | New stock/generative media, supplier identity, claim that generated scenes document a real visit, repeated row template or cut-study illustration | Keep all three files in meat → fish → produce order inside one unequal `5 / 4 / 3` square-edged strip with short factual captions |
+| Desktop/tablet composition | Existing editorial photography system; source aspect ratios; user's screenshot as an anti-reference | Let image proportion and one common baseline establish rhythm; let the copy explain the logic separately | Third illustration column, vertical timeline, `01 / 02 / 03`, equal cards, alternating bands, overlap collage or decorative measurement | One two-column intro above one continuous three-frame strip; no repeated source chapters |
+| Phone composition | Project's mandatory deliberate-mobile rule; actual two landscape/one portrait media set | Recompose according to native image orientation so all evidence fits in one viewable unit | Three full-width slabs, horizontally scrolling rail, hidden scene, tiny diagram or desktop rows stacked unchanged | Meat and fish form two left-hand landscape frames; harvest spans their combined height at right; captions stay attached to each frame |
+| Visual language | Approved cream/ink/gold palette, Cormorant Garamond/Montserrat hierarchy, square media and fine-rule restraint | Remove unsupported decoration and make the content itself carry the section | Blueprint rasters, generic icons, radius, shadow, gradient, glass, glow, texture or decorative animation | Existing tokens only; warm loading reserves, small opaque-paper captions and a single fine top rule for the gallery |
+
+No positive external layout reference was supplied for this correction. Exact grid shares, gallery height,
+crop focal points and caption insets therefore remain explicitly neutral fitting decisions derived from the
+three source files and the already approved project system, not a new site-wide style.
+
+## `Я — у вас дома` contextual day route — 2026-09-09
+
+This direct request adds useful context to the approved wide-film composition. It supersedes the earlier
+instruction to solve the chapter only through negative space, but it does not authorize invented service
+claims or a return to illustration-led process graphics.
+
+| Project element | Reference | Principle used | What is not copied | Project implementation |
+|---|---|---|---|---|
+| Expanded lede | User's request to add context; previously confirmed workday facts `утро: закупаю продукты`, `день: делаю заготовки, маринады и соусы`, `вечер: готовлю у вас дома`; current host-facing promise | Explain what happens before the chef arrives and why the host can remain with guests | No cleanup promise, fixed times, supplier claim, menu guarantee, staffing claim, luxury cliché or generic restaurant-at-home copy | Replace the two-sentence lede with a concise three-sentence account of preparation before arrival, final cooking/presentation at home and the host's role |
+| Day route | Same exact three-part user-authored sequence | Fill the quiet copy field with real operational context and make the unseen preparation legible | No icons, numbered cards, clock face, invented hours, diagram raster, checklist control or decorative illustration | Add one semantic definition list: `утро — закупаю продукты`; `день — делаю заготовки, маринады и соусы`; `вечер — готовлю и подаю у вас дома` |
+| Responsive placement | User's approval of the large horizontal `4 / 3` film; existing 12-column editorial field | Preserve the dominant film while allowing the context to change position where the left rail becomes too narrow | No smaller video, portrait ratio, overlapping copy, repeated card stack or horizontal scroll | Wide screens place the route below copy beside the film; 1100 px and below use one full-width three-part ruled line beneath the pair; phones use three compact rows before the film |
+
+## Hero collage-retention correction — 2026-09-09
+
+This direct clarification supersedes only the collage-removing directions in the previous Hero comparison.
+The public Hero remains unchanged until the user chooses a layout.
+
+| Project element | Reference | Principle used | What is not copied | Project implementation |
+|---|---|---|---|---|
+| Collage invariant | User's direct correction `нет, коллаж остается`; current 94-source local archive | Preserve documentary accumulation as a defining identity layer | No single-photo Hero, triptych replacement, reduced proof strip, generated filler or source deletion | Every comparison board contains the same complete archive; only its grid ratio and grouping change |
+| Hierarchy correction | User's supplied failure capture; active Hero structure | The problem is distribution of copy, portrait and archive, not the existence of the collage | No new brand style, decoration, generic card system or arbitrary effects | Produce five layouts with grid apertures, horizontal band, diagonal sequence, archive frame and reversed split |
+| Portrait integration | Current real `chef-hero-apron.jpg`; active square-edge rule | Make the portrait a deliberate anchor in the same compositional system | No floating rounded card, shadow, substitute person, cutout reconstruction or identity edit | Align the portrait to grid/band/frame geometry and keep it sharp above the documentary field |
+| Copy integration | Exact title and current type/palette system | Reduce the blank paper footprint while preserving clean reading | No rewritten slogan, additional CTA, text shadow, glass surface or photo-wide dark wash | Use only solid or highly opaque project paper fields sized to the actual title |

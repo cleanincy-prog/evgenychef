@@ -1387,6 +1387,27 @@ cards and multi-panel process art.
 - **Mobile:** the pair remains side by side down to 375 px with a 10–12 px gap and independent 11 px
   captions; the copy sits above it. The stage ledger remains prohibited.
 
+## Wide horizontal home-film amendment — 2026-09-09
+
+This amendment supersedes every earlier portrait or paired-media geometry for the active `Я — у вас дома`
+chapter.
+
+- Keep the existing heading, kicker, two-sentence lede, promise, caption and the original
+  `chef-story-img-5399-no-grill.mp4` media package unchanged.
+- At widths above 820 px, copy occupies columns `1 / 5` and the film occupies columns `5 / 13` in the
+  established 12-column content field. The film has no independent pixel cap.
+- From 561–820 px, copy occupies columns `1 / 6` and film columns `6 / 13`; the film remains dominant while
+  both fields retain readable measure.
+- At 560 px and below, the semantic order is copy followed by a full-content-width film. This is a
+  deliberate compact composition, not a stacked card treatment.
+- The film aperture and video resolve to horizontal `4 / 3` at every width. Preserve square edges and use
+  `object-fit: cover`; never stretch the portrait source.
+- Negative space remains around the editorial pair, but no entire grid columns are intentionally abandoned
+  between the two subjects. Do not add a companion image, process illustration, step ledger or decorative
+  filler to solve density.
+- Existing paper, ink, muted, rust, typography, caption and motion behavior remain unchanged. No UI library
+  or stock component is introduced.
+
 ## Event-specific blueprint candidate contract — 2026-09-09
 
 The user approved this set on 2026-09-09. The three `*concept-v3.png` delivery assets are active in the
@@ -1458,3 +1479,77 @@ This contract supersedes the portrait-underlay contract above.
   illustration behind the copy.
 - **Surface:** continuous warm paper, square edges, no border around apertures, card, radius, shadow,
   gradient, glow, embedded words, number, logo or watermark.
+
+## Hero comparison-board boundary — 2026-09-09
+
+The five Hero boards in `design/mockups/hero-layout-options-2026-09-09/` are exploratory artifacts, not
+an active design-system amendment. They must preserve the existing exact title, header destinations,
+cream/ink/gold colour roles, current Cormorant Garamond and Montserrat binaries, square edges and real
+local documentary media. They may vary only composition, crop, line measure and evidence density.
+
+The boards must not introduce generated people, stock media, gradients, blur, glass, shadow, radius,
+placeholder copy, a generic CTA, a uniform card grid or a UI-library theme. A selected direction requires
+its own deliberate phone composition and visual verification at 1440, 1280, 1024, 768, 430, 390 and
+375 px before it can supersede the live Hero.
+
+## Personal-menu sourcing reset — 2026-09-09
+
+This amendment supersedes the active three numbered sourcing rows and the personal-menu/meat/fish/produce
+cut-study presentation. The user's direct rejection of that entire block is authoritative.
+
+- The chapter has one job: explain that the menu is produced by a conversation with the guest followed by
+  product selection. It is not an ingredient catalogue and not a three-step procurement timeline.
+- Visible copy states the relationship once: `ваш вкус → продукты → меню вечера`. The arrows are an inline
+  reading aid only; no boxes, numbered nodes or interactive stepper are introduced.
+- Retain the three approved photographs in meat → fish → produce order. The photographs act together as
+  one documentary proof strip, not as three cards or three independent sections.
+- Desktop and tablet use one uninterrupted, square-edged gallery row with unequal `5 / 4 / 3` shares.
+  The unequal widths follow two landscape sources and one portrait source; all frames share one deliberate
+  visual height.
+- At 560 px and below, meat and fish occupy two compact landscape apertures in the left seven columns;
+  produce occupies the right five columns across both rows. This is the authored phone composition, not a
+  stacked desktop layout.
+- Each frame owns one compact opaque-paper caption at its lower edge. Captions identify only the established
+  sourcing relationship; they do not name suppliers, promise availability or represent generated market
+  scenes as documentary evidence of a specific visit.
+- Loading reserves use the section's existing warm paper. Market photographs may use restrained `cover`
+  crops; the portrait harvest photograph may crop horizontally only enough to fit its content-driven narrow
+  aperture while keeping Evgen and the grape crate legible.
+- The four cut-study rasters, category numbers, row timeline, repeated headings and repeated quotations are
+  inactive. Their files may remain as design history but must not be referenced by live page or CSS.
+- No new colour, typeface, radius, shadow, gradient, glass, ornament, animation, hover behavior, carousel,
+  tab, icon or secondary action is part of this chapter.
+
+## Home-chapter contextual route amendment — 2026-09-09
+
+This amendment extends the active wide `4 / 3` home-film composition with factual context from the
+previously approved morning/day/evening sequence.
+
+- Active lede: `Подготовка начинается задолго до прихода гостей: я закупаю продукты, делаю заготовки,
+  маринады и соусы. К вам приезжаю с готовым mise en place и беру на себя огонь и подачу. Вы встречаете
+  гостей и остаётесь частью собственного вечера.`
+- One semantic `<dl>` follows the copy relationship: `утро — закупаю продукты`, `день — делаю заготовки,
+  маринады и соусы`, `вечер — готовлю и подаю у вас дома`.
+- The route is typography and hairlines only: muted/ink body text, `--accent-small` phase labels and
+  `--rule` separators. It has no container fill, border box, radius, shadow, icon, number or illustration.
+- Above 1100 px, copy and route occupy the left four columns while the film spans the right eight columns
+  across both rows. The route aligns toward the film's lower half to use the existing quiet field.
+- From 821–1100 px and from 561–820 px, the copy/film pair stays in its approved columns and the route
+  becomes one three-column ruled line across the full content width below it.
+- At 560 px and below the deliberate reading order is copy → three compact definition rows → film. Phase
+  labels and statements remain at least 11 px and the video remains full-width `4 / 3`.
+- The original film, poster, VTT, promise, caption, motion behavior and every surrounding chapter remain
+  unchanged. No UI library is introduced.
+
+## Hero collage-retention comparison boundary — 2026-09-09
+
+The user has made the collage mandatory for every new Hero direction. Comparison boards may redistribute
+the existing 94-source archive, exact title and real apron portrait, but may not replace the archive with
+one photograph, a reduced evidence strip or a three-image story. The active cream, ink, gold, Cormorant
+Garamond, Montserrat, square-edge and 2 px seam rules remain fixed.
+
+Allowed comparison moves are grid-ratio changes, larger documentary spans, grid-aligned paper apertures,
+one calm horizontal band, one central archive frame, a diagonal reading sequence or a reversed dominant-
+archive split. No gradient, blur, glass, shadow, radius, generated person, stock media, placeholder copy,
+new CTA or UI-library styling is allowed. These boards remain non-public until one direction is selected
+and independently authored for all required desktop and mobile widths.
