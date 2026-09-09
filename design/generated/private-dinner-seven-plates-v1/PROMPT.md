@@ -9,4 +9,3 @@ plausible food textures and small natural preparation imperfections. Keep genero
 make every ceramic rim complete and visible. No course labels, words, numbers, arrows, connector lines,
 diagram marks, legend, hands, people, utensils, napkins, glasses, loose ingredients, table decorations,
 logo, border or watermark. Avoid CGI gloss, excessive symmetry, duplicate dishes and impossible garnish.
-

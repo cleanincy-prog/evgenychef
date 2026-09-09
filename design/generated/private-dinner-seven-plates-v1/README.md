@@ -14,4 +14,3 @@ imagery, not documentary photography of a delivered dinner and not a promise of 
 
 The user's final approval sequence on 2026-09-09 was: make the food more realistic, use two rows,
 remove the labels, keep only the pictures, then apply the result to the block.
-

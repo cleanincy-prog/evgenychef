@@ -1,6 +1,6 @@
 # Prompt set
 
-Use case: `infographic-diagram`  
+Use case: `infographic-diagram`
 Asset type: unapproved mobile website layout underlay for a discussion mockup.
 
 Shared composition contract:
