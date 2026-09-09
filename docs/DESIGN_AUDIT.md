@@ -5672,6 +5672,139 @@ active through 940 px, square through 820 px and contained in a shallow 2:1 inte
 - **Remaining limitation:** these are editorial process drawings, not measured architectural plans. Tiny
   marks are decorative and carry no factual meaning; all real information remains accessible live text.
 
+## Country-colour photographic plates — pre-code audit and implementation plan — 2026-09-09
+
+The user's latest production review rejects the active `v1` route plates as visibly generated,
+soft/pixelated and disconnected from the countries. The requested correction is limited to the five
+dish photographs and must ship on the existing public domain for both desktop and mobile without
+reverting the current compact event sheets or the integrated MasterChef route.
+
+### Existing elements that fail the confirmed reference
+
+1. The active 512 px plates have a soft, waxy visual treatment and repeated ingredient shapes; they do
+   not read as photographs of real plated food.
+2. All five plates use nearly the same neutral ceramic, so national colour is carried only by separate
+   map flags instead of the dish objects themselves.
+3. The calibrated CSS ellipse was required by the old opaque preview-grid exports, but it can cut the
+   rims of the new native-alpha plates and makes the objects look artificially cropped.
+
+### Confirmed replacement and implementation plan
+
+1. Preserve the current `story-origin-archive-field`, award photograph, live biography, licensed map,
+   route, country labels, leaders, captions, source note and every event-format change after it.
+2. Replace only the five active plate sources with the separately approved photoreal `v2` studies:
+   Spain/paella, France/duck, Italy/ravioli, Greece/octopus and Turkey/baklava.
+3. Export each native-alpha 1254 px master as a 1024 px, high-quality transparent WebP. This exceeds
+   the largest 118 CSS px plate at high-density display while avoiding five multi-megabyte PNG downloads.
+4. Remove the ellipse clip and hidden overflow from the plate wrapper. Let the real alpha silhouette and
+   full country-colour ceramic rim define every object; retain `object-fit: contain` and square geometry.
+5. Update focused source assertions and provenance, then run tests, lint, production build and
+   `git diff --check`.
+6. Verify the exact current composition at 1440, 1280, 1024, 768, 430, 390 and 375 px, checking sharpness,
+   complete plate rims, label collisions, route visibility and horizontal overflow before publishing.
+
+No new component, layout, copy, animation or UI library is required. The country palettes follow the
+user's direct instruction; restrained shade choices are implementation values within the approved site
+palette rather than a new visual system.
+
+### Implementation result and final anti-template audit
+
+- **Files created:** five 1024 × 1024 high-quality transparent WebP deliveries in
+  `public/media/masterchef/route-plates/`; the 1254 px generation sources remain in the working archive
+  instead of adding 12.5 MB to the public source repository.
+- **Files changed:** `app/page.tsx`, `app/globals.css`, the focused rendered-HTML regression test,
+  `public/media/masterchef/CREDITS.md` and the three required design records.
+- **Templated/rejected elements found:** soft neutral `v1` plate renders, repeated waxy food treatment,
+  one generic ceramic colour and an artificial ellipse crop.
+- **Rework:** all five route dishes now use separate photographic studies with natural ingredient detail
+  and country-colour ceramics. Native alpha replaces the crop mask, so every rim and contact shadow is
+  complete. Turkey's caption and the Cyprus endpoint label were separated without moving route points.
+- **References used:** the user's explicit realism and national-colour corrections, the already approved
+  integrated route, the credited Mediterranean map and the existing ivory/ink/brass site system.
+- **Decisions without direct references:** 1024 px delivery size, WebP quality 94/alpha quality 100 and
+  the small label offsets. These are neutral quality/performance and collision-fit values.
+- **UI libraries:** none added. Existing React, native HTML/CSS and the functional inline SVG route remain
+  the only primitives.
+- **Verification:** the five deliveries report 1024 × 1024 intrinsic size and encoded alpha. Browser
+  review completed at 1440, 1280, 1024, 768, 430, 390 and 375 px; the proof remains photo-left/copy-right,
+  plate rims remain complete, captions and flags do not overlap, route labels stay visible and horizontal
+  overflow is zero at every width. Production build, eight regression tests, ESLint and `git diff --check`
+  pass on the integration source.
+- **Remaining limitation:** the dishes are disclosed photorealistic visualizations, not documentary
+  photographs of food cooked by Evgen. The itinerary and award-photo commercial rights still require
+  independent confirmation before a commercial launch.
+
+## Unified proportional MasterChef field — pre-code audit and implementation plan — 2026-09-09
+
+The latest desktop capture is the authoritative failure reference for this correction. The content is
+approved; its geometry is not. The heading, proof pair and route currently read as three unrelated
+islands because the heading is outside the story field, column six is unused, the copy is much shorter
+than the photograph and the route is capped at 760 px inside a roughly 1300 px composition.
+
+### Templated elements found
+
+- The detached section heading and oversized vertical gap resemble a generic landing-page intro rather
+  than part of the biographical proof.
+- The `min(76%, 760px)` route cap turns the map into a centred poster with large empty side gutters.
+- Independent rows give the photograph, copy and map unrelated left/right edges and no shared visual
+  baseline.
+- On narrow screens the fixed top pair changes which side leaves unused paper, so mechanical scaling
+  cannot keep the composition balanced.
+
+### Replacement plan
+
+1. Move the existing section kicker and heading into the live story-copy region; keep their text and
+   typography system unchanged.
+2. Preserve the complete 1719:900 award photograph at left, live biography at right and every existing
+   route asset, label, plate and disclosure.
+3. Make `story-origin-lead` one bounded editorial stage. The proof occupies the upper left, the complete
+   heading/copy occupies the upper right and the 1450:600 route field uses the full lower width, beginning
+   before the upper pair has visually ended so all three parts interlock.
+4. Remove the route's 760 px maximum, centre transform and the award-caption rule line. Use only the
+   existing paper surface; add no card, frame, radius, shadow, gradient or decorative separator.
+5. At 820 px and below retain the required photo-left/copy-right direction. Let the full-width route begin
+   immediately after the taller foreground rather than colliding with wrapped Russian copy; keep the
+   shared outer edges and continuous paper surface so it remains one field.
+6. Verify the combined field independently at 1440, 1280, 1024, 768, 430, 390 and 375 px, including
+   complete photo visibility, label/plate bounds and zero horizontal overflow.
+
+### Components
+
+- **Remain:** award photograph, exact heading and biography, licensed map, route geometry, flags, five
+  country-colour plate images, live captions, credits and disclosure.
+- **Reworked:** `story-intro` moves into `story-copy`; `story-origin-lead` becomes the shared composition;
+  `chef-journey` becomes the full-width lower layer.
+- **New components:** none. This is a semantic relocation plus project-specific CSS geometry.
+
+### Implementation result and final anti-template audit
+
+- **Files created:** none.
+- **Files changed:** `app/page.tsx`, `app/globals.css`, `tests/rendered-html.test.mjs` and the three
+  mandatory design records.
+- **Templated elements removed:** the detached landing-page intro, the unused intermediary grid column,
+  the 760 px centred-map cap and the rule line under the proof photograph.
+- **Rework:** the existing heading now belongs to the live right-hand copy; the uncropped award proof
+  anchors the opposite edge; the licensed route fills the entire lower width and rises behind the upper
+  pair. Desktop plates were lowered into the visible route band. Tablet and phone use a deliberate shared
+  grid with the route following the taller top element, and phone-only flag badges are removed as
+  duplicate information.
+- **References used:** the user's 21:12 failure capture, the repeated photo-left/text-right instruction,
+  the approved award photograph and route, and the existing ivory/ink/brass design system.
+- **Decisions without direct references:** the 46/48 desktop pair, 6% editorial seam, 520–620 px stage
+  clamp, 12–18 px compact rhythm and the 430 px kicker relocation. These are measured fit decisions from
+  the supplied viewport failures; no new visual language was introduced.
+- **UI libraries:** none added; React semantics, project CSS and the existing inline SVG remain the only
+  implementation primitives.
+- **Desktop and mobile verification:** browser checks completed at 1440, 1280, 1024, 768, 430, 390 and
+  375 px. At every width the proof keeps its 1719:900 ratio with `object-fit: contain`, the five plate and
+  caption bounds stay inside the shared field and `scrollWidth` equals `innerWidth`. At 430 px and below
+  the route label fills the lower-left reserve while the biography stays at right; the map begins only
+  after both are complete.
+- **Build verification:** ESLint, the production build, all eight rendered-HTML regression tests and
+  `git diff --check` pass.
+- **Remaining limitation:** the itinerary still requires confirmation from the chef and the dishes remain
+  disclosed visualizations rather than documentary photographs of food cooked by Evgen.
+
 ## `Я — у вас дома` wide-film correction — pre-code audit and plan — 2026-09-09
 
 The user reports that the active chapter feels very empty and explicitly asks for a larger horizontal

@@ -277,11 +277,11 @@ test("keeps the approved process drawings and mapped photoreal plate journey act
     "/media/blueprint-backgrounds/inquiry-spoon-reference-exact.png",
   ];
   const activeArchiveMedia = [
-    "/media/masterchef/route-plates/01-paella-plate-v1-512.webp",
-    "/media/masterchef/route-plates/02-duck-plate-v1-512.webp",
-    "/media/masterchef/route-plates/03-ravioli-plate-v1-512.webp",
-    "/media/masterchef/route-plates/04-octopus-plate-v1-512.webp",
-    "/media/masterchef/route-plates/05-baklava-plate-v1-512.webp",
+    "/media/masterchef/route-plates/01-paella-plate-v2-1024.webp",
+    "/media/masterchef/route-plates/02-duck-plate-v2-1024.webp",
+    "/media/masterchef/route-plates/03-ravioli-plate-v2-1024.webp",
+    "/media/masterchef/route-plates/04-octopus-plate-v2-1024.webp",
+    "/media/masterchef/route-plates/05-baklava-plate-v2-1024.webp",
     "/media/masterchef/culinary-archive/map-mediterranean-full-cc-by-sa.svg",
     "/media/masterchef/route-flags/spain.svg",
     "/media/masterchef/route-flags/france.svg",
@@ -290,17 +290,10 @@ test("keeps the approved process drawings and mapped photoreal plate journey act
     "/media/masterchef/route-flags/turkey.svg",
     "/media/masterchef/route-flags/cyprus.svg",
   ];
-  const routePlateMasters = [
-    "/media/masterchef/route-plates/01-paella-plate-v1.png",
-    "/media/masterchef/route-plates/02-duck-plate-v1.png",
-    "/media/masterchef/route-plates/03-ravioli-plate-v1.png",
-    "/media/masterchef/route-plates/04-octopus-plate-v1.png",
-    "/media/masterchef/route-plates/05-baklava-plate-v1.png",
-  ];
   const activeBlueprintReferences = `${page}\n${css}`.match(/\/media\/blueprint-backgrounds\/[^"')\s]+/g) ?? [];
 
   await Promise.all(
-    [...activeBlueprints, ...activeArchiveMedia, ...routePlateMasters].map((path) =>
+    [...activeBlueprints, ...activeArchiveMedia].map((path) =>
       access(new URL(`public${path}`, root)),
     ),
   );
@@ -372,16 +365,17 @@ test("keeps the approved process drawings and mapped photoreal plate journey act
     page.indexOf("const chefJourneyStops"),
     page.indexOf("const sourceScenes"),
   );
-  assert.equal((archiveSources.match(/\/media\/masterchef\/route-plates\/[^"]+-512\.webp/g) ?? []).length, 5);
+  assert.equal((archiveSources.match(/\/media\/masterchef\/route-plates\/[^"]+-v2-1024\.webp/g) ?? []).length, 5);
   assert.equal((archiveSources.match(/\/media\/masterchef\/route-flags\/[^"]+\.svg/g) ?? []).length, 6);
   assert.doesNotMatch(archiveSources, /number:/);
   assert.doesNotMatch(page.slice(page.indexOf('className="chef-journey"'), page.indexOf("<EventFormats />")), /stop\.number|<b>0[1-6]<\/b>/);
   assert.doesNotMatch(archiveSources, /culinary-archive\/(?:01-sauce|02-paella-service|03-ravioli-pass|04-octopus-garnish|05-pistachio-pastry)\.webp|lesson:/);
-  assert.match(page, /className="story-origin-archive-field"[\s\S]*?className="story-origin-lead"[\s\S]*?className="story-award"[\s\S]*?className="story-copy"[\s\S]*?className="chef-journey"[\s\S]*?role="group"[\s\S]*?aria-labelledby="chef-journey-label"[\s\S]*?aria-describedby="chef-journey-note"/);
+  assert.match(page, /className="story-origin-archive-field"[\s\S]*?className="story-origin-lead"[\s\S]*?className="story-award"[\s\S]*?className="story-copy"[\s\S]*?className="section-intro story-intro"[\s\S]*?id="story-title"[\s\S]*?className="story-copy-body"[\s\S]*?className="chef-journey"[\s\S]*?role="group"[\s\S]*?aria-labelledby="chef-journey-label"[\s\S]*?aria-describedby="chef-journey-note"/);
+  assert.doesNotMatch(page, /<section className="story"[^>]*>[\s\S]{0,100}<header className="section-intro story-intro"/);
   assert.doesNotMatch(page, /<section className="chef-journey"|chef-journey-head|chef-journey-title|Пять стран\. Пять блюд\./);
   assert.match(page, /className="chef-journey-kicker" id="chef-journey-label">[\s\S]*?маршрут вкусов · 5 стран \/ 5 блюд/);
   assert.match(page, /Редакционная схема предполагаемого маршрута/);
-  assert.match(page, /className="chef-journey-plate" aria-hidden="true"[\s\S]*?width="512"[\s\S]*?height="512"[\s\S]*?alt=""/);
+  assert.match(page, /className="chef-journey-plate" aria-hidden="true"[\s\S]*?width="1024"[\s\S]*?height="1024"[\s\S]*?alt=""/);
   assert.doesNotMatch(page, /aria-label=\{`\$\{stop\.number\}/);
   assert.match(page, /map-mediterranean-full-cc-by-sa\.svg/);
   assert.doesNotMatch(page, /map-atlantic-mediterranean-cc0\.svg/);
@@ -418,16 +412,19 @@ test("keeps the approved process drawings and mapped photoreal plate journey act
   const archivePass = css.slice(css.lastIndexOf("/* Real-photo culinary archive."));
   const journeyPass = css.slice(css.lastIndexOf("/* Integrated transparent-plate route."));
   assert.match(archivePass, /\.story-origin-archive-field\s*\{[^}]*grid-column:\s*1 \/ -1/);
-  assert.match(archivePass, /\.story-origin-lead\s*\{[^}]*grid-template-columns:\s*repeat\(12,/);
-  assert.match(archivePass, /\.story-origin-lead \.story-award\s*\{[^}]*grid-column:\s*1 \/ 6;[^}]*overflow:\s*visible/);
+  assert.match(archivePass, /\.story-origin-lead\s*\{[^}]*display:\s*block;[^}]*height:\s*clamp\(520px, 43vw, 620px\);[^}]*isolation:\s*isolate/);
+  assert.match(archivePass, /\.story-origin-lead \.story-award\s*\{[^}]*position:\s*absolute;[^}]*left:\s*0;[^}]*width:\s*46%;[^}]*overflow:\s*visible/);
   assert.match(archivePass, /\.story-origin-lead \.story-award img\s*\{[^}]*aspect-ratio:\s*1719 \/ 900;[^}]*object-fit:\s*contain/);
-  assert.match(archivePass, /\.story-origin-lead \.story-copy\s*\{[^}]*grid-column:\s*7 \/ 13/);
-  assert.match(archivePass, /@media \(max-width:\s*820px\)[\s\S]*?\.story-origin-lead \.story-award\s*\{[^}]*grid-column:\s*1 \/ 7/);
-  assert.match(archivePass, /@media \(max-width:\s*820px\)[\s\S]*?\.story-origin-lead \.story-copy\s*\{[^}]*grid-column:\s*7 \/ 13/);
-  assert.match(journeyPass, /\.chef-journey\s*\{[^}]*position:\s*relative;[^}]*grid-column:\s*1 \/ -1;[^}]*margin-top:\s*-24px/);
+  assert.match(archivePass, /\.story-origin-lead \.story-copy\s*\{[^}]*position:\s*absolute;[^}]*right:\s*0;[^}]*width:\s*48%;[^}]*background:\s*var\(--paper\)/);
+  assert.match(archivePass, /\.story-copy \.story-intro\s*\{[^}]*display:\s*block;[^}]*margin:\s*0/);
+  assert.match(archivePass, /@media \(max-width:\s*820px\)[\s\S]*?\.story-origin-lead\s*\{[^}]*display:\s*grid;[^}]*grid-template-columns:\s*repeat\(12,[^}]*column-gap:\s*10px/);
+  assert.match(archivePass, /@media \(max-width:\s*820px\)[\s\S]*?\.story-origin-lead \.story-award\s*\{[^}]*position:\s*relative;[^}]*grid-column:\s*1 \/ 7;[^}]*grid-row:\s*2/);
+  assert.match(archivePass, /@media \(max-width:\s*820px\)[\s\S]*?\.story-origin-lead \.story-copy\s*\{[^}]*display:\s*contents/);
+  assert.match(archivePass, /@media \(max-width:\s*820px\)[\s\S]*?\.story-copy-body\s*\{[^}]*grid-column:\s*7 \/ 13;[^}]*grid-row:\s*2;[^}]*background:\s*var\(--paper\)/);
+  assert.match(journeyPass, /\.chef-journey\s*\{[^}]*position:\s*absolute;[^}]*right:\s*0;[^}]*bottom:\s*0;[^}]*width:\s*100%/);
   assert.match(journeyPass, /\.story-copy \.chef-journey-kicker\s*\{[^}]*margin:\s*12px 0 0/);
-  assert.match(journeyPass, /\.chef-journey-canvas\s*\{[^}]*position:\s*relative;[^}]*height:\s*clamp\(340px, 24vw, 344px\);[^}]*overflow:\s*hidden/);
-  assert.match(journeyPass, /\.chef-journey-map-field\s*\{[^}]*position:\s*absolute;[^}]*width:\s*min\(76%, 760px\);[^}]*aspect-ratio:\s*1450 \/ 600/);
+  assert.match(journeyPass, /\.chef-journey-canvas\s*\{[^}]*position:\s*relative;[^}]*height:\s*auto;[^}]*aspect-ratio:\s*1450 \/ 600;[^}]*overflow:\s*hidden/);
+  assert.match(journeyPass, /\.chef-journey-map-field\s*\{[^}]*position:\s*absolute;[^}]*left:\s*0;[^}]*width:\s*100%;[^}]*aspect-ratio:\s*1450 \/ 600;[^}]*transform:\s*none/);
   assert.match(journeyPass, /\.chef-journey-map-layer image\s*\{[^}]*opacity:\s*\.16/);
   assert.match(journeyPass, /\.chef-journey-route polyline\s*\{[^}]*stroke:\s*var\(--accent-small\);[^}]*stroke-width:\s*1\.5/);
   assert.match(journeyPass, /\.chef-journey-flag-layer\s*\{[^}]*z-index:\s*3;[^}]*pointer-events:\s*none/);
@@ -440,15 +437,18 @@ test("keeps the approved process drawings and mapped photoreal plate journey act
   for (const id of routeIds) {
     assert.match(journeyPass, new RegExp(`\\.chef-journey-stop-${id}\\s*\\{[^}]*(?:left|right):[^;]+;[^}]*top:`));
   }
-  assert.match(journeyPass, /\.chef-journey-plate\s*\{[^}]*aspect-ratio:\s*1 \/ 1;[^}]*background:\s*transparent;[^}]*clip-path:\s*ellipse/);
+  assert.match(journeyPass, /\.chef-journey-plate\s*\{[^}]*aspect-ratio:\s*1 \/ 1;[^}]*overflow:\s*visible;[^}]*background:\s*transparent/);
+  assert.doesNotMatch(journeyPass, /\.chef-journey-plate\s*\{[^}]*clip-path:/);
   assert.match(journeyPass, /\.chef-journey-plate img\s*\{[^}]*background:\s*transparent;[^}]*object-fit:\s*contain/);
   assert.doesNotMatch(journeyPass, /\.chef-journey-(?:stop|plate)(?: img)?\s*\{[^}]*(?:border|filter|box-shadow|drop-shadow):/);
   assert.doesNotMatch(journeyPass, /grid-template-columns:\s*repeat\(5/);
   assert.doesNotMatch(journeyPass, /@media \(max-width:\s*940px\)|chef-journey-mobile-leader/);
   assert.doesNotMatch(journeyPass, /\.chef-journey-route\s*\{\s*display:\s*none/);
-  assert.match(journeyPass, /@media \(max-width:\s*820px\)[\s\S]*?\.chef-journey-canvas\s*\{[^}]*height:\s*clamp\(245px, 42vw, 330px\)/);
+  assert.match(journeyPass, /@media \(max-width:\s*820px\)[\s\S]*?\.chef-journey\s*\{[^}]*position:\s*relative;[^}]*grid-column:\s*1 \/ -1;[^}]*grid-row:\s*3;[^}]*margin:\s*-4px 0 0;[^}]*padding-top:\s*0/);
+  assert.match(journeyPass, /@media \(max-width:\s*820px\)[\s\S]*?\.chef-journey-canvas\s*\{[^}]*height:\s*clamp\(245px, 42vw, 330px\);[^}]*aspect-ratio:\s*auto/);
   assert.match(journeyPass, /@media \(max-width:\s*560px\)[\s\S]*?\.chef-journey-canvas\s*\{[^}]*height:\s*clamp\(190px, 52vw, 240px\)/);
   assert.match(journeyPass, /@media \(max-width:\s*560px\)[\s\S]*?\.chef-journey-stop\s*\{[^}]*clamp\(48px, 14vw, 58px\)/);
+  assert.match(journeyPass, /@media \(max-width:\s*560px\)[\s\S]*?\.chef-journey-flag-layer\s*\{[^}]*display:\s*none/);
   assert.match(journeyPass, /@media \(max-width:\s*560px\)[\s\S]*?\.chef-journey-stop figcaption span,[\s\S]*?font-size:\s*11px/);
   assert.match(journeyPass, /@media \(max-width:\s*560px\)[\s\S]*?\.chef-journey-point\s*\{[^}]*display:\s*none;[^}]*\}[\s\S]*?\.chef-journey-point-cyprus\s*\{[^}]*display:\s*flex/);
   assert.match(css, /\.home-story\s*\{[^}]*display:\s*grid;[^}]*grid-template-columns:\s*repeat\(12,[^}]*max-width:\s*var\(--content\)/);
@@ -622,8 +622,8 @@ test("applies outcome-specific actions and interaction-only motion", async () =>
   assert.match(css, /\.header-action:active\s*\{\s*transform:\s*translateY\(1px\)/);
   assert.match(css, /\.contact-action:active\s*\{\s*transform:\s*translateY\(1px\)/);
   assert.doesNotMatch(css, /animation:|animation-timeline|:hover\s+img|parallax|marquee/);
-  assert.equal((css.match(/clip-path:/g) ?? []).length, 1);
-  assert.match(css, /\.chef-journey-plate\s*\{[^}]*clip-path:\s*ellipse/);
+  assert.equal((css.match(/clip-path:/g) ?? []).length, 0);
+  assert.match(css, /\.chef-journey-plate\s*\{[^}]*overflow:\s*visible/);
   assert.doesNotMatch(css, /font(?:-size)?:\s*(?:[^;]*\s)?(?:8|9|10)px\b/);
   assert.match(motion, /prefers-reduced-motion: reduce/);
   assert.match(motion, /IntersectionObserver/);

@@ -1387,27 +1387,6 @@ cards and multi-panel process art.
 - **Mobile:** the pair remains side by side down to 375 px with a 10–12 px gap and independent 11 px
   captions; the copy sits above it. The stage ledger remains prohibited.
 
-## Wide horizontal home-film amendment — 2026-09-09
-
-This amendment supersedes every earlier portrait or paired-media geometry for the active `Я — у вас дома`
-chapter.
-
-- Keep the existing heading, kicker, two-sentence lede, promise, caption and the original
-  `chef-story-img-5399-no-grill.mp4` media package unchanged.
-- At widths above 820 px, copy occupies columns `1 / 5` and the film occupies columns `5 / 13` in the
-  established 12-column content field. The film has no independent pixel cap.
-- From 561–820 px, copy occupies columns `1 / 6` and film columns `6 / 13`; the film remains dominant while
-  both fields retain readable measure.
-- At 560 px and below, the semantic order is copy followed by a full-content-width film. This is a
-  deliberate compact composition, not a stacked card treatment.
-- The film aperture and video resolve to horizontal `4 / 3` at every width. Preserve square edges and use
-  `object-fit: cover`; never stretch the portrait source.
-- Negative space remains around the editorial pair, but no entire grid columns are intentionally abandoned
-  between the two subjects. Do not add a companion image, process illustration, step ledger or decorative
-  filler to solve density.
-- Existing paper, ink, muted, rust, typography, caption and motion behavior remain unchanged. No UI library
-  or stock component is introduced.
-
 ## Event-specific blueprint candidate contract — 2026-09-09
 
 The user approved this set on 2026-09-09. The three `*concept-v3.png` delivery assets are active in the
@@ -1458,6 +1437,65 @@ This mobile correction supersedes only the final `560 px and below` rule above.
 ## Event-format compact narrow sheet contract — 2026-09-09
 
 This contract supersedes the portrait-underlay contract above.
+
+- **Source boundary:** use the dedicated compact raster through 940 px. The approved 1774 × 887 wide
+  concept returns at 941 px, the first verified width where its live-copy zones remain clear.
+- **Phone canvas:** use a near-square sheet and a square CSS field. The upper 46–50% is calm ivory paper
+  reserved for the live copy/photo pair; one sparse process band occupies the lower half. No process mark
+  may cross the two foreground rectangles.
+- **Density:** keep at least half the canvas as unmarked paper. Ban full-height process towers, botanical
+  borders, repeated realistic participant bodies, mirrored station panels and richly shaded table spreads.
+  Use fine graphite, one restrained brass route and only small sage/terracotta accents.
+- **Foreground hierarchy:** at 360–430 px the exact HTML copy remains 12 px or larger, headings remain
+  17 px or larger, and documentary photographs remain recognisable apertures rather than thumbnails.
+  Private dinner/event keep copy left and photo right; masterclass keeps photo left and copy right.
+- **Geometry:** phone fields use `1 / 1`; compact foregrounds begin near 5%. The private-dinner portrait
+  may use a narrower 33–35% aperture so its 4:5 crop clears the lower band; landscape photographs may use
+  42–48%. Exact values are verified against the longest private-event and masterclass copy.
+- **Tablet and intermediate geometry:** 561–820 px keeps the same square field and deliberately larger
+  live type. At 821–940 px the same compact raster is contained inside a shallow `2 / 1` field while the
+  established wide live-copy/photo coordinates are retained; this removes height without reintroducing
+  illustration behind the copy.
+- **Surface:** continuous warm paper, square edges, no border around apertures, card, radius, shadow,
+  gradient, glow, embedded words, number, logo or watermark.
+
+## Country-colour photographic route plates — 2026-09-09
+
+- The integrated MasterChef route, licensed map, country labels, leaders and live captions remain the
+  approved structure. This amendment changes only the five plate-image deliveries.
+- Each dish is one isolated native-alpha photographic cutout on a complete ceramic plate: paella for
+  Spain, duck for France, ravioli for Italy, octopus for Greece and baklava for Turkey.
+- Ceramic colour carries country identity with restrained glazed tones: saffron/red; ivory/navy/red;
+  ivory/green/terracotta; ivory/cobalt; crimson/ivory. Do not print flags, crests or typography on plates.
+- Photography uses coherent near-overhead perspective, soft daylight, contact shadow, natural food
+  texture and restrained saturation. Avoid waxy surfaces, repeated ingredients, synthetic blur and CGI
+  specular highlights.
+- Active delivery is 1024 × 1024 high-quality WebP with alpha. At the current 48–118 CSS px display range
+  this preserves high-density sharpness without shipping the multi-megabyte masters.
+- The wrapper must not crop the alpha silhouette: no `clip-path` and no hidden overflow. The image stays
+  square with `object-fit: contain`; the full coloured rim must remain visible at every breakpoint.
+
+## Unified MasterChef editorial-stage contract — 2026-09-09
+
+- `story-origin-lead` is one continuous paper field. On desktop its height is approximately 43 viewport
+  percent, clamped to 520–620 px; it is not a card and receives no border, radius, shadow or tint.
+- The complete award photograph occupies the upper-left 46%; the live heading and biography occupy the
+  upper-right 48%, beginning at 52%. The 6% interval is editorial whitespace, not an empty grid column.
+- The Mediterranean route keeps its native `1450 / 600` ratio, aligns to the bottom and uses 100% of
+  the desktop stage so it begins beneath the photograph and continues beneath the copy from outer edge
+  to outer edge. It has no arbitrary pixel maximum. All map geometry remains in its source coordinate
+  system.
+- At widths through 820 px the upper foreground remains two equal columns with a 10 px seam. The route
+  becomes full width in the immediately following grid row with a 12–18 px shared rhythm; it never
+  crosses wrapped photography or text. Phone flags are suppressed because the live plate captions repeat
+  country identity at a readable size.
+- At 430 px and below the route kicker occupies the otherwise unused lower-left space beneath the complete
+  landscape proof while the biography remains in the right column. This is a measured balance correction,
+  not extra content or a detached label.
+- The proof image always uses `object-fit: contain` at the verified 1719:900 ratio. Its caption has no
+  artificial rule line. The map, plate cutouts and captions must stay within the shared field.
+- Plate delivery, route palette, typography and evidence labels remain governed by the approved route
+  contract above. This correction changes proportion and placement only.
 
 - **Source boundary:** use the dedicated compact raster through 940 px. The approved 1774 × 887 wide
   concept returns at 941 px, the first verified width where its live-copy zones remain clear.
