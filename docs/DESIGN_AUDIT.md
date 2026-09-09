@@ -6292,3 +6292,77 @@ shadow, glow, generic icon, new CTA, filler copy, generated food or desktop-only
 change. Remaining risk: the selected third-party restaurant photograph has no independently verified
 commercial licence; the site describes it only as an example of plate composition and does not attribute
 the dish to Evgen.
+
+## Private-dinner missing drafting rules — pre-code audit and plan — 2026-09-10
+
+The user supplies a capture of the previously approved private-dinner mockup and asks where its thin rules
+went. Their correction is specific: the rules are essential, while every label on or beside them must stay
+removed. The active first-format DOM, full CSS cascade, seven-plate source, documentary photograph, live
+copy, four responsive field ratios, focused regression tests, reference map and design system were audited
+before interface code was changed.
+
+### Audit findings
+
+1. The current private-dinner implementation preserves the approved copy, photograph and seven plates but
+   leaves them floating on an unarticulated paper field; no active layer reproduces the supplied mockup's
+   perimeter, upper/lower rails or internal separators.
+2. Restoring the retired blueprint raster would also restore the abstract route, labels and visual noise
+   the user rejected. The correction therefore belongs in a small live structural layer, not in a new image.
+3. The phone composition has a clear horizontal boundary between the upper copy/photo pair and lower plate
+   image. Wide layouts are intentionally asymmetric, so the divider must shorten before the tall photo and
+   the vertical spine must occupy only the quiet gap between content zones.
+4. Existing `--rule`, `--accent-small`, square edges and paper tokens fully specify the visual character.
+   No new palette, component library, image or interaction is required.
+
+### Implementation plan recorded before interface edits
+
+1. Add one empty `aria-hidden` drafting layer only when `courseImageSrc` is present. It contains an inset
+   perimeter, top rail, bottom rail, internal horizontal divider and one vertical spine with two hollow ends.
+2. Keep all marks behind live copy and the documentary photograph; let the divider sit only in the quiet
+   boundary around the course image. Add no text, number, caption, arrow, icon or semantic timeline role.
+3. Author base, 821–1100, 561–820 and phone coordinates against the already approved field ratios without
+   changing copy, photography, plate scale or the other two event formats.
+4. Add focused source assertions for the line layer, empty accessibility treatment, required structural
+   classes and explicit absence of the previously rejected course labels.
+5. Run `git diff --check`, ESLint, production build and all tests. Verify 1440, 1280, 1024, 768, 430, 390
+   and 375 px for line visibility, content crossings, image loading, overflow and preserved 4 + 3 topology.
+
+Templated/unsuccessful element found: an empty paper canvas that no longer carried the approved structural
+logic. Retained: every live word, both first-format images, all first-format ratios, event order, other two
+format concepts and global visual tokens. Reworked: one first-format-only decorative rule layer. New assets
+and UI libraries required: none. Exact breakpoint coordinates remain neutral collision-avoidance decisions.
+
+### Implementation result and final anti-template audit
+
+`EventFormats` now mounts one empty `aria-hidden` rule layer only for the private-dinner record. The layer
+contains an inset perimeter, empty upper and lower rails, the horizontal boundary before the seven plates
+and one accent spine with two hollow endpoints. It contains no text node and has no interaction or semantic
+timeline role. The approved copy, documentary photograph, seven-plate image, all field ratios and the other
+two service rows remain unchanged.
+
+Wide layouts use the current asymmetric content geometry: the course divider stops at the vertical spine
+before the tall photograph. From 820 px down, the divider spans the usable paper width at the exact boundary
+between the upper live pair and the lower image; the spine moves into their existing central gap. All marks
+use the project's `1px` `--rule`/`--accent-small` vocabulary. The only circular radius is the two explicitly
+referenced hollow line endpoints; no surface, photograph or UI component receives rounding.
+
+Files created: none. Files changed: `app/page.tsx`, `app/globals.css`, `tests/rendered-html.test.mjs`,
+`docs/DESIGN_REFERENCE_MAP.md`, `docs/DESIGN_SYSTEM.md`, this audit and the perimeter-mockup provenance
+`README.md`. Templated/unsuccessful element found: a structurally empty private-dinner field after the
+rejected route raster was removed. It is reworked with one content-specific line layer, not a card or a
+restored diagram. Reference used: the user's supplied approved-mockup capture and direct instruction that
+the stripes are essential but must carry no labels. Decisions without a numeric reference are only the
+responsive percentages required to keep the marks in quiet gaps. UI libraries and new assets: none.
+
+Visual verification at 1440 × 1000, 1280 × 900, 1024 × 900, 768 × 1024, 430 × 932, 390 × 844 and
+375 × 812 found both images loaded, an empty rule-layer text value, zero horizontal overflow and every live
+element contained by the field at all widths. The narrowest copy-to-spine clearance is 13.6 px, the narrowest
+spine-to-photo clearance is 16 px, and the narrowest copy-to-course-divider clearance is 26.8 px. Desktop,
+tablet and phone screenshots confirm that the lines remain visible while crossing no text, face or plate.
+`git diff --check`, ESLint, the Vinext production build and all eight tests pass.
+
+Final anti-template result: no repeated card, rounded panel, shadow, gradient, glass, glow, generic icon,
+extra copy, label, arrow, restored pseudo-technical route, animation or library-default styling was added.
+Mobile retains its separately authored geometry rather than stacking the wide field mechanically. Remaining
+limitation is the existing one: the seven-plate image is representative generated food imagery, not proof of
+a delivered client menu; the new line layer adds no factual claim.

@@ -243,6 +243,15 @@ function EventFormats() {
           >
             {format.processBackground ? (
               <div className="format-process-field">
+                {format.courseImageSrc ? (
+                  <span className="format-menu-drafting-lines" aria-hidden="true">
+                    <span className="format-menu-drafting-frame" />
+                    <span className="format-menu-drafting-rule format-menu-drafting-rule-top" />
+                    <span className="format-menu-drafting-rule format-menu-drafting-rule-divider" />
+                    <span className="format-menu-drafting-rule format-menu-drafting-rule-bottom" />
+                    <span className="format-menu-drafting-spine" />
+                  </span>
+                ) : null}
                 {!format.courseImageSrc ? (
                   <picture className="format-process-plan">
                     <source media="(max-width: 940px)" srcSet={format.compactDrawingSrc} />

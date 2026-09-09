@@ -1092,3 +1092,19 @@ experiments. The restaurant source page used to recover the same photograph at d
 
 The exact leader coordinates and responsive figure heights have no independent visual reference. They are
 neutral fitting decisions tied to visible food targets and must be verified at all mandatory widths.
+
+## Unlabelled drafting rules for the private-dinner field — 2026-09-10
+
+The user's supplied mobile capture of the previously approved private-dinner mockup is authoritative for
+the missing line structure. The request restores only its organising rules; all course labels remain
+explicitly rejected.
+
+| Project element | Reference | Principle used | What is not copied | Project implementation |
+|---|---|---|---|---|
+| Perimeter keyline | User-supplied `Photo 1.jpg` in the 2026-09-10 correction; approved square-edge paper system | Make the private-dinner composition read as one authored sheet rather than loose content on an empty field | No card fill, radius, shadow, double decorative frame or generic panel styling | Draw one inset `1px` `--rule` frame inside the existing first-format process field |
+| Upper and lower rules | Same supplied mockup and the user's earlier direction `по периметру, сверху, снизу, между` | Establish quiet header/footer bands without adding another verbal hierarchy | No `ЧАСТНЫЙ УЖИН`, `СЕМЬ ПОДАЧ`, number, legend, unit or ornamental caption on the rules | Add one short inset rule near the top and one near the bottom; both remain empty and decorative |
+| Content separators | Same supplied mockup; current live copy/photo/4+3 plate geometry | Use the vertical rule to distinguish copy from documentary photo and the horizontal rule to distinguish the live pair from the course field | No timeline meaning, arrows, course order, labels, extra nodes or line crossing through food and faces | Position a vertical spine only inside the upper live-content zone and a horizontal divider at the start of the plate zone; adapt their extents to the existing asymmetric wide layout |
+| Line endpoints | Circular termini visible on the supplied vertical separator; existing `--accent-small` drafting accent | Give the vertical spine a deliberate beginning and end at small scale | No icon, marker legend, interaction, animation or repeated dot pattern | Use two small hollow endpoints with paper centres; hide the complete line layer from assistive technology |
+
+Exact percentages at each breakpoint are neutral fitting decisions. They must keep the rules in quiet
+paper gaps and preserve the approved copy, documentary photograph and complete seven-plate image.

@@ -1,11 +1,13 @@
 # Event-format perimeter concept — discussion mockup — 2026-09-09
 
-Unapproved mobile exploration created in response to the user's direct correction: the drawing must
-continue around the perimeter, across the top, across the bottom and through the gap between live text
-and the documentary photograph.
+Mobile exploration created in response to the user's direct correction: the drawing must continue around
+the perimeter, across the top, across the bottom and through the gap between live text and the documentary
+photograph. On 2026-09-10 the user approved only that thin-rule structure for `Частный ужин`, explicitly
+without any labels. The illustrated routes, captions and the two other service directions remain unapproved.
 
-This folder is deliberately not wired into `app/page.tsx` or copied to `public/`. The current production
-site remains unchanged until the user reviews the rendered `mobile-preview.png` and approves a direction.
+The raster and SVG mockup files remain deliberately unwired and are not copied to `public/`. Production
+uses the selected structural principle as a small live CSS/HTML layer so rejected labels and routes cannot
+return with it.
 
 - `01-private-dinner-perimeter-v6.png`: ingredients and tools around the upper/side route, a sauce gesture
   through the middle and seven courses plus the intimate table below.

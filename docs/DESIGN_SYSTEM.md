@@ -1622,8 +1622,9 @@ formats unchanged.
 - The first event field keeps its live `01`, `Частный ужин`, exact paragraph and real portrait photograph.
 - Its supporting visual is one text-free, overhead photographic composition with exactly seven complete
   plates in a fixed two-row rhythm: four on the upper row and three centred below.
-- No course number, course type, dish name, arrow, line, legend or caption is visible inside or beneath the
-  plate field. The existing paragraph remains the sole explanation of the seven-course offer.
+- No course number, course type, dish name, arrow, route connector, legend or caption is visible inside or
+  beneath the plate image. The existing paragraph remains the sole explanation of the seven-course offer.
+  A separate empty interface layer may carry only the approved structural perimeter and separator rules.
 - The plate composition is representative generated imagery, not evidence of an actual client menu. It is
   decorative to assist visual understanding and therefore receives empty alternative text; the factual
   promise remains accessible live HTML.
@@ -1670,3 +1671,19 @@ rejected generated dish experiments. The active sourcing reset and its three-pho
 - **Delivery:** serve a versioned alpha WebP/PNG from `public/media/menu/`; keep source/provenance details
   in project records. The rejected `personal-menu-photo-v1.png` and `personal-menu-photo-celeriac-v2.png`
   remain inactive design history and must never be referenced by the live page.
+
+## Private-dinner drafting-rule amendment — 2026-09-10
+
+- The `Частный ужин` process field has one inset square perimeter keyline plus three empty structural
+  hairlines: upper rail, lower rail and the divider before the seven-plate field.
+- One vertical spine separates live copy from the documentary photograph only in the upper content zone.
+  It ends in two hollow circular points using the existing paper and `--accent-small` colours.
+- All strokes are `1px` and use `--rule`; endpoints are restrained drafting accents. The layer is
+  non-interactive and `aria-hidden`.
+- No word, number, course name, legend, measurement or icon may be attached to these lines. Their only job
+  is to frame and separate the existing factual copy, documentary photograph and representative plates.
+- At 560 px and below, the horizontal content divider follows the physical boundary between the upper
+  copy/photo pair and the lower 4 + 3 plate image. At wider breakpoints, its length and the vertical spine
+  adapt to the existing asymmetric composition so neither line crosses text, a face or a plate.
+- Preserve the approved first-format aspect ratios and all image sizes. Add no card surface, radius,
+  shadow, gradient, glass, glow, motion or library component.

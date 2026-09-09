@@ -3154,6 +3154,79 @@ button:focus-visible,
   background: var(--paper);
 }
 
+.format-menu-drafting-lines,
+.format-menu-drafting-frame,
+.format-menu-drafting-rule,
+.format-menu-drafting-spine {
+  position: absolute;
+  display: block;
+  pointer-events: none;
+}
+
+.format-menu-drafting-lines {
+  z-index: 2;
+  inset: 0;
+}
+
+.format-menu-drafting-frame {
+  inset: 1.5%;
+  border: 1px solid var(--rule);
+}
+
+.format-menu-drafting-rule {
+  left: 3%;
+  height: 1px;
+  background: var(--rule);
+}
+
+.format-menu-drafting-rule-top,
+.format-menu-drafting-rule-bottom {
+  right: 3%;
+}
+
+.format-menu-drafting-rule-top {
+  top: 4%;
+}
+
+.format-menu-drafting-rule-divider {
+  top: 34%;
+  right: 35%;
+}
+
+.format-menu-drafting-rule-bottom {
+  bottom: 4%;
+}
+
+.format-menu-drafting-spine {
+  top: 5.5%;
+  left: 65%;
+  width: 1px;
+  height: 28.5%;
+  background: var(--accent-small);
+  opacity: .62;
+}
+
+.format-menu-drafting-spine::before,
+.format-menu-drafting-spine::after {
+  position: absolute;
+  left: 50%;
+  width: 6px;
+  height: 6px;
+  border: 1px solid var(--accent-small);
+  border-radius: 50%;
+  background: var(--paper);
+  content: "";
+  transform: translate(-50%, -50%);
+}
+
+.format-menu-drafting-spine::before {
+  top: 0;
+}
+
+.format-menu-drafting-spine::after {
+  top: 100%;
+}
+
 .format-menu-spread {
   position: absolute;
   z-index: 1;
@@ -3171,12 +3244,14 @@ button:focus-visible,
 }
 
 .format-row-1.format-row-menu .format-copy {
+  z-index: 3;
   top: 7%;
   left: 3%;
   width: 36%;
 }
 
 .format-row-1.format-row-menu .format-media {
+  z-index: 3;
   top: 5%;
   left: 70%;
   width: 26%;
@@ -3187,6 +3262,16 @@ button:focus-visible,
 @media (min-width: 821px) and (max-width: 1100px) {
   .format-row-1.format-row-menu .format-process-field {
     aspect-ratio: 1.5 / 1;
+  }
+
+  .format-row-1.format-row-menu .format-menu-drafting-rule-divider {
+    top: 44%;
+    right: 35%;
+  }
+
+  .format-row-1.format-row-menu .format-menu-drafting-spine {
+    left: 65%;
+    height: 38.5%;
   }
 
   .format-row-1.format-row-menu .format-menu-spread {
@@ -3217,6 +3302,16 @@ button:focus-visible,
     bottom: 2%;
     width: 76%;
   }
+
+  .format-row-1.format-row-menu .format-menu-drafting-rule-divider {
+    top: 46.5%;
+    right: 3%;
+  }
+
+  .format-row-1.format-row-menu .format-menu-drafting-spine {
+    left: 57.5%;
+    height: 41%;
+  }
 }
 
 @media (max-width: 560px) {
@@ -3241,6 +3336,29 @@ button:focus-visible,
     left: 6%;
     bottom: 2%;
     width: 88%;
+  }
+
+  .format-row-1.format-row-menu .format-menu-drafting-frame {
+    inset: 1.25%;
+  }
+
+  .format-row-1.format-row-menu .format-menu-drafting-rule-top {
+    top: 3.5%;
+  }
+
+  .format-row-1.format-row-menu .format-menu-drafting-rule-divider {
+    top: 43.5%;
+    right: 3%;
+  }
+
+  .format-row-1.format-row-menu .format-menu-drafting-rule-bottom {
+    bottom: 3.5%;
+  }
+
+  .format-row-1.format-row-menu .format-menu-drafting-spine {
+    top: 5%;
+    left: 57%;
+    height: 38.5%;
   }
 }
 

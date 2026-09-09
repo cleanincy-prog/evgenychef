@@ -170,7 +170,8 @@ test("builds the approved collage frame around one central identity spread", asy
   assert.doesNotMatch(page, /hero-collage-anchor/);
   assert.doesNotMatch(page, /className="hero-left"/);
   assert.doesNotMatch(css, /\.cyprus-|\.page-rail|\.pattern-module|\.format-weave|backdrop-filter/i);
-  assert.equal((css.match(/border-radius\s*:/g) ?? []).length, 0);
+  assert.equal((css.match(/border-radius\s*:/g) ?? []).length, 1);
+  assert.match(css, /\.format-menu-drafting-spine::before,[\s\S]*?\.format-menu-drafting-spine::after\s*\{[^}]*border-radius:\s*50%/);
   assert.doesNotMatch(css, /\.menu-dish/);
 });
 
@@ -311,6 +312,16 @@ test("keeps the approved process drawings, private-dinner plates and mapped plat
   assert.match(page, /format\.courseImageSrc \? " format-row-menu" : ""/);
   assert.match(page, /!format\.courseImageSrc \? \([\s\S]*?className="format-process-plan"/);
   assert.match(page, /className="format-menu-spread" aria-hidden="true"[\s\S]*?width="1200"[\s\S]*?height="800"[\s\S]*?alt=""/);
+  assert.equal((page.match(/className="format-menu-drafting-lines" aria-hidden="true"/g) ?? []).length, 1);
+  for (const className of [
+    "format-menu-drafting-frame",
+    "format-menu-drafting-rule format-menu-drafting-rule-top",
+    "format-menu-drafting-rule format-menu-drafting-rule-divider",
+    "format-menu-drafting-rule format-menu-drafting-rule-bottom",
+    "format-menu-drafting-spine",
+  ]) {
+    assert.match(page, new RegExp(`className="${className}"`));
+  }
   assert.doesNotMatch(page, /Стартер|Холодная закуска|Горячая закуска|Основное блюдо|Десерт/);
   assert.doesNotMatch(page, /mobileDrawingSrc|mobile-v4/);
   assert.match(css, /The rejected tall posters[\s\S]*?@media \(min-width: 561px\) and \(max-width: 820px\)[\s\S]*?aspect-ratio:\s*1 \/ 1;[\s\S]*?@media \(min-width: 821px\) and \(max-width: 940px\)[\s\S]*?aspect-ratio:\s*2 \/ 1;[\s\S]*?@media \(max-width: 560px\)[\s\S]*?aspect-ratio:\s*1 \/ 1;/);
@@ -515,6 +526,10 @@ test("keeps the approved process drawings, private-dinner plates and mapped plat
   assert.match(privateDinnerMenuPass, /\.format-row-1\.format-row-menu \.format-process-field\s*\{[^}]*overflow:\s*hidden;[^}]*aspect-ratio:\s*1\.8 \/ 1;[^}]*background:\s*var\(--paper\)/);
   assert.match(privateDinnerMenuPass, /\.format-menu-spread\s*\{[^}]*position:\s*absolute;[^}]*z-index:\s*1;[^}]*width:\s*56%/);
   assert.match(privateDinnerMenuPass, /\.format-menu-spread img\s*\{[^}]*width:\s*100%;[^}]*height:\s*auto/);
+  assert.match(privateDinnerMenuPass, /\.format-menu-drafting-frame\s*\{[^}]*inset:\s*1\.5%;[^}]*border:\s*1px solid var\(--rule\)/);
+  assert.match(privateDinnerMenuPass, /\.format-menu-drafting-rule-divider\s*\{[^}]*top:\s*34%;[^}]*right:\s*35%/);
+  assert.match(privateDinnerMenuPass, /\.format-menu-drafting-spine\s*\{[^}]*left:\s*65%;[^}]*width:\s*1px;[^}]*background:\s*var\(--accent-small\)/);
+  assert.match(privateDinnerMenuPass, /\.format-menu-drafting-spine::before,[\s\S]*?\.format-menu-drafting-spine::after\s*\{[^}]*border:\s*1px solid var\(--accent-small\);[^}]*border-radius:\s*50%/);
   assert.match(privateDinnerMenuPass, /@media \(min-width: 821px\) and \(max-width: 1100px\)[\s\S]*?aspect-ratio:\s*1\.5 \/ 1;[\s\S]*?width:\s*52%/);
   assert.match(privateDinnerMenuPass, /@media \(min-width: 561px\) and \(max-width: 820px\)[\s\S]*?aspect-ratio:\s*1 \/ 1;[\s\S]*?width:\s*76%/);
   assert.match(privateDinnerMenuPass, /@media \(max-width: 560px\)[\s\S]*?aspect-ratio:\s*\.92 \/ 1;[\s\S]*?width:\s*88%/);
