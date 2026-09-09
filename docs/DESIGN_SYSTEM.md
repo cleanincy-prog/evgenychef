@@ -1474,3 +1474,25 @@ This contract supersedes the portrait-underlay contract above.
   this preserves high-density sharpness without shipping the multi-megabyte masters.
 - The wrapper must not crop the alpha silhouette: no `clip-path` and no hidden overflow. The image stays
   square with `object-fit: contain`; the full coloured rim must remain visible at every breakpoint.
+
+## Unified MasterChef editorial-stage contract — 2026-09-09
+
+- `story-origin-lead` is one continuous paper field. On desktop its height is approximately 43 viewport
+  percent, clamped to 520–620 px; it is not a card and receives no border, radius, shadow or tint.
+- The complete award photograph occupies the upper-left 46%; the live heading and biography occupy the
+  upper-right 48%, beginning at 52%. The 6% interval is editorial whitespace, not an empty grid column.
+- The Mediterranean route keeps its native `1450 / 600` ratio, aligns to the bottom and uses 100% of
+  the desktop stage so it begins beneath the photograph and continues beneath the copy from outer edge
+  to outer edge. It has no arbitrary pixel maximum. All map geometry remains in its source coordinate
+  system.
+- At widths through 820 px the upper foreground remains two equal columns with a 10 px seam. The route
+  becomes full width in the immediately following grid row with a 12–18 px shared rhythm; it never
+  crosses wrapped photography or text. Phone flags are suppressed because the live plate captions repeat
+  country identity at a readable size.
+- At 430 px and below the route kicker occupies the otherwise unused lower-left space beneath the complete
+  landscape proof while the biography remains in the right column. This is a measured balance correction,
+  not extra content or a detached label.
+- The proof image always uses `object-fit: contain` at the verified 1719:900 ratio. Its caption has no
+  artificial rule line. The map, plate cutouts and captions must stay within the shared field.
+- Plate delivery, route palette, typography and evidence labels remain governed by the approved route
+  contract above. This correction changes proportion and placement only.

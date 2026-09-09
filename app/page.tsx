@@ -331,15 +331,6 @@ export default function Home() {
         </section>
 
         <section className="story" id="film" aria-labelledby="story-title">
-          <header className="section-intro story-intro">
-            <p className="section-kicker">о шефе</p>
-            <h2 id="story-title">
-              От MasterChef
-              <br />
-              <em>к вашему столу.</em>
-            </h2>
-          </header>
-
           <div className="story-sequence" id="menu" aria-label="Победа MasterChef и форматы мероприятий">
             <div className="story-origin">
               <div className="story-origin-archive-field">
@@ -349,21 +340,31 @@ export default function Home() {
                       src="/media/masterchef/evgen-grybenyk-winner-envelope-2020.jpg"
                       width="1719"
                       height="900"
-                      loading="lazy"
+                      loading="eager"
                       decoding="async"
                       alt="Евгений Грыбенюк после победы в МастерШеф. Профессионалы — 2 держит фирменный конверт победителя"
                     />
                     <figcaption>победа · MasterChef</figcaption>
                   </figure>
                   <div className="story-copy">
-                    <p>
-                      Победа в «МастерШеф. Профессионалы» открыла мне путь к новым кухням Европы
-                      и Средиземноморья. Там я собирал рецепты и техники, которые сегодня
-                      превращаю в частные ужины, мероприятия и мастер-классы на Кипре.
-                    </p>
-                    <p className="chef-journey-kicker" id="chef-journey-label">
-                      маршрут вкусов · 5 стран / 5 блюд
-                    </p>
+                    <header className="section-intro story-intro">
+                      <p className="section-kicker">о шефе</p>
+                      <h2 id="story-title">
+                        От MasterChef
+                        <br />
+                        <em>к вашему столу.</em>
+                      </h2>
+                    </header>
+                    <div className="story-copy-body">
+                      <p>
+                        Победа в «МастерШеф. Профессионалы» открыла мне путь к новым кухням Европы
+                        и Средиземноморья. Там я собирал рецепты и техники, которые сегодня
+                        превращаю в частные ужины, мероприятия и мастер-классы на Кипре.
+                      </p>
+                      <p className="chef-journey-kicker" id="chef-journey-label">
+                        маршрут вкусов · 5 стран / 5 блюд
+                      </p>
+                    </div>
                   </div>
                   <div
                     className="chef-journey"
