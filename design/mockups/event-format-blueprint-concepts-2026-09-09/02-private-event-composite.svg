@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1774" height="887" viewBox="0 0 1774 887">
+  <image xlink:href="02-private-event-blueprint.png" x="0" y="0" width="1774" height="887"/>
+  <image xlink:href="../../../public/media/event-formats/private-event-outdoor-crepes.png" x="922" y="71" width="656" height="435" preserveAspectRatio="xMidYMid meet"/>
+  <g fill="#302c26">
+    <text x="53" y="220" fill="#956f31" font-family="Arial, sans-serif" font-size="15" letter-spacing="5">02</text>
+    <text x="53" y="280" font-family="Georgia, serif" font-size="31">Приватные мероприятия</text>
+    <text x="53" y="340" fill="#81796e" font-family="Arial, sans-serif" font-size="18" font-weight="300">
+      <tspan x="53" dy="0">Я соберу свободный формат с небольшими</tspan>
+      <tspan x="53" dy="31">закусками и блюдами, которые удобно есть</tspan>
+      <tspan x="53" dy="31">за разговором.</tspan>
+    </text>
+  </g>
+</svg>

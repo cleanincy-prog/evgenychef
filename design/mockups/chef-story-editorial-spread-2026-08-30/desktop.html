@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Chef story — desktop editorial spread</title>
+  <style>
+    @font-face { font-family: Oranienbaum; src: url('/public/fonts/oranienbaum-cyrillic.woff2') format('woff2'); }
+    @font-face { font-family: Onest; src: url('/public/fonts/onest-cyrillic.woff2') format('woff2'); }
+    :root { --paper:#f5f1e8; --paper-deep:#ebe4d7; --ink:#221d1a; --muted:#746c64; --rust:#a34f2b; --forest:#153f37; --rule:rgba(51,41,45,.18); }
+    * { box-sizing:border-box; }
+    html, body { width:100%; min-height:100%; margin:0; }
+    body { background:var(--paper); color:var(--ink); font-family:Onest, sans-serif; }
+    .spread { position:relative; width:100vw; min-height:100vh; overflow:hidden; background:var(--paper); }
+    .top-rule, .bottom-rule { position:absolute; left:64px; right:64px; height:1px; background:var(--rule); }
+    .top-rule { top:44px; }
+    .bottom-rule { bottom:44px; }
+    .index { position:absolute; top:62px; left:64px; margin:0; color:var(--muted); font-size:10px; letter-spacing:.17em; text-transform:uppercase; }
+    .index span { margin-right:14px; color:var(--rust); }
+    .statement { position:absolute; top:138px; left:64px; width:340px; margin:0; font-family:Oranienbaum, serif; font-size:88px; font-weight:400; letter-spacing:-.035em; line-height:.87; }
+    .statement em { display:block; margin-top:10px; color:var(--rust); font-style:normal; }
+    .facts { position:absolute; left:64px; bottom:88px; width:310px; margin:0; padding:0; border-top:1px solid var(--rule); list-style:none; }
+    .facts li { min-height:58px; padding:13px 0; display:grid; grid-template-columns:34px 1fr; align-items:center; border-bottom:1px solid var(--rule); color:var(--muted); font-size:11px; letter-spacing:.11em; line-height:1.35; text-transform:uppercase; }
+    .facts span { color:var(--rust); font-size:9px; }
+    .film { position:absolute; top:80px; left:33.1vw; width:min(28.75vw, 414px); aspect-ratio:9 / 16; margin:0; overflow:visible; background:#120d09; }
+    .film video { display:block; width:100%; height:100%; object-fit:contain; background:#120d09; }
+    .caption { position:absolute; left:18px; bottom:18px; margin:0; padding:4px 7px; background:rgba(18,13,9,.82); color:#fffdf8; font-size:11px; letter-spacing:.02em; }
+    .biography { position:absolute; top:148px; right:64px; width:min(31vw, 446px); }
+    .biography > p:first-child { margin:0 0 20px; color:var(--rust); font-size:10px; letter-spacing:.16em; text-transform:uppercase; }
+    .biography h2 { margin:0; font-family:Oranienbaum, serif; font-size:60px; font-weight:400; letter-spacing:-.035em; line-height:.94; }
+    .biography h2 em { color:var(--rust); font-style:normal; }
+    .copy { margin-top:46px; padding-top:28px; border-top:1px solid var(--rule); }
+    .copy p { margin:0; color:var(--muted); font-size:16px; line-height:1.7; }
+    .copy p + p { margin-top:18px; }
+    .signature { position:absolute; right:64px; bottom:66px; margin:0; color:var(--forest); font-family:Oranienbaum, serif; font-size:23px; }
+    @media (max-width:1100px) {
+      .statement { width:270px; font-size:69px; }
+      .film { left:31vw; width:32vw; }
+      .biography { width:30vw; }
+      .biography h2 { font-size:48px; }
+      .copy p { font-size:14px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="spread" aria-label="Макет блока о шефе для десктопа">
+    <div class="top-rule"></div>
+    <p class="index"><span>01</span>документальный фрагмент</p>
+    <h1 class="statement">Я —<em>у вас дома.</em></h1>
+    <ol class="facts" aria-label="Проверенные факты">
+      <li><span>01</span>победитель MasterChef</li>
+      <li><span>02</span>готовлю лично</li>
+      <li><span>03</span>для компании до 20 гостей</li>
+    </ol>
+
+    <figure class="film">
+      <video autoplay muted loop playsinline poster="/public/media/chef-story-img-5399-poster.jpg">
+        <source src="/public/media/chef-story-img-5399-no-grill.mp4" type="video/mp4" />
+      </video>
+      <figcaption class="caption">[Музыкальное сопровождение]</figcaption>
+    </figure>
+
+    <section class="biography">
+      <p>мой путь</p>
+      <h2>От MasterChef<br /><em>к вашему столу.</em></h2>
+      <div class="copy">
+        <p>Победа в MasterChef стала началом моего большого профессионального пути. Я обучаю кулинарии, побывал во многих странах и открывал рестораны.</p>
+        <p>Сегодня я выбираю камерные события, где могу отвечать за всё лично и создавать один вечер именно для вашей компании.</p>
+      </div>
+    </section>
+    <p class="signature">Evgen Grybenyk</p>
+    <div class="bottom-rule"></div>
+  </main>
+</body>
+</html>

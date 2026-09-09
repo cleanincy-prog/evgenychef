@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Пять направлений Hero</title>
+  <style>
+    @font-face {
+      font-family: "Montserrat Local";
+      font-style: normal;
+      font-weight: 300 700;
+      src: url("../../../public/fonts/montserrat-v31-cyrillic-normal.woff2") format("woff2");
+    }
+    :root { --paper: #f4efe5; --ink: #0a0a0a; --gold: #a0792e; --rule: #c8c0b3; }
+    * { box-sizing: border-box; }
+    html, body { width: 1600px; min-height: 1770px; }
+    body {
+      margin: 0;
+      padding: 42px 48px 52px;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: "Montserrat Local", Arial, sans-serif;
+    }
+    header {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      height: 84px;
+      border-bottom: 1px solid var(--rule);
+    }
+    h1 { margin: 0; font-size: 28px; font-weight: 500; letter-spacing: -.02em; }
+    header p { margin: 0; color: var(--gold); font-size: 11px; letter-spacing: .16em; text-transform: uppercase; }
+    main {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 42px 30px;
+      padding-top: 34px;
+    }
+    figure { margin: 0; }
+    figure:last-child { grid-column: 1 / -1; width: calc(50% - 15px); justify-self: center; }
+    figcaption {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      height: 30px;
+      color: #6e665a;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+    }
+    figcaption b { color: var(--gold); font-weight: 600; }
+    img {
+      display: block;
+      width: 100%;
+      aspect-ratio: 16 / 10;
+      object-fit: cover;
+      border: 1px solid var(--rule);
+      background: #fcfaf5;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Пять направлений Hero</h1>
+    <p>Evgen Grybenyk · сравнение композиций</p>
+  </header>
+  <main>
+    <figure><figcaption><b>01</b> Портретная обложка</figcaption><img src="01-portrait-cover.png" alt="" /></figure>
+    <figure><figcaption><b>02</b> Кинематографичный кадр</figcaption><img src="02-cinematic-band.png" alt="" /></figure>
+    <figure><figcaption><b>03</b> Документальный разворот</figcaption><img src="03-documentary-spread.png" alt="" /></figure>
+    <figure><figcaption><b>04</b> Авторский постер</figcaption><img src="04-signature-poster.png" alt="" /></figure>
+    <figure><figcaption><b>05</b> Триптих: процесс → шеф → результат</figcaption><img src="05-proof-triptych.png" alt="" /></figure>
+  </main>
+</body>
+</html>

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1774" height="887" viewBox="0 0 1774 887">
+  <image xlink:href="03-masterclass-blueprint.png" x="35" y="0" width="1739" height="887" preserveAspectRatio="xMidYMid meet"/>
+  <image xlink:href="../../../public/media/event-formats/masterclass.jpg" x="35" y="89" width="568" height="382" preserveAspectRatio="xMidYMid meet"/>
+  <g fill="#302c26">
+    <text x="1295" y="210" fill="#956f31" font-family="Arial, sans-serif" font-size="15" letter-spacing="5">03</text>
+    <text x="1295" y="270" font-family="Georgia, serif" font-size="31">Мастер-классы</text>
+    <text x="1295" y="330" fill="#81796e" font-family="Arial, sans-serif" font-size="18" font-weight="300">
+      <tspan x="1295" dy="0">Я покажу гостям профессиональные</tspan>
+      <tspan x="1295" dy="31">приёмы, мы вместе приготовим блюда,</tspan>
+      <tspan x="1295" dy="31">а затем сядем за общий стол.</tspan>
+    </text>
+  </g>
+</svg>
