@@ -60,13 +60,21 @@ const obsoleteTtfFonts = [
   "public/fonts/montserrat-600.ttf",
 ];
 
-test("layers the approved collage behind the smaller chef portrait", async () => {
+test("builds the approved collage frame around one central identity spread", async () => {
   const [page, css] = await Promise.all([source("app/page.tsx"), source("app/globals.css")]);
   const heroSources = page.slice(
     page.indexOf("const heroCollageSources"),
-    page.indexOf("const eventFormats"),
+    page.indexOf("const heroCollageWideDesktop"),
   );
   const explicitHeroSources = heroSources.match(/"\/media\/[^"]+"/g) ?? [];
+  const desktopWide = page
+    .slice(page.indexOf("const heroCollageWideDesktop"), page.indexOf("const heroCollageWideCompact"))
+    .match(/\b\d+\b/g)
+    ?.map(Number) ?? [];
+  const compactWide = page
+    .slice(page.indexOf("const heroCollageWideCompact"), page.indexOf("const eventFormats"))
+    .match(/\b\d+\b/g)
+    ?.map(Number) ?? [];
 
   assert.match(page, /<section className="hero" id="top"/);
   assert.match(page, /src="\/media\/chef-hero-apron\.jpg"/);
@@ -78,6 +86,15 @@ test("layers the approved collage behind the smaller chef portrait", async () =>
   assert.equal((heroSources.match(/"\/media\/hero-collage\//g) ?? []).length, 6);
   assert.match(heroSources, /\/media\/event-formats\/private-dinner\.jpg/);
   assert.match(heroSources, /\/media\/masterchef\/evgen-grybenyk-winner-envelope-2020\.jpg/);
+  assert.equal(desktopWide.length, 26);
+  assert.equal(new Set(desktopWide).size, 26);
+  assert.equal(compactWide.length, 26);
+  assert.equal(new Set(compactWide).size, 26);
+  assert.ok(desktopWide.every((index) => index >= 0 && index < 94));
+  assert.ok(compactWide.every((index) => index >= 0 && index < 94));
+  assert.equal(94 + desktopWide.length, 10 * 12);
+  assert.equal(94 + compactWide.length, 12 * 10);
+  assert.equal(94 + compactWide.length, 8 * 15);
   for (const removed of [
     "instagram-05.webp",
     "instagram-10.webp",
@@ -92,55 +109,63 @@ test("layers the approved collage behind the smaller chef portrait", async () =>
   ]) assert.ok(!heroSources.includes(removed), `removed empty-looking Hero source returned: ${removed}`);
   assert.match(page, /className="hero-media hero-collage"/);
   assert.match(page, /className="hero-collage-grid" aria-hidden="true"/);
-  assert.match(page, /className="hero-collage-tile"/);
+  assert.match(page, /"hero-collage-tile"/);
+  assert.match(page, /"hero-collage-tile--wide-desktop"/);
+  assert.match(page, /"hero-collage-tile--wide-compact"/);
   assert.match(page, /className="hero-stage"/);
+  assert.match(page, /className="hero-central-spread"/);
+  assert.match(page, /className="hero-service"/);
   assert.match(page, /className="hero-apron"/);
-  assert.ok(page.indexOf('className="hero-copy"') < page.indexOf('className="hero-stage"'));
+  assert.ok(page.indexOf('className="hero-stage"') < page.indexOf('className="hero-media hero-collage"'));
   assert.ok(page.indexOf('className="hero-media hero-collage"') < page.indexOf('className="hero-apron"'));
+  assert.ok(page.indexOf('className="hero-central-spread"') < page.indexOf('className="hero-copy"'));
+  assert.ok(page.indexOf('className="hero-copy"') < page.indexOf('className="hero-apron"'));
   assert.match(page, /aria-label="Евгений Грыбенюк — ваш личный Мастер-Шеф на Кипре"/);
   assert.match(page, /<span>Грыбенюк —<\/span>/);
   assert.match(page, /ваш личный/);
   assert.match(page, /Мастер-Шеф на Кипре/);
   assert.doesNotMatch(page, /hero-mosaic|CyprusPatternBand|CyprusPageRails|FormatWeaveMark/);
-  assert.match(css, /\.hero\s*\{[^}]*display:\s*grid;[^}]*grid-template-columns:/);
-  assert.match(css, /\.hero-stage\s*\{[^}]*position:\s*relative;[^}]*overflow:\s*hidden/);
+  assert.doesNotMatch(css, /\.hero\s*\{[^}]*grid-template-columns:/);
+  assert.match(css, /\.hero-stage\s*\{[^}]*position:\s*relative;[^}]*height:\s*clamp\(700px,[^}]*overflow:\s*hidden/);
   assert.match(css, /\.hero-media\s*\{[^}]*position:\s*absolute;[^}]*inset:\s*0/);
-  assert.match(css, /\.hero-apron\s*\{[^}]*position:\s*absolute;[^}]*z-index:\s*2;[^}]*width:\s*min\(56%, 500px\);[^}]*aspect-ratio:\s*4 \/ 5/);
-  assert.match(css, /\.hero-collage-grid\s*\{[^}]*grid-template-columns:\s*repeat\(8,[^}]*grid-template-rows:\s*repeat\(10,/);
-  assert.match(css, /\.hero-collage-tile:nth-child\(n \+ 81\)\s*\{\s*display:\s*none/);
-  assert.match(page, /sizes="\(max-width: 560px\) 12\.5vw, \(max-width: 820px\) 8\.34vw, \(max-width: 1100px\) 8vw, 7vw"/);
+  assert.match(css, /\.hero-central-spread\s*\{[^}]*position:\s*absolute;[^}]*z-index:\s*2;[^}]*display:\s*grid;[^}]*grid-template-columns:\s*minmax\(0, 56fr\) minmax\(0, 44fr\)/);
+  assert.match(css, /\.hero-apron\s*\{[^}]*position:\s*relative;[^}]*border-left:\s*2px solid var\(--paper-light\)/);
+  assert.match(css, /\.hero-collage-grid\s*\{[^}]*grid-template-columns:\s*repeat\(10,[^}]*grid-template-rows:\s*repeat\(12,[^}]*grid-auto-flow:\s*dense/);
+  assert.match(css, /\.hero-collage-tile--wide-desktop\s*\{\s*grid-column:\s*span 2/);
+  assert.doesNotMatch(css, /\.hero-collage-tile:nth-child\([^}]+display:\s*none/);
+  assert.match(page, /const tileSizes = \[/);
+  assert.match(page, /\(max-width: 560px\).*25vw.*12\.5vw/);
+  assert.match(page, /\(max-width: 1100px\).*16\.7vw.*8\.34vw/);
+  assert.match(page, /desktopWide \? "20vw" : "10vw"/);
   assert.match(page, /loading="eager"/);
-  assert.doesNotMatch(heroSources, /loading=\{index < 80/);
   assert.match(page, /fetchPriority=\{index < 12 \? "high" : "low"\}/);
   assert.match(page, /loading="eager"\s+fetchPriority=\{index < 12 \? "high" : "low"\}\s+decoding="sync"/);
   assert.match(css, /@media \(max-width: 430px\)/);
-  assert.match(css, /\.hero-apron\s*\{\s*width:\s*60%/);
   assert.match(css, /\.wordmark,\s*\.header-action\s*\{\s*white-space:\s*nowrap/);
   assert.doesNotMatch(page, /className="site-nav"|className="hero-eyebrow"/);
   assert.doesNotMatch(page, /Победитель «МастерШеф\. Профессионалы — 2»/);
   assert.doesNotMatch(page, /<a href="#(?:film|menu|products)">(?:о шефе|форматы|продукты)<\/a>/);
-  assert.match(css, /\.hero h1\s*\{[^}]*margin-top:\s*0/);
+  assert.match(css, /\.hero h1\s*\{[^}]*margin:\s*0/);
   const tabletHeroCss = css.slice(
     css.indexOf("@media (max-width: 1100px)"),
-    css.indexOf("@media (max-width: 560px)"),
+    css.indexOf("@media (max-width: 1024px)"),
+  );
+  const narrowTabletHeroCss = css.slice(
+    css.indexOf("@media (max-width: 820px)"),
+    css.indexOf("@media (min-width: 561px) and (max-width: 820px)"),
   );
   const phoneHeroCss = css.slice(
     css.indexOf("@media (max-width: 560px)"),
     css.indexOf("@media (max-width: 430px)"),
   );
-  const narrowHeroCss = css.slice(
-    css.indexOf("@media (max-width: 430px)"),
-    css.indexOf("@media (max-width: 400px)"),
-  );
-  assert.doesNotMatch(tabletHeroCss, /\.hero h1\s*\{/);
-  assert.match(tabletHeroCss, /\.hero-collage-grid\s*\{[^}]*grid-template-columns:\s*repeat\(7,[^}]*grid-template-rows:\s*repeat\(11,/);
-  assert.match(tabletHeroCss, /\.hero-collage-tile:nth-child\(n \+ 78\)\s*\{\s*display:\s*none/);
-  assert.match(tabletHeroCss, /\.hero-collage-tile:nth-child\(54\)\s*\{\s*grid-column-start:\s*8/);
-  assert.match(phoneHeroCss, /\.hero h1\s*\{[^}]*font-size:\s*clamp\(38px, calc\(1rem \+ 5\.75vw\), 44px\);[^}]*line-height:\s*1\.05/);
-  assert.match(phoneHeroCss, /\.hero-collage-grid\s*\{[^}]*grid-template-columns:\s*repeat\(8,[^}]*grid-template-rows:\s*repeat\(12,/);
-  assert.match(phoneHeroCss, /\.hero-collage-tile:nth-child\(n \+ 78\)\s*\{\s*display:\s*block/);
-  assert.match(phoneHeroCss, /\.hero-collage-tile:nth-child\(52\)\s*\{\s*grid-column-start:\s*6/);
-  assert.match(narrowHeroCss, /\.hero h1\s*\{\s*max-width:\s*340px/);
+  assert.match(tabletHeroCss, /\.hero-collage-grid\s*\{[^}]*grid-template-columns:\s*repeat\(12,[^}]*grid-template-rows:\s*repeat\(10,/);
+  assert.match(tabletHeroCss, /\.hero-collage-tile--wide-desktop\s*\{\s*grid-column:\s*auto/);
+  assert.match(tabletHeroCss, /\.hero-collage-tile--wide-compact\s*\{\s*grid-column:\s*span 2/);
+  assert.match(narrowTabletHeroCss, /\.hero-central-spread\s*\{[^}]*grid-template-columns:\s*minmax\(0, 56fr\) minmax\(0, 44fr\)/);
+  assert.match(phoneHeroCss, /\.hero-central-spread\s*\{[^}]*grid-template-columns:\s*1fr;[^}]*grid-template-rows:\s*auto minmax\(0, 1fr\)/);
+  assert.match(phoneHeroCss, /\.hero h1\s*\{[^}]*font-size:\s*clamp\(38px, 10\.3vw, 42px\);[^}]*line-height:\s*\.9/);
+  assert.match(phoneHeroCss, /\.hero-collage-grid\s*\{[^}]*grid-template-columns:\s*repeat\(8,[^}]*grid-template-rows:\s*repeat\(15,/);
+  assert.match(phoneHeroCss, /\.hero-apron\s*\{[^}]*border-top:\s*2px solid var\(--paper-light\);[^}]*border-left:\s*0/);
   assert.doesNotMatch(css, /\.site-nav|\.hero-eyebrow/);
   assert.doesNotMatch(page, /hero-collage-anchor/);
   assert.doesNotMatch(page, /className="hero-left"/);
@@ -532,7 +557,7 @@ test("uses the measured Trivium typography on the approved editorial surfaces", 
   assert.equal(faceBlocks.length, 50);
   assert.equal((css.match(/font-family:\s*"Cormorant Garamond"/g) ?? []).length, 30);
   assert.equal((css.match(/font-family:\s*"Montserrat"/g) ?? []).length, 20);
-  assert.match(css, /\.hero h1\s*\{[^}]*font:\s*300 clamp\(44\.8px, 7vw, 88px\)\/1\.1 var\(--font-display\)/);
+  assert.match(css, /\.hero h1\s*\{[^}]*font:\s*300 clamp\(50px, 4\.45vw, 64px\)\/\.89 var\(--font-display\)/);
   assert.match(css, /\.section-intro h2\s*\{[^}]*font:\s*400 clamp\(32px, 4vw, 48px\)\/1\.2 var\(--font-display\)/);
   assert.match(css, /\.format-copy h3\s*\{[^}]*font:\s*400 20px\/1\.3 var\(--font-display\)/);
   assert.match(css, /\.story-copy p\s*\{[^}]*font:\s*300 16px\/1\.7 var\(--font-sans\)/);
@@ -562,7 +587,7 @@ test("uses the measured Trivium typography on the approved editorial surfaces", 
   assert.match(css, /\.format-copy p\s*\{[^}]*margin-top:\s*10px;[^}]*color:\s*var\(--ink\);[^}]*font-size:\s*13\.6px;[^}]*font-weight:\s*300;[^}]*line-height:\s*1\.55/);
   assert.match(css, /\.story-award,\s*\.story-award img\s*\{[^}]*height:\s*clamp\(196px, 56vw, 218px\);[^}]*aspect-ratio:\s*auto/);
   assert.match(css, /\.story-copy p\s*\{\s*color:\s*var\(--ink\);\s*font-size:\s*14px;\s*font-weight:\s*300;\s*line-height:\s*1\.55/);
-  assert.match(css, /\.hero-apron\s*\{\s*bottom:\s*104px;\s*width:\s*min\(60%, 300px\)/);
+  assert.match(css, /\.hero-central-spread\s*\{[^}]*grid-template-columns:\s*minmax\(0, 56fr\) minmax\(0, 44fr\)/);
   assert.doesNotMatch(css, /overflow-x:\s*auto/);
   assert.doesNotMatch(css, /--forest|#18382f|#193d32|#153f37/i);
   assert.match(css, /\.story\s*\{[^}]*background:\s*var\(--paper\)/);
@@ -694,11 +719,8 @@ test("keeps readability-specific desktop, tablet and narrow-phone geometry", asy
 
   const tabletDown = css.slice(css.indexOf("@media (max-width: 820px)"), css.indexOf("@media (min-width: 561px) and (max-width: 820px)"));
   const tablet = css.slice(css.indexOf("@media (min-width: 561px) and (max-width: 820px)"), css.indexOf("@media (max-width: 560px)"));
-  assert.match(tablet, /\.hero-stage\s*\{\s*aspect-ratio:\s*8 \/ 5/);
-  assert.match(tablet, /grid-template-columns:\s*repeat\(12,/);
-  assert.match(tablet, /grid-template-rows:\s*repeat\(8,/);
-  assert.match(tablet, /\.hero-collage-tile:nth-child\(n \+ 78\)\s*\{\s*display:\s*block/);
-  assert.match(tablet, /\.hero-collage-tile:nth-child\(n \+ 97\)\s*\{\s*display:\s*none/);
+  assert.match(tabletDown, /\.hero-stage\s*\{[^}]*height:\s*clamp\(720px, calc\(100svh - 70px\), 954px\)/);
+  assert.match(tabletDown, /\.hero-central-spread\s*\{[^}]*grid-template-columns:\s*minmax\(0, 56fr\) minmax\(0, 44fr\)/);
   assert.match(tablet, /\.story-award\s*\{\s*grid-column:\s*1 \/ 6/);
   assert.match(tablet, /\.story-copy\s*\{\s*grid-column:\s*6 \/ 13/);
   assert.match(tablet, /\.format-row-1 \.format-media,[\s\S]*?grid-column:\s*1 \/ 6;\s*grid-row:\s*1/);

@@ -66,6 +66,16 @@ const heroCollageSources = [
   "/media/hero-collage/story-service-plating.webp",
 ];
 
+const heroCollageWideDesktop = new Set([
+  2, 5, 8, 12, 15, 18, 22, 25, 28, 32, 35, 38, 42,
+  45, 48, 52, 55, 58, 62, 66, 70, 74, 79, 84, 89, 93,
+]);
+
+const heroCollageWideCompact = new Set([
+  1, 4, 7, 10, 13, 17, 20, 23, 26, 29, 33, 36, 39,
+  42, 46, 49, 52, 55, 59, 63, 67, 71, 76, 81, 87, 92,
+]);
+
 const eventFormats = [
   {
     name: "Частный ужин",
@@ -263,46 +273,66 @@ export default function Home() {
 
       <main id="main-content" tabIndex={-1}>
         <section className="hero" id="top" aria-labelledby="hero-title">
-          <div className="hero-copy">
-            <h1 id="hero-title" aria-label="Евгений Грыбенюк — ваш личный Мастер-Шеф на Кипре">
-              <span className="hero-name" aria-hidden="true">
-                <span>Евгений</span>
-                <span>Грыбенюк —</span>
-              </span>
-              <em aria-hidden="true">ваш личный</em>
-              <span aria-hidden="true">Мастер-Шеф на Кипре</span>
-            </h1>
-          </div>
           <div className="hero-stage">
             <div className="hero-media hero-collage" aria-hidden="true">
               <div className="hero-collage-grid" aria-hidden="true">
-                {heroCollageSources.map((src, index) => (
-                  <span className="hero-collage-tile" key={src}>
-                    <Image
-                      src={src}
-                      alt=""
-                      fill
-                      sizes="(max-width: 560px) 12.5vw, (max-width: 820px) 8.34vw, (max-width: 1100px) 8vw, 7vw"
-                      loading="eager"
-                      fetchPriority={index < 12 ? "high" : "low"}
-                      decoding="sync"
-                    />
-                  </span>
-                ))}
+                {heroCollageSources.map((src, index) => {
+                  const desktopWide = heroCollageWideDesktop.has(index);
+                  const compactWide = heroCollageWideCompact.has(index);
+                  const tileClassName = [
+                    "hero-collage-tile",
+                    desktopWide ? "hero-collage-tile--wide-desktop" : "",
+                    compactWide ? "hero-collage-tile--wide-compact" : "",
+                  ].filter(Boolean).join(" ");
+                  const tileSizes = [
+                    `(max-width: 560px) ${compactWide ? "25vw" : "12.5vw"}`,
+                    `(max-width: 1100px) ${compactWide ? "16.7vw" : "8.34vw"}`,
+                    desktopWide ? "20vw" : "10vw",
+                  ].join(", ");
+
+                  return (
+                    <span className={tileClassName} key={src}>
+                      <Image
+                        src={src}
+                        alt=""
+                        fill
+                        sizes={tileSizes}
+                        loading="eager"
+                        fetchPriority={index < 12 ? "high" : "low"}
+                        decoding="sync"
+                      />
+                    </span>
+                  );
+                })}
               </div>
             </div>
-            <figure className="hero-apron">
-              <Image
-                src="/media/chef-hero-apron.jpg"
-                alt="Евгений Грыбенюк в форме шефа"
-                fill
-                sizes="(max-width: 820px) 62vw, 30vw"
-                preload
-                fetchPriority="high"
-                decoding="async"
-              />
-              <figcaption>частный шеф · Кипр</figcaption>
-            </figure>
+            <div className="hero-central-spread">
+              <div className="hero-copy">
+                <h1 id="hero-title" aria-label="Евгений Грыбенюк — ваш личный Мастер-Шеф на Кипре">
+                  <span className="hero-name" aria-hidden="true">
+                    <span>Евгений</span>
+                    <span>Грыбенюк —</span>
+                  </span>
+                  <em aria-hidden="true">ваш личный</em>
+                  <span className="hero-service" aria-hidden="true">
+                    <span>Мастер-Шеф</span>
+                    <span>на Кипре</span>
+                  </span>
+                </h1>
+              </div>
+              <figure className="hero-apron">
+                <Image
+                  src="/media/chef-hero-apron.jpg"
+                  alt="Евгений Грыбенюк в форме шефа"
+                  fill
+                  sizes="(max-width: 560px) calc(100vw - 36px), (max-width: 820px) 40vw, 38vw"
+                  preload
+                  fetchPriority="high"
+                  decoding="async"
+                />
+                <figcaption>частный шеф · Кипр</figcaption>
+              </figure>
+            </div>
           </div>
         </section>
 

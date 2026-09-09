@@ -1553,3 +1553,25 @@ one calm horizontal band, one central archive frame, a diagonal reading sequence
 archive split. No gradient, blur, glass, shadow, radius, generated person, stock media, placeholder copy,
 new CTA or UI-library styling is allowed. These boards remain non-public until one direction is selected
 and independently authored for all required desktop and mobile widths.
+
+## Active Hero collage-frame amendment — 2026-09-09
+
+Direction `04 · Коллаж-рамка` is user-approved and becomes the active Hero composition.
+
+- **Field:** the Hero below the masthead is one full-width photographic archive. Every one of the current
+  94 local sources is instantiated once; none is hidden at a breakpoint.
+- **Archive partitions:** above 1100 px use 10 columns × 12 rows; from 561–1100 px use 12 columns × 10
+  rows; at 560 px and below use 8 columns × 15 rows. Each map contains 26 explicitly chosen two-column
+  cells, so 94 images occupy the partition exactly. Grid flow is dense and seams remain 2 px.
+- **Central spread:** square edges, solid `--paper`, a 2 px `--paper-light` outer keyline and one 2 px
+  internal media seam. It has no radius, shadow, transparency effect or decorative layer.
+- **Wide composition:** copy/portrait is approximately `56 / 44`. The exact Russian title is vertically
+  centred inside the copy field; the real apron portrait fills the adjacent aperture with cover cropping.
+- **Phone composition:** the spread becomes a single vertical unit with copy above portrait. The central
+  unit stays inset on all sides so the archive remains a recognisable frame rather than a background strip.
+- **Typography:** keep Cormorant Garamond normal/italic and the established ink/gold roles. Desktop title
+  peaks at 64 px; phone title remains 38–42 px with an independently sized service line.
+- **Media:** `chef-hero-apron.jpg` remains unedited; `object-fit: cover` and a centre-biased focal point may
+  remove its baked black bands. Archive tiles retain the approved restrained saturation/contrast treatment.
+- **Prohibitions:** no new copy, CTA, icon, generated media, stock image, gradient, blur, glass, shadow,
+  radius, hover spectacle or UI-library appearance belongs to the Hero.

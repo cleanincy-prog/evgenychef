@@ -5904,3 +5904,85 @@ decorative glow, arbitrary radius, generic marketing filler or desktop-only mobi
 chapter. Remaining limitation: the documentary source is portrait footage shown through a horizontal
 `4 / 3` crop, so the visible subject position changes as the footage plays; the file is not stretched and
 the chef/action remained legible in the checked frames.
+
+## Hero `collage frame` implementation — pre-code audit and plan — 2026-09-09
+
+The user explicitly selected direction `04 · Коллаж-рамка` from the corrected five-board
+comparison. This approval is authoritative for the Hero composition only. The complete current Hero,
+94-source archive, separate apron portrait, exact heading, header, responsive rules, image delivery,
+comparison source and current design documentation were re-audited before interface edits.
+
+### Audit findings
+
+1. The active desktop Hero still divides copy and media into separate halves. The large blank paper field,
+   compressed right-hand micro-grid and independently floating portrait prevent the three layers from
+   reading as one composition.
+2. The selected board solves that hierarchy by making the archive the full Hero field and placing one
+   central two-part editorial spread over it. The collage remains visible as a continuous photographic
+   frame on all four sides.
+3. The active grid hides the last fourteen sources on desktop and seventeen at intermediate widths. That
+   contradicts the selected comparison, whose full 94-source archive is the fixed background ingredient.
+4. `chef-hero-apron.jpg` is a tall phone-origin source. It requires an authored cover aperture to remove
+   its black top/bottom bands without stretching, retouching or reconstructing the person.
+5. A phone cannot inherit the desktop side-by-side spread at reduced scale. The title needs a dedicated
+   upper paper panel, followed by the portrait, while the archive remains visible as top, bottom and side
+   rails around the stacked centre.
+
+### Implementation plan recorded before interface edits
+
+1. Replace the split Hero with one full-width stage. Keep the exact masthead, Russian title, palette,
+   fonts, 2 px seams, 94 local archive paths and real apron portrait.
+2. Render every archive source once in a dense irregular grid. Use a 10 × 12 field with 26 wide cells on
+   desktop, a 12 × 10 field with 26 compact wide cells through tablet, and a separately proportioned
+   8 × 15 phone field using the same complete source set.
+3. Add one central `hero-central-spread`: desktop/tablet use an approximately `56 / 44` copy/portrait
+   division; the surface is solid approved paper with square edges and one light seam.
+4. At 560 px and below, recompose that centre vertically as copy above portrait. Preserve visible collage
+   rails around the entire unit and keep the portrait in the first viewport.
+5. Remove all source-hiding rules, forced grid starts, detached absolute portrait sizing and the former
+   two-column Hero shell. Add no CTA, badge, icon, decoration, gradient, blur, shadow, radius or library UI.
+6. Update the focused Hero regression contract; run `git diff --check`, ESLint, production build and tests;
+   then visually verify 1440, 1280, 1024, 768, 430, 390 and 375 px for hierarchy, title wrapping, portrait
+   crop, all image loads, overflow, target sizes, focus and the Hero-to-story transition.
+
+Templated elements found: the blank-copy-half / dense-media-half split and the portrait floating as an
+unrelated card. Components retained: `Home`, semantic Hero heading, header links, all archive sources,
+Next Image delivery, portrait/caption and every post-Hero section. Components reworked: Hero DOM grouping,
+archive placement classes and all Hero-specific responsive CSS. New component required: one structural
+`hero-central-spread` wrapper only; no UI-library primitive is introduced. Decisions without a separate
+reference are limited to breakpoint-specific insets and exact cover focal points, both neutral fittings of
+the user-approved board to the project's existing widths and source aspect ratio.
+
+### Implementation result and final anti-template audit
+
+The active Hero now uses one full-width archive stage rather than a blank-copy / compressed-media split.
+All 94 existing local sources are instantiated once at every breakpoint. Explicit 26-index wide-cell maps
+fill the complete 10 × 12 desktop, 12 × 10 compact and 8 × 15 phone partitions without source hiding,
+duplication or empty terminal cells. The exact title and real apron portrait are joined inside one square-
+edged central spread. Desktop/tablet retain the approved side-by-side editorial relationship; phones use a
+separate vertical copy-then-portrait centre with visible collage rails on all four sides. The portrait
+aperture is proportioned at each width so the unchanged source's black phone bands remain outside the crop.
+
+Files created: seven viewport captures and `README.md` in
+`artifacts/hero-collage-frame-2026-09-09/`. Files changed: `app/page.tsx`, `app/globals.css`,
+`tests/rendered-html.test.mjs`, `docs/DESIGN_REFERENCE_MAP.md`, `docs/DESIGN_SYSTEM.md` and this audit.
+Templated elements found: the former half-empty split and detached floating portrait. They were reworked
+into the user-selected archive frame and one content-specific identity spread. References used: the user's
+direct selection, `design/mockups/hero-collage-layout-options-2026-09-09/04-collage-frame.png`, the supplied
+failure capture, the current 94-photo dataset, exact title/portrait and active project system. Decisions
+without a separate reference are only the verified responsive insets and focal crop percentages. UI
+libraries used as visible components: none; React, CSS Grid and existing Next Image delivery are technical
+primitives only.
+
+Visual checks at 1440 × 1000, 1280 × 900, 1024 × 900, 768 × 1024, 430 × 932, 390 × 844 and
+375 × 812 found 94 tiles, zero hidden tiles, zero incomplete Hero images, zero document-level horizontal
+overflow and zero runtime exceptions at every width. All five controlled title lines remain inside the
+copy field; the portrait and caption remain inside the central spread; embedded source bands are absent;
+header targets are at least 44 px high; and the Hero-to-story transition remains clean. ESLint, the Vinext
+production build, all eight focused tests and `git diff --check` pass.
+
+Final anti-template result: no generic centred CTA Hero, card grid, repeated rounded panel, shadow,
+gradient, glass, blur, glow, icon, stock/generated media, placeholder copy, decorative animation or
+library-default appearance was added. The phone composition is independently authored. Remaining risk:
+commercial publication rights for third-party images already present in the 94-source archive remain the
+project's existing unresolved media-rights consideration. Publication is handled separately from the interface implementation.

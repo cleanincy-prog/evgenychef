@@ -1029,3 +1029,15 @@ The public Hero remains unchanged until the user chooses a layout.
 | Hierarchy correction | User's supplied failure capture; active Hero structure | The problem is distribution of copy, portrait and archive, not the existence of the collage | No new brand style, decoration, generic card system or arbitrary effects | Produce five layouts with grid apertures, horizontal band, diagonal sequence, archive frame and reversed split |
 | Portrait integration | Current real `chef-hero-apron.jpg`; active square-edge rule | Make the portrait a deliberate anchor in the same compositional system | No floating rounded card, shadow, substitute person, cutout reconstruction or identity edit | Align the portrait to grid/band/frame geometry and keep it sharp above the documentary field |
 | Copy integration | Exact title and current type/palette system | Reduce the blank paper footprint while preserving clean reading | No rewritten slogan, additional CTA, text shadow, glass surface or photo-wide dark wash | Use only solid or highly opaque project paper fields sized to the actual title |
+
+## Selected Hero collage frame — 2026-09-09
+
+The user's direct instruction `Делай коллаж рамку` approves comparison direction 04 and
+supersedes the active split Hero composition. It does not alter any later page section.
+
+| Project element | Reference | Principle used | What is not copied | Project implementation |
+|---|---|---|---|---|
+| Overall Hero | User-approved `04-collage-frame.png`; user's mandatory-collage correction | One central identity spread is surrounded by continuous documentary evidence | No generic centred landing Hero, photo veil, new brand style or additional marketing block | Make the full Hero a collage stage and place one square-edged copy/portrait spread inside it |
+| Archive frame | Current complete 94-source Hero dataset; approved comparison source | Accumulation remains visible and gains an authored irregular rhythm | No source deletion, duplicate filler, external image or reduced proof strip | Render every source once; use 10 × 12 desktop, 12 × 10 compact and 8 × 15 phone partitions with exact wide spans |
+| Central spread | Approved board; exact current title and portrait | Bind identity copy and chef portrait into a single editorial object | No floating card, radius, shadow, glass, overlay CTA or invented copy | Solid paper copy field at left and real cover-cropped portrait at right, divided by one 2 px seam |
+| Phone composition | Selected board plus project's deliberate-mobile rule | Preserve the four-sided archive frame while giving text and portrait legible independent depth | No scaled-down side-by-side desktop spread, hidden portrait or long stack of collage thumbnails | Stack the copy above the portrait inside one inset central unit; keep archive rails visible on every side |
