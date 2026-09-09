@@ -297,16 +297,20 @@ export default function Home() {
           <div className="story-sequence" id="menu" aria-label="Победа MasterChef и форматы мероприятий">
             <div className="story-origin">
               <div className="story-origin-process-field">
-                <img
-                  className="story-origin-process-plan"
-                  src="/media/blueprint-backgrounds/masterchef-recipes-europe-layout-color-v2.png"
-                  width="1774"
-                  height="887"
-                  loading="lazy"
-                  decoding="async"
-                  alt=""
-                  aria-hidden="true"
-                />
+                <picture className="story-origin-process-plan" aria-hidden="true">
+                  <source
+                    media="(max-width: 820px)"
+                    srcSet="/media/blueprint-backgrounds/masterchef-travel-photoreal-mobile.png"
+                  />
+                  <img
+                    src="/media/blueprint-backgrounds/masterchef-travel-photoreal-desktop.png"
+                    width="1774"
+                    height="887"
+                    loading="lazy"
+                    decoding="async"
+                    alt=""
+                  />
+                </picture>
                 <figure className="story-award">
                   <img
                     src="/media/masterchef/evgen-grybenyk-winner-envelope-2020.jpg"

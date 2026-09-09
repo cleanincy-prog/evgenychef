@@ -1163,3 +1163,16 @@ reconstructions.
 - Private dinner and private event: live copy left, complete photograph right.
 - This relationship is preserved at desktop, tablet and phone widths. “Top-to-bottom” applies only to the separate workday-step imagery and must not be generalized to these four process blocks.
 - Photo and copy exclusion zones have no visible border, bracket, registration mark or placeholder frame. They read as unmarked paper within the one shared composition.
+
+## Photorealistic MasterChef route — 2026-09-09
+
+- The approved MasterChef underlay is now a responsive pair:
+  `masterchef-travel-photoreal-desktop.png` at 1774 × 887 and
+  `masterchef-travel-photoreal-mobile.png` at 887 × 1774.
+- The Europe route and its ochre travel line remain a restrained technical drawing. The car and five
+  destination dishes are photorealistic, softly lit and deliberately muted to stay subordinate to the
+  documentary winner photograph and live copy.
+- Desktop keeps the 2:1 composition. At 820 px and below the complete portrait raster uses a 1:2 field;
+  it is switched with `<picture>` rather than cropped, stretched or reused from the desktop source.
+- The winner photograph stays complete on the left and the live copy stays on the right. Both occupy the
+  authored clear upper area while the route and dishes complete the lower half of the same rectangle.

@@ -226,7 +226,8 @@ test("keeps only the approved process-first blueprints active in the interface",
     "private-event-canape-studies.png",
   ];
   const activeBlueprints = [
-    "/media/blueprint-backgrounds/masterchef-recipes-europe-layout-color-v2.png",
+    "/media/blueprint-backgrounds/masterchef-travel-photoreal-desktop.png",
+    "/media/blueprint-backgrounds/masterchef-travel-photoreal-mobile.png",
     "/media/blueprint-backgrounds/private-dinner-layout-color-v2.png",
     "/media/blueprint-backgrounds/private-event-layout-color-v2.png",
     "/media/blueprint-backgrounds/masterclass-six-person-layout-color-v2.png",
@@ -255,7 +256,7 @@ test("keeps only the approved process-first blueprints active in the interface",
   assert.doesNotMatch(page, /block-drawing|format-drawing|story-origin-drawing/);
   assert.doesNotMatch(css, /\.block-drawing|\.format-drawing|\.story-origin-drawing/);
   assert.doesNotMatch(css, /\.story-present::before|\.sources-intro::before|\.source-row(?:(?:-[123])?)::before|\.contact::before/);
-  assert.match(page, /className="story-origin-process-field"[\s\S]*?className="story-origin-process-plan"[\s\S]*?masterchef-recipes-europe-layout-color-v2\.png[\s\S]*?className="story-award"/);
+  assert.match(page, /className="story-origin-process-field"[\s\S]*?<picture className="story-origin-process-plan"[\s\S]*?masterchef-travel-photoreal-mobile\.png[\s\S]*?masterchef-travel-photoreal-desktop\.png[\s\S]*?className="story-award"/);
   assert.match(page, /className="present-day-accessible"[\s\S]*?className="story-present-process-field"[\s\S]*?className="story-present-process-plan"[\s\S]*?workday-four-step-vertical\.png[\s\S]*?className="story-film"/);
   assert.match(page, /className="format-process-field"/);
   assert.match(page, /className="format-process-plan"/);
@@ -294,10 +295,11 @@ test("keeps only the approved process-first blueprints active in the interface",
   assert.match(css, /@media \(max-width:\s*820px\)[\s\S]*?\.format-row-3\.format-row-process \.format-copy\s*\{[^}]*grid-column:\s*1;[^}]*grid-row:\s*2/);
   assert.match(css, /@media \(max-width:\s*820px\)[\s\S]*?\.format-row-3\.format-row-process \.format-process-field\s*\{[^}]*grid-column:\s*1;[^}]*grid-row:\s*1;[^}]*width:\s*100%/);
   const foregroundPass = css.slice(css.lastIndexOf("/* Foreground-first process composition."));
-  assert.match(foregroundPass, /\.story-origin-process-field \{ aspect-ratio: \.62 \/ 1; \}/);
+  assert.match(foregroundPass, /\.story-origin-process-field\s*\{[^}]*aspect-ratio:\s*1 \/ 2/);
   assert.match(foregroundPass, /\.format-row-process \.format-process-field \{ aspect-ratio: \.85 \/ 1; \}/);
-  assert.match(foregroundPass, /\.story-origin-process-field > \.story-copy\s*\{[^}]*left:\s*53%;[^}]*width:\s*43%/);
-  assert.match(foregroundPass, /\.story-origin-process-field \.story-award\s*\{[^}]*left:\s*4%;[^}]*width:\s*45%/);
+  assert.match(foregroundPass, /\.story-origin-process-field > \.story-copy\s*\{[^}]*left:\s*60%;[^}]*width:\s*37%/);
+  assert.match(foregroundPass, /\.story-origin-process-field \.story-award\s*\{[^}]*left:\s*2%;[^}]*width:\s*53%/);
+  assert.match(foregroundPass, /\.story-origin-process-plan\s*\{[^}]*opacity:\s*1/);
   assert.match(foregroundPass, /\.format-row-1\.format-row-process \.format-copy,[\s\S]*?\.format-row-2\.format-row-process \.format-copy\s*\{[^}]*left:\s*4%;[^}]*width:\s*45%/);
   assert.match(foregroundPass, /\.format-row-1\.format-row-process \.format-media\s*\{[^}]*left:\s*55%;[^}]*width:\s*41%/);
   assert.match(foregroundPass, /\.format-row-2\.format-row-process \.format-media\s*\{[^}]*left:\s*53%;[^}]*width:\s*43%/);
@@ -583,6 +585,8 @@ test("keeps records and rejects the obsolete visible-system files", async () => 
     "public/media/blueprint-backgrounds/private-event-production-calculation.png",
     "public/media/blueprint-backgrounds/masterclass-six-person-learning-process.png",
     "public/media/blueprint-backgrounds/masterchef-recipes-europe-layout-color-v2.png",
+    "public/media/blueprint-backgrounds/masterchef-travel-photoreal-desktop.png",
+    "public/media/blueprint-backgrounds/masterchef-travel-photoreal-mobile.png",
     "public/media/blueprint-backgrounds/private-dinner-layout-color-v2.png",
     "public/media/blueprint-backgrounds/private-event-layout-color-v2.png",
     "public/media/blueprint-backgrounds/masterclass-six-person-layout-color-v2.png",
