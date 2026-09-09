@@ -2525,7 +2525,7 @@ button:focus-visible,
 .chef-journey-point-cyprus {
   left: 88.3%;
   top: 80.8%;
-  transform: translate(-100%, -115%);
+  transform: translate(6px, 28px);
 }
 
 .chef-journey-stops {
@@ -2562,9 +2562,8 @@ button:focus-visible,
   display: block;
   width: 100%;
   aspect-ratio: 1 / 1;
-  overflow: hidden;
+  overflow: visible;
   background: transparent;
-  clip-path: ellipse(46.1% 40.7% at 50% 49.5%);
 }
 
 .chef-journey-plate img {
@@ -2584,6 +2583,10 @@ button:focus-visible,
   color: var(--ink);
   text-align: center;
   transform: translateX(-50%);
+}
+
+.chef-journey-stop-turkey figcaption {
+  left: 0;
 }
 
 .chef-journey-stop figcaption span,
@@ -2675,7 +2678,7 @@ button:focus-visible,
     padding: 2px 4px;
     font-size: 11px;
     letter-spacing: .04em;
-    transform: translate(-100%, -115%);
+    transform: translate(6px, 28px);
   }
 
   .chef-journey-stop {

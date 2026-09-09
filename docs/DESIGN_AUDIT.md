@@ -5671,3 +5671,65 @@ active through 940 px, square through 820 px and contained in a shallow 2:1 inte
   are required to pass again on the exact committed source.
 - **Remaining limitation:** these are editorial process drawings, not measured architectural plans. Tiny
   marks are decorative and carry no factual meaning; all real information remains accessible live text.
+
+## Country-colour photographic plates — pre-code audit and implementation plan — 2026-09-09
+
+The user's latest production review rejects the active `v1` route plates as visibly generated,
+soft/pixelated and disconnected from the countries. The requested correction is limited to the five
+dish photographs and must ship on the existing public domain for both desktop and mobile without
+reverting the current compact event sheets or the integrated MasterChef route.
+
+### Existing elements that fail the confirmed reference
+
+1. The active 512 px plates have a soft, waxy visual treatment and repeated ingredient shapes; they do
+   not read as photographs of real plated food.
+2. All five plates use nearly the same neutral ceramic, so national colour is carried only by separate
+   map flags instead of the dish objects themselves.
+3. The calibrated CSS ellipse was required by the old opaque preview-grid exports, but it can cut the
+   rims of the new native-alpha plates and makes the objects look artificially cropped.
+
+### Confirmed replacement and implementation plan
+
+1. Preserve the current `story-origin-archive-field`, award photograph, live biography, licensed map,
+   route, country labels, leaders, captions, source note and every event-format change after it.
+2. Replace only the five active plate sources with the separately approved photoreal `v2` studies:
+   Spain/paella, France/duck, Italy/ravioli, Greece/octopus and Turkey/baklava.
+3. Export each native-alpha 1254 px master as a 1024 px, high-quality transparent WebP. This exceeds
+   the largest 118 CSS px plate at high-density display while avoiding five multi-megabyte PNG downloads.
+4. Remove the ellipse clip and hidden overflow from the plate wrapper. Let the real alpha silhouette and
+   full country-colour ceramic rim define every object; retain `object-fit: contain` and square geometry.
+5. Update focused source assertions and provenance, then run tests, lint, production build and
+   `git diff --check`.
+6. Verify the exact current composition at 1440, 1280, 1024, 768, 430, 390 and 375 px, checking sharpness,
+   complete plate rims, label collisions, route visibility and horizontal overflow before publishing.
+
+No new component, layout, copy, animation or UI library is required. The country palettes follow the
+user's direct instruction; restrained shade choices are implementation values within the approved site
+palette rather than a new visual system.
+
+### Implementation result and final anti-template audit
+
+- **Files created:** five 1024 × 1024 high-quality transparent WebP deliveries in
+  `public/media/masterchef/route-plates/`; the 1254 px generation sources remain in the working archive
+  instead of adding 12.5 MB to the public source repository.
+- **Files changed:** `app/page.tsx`, `app/globals.css`, the focused rendered-HTML regression test,
+  `public/media/masterchef/CREDITS.md` and the three required design records.
+- **Templated/rejected elements found:** soft neutral `v1` plate renders, repeated waxy food treatment,
+  one generic ceramic colour and an artificial ellipse crop.
+- **Rework:** all five route dishes now use separate photographic studies with natural ingredient detail
+  and country-colour ceramics. Native alpha replaces the crop mask, so every rim and contact shadow is
+  complete. Turkey's caption and the Cyprus endpoint label were separated without moving route points.
+- **References used:** the user's explicit realism and national-colour corrections, the already approved
+  integrated route, the credited Mediterranean map and the existing ivory/ink/brass site system.
+- **Decisions without direct references:** 1024 px delivery size, WebP quality 94/alpha quality 100 and
+  the small label offsets. These are neutral quality/performance and collision-fit values.
+- **UI libraries:** none added. Existing React, native HTML/CSS and the functional inline SVG route remain
+  the only primitives.
+- **Verification:** the five deliveries report 1024 × 1024 intrinsic size and encoded alpha. Browser
+  review completed at 1440, 1280, 1024, 768, 430, 390 and 375 px; the proof remains photo-left/copy-right,
+  plate rims remain complete, captions and flags do not overlap, route labels stay visible and horizontal
+  overflow is zero at every width. Production build, eight regression tests, ESLint and `git diff --check`
+  pass on the integration source.
+- **Remaining limitation:** the dishes are disclosed photorealistic visualizations, not documentary
+  photographs of food cooked by Evgen. The itinerary and award-photo commercial rights still require
+  independent confirmation before a commercial launch.

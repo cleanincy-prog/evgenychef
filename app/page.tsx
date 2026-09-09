@@ -110,31 +110,31 @@ const chefJourneyStops = [
     id: "spain",
     country: "Испания",
     dish: "Паэлья",
-    src: "/media/masterchef/route-plates/01-paella-plate-v1-512.webp",
+    src: "/media/masterchef/route-plates/01-paella-plate-v2-1024.webp",
   },
   {
     id: "france",
     country: "Франция",
     dish: "Утка с соусом",
-    src: "/media/masterchef/route-plates/02-duck-plate-v1-512.webp",
+    src: "/media/masterchef/route-plates/02-duck-plate-v2-1024.webp",
   },
   {
     id: "italy",
     country: "Италия",
     dish: "Равиоли",
-    src: "/media/masterchef/route-plates/03-ravioli-plate-v1-512.webp",
+    src: "/media/masterchef/route-plates/03-ravioli-plate-v2-1024.webp",
   },
   {
     id: "greece",
     country: "Греция",
     dish: "Осьминог",
-    src: "/media/masterchef/route-plates/04-octopus-plate-v1-512.webp",
+    src: "/media/masterchef/route-plates/04-octopus-plate-v2-1024.webp",
   },
   {
     id: "turkey",
     country: "Турция",
     dish: "Фисташковая выпечка",
-    src: "/media/masterchef/route-plates/05-baklava-plate-v1-512.webp",
+    src: "/media/masterchef/route-plates/05-baklava-plate-v2-1024.webp",
   },
 ] as const;
 
@@ -468,8 +468,8 @@ export default function Home() {
                                   <span className="chef-journey-plate" aria-hidden="true">
                                     <img
                                       src={stop.src}
-                                      width="512"
-                                      height="512"
+                                      width="1024"
+                                      height="1024"
                                       loading="lazy"
                                       decoding="async"
                                       alt=""

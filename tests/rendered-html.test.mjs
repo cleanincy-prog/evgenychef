@@ -244,11 +244,11 @@ test("keeps the approved process drawings and mapped photoreal plate journey act
     "/media/blueprint-backgrounds/inquiry-spoon-reference-exact.png",
   ];
   const activeArchiveMedia = [
-    "/media/masterchef/route-plates/01-paella-plate-v1-512.webp",
-    "/media/masterchef/route-plates/02-duck-plate-v1-512.webp",
-    "/media/masterchef/route-plates/03-ravioli-plate-v1-512.webp",
-    "/media/masterchef/route-plates/04-octopus-plate-v1-512.webp",
-    "/media/masterchef/route-plates/05-baklava-plate-v1-512.webp",
+    "/media/masterchef/route-plates/01-paella-plate-v2-1024.webp",
+    "/media/masterchef/route-plates/02-duck-plate-v2-1024.webp",
+    "/media/masterchef/route-plates/03-ravioli-plate-v2-1024.webp",
+    "/media/masterchef/route-plates/04-octopus-plate-v2-1024.webp",
+    "/media/masterchef/route-plates/05-baklava-plate-v2-1024.webp",
     "/media/masterchef/culinary-archive/map-mediterranean-full-cc-by-sa.svg",
     "/media/masterchef/route-flags/spain.svg",
     "/media/masterchef/route-flags/france.svg",
@@ -257,17 +257,10 @@ test("keeps the approved process drawings and mapped photoreal plate journey act
     "/media/masterchef/route-flags/turkey.svg",
     "/media/masterchef/route-flags/cyprus.svg",
   ];
-  const routePlateMasters = [
-    "/media/masterchef/route-plates/01-paella-plate-v1.png",
-    "/media/masterchef/route-plates/02-duck-plate-v1.png",
-    "/media/masterchef/route-plates/03-ravioli-plate-v1.png",
-    "/media/masterchef/route-plates/04-octopus-plate-v1.png",
-    "/media/masterchef/route-plates/05-baklava-plate-v1.png",
-  ];
   const activeBlueprintReferences = `${page}\n${css}`.match(/\/media\/blueprint-backgrounds\/[^"')\s]+/g) ?? [];
 
   await Promise.all(
-    [...activeBlueprints, ...activeArchiveMedia, ...routePlateMasters].map((path) =>
+    [...activeBlueprints, ...activeArchiveMedia].map((path) =>
       access(new URL(`public${path}`, root)),
     ),
   );
@@ -341,7 +334,7 @@ test("keeps the approved process drawings and mapped photoreal plate journey act
     page.indexOf("const chefJourneyStops"),
     page.indexOf("const sourceChapters"),
   );
-  assert.equal((archiveSources.match(/\/media\/masterchef\/route-plates\/[^"]+-512\.webp/g) ?? []).length, 5);
+  assert.equal((archiveSources.match(/\/media\/masterchef\/route-plates\/[^"]+-v2-1024\.webp/g) ?? []).length, 5);
   assert.equal((archiveSources.match(/\/media\/masterchef\/route-flags\/[^"]+\.svg/g) ?? []).length, 6);
   assert.doesNotMatch(archiveSources, /number:/);
   assert.doesNotMatch(page.slice(page.indexOf('className="chef-journey"'), page.indexOf("<EventFormats />")), /stop\.number|<b>0[1-6]<\/b>/);
@@ -350,7 +343,7 @@ test("keeps the approved process drawings and mapped photoreal plate journey act
   assert.doesNotMatch(page, /<section className="chef-journey"|chef-journey-head|chef-journey-title|Пять стран\. Пять блюд\./);
   assert.match(page, /className="chef-journey-kicker" id="chef-journey-label">[\s\S]*?маршрут вкусов · 5 стран \/ 5 блюд/);
   assert.match(page, /Редакционная схема предполагаемого маршрута/);
-  assert.match(page, /className="chef-journey-plate" aria-hidden="true"[\s\S]*?width="512"[\s\S]*?height="512"[\s\S]*?alt=""/);
+  assert.match(page, /className="chef-journey-plate" aria-hidden="true"[\s\S]*?width="1024"[\s\S]*?height="1024"[\s\S]*?alt=""/);
   assert.doesNotMatch(page, /aria-label=\{`\$\{stop\.number\}/);
   assert.match(page, /map-mediterranean-full-cc-by-sa\.svg/);
   assert.doesNotMatch(page, /map-atlantic-mediterranean-cc0\.svg/);
@@ -407,7 +400,8 @@ test("keeps the approved process drawings and mapped photoreal plate journey act
   for (const id of routeIds) {
     assert.match(journeyPass, new RegExp(`\\.chef-journey-stop-${id}\\s*\\{[^}]*(?:left|right):[^;]+;[^}]*top:`));
   }
-  assert.match(journeyPass, /\.chef-journey-plate\s*\{[^}]*aspect-ratio:\s*1 \/ 1;[^}]*background:\s*transparent;[^}]*clip-path:\s*ellipse/);
+  assert.match(journeyPass, /\.chef-journey-plate\s*\{[^}]*aspect-ratio:\s*1 \/ 1;[^}]*overflow:\s*visible;[^}]*background:\s*transparent/);
+  assert.doesNotMatch(journeyPass, /\.chef-journey-plate\s*\{[^}]*clip-path:/);
   assert.match(journeyPass, /\.chef-journey-plate img\s*\{[^}]*background:\s*transparent;[^}]*object-fit:\s*contain/);
   assert.doesNotMatch(journeyPass, /\.chef-journey-(?:stop|plate)(?: img)?\s*\{[^}]*(?:border|filter|box-shadow|drop-shadow):/);
   assert.doesNotMatch(journeyPass, /grid-template-columns:\s*repeat\(5/);
@@ -586,8 +580,8 @@ test("applies outcome-specific actions and interaction-only motion", async () =>
   assert.match(css, /\.header-action:active\s*\{\s*transform:\s*translateY\(1px\)/);
   assert.match(css, /\.contact-action:active\s*\{\s*transform:\s*translateY\(1px\)/);
   assert.doesNotMatch(css, /animation:|animation-timeline|:hover\s+img|parallax|marquee/);
-  assert.equal((css.match(/clip-path:/g) ?? []).length, 1);
-  assert.match(css, /\.chef-journey-plate\s*\{[^}]*clip-path:\s*ellipse/);
+  assert.equal((css.match(/clip-path:/g) ?? []).length, 0);
+  assert.match(css, /\.chef-journey-plate\s*\{[^}]*overflow:\s*visible/);
   assert.doesNotMatch(css, /font(?:-size)?:\s*(?:[^;]*\s)?(?:8|9|10)px\b/);
   assert.match(motion, /prefers-reduced-motion: reduce/);
   assert.match(motion, /IntersectionObserver/);

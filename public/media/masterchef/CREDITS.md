@@ -49,24 +49,24 @@ contain`; no route, label, handwriting or historical claim is added to the pixel
 
 ## Active photoreal plate visualizations
 
-These five coordinated plate studies were generated with the built-in OpenAI image-generation tool in
-Codex on 2026-09-09 for the user's requested map composition. They share one prompt-controlled camera,
-warm ivory plate, scale and lighting system. They are menu visualizations, not documentary photographs
-of dishes cooked, photographed or served by Evgen and not evidence of his itinerary.
+The active five coordinated plate studies were generated with the built-in OpenAI image-generation tool
+in Codex on 2026-09-09 for the user's requested map composition. They share a coherent high-resolution
+editorial camera and daylight system, while each ceramic uses restrained national colour. They are menu
+visualizations, not documentary photographs of dishes cooked, photographed or served by Evgen and not
+evidence of his itinerary. The earlier neutral `v1` series remains in the repository as retired history.
 
-| High-resolution master | Active delivery derivative | Subject | Production notes |
+| Generated source | Active delivery derivative | Subject | Production notes |
 |---|---|---|---|
-| `route-plates/01-paella-plate-v1.png` | `route-plates/01-paella-plate-v1-512.webp` | Seafood paella | 1254 × 1254 generated master; 512 × 512 WebP quality 88 |
-| `route-plates/02-duck-plate-v1.png` | `route-plates/02-duck-plate-v1-512.webp` | Duck breast with jus | 1254 × 1254 generated master; 512 × 512 WebP quality 88 |
-| `route-plates/03-ravioli-plate-v1.png` | `route-plates/03-ravioli-plate-v1-512.webp` | Ravioli with brown butter and sage | 1254 × 1254 generated master; 512 × 512 WebP quality 88 |
-| `route-plates/04-octopus-plate-v1.png` | `route-plates/04-octopus-plate-v1-512.webp` | Grilled octopus with fava purée | 1254 × 1254 generated master; 512 × 512 WebP quality 88 |
-| `route-plates/05-baklava-plate-v1.png` | `route-plates/05-baklava-plate-v1-512.webp` | Pistachio baklava | 1254 × 1254 generated master; 512 × 512 WebP quality 88 |
+| 1254 × 1254 native-alpha study | `route-plates/01-paella-plate-v2-1024.webp` | Seafood paella; saffron/red Spanish ceramic | 1024 × 1024 WebP quality 94, alpha quality 100 |
+| 1254 × 1254 native-alpha study | `route-plates/02-duck-plate-v2-1024.webp` | Duck breast with jus; ivory/navy/red French ceramic | 1024 × 1024 WebP quality 94, alpha quality 100 |
+| 1254 × 1254 native-alpha study | `route-plates/03-ravioli-plate-v2-1024.webp` | Ravioli with truffle; ivory/green/terracotta Italian ceramic | 1024 × 1024 WebP quality 94, alpha quality 100 |
+| 1254 × 1254 native-alpha study | `route-plates/04-octopus-plate-v2-1024.webp` | Grilled octopus with fava purée; ivory/cobalt Greek ceramic | 1024 × 1024 WebP quality 94, alpha quality 100 |
+| 1254 × 1254 native-alpha study | `route-plates/05-baklava-plate-v2-1024.webp` | Pistachio baklava; crimson/ivory Turkish ceramic | 1024 × 1024 WebP quality 94, alpha quality 100 |
 
-The built-in generator returned an opaque transparency-preview grid rather than encoded alpha despite
-a targeted extraction retry. The active interface therefore clips each delivery derivative precisely
-to the common plate ellipse; no backing pixels are visible on the site. It adds no CSS shadow, border,
-filter or opaque panel. The masters are retained so they can later be replaced by native-alpha versions
-without changing the route geometry.
+The active `v2` files have encoded alpha, so the interface uses the complete natural plate silhouette
+without an ellipse crop. No backing pixels, CSS shadow, border, filter or opaque panel are added. The
+high-resolution generation sources remain in the project working archive; the source repository ships
+only the optimized deliveries required by the active route.
 
 ## Active journey map
 

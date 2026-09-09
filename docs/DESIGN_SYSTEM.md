@@ -1458,3 +1458,19 @@ This contract supersedes the portrait-underlay contract above.
   illustration behind the copy.
 - **Surface:** continuous warm paper, square edges, no border around apertures, card, radius, shadow,
   gradient, glow, embedded words, number, logo or watermark.
+
+## Country-colour photographic route plates — 2026-09-09
+
+- The integrated MasterChef route, licensed map, country labels, leaders and live captions remain the
+  approved structure. This amendment changes only the five plate-image deliveries.
+- Each dish is one isolated native-alpha photographic cutout on a complete ceramic plate: paella for
+  Spain, duck for France, ravioli for Italy, octopus for Greece and baklava for Turkey.
+- Ceramic colour carries country identity with restrained glazed tones: saffron/red; ivory/navy/red;
+  ivory/green/terracotta; ivory/cobalt; crimson/ivory. Do not print flags, crests or typography on plates.
+- Photography uses coherent near-overhead perspective, soft daylight, contact shadow, natural food
+  texture and restrained saturation. Avoid waxy surfaces, repeated ingredients, synthetic blur and CGI
+  specular highlights.
+- Active delivery is 1024 × 1024 high-quality WebP with alpha. At the current 48–118 CSS px display range
+  this preserves high-density sharpness without shipping the multi-megabyte masters.
+- The wrapper must not crop the alpha silhouette: no `clip-path` and no hidden overflow. The image stays
+  square with `object-fit: contain`; the full coloured rim must remain visible at every breakpoint.
