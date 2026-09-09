@@ -5595,3 +5595,79 @@ These generated sheets are editorial process illustrations, not measured archite
 kitchen-engineering drawings. Their tiny marks are deliberately non-semantic; exact information remains
 in accessible live text. The 820/821 px change is an intentional art-directed reflow, so the two sides of
 that breakpoint are different compositions rather than a continuously scaled single sheet.
+
+## Event-format compact-sheet correction — pre-code audit and plan — 2026-09-09
+
+The user's new 18:57 Android capture rejects the just-published portrait solution. The complaint is
+confirmed by direct comparison with the approved desktop masterclass sheet and the rendered 360 px field.
+
+### Audit findings
+
+1. The active 360 px field is approximately 324 × 498 px because `13 / 20` overrides the intrinsic
+   1122:1402 sheet. The event chapter therefore becomes a sequence of tall posters rather than three
+   concise editorial explanations.
+2. The masterclass mobile asset adds a vertical tomato/foliage chain, a large torso, two repeated rows of
+   participants and a richly shaded communal table. Those additions are absent from the calmer approved
+   desktop sheet and visually overpower both the documentary photo and live text.
+3. The live pair technically avoids a bounding-box collision, but the drawing enters immediately beside
+   and beneath it, so the content does not read as sitting in a deliberate aperture.
+4. Applying the same tall portrait grammar to dinner, event and masterclass repeats the rejected generated-
+   poster pattern even though the three underlying concepts remain distinct.
+5. The exact copy, documentary photos, numbering, desktop concepts, content direction and all non-event
+   sections remain approved and must not change.
+
+### Implementation plan recorded before interface edits
+
+1. Retire the three `*-mobile-v4.webp` portrait sheets from the active source.
+2. Derive three compact near-square `v5` sheets from the approved desktop concepts with strict negative-
+   space constraints: the upper live-content pair stays completely clear and a single sparse process band
+   occupies only the lower half.
+3. Limit compact art direction to `max-width: 560px`. At 561–820 px restore the approved wide sheet and
+   its established desktop aperture coordinates instead of stretching a phone poster across a tablet.
+4. Make the phone field square, retain 12 px body copy and 17 px headings, keep the same left/right content
+   directions, and choose photo widths from their real aspect ratios rather than forcing equal panels.
+5. Update asset provenance and regression assertions, then run build/tests, lint and `git diff --check`.
+6. Visually verify 1440, 1280, 1024, 768, 430, 390, 375 and the user's approximate 360 px viewport,
+   including source switching at 560/561 px, section height, text clearance, photo legibility and overflow.
+7. Complete the final anti-template audit and publish the corrected version to the existing public Site.
+
+No new component or UI library is required. Decisions without a direct visual reference are limited to the
+square phone ratio, the 560/561 source boundary and measured aperture coordinates. These are functional
+responses to the supplied capture, not a new visual language.
+
+### Boundary amendment after visual validation
+
+The planned 560/561 source switch failed its own required browser check: at 561 px the restored wide
+private-event and masterclass sheets placed dense illustration behind wrapped live copy. The same issue
+remained visible at 821 px. The plan was therefore amended before release: the compact source remains
+active through 940 px, square through 820 px and contained in a shallow 2:1 intermediate field from
+821–940 px. At 941 px the approved wide source has enough width for its intended apertures.
+
+### Implementation and final anti-template audit
+
+- **Files created:** three 1254 × 1254 WebP compact sheets in
+  `design/mockups/event-format-blueprint-compact-2026-09-09/`, their prompt/provenance records and three
+  delivery copies in `public/media/blueprint-backgrounds/`.
+- **Files changed:** `app/page.tsx`, `app/globals.css`, the focused rendered-HTML regression test and the
+  three required design records. The rejected `v4` public copies are removed; their working mockups remain
+  clearly marked as rejected provenance.
+- **Templated elements found:** three repeated tall poster fields, vertical object towers, botanical
+  borders, duplicated participant rows and richly shaded table spreads. These made distinct service
+  concepts read as one generic generated-infographic template.
+- **Rework:** each format now has one quiet upper live-content area and one sparse, format-specific lower
+  path: ingredients → seven courses → intimate table; griddle → bites → trays → standing guests; and
+  demonstration → two stations → three outcomes. Copy and documentary photography remain unchanged.
+- **References used:** the user's 18:57 Android rejection capture, the original supplied composite, all
+  three approved desktop sheets, exact live Russian copy and the project's approved ivory/graphite/sage/
+  brass system. No new external visual language was introduced.
+- **Decisions without direct references:** the square field, 940/941 art-direction boundary, shallow
+  821–940 field and percentage aperture coordinates. Each is a neutral fitting value selected from visual
+  collision checks rather than a decorative choice.
+- **UI libraries:** none. Native `<picture>`, ordinary HTML and CSS positioning remain the only primitives.
+- **Verification:** browser review completed at 1440, 1280, 1024, 941, 940, 821, 820, 768, 561, 560,
+  430, 390, 375 and 360 px. The long event paragraph and masterclass paragraph remain inside clear paper,
+  photographs stay recognisable, no horizontal overflow is visible, and the three process drawings no
+  longer become tall phone posters. Build, eight focused regression tests, ESLint and `git diff --check`
+  are required to pass again on the exact committed source.
+- **Remaining limitation:** these are editorial process drawings, not measured architectural plans. Tiny
+  marks are decorative and carry no factual meaning; all real information remains accessible live text.

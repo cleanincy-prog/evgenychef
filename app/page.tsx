@@ -76,7 +76,7 @@ const eventFormats = [
     height: 1572,
     alt: "Евгений Грыбенюк готовит блюдо на сковороде для частного ужина",
     drawingSrc: "/media/blueprint-backgrounds/private-dinner-event-concept-v3.png",
-    mobileDrawingSrc: "/media/blueprint-backgrounds/private-dinner-event-mobile-v4.webp",
+    compactDrawingSrc: "/media/blueprint-backgrounds/private-dinner-compact-mobile-v5.webp",
     processBackground: true,
   },
   {
@@ -88,7 +88,7 @@ const eventFormats = [
     height: 1510,
     alt: "Евгений Грыбенюк готовит блины перед гостями на приватном мероприятии",
     drawingSrc: "/media/blueprint-backgrounds/private-event-circulation-concept-v3.png",
-    mobileDrawingSrc: "/media/blueprint-backgrounds/private-event-circulation-mobile-v4.webp",
+    compactDrawingSrc: "/media/blueprint-backgrounds/private-event-compact-mobile-v5.webp",
     processBackground: true,
   },
   {
@@ -100,7 +100,7 @@ const eventFormats = [
     height: 770,
     alt: "Евгений Грыбенюк показывает участникам мастер-класса профессиональные приёмы",
     drawingSrc: "/media/blueprint-backgrounds/masterclass-learning-concept-v3.png",
-    mobileDrawingSrc: "/media/blueprint-backgrounds/masterclass-learning-mobile-v4.webp",
+    compactDrawingSrc: "/media/blueprint-backgrounds/masterclass-compact-mobile-v5.webp",
     processBackground: true,
   },
 ];
@@ -211,7 +211,7 @@ function EventFormats() {
             {format.processBackground ? (
               <div className="format-process-field">
                 <picture className="format-process-plan">
-                  <source media="(max-width: 820px)" srcSet={format.mobileDrawingSrc} />
+                  <source media="(max-width: 940px)" srcSet={format.compactDrawingSrc} />
                   <img
                     src={format.drawingSrc ?? undefined}
                     width="1774"

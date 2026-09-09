@@ -1,5 +1,8 @@
 # Event-format portrait blueprints — 2026-09-09
 
+> Rejected and superseded by `../event-format-blueprint-compact-2026-09-09/` after the user's second
+> Android production capture. These files remain only as design-process provenance and are not shipped.
+
 Three compact-screen 1122 × 1402 raster underlays generated with the built-in ImageGen tool after the
 user rejected the detached 2:1 poster treatment visible in the production Android capture.
 
@@ -10,12 +13,9 @@ user rejected the detached 2:1 poster treatment visible in the production Androi
 - `03-masterclass-mobile-blueprint.webp`: demonstration branches to two practice groups, feedback and one
   shared outcome bench; the documentary photograph sits left and live copy sits right.
 
-The images contain no factual copy or embedded photography. Their corresponding public delivery assets
-use `*-mobile-v4.webp` names under `public/media/blueprint-backgrounds/`. The delivery copies use visually
-lossless-at-render-size WebP quality 92 to keep the three new sheets lightweight. Tablet/phone widths through 820 px
-use these portrait sheets; wider screens retain the approved 1774 × 887 `*concept-v3.png` sheets.
+The images contain no factual copy or embedded photography. The former `*-mobile-v4.webp` public delivery
+copies have been retired. The working files are retained here only so the rejected direction remains
+traceable.
 
-Final visual QA covers 1440, 1280, 1024, 768, 430, 390, 375 and 360 px, plus both sides of the 820 px
-source boundary. The mobile/tablet sheets load at their authored 1122 × 1402 size, copy and photography do
-not overlap, all foreground content stays inside the field, and no checked viewport has horizontal
-overflow. The 360 px calibration keeps the long private-event paragraph clear of the griddle illustration.
+The earlier QA record below is historical and was invalidated by the later user review; geometric
+containment alone did not make the composition acceptable.
