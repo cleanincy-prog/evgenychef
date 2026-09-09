@@ -6255,3 +6255,40 @@ component required: one content-specific annotated plate figure; no UI library i
 without a separate reference are limited to exact leader coordinates and breakpoint-specific figure depth,
 both constrained by the approved photograph and verified at the mandatory widths. Publication-rights status
 for the third-party restaurant photograph is not independently confirmed and remains an explicit risk.
+
+### Implementation result and final anti-template audit
+
+The personal-menu introduction now keeps its exact heading, explanatory paragraph and compact
+`ваш вкус → продукты → меню вечера` line in a four-column copy rail while the approved real plate occupies
+the facing eight columns. The marble outside the complete rim was removed with a deterministic alpha mask;
+the generated extraction trial was rejected because it did not preserve true transparency or the exact
+source faithfully enough. The production WebP retains the source photograph and receives no retouching,
+synthetic shadow or generated food.
+
+Three live italic explanations surround the plate. Their single SVG leader layer ends at the sliced meat,
+microgreens and lower sauce arc. The labels remain HTML and the lines remain vector geometry, so no text is
+baked into the photograph. At 940 px and below the introduction becomes copy followed by a full-width
+figure; at 560 px and below the plate grows within a taller figure and the three labels use separate
+perimeter positions. The existing sourcing gallery and provenance line remain unchanged below it.
+
+Files created for this correction: `public/media/menu/personal-menu-duck-plate-cutout-v1.webp`,
+`public/media/menu/CREDITS.md`, seven viewport captures, `metrics.json` and `README.md` under
+`artifacts/personal-menu-plate-2026-09-09/`. Files changed: `app/page.tsx`, `app/globals.css`,
+`tests/rendered-html.test.mjs`, `docs/DESIGN_REFERENCE_MAP.md`, `docs/DESIGN_SYSTEM.md` and this audit.
+Templated/unsuccessful elements found: the two inactive generated dish experiments and the failed generated
+background extraction; none is referenced by the live site. They were replaced by the approved real source
+plus deterministic alpha and content-specific leaders. References used: both user-supplied screenshots, the
+same high-resolution photograph recovered from the restaurant menu page, the active personal-menu reset and
+the project's paper/ink/gold, type and twelve-column system. Decisions without a separate reference are the
+exact line coordinates, image scale and breakpoint-specific figure depths only. UI libraries used as visible
+components: none; semantic HTML, CSS and inline SVG are technical primitives.
+
+Visual verification at 1440 × 1000, 1280 × 900, 1024 × 900, 768 × 1024, 430 × 932, 390 × 844 and
+375 × 812 found complete 1800 × 1665 image loading, three labels with no mutual overlap, three visible
+leader paths and endpoints, zero horizontal overflow and zero browser warnings or page errors at every
+width. The smallest callout size is 14.25 px. `git diff --check`, ESLint, the Vinext production build and all
+eight source/regression tests pass. The anti-template audit found no card grid, radius, gradient, glass,
+shadow, glow, generic icon, new CTA, filler copy, generated food or desktop-only phone stacking in this
+change. Remaining risk: the selected third-party restaurant photograph has no independently verified
+commercial licence; the site describes it only as an example of plate composition and does not attribute
+the dish to Evgen.

@@ -1,0 +1,632 @@
+[
+  {
+    "width": 1440,
+    "height": 1000,
+    "runtimeMessages": [],
+    "viewport": [
+      1440,
+      1000
+    ],
+    "documentScrollWidth": 1440,
+    "intro": {
+      "x": 66.23,
+      "y": 100.92,
+      "width": 1307.53,
+      "height": 666.2,
+      "right": 1373.77,
+      "bottom": 767.13
+    },
+    "figure": {
+      "x": 519.34,
+      "y": 100.92,
+      "width": 854.42,
+      "height": 666.2,
+      "right": 1373.77,
+      "bottom": 767.13
+    },
+    "stage": {
+      "x": 519.34,
+      "y": 100.92,
+      "width": 854.42,
+      "height": 649.36,
+      "right": 1373.77,
+      "bottom": 750.28
+    },
+    "image": {
+      "x": 647.5,
+      "y": 123.64,
+      "width": 598.09,
+      "height": 553.23,
+      "right": 1245.59,
+      "bottom": 676.88,
+      "complete": true,
+      "naturalWidth": 1800,
+      "naturalHeight": 1665
+    },
+    "notes": [
+      {
+        "text": "баланс текстури температур",
+        "fontSize": "18px",
+        "lineHeight": "18.9px",
+        "box": {
+          "x": 519.34,
+          "y": 149.61,
+          "width": 187.97,
+          "height": 37.78,
+          "right": 707.31,
+          "bottom": 187.39
+        }
+      },
+      {
+        "text": "локальные продукты· сезон",
+        "fontSize": "18px",
+        "lineHeight": "18.9px",
+        "box": {
+          "x": 1185.8,
+          "y": 198.31,
+          "width": 187.97,
+          "height": 37.78,
+          "right": 1373.77,
+          "bottom": 236.09
+        }
+      },
+      {
+        "text": "соус связываетвкус и блюдо",
+        "fontSize": "18px",
+        "lineHeight": "18.9px",
+        "box": {
+          "x": 527.88,
+          "y": 641.08,
+          "width": 187.97,
+          "height": 37.78,
+          "right": 715.84,
+          "bottom": 678.86
+        }
+      }
+    ],
+    "noteOverlap": false,
+    "leaderPaths": 3,
+    "leaderDots": 3,
+    "caption": "пример композиции блюда"
+  },
+  {
+    "width": 1280,
+    "height": 900,
+    "runtimeMessages": [],
+    "viewport": [
+      1280,
+      900
+    ],
+    "documentScrollWidth": 1280,
+    "intro": {
+      "x": 58.88,
+      "y": 89.66,
+      "width": 1162.25,
+      "height": 594.05,
+      "right": 1221.13,
+      "bottom": 683.7
+    },
+    "figure": {
+      "x": 461.64,
+      "y": 89.66,
+      "width": 759.48,
+      "height": 594.05,
+      "right": 1221.13,
+      "bottom": 683.7
+    },
+    "stage": {
+      "x": 461.64,
+      "y": 89.66,
+      "width": 759.48,
+      "height": 577.2,
+      "right": 1221.13,
+      "bottom": 666.86
+    },
+    "image": {
+      "x": 575.56,
+      "y": 109.84,
+      "width": 531.63,
+      "height": 491.75,
+      "right": 1107.19,
+      "bottom": 601.59,
+      "complete": true,
+      "naturalWidth": 1800,
+      "naturalHeight": 1665
+    },
+    "notes": [
+      {
+        "text": "баланс текстури температур",
+        "fontSize": "16.64px",
+        "lineHeight": "17.472px",
+        "box": {
+          "x": 461.64,
+          "y": 132.94,
+          "width": 167.08,
+          "height": 34.94,
+          "right": 628.72,
+          "bottom": 167.88
+        }
+      },
+      {
+        "text": "локальные продукты· сезон",
+        "fontSize": "16.64px",
+        "lineHeight": "17.472px",
+        "box": {
+          "x": 1054.05,
+          "y": 176.23,
+          "width": 167.08,
+          "height": 34.94,
+          "right": 1221.13,
+          "bottom": 211.17
+        }
+      },
+      {
+        "text": "соус связываетвкус и блюдо",
+        "fontSize": "16.64px",
+        "lineHeight": "17.472px",
+        "box": {
+          "x": 469.23,
+          "y": 568.44,
+          "width": 167.08,
+          "height": 34.94,
+          "right": 636.31,
+          "bottom": 603.38
+        }
+      }
+    ],
+    "noteOverlap": false,
+    "leaderPaths": 3,
+    "leaderDots": 3,
+    "caption": "пример композиции блюда"
+  },
+  {
+    "width": 1024,
+    "height": 900,
+    "runtimeMessages": [],
+    "viewport": [
+      1024,
+      900
+    ],
+    "documentScrollWidth": 1024,
+    "intro": {
+      "x": 47.09,
+      "y": 72.02,
+      "width": 929.81,
+      "height": 478.61,
+      "right": 976.91,
+      "bottom": 550.63
+    },
+    "figure": {
+      "x": 369.31,
+      "y": 72.02,
+      "width": 607.59,
+      "height": 478.61,
+      "right": 976.91,
+      "bottom": 550.63
+    },
+    "stage": {
+      "x": 369.31,
+      "y": 72.02,
+      "width": 607.59,
+      "height": 461.77,
+      "right": 976.91,
+      "bottom": 533.78
+    },
+    "image": {
+      "x": 460.44,
+      "y": 88.17,
+      "width": 425.31,
+      "height": 393.41,
+      "right": 885.75,
+      "bottom": 481.58,
+      "complete": true,
+      "naturalWidth": 1800,
+      "naturalHeight": 1665
+    },
+    "notes": [
+      {
+        "text": "баланс текстури температур",
+        "fontSize": "14px",
+        "lineHeight": "14.7px",
+        "box": {
+          "x": 369.31,
+          "y": 106.64,
+          "width": 133.66,
+          "height": 29.38,
+          "right": 502.97,
+          "bottom": 136.02
+        }
+      },
+      {
+        "text": "локальные продукты· сезон",
+        "fontSize": "14px",
+        "lineHeight": "14.7px",
+        "box": {
+          "x": 843.25,
+          "y": 141.27,
+          "width": 133.66,
+          "height": 29.38,
+          "right": 976.91,
+          "bottom": 170.64
+        }
+      },
+      {
+        "text": "соус связываетвкус и блюдо",
+        "fontSize": "14px",
+        "lineHeight": "14.7px",
+        "box": {
+          "x": 375.38,
+          "y": 453.63,
+          "width": 133.66,
+          "height": 29.38,
+          "right": 509.03,
+          "bottom": 483
+        }
+      }
+    ],
+    "noteOverlap": false,
+    "leaderPaths": 3,
+    "leaderDots": 3,
+    "caption": "пример композиции блюда"
+  },
+  {
+    "width": 768,
+    "height": 1024,
+    "runtimeMessages": [],
+    "viewport": [
+      768,
+      1024
+    ],
+    "documentScrollWidth": 768,
+    "intro": {
+      "x": 22,
+      "y": 72.44,
+      "width": 724,
+      "height": 911.73,
+      "right": 746,
+      "bottom": 984.17
+    },
+    "figure": {
+      "x": 22,
+      "y": 388.14,
+      "width": 724,
+      "height": 596.03,
+      "right": 746,
+      "bottom": 984.17
+    },
+    "stage": {
+      "x": 22,
+      "y": 388.14,
+      "width": 724,
+      "height": 579.19,
+      "right": 746,
+      "bottom": 967.33
+    },
+    "image": {
+      "x": 116.11,
+      "y": 411.3,
+      "width": 535.75,
+      "height": 495.56,
+      "right": 651.86,
+      "bottom": 906.86,
+      "complete": true,
+      "naturalWidth": 1800,
+      "naturalHeight": 1665
+    },
+    "notes": [
+      {
+        "text": "баланс текстури температур",
+        "fontSize": "14px",
+        "lineHeight": "14.7px",
+        "box": {
+          "x": 22,
+          "y": 431.58,
+          "width": 159.27,
+          "height": 29.38,
+          "right": 181.27,
+          "bottom": 460.95
+        }
+      },
+      {
+        "text": "локальные продукты· сезон",
+        "fontSize": "14px",
+        "lineHeight": "14.7px",
+        "box": {
+          "x": 586.73,
+          "y": 475.02,
+          "width": 159.27,
+          "height": 29.38,
+          "right": 746,
+          "bottom": 504.39
+        }
+      },
+      {
+        "text": "соус связываетвкус и блюдо",
+        "fontSize": "14px",
+        "lineHeight": "14.7px",
+        "box": {
+          "x": 29.23,
+          "y": 874.25,
+          "width": 159.27,
+          "height": 29.38,
+          "right": 188.5,
+          "bottom": 903.63
+        }
+      }
+    ],
+    "noteOverlap": false,
+    "leaderPaths": 3,
+    "leaderDots": 3,
+    "caption": "пример композиции блюда"
+  },
+  {
+    "width": 430,
+    "height": 932,
+    "runtimeMessages": [],
+    "viewport": [
+      430,
+      932
+    ],
+    "documentScrollWidth": 430,
+    "intro": {
+      "x": 18,
+      "y": 33.84,
+      "width": 394,
+      "height": 708.3,
+      "right": 412,
+      "bottom": 742.14
+    },
+    "figure": {
+      "x": 18,
+      "y": 301.78,
+      "width": 394,
+      "height": 440.36,
+      "right": 412,
+      "bottom": 742.14
+    },
+    "stage": {
+      "x": 18,
+      "y": 301.78,
+      "width": 394,
+      "height": 425.52,
+      "right": 412,
+      "bottom": 727.3
+    },
+    "image": {
+      "x": 33.75,
+      "y": 348.58,
+      "width": 362.47,
+      "height": 335.28,
+      "right": 396.22,
+      "bottom": 683.86,
+      "complete": true,
+      "naturalWidth": 1800,
+      "naturalHeight": 1665
+    },
+    "notes": [
+      {
+        "text": "баланс текстури температур",
+        "fontSize": "15px",
+        "lineHeight": "15.3px",
+        "box": {
+          "x": 18,
+          "y": 308.16,
+          "width": 122.13,
+          "height": 30.59,
+          "right": 140.13,
+          "bottom": 338.75
+        }
+      },
+      {
+        "text": "локальные продукты· сезон",
+        "fontSize": "15px",
+        "lineHeight": "15.3px",
+        "box": {
+          "x": 289.88,
+          "y": 325.17,
+          "width": 122.13,
+          "height": 30.59,
+          "right": 412,
+          "bottom": 355.77
+        }
+      },
+      {
+        "text": "соус связываетвкус и блюдо",
+        "fontSize": "15px",
+        "lineHeight": "15.3px",
+        "box": {
+          "x": 21.94,
+          "y": 681.81,
+          "width": 122.13,
+          "height": 30.59,
+          "right": 144.06,
+          "bottom": 712.41
+        }
+      }
+    ],
+    "noteOverlap": false,
+    "leaderPaths": 3,
+    "leaderDots": 3,
+    "caption": "пример композиции блюда"
+  },
+  {
+    "width": 390,
+    "height": 844,
+    "runtimeMessages": [],
+    "viewport": [
+      390,
+      844
+    ],
+    "documentScrollWidth": 390,
+    "intro": {
+      "x": 18,
+      "y": 34.06,
+      "width": 354,
+      "height": 658.81,
+      "right": 372,
+      "bottom": 692.88
+    },
+    "figure": {
+      "x": 18,
+      "y": 295.72,
+      "width": 354,
+      "height": 397.16,
+      "right": 372,
+      "bottom": 692.88
+    },
+    "stage": {
+      "x": 18,
+      "y": 295.72,
+      "width": 354,
+      "height": 382.31,
+      "right": 372,
+      "bottom": 678.03
+    },
+    "image": {
+      "x": 32.16,
+      "y": 337.77,
+      "width": 325.67,
+      "height": 301.23,
+      "right": 357.83,
+      "bottom": 639,
+      "complete": true,
+      "naturalWidth": 1800,
+      "naturalHeight": 1665
+    },
+    "notes": [
+      {
+        "text": "баланс текстури температур",
+        "fontSize": "14.82px",
+        "lineHeight": "15.1164px",
+        "box": {
+          "x": 18,
+          "y": 301.45,
+          "width": 109.73,
+          "height": 30.19,
+          "right": 127.73,
+          "bottom": 331.64
+        }
+      },
+      {
+        "text": "локальные продукты· сезон",
+        "fontSize": "14.82px",
+        "lineHeight": "15.1164px",
+        "box": {
+          "x": 262.27,
+          "y": 316.73,
+          "width": 109.73,
+          "height": 45.28,
+          "right": 372,
+          "bottom": 362.02
+        }
+      },
+      {
+        "text": "соус связываетвкус и блюдо",
+        "fontSize": "14.82px",
+        "lineHeight": "15.1164px",
+        "box": {
+          "x": 21.53,
+          "y": 634.47,
+          "width": 109.73,
+          "height": 30.19,
+          "right": 131.27,
+          "bottom": 664.66
+        }
+      }
+    ],
+    "noteOverlap": false,
+    "leaderPaths": 3,
+    "leaderDots": 3,
+    "caption": "пример композиции блюда"
+  },
+  {
+    "width": 375,
+    "height": 812,
+    "runtimeMessages": [],
+    "viewport": [
+      375,
+      812
+    ],
+    "documentScrollWidth": 375,
+    "intro": {
+      "x": 18,
+      "y": 34.27,
+      "width": 339,
+      "height": 639.92,
+      "right": 357,
+      "bottom": 674.19
+    },
+    "figure": {
+      "x": 18,
+      "y": 293.23,
+      "width": 339,
+      "height": 380.95,
+      "right": 357,
+      "bottom": 674.19
+    },
+    "stage": {
+      "x": 18,
+      "y": 293.23,
+      "width": 339,
+      "height": 366.11,
+      "right": 357,
+      "bottom": 659.34
+    },
+    "image": {
+      "x": 31.55,
+      "y": 333.5,
+      "width": 311.88,
+      "height": 288.48,
+      "right": 343.42,
+      "bottom": 621.98,
+      "complete": true,
+      "naturalWidth": 1800,
+      "naturalHeight": 1665
+    },
+    "notes": [
+      {
+        "text": "баланс текстури температур",
+        "fontSize": "14.25px",
+        "lineHeight": "14.535px",
+        "box": {
+          "x": 18,
+          "y": 298.72,
+          "width": 105.08,
+          "height": 29.06,
+          "right": 123.08,
+          "bottom": 327.78
+        }
+      },
+      {
+        "text": "локальные продукты· сезон",
+        "fontSize": "14.25px",
+        "lineHeight": "14.535px",
+        "box": {
+          "x": 251.92,
+          "y": 313.36,
+          "width": 105.08,
+          "height": 43.59,
+          "right": 357,
+          "bottom": 356.95
+        }
+      },
+      {
+        "text": "соус связываетвкус и блюдо",
+        "fontSize": "14.25px",
+        "lineHeight": "14.535px",
+        "box": {
+          "x": 21.38,
+          "y": 617.47,
+          "width": 105.08,
+          "height": 29.06,
+          "right": 126.45,
+          "bottom": 646.53
+        }
+      }
+    ],
+    "noteOverlap": false,
+    "leaderPaths": 3,
+    "leaderDots": 3,
+    "caption": "пример композиции блюда"
+  }
+]

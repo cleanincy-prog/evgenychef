@@ -208,10 +208,10 @@ function PersonalMenuPlate() {
         >
           <path d="M 184 112 H 272 L 512 324" />
           <path d="M 816 166 H 746 L 608 194" />
-          <path d="M 194 626 H 286 L 392 488" />
+          <path d="M 194 626 H 304 L 560 530" />
           <circle cx="512" cy="324" r="4" />
           <circle cx="608" cy="194" r="4" />
-          <circle cx="392" cy="488" r="4" />
+          <circle cx="560" cy="530" r="4" />
         </svg>
         <p className="menu-plate-note menu-plate-note-texture">
           баланс текстур
