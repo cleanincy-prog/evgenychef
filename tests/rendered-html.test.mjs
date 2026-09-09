@@ -234,6 +234,9 @@ test("keeps the approved process drawings and mapped photoreal plate journey act
     "/media/blueprint-backgrounds/private-dinner-event-concept-v3.png",
     "/media/blueprint-backgrounds/private-event-circulation-concept-v3.png",
     "/media/blueprint-backgrounds/masterclass-learning-concept-v3.png",
+    "/media/blueprint-backgrounds/private-dinner-event-mobile-v4.webp",
+    "/media/blueprint-backgrounds/private-event-circulation-mobile-v4.webp",
+    "/media/blueprint-backgrounds/masterclass-learning-mobile-v4.webp",
     "/media/blueprint-backgrounds/personal-menu-reference-exact.png",
     "/media/blueprint-backgrounds/meat-reference-exact.png",
     "/media/blueprint-backgrounds/fish-reference-exact.png",
@@ -271,6 +274,10 @@ test("keeps the approved process drawings and mapped photoreal plate journey act
   await assert.rejects(access(new URL("app/blueprint-diagrams.tsx", root)));
 
   assert.deepEqual(activeBlueprintReferences.toSorted(), activeBlueprints.toSorted());
+  assert.equal((page.match(/<picture className="format-process-plan"/g) ?? []).length, 1);
+  assert.match(page, /<source media="\(max-width: 820px\)" srcSet=\{format\.mobileDrawingSrc\}/);
+  assert.match(css, /aspect-ratio:\s*1122 \/ 1402/);
+  assert.match(css, /aspect-ratio:\s*13 \/ 20/);
   assert.doesNotMatch(page, /PreparationSequence|WorkdayTrajectory|MenuComposition|SourceContour/);
   assert.equal((page.match(/<svg/g) ?? []).length, 3);
   assert.match(page, /className="chef-journey-map-layer"[\s\S]*?viewBox="150 100 1450 600"[\s\S]*?role="img"/);
@@ -737,6 +744,9 @@ test("keeps records and rejects the obsolete visible-system files", async () => 
     "public/media/blueprint-backgrounds/private-dinner-event-concept-v3.png",
     "public/media/blueprint-backgrounds/private-event-circulation-concept-v3.png",
     "public/media/blueprint-backgrounds/masterclass-learning-concept-v3.png",
+    "public/media/blueprint-backgrounds/private-dinner-event-mobile-v4.webp",
+    "public/media/blueprint-backgrounds/private-event-circulation-mobile-v4.webp",
+    "public/media/blueprint-backgrounds/masterclass-learning-mobile-v4.webp",
     "public/media/blueprint-backgrounds/workday-four-step-vertical.png",
     "artifacts/home-evening-video-2026-09-09/rejected-ai-storyboard-v1.png",
     "artifacts/home-evening-video-2026-09-09/CONCEPT.md",

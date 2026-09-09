@@ -76,6 +76,7 @@ const eventFormats = [
     height: 1572,
     alt: "Евгений Грыбенюк готовит блюдо на сковороде для частного ужина",
     drawingSrc: "/media/blueprint-backgrounds/private-dinner-event-concept-v3.png",
+    mobileDrawingSrc: "/media/blueprint-backgrounds/private-dinner-event-mobile-v4.webp",
     processBackground: true,
   },
   {
@@ -87,6 +88,7 @@ const eventFormats = [
     height: 1510,
     alt: "Евгений Грыбенюк готовит блины перед гостями на приватном мероприятии",
     drawingSrc: "/media/blueprint-backgrounds/private-event-circulation-concept-v3.png",
+    mobileDrawingSrc: "/media/blueprint-backgrounds/private-event-circulation-mobile-v4.webp",
     processBackground: true,
   },
   {
@@ -98,6 +100,7 @@ const eventFormats = [
     height: 770,
     alt: "Евгений Грыбенюк показывает участникам мастер-класса профессиональные приёмы",
     drawingSrc: "/media/blueprint-backgrounds/masterclass-learning-concept-v3.png",
+    mobileDrawingSrc: "/media/blueprint-backgrounds/masterclass-learning-mobile-v4.webp",
     processBackground: true,
   },
 ];
@@ -207,16 +210,17 @@ function EventFormats() {
           >
             {format.processBackground ? (
               <div className="format-process-field">
-                <img
-                  className="format-process-plan"
-                  src={format.drawingSrc ?? undefined}
-                  width="1774"
-                  height="887"
-                  loading="lazy"
-                  decoding="async"
-                  alt=""
-                  aria-hidden="true"
-                />
+                <picture className="format-process-plan">
+                  <source media="(max-width: 820px)" srcSet={format.mobileDrawingSrc} />
+                  <img
+                    src={format.drawingSrc ?? undefined}
+                    width="1774"
+                    height="887"
+                    loading="lazy"
+                    decoding="async"
+                    alt=""
+                  />
+                </picture>
                 <figure className="format-media">
                   <img
                     src={format.src}

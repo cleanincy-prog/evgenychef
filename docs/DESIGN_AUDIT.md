@@ -5508,3 +5508,90 @@ concept for each service: `Частный ужин`, `Приватные мер�
 - **Remaining limitation:** the sheets are authored visual explanations rather than measured architectural
   or kitchen-engineering plans. Their generated micro-marks are decorative; every factual statement stays
   in accessible live text.
+
+## Event-format mobile underlays — pre-code audit and plan — 2026-09-09
+
+The user's production capture shows that the approved concepts are not correctly integrated at phone width.
+The drawings themselves remain approved; the responsive composition is the defect.
+
+### Audit findings
+
+1. The final `max-width: 820px` override sets every `.format-process-plan` to `bottom: 0`, `width: 100%`
+   and `height: auto`, while the phone field is forced to `1 / 1.18` or `1 / 1.08`.
+2. That combination preserves the full 2:1 desktop sheet but detaches it from the live copy/photo pair,
+   creates a visually empty middle and makes the process details too small to read as imagery.
+3. The result repeats a mechanical `copy/photo → poster → divider` sequence and violates both the supplied
+   reference—where content sits between drawing elements—and the project's deliberate-mobile rule.
+4. Exact format copy, numbering, existing documentary photos, their left/right direction, approved desktop
+   drawings and all later page sections remain valid and must not change.
+
+### Implementation plan recorded before interface edits
+
+1. Generate three text-free portrait underlays using each approved 2:1 sheet as a style/topology reference,
+   with event-specific upper quiet apertures and a larger simplified process resolution below and around them.
+2. Add one `mobileDrawingSrc` per format and use a semantic `<picture>` so tablet/phone widths through 820 px
+   receive the portrait sheet while wider screens retain the current asset; keep one decorative image node
+   and unchanged live content.
+3. Replace the phone-only detached-poster geometry with one integrated field. Preserve private dinner/event
+   as copy-left/photo-right and masterclass as photo-left/copy-right.
+4. Update focused tests and provenance prompts, then run lint, build/tests and `git diff --check`.
+5. Visually verify 1440, 1280, 1024, 768, 430, 390 and 375 px. On phones specifically check association,
+   aperture collisions, text size, image crop, section height, divider rhythm and horizontal overflow.
+6. Complete the anti-template audit and publish a new version to the existing public Site after validation.
+
+No new component or UI library is required. Decisions without a direct reference are limited to the exact
+portrait canvas ratio and measured aperture coordinates; both are bounded by the supplied failure capture,
+the approved topology and the existing mobile typography/grid.
+
+The supplied Android capture resolves to an approximately 360 px CSS viewport. A dedicated `≤380 px`
+calibration is therefore in scope: the field becomes 13:20, the two left-copy formats use 45% copy width,
+and foregrounds begin at 5%. These measured values keep the longest paragraph clear of the first process
+object without inserting a detached spacer or shrinking the type.
+
+### Implementation result and final anti-template audit
+
+- **Files created:** three 1122 × 1402 design masters plus `README.md` and `PROMPTS.md` in
+  `design/mockups/event-format-blueprint-mobile-2026-09-09/`, and three matching `*-mobile-v4.webp`
+  delivery assets in `public/media/blueprint-backgrounds/`.
+- **Files changed:** `app/page.tsx`, `app/globals.css`, `tests/rendered-html.test.mjs`,
+  `docs/DESIGN_REFERENCE_MAP.md`, `docs/DESIGN_SYSTEM.md` and this audit.
+- **Rejected templated behavior:** the same desktop sequence was being mechanically reduced to
+  `copy/photo row → detached 2:1 poster → rule` for all three formats. The repeated composition made the
+  event-specific concepts feel like interchangeable banners and left an unoccupied gap on phones.
+- **Rework:** one semantic `<picture>` now art-directs only the decorative raster. Through 820 px, each
+  format uses its own portrait sheet behind the unchanged live copy and documentary photo; above 820 px,
+  the approved 1774 × 887 desktop sheet remains active. Private dinner/event preserve copy-left and
+  photo-right; masterclass preserves photo-left and copy-right.
+- **References used:** the user's Android failure capture, the original supplied composite, the three
+  approved event-specific desktop concepts, the exact live Russian copy and documentary photos, and the
+  approved ivory/graphite/sage/brass design system.
+- **Decisions without a direct visual reference:** only the measured 1122:1402, 17:25 and 13:20 field
+  ratios, the 820 px source boundary and percentage aperture coordinates. These neutral calibrations solve
+  observed collisions without changing typography, content or visual language.
+- **UI libraries:** none introduced. Native `<picture>`, React rendering and positioned CSS are the only
+  primitives; no library theme or demo composition is visible.
+- **Anti-template result:** no new card, generic grid, repeated framed panel, radius, shadow, gradient,
+  glass effect, glow, stock icon, placeholder, CTA, testimonial or decorative animation was added. The
+  three process topologies remain visibly distinct and every factual statement remains live HTML.
+
+### Final responsive verification
+
+- Visual screenshots and geometry checks completed at **1440, 1280, 1024, 768, 430, 390 and 375 px**,
+  plus the supplied-capture calibration at **360 px** and source-boundary checks at **820/821 px**.
+- All checked widths have zero horizontal overflow and zero copy/photo overlap. At 820 px and below all
+  three natural raster sizes are 1122 × 1402; at 821 px and above they are 1774 × 887. The event format
+  switches as one art-directed sheet rather than exposing a detached lower poster.
+- At 360 px the longest private-event copy ends above the griddle/process art, while its photo remains a
+  complete landscape aperture. At 375, 390 and 430 px all three copy/photo pairs stay within their quiet
+  zones. At 768 px the portrait sheet remains one integrated tablet composition. The original desktop
+  layouts remain unchanged at 1024, 1280 and 1440 px.
+- The decorative image keeps an empty `alt`; there are no new controls, hover/focus states, loading flows,
+  forms, empty states or error states to introduce. Production build, eight focused regression tests,
+  ESLint and `git diff --check` pass for the exact implementation source.
+
+### Remaining limitation
+
+These generated sheets are editorial process illustrations, not measured architectural or
+kitchen-engineering drawings. Their tiny marks are deliberately non-semantic; exact information remains
+in accessible live text. The 820/821 px change is an intentional art-directed reflow, so the two sides of
+that breakpoint are different compositions rather than a continuously scaled single sheet.

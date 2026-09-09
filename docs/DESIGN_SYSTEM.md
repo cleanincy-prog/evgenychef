@@ -1409,3 +1409,27 @@ event-format rows; the mockup folder remains their design/provenance record.
   and below, dinner/event use `1 / 1.18` and masterclass uses `1 / 1.08`, protecting wrapped Russian copy
   while retaining the full 2:1 drawing directly beneath the live pair. No blueprint is hidden merely
   because the viewport is narrow.
+
+## Event-format portrait underlay contract — 2026-09-09
+
+This mobile correction supersedes only the final `560 px and below` rule above.
+
+- Each event format has one dedicated portrait raster for tablet and phone widths up to 820 px. It preserves the approved event-specific
+  topology but redistributes it around two upper live-content apertures and one compact lower process zone.
+- The raster contains no readable words, numbers, logos, watermark, UI chrome or embedded photograph.
+  Russian copy, numbering and documentary imagery remain accessible HTML.
+- Private dinner and private event keep copy left / photo right. Masterclass keeps photo left / copy right.
+  The photo aperture is visually equal to or slightly larger than the copy aperture; neither becomes a
+  thumbnail beside a dominant illustration.
+- Process lines may enter from the outer edges, pass through the centre gap and resolve in the lower part of
+  the same sheet. The lower process zone is not a separate figure and must not be isolated by a large blank
+  band or a second divider.
+- Tablet fields use the portrait asset's intrinsic 1122:1402 ratio. At 560 px and below, a slightly taller
+  17:25 field creates a content-occupied upper reserve while the complete intrinsic-ratio sheet remains
+  anchored within the same composition. A `<picture>` media source switches assets without duplicating
+  semantics or hiding information.
+- At 380 px and below, the field adjusts to 13:20 and the two left-copy formats gain three percentage
+  points of copy width. This is a measured collision correction for the longer private-event paragraph,
+  not an additional visual breakpoint or a change to the drawing scale.
+- Wide screens above 820 px continue to use the approved 1774 × 887 drawings. No new card, radius, shadow, gradient,
+  border frame, icon library, animation or UI component is introduced.

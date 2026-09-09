@@ -919,3 +919,15 @@ files remain audit history only.
 
 The three process topologies are now approved project decisions. All palette, line, surface, photograph,
 copy and foreground-direction decisions come from the supplied screenshot and active project.
+
+## Event-format mobile integration correction — 2026-09-09
+
+The user's Android production capture is the authoritative failure reference: a complete wide sheet placed
+below the live pair reads as a detached poster, not as the requested drawing around and between content.
+
+| Project element | Reference | Principle used | What is not copied | Project implementation |
+|---|---|---|---|---|
+| Mobile private dinner | User production capture and the approved private-dinner topology | Keep the copy-left/photo-right relationship inside one portrait sheet; ingredients and seven-course path wrap the quiet apertures and resolve below them | No full 2:1 poster beneath the pair, tiny seven-plate strip, duplicated live text or changed photo | Use a dedicated text-free portrait underlay at phone widths; retain the exact HTML copy and documentary portrait above it |
+| Mobile private event | Same capture and explicit correction `Исправь`; approved griddle/assembly/circulation concept | Enlarge the operational sequence and connect it spatially to the live event photo | No detached banner, excessive empty middle, formal dinner table or generic people diagram | Use a portrait underlay with copy-left/photo-right quiet zones, side connectors and a compact lower circulation loop |
+| Mobile masterclass | Same correction and approved demonstration/practice/feedback concept | Preserve the reversed photo-left/copy-right direction while the teaching loop surrounds and completes the pair | No event trays, seven-course motif, certificate symbol or generic step cards | Use a portrait underlay with photo-left/copy-right quiet zones and a large lower demonstration → practice → correction → table sequence |
+| Responsive source selection | Project's deliberate-mobile rule and the failure visible in the supplied capture | Art-direct the raster itself rather than mechanically shrinking the desktop sheet | No CSS crop presented as a complete diagram, hidden blueprint, horizontal scroll or extra content row | Wide screens above 820 px retain the approved 1774 × 887 sheets; tablet/phone select three dedicated portrait assets while live semantics remain unchanged |
