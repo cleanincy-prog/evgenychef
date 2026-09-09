@@ -1135,3 +1135,17 @@ copy, portrait source, archive and desktop/tablet composition remain approved.
 
 No supplied reference fixes the exact numeric reduction. The mobile font clamp, side inset and portrait cap
 are neutral fitting decisions that must be checked at 430, 390 and 375 px and must not alter 561 px or wider.
+
+## Private-dinner mobile editorial sheet — 2026-09-10
+
+Photo 1 is a current-state anti-reference. Photo 2 is the authoritative positive reference through 560 px.
+This entry supersedes the earlier mobile directions to retain `01`, omit captions and fit one complete 3:2
+montage beneath the upper pair.
+
+| Project element | Reference | Principle used | What is not copied | Project implementation |
+|---|---|---|---|---|
+| One mobile sheet | User-supplied Photo 2 and direct instruction that Photo 1 must look like it | Copy, documentary photo and seven-course evidence form one tall editorial rectangle | Browser chrome, detached technical poster, nested cards or unrelated empty paper | One square-edged bordered field with consistent inset and a content-derived portrait height |
+| Utility header | Photo 2 | State service and scope before the display title | Decorative `01`, badge or second heading level | Live utility row `ЧАСТНЫЙ УЖИН` / `СЕМЬ ПОДАЧ` with one fine gold rule |
+| Copy/photo pair | Photo 2; approved private-dinner copy and portrait | Give the offer and chef equal visual authority | Thumbnail photo, tiny title, cropped evidence or meaningless centre guide | Dominant title/paragraph left, complete portrait right, CSS divider with dots and `ГОТОВИТ ШЕФ` between them |
+| Course sequence | Photo 2; existing seven-course source | Make the seven stages legible by directly pairing each plate with its role | Dish claims, arrows, diagram circles, numbers or one-column cards | Four labelled courses above and three centred below with the exact seven live course-type labels |
+| Responsive/accessibility | Project deliberate-mobile rule | Author the phone composition independently and preserve semantic meaning | Scaled desktop canvas, horizontal scroller, baked raster text or SVG diagram | Semantic ordered lists; representative plate raster remains decorative; chef photo retains specific alt; all visible labels remain HTML |

@@ -307,7 +307,6 @@ test("keeps the approved process drawings, private-dinner plates and mapped plat
   assert.equal((page.match(/courseImageSrc: null/g) ?? []).length, 2);
   assert.match(page, /format\.courseImageSrc \? " format-row-menu" : ""/);
   assert.match(page, /!format\.courseImageSrc \? \([\s\S]*?className="format-process-plan"/);
-  assert.match(page, /className="format-menu-spread" aria-hidden="true"[\s\S]*?width="1200"[\s\S]*?height="800"[\s\S]*?alt=""/);
   assert.equal((page.match(/className="format-menu-drafting-lines" aria-hidden="true"/g) ?? []).length, 1);
   for (const className of [
     "format-menu-drafting-frame",
@@ -318,7 +317,22 @@ test("keeps the approved process drawings, private-dinner plates and mapped plat
   ]) {
     assert.match(page, new RegExp(`className="${className}"`));
   }
-  assert.doesNotMatch(page, /Стартер|Холодная закуска|Горячая закуска|Основное блюдо|Десерт/);
+  assert.match(page, /className="format-menu-spread"[\s\S]*?className="format-menu-overview"[\s\S]*?width="1200"[\s\S]*?height="800"[\s\S]*?alt=""/);
+  assert.match(page, /className="format-dinner-meta" aria-hidden="true"[\s\S]*?Частный ужин[\s\S]*?Семь подач/);
+  assert.match(page, /className="format-dinner-axis" aria-hidden="true"[\s\S]*?— Готовит шеф/);
+  assert.match(page, /className="format-menu-mobile"[\s\S]*?format-course-group-four[\s\S]*?format-course-group-three/);
+  for (const course of [
+    "Стартер",
+    "Холодная закуска",
+    "Горячая закуска",
+    "Рыбный курс",
+    "Освежающая пауза",
+    "Основное блюдо",
+    "Десерт",
+  ]) {
+    assert.ok(page.includes(`"${course}"`), `private-dinner course role must remain live: ${course}`);
+  }
+  assert.doesNotMatch(page, /className="format-menu-spread" aria-hidden="true"/);
   assert.doesNotMatch(page, /mobileDrawingSrc|mobile-v4/);
   assert.match(css, /The rejected tall posters[\s\S]*?@media \(min-width: 561px\) and \(max-width: 820px\)[\s\S]*?aspect-ratio:\s*1 \/ 1;[\s\S]*?@media \(min-width: 821px\) and \(max-width: 940px\)[\s\S]*?aspect-ratio:\s*2 \/ 1;[\s\S]*?@media \(max-width: 560px\)[\s\S]*?aspect-ratio:\s*1 \/ 1;/);
   assert.doesNotMatch(page, /PreparationSequence|WorkdayTrajectory|MenuComposition|SourceContour/);
@@ -469,9 +483,14 @@ test("keeps the approved process drawings, private-dinner plates and mapped plat
   assert.match(privateDinnerMenuPass, /\.format-menu-drafting-rule-divider\s*\{[^}]*top:\s*34%;[^}]*right:\s*35%/);
   assert.match(privateDinnerMenuPass, /\.format-menu-drafting-spine\s*\{[^}]*left:\s*65%;[^}]*width:\s*1px;[^}]*background:\s*var\(--accent-small\)/);
   assert.match(privateDinnerMenuPass, /\.format-menu-drafting-spine::before,[\s\S]*?\.format-menu-drafting-spine::after\s*\{[^}]*border:\s*1px solid var\(--accent-small\);[^}]*border-radius:\s*50%/);
+  assert.match(privateDinnerMenuPass, /\.format-menu-caption\s*\{[^}]*position:\s*absolute;[^}]*clip:\s*rect\(0, 0, 0, 0\)/);
   assert.match(privateDinnerMenuPass, /@media \(min-width: 821px\) and \(max-width: 1100px\)[\s\S]*?aspect-ratio:\s*1\.5 \/ 1;[\s\S]*?width:\s*52%/);
   assert.match(privateDinnerMenuPass, /@media \(min-width: 561px\) and \(max-width: 820px\)[\s\S]*?aspect-ratio:\s*1 \/ 1;[\s\S]*?width:\s*76%/);
-  assert.match(privateDinnerMenuPass, /@media \(max-width: 560px\)[\s\S]*?aspect-ratio:\s*\.92 \/ 1;[\s\S]*?width:\s*88%/);
+  assert.match(privateDinnerMenuPass, /@media \(max-width: 560px\)[\s\S]*?aspect-ratio:\s*\.62 \/ 1;[\s\S]*?border:\s*1px solid var\(--rule\)/);
+  assert.match(privateDinnerMenuPass, /@media \(max-width: 560px\)[\s\S]*?\.format-row-1\.format-row-menu \.format-copy\s*\{[^}]*left:\s*4\.3%;[^}]*width:\s*41%/);
+  assert.match(privateDinnerMenuPass, /@media \(max-width: 560px\)[\s\S]*?\.format-row-1\.format-row-menu \.format-media\s*\{[^}]*left:\s*51\.5%;[^}]*width:\s*44\.2%;[^}]*aspect-ratio:\s*1152 \/ 1572/);
+  assert.match(privateDinnerMenuPass, /\.format-course-group-four \.format-course-labels\s*\{[^}]*grid-template-columns:\s*repeat\(4,/);
+  assert.match(privateDinnerMenuPass, /\.format-course-group-three \.format-course-labels\s*\{[^}]*grid-template-columns:\s*repeat\(3,/);
 });
 
 test("uses the measured Trivium typography on the approved editorial surfaces", async () => {
