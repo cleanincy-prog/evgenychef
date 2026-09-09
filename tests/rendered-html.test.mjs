@@ -269,6 +269,9 @@ test("keeps the approved process drawings, private-dinner plates and mapped plat
     "private-event-canape-studies.png",
   ];
   const activeBlueprints = [
+    "/media/blueprint-backgrounds/masterchef-route-underlay-v3-desktop.webp",
+    "/media/blueprint-backgrounds/masterchef-route-underlay-v3-tablet.webp",
+    "/media/blueprint-backgrounds/masterchef-route-underlay-v3-mobile.webp",
     "/media/blueprint-backgrounds/private-dinner-event-concept-v3.png",
     "/media/blueprint-backgrounds/private-event-circulation-concept-v3.png",
     "/media/blueprint-backgrounds/masterclass-learning-concept-v3.png",
@@ -283,13 +286,6 @@ test("keeps the approved process drawings, private-dinner plates and mapped plat
     "/media/masterchef/route-plates/03-ravioli-plate-v2-1024.webp",
     "/media/masterchef/route-plates/04-octopus-plate-v2-1024.webp",
     "/media/masterchef/route-plates/05-baklava-plate-v2-1024.webp",
-    "/media/masterchef/culinary-archive/map-mediterranean-full-cc-by-sa.svg",
-    "/media/masterchef/route-flags/spain.svg",
-    "/media/masterchef/route-flags/france.svg",
-    "/media/masterchef/route-flags/italy.svg",
-    "/media/masterchef/route-flags/greece.svg",
-    "/media/masterchef/route-flags/turkey.svg",
-    "/media/masterchef/route-flags/cyprus.svg",
   ];
   const activeMenuMedia = [
     "/media/event-formats/private-dinner-seven-plates-v1.jpg",
@@ -326,47 +322,9 @@ test("keeps the approved process drawings, private-dinner plates and mapped plat
   assert.doesNotMatch(page, /mobileDrawingSrc|mobile-v4/);
   assert.match(css, /The rejected tall posters[\s\S]*?@media \(min-width: 561px\) and \(max-width: 820px\)[\s\S]*?aspect-ratio:\s*1 \/ 1;[\s\S]*?@media \(min-width: 821px\) and \(max-width: 940px\)[\s\S]*?aspect-ratio:\s*2 \/ 1;[\s\S]*?@media \(max-width: 560px\)[\s\S]*?aspect-ratio:\s*1 \/ 1;/);
   assert.doesNotMatch(page, /PreparationSequence|WorkdayTrajectory|MenuComposition|SourceContour/);
-  assert.equal((page.match(/<svg/g) ?? []).length, 4);
-  assert.match(page, /className="chef-journey-map-layer"[\s\S]*?viewBox="150 100 1450 600"[\s\S]*?role="img"/);
-  assert.match(page, /<image[\s\S]*?href="\/media\/masterchef\/culinary-archive\/map-mediterranean-full-cc-by-sa\.svg"/);
-  assert.match(page, /className="chef-journey-route"[\s\S]*?<polyline points="234,386 425,190 650,159 1088,454 1275,318 1430,585"/);
-  assert.match(page, /className="chef-journey-flag-layer"[\s\S]*?chefJourneyFlags\.map[\s\S]*?data-country-flag=\{flag\.id\}[\s\S]*?href=\{flag\.src\}/);
-  assert.match(page, /страны отмечены флагами/);
-  assert.match(page, /className="chef-journey-leaders"[\s\S]*?viewBox="150 100 1450 600"[\s\S]*?preserveAspectRatio="none"/);
-  assert.equal((page.match(/data-leader=/g) ?? []).length, 5);
-
-  const routePoints = page
-    .match(/className="chef-journey-route"[\s\S]*?<polyline points="([^"]+)"/)?.[1]
-    .split(" ")
-    .map((point) => point.split(",").map(Number));
-  const leaderPoints = new Map(
-    [...page.matchAll(/data-leader="([^"]+)" points="([^"]+)"/g)].map((match) => [
-      match[1],
-      match[2].split(" ").map((point) => point.split(",").map(Number)),
-    ]),
-  );
-  const routeIds = ["spain", "france", "italy", "greece", "turkey"];
-  routePoints.slice(0, 5).forEach(([mapX, mapY], index) => {
-    const [leaderX, leaderY] = leaderPoints.get(routeIds[index])[0];
-    assert.equal(leaderX, mapX, `${routeIds[index]} leader starts at its map point`);
-    assert.equal(leaderY, mapY, `${routeIds[index]} leader starts at its map point`);
-  });
-
-  const plateCentreAnchors = new Map([
-    ["spain", [324, 568]],
-    ["france", [542, 376]],
-    ["italy", [824, 268]],
-    ["greece", [1006, 568]],
-    ["turkey", [1339, 430]],
-  ]);
-  plateCentreAnchors.forEach(([expectedX, expectedY], id) => {
-    const points = leaderPoints.get(id);
-    const [targetX, targetY] = points[points.length - 1];
-    assert.equal(targetX, expectedX, `${id} leader continues below its plate centre`);
-    assert.equal(targetY, expectedY, `${id} leader continues below its plate centre`);
-    const [startX, startY] = points[0];
-    assert.ok(Math.hypot(targetX - startX, targetY - startY) < 225, `${id} leader stays local`);
-  });
+  assert.equal((page.match(/<svg/g) ?? []).length, 1);
+  assert.match(page, /className="chef-journey-underlay" aria-hidden="true"[\s\S]*?<picture>[\s\S]*?<source[\s\S]*?media="\(max-width: 560px\)"[\s\S]*?masterchef-route-underlay-v3-mobile\.webp[\s\S]*?<source[\s\S]*?media="\(max-width: 900px\)"[\s\S]*?masterchef-route-underlay-v3-tablet\.webp[\s\S]*?<img[\s\S]*?masterchef-route-underlay-v3-desktop\.webp[\s\S]*?alt=""/);
+  assert.doesNotMatch(page, /chefJourneyFlags|chef-journey-(?:map-layer|map-field|route|flag-layer|leaders|point-labels)|data-leader|route-flags|map-mediterranean-full-cc-by-sa/);
   assert.doesNotMatch(css, /url\([^)]*\.svg|blueprint-figure|workday-trajectory|menu-composition|source-contour/);
 
   for (const name of [...retiredPseudoBackgrounds, ...retiredDetachedDrawings]) {
@@ -387,30 +345,28 @@ test("keeps the approved process drawings, private-dinner plates and mapped plat
     page.indexOf("const sourceScenes"),
   );
   assert.equal((archiveSources.match(/\/media\/masterchef\/route-plates\/[^"]+-v2-1024\.webp/g) ?? []).length, 5);
-  assert.equal((archiveSources.match(/\/media\/masterchef\/route-flags\/[^"]+\.svg/g) ?? []).length, 6);
+  assert.equal((archiveSources.match(/\/media\/masterchef\/route-flags\/[^"]+\.svg/g) ?? []).length, 0);
   assert.doesNotMatch(archiveSources, /number:/);
   assert.doesNotMatch(page.slice(page.indexOf('className="chef-journey"'), page.indexOf("<EventFormats />")), /stop\.number|<b>0[1-6]<\/b>/);
   assert.doesNotMatch(archiveSources, /culinary-archive\/(?:01-sauce|02-paella-service|03-ravioli-pass|04-octopus-garnish|05-pistachio-pastry)\.webp|lesson:/);
-  assert.match(page, /className="story-origin-archive-field"[\s\S]*?className="story-origin-lead"[\s\S]*?className="story-award"[\s\S]*?className="story-copy"[\s\S]*?className="section-intro story-intro"[\s\S]*?id="story-title"[\s\S]*?className="story-copy-body"[\s\S]*?className="chef-journey"[\s\S]*?role="group"[\s\S]*?aria-labelledby="chef-journey-label"[\s\S]*?aria-describedby="chef-journey-note"/);
+  assert.match(page, /className="story-origin-archive-field"[\s\S]*?className="story-origin-lead"[\s\S]*?className="chef-journey-underlay"[\s\S]*?className="story-award"[\s\S]*?className="story-copy"[\s\S]*?className="section-intro story-intro"[\s\S]*?id="story-title"[\s\S]*?className="story-copy-body"[\s\S]*?className="chef-journey"[\s\S]*?role="group"[\s\S]*?aria-labelledby="chef-journey-label"[\s\S]*?aria-describedby="chef-journey-note"/);
   assert.doesNotMatch(page, /<section className="story"[^>]*>[\s\S]{0,100}<header className="section-intro story-intro"/);
   assert.doesNotMatch(page, /<section className="chef-journey"|chef-journey-head|chef-journey-title|Пять стран\. Пять блюд\./);
   assert.match(page, /className="chef-journey-kicker" id="chef-journey-label">[\s\S]*?маршрут вкусов · 5 стран \/ 5 блюд/);
-  assert.match(page, /Редакционная схема предполагаемого маршрута/);
   assert.match(page, /className="chef-journey-plate" aria-hidden="true"[\s\S]*?width="1024"[\s\S]*?height="1024"[\s\S]*?alt=""/);
   assert.doesNotMatch(page, /aria-label=\{`\$\{stop\.number\}/);
-  assert.match(page, /map-mediterranean-full-cc-by-sa\.svg/);
-  assert.doesNotMatch(page, /map-atlantic-mediterranean-cc0\.svg/);
-  assert.match(page, /href="https:\/\/commons\.wikimedia\.org\/wiki\/File:Mediterranean_Sea_location_map_\(blank\)\.svg"/);
-  assert.match(page, /href="https:\/\/creativecommons\.org\/licenses\/by-sa\/3\.0\/"/);
   assert.match(page, /Испания[\s\S]*?Паэлья[\s\S]*?Франция[\s\S]*?Утка с соусом[\s\S]*?Италия[\s\S]*?Равиоли[\s\S]*?Греция[\s\S]*?Осьминог[\s\S]*?Турция[\s\S]*?Фисташковая выпечка/);
+  assert.match(page, /className="chef-journey-cyprus" aria-hidden="true">Кипр<\/span>/);
   assert.match(page, /<strong>Кипр — авторское меню сегодня\.<\/strong>/);
-  assert.match(page, /Блюда — фотореалистичные визуализации; маршрут требует подтверждения шефа\./);
+  assert.match(page, /Блюда и маршрут — фотореалистичные визуализации; маршрут требует подтверждения шефа\./);
   assert.doesNotMatch(page, /recipe-mary-hawker-1691\.webp|map-eastern-mediterranean-1590\.webp/);
   assert.doesNotMatch(page, /<picture className="story-origin-process-plan"/);
   assert.match(credits, /Pexels License/);
   assert.match(credits, /Public Domain Mark/);
   assert.match(credits, /Mediterranean Sea location map \(blank\)\.svg/);
   assert.match(credits, /CC BY-SA 3\.0/);
+  assert.match(credits, /Active journey underlays/);
+  assert.match(credits, /1774 × 887[\s\S]*?1254 × 1254[\s\S]*?1086 × 1448/);
   assert.match(credits, /editorial working set/);
   assert.match(credits, /not photographs of\s+Evgen Grybenyk/);
   assert.match(page, /className="home-story-copy"[\s\S]*?className="home-story-day"[\s\S]*?className="home-story-film"[\s\S]*?<ChefStoryVideo \/>[\s\S]*?домашняя кухня · подготовка, огонь, подача/);
@@ -443,52 +399,35 @@ test("keeps the approved process drawings, private-dinner plates and mapped plat
   assert.match(page, /className="contact-reference-plan" aria-hidden="true"[\s\S]*?inquiry-spoon-reference-exact\.png/);
   assert.match(css, /\.format-process-field\s*\{[^}]*position:\s*relative;[^}]*aspect-ratio:\s*2 \/ 1/);
   assert.match(css, /\.format-process-plan\s*\{[^}]*position:\s*absolute;[^}]*z-index:\s*0;[^}]*object-fit:\s*contain/);
-  const archivePass = css.slice(css.lastIndexOf("/* Real-photo culinary archive."));
-  const journeyStart = css.lastIndexOf("/* Integrated transparent-plate route.");
+  const journeyStart = css.lastIndexOf("/* Quiet-zone MasterChef stage.");
   const journeyPass = css.slice(
     journeyStart,
     css.indexOf("/* Approved event-specific drawings remain", journeyStart),
   );
-  assert.match(archivePass, /\.story-origin-archive-field\s*\{[^}]*grid-column:\s*1 \/ -1/);
-  assert.match(archivePass, /\.story-origin-lead\s*\{[^}]*display:\s*block;[^}]*height:\s*clamp\(520px, 43vw, 620px\);[^}]*isolation:\s*isolate/);
-  assert.match(archivePass, /\.story-origin-lead \.story-award\s*\{[^}]*position:\s*absolute;[^}]*left:\s*0;[^}]*width:\s*46%;[^}]*overflow:\s*visible/);
-  assert.match(archivePass, /\.story-origin-lead \.story-award img\s*\{[^}]*aspect-ratio:\s*1719 \/ 900;[^}]*object-fit:\s*contain/);
-  assert.match(archivePass, /\.story-origin-lead \.story-copy\s*\{[^}]*position:\s*absolute;[^}]*right:\s*0;[^}]*width:\s*48%;[^}]*background:\s*var\(--paper\)/);
-  assert.match(archivePass, /\.story-copy \.story-intro\s*\{[^}]*display:\s*block;[^}]*margin:\s*0/);
-  assert.match(archivePass, /@media \(max-width:\s*820px\)[\s\S]*?\.story-origin-lead\s*\{[^}]*display:\s*grid;[^}]*grid-template-columns:\s*repeat\(12,[^}]*column-gap:\s*10px/);
-  assert.match(archivePass, /@media \(max-width:\s*820px\)[\s\S]*?\.story-origin-lead \.story-award\s*\{[^}]*position:\s*relative;[^}]*grid-column:\s*1 \/ 7;[^}]*grid-row:\s*2/);
-  assert.match(archivePass, /@media \(max-width:\s*820px\)[\s\S]*?\.story-origin-lead \.story-copy\s*\{[^}]*display:\s*contents/);
-  assert.match(archivePass, /@media \(max-width:\s*820px\)[\s\S]*?\.story-copy-body\s*\{[^}]*grid-column:\s*7 \/ 13;[^}]*grid-row:\s*2;[^}]*background:\s*var\(--paper\)/);
-  assert.match(journeyPass, /\.chef-journey\s*\{[^}]*position:\s*absolute;[^}]*right:\s*0;[^}]*bottom:\s*0;[^}]*width:\s*100%/);
-  assert.match(journeyPass, /\.story-copy \.chef-journey-kicker\s*\{[^}]*margin:\s*12px 0 0/);
-  assert.match(journeyPass, /\.chef-journey-canvas\s*\{[^}]*position:\s*relative;[^}]*height:\s*auto;[^}]*aspect-ratio:\s*1450 \/ 600;[^}]*overflow:\s*hidden/);
-  assert.match(journeyPass, /\.chef-journey-map-field\s*\{[^}]*position:\s*absolute;[^}]*left:\s*0;[^}]*width:\s*100%;[^}]*aspect-ratio:\s*1450 \/ 600;[^}]*transform:\s*none/);
-  assert.match(journeyPass, /\.chef-journey-map-layer image\s*\{[^}]*opacity:\s*\.16/);
-  assert.match(journeyPass, /\.chef-journey-route polyline\s*\{[^}]*stroke:\s*var\(--accent-small\);[^}]*stroke-width:\s*1\.5/);
-  assert.match(journeyPass, /\.chef-journey-flag-layer\s*\{[^}]*z-index:\s*3;[^}]*pointer-events:\s*none/);
-  assert.match(journeyPass, /\.chef-journey-flag-keyline\s*\{[^}]*fill:\s*var\(--paper-light\)/);
-  assert.match(journeyPass, /\.chef-journey-flag-outline\s*\{[^}]*fill:\s*none;[^}]*opacity:\s*\.32;[^}]*stroke:\s*var\(--ink\);[^}]*stroke-width:\s*1/);
-  assert.doesNotMatch(journeyPass, /\.chef-journey-route circle|\.chef-journey-point b/);
-  assert.match(journeyPass, /\.chef-journey-leaders polyline\s*\{[^}]*stroke:\s*var\(--ink\);[^}]*stroke-width:\s*1/);
+  assert.ok(journeyStart >= 0);
+  assert.match(journeyPass, /\.story-origin-lead\s*\{[^}]*display:\s*block;[^}]*height:\s*auto;[^}]*aspect-ratio:\s*2 \/ 1;[^}]*overflow:\s*hidden;[^}]*isolation:\s*isolate/);
+  assert.match(journeyPass, /\.chef-journey-underlay,[\s\S]*?\.chef-journey-underlay img\s*\{[^}]*position:\s*absolute;[^}]*inset:\s*0;[^}]*z-index:\s*0;[^}]*width:\s*100%;[^}]*height:\s*100%/);
+  assert.match(journeyPass, /\.chef-journey-underlay img\s*\{[^}]*object-fit:\s*contain/);
+  assert.match(journeyPass, /\.story-origin-lead \.story-award\s*\{[^}]*position:\s*absolute;[^}]*z-index:\s*3;[^}]*left:\s*3%;[^}]*width:\s*42%;[^}]*background:\s*transparent/);
+  assert.match(journeyPass, /\.story-origin-lead \.story-award img\s*\{[^}]*aspect-ratio:\s*1719 \/ 900;[^}]*object-fit:\s*contain/);
+  assert.match(journeyPass, /\.story-origin-lead \.story-copy\s*\{[^}]*position:\s*absolute;[^}]*z-index:\s*3;[^}]*right:\s*3%;[^}]*width:\s*44%;[^}]*background:\s*transparent/);
+  assert.match(journeyPass, /\.chef-journey\s*\{[^}]*position:\s*absolute;[^}]*z-index:\s*2;[^}]*inset:\s*0;[^}]*pointer-events:\s*none/);
   assert.match(journeyPass, /\.chef-journey-stops\s*\{[^}]*position:\s*absolute;[^}]*inset:\s*0;[^}]*display:\s*block/);
-  assert.match(journeyPass, /\.chef-journey-stop\s*\{[^}]*position:\s*absolute;[^}]*width:\s*clamp\(82px, 9vw, 118px\)/);
-  for (const id of routeIds) {
+  assert.match(journeyPass, /\.chef-journey-stop\s*\{[^}]*position:\s*absolute;[^}]*width:\s*clamp\(82px, 8\.2vw, 118px\)/);
+  for (const id of ["spain", "france", "italy", "greece", "turkey"]) {
     assert.match(journeyPass, new RegExp(`\\.chef-journey-stop-${id}\\s*\\{[^}]*(?:left|right):[^;]+;[^}]*top:`));
   }
   assert.match(journeyPass, /\.chef-journey-plate\s*\{[^}]*aspect-ratio:\s*1 \/ 1;[^}]*overflow:\s*visible;[^}]*background:\s*transparent/);
   assert.doesNotMatch(journeyPass, /\.chef-journey-plate\s*\{[^}]*clip-path:/);
-  assert.match(journeyPass, /\.chef-journey-plate img\s*\{[^}]*background:\s*transparent;[^}]*object-fit:\s*contain/);
+  assert.match(journeyPass, /\.chef-journey-plate img\s*\{[^}]*object-fit:\s*contain;[^}]*background:\s*transparent/);
   assert.doesNotMatch(journeyPass, /\.chef-journey-(?:stop|plate)(?: img)?\s*\{[^}]*(?:border|filter|box-shadow|drop-shadow):/);
-  assert.doesNotMatch(journeyPass, /grid-template-columns:\s*repeat\(5/);
-  assert.doesNotMatch(journeyPass, /@media \(max-width:\s*940px\)|chef-journey-mobile-leader/);
-  assert.doesNotMatch(journeyPass, /\.chef-journey-route\s*\{\s*display:\s*none/);
-  assert.match(journeyPass, /@media \(max-width:\s*820px\)[\s\S]*?\.chef-journey\s*\{[^}]*position:\s*relative;[^}]*grid-column:\s*1 \/ -1;[^}]*grid-row:\s*3;[^}]*margin:\s*-4px 0 0;[^}]*padding-top:\s*0/);
-  assert.match(journeyPass, /@media \(max-width:\s*820px\)[\s\S]*?\.chef-journey-canvas\s*\{[^}]*height:\s*clamp\(245px, 42vw, 330px\);[^}]*aspect-ratio:\s*auto/);
-  assert.match(journeyPass, /@media \(max-width:\s*560px\)[\s\S]*?\.chef-journey-canvas\s*\{[^}]*height:\s*clamp\(190px, 52vw, 240px\)/);
-  assert.match(journeyPass, /@media \(max-width:\s*560px\)[\s\S]*?\.chef-journey-stop\s*\{[^}]*clamp\(48px, 14vw, 58px\)/);
-  assert.match(journeyPass, /@media \(max-width:\s*560px\)[\s\S]*?\.chef-journey-flag-layer\s*\{[^}]*display:\s*none/);
-  assert.match(journeyPass, /@media \(max-width:\s*560px\)[\s\S]*?\.chef-journey-stop figcaption span,[\s\S]*?font-size:\s*11px/);
-  assert.match(journeyPass, /@media \(max-width:\s*560px\)[\s\S]*?\.chef-journey-point\s*\{[^}]*display:\s*none;[^}]*\}[\s\S]*?\.chef-journey-point-cyprus\s*\{[^}]*display:\s*flex/);
+  assert.match(journeyPass, /@media \(max-width:\s*900px\)[\s\S]*?\.story-origin-lead\s*\{[^}]*aspect-ratio:\s*23 \/ 20/);
+  assert.match(journeyPass, /@media \(max-width:\s*900px\)[\s\S]*?\.chef-journey-underlay img\s*\{[^}]*object-fit:\s*cover/);
+  assert.match(journeyPass, /@media \(max-width:\s*560px\)[\s\S]*?\.story-origin-lead\s*\{[^}]*aspect-ratio:\s*3 \/ 4/);
+  assert.match(journeyPass, /@media \(max-width:\s*560px\)[\s\S]*?\.story-origin-lead \.story-award\s*\{[^}]*left:\s*2%;[^}]*width:\s*46\.5%/);
+  assert.match(journeyPass, /@media \(max-width:\s*560px\)[\s\S]*?\.story-origin-lead \.story-copy\s*\{[^}]*right:\s*2%;[^}]*width:\s*48%/);
+  assert.match(journeyPass, /@media \(max-width:\s*560px\)[\s\S]*?\.chef-journey-stop figcaption strong\s*\{[^}]*display:\s*none/);
+  assert.doesNotMatch(page, /chef-journey-map-layer|chef-journey-flag-layer|chef-journey-leaders|chef-journey-point/);
   assert.match(css, /\.home-story\s*\{[^}]*display:\s*grid;[^}]*grid-template-columns:\s*repeat\(12,[^}]*max-width:\s*var\(--content\)/);
   assert.match(css, /\.home-story-copy\s*\{[^}]*grid-column:\s*1 \/ 5;[^}]*max-width:\s*470px/);
   assert.match(css, /\.home-story-day\s*\{[^}]*grid-column:\s*1 \/ 5;[^}]*grid-row:\s*2;[^}]*border-top:\s*1px solid var\(--rule\)/);
@@ -837,6 +776,9 @@ test("keeps records and rejects the obsolete visible-system files", async () => 
     "public/media/blueprint-backgrounds/masterchef-recipes-europe-layout-color-v2.png",
     "public/media/blueprint-backgrounds/masterchef-travel-photoreal-desktop.png",
     "public/media/blueprint-backgrounds/masterchef-travel-photoreal-mobile.png",
+    "public/media/blueprint-backgrounds/masterchef-route-underlay-v3-desktop.webp",
+    "public/media/blueprint-backgrounds/masterchef-route-underlay-v3-tablet.webp",
+    "public/media/blueprint-backgrounds/masterchef-route-underlay-v3-mobile.webp",
     "public/media/blueprint-backgrounds/private-dinner-layout-color-v2.png",
     "public/media/blueprint-backgrounds/private-event-layout-color-v2.png",
     "public/media/blueprint-backgrounds/masterclass-six-person-layout-color-v2.png",

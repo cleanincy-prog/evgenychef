@@ -13,7 +13,7 @@ statuette, net payout or literal cash handover.
 The Pexels images below are retained as illustrative editorial references. They are not photographs of
 Evgen Grybenyk, his dishes, his clients or his travel. Their source JPEGs are not shipped; optimized
 local WebP derivatives remain in the archive but are no longer rendered by the active route. The active
-route uses the separately documented photoreal plate visualizations and the credited unmodified map.
+route uses the separately documented photoreal plate visualizations and original quiet-zone underlays.
 
 The retired prototype paired the Pexels images with Spain, France, Italy, Greece and Turkey as an
 editorial working set. Those associations do not establish where a photograph was made or where Evgen
@@ -68,7 +68,29 @@ without an ellipse crop. No backing pixels, CSS shadow, border, filter or opaque
 high-resolution generation sources remain in the project working archive; the source repository ships
 only the optimized deliveries required by the active route.
 
-## Active journey map
+## Active journey underlays
+
+The active route surface was generated with the built-in OpenAI image-generation tool in Codex on
+2026-09-09 from the user's approved quiet blueprint concept. It is an editorial visualization, not a
+documentary record of Evgen's itinerary.
+
+| Active delivery | Intrinsic size | Responsive role | Pixel content |
+|---|---:|---|---|
+| `../blueprint-backgrounds/masterchef-route-underlay-v3-desktop.webp` | 1774 × 887 | Landscape stage above 900 px | Upper half uninterrupted ivory paper; lower graphite Europe/Mediterranean map, continuous ochre route and small vintage car |
+| `../blueprint-backgrounds/masterchef-route-underlay-v3-tablet.webp` | 1254 × 1254 | Compact 23:20 stage from 561–900 px | Upper half uninterrupted ivory paper; complete compact lower route and car; responsive crop removes only surplus blank paper above the route |
+| `../blueprint-backgrounds/masterchef-route-underlay-v3-mobile.webp` | 1086 × 1448 | Portrait stage through 560 px | Upper 58% uninterrupted ivory paper; complete lower route and car from Spain to Cyprus |
+
+All three optimized deliveries use WebP quality 95. They contain no baked-in text, country label, flag,
+food, plate, photograph aperture, copy aperture, border or UI. The documentary award photograph, exact
+Russian copy, country/dish names and five plate studies remain independent HTML/media layers. The route
+is a proposed narrative and must be confirmed with the chef before publication.
+
+Generation/edit direction: preserve warm ivory paper, restrained graphite geography, one continuous
+antique-brass route and a realistic vintage car; protect the complete upper live-content zone; remove
+all dishes, labels, flags and frames; keep both route endpoints visible. The final portrait source was
+separately art-directed rather than cropping the desktop image.
+
+## Retired stored journey map
 
 | Local file | Source | Creator | Rights status | Local transformation |
 |---|---|---|---|---|
@@ -79,8 +101,9 @@ inside the credited geographic field. The route overlay is project-authored inte
 is not part of NordNordWest's source map. No endorsement by the map author or Wikimedia Commons is
 implied.
 
-## Active route flag symbols
+## Retired stored route flag symbols
 
 The six files in `route-flags/` are project-authored, simplified vector renderings of the national flags
 of Spain, France, Italy, Greece, Turkey and Cyprus. They use standard flag layouts and national colours
-as functional map symbols, contain no third-party artwork, and are not part of the credited base map.
+as historical functional map symbols, contain no third-party artwork, and are not part of the credited
+base map. They are no longer rendered by the active interface.
