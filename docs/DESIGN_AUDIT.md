@@ -6168,9 +6168,76 @@ the established project design system. UI libraries used as visible components: 
 and inline SVG are technical primitives.
 
 Visual verification at 1440 × 1000, 1280 × 900, 1024 × 900, 768 × 1024, 430 × 932, 390 × 844 and
-375 × 812 found complete 1800 × 1665 image loading, three readable labels without mutual overlap, three
-leader paths and endpoints, and no horizontal overflow or browser errors. ESLint, the production build,
-focused tests and `git diff --check` pass. The anti-template audit found no card grid, radius, gradient,
-glass, shadow, glow, generic icon, filler copy, generated food or desktop-only phone stacking. Remaining
-risk: the selected third-party restaurant photograph has no independently verified commercial licence; it
-is described only as an example of plate composition and not as Evgen's dish.
+375 × 812 found complete 1800 × 1665 image loading, three labels with no mutual overlap, three visible
+leader paths and endpoints, zero horizontal overflow and zero browser warnings or page errors at every
+width. The smallest callout size is 14.25 px. `git diff --check`, ESLint, the Vinext production build and all
+eight source/regression tests pass. The anti-template audit found no card grid, radius, gradient, glass,
+shadow, glow, generic icon, new CTA, filler copy, generated food or desktop-only phone stacking in this
+change. Remaining risk: the selected third-party restaurant photograph has no independently verified
+commercial licence; the site describes it only as an example of plate composition and does not attribute
+the dish to Evgen.
+## Quiet-zone MasterChef composition — pre-code audit and plan — 2026-09-09
+
+The user's latest rejection supersedes the `Unified proportional MasterChef field` implementation above.
+The v18 block technically shared one parent, but it did not read as one designed composition: the live
+photograph and copy were laid over an unrelated full-width map, hiding the route and flag fragments; the
+approved travel car was absent; and the narrow layout mechanically reduced the same dense map instead of
+art-directing a mobile field. The resulting hierarchy was photograph, text and a partly obscured map—not
+one proportional editorial rectangle.
+
+Confirmed reference: the user's supplied 00:34 desktop composition for the overall relationship, followed
+by the explicit corrections that the photograph must remain left and uncropped, the live text must remain
+right, the drawing must connect them without lines beneath either, and the route must include the travel
+car and five country dishes. The latest rejection is authoritative evidence of what must be removed.
+
+Implementation plan:
+
+1. Fix the foreground first: an uncropped 1719:900 award photograph at upper left and one live heading /
+   biography group at upper right, both inside the same bounded field.
+2. Replace the active inline SVG map, flag badges, point labels and leader lines with one original quiet-zone
+   raster underlay. Its upper area is uninterrupted ivory paper; its lower band alone contains the graphite
+   Mediterranean map, continuous ochre route and vintage car.
+3. Deliver separate 1774:887 desktop, 1254:1254 tablet and 1086:1448 mobile underlays. Sources switch at
+   measured breakpoints; the tablet field removes only unused blank paper above the map, never route content.
+4. Retain the five approved 1024 px native-alpha country-colour plate photographs as separate overlays and
+   retain country/dish names as live semantic captions. Position every plate only inside the lower route band.
+5. Keep a single continuous paper surface with square edges and no frame, card, radius, shadow, gradient,
+   visible aperture line or generated text.
+6. Update the rendered regression, media record and mandatory design records, then verify the actual block
+   at 1440, 1280, 1024, 768, 430, 390 and 375 px before publishing.
+
+Components retained: award photograph, exact live heading and biography, route kicker, five v2 plate
+cutouts, country/dish captions and disclosure. Components reworked: `story-origin-lead` becomes a true
+fixed-ratio stage; `chef-journey` becomes a semantic overlay on the underlay rather than an independent SVG
+figure. Components removed from the active UI: inline licensed map SVG, route polyline, six flag assets,
+country-point layer and five leader polylines. New required assets: only the three reference-driven quiet-zone
+underlays (landscape, square and portrait). No UI library or template component is introduced.
+
+### Implementation result and final anti-template audit — 2026-09-10
+
+- **Files created:** three text-free WebP route underlays: desktop 1774 × 887, tablet 1254 × 1254 and
+  mobile 1086 × 1448.
+- **Files changed:** `app/page.tsx`, `app/globals.css`, `tests/rendered-html.test.mjs`,
+  `public/media/masterchef/CREDITS.md` and the three mandatory design records.
+- **Templated elements found and removed:** the centred map-poster treatment, detached photo/copy rows,
+  active SVG route, flag badges, leader network and baked-looking map labels. The active result is one
+  square-edged editorial field with no card, shadow, radius, gradient or ornamental UI shell.
+- **Rework:** the complete 1719:900 documentary photograph stays uncropped at upper left; the exact live
+  heading and biography stay at upper right; map, continuous ochre route and travel car occupy the lower
+  shared band. Five independent 1024 px photographic plate cutouts use country-colour ceramics. Phone
+  captions retain country names and remove only the redundant visible dish subtitle to prevent collisions;
+  the semantic dish names remain in the ordered list.
+- **References used:** the user's approved 00:34 composition, the subsequent photo-left/text-right and
+  map/car instructions, the latest rejected desktop capture, and the approved ivory/ink/brass system.
+- **Decisions without direct references:** the 520 px desktop fit floor, 23:20 tablet field, small plate
+  offsets, raster-matched stage paper and phone caption reduction. These are measured collision and surface-continuity
+  corrections; they introduce no new visual language.
+- **UI libraries:** none added. React semantics, native responsive images and project CSS are the only
+  primitives.
+- **Verification:** browser geometry and visual captures completed at 1440, 1280, 1024, 768, 430, 390 and
+  375 px, plus the 900/901 px source boundary. The photo remains `contain`, all plate/caption bounds stay
+  inside the field, foreground-to-route gaps remain positive and `scrollWidth` equals `innerWidth`.
+  ESLint, the production build, eight regression tests and `git diff --check` pass.
+- **Remaining limitations:** the itinerary still requires confirmation from the chef; the five dishes are
+  clearly disclosed visualizations rather than documentary photographs of food cooked by Evgen; commercial
+  publication rights for the award photograph require independent confirmation.

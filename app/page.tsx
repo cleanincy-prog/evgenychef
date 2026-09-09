@@ -148,15 +148,6 @@ const chefJourneyStops = [
   },
 ] as const;
 
-const chefJourneyFlags = [
-  { id: "spain", country: "Испания", x: 234, y: 386, src: "/media/masterchef/route-flags/spain.svg" },
-  { id: "france", country: "Франция", x: 425, y: 190, src: "/media/masterchef/route-flags/france.svg" },
-  { id: "italy", country: "Италия", x: 650, y: 159, src: "/media/masterchef/route-flags/italy.svg" },
-  { id: "greece", country: "Греция", x: 1088, y: 454, src: "/media/masterchef/route-flags/greece.svg" },
-  { id: "turkey", country: "Турция", x: 1275, y: 318, src: "/media/masterchef/route-flags/turkey.svg" },
-  { id: "cyprus", country: "Кипр", x: 1430, y: 585, src: "/media/masterchef/route-flags/cyprus.svg" },
-] as const;
-
 const sourceScenes = [
   {
     id: "meat",
@@ -385,6 +376,26 @@ export default function Home() {
             <div className="story-origin">
               <div className="story-origin-archive-field">
                 <div className="story-origin-lead">
+                  <div className="chef-journey-underlay" aria-hidden="true">
+                    <picture>
+                      <source
+                        media="(max-width: 560px)"
+                        srcSet="/media/blueprint-backgrounds/masterchef-route-underlay-v3-mobile.webp"
+                      />
+                      <source
+                        media="(max-width: 900px)"
+                        srcSet="/media/blueprint-backgrounds/masterchef-route-underlay-v3-tablet.webp"
+                      />
+                      <img
+                        src="/media/blueprint-backgrounds/masterchef-route-underlay-v3-desktop.webp"
+                        width="1774"
+                        height="887"
+                        loading="eager"
+                        decoding="async"
+                        alt=""
+                      />
+                    </picture>
+                  </div>
                   <figure className="story-award">
                     <img
                       src="/media/masterchef/evgen-grybenyk-winner-envelope-2020.jpg"
@@ -422,147 +433,41 @@ export default function Home() {
                     aria-labelledby="chef-journey-label"
                     aria-describedby="chef-journey-note"
                   >
-                    <figure className="chef-journey-map">
-                      <div className="chef-journey-canvas">
-                        <div className="chef-journey-map-field">
-                          <svg
-                            className="chef-journey-map-layer"
-                            viewBox="150 100 1450 600"
-                            role="img"
-                            aria-labelledby="chef-journey-map-title"
-                          >
-                            <title id="chef-journey-map-title">
-                              Редакционная схема предполагаемого маршрута через Испанию, Францию,
-                              Италию, Грецию и Турцию к Кипру; страны отмечены флагами
-                            </title>
-                            <image
-                              href="/media/masterchef/culinary-archive/map-mediterranean-full-cc-by-sa.svg"
-                              x="0"
-                              y="0"
-                              width="1754"
-                              height="862"
-                            />
-                            <g className="chef-journey-route" aria-hidden="true">
-                              <polyline points="234,386 425,190 650,159 1088,454 1275,318 1430,585" />
-                            </g>
-                          </svg>
-
-                          <svg
-                            className="chef-journey-flag-layer"
-                            viewBox="150 100 1450 600"
-                            preserveAspectRatio="none"
-                            aria-hidden="true"
-                          >
-                            {chefJourneyFlags.map((flag) => (
-                              <g data-country-flag={flag.id} key={flag.id}>
-                                <rect
-                                  className="chef-journey-flag-keyline"
-                                  x={flag.x - 46}
-                                  y={flag.y - 32}
-                                  width="92"
-                                  height="64"
-                                />
-                                <image
-                                  className="chef-journey-flag-image"
-                                  href={flag.src}
-                                  x={flag.x - 42}
-                                  y={flag.y - 28}
-                                  width="84"
-                                  height="56"
-                                  preserveAspectRatio="xMidYMid slice"
-                                />
-                                <rect
-                                  className="chef-journey-flag-outline"
-                                  x={flag.x - 42}
-                                  y={flag.y - 28}
-                                  width="84"
-                                  height="56"
-                                />
-                              </g>
-                            ))}
-                          </svg>
-
-                          <div className="chef-journey-point-labels" aria-hidden="true">
-                            {chefJourneyStops.map((stop) => (
-                              <span className={`chef-journey-point chef-journey-point-${stop.id}`} key={stop.id}>
-                                <i>{stop.country}</i>
-                              </span>
-                            ))}
-                            <span className="chef-journey-point chef-journey-point-cyprus">
-                              <i>Кипр</i>
+                    <ol className="chef-journey-stops" aria-label="Страны и блюда маршрута">
+                      {chefJourneyStops.map((stop) => (
+                        <li
+                          className={`chef-journey-stop chef-journey-stop-${stop.id}`}
+                          key={stop.id}
+                        >
+                          <figure>
+                            <span className="chef-journey-plate" aria-hidden="true">
+                              <img
+                                src={stop.src}
+                                width="1024"
+                                height="1024"
+                                loading="lazy"
+                                decoding="async"
+                                alt=""
+                              />
                             </span>
-                          </div>
-
-                          <svg
-                            className="chef-journey-leaders"
-                            viewBox="150 100 1450 600"
-                            preserveAspectRatio="none"
-                            aria-hidden="true"
-                          >
-                            <polyline data-leader="spain" points="234,386 260,430 324,568" />
-                            <polyline data-leader="france" points="425,190 448,240 542,376" />
-                            <polyline data-leader="italy" points="650,159 680,210 824,268" />
-                            <polyline data-leader="greece" points="1088,454 1078,470 1006,568" />
-                            <polyline data-leader="turkey" points="1275,318 1271,350 1339,430" />
-                          </svg>
-
-                          <ol
-                            className="chef-journey-stops"
-                            aria-label="Страны и блюда маршрута"
-                          >
-                            {chefJourneyStops.map((stop) => (
-                              <li
-                                className={`chef-journey-stop chef-journey-stop-${stop.id}`}
-                                key={stop.id}
-                              >
-                                <figure>
-                                  <span className="chef-journey-plate" aria-hidden="true">
-                                    <img
-                                      src={stop.src}
-                                      width="1024"
-                                      height="1024"
-                                      loading="lazy"
-                                      decoding="async"
-                                      alt=""
-                                    />
-                                  </span>
-                                  <figcaption>
-                                    <span>{stop.country}</span>
-                                    <strong>{stop.dish}</strong>
-                                  </figcaption>
-                                </figure>
-                              </li>
-                            ))}
-                          </ol>
-                        </div>
-                      </div>
-                      <figcaption className="chef-journey-meta">
-                        <span className="chef-journey-credit">
-                          карта ·{" "}
-                          <a
-                            href="https://commons.wikimedia.org/wiki/File:Mediterranean_Sea_location_map_(blank).svg"
-                            target="_blank"
-                            rel="noreferrer"
-                          >
-                            NordNordWest / Wikipedia
-                          </a>{" "}
-                          ·{" "}
-                          <a
-                            href="https://creativecommons.org/licenses/by-sa/3.0/"
-                            target="_blank"
-                            rel="noreferrer"
-                          >
-                            CC BY-SA 3.0
-                          </a>
-                        </span>
-                        <span className="chef-journey-note" id="chef-journey-note">
-                          <strong>Кипр — авторское меню сегодня.</strong>{" "}
-                          Блюда — фотореалистичные визуализации; маршрут требует подтверждения шефа.
-                        </span>
-                      </figcaption>
-                    </figure>
+                            <figcaption>
+                              <span>{stop.country}</span>
+                              <strong>{stop.dish}</strong>
+                            </figcaption>
+                          </figure>
+                        </li>
+                      ))}
+                    </ol>
+                    <span className="chef-journey-cyprus" aria-hidden="true">Кипр</span>
                   </div>
                 </div>
+                <p className="chef-journey-meta">
+                  <span className="chef-journey-credit">схема маршрута · визуализация</span>
+                  <span className="chef-journey-note" id="chef-journey-note">
+                    <strong>Кипр — авторское меню сегодня.</strong>{" "}
+                    Блюда и маршрут — фотореалистичные визуализации; маршрут требует подтверждения шефа.
+                  </span>
+                </p>
               </div>
             </div>
             <EventFormats />

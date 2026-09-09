@@ -1076,3 +1076,15 @@ experiments. The restaurant source page used to recover the same photograph at d
 
 The exact leader coordinates and responsive figure heights have no independent visual reference. They are
 neutral fitting decisions tied to visible food targets and must be verified at all mandatory widths.
+## Quiet-zone MasterChef underlay — 2026-09-09
+
+This table supersedes the active inline-map and proportional-field rows immediately above.
+
+| Project element | Reference | Principle used | What is not copied | Project implementation |
+|---|---|---|---|---|
+| One integrated stage | User's 00:34 desktop composition plus the latest rejection of the obscured v18 map | Photograph, live copy and process drawing occupy one rectangle, but each has a protected functional zone | No detached map poster, overlapping route fragments, card, border, shadow or generated copy | One fixed-ratio ivory `story-origin-lead`; documentary photograph upper left, live copy upper right, route underlay across the lower band |
+| Desktop underlay | User's request to place the real photo and text first, then render the drawing to their dimensions | Reserve the entire upper half as clean paper and draw only the lower route continuation | No line, flag, label, plate or map contour beneath photo/copy | `masterchef-route-underlay-v3-desktop.webp`, 1774 × 887, fills the 2:1 stage without crop |
+| Tablet underlay | User's demand that the whole composition remain proportional at intermediate widths | Preserve the quiet upper pair and complete route in one compact field | No over-tall phone poster or too-shallow 2:1 stage behind wrapped copy | `masterchef-route-underlay-v3-tablet.webp`, 1254 × 1254, selected from 561–900 px inside a 23:20 field; only surplus blank paper above the complete lower map is removed |
+| Mobile underlay | User's requirement for a deliberate mobile composition with the same photo-left/text-right relationship | Recompose the same visual grammar vertically and keep the route complete from Spain to Cyprus | No mechanically shrunken desktop map, horizontal scroll, hidden endpoint or stacked photo-over-text layout | `masterchef-route-underlay-v3-mobile.webp`, 1086 × 1448, uses a protected upper 58% and lower map band |
+| Route evidence | User's approved map-and-car concept and five country dishes | One continuous ochre line and vintage car connect the countries; food remains a separate realistic overlay | No active flag badges, leader network, country words baked into the image or SVG fragments | Underlay supplies map/route/car; five v2 native-alpha plate assets sit only in the lower band; live captions identify country and dish |
+| Accessibility and provenance | Existing approved semantic itinerary and explicit disclosure | Decorative raster stays hidden from assistive technology while itinerary remains readable HTML | No essential words in the generated asset and no misleading documentary-food claim | Empty-alt `picture`; semantic ordered list/captions; disclose generated underlay and plate visualizations plus unconfirmed itinerary |

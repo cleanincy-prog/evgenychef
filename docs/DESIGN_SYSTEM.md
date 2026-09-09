@@ -1642,3 +1642,35 @@ rejected generated dish experiments. The active sourcing reset and its three-pho
 - **Delivery:** serve a versioned alpha WebP/PNG from `public/media/menu/`; keep source/provenance details
   in project records. The rejected `personal-menu-photo-v1.png` and `personal-menu-photo-celeriac-v2.png`
   remain inactive design history and must never be referenced by the live page.
+## Quiet-zone MasterChef stage contract — 2026-09-09
+
+This contract supersedes `Unified MasterChef editorial-stage contract` and every active rule that requires
+the inline map, route polyline, flag layer, point-label layer or leader layer.
+
+- One continuous ivory stage contains all three elements. Above 900 px it prefers the 1774:887 (`2 / 1`)
+  desktop ratio but keeps a 520 px fit floor at intermediate widths; from 561–900 px the square 1254 source
+  occupies a denser 23:20 tablet field; at 560 px and below the stage switches to the art-directed
+  1086:1448 (`3 / 4`) mobile composition.
+- The underlay is the lowest layer. Desktop uses `contain` aligned to the lower edge; tablet uses `cover`
+  and removes only surplus blank upper paper; mobile matches its intrinsic ratio. The stage paper is sampled
+  from the raster's quiet edge (`#fcf6ef`), so contained artwork does not create a second white rectangle.
+  The underlay is decorative (`aria-hidden`, empty `alt`) and contains no words, flags, food, photo aperture,
+  text aperture or border.
+- The desktop underlay reserves the upper half as unmarked paper. The mobile underlay reserves the upper
+  58%. Only the lower band contains graphite geography, one continuous ochre route and the vintage car.
+- The 1719:900 documentary award photograph is the upper-left foreground and always renders uncropped with
+  natural height and `object-fit: contain`. The exact live title, biography and route kicker are one upper-
+  right group. Both layers sit above the underlay and have transparent backgrounds.
+- At 560 px and below the title remains in the right-hand live-copy rail with the photograph at left; the
+  layout is not converted to a vertical stack. Unused space below the short landscape proof may carry only
+  its existing caption or the route kicker—not invented copy.
+- Five approved 1024 × 1024 native-alpha plate photographs are separate absolute children in the lower map
+  band. Their complete ceramic rims remain visible; country and dish remain semantic live captions.
+  Positions are independently set for landscape and portrait underlays so plates never enter the protected
+  foreground. At 560 px and below only the country line is visually shown; the dish name remains in the DOM
+  for accessibility and avoids collisions between five adjacent labels.
+- The complete stage uses square edges with no card, border, radius, shadow, gradient, glow, colour panel,
+  visible grid line or animation. A small disclosure below the stage may wrap normally and must not change
+  the stage ratio.
+- Active JSX must not reference the historic Mediterranean SVG or route-flag files. Those files and their
+  credits remain stored only as historical source records.
