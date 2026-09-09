@@ -4820,3 +4820,691 @@ Mobile underlay integration is paused. At 820 px and below, the process rasters 
 while the complete photographs and live copy are reviewed inside one shared 2:3 rectangle. Only after
 those foreground rectangles are approved may their measured exclusion zones be used for a new integrated
 process drawing. Generated candidates created before this approval are not active site assets.
+
+## Real-photo culinary archive — pre-code audit and implementation plan — 2026-09-09
+
+The user has rejected the current MasterChef image language and explicitly approved the recommended
+“culinary archive + live editorial photography” direction. The audit covers the active route artwork,
+its foreground proof, responsive behavior, local media and the related design documentation.
+
+### Existing elements that look templated or unsupported
+
+1. `masterchef-travel-photoreal-desktop.png` and `masterchef-travel-photoreal-mobile.png` combine a
+   generic Europe map, ochre car/route, five isolated dishes and soft object shadows into one generated
+   promotional composite. Replacing only the dishes would retain the same synthetic composition.
+2. The cut-out dishes have no documentary relationship to Evgen’s own travel, recipes or service and
+   can be misread as factual evidence.
+3. Desktop uses a 2:1 raster while the 820 px breakpoint jumps to a 1:2 raster. At 821/820 px the field
+   height changes abruptly rather than adapting as an authored editorial layout.
+4. The map, route and car are decorative; they do not improve the reading of the existing biography.
+
+### Confirmed references and replacement principles
+
+- The user’s direct approval of the recommended style is the primary reference: real rectangular
+  internet photography, an archival recipe/map language, fine rules and numbered editorial metadata.
+- The existing award photograph and both biography paragraphs remain the only Evgen-specific proof and
+  are not retouched, cropped into a stock ratio or rewritten.
+- Five selected Pexels photographs show real kitchen actions—saucing, serving, pass work, garnishing and
+  a pastry held in hand. Pexels permits website use and modification; every author and source page is
+  retained in the media credits.
+- Mary Hawker’s c.1691 recipe book from Wellcome Collection supplies a genuine Public Domain Mark
+  manuscript page. Joan Oliva’s c.1590 Eastern Mediterranean portolan supplies a genuine public-domain
+  map. Neither is presented as Evgen’s own notebook or travel record.
+- The existing paper, ink, rule and ochre tokens plus Cormorant Garamond/Montserrat remain authoritative.
+
+### Implementation plan before interface code
+
+1. Retain the section heading, award photograph, biography, sequence order and all other page blocks.
+2. Remove the generated responsive `<picture>` from the active MasterChef interface. Keep the files on
+   disk only as retired history; they must have no page or stylesheet reference.
+3. Recompose the block as a natural-height editorial field: award proof left and biography right, then
+   one irregular archive grid of locally optimized real-action photographs and two genuine archival
+   facsimiles. Use square edges, ordinary `<figure>` elements and real captions/credits only.
+4. Express the narrative with three live metadata labels and hairline rules. Add no SVG route, car,
+   arrows, fake handwriting, torn paper, tape, stamp, sepia filter, shadow or floating cut-out.
+5. On phones preserve the approved photo-left/copy-right lead pair; redesign the archive below as a
+   two-column asymmetric contact sheet with one wide frame rather than stacking desktop columns.
+6. Update focused source tests, run lint, tests, production build, `git diff --check` and an anti-template
+   source audit. The required seven visual widths remain a separate browser-verification gate under the
+   active Sites workflow.
+
+### Components and libraries
+
+No UI library or ready-made layout is introduced. One local data array and semantic HTML figures are the
+only new interface structures; CSS Grid is used as a primitive. The five Pexels frames are explicitly
+illustrative editorial material, not evidence of Evgen’s dishes, staff, clients or travel.
+
+### Implemented and verified
+
+- **Files created:** seven optimized WebP assets in
+  `public/media/masterchef/culinary-archive/`: five real kitchen-action photographs, one complete recipe
+  manuscript page and one complete Eastern Mediterranean portolan.
+- **Files changed:** `app/page.tsx`, `app/globals.css`, `tests/rendered-html.test.mjs`,
+  `public/media/masterchef/CREDITS.md`, `docs/DESIGN_REFERENCE_MAP.md`, `docs/DESIGN_SYSTEM.md` and this
+  audit.
+- **Templated elements removed from the active interface:** the generated car/route/map composite,
+  floating cut-out dishes, soft object shadows and the abrupt desktop/mobile raster swap. The retired
+  files remain only as project history and are rejected by active-reference tests.
+- **Replacement:** one natural-height proof row followed by an irregular editorial contact sheet of
+  genuine photographs and archival facsimiles. Sequence labels, captions and disclaimers remain live
+  HTML; photography is never presented as Evgen-specific evidence.
+- **References used:** the user-approved “culinary archive + live editorial photography” direction;
+  the five exact Pexels pages, Mary Hawker’s c.1691 Wellcome Collection manuscript and Joan Oliva’s
+  c.1590 public-domain portolan recorded in `public/media/masterchef/CREDITS.md`; the existing project
+  paper, type, rule and colour system.
+- **Decisions without a separate visual reference:** exact twelve-column spans, the single wide mobile
+  frame, caption line lengths and image focal positions. These are functional adaptations to source
+  aspect ratios and the existing content grid, not a new site-wide style.
+- **UI libraries:** none introduced; semantic HTML and CSS Grid are the only layout primitives.
+- **Automated verification:** ESLint, a clean production build, all eight source tests and
+  `git diff --check` pass. The refreshed production server returns HTTP 200 for the page and new media;
+  the in-app preview was moved from the stale `:3000` process to the verified `:3002` build.
+- **Anti-template audit:** no new cards, repeated equal-width grid, generic CTA, gradient, glow,
+  glassmorphism, radius, shadow, decorative SVG, fake handwriting or mobile desktop-stack pattern was
+  added. The five action frames vary in span, and archive materials remain visibly distinct.
+- **Remaining verification gate:** browser geometry has not been re-run at 1440, 1280, 1024, 768, 430,
+  390 and 375 px. Source rules explicitly cover the 820 and 430 px transitions and automated tests pass,
+  but the interface task remains visually pending until that seven-width check and user review are
+  performed. The existing public Sites deployment was not changed by this local implementation.
+
+## Mapped recipe journey — pre-code audit and implementation plan — 2026-09-09
+
+The user clarified the missing narrative relationship: the photographs must belong to countries on a
+map, and a visible leader must connect every geographic stop to the dish learned there. The current
+contact sheet shows real imagery but separates it from the map, so it cannot communicate discovery,
+travel or the transfer of a recipe into the chef's present-day work.
+
+### Audited constraints and factual gap
+
+1. The project confirms only that Evgen travelled through Europe and the Mediterranean and collected
+   recipes, techniques and combinations. It does not contain a verified country-by-country itinerary.
+2. The five current web photographs can support an explicitly editorial working route: Spain/paella,
+   France/sauce work, Italy/ravioli, Greece/octopus and Turkey/pistachio pastry. Only the Spanish label
+   appears in a source title; the remaining geography is a cuisine-based editorial inference.
+3. The existing 1590 portolan covers only the eastern Mediterranean and cannot locate Spain or France.
+   The first CC0 Atlantic/Europe candidate also stops west of Cyprus and fails the complete route. The
+   accepted replacement is NordNordWest's 1754 × 862 Mediterranean location map, whose published
+   7° W–42.5° E and 29°–48° N bounds include every required country and Cyprus.
+4. The retired generated map, car and dish cut-outs remain unusable as factual evidence. Only the newly
+   user-approved relationship `country point → functional leader → real photograph` may be retained.
+
+### Implementation plan before interface code
+
+1. Keep the complete MasterChef award proof and biography lead unchanged.
+2. Replace the detached archive contact sheet with one dominant map canvas. Use the unaltered licensed base
+   map as the geographic layer, live HTML for all country/dish labels and an inline SVG only for the
+   functional travel path, points and leaders requested by the user.
+3. Position five square-edged real photographs around the map perimeter. Each leader must terminate at
+   the photograph associated with its numbered country point; add Cyprus as the route's present-day
+   endpoint without inventing a sixth dish.
+4. Mark the route visibly as an editorial reconstruction pending confirmation by Evgen. Do not describe
+   the Pexels photographs as his own dishes or travel photography.
+5. On compact screens keep the complete map, route and country names visible first, then use five
+   authored country-to-photo rows with a continuous numbered rail and a horizontal leader in every row.
+   Do not shrink the desktop canvas or turn the content into identical cards.
+6. Update the reference map, design system, media credits and regression tests; then run ESLint, the
+   production build, all tests, `git diff --check` and a local HTTP/media response check.
+
+No UI library or ready-made map component is required. The map is a credited image asset; CSS Grid and
+the functional inline SVG are implementation primitives rather than a decorative illustration system.
+
+### Implemented and verified
+
+- **Active map file created:**
+  `public/media/masterchef/culinary-archive/map-mediterranean-full-cc-by-sa.svg`, the unmodified
+  NordNordWest CC BY-SA 3.0 source map. The five existing optimized real photographs are reused.
+- **Files changed:** `app/page.tsx`, `app/globals.css`, `tests/rendered-html.test.mjs`,
+  `public/media/masterchef/CREDITS.md`, `docs/DESIGN_REFERENCE_MAP.md`, `docs/DESIGN_SYSTEM.md` and this
+  audit.
+- **Templated element found:** the approved real-photo version still behaved as an unrelated contact
+  sheet. It was reworked into one content-specific geographic canvas, not another equal-card gallery.
+- **Route implementation:** Spain, France, Italy, Greece and Turkey are numbered directly on the map;
+  one ochre path connects the stops and ends at Cyprus, while five separate graphite leaders terminate
+  inside the edge of the relevant real photo frames. The map image, route and points share the same
+  1754:862 wrapper, and the leader layer shares the fixed 16:9 canvas, preventing breakpoint drift. Live
+  country, dish and technique text accompanies every figure.
+- **Responsive implementation:** desktop uses irregular perimeter positioning around the complete map.
+  At 940 px and below, the same semantic `<ol>` becomes a route ledger where every row preserves
+  `country → leader → photograph`; the complete map above it retains the route and all six country names.
+- **References used:** the user's explicit map/leader/dish correction, the existing verified Europe and
+  Mediterranean biography, the five credited Pexels photos and NordNordWest's CC BY-SA 3.0 Wikimedia
+  Mediterranean location map.
+- **Decisions without confirmed biographical sources:** the exact five country/dish associations and
+  their west-to-east order. They are visibly labelled as an editorial reconstruction and remain pending
+  confirmation by Evgen; Cyprus is only the already-established present-day endpoint.
+- **UI libraries:** none introduced. Semantic HTML, CSS Grid and one non-interactive functional SVG are
+  the only primitives.
+- **Automated verification:** ESLint, the production Vinext build, all eight regression tests and
+  `git diff --check` pass. The page, active map and representative dish asset return HTTP 200 from the
+  refreshed `:3002` production preview, which was handed back to the in-app panel.
+- **Anti-template audit:** no card surfaces, equal-grid repetition, radius, shadow, gradient, glow,
+  glassmorphism, stock avatar, generic CTA, decorative icon, fake handwriting or route animation was
+  introduced. Every line has a route or map-to-photo information role.
+- **Remaining verification gate:** automated browser resizing and screenshots were not requested and
+  therefore were not performed under the active Sites workflow. The project-mandated visual checks at
+  1440, 1280, 1024, 768, 430, 390 and 375 px remain open, as does chef confirmation of the five inferred
+  associations. The existing public Sites deployment was not changed.
+
+### Post-implementation geometry audit and correction
+
+The first implementation audit found four unacceptable defects before handoff: its preliminary map did
+not contain Cyprus; its route overlay was stretched against the outer canvas rather than the map's own
+aspect ratio; three leaders could end in captions instead of images; and the low Greece figure could be
+clipped. Mobile also hid the route and country names. The accepted correction changes the source map,
+nests route geometry and country labels in the exact map-ratio wrapper, fixes the outer canvas to 16:9,
+terminates every desktop leader inside a known photo edge, raises the two lower figures, and preserves
+the full route and labels on compact screens. The ledger breakpoint is 940 px so fixed-ratio desktop
+captions cannot clip just above the former 820 px boundary. The visible map credit links both the source
+and CC BY-SA licence. Regression checks now reject the earlier map and full-canvas route geometry.
+
+## Integrated MasterChef route — pre-code audit and implementation plan — 2026-09-09
+
+The user's latest correction supersedes the standalone `chef-journey` section, its display heading and
+the five-row mobile ledger. The route is supporting evidence inside the existing MasterChef story, not
+a second content block.
+
+### Templated elements found
+
+- The detached heading, introduction and border made the route read as another conventional landing-page
+  section instead of part of Evgen's biography.
+- Five full-width mobile rows repeated the same label/line/photo composition and turned one narrative
+  relationship into a long card-like list.
+- Differently lit photographs at a landscape crop read as unrelated search results rather than one
+  restrained editorial set.
+
+### Replacement plan
+
+1. Keep the complete MasterChef award photograph at left and replace the two-paragraph biography with
+   one concise live paragraph at right; both remain the dominant foreground proof.
+2. Remove the nested route section and its display title. Place one compact `route-context` group inside
+   the same archive field, with the licensed Mediterranean map acting as a low-contrast background.
+3. Keep the geographic route, numbered country points and one-to-one country-to-dish leaders. Place all
+   five dish photographs directly in that field as equal square callouts; do not create a second gallery.
+4. Give the five photographs one restrained documentary grade, one crop ratio, one keyline and calibrated
+   object positions. Do not alter the award proof image.
+5. At phone widths retain the photo-left/text-right lead, then fit the complete map and all five callouts
+   into a 245–295 px continuation. Remove the five-row ledger entirely and target a complete integrated
+   fragment of roughly 620–680 px at 390 px viewport width.
+6. Keep exact countries and dishes explicitly marked as an editorial working reconstruction pending
+   confirmation from the chef. Preserve map and photo source credits.
+
+### Components
+
+- Remain: `story-origin-archive-field`, `story-origin-lead`, `story-award`, `story-copy`, the licensed map,
+  live route SVG, real dish photographs and semantic ordered list.
+- Reworked: `chef-journey` becomes a compact route context inside the MasterChef field; large cards,
+  route header, long technique captions and mobile ledger disappear.
+- New components: none. The solution uses semantic HTML, CSS positioning and the existing inline SVG only.
+
+### Post-implementation audit
+
+- **Files created:** none in this correction; the already licensed local map and five existing Pexels
+  derivatives are reused.
+- **Files changed:** `app/page.tsx`, `app/globals.css`, `tests/rendered-html.test.mjs`,
+  `docs/DESIGN_REFERENCE_MAP.md`, `docs/DESIGN_SYSTEM.md` and this audit.
+- **Integrated result:** `chef-journey` is now the third child of `story-origin-lead`, spanning the same
+  twelve-column field as the award proof and biography. It is a labelled group, not a nested section;
+  the former display heading and repeated introduction are absent.
+- **Map treatment:** the exact source map is rendered through a cropped 1450:600 SVG viewBox and remains
+  an `.18`-opacity background. Route and leader geometry retain the source coordinate system, so each of
+  the five leaders begins at its country point and ends at the centre of the matching photo aperture.
+- **Photo cohesion:** all five illustrative photos use one square aperture, 1 px keyline, one restrained
+  documentary CSS grade and source-specific focal positions. No raster is regenerated, and the verified
+  award photograph is not filtered or cropped.
+- **Phone composition:** there is no breakpoint conversion to rows. At 560 px and below the full field
+  remains one five-column map overlay, the callouts are 46–56 px and the canvas is 245–295 px; at 390 px
+  the canvas is 245 px. The lead biography is one concise paragraph, so the complete MasterChef fragment
+  is designed to fit comfortably within one ordinary phone swipe without internal scrolling.
+- **References used:** the user's direct integrated-background correction, the approved MasterChef lead,
+  NordNordWest's CC BY-SA 3.0 Mediterranean map and the five credited Pexels source photographs.
+- **Decisions without confirmed sources:** Spain/paella, France/duck and sauce, Italy/ravioli,
+  Greece/octopus and Turkey/pistachio pastry remain an editorial working route. A visible note asks for
+  chef confirmation; the photos are illustrative, not documentary evidence of Evgen's travels.
+- **UI libraries:** none introduced; the implementation uses semantic React markup, CSS and two
+  non-interactive functional SVG layers.
+- **Anti-template audit:** the detached section, equal-card landing grid, mobile card stack, large route
+  headline, duplicated marketing paragraph, radii, shadows, gradient, glow and decorative animation are
+  absent. Equal photo apertures are justified by the user's explicit same-style requirement.
+- **Automated verification:** `git diff --check`, ESLint, the Vinext production build and all eight
+  regression tests pass. The refreshed production preview and its assets return HTTP 200 on `:3002`.
+- **Remaining verification gate:** automated screenshots and browser resizing were not requested under
+  the active Sites workflow, so the mandatory visual review at 1440, 1280, 1024, 768, 430, 390 and
+  375 px remains open. The existing public Sites deployment was not changed. Publication also remains
+  gated by final chef confirmation of the route and resolution of the award-photo usage rights.
+
+## Integrated transparent plates — pre-code audit and implementation plan — 2026-09-09
+
+The latest user correction keeps the map inside MasterChef but supersedes the equal square stock-photo
+rail. The current version is compact, yet the five rectangular apertures still read as a gallery laid
+over a map rather than one connected culinary picture.
+
+### Existing elements to rework
+
+- The five framed crops have opaque photographic backgrounds, visible rectangular edges and a common
+  bottom row. Even with a shared grade, their unrelated kitchens fragment the composition.
+- All five leaders travel to the same lower baseline, so the relationship is technically correct but
+  visually diagrammatic and more distant than requested.
+- The large empty gap between upper proof and lower photo rail weakens the reading order
+  `MasterChef victory → collected recipes → present menu on Cyprus`.
+
+### Reference status and plan
+
+1. Direct reference: the user requests professional photoreal plates, no visible background, no drawn or
+   recognisably generated appearance, closer grouping and one coherent picture.
+2. Confirmed project references retained: the verified award photograph, concise biography, licensed
+   Mediterranean map, live country labels, route geometry and Cyprus endpoint.
+3. No external plate-photography reference was supplied. Use the neutral functional solution permitted
+   by project policy: restrained high-end restaurant photography with a single real-world camera,
+   off-white porcelain plate, soft daylight direction and genuine food imperfections.
+4. Generate five separate isolated PNG plate masters through the built-in image generation tool, requesting native alpha:
+   paella, duck with sauce, ravioli, grilled octopus and pistachio baklava. Lock camera angle, plate scale,
+   light, colour response and alpha-edge quality across every prompt.
+5. Remove rectangular frames, CSS photographic grade and source-specific crop rules. Prefer preserved
+   alpha with `object-fit: contain`; if the built-in output lacks alpha, use one documented neutral
+   plate-silhouette clip rather than exposing its backing. Add no border, synthetic shadow or panel.
+6. Reposition the semantic ordered list as five local callouts distributed near their country points,
+   shorten every leader and attach country/dish text directly to its plate. Keep the map as the lowest,
+   quietest layer.
+7. Reduce the route field height and its gap from the proof pair, while keeping live credit links,
+   accessible alternative text, the visible editorial disclaimer and the 375–430 px no-overflow target.
+
+### Components
+
+- Remain: existing MasterChef lead, map figure, route path, country points, ordered list, credits and note.
+- Reworked: stop positioning, leader geometry, image sources, alt text and compact responsive canvas.
+- Removed from the active interface: the five Pexels crop apertures and their shared CSS colour grade.
+- New component types: none; the new PNGs are media assets consumed by the existing semantic structure.
+
+### Post-implementation audit
+
+- **Files created:** five 1254 × 1254 generated plate masters and five optimized 512 × 512 WebP
+  derivatives in `public/media/masterchef/route-plates/`.
+- **Files changed:** `app/page.tsx`, `app/globals.css`, `tests/rendered-html.test.mjs`,
+  `public/media/masterchef/CREDITS.md`, `docs/DESIGN_REFERENCE_MAP.md`,
+  `docs/DESIGN_SYSTEM.md` and this audit.
+- **Templated element removed:** the equal rectangular Pexels-photo rail and its distant shared leader
+  baseline no longer appear in the active route. Five local plate silhouettes now sit beside their
+  associated country points, with short functional leaders and live country/dish captions.
+- **Composition:** the route kicker now follows the biography inside the same MasterChef lead, while the
+  map, route, plates, captions, source credit and editorial note remain one labelled semantic group. The
+  map field is 340–344 px on desktop and 190–240 px on narrow phones; a controlled negative grid-row
+  margin visually joins it to the proof pair without covering the verified award photograph or live copy.
+- **Leader geometry:** each leader starts at the exact country point and continues beneath the centre of
+  its higher-layer plate. The plate masks the overlap, making every visible line meet the silhouette edge
+  without a breakpoint-specific gap when plate size changes.
+- **Photography system:** all five masters use one warm-ivory 24 cm coupe plate, the same camera angle,
+  lens character, daylight direction, colour response and natural food imperfections. The built-in
+  generator returned an opaque checkerboard preview instead of native transparency, so one documented
+  ellipse clip hides every backing pixel without a frame, filter, shadow or opaque card surface.
+- **References used:** the user's direct correction, the existing approved MasterChef lead and the
+  credited Mediterranean map. The plate styling is the documented neutral photographic solution because
+  no external plate reference was supplied.
+- **Decisions without confirmed sources:** the exact plating and the five country/dish associations are
+  editorial visualizations, not photographs of Evgen's cooking or verified travel evidence. The visible
+  note continues to request chef confirmation.
+- **UI libraries:** none introduced; the result uses the existing React structure, semantic HTML, focused
+  CSS and functional inline SVG route geometry only.
+- **Anti-template audit:** no detached section, card grid, repeated framed gallery, radius, shadow,
+  gradient, glow, glass surface, decorative route animation or generic marketing copy was introduced.
+  Equal plate treatment follows the user's explicit request for one visual style.
+- **Automated verification:** `git diff --check`, ESLint, the Vinext production build and all eight
+  regression tests pass. Tests assert the five active plate assets, one-to-one route structure,
+  accessibility labels, short leader geometry and the single documented plate mask.
+- **Remaining verification gate:** automated screenshots and browser resizing were not requested under
+  the active Sites workflow, so the project-mandated visual checks at 1440, 1280, 1024, 768, 430, 390
+  and 375 px remain open. The public Sites deployment remains unchanged. Publication also remains gated
+  by chef confirmation of the route and resolution of the award-photo usage rights.
+
+## Present-day video story — pre-code audit and implementation plan — 2026-09-09
+
+The user asked for a concept, description and illustrations for the `Я — у вас дома` video. The active
+chapter has the correct 37-second 9:16 documentary film and an approved four-step graphite raster, but
+its heading and exact workday facts are clipped to assistive-only text. As a result, sighted visitors see
+a short composite without the reason this service matters.
+
+### Templated or unsuccessful elements found
+
+- The text-free composite behaves like a decorative process plate: the film and drawings are visible,
+  but there is no authored sentence connecting them to the host's evening.
+- At narrow widths the complete 2:1 raster is merely reduced, making both the portrait film and the
+  four miniatures too small; this is a scaled desktop artifact rather than a separately designed mobile
+  reading order.
+- The raster already contains the correct project-specific drawings, so replacing them with four
+  generic icon cards would lose the approved visual language.
+
+### References and replacements
+
+1. Direct user request: add a coherent video idea, description and illustrations.
+2. Existing content: `утро — закупаю продукты`, `день — делаю заготовки, маринады и соусы`, `вечер —
+   готовлю у вас дома для вас и ваших гостей`.
+3. Existing evidence: the no-grill film shows the knife roll, vegetables, cooking, mussels and plating.
+4. Approved visual reference: `workday-four-step-vertical.png`, warm paper, graphite process drawing,
+   live typography and square edges.
+5. Concept extension: `home-evening-storyboard-v1.png` adds only the missing arrival and shared-table
+   beats, without a generated chef face. It remains a storyboard artifact unless explicitly approved
+   for the public interface.
+
+### Implementation plan
+
+1. Preserve the chapter position, film source/poster/playback behavior and approved workday raster.
+2. Replace the visually hidden wrapper with a visible editorial copy column: kicker, heading, concise
+   lede and the display close `Чтобы вы были дома — со своими.`
+3. Separate the film and approved drawing into independent media fields. CSS-crop only the raster's
+   authored right-hand square so the drawings remain legible without generating a replacement.
+4. Render the four stages as live text in one ruled ledger rather than cards or icon labels.
+5. Author mobile as copy followed by an unequal film/drawing pair and a two-column stage ledger.
+6. Update focused regression coverage, then run `git diff --check`, ESLint, production build and tests.
+7. Inspect 1440, 1280, 1024, 768, 430, 390 and 375 px, including overflow, heading wraps, media crops,
+   contrast, focus and playback poster state. Complete the anti-template audit before reporting done.
+
+### Components
+
+- Remain: `present-day`, `ChefStoryVideo`, film semantics, raster source and section order.
+- Reworked: present-day markup, layout classes and responsive rules.
+- New: one semantic ordered process ledger; no reusable card component or UI-library element.
+- Removed: assistive-only clipping of content that now needs to be visible.
+
+### Present-day video story — implementation result
+
+The chapter now leads with the visible label `вечер у вас`, the existing `Я — у вас дома.` heading,
+a factual morning/day/evening description and the host-facing close `Чтобы вы были дома — со своими.`
+The wording introduces no cleanup, venue, capacity or dietary promise.
+
+The unchanged 37-second portrait film and the approved graphite process raster are independent media
+figures. The raster is not regenerated or cropped on disk: CSS reveals only its authored right-hand
+drawing zone at every width. Live captions describe both evidence sources, and a ruled four-part ledger
+preserves products → mise en place → marinades/sauces → home cooking and service. The generated
+`home-evening-storyboard-v1.png` and the complete Russian timing/voiceover/publish-copy brief remain
+production artifacts; the storyboard is not represented as a real client home.
+
+### Verification result
+
+- `git diff --check`, ESLint, the Vinext production build and all eight Node regression tests pass.
+- Browser checks passed at 1440 × 1000, 1280 × 900, 1024 × 900, 768 × 1024, 430 × 932,
+  390 × 844 and 375 × 812. Measured horizontal overflow is zero at every width.
+- Film/drawing sizes remain meaningful: 291 × 517 / 404 × 404 at 1440; 207 × 367 / 287 × 287 at
+  1024; 157 × 278 / 225 × 225 at 430; and 134 × 238 / 193 × 193 at 375.
+- At 768 the two-column copy prologue precedes the large film/drawing pair. At 430–375 the full copy
+  precedes an unequal side-by-side media pair, followed by the two-by-two ruled ledger. This is a
+  separately authored mobile composition, not the former scaled 2:1 desktop plate.
+- The illustration asset reports its full 1774 × 887 natural size, the video reaches ready state 4,
+  the 375 px body copy computes to 13.6 px / 21.76 px, and the inspected browser console has zero errors
+  or warnings.
+- The change adds no interaction. Existing focus states and 44 px navigation targets remain untouched;
+  loading is poster-first, reduced-motion behavior remains in the existing playback hook, and this
+  editorial chapter has no empty/error form state to invent.
+
+### Final anti-template audit and report
+
+- Files created: `artifacts/home-evening-video-2026-09-09/CONCEPT.md` and
+  `public/media/storyboards/home-evening-storyboard-v1.png`.
+- Files changed for this request: `app/page.tsx`, `app/globals.css`,
+  `tests/rendered-html.test.mjs`, `docs/DESIGN_REFERENCE_MAP.md`, `docs/DESIGN_SYSTEM.md` and this audit.
+- Templated element found: the former text-free 2:1 composite reduced the project-specific process to
+  decorative media and mechanically shrank on mobile.
+- Rework: visible authored copy, one documentary film, one approved process drawing and one semantic
+  stage ledger now form a single content-led editorial spread with a separate mobile arrangement.
+- References used: the direct user request, exact existing working-day facts, actual no-grill footage,
+  approved graphite raster and active project palette/type/edge rules.
+- Decisions without an external reference: the exact lede wording, the close `Чтобы вы были дома — со
+  своими.`, film/drawing column proportions and stage-ledger spacing. They are bounded by supplied
+  content and the approved design system.
+- UI libraries used only as primitives: none for this chapter; React markup, CSS Grid and the existing
+  playback hook are sufficient.
+- Unjustified cards, equal-radius surfaces, shadows, gradients, glass, decorative glows, generic icons,
+  stock testimonials, new CTA, arbitrary animation and invented operational claims remain absent.
+- Remaining risk: the three missing narrative beats in the proposed final cut—arrival, plate transfer
+  and shared table—still require small real-home pickup shots. The generated storyboard is a planning
+  reference only. The public Sites deployment was not changed.
+## Flag-marked recipe route — pre-code audit and implementation plan — 2026-09-09
+
+The latest direct correction removes numerical wayfinding and replaces the route's plain point markers
+with national-flag colour. The approved plate composition, country/dish pairings and compact MasterChef
+geometry remain unchanged.
+
+### Existing elements to rework
+
+- `01`–`05` are repeated in the route data, map labels and plate captions. The semantic `<ol>` already
+  preserves sequence, so visible numbering adds noise without adding meaning.
+- Six identical outlined circles identify countries but do not provide the national colour requested by
+  the user.
+- The licensed base map is a flattened geographic SVG without addressable country-region IDs. Recolouring
+  its internal paths would therefore be brittle and could accidentally alter neighbouring territories.
+
+### Reference status and plan
+
+1. Direct reference: the user requests no visible `01`–`05` and flag-coloured countries on the map.
+2. Keep the existing licensed Mediterranean map, exact route coordinates, country labels, plate callouts,
+   leaders, credits and editorial-verification note.
+3. Remove the `number` field and every visible numeric token. Keep the ordered-list semantics without
+   exposing ordinal text.
+4. Place a compact, square-edged 3:2 national flag directly over each of the six geographic route points:
+   Spain, France, Italy, Greece, Turkey and Cyprus. The route remains underneath so each flag reads as the
+   country node rather than an unrelated badge.
+5. Use locally stored vector flag assets with standard national colours and no decorative shadow, radius,
+   animation or card surface. A restrained paper keyline may separate light flag areas from the map.
+6. Keep full country names beside the flags on desktop. On narrow phones the plate captions retain the
+   five names while the Cyprus endpoint remains explicitly labelled, preventing text collisions without
+   removing route meaning.
+
+### Components
+
+- Remain: `chef-journey-map-layer`, route polyline, point-label layer, leader layer, semantic dish list,
+  plate images and live captions.
+- Reworked: route point circles become flag images; point/caption copy loses every ordinal number.
+- New component types: none. Six small local SVG assets are used as functional map symbols.
+
+### Post-implementation audit
+
+- **Files created:** six local 60 × 40 vector flag assets in
+  `public/media/masterchef/route-flags/` for Spain, France, Italy, Greece, Turkey and Cyprus.
+- **Files changed:** `app/page.tsx`, `app/globals.css`, `tests/rendered-html.test.mjs`,
+  `public/media/masterchef/CREDITS.md`, `docs/DESIGN_REFERENCE_MAP.md`,
+  `docs/DESIGN_SYSTEM.md` and this audit.
+- **Rework:** the `number` data field, `01`–`05` plate prefixes and all six numeric map tokens are absent.
+  Six 3:2 flags now sit exactly over the existing route coordinates, above the ochre route and leaders but
+  below live labels and plates. Country and dish names continue to carry the route meaning.
+- **References used:** the user's direct flag/no-number correction, the existing approved point geometry
+  and NordNordWest's unchanged CC BY-SA 3.0 Mediterranean map.
+- **Decision without a dedicated reference:** the source map has no semantic country groups, so reliable
+  territorial flag fills are impossible without a second projected geometry dataset. Compact square-edged
+  flag nodes are the neutral functional implementation; 84 × 56 map units keep them legible without
+  obscuring neighbouring countries.
+- **Accessibility:** the flag layer is decorative because flag colour cannot be the sole carrier of
+  meaning. Full country names remain in live plate captions and the map title; desktop also retains the
+  adjacent map labels, while compact screens retain the explicit Cyprus label.
+- **UI libraries:** none introduced. The implementation uses the existing semantic React structure,
+  local SVG assets and one focused SVG overlay.
+- **Anti-template audit:** no badge row, generic pins, emoji, card surface, radius, shadow, gradient, glow,
+  flag-strip decoration or animation was added. The requested colour exists only at functional route nodes.
+- **Automated verification:** all six SVG files pass XML validation; `git diff --check`, ESLint, the Vinext
+  production build and all eight regression tests pass. Tests enforce flag file presence, six flag sources,
+  absence of visible route numbering, stable route/leader coordinates and mobile label behavior.
+- **Remaining verification gate:** browser screenshots and resize testing were not explicitly requested,
+  so the project-mandated visual pass at 1440, 1280, 1024, 768, 430, 390 and 375 px remains open under the
+  active Sites workflow. The public Sites deployment was not changed.
+
+## Flag-filled country territories — pre-code audit and implementation plan — 2026-09-09
+
+The user has clarified that the previous flag-node interpretation is incorrect. National colour must fill
+the actual territory beneath each associated dish, not appear as a rectangular flag beside a country label.
+This correction supersedes the `Flag-marked recipe route` visual treatment while keeping its removal of
+visible numbering.
+
+### Existing elements to rework
+
+- The six 3:2 flag rectangles obscure geography and read as markers, not coloured country territories.
+- `chefJourneyFlags` duplicates route coordinates solely to position those rectangles.
+- The base SVG contains coastlines and borders but no reliable semantic country IDs. Editing its generic
+  source paths would remain brittle and would not satisfy the clarified requirement safely.
+
+### Confirmed references and implementation plan
+
+1. The direct user correction is authoritative: colour Spain, France, Italy, Greece, Turkey and Cyprus
+   inside their geographic silhouettes; remove the separate rectangular flag markers.
+2. Preserve the credited NordNordWest map. Its source documentation confirms an equirectangular projection,
+   bounds 7° W–42.5° E / 29°–48° N and a 1753.947 × 861.729 canvas.
+3. Add a separate transparent territory overlay derived from Natural Earth 1:50m Admin 0 country polygons.
+   Project longitude and latitude linearly into the exact base-map canvas; discard remote overseas polygons
+   outside the Mediterranean bounds.
+4. Clip a simplified national-flag field to each projected country path, then draw a restrained ink outline.
+   Territory geometry—not a badge, pin, emoji or text-adjacent flag—carries the requested colour.
+5. Keep the route and five functional dish leaders. Country names and dish captions remain live text so flag
+   recognition is never the only carrier of meaning; Cyprus remains the present-day endpoint.
+6. Remove the old flag layer, flag-node CSS and mobile exceptions created only for the rectangular markers.
+   No new component library, interaction, animation, card or decorative surface is required.
+
+### Components
+
+- Remain: base-map image, route polyline, country-label layer, five leaders, semantic dish list, transparent
+  plate images, credits and the editorial-verification note.
+- Reworked: the former flag-marker SVG becomes one projected territory overlay image beneath the route.
+- New asset: one self-contained transparent SVG containing six projected country paths and their clipped
+  national colour fields, with source and projection metadata.
+
+## `Я — у вас дома` minimal documentary correction — pre-code audit and plan — 2026-09-09
+
+### New authoritative feedback
+
+The user accepts the direction but identifies two specific failures: the video area is too orange and the
+composition reads as a checkerboard. They explicitly request minimalism, minimal illustration, and a
+realistic, beautiful result. This supersedes the prior storyboard-led expansion where the two conflict.
+
+### Audit findings
+
+1. `.home-story-media` places the portrait film beside a larger graphite crop, creating alternating visual
+   blocks instead of one calm focal point.
+2. `.home-story-stages` becomes a literal 2 × 2 ruled grid on phones, which is the strongest checkerboard
+   signal and repeats facts already carried by the prose.
+3. The source film itself contains broad honey-orange cabinetry and granite in wide shots. Roughly the
+   middle cutting sequence prominently features a checkerboard board, so CSS alone cannot solve the issue.
+4. The generated storyboard is illustrative rather than documentary and therefore conflicts with the
+   user's new request for minimum drawing and realism.
+5. The heading, factual service description, existing host-facing promise, supplied real film and final
+   plated-food frames remain useful and grounded.
+
+### Implementation plan recorded before interface edits
+
+1. **Templated/rejected elements:** remove the side-by-side media pair and four-cell process ledger; both
+   turn the chapter into repeated compartments.
+2. **Replacement reference:** use the user's direct minimal/realistic instruction and the existing real
+   film as the complete visual reference.
+3. **Elements retained:** semantic section, kicker, heading, concise service fact, host-facing promise,
+   accessible viewport video behavior and a single factual caption.
+4. **Elements reworked:** shorten the prose; re-cut the film to remove orange-wide and checkerboard-board
+   shots; use a restrained selective-yellow grade; extract a new real poster; simplify desktop and mobile
+   placement to one copy field plus one film.
+5. **Elements removed:** graphite illustration field, process-stage ledger and generated storyboard from
+   the public media surface.
+6. **New components required:** none. The existing video component and semantic figure are sufficient.
+7. **Decision without a dedicated visual reference:** exact cut points and the restrained film width are
+   neutral editorial decisions derived from the real footage and required 9:16 readability, not a new
+   stylistic system.
+
+Implementation and the mandatory multi-width verification remain pending below this pre-code record.
+
+### Implementation result and anti-template audit
+
+- **Files created:** `public/media/chef-story-home-minimal.mp4`,
+  `public/media/chef-story-home-minimal-poster.jpg` and
+  `public/media/chef-story-home-minimal.ru.vtt`.
+- **Files changed:** `app/page.tsx`, `app/chef-story-video.tsx`, `app/globals.css`, the three design records,
+  the concept brief and focused regression assertions. Other concurrent route/map work in the dirty
+  workspace is outside this correction.
+- **Film:** the 37.17-second source is now a 19.8-second, 720 × 1280, H.264/AAC, BT.709 cut. It keeps the
+  real tool, washing, pan, mussel and plating shots; removes the checkerboard-board passage, orange-wide
+  cabinetry shots and the orange-cabinet portrait interruption; and uses a 1.33× food-led crop plus a
+  restrained selective-yellow correction. The original source remains untouched.
+- **Poster:** extracted from the real corrected plating sequence. The AI storyboard was removed from the
+  public media path and retained only as the explicitly rejected artifact
+  `artifacts/home-evening-video-2026-09-09/rejected-ai-storyboard-v1.png`.
+- **Composition:** the illustration column and four-part ruled ledger are gone. The live chapter contains
+  only kicker, heading, two factual sentences, the established promise, one portrait film and one caption.
+  Desktop uses separated copy/film fields; phones use a purpose-built linear order with a centred 280 px
+  film, not a mechanically stacked card layout.
+- **UI libraries:** none introduced. Existing React semantics and the existing viewport playback hook are
+  used as primitives; there is no stock component styling.
+- **Anti-template audit:** no card, stage grid, equal-radius system, shadow, glass effect, gradient, split
+  screen, arbitrary icon, generated illustration, testimonial, CTA, ornamental object or decorative
+  animation remains in this chapter. Negative space and the supplied documentary footage carry the page.
+
+### Verification
+
+- Browser screenshots and measured layout checks completed at **1440, 1280, 1024, 768, 430, 390 and
+  375 px**. All seven widths have zero horizontal overflow; copy and film do not overlap; the 9:16 ratio
+  remains 1.778; the caption stays inside the viewport at 11 px. At 560 px and below the film follows the
+  complete copy block with deliberate vertical separation; at larger widths it remains a separate column.
+- Heading wraps, text line length, caption wrapping, image crop and the transition into the following
+  section were visually inspected at every required width. The section has no new controls or form/error/
+  empty states. The existing real poster covers loading and reduced-motion entry behavior.
+- Live media check: corrected source resolved, duration **19.8 s**, `readyState 4`, muted viewport playback
+  active, no media error and no browser console warnings/errors.
+- Automated checks: `npm run lint`, `node --test tests/rendered-html.test.mjs` (**8/8 pass**),
+  `npm run build`, `git diff --check`, and `ffprobe` codec/dimension/BT.709 validation all pass.
+
+### Remaining limitation
+
+The supplied documentary footage still truthfully contains a domestic granite worktop and portions of a
+tiled backsplash. Removing those remaining environmental cues would require a different real shoot or a
+misleading synthetic replacement, so this correction instead removes the dominant orange/checkerboard
+shots and reframes tightly around food and hands. The public Sites deployment was not changed.
+
+## `Я — у вас дома` adjacent visual correction — pre-code audit and plan — 2026-09-09
+
+### Clarification
+
+The user clarified that the video was never the requested edit. The source film must remain exactly as it
+was; the request applies only to the neighbouring visual field, which needs a realistic, beautiful and
+minimal generated image. The re-cut/grade from the preceding pass is therefore rejected.
+
+### Audit and implementation plan recorded before interface edits
+
+1. **Keep:** the original documentary MP4, poster, caption track, viewport-controlled playback, heading,
+   service description and host-facing promise.
+2. **Remove:** the rejected corrected-video source from the live component and the old four-vignette
+   graphite/process treatment. The four-cell stage ledger stays removed because it is the checkerboard
+   pattern the user rejected.
+3. **Create:** one new photorealistic 4:5 image showing the outcome of the film—a dish arriving at a simple
+   home table with cropped guest hands, no faces, no invented chef likeness and no orange kitchen.
+4. **Compose:** restore one media pair beside the copy. The original 9:16 film and new 4:5 outcome still
+   use proportional columns whose natural heights nearly match; no border, radius, shadow or card surface.
+5. **Mobile:** retain the same two-image relationship rather than stacking generic cards; use a small gap,
+   readable 11 px captions and the full copy above.
+6. **Truthfulness:** visible copy must identify the generated still as a visualization; it is not evidence
+   of a real client event.
+7. **Decision without a dedicated image reference:** the exact hands-and-table framing is a neutral
+   narrative bridge derived from the existing service promise and mussel footage. No external brand or
+   template composition is used.
+
+Image generation, implementation, anti-template audit and multi-width verification remain pending.
+
+## Three approved event-format blueprints — final implementation audit — 2026-09-09
+
+This entry supersedes the earlier partial event-blueprint integration note. The user approved one distinct
+concept for each service: `Частный ужин`, `Приватные мероприятия` and `Мастер-классы`.
+
+- **Files created:** three 1774 × 887 delivery rasters in
+  `public/media/blueprint-backgrounds/` and their source previews, prompts, composites and README in
+  `design/mockups/event-format-blueprint-concepts-2026-09-09/`.
+- **Files changed:** `app/page.tsx`, `app/globals.css`, `tests/rendered-html.test.mjs`,
+  `docs/DESIGN_REFERENCE_MAP.md`, `docs/DESIGN_SYSTEM.md` and this audit.
+- **Templated element found:** the earlier underlays reused a generalized drawing grammar, making three
+  materially different experiences feel interchangeable.
+- **Rework:** private dinner now converges ingredients and preparation into seven courses and an intimate
+  table; private event maps griddle production through bite assembly, tray circulation and replenishment;
+  masterclass maps demonstration through two practice stations, correction and shared outcomes.
+- **References used:** the user's supplied composite, explicit format mapping and approval, exact live
+  Russian copy, existing documentary photos and the approved ivory/graphite/sage/brass visual system.
+- **Decisions without direct references:** only the exact compact-screen field ratios and measured gaps;
+  these preserve the complete drawings after the live copy/photo pair without inventing a new style.
+- **UI libraries:** none introduced. Existing React semantics, CSS Grid and positioned raster primitives
+  are used; no library appearance remains visible.
+- **Desktop/mobile verification:** visual and measured checks pass at 1440, 1280, 1024, 768, 430, 390 and
+  375 px. All widths have zero horizontal overflow. All three rasters load at 1774 × 887 with opacity 1;
+  the live pair and drawing do not overlap; the 375 px gaps are 26.1, 11.0 and 17.2 px; and the inspected
+  console has zero warnings/errors. `npm test` passes the Vinext production build and all eight tests.
+- **Anti-template result:** no card grid, repeated generic diagram, radius, shadow, gradient, glass,
+  decorative glow, stock icon, placeholder copy, new CTA, generic animation or library theme was added.
+- **Remaining limitation:** the sheets are authored visual explanations rather than measured architectural
+  or kitchen-engineering plans. Their generated micro-marks are decorative; every factual statement stays
+  in accessible live text.

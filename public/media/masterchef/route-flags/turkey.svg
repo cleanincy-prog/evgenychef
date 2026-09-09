@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 40" role="img" aria-label="Флаг Турции">
+  <rect width="60" height="40" fill="#E30A17"/>
+  <circle cx="22.5" cy="20" r="10.5" fill="#FFFFFF"/>
+  <circle cx="26" cy="18.2" r="8.4" fill="#E30A17"/>
+  <path fill="#FFFFFF" d="m38.5 13.8 1.55 4.24 4.5.16-3.55 2.77 1.24 4.33-3.74-2.52-3.74 2.52L36 20.97l-3.55-2.77 4.5-.16z"/>
+</svg>

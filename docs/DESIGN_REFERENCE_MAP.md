@@ -792,3 +792,130 @@ The process drawing must never outline the live photograph or copy with a reserv
 registration rectangle, guide line or decorative strip. Their areas remain plain paper. Process
 arrows and calculations may approach and visually connect the two foreground elements only from the
 genuinely free centre, edge and lower zones; no underlay line may continue beneath either element.
+
+## Real-photo culinary archive — direct approval — 2026-09-09
+
+This map supersedes the active `Photorealistic MasterChef route` raster pair. The old files remain only
+as retired project history and are no longer visual references.
+
+| Project element | Reference | Principle used | What is not copied | Project implementation |
+|---|---|---|---|---|
+| MasterChef lead | User-approved “culinary archive + live editorial photography” direction; existing award proof and copy | Keep the verified personal evidence separate from illustrative atmosphere | No replacement chef, stock face, altered biography, award-photo retouch or forced crop | Natural-height twelve-column lead with the complete award photograph at left and unchanged live copy at right |
+| Kitchen-action archive | Five exact Pexels source pages recorded in `public/media/masterchef/CREDITS.md`; Pexels licence | Real hands, service and kitchen-pass moments replace isolated floating dishes | No claim that the stock scenes are Evgen, his dishes, his travels or his clients; no copied Pexels page composition | Locally optimized 3:4 WebP derivatives in an asymmetric editorial contact sheet, with square edges and no shadow |
+| Recipe facsimile | Mary Hawker’s recipe book, c.1691, Wellcome Collection, Public Domain Mark | Use a genuine manuscript leaf as an archival source rather than imitating handwriting | No fake note, invented recipe, torn edge, tape or parchment texture | Show one locally optimized page raster as a credited archive figure |
+| Eastern Mediterranean geography | Joan Oliva portolan atlas, c.1590, Library of Congress/Wikimedia Commons, public domain | Use an authentic chart with its original line network instead of a generated car route | No invented itinerary, map labels, route line, vehicle or destination claim | Show the unaltered chart as a small credited archive figure; contextual relationship is editorial, not evidentiary |
+| Archive sequence metadata | User-approved recipe-sheet/index recommendation plus existing biography’s `рецепты, техники и сочетания` | Fine rules, numbering and three concise live labels carry the narrative | No SVG, icon system, fake date, city label or generic card chrome | HTML text and CSS hairlines define `победа / исследование / авторский вечер` |
+| Responsive archive | Project’s approved side-by-side MasterChef lead rule and explicit mobile anti-template policy | Preserve lead orientation; author a separate asymmetric contact sheet below | No 1:2 generated background, proportional desktop shrink or horizontal carousel | At 820 px and below retain photo-left/copy-right; place real frames in a deliberate two-column sequence with one wide third frame |
+
+## Mapped recipe journey — direct correction — 2026-09-09
+
+This correction supersedes the detached `Real-photo culinary archive` contact sheet while retaining its
+real licensed photographs and unchanged MasterChef proof.
+
+| Project element | Reference | Principle used | What is not copied | Project implementation |
+|---|---|---|---|---|
+| Journey logic | User's direct instruction: each country must connect by a line to the dish learned there | Geography, connector and dish form one readable causal unit | The old AI car, floating plate shadows, decorative route or an unrelated gallery | One map canvas with five numbered country points, one restrained travel path and five functional leaders terminating at real photo frames |
+| Geographic base | [Mediterranean Sea location map (blank).svg](https://commons.wikimedia.org/wiki/File:Mediterranean_Sea_location_map_(blank).svg), NordNordWest, CC BY-SA 3.0; documented bounds 7° W–42.5° E and 29°–48° N | Use a geographic field whose published bounds actually contain Spain, southern France, Italy, Greece, Turkey and Cyprus | No hand-drawn coastline, invented borders, branded map style, cropped western-only map or reuse of the generated map pixels | Store the original 1754 × 862 SVG locally; keep the map and route in one 1754:862 wrapper so points cannot drift, while a separate fixed-ratio leader layer ends at the five photo edges |
+| Country/dish working set | Existing five credited real photos plus the user-defined travel-recipe logic | Use cuisine-recognisable examples to prototype the mapping | No claim that source photography documents Evgen's trip or that unverified stops are settled biography | Spain/paella, France/sauce work, Italy/ravioli, Greece/octopus, Turkey/pistachio pastry; visible editorial-verification note |
+| Cyprus endpoint | Existing site identity and current private-chef story on Cyprus | Show where accumulated techniques arrive in the current service | No invented sixth recipe, city or supplier | A final map point labelled `Кипр · авторское меню сегодня`, without a stock dish photo |
+| Mobile relationship | User's required country → line → dish logic and project mobile anti-template rule | Preserve the causal connector even when spatial geography cannot carry large photos | No scaled desktop poster, horizontal carousel or identical card stack | Keep the complete map, route and live country names visible; follow them with five unequal numbered rows where country text, hairline leader and real image remain on one row |
+
+## Integrated MasterChef route — direct correction — 2026-09-09
+
+This map supersedes the standalone journey composition above while retaining its licensed sources and
+verified one-to-one route logic.
+
+| Project element | Reference | Principle used | What is not copied | Project implementation |
+|---|---|---|---|---|
+| One MasterChef composition | User's direct instruction that the map is a background and small addition to the MasterChef block | Award proof, biography and travel evidence read as one continuous story | No second section, display title, intro paragraph or repeated divider | Keep the existing archive field; lead proof stays foreground and the route becomes its compact lower/background layer |
+| Background geography | NordNordWest Mediterranean location map, CC BY-SA 3.0; existing approved point geometry | Geographic context remains legible but subordinate | No opaque map panel, generated scenery, vehicle or ornamental travel poster | Render the complete map at low contrast behind the live route and dish callouts, with its attribution retained |
+| Five dish callouts | Five exact Pexels photographs and the user's requested country → line → dish relationship | Equal visual treatment makes the photos one editorial set; leaders preserve causality | No detached gallery, unequal stock-card styles, shadows, radius or decorative captions | Five square photographs with a common muted documentary grade, a 1 px keyline and calibrated crops sit directly over the map field |
+| Compact biography | Existing verified award photo and biography plus the user's one-mobile-scroll constraint | Preserve the story while removing repetition | No new biography facts, slogan or generic travel copy | Condense the two existing paragraphs into one live paragraph covering the award, recipe research and present work on Cyprus |
+| Phone composition | User's direct instruction: chef photo, text, map and food photos must fit within one mobile scroll | Design a separate compact spatial composition rather than stacking desktop rows | No five-row ledger, carousel, hidden route or vertical card list | Keep the photo-left/text-right lead; below it use a 245–295 px map field across the 375–560 px range, with five 46–56 px callouts and 11 px live labels |
+| Working route facts | Existing editorial set: Spain/paella, France/sauce, Italy/ravioli, Greece/octopus, Turkey/pistachio; Cyprus endpoint | Keep the proposed narrative visible without presenting it as verified travel documentation | No claim that stock photos are Evgen's own dishes or that stops are confirmed | Retain a concise visible verification note and full descriptive alt text/source credits |
+
+## Transparent plate composition — direct correction — 2026-09-09
+
+This correction supersedes the five framed Pexels callouts in the active map. The source photos remain in
+the media archive and credits, but are no longer rendered by the MasterChef route.
+
+| Project element | Reference | Principle used | What is not copied | Project implementation |
+|---|---|---|---|---|
+| Unified picture | User's instruction to place everything closer, structurally and as one understandable picture | Compress proof, map and dishes into a single causal reading path | No detached gallery, lower thumbnail rail or new content section | Preserve one MasterChef field; reduce the route gap/canvas and distribute plates around the live route |
+| Plate photography | User's request for professional, photoreal dishes without visible backgrounds; no external photo reference supplied | Use a neutral consistent studio-photo system with material realism and clean isolated silhouettes | No illustrated rendering, CGI gloss, stock kitchen scene, props, text, watermark, floating garnish or artificial perfect symmetry | Five coordinated generated masters and 512 px WebP derivatives, each showing one complete off-white porcelain plate; a shared calibrated ellipse hides the generator's opaque transparency-preview backing |
+| Map-to-dish relationship | User's earlier required country → line → dish logic | Short local leaders read faster than lines converging on one distant row | No purely decorative path or ambiguous unlabeled image | Each country point connects to one nearby transparent plate whose live caption names the country and dish |
+| Photo truthfulness | Existing editorial-status rule and actual site content | Generated food is atmospheric menu illustration, not documentary travel evidence | No claim that Evgen cooked, photographed or served the exact rendered plates | Keep the visible confirmation note and update alt text to describe plate contents without provenance claims |
+| Compact mobile field | User's one-mobile-scroll requirement | Staggered plate silhouettes use map space efficiently and avoid card stacking | No five-column caption rail, carousel or hidden relationship | At 375–430 px use 48–58 px plate cutouts around the same route, full-width map and wrapping 11 px live labels |
+
+## `Я — у вас дома` narrative expansion — 2026-09-09
+
+This direct request supersedes the text-free presentation of the present-day film. It does not change
+the approved order: the chapter still follows MasterChef and the three event formats.
+
+| Project element | Reference | Principle used | What is not copied | Project implementation |
+|---|---|---|---|---|
+| Chapter message | User's request to devise a concept, description and illustrations for the `Я — у вас дома` video; existing exact workday facts | Explain the value of a home chef through the host's regained presence: `Я у вас дома, чтобы вы были дома — со своими` | Generic private-chef luxury copy, restaurant-at-home cliché, new capacity/dietary claims, cleanup promise or second CTA | Restore a visible heading and concise factual description before the media; keep the existing Instagram action elsewhere on the page |
+| Documentary film | Existing 37-second `chef-story-img-5399-no-grill.mp4`, its poster and actual sequence of tools, vegetables, mussels and plating | Let real preparation provide the evidence; the copy supplies only the missing host-facing meaning | Device frame, native controls, autoplay audio, invented guests inserted into the film, fake testimonial or montage unrelated to the source footage | Keep the unchanged 9:16 film, muted and viewport-controlled, in a dedicated portrait aperture |
+| Workday drawing | Approved `workday-four-step-vertical.png` | The four graphite miniatures make the off-camera arc legible: products → preparation → marinade → cooking | Redrawing the approved plan, arbitrary icons, numbered cards, decorative measurements or a library stepper | Show the existing raster as a separate illustration field with live four-part captions; crop only its authored right-hand drawing zone through CSS |
+| Storyboard artifact | Approved graphite-on-cream language plus the user's request for illustrations | Extend the current language to the missing beats `arrival → mise en place → heat → shared table` while avoiding a fabricated likeness | No generated chef face, branded location, luxury villa, restaurant interior, extra copy inside the image or claim that the scene is documentary | Save `home-evening-storyboard-v1.png` as a concept/storyboard artifact; do not present it as a real client home or a documentary still |
+| Mobile composition | Project's separate-mobile-layout rule and the 375 px minimum target | Preserve readable copy and a meaningful portrait film rather than shrinking the desktop spread | Full-width autoplay poster, tiny 2:1 composite, mechanical one-column card stack or hidden illustration | Copy leads; film and the right-hand drawing crop form an unequal two-column evidence row; the four live captions follow as a ruled ledger |
+## Flag-marked recipe route — direct correction — 2026-09-09
+
+| Project element | Reference | Principle used | What is not copied | Project implementation |
+|---|---|---|---|---|
+| Route numbering | User's direct instruction to remove `01`–`05` | Country and dish names carry identity; document order remains semantic only | No replacement badges, bullets or Roman numerals | Remove the `number` data field, numeric map tokens and numbered plate captions while retaining the `<ol>` |
+| National route nodes | User's direct instruction to colour countries with flags; existing approved map coordinates | Put national colour at the actual country point so route, geography and dish remain one readable unit | No decorative flag strip, generic pin icon, floating emoji or invented territory boundary | Six square-edged 3:2 local vector flags sit over Spain, France, Italy, Greece, Turkey and Cyprus route points |
+| Base-map restraint | Existing NordNordWest CC BY-SA 3.0 map and project anti-template policy | Preserve geographic evidence and add only the requested functional colour | No recolouring of unaddressable source paths or bright full-map poster treatment | Keep the map at approved low opacity; flag symbols are the only new colour layer and retain a fine paper separation keyline |
+
+## Flag-filled country territories — direct correction — 2026-09-09
+
+This correction supersedes the rectangular national route nodes above. Visible numbering remains removed.
+
+| Project element | Reference | Principle used | What is not copied | Project implementation |
+|---|---|---|---|---|
+| Territory colour | User's clarification that colours must be on the country territory beneath the dishes | The geographic silhouette itself becomes the national-colour carrier | No floating flag, marker rectangle, pin, emoji, legend strip or flag beside country text | Clip each national flag field to the projected outline of Spain, France, Italy, Greece, Turkey and Cyprus |
+| Geographic registration | [Mediterranean Sea location map.svg](https://commons.wikimedia.org/wiki/File:Mediterranean_Sea_location_map.svg) metadata: equirectangular, 7° W–42.5° E, 29°–48° N, 1753.947 × 861.729; [Natural Earth 1:50m Admin 0 Countries](https://www.naturalearthdata.com/downloads/50m-cultural-vectors/50m-admin-0-countries-2/) | Use published bounds and real administrative polygons so the overlay registers to the existing map | No invented country silhouette, guessed blob, manual tracing or independent decorative projection | Project Natural Earth longitude/latitude coordinates linearly into the base SVG canvas and retain only Mediterranean-intersecting polygons |
+| Route hierarchy | Existing approved route and country → leader → dish relationship | Filled territories establish place; route and leaders explain travel and recipe acquisition | No removal of causal connectors or replacement with a decorative atlas poster | Render territory colour above the quiet base map and below route, live labels, leaders and plates |
+| Small-country legibility | User's one-mobile-scroll constraint and existing 375 px minimum | Preserve the true Cyprus silhouette while its live endpoint label guarantees comprehension | No enlarged fake Cyprus, displaced inset map or detached flag chip | Keep Cyprus at projected scale; retain `Кипр` in live text and its endpoint in the map title/note |
+
+## `Я — у вас дома` minimal documentary correction — 2026-09-09
+
+This entry supersedes the earlier `narrative expansion` composition. The user's direct correction is the
+authoritative reference: the current result is too orange and reads as a checkerboard; the replacement
+must be minimalist, use the least possible illustration, and feel realistic and beautiful.
+
+| Project element | Reference | Principle used | What is not copied | Project implementation |
+|---|---|---|---|---|
+| Section composition | User's direct request for minimalism and rejection of the checkerboard rhythm | One idea is carried by one real moving image, with negative space doing the compositional work | No illustration beside the film, four-cell stage ledger, card grid, split-screen device or decorative layer | Keep a single text column and a single portrait film; remove the illustration field and all live stage cells |
+| Film edit | User's complaint about the orange video; direct audit of the existing documentary footage | Preserve real hands, food and cooking while removing the source shots that visually cause the complaint | No synthetic replacement scene, generated likeness, global cold filter, fake home or invented guests | Re-cut the existing footage around tools, washing, pan, mussels and plating; omit the orange-wide shots and checkerboard cutting-board sequence; apply only a restrained yellow-channel correction |
+| Poster | Existing final plated-dish footage | Let the real finished dish be the only still image and quiet entry state for the film | No AI poster, composite, illustration, typography baked into the image or stock food photograph | Extract a poster from the corrected final plating sequence |
+| Copy | Existing approved service facts and user's preference for restraint | State the service in two sentences, then keep the established host-facing promise | No luxury vocabulary, invented cleanup/capacity claim, process repetition or second call to action | `Я приезжаю с подготовленным mise en place и беру кухню на себя. Вы встречаете гостей и остаётесь частью собственного вечера.` followed by the existing promise |
+| Mobile behavior | User's rejection of the checkerboard; project's separate-mobile-layout requirement | A single readable sequence replaces both the side-by-side media row and the 2×2 ledger | No narrow media columns, desktop grid mechanically stacked, edge-to-edge autoplay or tiny poster | Copy comes first; one 9:16 film follows at a deliberate portrait width with a single factual caption |
+| Retired concept image | User's request for minimum illustration and realistic output | Keep rejected exploration out of the live/public experience | No generated storyboard is surfaced as documentary evidence | Remove the AI storyboard from the page/public media path; retain only an explicitly rejected working artifact for provenance |
+
+## `Я — у вас дома` adjacent visual correction — 2026-09-09
+
+This entry supersedes the film-edit decision above. The user clarified that the supplied video itself must
+remain unchanged; only the block beside it needs a new, minimally drawn but photorealistic visual.
+
+| Project element | Reference | Principle used | What is not copied | Project implementation |
+|---|---|---|---|---|
+| Documentary film | User's direct correction `видео оставь как есть` and the supplied original film | Preserve the accepted real material exactly | No re-cut, crop, colour grade, synthetic replacement or new poster | Restore `chef-story-img-5399-no-grill.mp4`, its original poster and timing caption track |
+| Adjacent visual | User's request to draw only the neighbouring block; existing message that the chef works while guests remain together | Show the outcome of the cooking film in one coherent scene: the plate arriving at a real home table | No four-panel storyboard, checkerboard process diagram, generated chef likeness, orange kitchen, luxury restaurant or stock testimonial pose | Generate one 4:5 photorealistic editorial scene of a mussel dish arriving at a simple domestic table; crop out faces and identify it as a visualization |
+| Media relationship | User's request for the drawing beside the video and rejection of checkerboard rhythm | Two unequal photographs share one baseline and almost equal visual height, reading as one film-and-outcome pair | No 2×2 grid, alternating cards, step ledger, overlap collage or decorative frame | Use a narrow 9:16 documentary film beside a wider 4:5 still, separated only by whitespace and individual factual captions |
+| Mobile behavior | Same direct correction and project's deliberate-mobile rule | Keep the film and its companion visibly related without reducing either to an unreadable thumbnail | No vertical card stack or four-cell process grid | Preserve the two-image pair at 375 px with proportional columns chosen to equalize their heights; copy remains a separate preceding block |
+
+## Event-specific blueprint concepts — 2026-09-09
+
+The user explicitly approved all three event-specific directions on 2026-09-09 and instructed that they
+be implemented. They supersede the three `*-layout-color-v2.png` event-format underlays; the previous
+files remain audit history only.
+
+| Project element | Reference | Principle used | What is not copied | Project implementation |
+|---|---|---|---|---|
+| Private dinner | User-supplied 2026-09-09 composite screenshot; exact seven-course copy and portrait cooking photograph; explicit approval `Да, отлично` | Ingredient choice and mise en place resolve into seven authored courses and one intimate-table outcome | Existing calculation sheet, private-event tray loop, masterclass station diagram, copied text or replacement photo | Activate `private-dinner-event-concept-v3.png` beneath the unchanged copy/photo pair |
+| Private event | Same user correction and approval; existing outdoor live-cooking photograph and small-bite/conversation copy | A griddle feeds four bite assemblies, tray circulation, return and replenishment so the drawing expresses a fluid standing event | Formal dinner table, seven-course plate sequence, fixed guest count, venue floor plan or changed photo | Activate `private-event-circulation-concept-v3.png`; keep the quiet copy-left and landscape-photo-right apertures |
+| Masterclass | Same user correction and approval; existing demonstration photograph and exact learning copy | Demonstration branches into two practice stations, a correction loop and a shared workbench with three outcomes | Event tray circulation, intimate dinner choreography, certificate motif, replacement participants or changed text | Activate `masterclass-learning-concept-v3.png`; keep the quiet photo-left and copy-right apertures |
+
+The three process topologies are now approved project decisions. All palette, line, surface, photograph,
+copy and foreground-direction decisions come from the supplied screenshot and active project.

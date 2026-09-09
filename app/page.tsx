@@ -75,7 +75,7 @@ const eventFormats = [
     width: 1152,
     height: 1572,
     alt: "Евгений Грыбенюк готовит блюдо на сковороде для частного ужина",
-    drawingSrc: "/media/blueprint-backgrounds/private-dinner-layout-color-v2.png",
+    drawingSrc: "/media/blueprint-backgrounds/private-dinner-event-concept-v3.png",
     processBackground: true,
   },
   {
@@ -86,7 +86,7 @@ const eventFormats = [
     width: 2278,
     height: 1510,
     alt: "Евгений Грыбенюк готовит блины перед гостями на приватном мероприятии",
-    drawingSrc: "/media/blueprint-backgrounds/private-event-layout-color-v2.png",
+    drawingSrc: "/media/blueprint-backgrounds/private-event-circulation-concept-v3.png",
     processBackground: true,
   },
   {
@@ -97,10 +97,52 @@ const eventFormats = [
     width: 1144,
     height: 770,
     alt: "Евгений Грыбенюк показывает участникам мастер-класса профессиональные приёмы",
-    drawingSrc: "/media/blueprint-backgrounds/masterclass-six-person-layout-color-v2.png",
+    drawingSrc: "/media/blueprint-backgrounds/masterclass-learning-concept-v3.png",
     processBackground: true,
   },
 ];
+
+const chefJourneyStops = [
+  {
+    id: "spain",
+    country: "Испания",
+    dish: "Паэлья",
+    src: "/media/masterchef/route-plates/01-paella-plate-v1-512.webp",
+  },
+  {
+    id: "france",
+    country: "Франция",
+    dish: "Утка с соусом",
+    src: "/media/masterchef/route-plates/02-duck-plate-v1-512.webp",
+  },
+  {
+    id: "italy",
+    country: "Италия",
+    dish: "Равиоли",
+    src: "/media/masterchef/route-plates/03-ravioli-plate-v1-512.webp",
+  },
+  {
+    id: "greece",
+    country: "Греция",
+    dish: "Осьминог",
+    src: "/media/masterchef/route-plates/04-octopus-plate-v1-512.webp",
+  },
+  {
+    id: "turkey",
+    country: "Турция",
+    dish: "Фисташковая выпечка",
+    src: "/media/masterchef/route-plates/05-baklava-plate-v1-512.webp",
+  },
+] as const;
+
+const chefJourneyFlags = [
+  { id: "spain", country: "Испания", x: 234, y: 386, src: "/media/masterchef/route-flags/spain.svg" },
+  { id: "france", country: "Франция", x: 425, y: 190, src: "/media/masterchef/route-flags/france.svg" },
+  { id: "italy", country: "Италия", x: 650, y: 159, src: "/media/masterchef/route-flags/italy.svg" },
+  { id: "greece", country: "Греция", x: 1088, y: 454, src: "/media/masterchef/route-flags/greece.svg" },
+  { id: "turkey", country: "Турция", x: 1275, y: 318, src: "/media/masterchef/route-flags/turkey.svg" },
+  { id: "cyprus", country: "Кипр", x: 1430, y: 585, src: "/media/masterchef/route-flags/cyprus.svg" },
+] as const;
 
 const sourceChapters = [
   {
@@ -296,41 +338,175 @@ export default function Home() {
 
           <div className="story-sequence" id="menu" aria-label="Победа MasterChef и форматы мероприятий">
             <div className="story-origin">
-              <div className="story-origin-process-field">
-                <picture className="story-origin-process-plan" aria-hidden="true">
-                  <source
-                    media="(max-width: 820px)"
-                    srcSet="/media/blueprint-backgrounds/masterchef-travel-photoreal-mobile.png"
-                  />
-                  <img
-                    src="/media/blueprint-backgrounds/masterchef-travel-photoreal-desktop.png"
-                    width="1774"
-                    height="887"
-                    loading="lazy"
-                    decoding="async"
-                    alt=""
-                  />
-                </picture>
-                <figure className="story-award">
-                  <img
-                    src="/media/masterchef/evgen-grybenyk-winner-envelope-2020.jpg"
-                    width="1719"
-                    height="900"
-                    loading="lazy"
-                    decoding="async"
-                    alt="Евгений Грыбенюк после победы в МастерШеф. Профессионалы — 2 держит фирменный конверт победителя"
-                  />
-                </figure>
-                <div className="story-copy">
-                  <p>
-                    Победа в «МастерШеф. Профессионалы» открыла мне путь к новым кухням Европы
-                    и Средиземноморья, где я собирал рецепты, техники и сочетания для будущих
-                    авторских блюд.
-                  </p>
-                  <p>
-                    Теперь я провожу частные ужины, приватные мероприятия и мастер-классы и
-                    превращаю этот опыт в ваш идеальный гастрономический вечер.
-                  </p>
+              <div className="story-origin-archive-field">
+                <div className="story-origin-lead">
+                  <figure className="story-award">
+                    <img
+                      src="/media/masterchef/evgen-grybenyk-winner-envelope-2020.jpg"
+                      width="1719"
+                      height="900"
+                      loading="lazy"
+                      decoding="async"
+                      alt="Евгений Грыбенюк после победы в МастерШеф. Профессионалы — 2 держит фирменный конверт победителя"
+                    />
+                    <figcaption>победа · MasterChef</figcaption>
+                  </figure>
+                  <div className="story-copy">
+                    <p>
+                      Победа в «МастерШеф. Профессионалы» открыла мне путь к новым кухням Европы
+                      и Средиземноморья. Там я собирал рецепты и техники, которые сегодня
+                      превращаю в частные ужины, мероприятия и мастер-классы на Кипре.
+                    </p>
+                    <p className="chef-journey-kicker" id="chef-journey-label">
+                      маршрут вкусов · 5 стран / 5 блюд
+                    </p>
+                  </div>
+                  <div
+                    className="chef-journey"
+                    role="group"
+                    aria-labelledby="chef-journey-label"
+                    aria-describedby="chef-journey-note"
+                  >
+                    <figure className="chef-journey-map">
+                      <div className="chef-journey-canvas">
+                        <div className="chef-journey-map-field">
+                          <svg
+                            className="chef-journey-map-layer"
+                            viewBox="150 100 1450 600"
+                            role="img"
+                            aria-labelledby="chef-journey-map-title"
+                          >
+                            <title id="chef-journey-map-title">
+                              Редакционная схема предполагаемого маршрута через Испанию, Францию,
+                              Италию, Грецию и Турцию к Кипру; страны отмечены флагами
+                            </title>
+                            <image
+                              href="/media/masterchef/culinary-archive/map-mediterranean-full-cc-by-sa.svg"
+                              x="0"
+                              y="0"
+                              width="1754"
+                              height="862"
+                            />
+                            <g className="chef-journey-route" aria-hidden="true">
+                              <polyline points="234,386 425,190 650,159 1088,454 1275,318 1430,585" />
+                            </g>
+                          </svg>
+
+                          <svg
+                            className="chef-journey-flag-layer"
+                            viewBox="150 100 1450 600"
+                            preserveAspectRatio="none"
+                            aria-hidden="true"
+                          >
+                            {chefJourneyFlags.map((flag) => (
+                              <g data-country-flag={flag.id} key={flag.id}>
+                                <rect
+                                  className="chef-journey-flag-keyline"
+                                  x={flag.x - 46}
+                                  y={flag.y - 32}
+                                  width="92"
+                                  height="64"
+                                />
+                                <image
+                                  className="chef-journey-flag-image"
+                                  href={flag.src}
+                                  x={flag.x - 42}
+                                  y={flag.y - 28}
+                                  width="84"
+                                  height="56"
+                                  preserveAspectRatio="xMidYMid slice"
+                                />
+                                <rect
+                                  className="chef-journey-flag-outline"
+                                  x={flag.x - 42}
+                                  y={flag.y - 28}
+                                  width="84"
+                                  height="56"
+                                />
+                              </g>
+                            ))}
+                          </svg>
+
+                          <div className="chef-journey-point-labels" aria-hidden="true">
+                            {chefJourneyStops.map((stop) => (
+                              <span className={`chef-journey-point chef-journey-point-${stop.id}`} key={stop.id}>
+                                <i>{stop.country}</i>
+                              </span>
+                            ))}
+                            <span className="chef-journey-point chef-journey-point-cyprus">
+                              <i>Кипр</i>
+                            </span>
+                          </div>
+
+                          <svg
+                            className="chef-journey-leaders"
+                            viewBox="150 100 1450 600"
+                            preserveAspectRatio="none"
+                            aria-hidden="true"
+                          >
+                            <polyline data-leader="spain" points="234,386 260,430 324,568" />
+                            <polyline data-leader="france" points="425,190 448,240 542,376" />
+                            <polyline data-leader="italy" points="650,159 680,210 824,268" />
+                            <polyline data-leader="greece" points="1088,454 1078,470 1006,568" />
+                            <polyline data-leader="turkey" points="1275,318 1271,350 1339,430" />
+                          </svg>
+
+                          <ol
+                            className="chef-journey-stops"
+                            aria-label="Страны и блюда маршрута"
+                          >
+                            {chefJourneyStops.map((stop) => (
+                              <li
+                                className={`chef-journey-stop chef-journey-stop-${stop.id}`}
+                                key={stop.id}
+                              >
+                                <figure>
+                                  <span className="chef-journey-plate" aria-hidden="true">
+                                    <img
+                                      src={stop.src}
+                                      width="512"
+                                      height="512"
+                                      loading="lazy"
+                                      decoding="async"
+                                      alt=""
+                                    />
+                                  </span>
+                                  <figcaption>
+                                    <span>{stop.country}</span>
+                                    <strong>{stop.dish}</strong>
+                                  </figcaption>
+                                </figure>
+                              </li>
+                            ))}
+                          </ol>
+                        </div>
+                      </div>
+                      <figcaption className="chef-journey-meta">
+                        <span className="chef-journey-credit">
+                          карта ·{" "}
+                          <a
+                            href="https://commons.wikimedia.org/wiki/File:Mediterranean_Sea_location_map_(blank).svg"
+                            target="_blank"
+                            rel="noreferrer"
+                          >
+                            NordNordWest / Wikipedia
+                          </a>{" "}
+                          ·{" "}
+                          <a
+                            href="https://creativecommons.org/licenses/by-sa/3.0/"
+                            target="_blank"
+                            rel="noreferrer"
+                          >
+                            CC BY-SA 3.0
+                          </a>
+                        </span>
+                        <span className="chef-journey-note" id="chef-journey-note">
+                          <strong>Кипр — авторское меню сегодня.</strong>{" "}
+                          Блюда — фотореалистичные визуализации; маршрут требует подтверждения шефа.
+                        </span>
+                      </figcaption>
+                    </figure>
+                  </div>
                 </div>
               </div>
             </div>
@@ -339,34 +515,29 @@ export default function Home() {
         </section>
 
         <section className="present-day" aria-labelledby="present-title">
-          <div className="story-present">
-            <div className="present-day-accessible">
+          <div className="home-story">
+            <header className="home-story-copy">
+              <p className="section-kicker">частный ужин</p>
               <h2 id="present-title">
                 Я —
                 <br />
                 <em>у вас дома.</em>
               </h2>
-              <ul aria-label="Мой рабочий день">
-                <li><span>утро</span> закупаю продукты</li>
-                <li><span>день</span> делаю заготовки, маринады и соусы</li>
-                <li><span>вечер</span> готовлю у вас дома для вас и ваших гостей</li>
-              </ul>
-            </div>
-            <div className="story-present-process-field">
-              <img
-                className="story-present-process-plan"
-                src="/media/blueprint-backgrounds/workday-four-step-vertical.png"
-                width="1774"
-                height="887"
-                loading="lazy"
-                decoding="async"
-                alt=""
-                aria-hidden="true"
-              />
-              <figure className="story-film">
-                <ChefStoryVideo />
-              </figure>
-            </div>
+              <p className="home-story-lede">
+                Я приезжаю с подготовленным mise en place и беру кухню на себя.
+                Вы встречаете гостей и остаётесь частью собственного вечера.
+              </p>
+              <p className="home-story-promise">
+                Чтобы вы были дома —
+                <br />
+                <em>со своими.</em>
+              </p>
+            </header>
+
+            <figure className="home-story-film">
+              <ChefStoryVideo />
+              <figcaption>домашняя кухня · подготовка, огонь, подача</figcaption>
+            </figure>
           </div>
         </section>
 

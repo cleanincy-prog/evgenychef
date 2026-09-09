@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1774" height="887" viewBox="0 0 1774 887">
+  <image xlink:href="01-private-dinner-blueprint.png" x="0" y="0" width="1774" height="887"/>
+  <image xlink:href="../../../public/media/event-formats/private-dinner.jpg" x="1029" y="44" width="481" height="657" preserveAspectRatio="xMidYMid meet"/>
+  <g fill="#302c26">
+    <text x="53" y="330" fill="#956f31" font-family="Arial, sans-serif" font-size="15" letter-spacing="5">01</text>
+    <text x="53" y="390" font-family="Georgia, serif" font-size="31">Частный ужин</text>
+    <text x="53" y="450" fill="#81796e" font-family="Arial, sans-serif" font-size="18" font-weight="300">
+      <tspan x="53" dy="0">Я приготовлю любимые блюда для близких</tspan>
+      <tspan x="53" dy="31">или создам гастрономический маршрут в</tspan>
+      <tspan x="53" dy="31">семь подач.</tspan>
+    </text>
+  </g>
+</svg>

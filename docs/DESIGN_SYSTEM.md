@@ -1176,3 +1176,236 @@ reconstructions.
   it is switched with `<picture>` rather than cropped, stretched or reused from the desktop source.
 - The winner photograph stays complete on the left and the live copy stays on the right. Both occupy the
   authored clear upper area while the route and dishes complete the lower half of the same rectangle.
+
+## Real-photo culinary archive — 2026-09-09
+
+This section supersedes `Photorealistic MasterChef route — 2026-09-09` for the active interface.
+
+- The MasterChef block is a natural-height editorial composition, never one precomposed background.
+  Personal evidence occupies the lead row: complete award photograph at left, unchanged biography at
+  right. Illustrative internet imagery begins only in the archive below.
+- The archive uses real rectangular photography of kitchen actions, not isolated food objects. Frames
+  may share a 3:4 crop for rhythm, but their widths and grid spans vary so they do not become a generic
+  equal-card gallery.
+- Genuine recipe and map facsimiles may appear only as discrete credited figures. Do not simulate
+  handwriting, parchment, tape, torn edges, stamps, travel routes or archival dates.
+- All photography and facsimiles use square edges, no shadow, no radius, no CSS filter, no blend mode and
+  no opacity texture. `object-fit: cover` is allowed only for the five explicitly illustrative stock
+  action frames; the Evgen award photograph remains complete with `object-fit: contain`.
+- Narrative metadata is live HTML in Montserrat uppercase: 10–11 px, 0.12–0.16 em tracking, muted ink or
+  `--accent-small`. Separators use a single 1 px `--rule` line. Numbers are functional sequence markers,
+  not badge decoration.
+- Desktop uses the twelve-column content grid. At 820 px and below the lead pair remains photograph-left
+  and copy-right; the archive becomes a two-column asymmetric contact sheet without horizontal overflow.
+  At 430 px and below the text remains at least 12 px and touch/navigation behavior is unchanged.
+- The retired `masterchef-travel-photoreal-desktop.png` and
+  `masterchef-travel-photoreal-mobile.png` must not be referenced by active JSX or CSS.
+
+## Mapped recipe journey — 2026-09-09
+
+This section supersedes the detached archive-grid rules for the active MasterChef continuation.
+
+- The primary visual is one wide geographic field using NordNordWest's credited CC BY-SA 3.0 blank
+  Mediterranean location map. Its documented bounds (7° W–42.5° E, 29°–48° N) include the complete
+  Spain-to-Cyprus working route. It has square edges, no shadow, no radius, no generated scenery and no
+  decorative vehicle.
+- Five live country labels, five route points and five real photo figures form exact one-to-one pairs:
+  Spain/paella, France/sauce work, Italy/ravioli, Greece/octopus and Turkey/pistachio pastry. These are an
+  editorial working set pending chef confirmation, not documentary proof of a precise itinerary.
+- A 1.5 px `--accent-small` path connects the five country points and ends at Cyprus. Separate 1 px
+  `--ink` leaders connect each point to its photograph. The inline SVG is permitted here because every
+  line communicates the explicit map-to-dish relationship requested by the user.
+- The country, dish and technique remain live text. Country labels use Montserrat 600 at 11–12 px;
+  dish names use Cormorant Garamond at 20–26 px; supporting technique text uses Montserrat at 11–12 px.
+  Numbers are sequence references shared between points and figures, never decorative badges.
+- Desktop uses one fixed 16:9 spatial canvas: the complete map occupies the centre and photographs sit
+  on unequal perimeter positions. Map pixels, route and route points share one exact 1754:862 wrapper;
+  the five outer leaders share the 16:9 canvas and terminate inside the associated photo edge. No two
+  figures receive a common card surface.
+- At 940 px and below the map remains complete above an ordered route ledger. Every ledger row keeps
+  `country → horizontal leader → photograph` on one line, while alternating image widths and offsets
+  prevent a generic repeated-card stack. The route and all six country names remain visible on the map;
+  only the desktop perimeter leaders are replaced by row leaders. The route order remains semantic in
+  an `<ol>`.
+- At 430 px and below country/dish text remains at least 11 px, the map is never horizontally scrolled,
+  and the page must have no overflow. No information is hover-only and no route-drawing animation is
+  added.
+
+## Integrated MasterChef route — 2026-09-09
+
+This rule replaces the active standalone journey layout while keeping its verified assets, attribution
+and geographic point geometry.
+
+- The award image, biography and route share one `story-origin-archive-field`. The route has no display
+  heading and no independent section border; a small `маршрут рецептов` label is contextual metadata.
+- The map is a full, low-contrast background layer. Its coastline and the ochre route remain visible;
+  five photographs and labels are the foreground endpoints. Map opacity may sit between `.14` and `.22`,
+  while route/leader strokes remain 1–1.5 px.
+- The five dish images use an identical `1 / 1` crop, square edges and one 1 px `--rule` keyline.
+  Their shared documentary grade is `grayscale(.12) sepia(.08) saturate(.82) contrast(1.04)
+  brightness(.97)`. This grade applies only to illustrative dish photography, never the award image.
+- Crop positions are fixed from source inspection: Spain `center 36%`, France `center 47%`, Italy
+  `center 46%`, Greece `center 47%`, Turkey `center 44%`.
+- Callout labels use live Montserrat at 11 px minimum and combine country and dish in one compact line.
+  Full descriptive alt text remains on every photo. Numbers and leaders carry route identity and are not
+  decorative badges.
+- At phone widths, keep the award photo and concise text side by side. The map continuation is 245–295 px
+  tall across the 375–560 px range; each food callout is `clamp(46px, 13vw, 56px)`. All five callouts, the Cyprus endpoint, attribution
+  and editorial-status note must fit without a horizontal scrollbar or a repeated vertical list.
+- No UI component library is introduced. Semantic HTML, CSS Grid/absolute positioning and the existing
+  inline route SVG are the only primitives.
+
+## Transparent route plates — 2026-09-09
+
+This rule supersedes the active square stock-photo apertures and their shared CSS grade.
+
+- Active dish media are five separate 512 × 512 WebP delivery images derived from coordinated generated
+  masters. Each canvas contains one complete plate only; no table, room, hand, utensil, napkin, garnish
+  outside the plate, border, text, logo or watermark is visible in the interface.
+- Photography lock: near-overhead 70° camera, normal-lens perspective, identical plate scale, matte warm
+  off-white porcelain, soft large-source daylight from upper left, restrained contrast, natural colour,
+  plausible food textures and small real preparation irregularities. Avoid CGI gloss, illustration,
+  aggressive HDR, impossible ingredient repetition and excessive symmetry.
+- Native alpha remains the preferred source format, but the built-in generator did not encode it in this
+  pass. The active neutral fallback clips the shared plate geometry with one calibrated CSS ellipse so no
+  backing pixels are visible. CSS must not add a drop shadow, border, filter, blend mode or opaque surface.
+- Desktop plate width is `clamp(82px, 9vw, 118px)`; at 560 px and below it is
+  `clamp(48px, 14vw, 58px)`. Use `aspect-ratio: 1 / 1` and `object-fit: contain`.
+- Stops are positioned as local map callouts rather than a grid rail: Spain lower-west, France upper-west,
+  Italy upper-centre, Greece lower-east and Turkey mid-east. Captions remain live and pair route number,
+  country and dish; desktop retains full point labels, while compact screens may reduce point labels to
+  numbers because the adjacent captions preserve the text relationship.
+- Leaders remain 1 px graphite and begin at the exact geographic route points. Their authored endpoint
+  sits beneath the associated plate centre; the higher plate layer hides the continuation so the visible
+  line always ends exactly at the silhouette edge at every responsive size.
+- The map remains the lowest layer at `.16`–`.18` opacity. The integrated route canvas targets
+  340–344 px on desktop, 245–330 px on tablet and 190–240 px at 375–560 px. No internal scrolling or clipping of live
+  captions is permitted.
+- No UI library is involved; semantic HTML, the existing SVG coordinate system and focused CSS are the
+  only layout primitives.
+
+## Present-day home chapter amendment — 2026-09-09
+
+The user's new request for a video concept, visible description and illustrations supersedes the
+2026-09-02 text-free workday override. The approved film and graphite process raster remain the media
+sources; this amendment changes their hierarchy and restores live explanatory copy.
+
+- Message: the heading stays `Я — у вас дома.` The chapter lede is factual and follows the existing
+  day arc. The closing display line is `Чтобы вы были дома — со своими.` It describes the service
+  outcome without introducing an unverified operational promise.
+- Desktop: one twelve-column editorial spread, not a card row. Copy occupies the opening four columns,
+  the 9:16 documentary film occupies the middle portrait field and a CSS crop of the approved four-step
+  graphite raster occupies the closing field. The four live stage captions form one ruled ledger below
+  the lede or media, depending on available width.
+- Mobile: copy comes first. Film and illustration remain side by side as unequal evidence rather than
+  becoming a full-width poster followed by a tiny diagram. Stage captions use two columns at 430–375 px,
+  remain at least 13.6 px and preserve the real order: products, preparation, marinade, cooking at home.
+- Media: the existing film stays muted, looped, poster-first and visibility controlled. The approved
+  raster remains text-free; all meaning is live HTML. The generated storyboard is a production-planning
+  artifact only and is not represented as a real venue, guest group or documentary photograph.
+- Styling: use only `--paper-light`, `--ink`, `--muted`, `--accent`, `--accent-small` and `--rule`, with
+  the existing Cormorant/Montserrat roles. Zero radius, zero shadow, zero gradient and square media edges.
+- Interaction: no new action, control or animation. The page's single Instagram inquiry route remains
+  unchanged.
+- UI libraries: none. React markup, CSS Grid and the existing video playback hook are the only
+  implementation primitives.
+## Flag route nodes — 2026-09-09
+
+- Visible route numbering is absent. The dish journey remains a semantic ordered list, but country and dish
+  names are the only visible identifiers.
+- Each of the six route coordinates uses one local 3:2 national-flag SVG. Flags are centred on the route
+  point, rendered above the ochre route and below live labels/plates, and use square edges with no shadow,
+  radius, glow or motion.
+- A 3 px paper-colour keyline and 1 px low-opacity ink outline may be used to preserve the edges of white
+  flag fields against the quiet map. This is functional separation, not card chrome.
+- Desktop flag geometry is 84 × 56 source-map units inside the existing `150 100 1450 600` viewBox. The
+  same SVG geometry scales with the map on tablet and phone, avoiding breakpoint drift.
+- Desktop retains live country labels beside the six flag nodes. At 560 px and below the five travelled
+  country labels may be hidden because the adjacent plate captions repeat them; the Cyprus endpoint label
+  remains visible. No information may depend on flag recognition alone.
+
+## Flag-filled territory overlay — 2026-09-09
+
+- The rectangular route-node flags are retired from the active map. National colour appears only inside the
+  real projected territories of Spain, France, Italy, Greece, Turkey and Cyprus.
+- Geometry source: Natural Earth 1:50m Admin 0 country polygons. Projection: equirectangular into the existing
+  1753.947 × 861.729 base-map canvas using its documented bounds of −7° to 42.5° longitude and 48° to 29°
+  latitude. Remote polygons outside the Mediterranean field are excluded.
+- The transparent overlay shares the map's exact canvas and crop, so country shapes, route and leaders scale
+  together at every breakpoint. No CSS-positioned territorial approximation is allowed.
+- Each territory clips a simplified national flag field. Use the standard flag colours already recorded in
+  the project; preserve islands present in the 1:50m geometry and use even-odd fills for interior rings.
+- Country colour is visually dominant over the base map but remains beneath the ochre route and functional
+  leaders. A restrained `--ink`-family outline may separate neighbouring territories; no keyline rectangle,
+  shadow, radius, glow, gradient or animation is allowed.
+- Country and dish names remain live HTML. The map title enumerates every filled territory and the plate
+  captions repeat the five recipe countries, so no information depends only on colour or flag recognition.
+- On phones, retain the same geographic overlay rather than swapping in enlarged markers. Labels may be
+  collision-managed independently, but the country silhouettes may not be displaced or enlarged.
+
+## Minimal documentary home chapter correction — 2026-09-09
+
+This correction supersedes the earlier two-image `present-day home chapter` layout.
+
+- **Composition:** one 12-column editorial spread only: copy in the left field, one real portrait film in
+  the right field, and intentional empty columns between and around them. No secondary illustration or
+  stage grid is permitted in this chapter.
+- **Film geometry:** keep the source's authored 9:16 ratio, square corners, no device frame, shadow,
+  radius, overlay tint or decorative border. Desktop width is restrained rather than stretched to fill
+  the available row.
+- **Colour:** the film remains photographic. Editing may selectively reduce yellow saturation and use a
+  very small cool compensation, but must preserve natural skin, vegetables and plated food. CSS filters
+  and strong global grading are prohibited.
+- **Image rule:** only frames from the real supplied film may appear in the live chapter. AI images,
+  drawn process diagrams and illustrative composites are excluded by the user's latest direction.
+- **Caption:** one small factual line below the film. It may identify the domestic setting and visible
+  sequence, but cannot claim a client testimonial, unstaged shoot or location not evidenced by the film.
+- **Responsive design:** at 820 px the spread may retain a restrained copy/film pairing if both stay
+  readable. At 560 px and below it becomes a deliberate linear reading order: copy, promise, centred
+  portrait film, caption. Film width is capped near 280 px instead of becoming edge-to-edge.
+- **Motion and controls:** preserve the existing muted, inline, looping and viewport-controlled playback;
+  the static real-food poster is the low-motion and pre-play state.
+- **Anti-template constraint:** no cards, stepper, checkerboard, split media, icon row, ornamental rules,
+  generated drawing or new CTA may be introduced into this chapter.
+
+## Home chapter film-and-outcome pair correction — 2026-09-09
+
+This correction supersedes the prohibition on an adjacent image above while retaining the ban on grids,
+cards and multi-panel process art.
+
+- **Video invariant:** the supplied `chef-story-img-5399-no-grill.mp4`, original poster and caption timing
+  remain untouched and unfiltered.
+- **Companion image:** one photorealistic 4:5 raster may sit beside the 9:16 film. It depicts the service
+  outcome, not another preparation step, and must be visibly disclosed as a visualization.
+- **Pair geometry:** use approximately `.72fr 1fr` columns. Because 9:16 at `.72` width and 4:5 at `1`
+  width produce almost equal heights, both media align naturally without a card frame or forced crop grid.
+- **Colour:** neutral daylight, paper, stone, charcoal, dark shell and restrained vegetable colour. Avoid
+  orange cabinetry, golden restaurant lighting, patterned textiles and checkerboard surfaces.
+- **People:** no identifiable face or generated chef likeness. Natural cropped hands may communicate a
+  shared table without implying a specific client or documented event.
+- **Surface:** square corners, no shadow, border, radius, tint, badge, icon, overlay copy or animation.
+- **Mobile:** the pair remains side by side down to 375 px with a 10–12 px gap and independent 11 px
+  captions; the copy sits above it. The stage ledger remains prohibited.
+
+## Event-specific blueprint candidate contract — 2026-09-09
+
+The user approved this set on 2026-09-09. The three `*concept-v3.png` delivery assets are active in the
+event-format rows; the mockup folder remains their design/provenance record.
+
+- Every underlay is 1774 × 887 on warm ivory paper, with fine graphite/charcoal construction and only
+  restrained sage, dusty terracotta and antique-brass accents.
+- Private dinner keeps copy left and the complete portrait photograph right; its unique visual grammar is
+  ingredient/preparation convergence into seven courses and an intimate table.
+- Private event keeps copy left and the complete landscape photograph right; its unique grammar is small-
+  bite assembly, rectangular tray circulation, return and replenishment among standing guests.
+- Masterclass keeps the complete landscape photograph left and copy right; its unique grammar is technique
+  demonstration, two practice stations, feedback/correction and a long shared workbench.
+- Quiet apertures are borderless paper, not cards or frames. Generated sheets contain no readable text;
+  exact factual content remains live in any future implementation.
+- Square edges, no shadow, no radius, no gradient, no browser chrome and no UI-library styling.
+- At 821 px and above, each approved underlay remains behind its established copy/photo apertures.
+  At 820–561 px, private dinner uses a `1 / 1.1` field to accommodate its portrait photo; the two
+  landscape formats use `1 / .9` fields so their shorter media does not create an empty middle. At 560 px
+  and below, dinner/event use `1 / 1.18` and masterclass uses `1 / 1.08`, protecting wrapped Russian copy
+  while retaining the full 2:1 drawing directly beneath the live pair. No blueprint is hidden merely
+  because the viewport is narrow.

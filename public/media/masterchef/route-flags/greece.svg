@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 40" role="img" aria-label="Флаг Греции">
+  <rect width="60" height="40" fill="#FFFFFF"/>
+  <g fill="#0D5EAF">
+    <rect width="60" height="4.445"/>
+    <rect y="8.889" width="60" height="4.445"/>
+    <rect y="17.778" width="60" height="4.445"/>
+    <rect y="26.667" width="60" height="4.445"/>
+    <rect y="35.556" width="60" height="4.444"/>
+    <rect width="26.667" height="22.223"/>
+  </g>
+  <path fill="#FFFFFF" d="M11.111 0h4.445v22.223h-4.445zM0 8.889h26.667v4.445H0z"/>
+</svg>
