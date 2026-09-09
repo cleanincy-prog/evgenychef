@@ -87,6 +87,7 @@ const eventFormats = [
     alt: "Евгений Грыбенюк готовит блюдо на сковороде для частного ужина",
     drawingSrc: "/media/blueprint-backgrounds/private-dinner-event-concept-v3.png",
     compactDrawingSrc: "/media/blueprint-backgrounds/private-dinner-compact-mobile-v5.webp",
+    courseImageSrc: "/media/event-formats/private-dinner-seven-plates-v1.jpg",
     processBackground: true,
   },
   {
@@ -99,6 +100,7 @@ const eventFormats = [
     alt: "Евгений Грыбенюк готовит блины перед гостями на приватном мероприятии",
     drawingSrc: "/media/blueprint-backgrounds/private-event-circulation-concept-v3.png",
     compactDrawingSrc: "/media/blueprint-backgrounds/private-event-compact-mobile-v5.webp",
+    courseImageSrc: null,
     processBackground: true,
   },
   {
@@ -111,6 +113,7 @@ const eventFormats = [
     alt: "Евгений Грыбенюк показывает участникам мастер-класса профессиональные приёмы",
     drawingSrc: "/media/blueprint-backgrounds/masterclass-learning-concept-v3.png",
     compactDrawingSrc: "/media/blueprint-backgrounds/masterclass-compact-mobile-v5.webp",
+    courseImageSrc: null,
     processBackground: true,
   },
 ];
@@ -184,29 +187,87 @@ const sourceScenes = [
   },
 ] as const;
 
+function PersonalMenuPlate() {
+  return (
+    <figure className="menu-plate-composition" aria-labelledby="menu-plate-caption">
+      <div className="menu-plate-stage">
+        <img
+          className="menu-plate-photo"
+          src="/media/menu/personal-menu-duck-plate-cutout-v1.webp"
+          width="1800"
+          height="1665"
+          loading="lazy"
+          decoding="async"
+          alt="Белая тарелка с нарезанным мясом, гарниром, зеленью и несколькими соусами"
+        />
+        <svg
+          className="menu-plate-leaders"
+          viewBox="0 0 1000 760"
+          preserveAspectRatio="none"
+          aria-hidden="true"
+        >
+          <path d="M 184 112 H 272 L 512 324" />
+          <path d="M 816 166 H 746 L 608 194" />
+          <path d="M 194 626 H 286 L 392 488" />
+          <circle cx="512" cy="324" r="4" />
+          <circle cx="608" cy="194" r="4" />
+          <circle cx="392" cy="488" r="4" />
+        </svg>
+        <p className="menu-plate-note menu-plate-note-texture">
+          баланс текстур
+          <span>и температур</span>
+        </p>
+        <p className="menu-plate-note menu-plate-note-season">
+          локальные продукты
+          <span>· сезон</span>
+        </p>
+        <p className="menu-plate-note menu-plate-note-sauce">
+          соус связывает
+          <span>вкус и блюдо</span>
+        </p>
+      </div>
+      <figcaption id="menu-plate-caption">пример композиции блюда</figcaption>
+    </figure>
+  );
+}
+
 function EventFormats() {
   return (
     <div className="format-chapter">
       <ol className="format-list">
         {eventFormats.map((format, index) => (
           <li
-            className={`format-row format-row-${index + 1}${format.processBackground ? " format-row-process" : ""}`}
+            className={`format-row format-row-${index + 1}${format.processBackground ? " format-row-process" : ""}${format.courseImageSrc ? " format-row-menu" : ""}`}
             id={index === 0 ? "private-dinner" : undefined}
             key={format.name}
           >
             {format.processBackground ? (
               <div className="format-process-field">
-                <picture className="format-process-plan">
-                  <source media="(max-width: 940px)" srcSet={format.compactDrawingSrc} />
-                  <img
-                    src={format.drawingSrc ?? undefined}
-                    width="1774"
-                    height="887"
-                    loading="lazy"
-                    decoding="async"
-                    alt=""
-                  />
-                </picture>
+                {!format.courseImageSrc ? (
+                  <picture className="format-process-plan">
+                    <source media="(max-width: 940px)" srcSet={format.compactDrawingSrc} />
+                    <img
+                      src={format.drawingSrc ?? undefined}
+                      width="1774"
+                      height="887"
+                      loading="lazy"
+                      decoding="async"
+                      alt=""
+                    />
+                  </picture>
+                ) : null}
+                {format.courseImageSrc ? (
+                  <figure className="format-menu-spread" aria-hidden="true">
+                    <img
+                      src={format.courseImageSrc}
+                      width="1200"
+                      height="800"
+                      loading="lazy"
+                      decoding="async"
+                      alt=""
+                    />
+                  </figure>
+                ) : null}
                 <figure className="format-media">
                   <img
                     src={format.src}
@@ -570,25 +631,28 @@ export default function Home() {
 
         <section className="sources" id="products" aria-labelledby="sources-title">
           <header className="section-intro sources-intro">
-            <div className="sources-heading">
-              <p className="section-kicker">персональное меню</p>
-              <h2 id="sources-title">
-                Меню появляется
-                <br />
-                <em>после разговора.</em>
-              </h2>
+            <div className="sources-copy">
+              <div className="sources-heading">
+                <p className="section-kicker">персональное меню</p>
+                <h2 id="sources-title">
+                  Меню появляется
+                  <br />
+                  <em>после разговора.</em>
+                </h2>
+              </div>
+              <div className="sources-story">
+                <p className="sources-lede">
+                  Вы рассказываете, что любите и что важно учесть. Я выбираю продукты под этот вечер —
+                  и только потом собираю меню.
+                </p>
+                <ol className="source-sequence" aria-label="Как создаётся меню">
+                  <li>ваш вкус</li>
+                  <li>продукты</li>
+                  <li>меню вечера</li>
+                </ol>
+              </div>
             </div>
-            <div className="sources-story">
-              <p className="sources-lede">
-                Вы рассказываете, что любите и что важно учесть. Я выбираю продукты под этот вечер —
-                и только потом собираю меню.
-              </p>
-              <ol className="source-sequence" aria-label="Как создаётся меню">
-                <li>ваш вкус</li>
-                <li>продукты</li>
-                <li>меню вечера</li>
-              </ol>
-            </div>
+            <PersonalMenuPlate />
           </header>
 
           <div className="source-gallery" role="group" aria-label="Выбор продуктов для персонального меню">

@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Макет — рисунок по периметру</title>
+    <style>
+      @font-face {
+        font-family: "Cormorant Garamond";
+        src: url("../../../public/fonts/cormorant-garamond-v21-cyrillic-normal.woff2") format("woff2");
+      }
+      @font-face {
+        font-family: "Montserrat";
+        src: url("../../../public/fonts/montserrat-v31-cyrillic-normal.woff2") format("woff2");
+      }
+      * { box-sizing: border-box; }
+      html, body { margin: 0; background: #ebe7dc; color: #342f29; }
+      body { padding: 20px 0 38px; }
+      main { width: min(390px, calc(100vw - 32px)); margin: 0 auto; }
+      @media (min-width: 800px) {
+        body { zoom: .76; }
+      }
+      .note {
+        margin: 0 0 16px;
+        font: 500 10px/1.4 "Montserrat", sans-serif;
+        letter-spacing: .15em;
+        text-align: center;
+        text-transform: uppercase;
+        color: #8b7041;
+      }
+      .format {
+        position: relative;
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        overflow: hidden;
+        background: #f6f1e7;
+      }
+      .format + .format {
+        margin-top: 26px;
+      }
+      .format + .format::before {
+        position: absolute;
+        z-index: 4;
+        top: -14px;
+        left: 0;
+        width: 100%;
+        border-top: 1px solid rgba(67, 58, 45, .24);
+        content: "";
+      }
+      .drawing {
+        position: absolute;
+        z-index: 0;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        opacity: .86;
+      }
+      .copy, .photo { position: absolute; z-index: 2; }
+      .copy span {
+        display: block;
+        font: 500 8px/1 "Montserrat", sans-serif;
+        letter-spacing: .16em;
+        color: #8b7041;
+      }
+      .copy h2 {
+        margin: 7px 0 0;
+        font: 400 20px/1.02 "Cormorant Garamond", serif;
+        letter-spacing: -.015em;
+      }
+      .copy p {
+        margin: 8px 0 0;
+        font: 400 11.5px/1.45 "Montserrat", sans-serif;
+        letter-spacing: -.015em;
+        color: #625d56;
+      }
+      .photo {
+        display: block;
+        object-fit: cover;
+      }
+      .dinner .copy { top: 20%; left: 12%; width: 34%; }
+      .dinner .photo { top: 20%; left: 61%; width: 31%; height: 36%; }
+      .event .copy { top: 23%; left: 10.5%; width: 35.5%; }
+      .event .photo { top: 24%; left: 58%; width: 35%; height: 24%; }
+      .masterclass .photo { top: 22%; left: 8%; width: 41%; height: 29%; }
+      .masterclass .copy { top: 22%; left: 60%; width: 34%; }
+      .masterclass .copy p { font-size: 11px; line-height: 1.42; }
+    </style>
+  </head>
+  <body>
+    <main>
+      <p class="note">Макет для обсуждения · сайт не изменён</p>
+
+      <section class="format dinner">
+        <img class="drawing" src="01-private-dinner-perimeter-v6.png" alt="" />
+        <div class="copy">
+          <span>01</span>
+          <h2>Частный ужин</h2>
+          <p>Я приготовлю любимые блюда для близких или создам гастрономический маршрут в семь подач.</p>
+        </div>
+        <img class="photo" src="../../../public/media/event-formats/private-dinner.jpg" alt="" />
+      </section>
+
+      <section class="format event">
+        <img class="drawing" src="02-private-event-perimeter-v6.png" alt="" />
+        <div class="copy">
+          <span>02</span>
+          <h2>Приватные мероприятия</h2>
+          <p>Я соберу свободный формат с небольшими закусками и блюдами, которые удобно есть за разговором.</p>
+        </div>
+        <img class="photo" src="../../../public/media/event-formats/private-event-outdoor-crepes.png" alt="" />
+      </section>
+
+      <section class="format masterclass">
+        <img class="drawing" src="03-masterclass-perimeter-v6.png" alt="" />
+        <img class="photo" src="../../../public/media/event-formats/masterclass.jpg" alt="" />
+        <div class="copy">
+          <span>03</span>
+          <h2>Мастер-классы</h2>
+          <p>Я покажу гостям профессиональные приёмы, мы вместе приготовим блюда, а затем сядем за общий стол.</p>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

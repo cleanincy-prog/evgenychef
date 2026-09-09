@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Макет v4 — смысловые маршруты</title>
+    <style>
+      @font-face {
+        font-family: "Cormorant Garamond";
+        src: url("../../../public/fonts/cormorant-garamond-v21-cyrillic-normal.woff2") format("woff2");
+      }
+      @font-face {
+        font-family: "Montserrat";
+        src: url("../../../public/fonts/montserrat-v31-cyrillic-normal.woff2") format("woff2");
+      }
+      * { box-sizing: border-box; }
+      html, body { margin: 0; background: #e9e4da; color: #282622; }
+      body { padding: 22px 0 40px; }
+      main { width: min(390px, calc(100vw - 32px)); margin: 0 auto; }
+      @media (min-width: 800px) { body { zoom: .73; } }
+
+      .format {
+        position: relative;
+        width: 100%;
+        height: 480px;
+        overflow: hidden;
+        background: #f4efe5;
+      }
+      .format + .format { margin-top: 28px; }
+      .format + .format::before {
+        position: absolute;
+        z-index: 6;
+        top: -15px;
+        left: 0;
+        width: 100%;
+        border-top: 1px solid rgba(40, 38, 34, .28);
+        content: "";
+      }
+      .tech {
+        position: absolute;
+        z-index: 1;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+      }
+      .tech .rule,
+      .tech .route,
+      .tech .shape,
+      .tech .ghost {
+        fill: none;
+        vector-effect: non-scaling-stroke;
+      }
+      .tech .rule { stroke: #34312c; stroke-width: 1.15; }
+      .tech .route { stroke: #a07b37; stroke-width: 1.35; }
+      .tech .shape { stroke: #565149; stroke-width: 1; }
+      .tech .ghost { stroke: #9a9488; stroke-width: .75; stroke-dasharray: 2 4; }
+      .tech .dot { fill: #a07b37; }
+      .tech .paper { fill: #f4efe5; }
+      .tech text {
+        fill: #4c4841;
+        font-family: "Montserrat", sans-serif;
+      }
+      .tech .label { font-size: 8px; font-weight: 600; letter-spacing: 1.5px; }
+      .tech .micro { font-size: 6.5px; font-weight: 500; letter-spacing: .8px; }
+      .tech .roman { fill: #80652f; font-family: "Cormorant Garamond", serif; font-size: 12px; }
+
+      .copy, .photo { position: absolute; z-index: 3; }
+      .copy .eyebrow {
+        display: block;
+        margin-bottom: 8px;
+        color: #80652f;
+        font: 600 8px/1 "Montserrat", sans-serif;
+        letter-spacing: .16em;
+        text-transform: uppercase;
+      }
+      .copy h2 {
+        margin: 0;
+        font: 400 26px/.94 "Cormorant Garamond", serif;
+        letter-spacing: -.025em;
+      }
+      .copy p {
+        margin: 10px 0 0;
+        color: #59554e;
+        font: 400 12px/1.45 "Montserrat", sans-serif;
+        letter-spacing: -.012em;
+      }
+      .photo {
+        display: block;
+        object-fit: cover;
+        outline: 1px solid rgba(52, 49, 44, .28);
+        outline-offset: -1px;
+      }
+      .dinner .copy { top: 91px; left: 24px; width: 164px; }
+      .dinner .photo {
+        top: 78px;
+        left: 221px;
+        width: 150px;
+        height: 250px;
+        object-position: 50% 48%;
+      }
+      .event .photo {
+        top: 62px;
+        left: 90px;
+        width: 280px;
+        height: 184px;
+        object-position: 50% 52%;
+      }
+      .event .copy { top: 270px; left: 24px; width: 184px; }
+      .event .copy h2 { font-size: 25px; }
+      .event .copy p { font-size: 11.5px; line-height: 1.42; }
+
+      .masterclass .copy { top: 68px; left: 24px; width: 342px; }
+      .masterclass .copy h2 { font-size: 27px; }
+      .masterclass .copy p { width: 330px; margin-top: 8px; }
+      .masterclass .photo {
+        top: 190px;
+        left: 22px;
+        width: 346px;
+        height: 205px;
+        object-position: 58% 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section class="format dinner">
+        <svg class="tech" viewBox="0 0 390 480" aria-hidden="true">
+          <defs>
+            <marker id="arrow-dinner" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+              <path d="M0 0L8 4L0 8Z" fill="#a07b37" />
+            </marker>
+          </defs>
+          <path class="rule" d="M16 58V432M374 58V432M16 58H124M266 58H374M16 432H374" />
+          <text class="label" x="20" y="27">ЛЮБИМЫЕ БЛЮДА</text>
+          <text class="micro" x="188" y="27">ИЛИ</text>
+          <text class="label" x="236" y="27">МАРШРУТ ШЕФА</text>
+          <path class="route" d="M20 44H180C194 44 204 54 204 68" marker-end="url(#arrow-dinner)" />
+          <path class="route" d="M370 44H228C214 44 204 54 204 68" marker-end="url(#arrow-dinner)" />
+          <path class="route" d="M204 78V326" marker-end="url(#arrow-dinner)" />
+          <text class="label" transform="translate(198 256) rotate(-90)">Я ПРИГОТОВЛЮ</text>
+
+          <text class="label" x="24" y="356">МАРШРУТ В СЕМЬ ПОДАЧ</text>
+          <path class="route" d="M24 374H318" marker-end="url(#arrow-dinner)" />
+          <g>
+            <path class="shape" d="M39 366V382M82 366V382M125 366V382M168 366V382M211 366V382M254 366V382M297 366V382" />
+            <text class="roman" x="36" y="402">I</text><text class="roman" x="77" y="402">II</text>
+            <text class="roman" x="118" y="402">III</text><text class="roman" x="161" y="402">IV</text>
+            <text class="roman" x="206" y="402">V</text><text class="roman" x="247" y="402">VI</text>
+            <text class="roman" x="288" y="402">VII</text>
+          </g>
+          <path class="route" d="M319 374H360V414H252" marker-end="url(#arrow-dinner)" />
+          <text class="label" x="107" y="418">ДЛЯ БЛИЗКИХ</text>
+        </svg>
+        <div class="copy">
+          <span class="eyebrow">Семь подач</span>
+          <h2>Частный ужин</h2>
+          <p>Я приготовлю любимые блюда для близких или создам гастрономический маршрут в семь подач.</p>
+        </div>
+        <img class="photo" src="../../../public/media/event-formats/private-dinner.jpg" alt="" />
+      </section>
+
+      <section class="format event">
+        <svg class="tech" viewBox="0 0 390 480" aria-hidden="true">
+          <defs>
+            <marker id="arrow-event" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+              <path d="M0 0L8 4L0 8Z" fill="#a07b37" />
+            </marker>
+          </defs>
+          <path class="rule" d="M16 54V430M374 54V430M16 54H374M16 430H374" />
+          <text class="label" x="20" y="29">Я СОБЕРУ СВОБОДНЫЙ ФОРМАТ</text>
+          <path class="route" d="M20 43H348C360 43 374 56 374 70" marker-end="url(#arrow-event)" />
+          <path class="ghost" d="M73 62V246M218 261V430" />
+
+          <path class="route" d="M300 246V275M300 275H244V306M300 275H356V306" />
+          <text class="label" x="226" y="323">НЕБОЛЬШИЕ</text>
+          <text class="label" x="244" y="335">ЗАКУСКИ</text>
+          <text class="label" x="332" y="329">БЛЮДА</text>
+          <path class="route" d="M244 343V362H300M356 337V362H300V377" marker-end="url(#arrow-event)" />
+          <text class="label" x="259" y="394">УДОБНО ЕСТЬ</text>
+          <path class="route" d="M300 401V416H244" marker-end="url(#arrow-event)" />
+          <text class="label" x="113" y="421">ЗА РАЗГОВОРОМ</text>
+        </svg>
+        <img class="photo" src="../../../public/media/event-formats/private-event-outdoor-crepes.png" alt="" />
+        <div class="copy">
+          <span class="eyebrow">Свободный формат</span>
+          <h2>Приватные<br />мероприятия</h2>
+          <p>Я соберу свободный формат с небольшими закусками и блюдами, которые удобно есть за разговором.</p>
+        </div>
+      </section>
+
+      <section class="format masterclass">
+        <svg class="tech" viewBox="0 0 390 480" aria-hidden="true">
+          <defs>
+            <marker id="arrow-master" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="5" markerHeight="5" orient="auto-start-reverse">
+              <path d="M0 0L8 4L0 8Z" fill="#a07b37" />
+            </marker>
+          </defs>
+          <path class="rule" d="M16 54V430M374 54V430M16 54H374M16 430H374" />
+          <text class="label" x="20" y="29">Я ПОКАЖУ</text>
+          <text class="micro" x="286" y="23" text-anchor="middle">ПРОФЕССИОНАЛЬНЫЕ</text>
+          <text class="label" x="286" y="34" text-anchor="middle">ПРИЁМЫ</text>
+          <path class="route" d="M82 43H204" marker-end="url(#arrow-master)" />
+          <path class="ghost" d="M22 174H368M22 412H368" />
+          <text class="label" x="24" y="172">МЫ ГОТОВИМ ВМЕСТЕ</text>
+          <path class="route" d="M194 174H365" marker-end="url(#arrow-master)" />
+          <path class="route" d="M374 198V412H316" marker-end="url(#arrow-master)" />
+          <text class="label" x="270" y="428">БЛЮДА</text>
+          <path class="route" d="M262 424H160" marker-end="url(#arrow-master)" />
+          <text class="label" x="24" y="428">ЗАТЕМ — ОБЩИЙ СТОЛ</text>
+        </svg>
+        <div class="copy">
+          <span class="eyebrow">Готовим вместе</span>
+          <h2>Мастер-классы</h2>
+          <p>Я покажу гостям профессиональные приёмы, мы вместе приготовим блюда, а затем сядем за общий стол.</p>
+        </div>
+        <img class="photo" src="../../../public/media/event-formats/masterclass.jpg" alt="" />
+      </section>
+    </main>
+  </body>
+</html>

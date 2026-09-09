@@ -5986,3 +5986,139 @@ gradient, glass, blur, glow, icon, stock/generated media, placeholder copy, deco
 library-default appearance was added. The phone composition is independently authored. Remaining risk:
 commercial publication rights for third-party images already present in the 94-source archive remain the
 project's existing unresolved media-rights consideration. Publication is handled separately from the interface implementation.
+
+## Private-dinner realistic seven-plate field — pre-code audit and plan — 2026-09-09
+
+The user rejects the abstract course circles, schematic lines and visible course labels, then directly asks
+for more realistic food imagery in two rows, requests that only the images remain, and authorises the change
+inside the `Частный ужин` block. The current route, event data, process-field DOM, wide and compact underlays,
+documentary chef photo, live copy, final responsive cascade, tests and required design records were audited
+before interface code was changed.
+
+### Audit findings
+
+1. The active private-dinner underlays resolve seven courses through a brass route, construction marks and
+   small illustrated plates. After multiple compact adaptations, that visual now carries exactly the
+   diagrammatic vocabulary the user has rejected.
+2. Replacing only labels would not solve the problem: the circles and route would still read as an abstract
+   schema. The user's requested content is the food itself, not the stages or a legend.
+3. The current live `01`, title, paragraph and real cooking photograph remain factual and approved. The
+   private-event and masterclass concepts are out of scope and must remain unchanged.
+4. The generated overhead source contains exactly seven complete, distinct courses on an ivory surface in
+   the requested two-row `4 + 3` arrangement, with no text, people, props, arrows or watermark. It is
+   representative imagery and must not be described as a photographed client menu.
+5. The existing generic first-format `2 / 1` and square fields do not reserve enough depth for both the live
+   pair and an uncropped `3 / 2` two-row image. The first row needs its own content-derived aspect ratios and
+   placements; the other rows retain their current cascade.
+
+### Implementation plan recorded before interface edits
+
+1. Save the selected generated plate source non-destructively as a versioned project asset under
+   `public/media/event-formats/`; preserve the generated original outside the checkout.
+2. Add one optional representative menu image only to the first event record and render it as a decorative
+   figure inside the existing `format-process-field`.
+3. For the first row only, suppress the rejected blueprint picture, preserve the live copy and real chef
+   photograph, and place the complete uncropped seven-plate composition in the lower paper field.
+4. Author distinct wide, tablet and phone ratios/coordinates so the plate field remains `4 + 3`, copy and
+   photograph never collide, and every ceramic rim stays visible. Do not add visible captions or labels.
+5. Update focused source regression assertions while retaining all contracts for private event,
+   masterclass, Hero, story, sourcing and contact.
+6. Run `git diff --check`, ESLint, production build and tests. Then verify 1440, 1280, 1024, 768, 430, 390
+   and 375 px for full image loading, two-row topology, copy/photo/plate separation, heading wraps, section
+   height and horizontal overflow.
+7. Complete the anti-template audit. Publish through the existing Site only after the exact source passes
+   validation and without modifying the separately opened private-event concept task.
+
+Templated/unsuccessful elements found: symbolic course circles, meaningless linework, numeric/type labels
+and the repeated blueprint-underlay treatment in the first event row. Components retained: semantic event
+list, first-format live content/photo, all other event rows, global typography/palette and square-edge media.
+Components reworked: first-format supporting media and first-format responsive geometry. New component
+required: one semantic decorative figure only. Decisions without a direct visual reference are limited to
+the exact field ratios and percentage insets needed to fit the approved source; no UI library is introduced.
+
+### Implementation result and final anti-template audit
+
+The selected 1536 × 1024 master is preserved in
+`design/generated/private-dinner-seven-plates-v1/master.png`, with its production prompt and provenance
+record beside it. A 1200 × 800 delivery derivative is active at
+`public/media/event-formats/private-dinner-seven-plates-v1.jpg`. `EventFormats` now selects that single
+decorative image only for `Частный ужин`; it does not mount the rejected wide or compact drawing in the
+first row. The other two formats retain their existing event-specific pictures, drawings and geometry.
+
+The first field resolves at `1.8 / 1` above 1100 px, `1.5 / 1` from 821–1100 px, `1 / 1` from 561–820 px
+and `.92 / 1` through 560 px. The full 3:2 image remains uncropped at 56%, 52%, 76% and 88% of the local
+field width respectively. Browser checks at 1440, 1280, 1024, 768, 430, 390 and 375 px found both images
+loaded at their natural dimensions, zero copy/photo/plate intersections, every element inside its field and
+zero document-level horizontal overflow. Boundary probes at 941/940, 821/820, 561/560, 431/430, 381/380
+and 360 px found the same collision-free result. Representative screenshots were inspected at desktop,
+tablet and phone sizes; all seven plate rims stay visible and the row remains four above, three below.
+
+Files created: the generated master, prompt, provenance record and public delivery derivative. Files
+changed: `app/page.tsx`, `app/globals.css`, `tests/rendered-html.test.mjs`, `docs/DESIGN_REFERENCE_MAP.md`,
+`docs/DESIGN_SYSTEM.md`, this audit and the two superseded blueprint provenance records. Templated or
+unsuccessful elements found: the first service's abstract circles, route line, labels and repeated blueprint
+underlay treatment. They were replaced with one content-specific photographic menu field; no card, grid of
+UI panels, radius, shadow, gradient, glass, glow, icon, animation or library styling was introduced.
+
+References used: the user's explicit final direction, the current live `01` copy and documentary chef
+photograph, the project's warm paper system and the approved `Transparent route plates` photo grammar.
+Only the camera/light/porcelain/texture grammar transfers; its five named route dishes do not become menu
+claims. Decisions without a supplied reference remain the verified percentage insets and four responsive
+field ratios. React, semantic HTML and CSS positioning are technical primitives only. Remaining limitation:
+the seven-course photograph is representative generated imagery rather than documentary evidence of a
+specific delivered menu, so it remains decorative with an empty alternative text.
+
+## Approved real plate for the personal-menu introduction — pre-code audit and plan — 2026-09-09
+
+The user has selected the supplied real overhead restaurant photograph and explicitly asks to replace the
+previous proposed personal-menu image, remove only the marble outside the plate, add explanatory leaders,
+and integrate the result into the existing personal-menu block. The current `sources` route, its copy,
+sequence, three-photo sourcing strip, all active responsive rules, the supplied first menu-layout reference,
+the newly approved plate photograph, the two rejected untracked image experiments and the current design
+records were audited before interface edits.
+
+### Audit findings
+
+1. The active personal-menu introduction currently contains only live heading, paragraph and the compact
+   `ваш вкус → продукты → меню вечера` sequence; it has no active plate image. The earlier generated
+   `personal-menu-photo-v1.png` and `personal-menu-photo-celeriac-v2.png` are untracked experiments and are
+   not referenced by the page.
+2. The user-approved photograph already contains the required real plated hierarchy: sliced meat, garnish,
+   several sauces and microgreens on one complete white plate. Its visible food texture and small plating
+   irregularities must remain photographic evidence rather than being regenerated or beautified.
+3. The marble outside the rim competes with the project's warm paper. Only the outer background needs
+   removal; the plate, food, colour, reflections and all shadows that fall inside the rim are invariants.
+4. The first supplied menu reference establishes the compositional principle: live copy on the left, one
+   isolated plate on the right and fine leaders that explain culinary relationships. It does not authorise
+   copying its dish, handwriting, dimensions or scientific-looking diameter marks.
+5. Lines and labels baked into a raster would blur and collide on narrow screens. They need to remain live
+   HTML plus deterministic SVG geometry so desktop, tablet and phone can be art-directed independently.
+
+### Implementation plan recorded before interface edits
+
+1. Derive a versioned transparent delivery asset from the approved real photograph. Preserve the exact
+   source pixels inside the plate and change only outside alpha; do not use the visibly altered generative
+   cutout as the production image.
+2. Keep the exact personal-menu heading, paragraph, sequence and sourcing gallery. Recompose only the
+   introduction as a copy rail facing one annotated plate figure.
+3. Add three concise live explanations grounded in the supplied menu reference: `баланс текстур и
+   температур`, `соус связывает вкус и блюдо`, and `локальные продукты · сезон`. Point each leader to the
+   relevant visible part of the approved plate without naming an unverified dish or supplier.
+4. Use one non-interactive SVG leader layer with round line ends and endpoint dots. Keep labels as semantic
+   HTML, the photograph as an informative image with a literal alt, and a short source/provenance figcaption.
+5. At wide widths, place copy in four columns and the annotated plate in eight. Through tablet, let the
+   plate span beneath the copy; on phones use a taller purpose-built figure with labels around—not over—the
+   important food, while the existing sourcing proof strip keeps its current two-row mobile composition.
+6. Update the focused source tests and the three design records; run `git diff --check`, lint, build and the
+   complete test suite. Verify 1440, 1280, 1024, 768, 430, 390 and 375 px for crop fidelity, readable labels,
+   leader targets, image load, heading wraps, section flow and horizontal overflow, then complete the
+   anti-template audit and publish through the existing Site.
+
+Templated or unsuccessful elements found: the two rejected generated dish experiments, whose polished
+surfaces read as synthetic and do not satisfy the user's demand for a real photograph. Components retained:
+`sources`, all live copy and sequence, the three-photo sourcing gallery, provenance line, global palette,
+type and square-edge system. Components reworked: `sources-intro` grid and its responsive placement. New
+component required: one content-specific annotated plate figure; no UI library is introduced. Decisions
+without a separate reference are limited to exact leader coordinates and breakpoint-specific figure depth,
+both constrained by the approved photograph and verified at the mandatory widths. Publication-rights status
+for the third-party restaurant photograph is not independently confirmed and remains an explicit risk.

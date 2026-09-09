@@ -1041,3 +1041,37 @@ supersedes the active split Hero composition. It does not alter any later page s
 | Archive frame | Current complete 94-source Hero dataset; approved comparison source | Accumulation remains visible and gains an authored irregular rhythm | No source deletion, duplicate filler, external image or reduced proof strip | Render every source once; use 10 × 12 desktop, 12 × 10 compact and 8 × 15 phone partitions with exact wide spans |
 | Central spread | Approved board; exact current title and portrait | Bind identity copy and chef portrait into a single editorial object | No floating card, radius, shadow, glass, overlay CTA or invented copy | Solid paper copy field at left and real cover-cropped portrait at right, divided by one 2 px seam |
 | Phone composition | Selected board plus project's deliberate-mobile rule | Preserve the four-sided archive frame while giving text and portrait legible independent depth | No scaled-down side-by-side desktop spread, hidden portrait or long stack of collage thumbnails | Stack the copy above the portrait inside one inset central unit; keep archive rails visible on every side |
+
+## Private-dinner photographic course field — 2026-09-09
+
+The user's sequence `Фото сделай более реалистичные и сделай их в 2 ряда` → `Убери подписи, оставь картинки`
+→ `внеси изменения в блок` supersedes the course-line drawing only inside `Частный ужин`. The exact live
+service copy and documentary chef photograph remain approved.
+
+| Project element | Reference | Principle used | What is not copied | Project implementation |
+|---|---|---|---|---|
+| Seven-course visual | User's direct request; the seven-course promise already present in live copy | Make seven distinct restaurant courses immediately recognisable through food photography | No abstract circles, technical route, arrows, numbers, stage names, dish names or decorative micro-labels | Add one text-free overhead photographic field containing exactly seven complete plates in two rows: four above and three centred below |
+| Image character | User's rejection of the earlier AI-looking diagrams; approved `Transparent route plates` photo grammar in `docs/DESIGN_SYSTEM.md`; warm-paper editorial system | Reuse only the approved near-overhead camera, normal-lens perspective, consistent porcelain scale, soft upper-left daylight and natural imperfections so the plates feel photographic rather than diagrammatic | No glossy CGI finish, impossible garnish, duplicate plate, prop styling, hands, people, logo, watermark or reuse of the five named route dishes as menu claims | Use the generated `private-dinner-seven-plates-v1.jpg` only as a representative menu visual, never as documentary evidence of a delivered client menu |
+| Existing live pair | Current `Частный ужин` copy and `/media/event-formats/private-dinner.jpg` | Keep the chef, offer and seven-course promise as the factual layer; let the plate field support them without repeating words | No rewritten promise, course captions, second CTA, card chrome or replacement chef image | Preserve the live number/title/paragraph and real chef photograph; place the plate field in the remaining lower paper area |
+| Responsive composition | User's two-row requirement; project's deliberate-mobile rule | Keep the 4-over-3 relationship intact rather than stacking seven cards | No horizontal scroller, one-column list, clipped rims or desktop layout mechanically reduced to phone | Use a larger authored first-format field and fit the complete 3:2 plate image below the live pair at every required width |
+
+No supplied reference fixes the exact percentage insets or first-format aspect ratios. Those remain neutral
+fitting decisions constrained by the source image, the existing live apertures and collision-free checks.
+
+## Approved real personal-menu plate — 2026-09-09
+
+The user's supplied first menu-layout screenshot establishes the explanatory composition, while the user's
+later supplied plate photograph is the authoritative food image and supersedes the rejected generated dish
+experiments. The restaurant source page used to recover the same photograph at delivery resolution is
+`https://www.deuxave.com/menu/`; publication rights are not established by this reference map.
+
+| Project element | Reference | Principle used | What is not copied | Project implementation |
+|---|---|---|---|---|
+| Personal-menu image | User-approved `Снимок экрана 2026-09-09 в 22.02.33.png`; same high-resolution photograph from Deuxave's menu page | Use a genuinely photographed complete plate with visible meat, garnish and sauces as the focal object | No generated replacement, AI retouching, added food, changed colour, marble field or claim that Evgen cooked the pictured dish | Preserve the real source inside the rim, remove only the outer marble through alpha and deliver a versioned transparent web asset |
+| Explanatory composition | User's first supplied menu-layout screenshot; exact current personal-menu copy | Let one isolated plate face the copy while three fine leaders make the culinary logic legible | No copied dish, handwriting, diameter values, measurement units, construction circles or rasterised explanatory text | Keep all explanations as live HTML and use one responsive SVG leader layer around the approved photograph |
+| Culinary explanations | Exact three relationships visible in the supplied reference: texture/temperature balance, sauce joining flavour and dish, local/seasonal products | Explain the type of decisions made when a personal menu is composed without asserting a recipe or supplier | No ingredient list, cut name, provenance claim, metric, nutrition data or invented menu promise | Use `баланс текстур и температур`, `соус связывает вкус и блюдо`, and `локальные продукты · сезон` as concise callouts |
+| Existing sourcing proof | Active personal-menu reset and current three-photo strip | Keep product choice as the documentary follow-on after the example plate | No replacement of meat/fish/produce scenes, new card row or second process diagram | Retain the unequal desktop proof strip and deliberate two-row phone composition unchanged beneath the annotated introduction |
+| Responsive integration | Project's deliberate-mobile rule; approved photo's near-square plate | Preserve plate scale and clear food while moving labels into available perimeter space | No mechanically shrunken desktop figure, label overlap, baked text or horizontal scroll | Wide screens use copy-left/plate-right; tablet and phone place a purpose-built annotated figure after the copy with breakpoint-specific geometry |
+
+The exact leader coordinates and responsive figure heights have no independent visual reference. They are
+neutral fitting decisions tied to visible food targets and must be verified at all mandatory widths.

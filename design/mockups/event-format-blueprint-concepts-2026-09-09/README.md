@@ -1,7 +1,10 @@
 # Event-format blueprint concepts — 2026-09-09
 
 Three approved event-specific decision aids. They keep the current 1774 × 887 underlay size and use the
-real project copy and photographs in separate review composites. All three are active on the page.
+real project copy and photographs in separate review composites. As of 2026-09-09, the private-event and
+masterclass concepts remain active. The private-dinner concept is retained as provenance but is superseded
+in format `01` by `design/generated/private-dinner-seven-plates-v1/` after the user requested realistic
+food imagery in two rows with no labels.
 
 ## Scoped audit and plan
 
@@ -17,13 +20,15 @@ real project copy and photographs in separate review composites. All three are a
 
 ## Concept distinction
 
-1. **Private dinner:** ingredients and mise en place converge into seven courses and an intimate table.
+1. **Private dinner (superseded in the live block):** ingredients and mise en place converge into seven
+   courses and an intimate table.
 2. **Private event:** live griddle production branches into bite assembly, tray circulation and refill.
 3. **Masterclass:** demonstration branches into two practice stations, a correction loop and a shared
    workbench with three outcomes.
 
 No card system, UI kit or generic flowchart is used. The user approved all three directions on
-2026-09-09; their responsive implementation keeps the copy/photo pair readable above a complete drawing.
+2026-09-09, then explicitly replaced the private-dinner drawing later that day. The remaining two active
+concepts keep the copy/photo pair readable above a complete drawing.
 
 ## Verification result
 
