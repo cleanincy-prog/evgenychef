@@ -1763,3 +1763,29 @@ field, masterclass process field and all content outside event row 02 remain unc
 - Apart from the exact shared row-02 colour grade above, no gradient, shadow, radius, glass, glow, icon,
   badge, animation, UI-library theme or new business copy is introduced. The adjacent event rows preserve
   their separately approved visual grammars.
+## Private-dinner mobile editorial-sheet amendment — 2026-09-10
+
+This amendment supersedes only the phone rules in `Private-dinner seven-plate amendment`.
+
+- Through 560 px, `Частный ужин` is one tall, single-surface editorial sheet with a thin outer `--rule`
+  border. It is not the former `.92 / 1` near-square process field and not a reusable card.
+- The decorative `01` is absent. A compact uppercase utility row reads `ЧАСТНЫЙ УЖИН` at left and
+  `СЕМЬ ПОДАЧ` at right, followed by one restrained gold rule.
+- The upper composition keeps live title and exact paragraph at left and the complete documentary portrait
+  at right. The portrait is approximately half the usable width and may scale but must not be cropped,
+  stretched or reduced to a thumbnail.
+- A narrow centre seam uses a CSS hairline, two open endpoint dots and the vertical live label
+  `ГОТОВИТ ШЕФ`. No SVG or meaningless construction line is permitted.
+- One horizontal rule separates the upper pair from the menu sequence.
+- The lower composition contains exactly seven course positions: four equal items in the first row and
+  three equal items centred in the second. Every ceramic rim remains visible.
+- Course labels are live HTML and use exactly: `Стартер`, `Холодная закуска`, `Горячая закуска`,
+  `Рыбный курс`, `Освежающая пауза`, `Основное блюдо`, `Десерт`. They identify course roles only and
+  must not be expanded into unverified dish claims.
+- The representative course raster remains non-documentary and decorative; the seven labels form semantic
+  ordered lists. The chef photograph retains its literal alternative text.
+- Use the existing warm paper, ink, muted and gold tokens and current Cormorant/Montserrat roles. Labels
+  remain at least 11 px. No radius, shadow, gradient, glass, texture, icon, animation or UI-library theme.
+- The exact phone aspect ratio, copy/photo share and insets are reference-bounded fitting decisions. They
+  must preserve the full composition at 430, 390 and 375 px without page overflow.
+- Above 560 px the existing private-dinner geometry remains until a separate wider reference supersedes it.

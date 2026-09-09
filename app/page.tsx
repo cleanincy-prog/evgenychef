@@ -121,6 +121,16 @@ const eventFormats = [
   },
 ];
 
+const privateDinnerCourses = [
+  "Стартер",
+  "Холодная закуска",
+  "Горячая закуска",
+  "Рыбный курс",
+  "Освежающая пауза",
+  "Основное блюдо",
+  "Десерт",
+];
+
 const chefJourneyStops = [
   {
     id: "spain",
@@ -272,16 +282,65 @@ function EventFormats() {
                   </picture>
                 ) : null}
                 {format.courseImageSrc ? (
-                  <figure className="format-menu-spread" aria-hidden="true">
-                    <img
-                      src={format.courseImageSrc}
-                      width="1200"
-                      height="800"
-                      loading="lazy"
-                      decoding="async"
-                      alt=""
-                    />
-                  </figure>
+                  <>
+                    <div className="format-dinner-meta" aria-hidden="true">
+                      <span>Частный ужин</span>
+                      <span>Семь подач</span>
+                    </div>
+                    <div className="format-dinner-axis" aria-hidden="true">
+                      <span>— Готовит шеф</span>
+                    </div>
+                    <figure className="format-menu-spread">
+                      <img
+                        className="format-menu-overview"
+                        src={format.courseImageSrc}
+                        width="1200"
+                        height="800"
+                        loading="lazy"
+                        decoding="async"
+                        alt=""
+                      />
+                      <div className="format-menu-mobile">
+                        <div className="format-course-group format-course-group-four">
+                          <div className="format-course-strip" aria-hidden="true">
+                            <img
+                              src={format.courseImageSrc}
+                              width="1200"
+                              height="800"
+                              loading="lazy"
+                              decoding="async"
+                              alt=""
+                            />
+                          </div>
+                          <ol className="format-course-labels">
+                            {privateDinnerCourses.slice(0, 4).map((course) => (
+                              <li key={course}>{course}</li>
+                            ))}
+                          </ol>
+                        </div>
+                        <div className="format-course-group format-course-group-three">
+                          <div className="format-course-strip" aria-hidden="true">
+                            <img
+                              src={format.courseImageSrc}
+                              width="1200"
+                              height="800"
+                              loading="lazy"
+                              decoding="async"
+                              alt=""
+                            />
+                          </div>
+                          <ol className="format-course-labels" start={5}>
+                            {privateDinnerCourses.slice(4).map((course) => (
+                              <li key={course}>{course}</li>
+                            ))}
+                          </ol>
+                        </div>
+                      </div>
+                      <figcaption className="format-menu-caption">
+                        Семь подач: {privateDinnerCourses.join(", ")}.
+                      </figcaption>
+                    </figure>
+                  </>
                 ) : null}
                 {format.canapeImageSrc ? (
                   <figure className="format-event-canape-spread" aria-hidden="true">
@@ -307,7 +366,15 @@ function EventFormats() {
                 </figure>
                 <div className="format-copy">
                   <span aria-hidden="true">0{index + 1}</span>
-                  <h3>{format.name}</h3>
+                  <h3>
+                    {format.courseImageSrc ? (
+                      <>
+                        Частный <br className="format-dinner-title-break" aria-hidden="true" /> ужин
+                      </>
+                    ) : (
+                      format.name
+                    )}
+                  </h3>
                   <p>{format.description}</p>
                 </div>
               </div>

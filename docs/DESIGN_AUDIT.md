@@ -6622,3 +6622,73 @@ grade values and crop positions are the only neutral fitting decisions.
 - **Remaining risk:** the canapé photograph is an original representative visualization, not documentary
   evidence of a delivered menu; it remains decorative with empty alternative text. The two unrelated
   pre-existing untracked personal-menu experiments were not edited or referenced.
+## Private-dinner mobile reference rebuild — pre-code audit and plan — 2026-09-10
+
+The user identifies Photo 1 as the rejected current mobile state and Photo 2 as the authoritative positive
+reference for `Частный ужин`. This correction applies to the phone composition through 560 px; the other
+two event formats and the wider private-dinner layouts remain unchanged unless neutral boundary fitting is
+needed.
+
+Audit findings:
+
+1. The current phone field reads as a reduced technical poster: `01`, small title/copy, thumbnail portrait,
+   an unexplained centre line and one unlabelled course montage compete without hierarchy.
+2. The positive reference is one tall editorial sheet. A utility header, dominant copy/photo pair, meaningful
+   labelled divider, separator and two labelled course rows share one outer rectangle and consistent insets.
+3. The chef photograph must remain the complete approved documentary image, occupy approximately half of
+   the upper composition and remain recognisable rather than becoming a thumbnail.
+4. The approved seven-course photograph and `4 + 3` topology remain, but the new reference explicitly
+   reinstates live course-type labels. These labels describe sequence roles, not factual dish names.
+5. No new media or visual language is required. The change is semantic HTML and responsive CSS inside the
+   first event only.
+
+Implementation plan:
+
+1. Remove the phone `01`; add the reference-led utility row `ЧАСТНЫЙ УЖИН` / `СЕМЬ ПОДАЧ` and one fine rule.
+2. Recompose the upper field as large title/paragraph left, CSS divider with endpoint dots and vertical
+   `ГОТОВИТ ШЕФ`, and the uncropped portrait right.
+3. Add one horizontal separator and expose the course sequence as a semantic seven-item list: four items
+   above and three centred below.
+4. Use the exact visible labels `Стартер`, `Холодная закуска`, `Горячая закуска`, `Рыбный курс`,
+   `Освежающая пауза`, `Основное блюдо`, `Десерт`.
+5. Preserve one warm-paper surface, one thin outer border, square edges, existing ink/gold rules and current
+   typefaces. Use CSS rules/dots only; no SVG, nested frame, shadow, radius, gradient or generated text.
+6. Verify 560/561 plus 430, 390 and 375 px, then the complete mandatory 1440/1280/1024/768/430/390/375
+   matrix for complete photography, readable labels, `4 + 3` topology and zero overflow/intersections.
+
+Templated/incorrect elements found: scaled-down poster geometry, decorative numbering, undersized documentary
+evidence, meaningless divider and uncaptioned montage. Components retained: exact paragraph, documentary
+portrait, seven-course source, representative-image disclosure, global palette/type and the other event
+formats. Components reworked: first-format phone markup and geometry. New component required: one semantic
+course list; CSS is the only visual primitive. Exact portrait share, sheet height and inner gaps remain
+reference-bounded fitting values to be finalized through browser measurement.
+
+### Implementation result and final anti-template audit
+
+- **Files created:** none. The approved 1152 × 1572 documentary portrait and 1200 × 800 seven-course
+  photograph were sufficient.
+- **Files changed:** `app/page.tsx`, `app/globals.css`, `tests/rendered-html.test.mjs` and the three mandatory
+  design records.
+- **Rework:** the phone block is now one `.62 / 1` bordered editorial sheet. It has a live utility row,
+  large two-line title, exact offer copy, uncropped portrait, functional `— ГОТОВИТ ШЕФ` seam and one
+  separator. The course photograph is art-directed into a four-plate row and a centred three-plate row;
+  seven live HTML labels are directly aligned below their corresponding plates.
+- **References used:** the user's Photo 2 is the positive phone reference; Photo 1 is the anti-reference.
+  Existing approved documentary and representative food media, paper/ink/gold tokens and project typefaces
+  remain authoritative.
+- **Decisions without direct references:** crop offsets `-34%` and `-122%`, a 41% copy rail, 44.2% portrait
+  rail and clamp endpoints. These are neutral fitting values measured against the supplied reference and
+  source plate centres; they introduce no new visual language.
+- **Anti-template result:** no repeated card, radius, shadow, gradient, icon row, badge or generated UI was
+  added. The decorative `01`, meaningless phone guide and undifferentiated phone montage are removed from
+  the active phone composition. The other event formats and wider private-dinner layout remain unchanged.
+- **UI libraries:** none added; semantic React markup, native images and CSS are the only primitives.
+- **Verification:** production build and eight regression tests pass; ESLint and `git diff --check` pass.
+  Headless browser checks completed at 1440, 1280, 1024, 768, 430, 390 and 375 px, plus the 560/561 px
+  boundary. At every width `scrollWidth` equals `innerWidth`; the chef photograph computes to
+  `object-fit: contain`. Phone field measurements are 394 × 635.47 px at 430, 354 × 570.95 px at 390 and
+  339 × 546.77 px at 375. All seven labels remain inside the sheet and the complete four-over-three rims
+  are visible.
+- **Remaining limitation:** the seven-course raster is an approved representative visualization, not
+  documentary proof of a particular served menu; the labels intentionally name course roles rather than
+  unverified dishes.
