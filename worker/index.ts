@@ -1,10 +1,13 @@
-/** Cloudflare Worker entry point for the vinext-starter template. */
+/** Shared Worker for the evening-plan site and its loopback preview. */
 import { handleImageOptimization, DEFAULT_DEVICE_SIZES, DEFAULT_IMAGE_SIZES } from "vinext/server/image-optimization";
 import handler from "vinext/server/app-router-entry";
 
+interface LocalAssetFetcher {
+  fetch(request: Request): Promise<Response>;
+}
+
 interface Env {
-  ASSETS: Fetcher;
-  DB: D1Database;
+  ASSETS: LocalAssetFetcher;
   IMAGES: {
     input(stream: ReadableStream): {
       transform(options: Record<string, unknown>): {
@@ -139,8 +142,20 @@ const worker = {
       return withHeaders(response, headers);
     }
 
-    return response;
+    return withHeaders(response, new Headers(response.headers));
   },
 };
 
-export default worker;
+export default {
+  async fetch(request: Request, env: Env, ctx: ExecutionContext): Promise<Response> {
+    const response = await worker.fetch(request, env, ctx);
+    const headers = new Headers(response.headers);
+    const hostname = new URL(request.url).hostname;
+    if (["localhost", "127.0.0.1", "[::1]"].includes(hostname)) {
+      headers.set("X-Robots-Tag", "noindex, nofollow, noarchive");
+    } else {
+      headers.delete("X-Robots-Tag");
+    }
+    return withHeaders(response, headers);
+  },
+};

@@ -1,4 +1,4 @@
-export const SITE_URL = "https://evgen-grybenyk-mise-en-place-review.nepochatovcyprus.chatgpt.site";
-export const SITE_TITLE = "Евгений Грыбенюк — Чертёж Mise en place";
+export const SITE_URL = "https://evgenychef.com";
+export const SITE_TITLE = "Евгений Грыбенюк — План вечера · Mise en place";
 export const SITE_DESCRIPTION =
-  "Я — Евгений Грыбенюк, победитель «МастерШеф. Профессионалы — 2». Провожу частные ужины, приватные мероприятия и мастер-классы до 20 гостей. Меню создаю под ваш запрос.";
+  "План вашего вечера с Евгением Грыбенюком: разговор, меню, подготовка и встреча за столом. Частные ужины, приватные мероприятия и мастер-классы.";

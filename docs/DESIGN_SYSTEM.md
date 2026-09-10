@@ -1,3 +1,100 @@
+## Коррекция выносок после замечания пользователя — 2026-09-11
+
+Статичные линии не соединяются с фактическими описаниями. Их заменяет измеряемый SVG: строго горизонтальное начало у края текста (зазор6 px), один диагональный отрезок и кольцо в фиксированной относительной точке реальной фотографии. Отдельная мобильная привязка под/над текстом, перерасчёт после переносов и загрузки шрифта. Источник — пользовательский скриншот подписей и прямое «Полоски не ровно и не доходят к описанию». Новых шрифтов/палитры/декора/библиотек нет. Прежнее утверждение о завершённой геометрии заменяется этой коррекцией. Аудит, план и проверка: [PLATE_CAPTIONS_2026-09-11.md](PLATE_CAPTIONS_2026-09-11.md).
+
+## Последнее уточнение: взгляд в блокнот и единый карандаш — V6
+
+Пользователь отверг V5 («Совсем не поход») и потребовал: смотреть в блокнот, быть нарисованным карандашом как женщина, а не выглядеть чёрно-белой фотографией. Новый первичный исходник: design/references/chef-2026-09-11/user-chef-photo-011309.png. Это заменяет прежнее направление взгляда к гостье.
+
+Предварительный аудит: у предыдущего шефа плотная фактура лица/бороды и фартука, тогда как женщина состоит из лёгких контуров с открытой штриховкой. План: заново нарисовать мужскую фигуру по новому фото в исходной разговорной сцене; женщина служит точным референсом характера линий. Голова и глаза направлены вниз на страницу, правая рука пишет, левая придерживает раскрытый блокнот. Сходство передаётся контуром и пропорциями лица, без фотореалистичной кожи, пор, зерна и плотных полутонов. Женщина и композиция сохраняются. Меняется растр/src/alt; CSS, типографика, компоненты и библиотеки не меняются. Точный промпт: design/generated/evening-plan-illustrations/CHEF_LIGHT_PENCIL_V6_PROMPT.md. V5 не является принятым пользователем портретом.
+
+## Актуальные подписи блюда — 2026-09-11
+
+Новый пользовательский скриншот задаёт четыре пары название/пояснение и тонкие указатели с кольцами на блюде. Сохраняется активный карандашный Caveat, --gold-text для названий, --muted для пояснений и --paper для фона; без карточек, теней, радиусов, новых эффектов или библиотек. Размер текста подбирается для живых полей: заголовок 24–28 px, пояснение 19–20 px; полный текст доступен на телефоне. Mobile сохраняет две подписи сверху/две снизу с отдельной областью целой тарелки. Размеры, маршрут и адаптивность проверяются по [PLATE_CAPTIONS_2026-09-11.md](PLATE_CAPTIONS_2026-09-11.md). Сетка остального сайта, состояния кнопок, изображения и брейкпоинты 1100/900/620 не меняются. Это дополнение имеет приоритет над историческим “short mobile titles”.
+
+## Актуальная коррекция: сходство и естественное телосложение — V5
+
+Пользователь отклонил V4: «Теперь слишком худой и не похоож». Предыдущие положительные технические проверки не означают одобрения портрета. Источник внешности и телосложения — присланное фото design/references/chef-2026-09-11/user-chef-photo.png. До изменения интерфейса план уточнён: вернуть полноту щёк, мягкую форму челюсти, естественную шею и умеренную ширину плеч/торса ближе к фото; уменьшить поворот головы, сохранив явный взгляд на женщину. Сохранить запись в раскрытый блокнот, положение рук, женщину, графитную технику и формат. Новых компонентов, CSS-токенов или библиотек не нужно. Меняется только растр и его src. Промпт: design/generated/evening-plan-illustrations/CHEF_LIKENESS_V5_PROMPT.md. Итоговое сходство подлежит визуальному сравнению; не заявлять точную копию фотографии или пользовательское одобрение.
+
+## Приоритетное уточнение пользователя — версия 4
+
+«Стой, он должен смотреть на нее и записывать в блокнот, и он худее». V3 с фронтальным взглядом и разговорными жестами является промежуточным и не соответствует этому уточнению. До следующего изменения интерфейса план уточнён: направить голову и глаза шефа к женщине, показать правую руку с пишущим инструментом на странице раскрытого блокнота, левую руку придерживающей блокнот; сделать плечи, руки и торс заметно стройнее. Черты и одежда по новому пользовательскому фото. Женщина, роль этапа, графитная техника и текущая геометрия сохраняются. Новые UI-компоненты не нужны. Промпт: design/generated/evening-plan-illustrations/CHEF_NOTEBOOK_V4_PROMPT.md.
+
+## Уточнение портрета по фото пользователя — версия 3
+
+Для «Разговора» сохранять фронтальное лицо и открытую улыбку из design/references/chef-2026-09-11/user-chef-photo.png, белый китель и полосатый фартук. V2 не использовать как источник лица. Графит, бумага, соотношение 3:2, текущий размер/адаптивность и Caveat остаются прежними. Новых декоративных решений нет. План и проверки — CHEF_PENCIL_IDENTITY_2026-09-11.md.
+
+## Текущая правка Шеф4: карандашный Евгений — 2026-09-11
+
+В сцене «Разговор» изображается реальный шеф по chef-hero-apron.jpg. Графитная техника, бумага, формат 3:2, существующий multiply/grayscale/contrast и адаптивный размер иллюстрации сохраняются. Меняется персонаж, без новых токенов, эффектов, полей, сетки, состояний или библиотек. Активная типографика — локальный Caveat по PENCIL_FONT_2026-09-11.md; историческая пара шрифтов ниже не восстанавливается. Новый рисунок является иллюстрацией, не документальной фотографией события. Аудит и план: CHEF_PENCIL_IDENTITY_2026-09-11.md.
+
+# CURRENT LOCAL DESIGN SYSTEM — «План вечера», 2026-09-10
+
+## Root handoff verification — 2026-09-10
+
+Финальная локальная сборка, lint, TypeScript и 5 HTTP-тестов прошли. Последний браузерный прогон `artifacts/evening-plan-local/qa-report.json` прошёл на всех семи ширинах и подтвердил восстановление видео после ошибки кнопкой «Повторить». Root выполнил read-only сравнение оригинала с baseline: 726 файлов, общий SHA-256 и raw Git-статус совпали. Подробный итог и список файлов — `artifacts/evening-plan-local/REPORT.md`. Запуск только 127.0.0.1:3001; публикации не было.
+
+
+Active contract for isolated local implementation of the approved evening-plan PNGs. Earlier conflicting “proposal only” and production/publication constraints below are historical. Original folder/site is untouchable; localhost only. The raster establishes composition; real media and semantic HTML remain content.
+
+## Final fitted values and verification — 2026-09-10
+
+These values are taken from the actual local CSS after the final seven-width visual check. They replace the earlier undecided fit values in this current chapter, while historical entries remain provenance only.
+
+| Element | Final CSS fitting |
+|---|---|
+| Wide sheet | 90.5% width, max-width 1320px; <=620px width `calc(100% - 36px)` |
+| Section heading | Cormorant 400, `clamp(40px,4.65vw,66px)`, line-height 1.05; phones `clamp(37px,9.5vw,54px)`, line-height 1.04 |
+| Hero type | `clamp(40px,4.25vw,62px)`, line-height .97; <=1100px `clamp(34px,4.1vw,45px)`; <=620px `clamp(31px,8.4vw,48px)`, line-height .98 |
+| Service/process body | 18px wide; 15px at <=1100px for compact wide service/process; process returns to16px at <=900px, service returns to16px at <=620px; body base16px |
+| Desktop process | 46% /54% columns, first row `clamp(365px,31vw,440px)`; station04 padding-top210px above1100px,125px at901–1100px; <=900px open vertical flow |
+| Desktop path | SVG measured from live nodes/heading/“Соус” bounds; 1.35px muted-gold dashed stroke4/5; 03 exit uses a clear aisle left/below annotation |
+| Mobile route | Per-station pseudo line on first three stages only, x10px; top/bottom19px at<=900px,17px at<=620px; ends at node04 |
+| Format photographs | `contain`, natural colour, right aligned wide; height clamp142–180px,154px tablet. Phone dinner255px high/centred; events/masterclass aperture1.5:1 |
+| Whole plate | `contain`; desktop note field width107%, ratio1.43; tablet max600px/ratio.89; phone width minus33px/ratio.83; no clipping or food recolouring |
+| Plate labels | Cormorant italic gold, clamp19–25px wide;25px tablet; clamp20px,5.3vw,26px phone; four short neutral names |
+| Film | Poster frame2:3, source-aware object-position50%66%; max280px wide, up to300/360px at narrower breakpoints; playback frame9:16 and `contain`; user starts film, native controls thereafter |
+| Illustration integration | Generated process assets only: multiply + grayscale(1) contrast(1.25); conversation max450px and toast max440px wide; no filter on actual source photos/video |
+| Final action/focus | 56px high wide/tablet,54px phone; 14px/13px label; visible2px gold outline with5px offset; square edges |
+| Breakpoints | 1100px compact wide,900px vertical process/tablet,620px authored phone Hero/services |
+
+Final independent screenshot review and the browser report passed at 1440,1280,1024,768,430,390,375px. Wide plate/04 separation, independent plate-note/route geometry, final mobile node termination and source-media context are confirmed. No page-level horizontal clipping conceals overflow. Film playback/retry/poster and keyboard focus were exercised. Final original-integrity comparison is outside this design-system verification and remains with the root task.
+
+## Retained foundations
+
+| Role | Value |
+|---|---|
+| Paper / light paper | `#f4efe5` / `#fcfaf5`; continuous warm field |
+| Ink / supporting | `#0a0a0a` / `#6e665a` |
+| Display/route gold | `#a0792e` |
+| Small contrast gold | `#72561f` |
+| Rules | `#c8c0b3`, 1px |
+| Display | Self-hosted Cormorant Garamond 300/400; gold italic emphasis |
+| Body/actions | Self-hosted Montserrat 300/400; 600 actions |
+| Edges/depth | Square, radius 0, no shadows/gradients/glass/blur/stock cards |
+
+## Geometry and imagery
+
+Wide sheet approximately 90–91% viewport width as the approved raster; source-derived page gutters and existing content cap may be fitted. Phone gutter baseline 20px (16–24px where content/frame needs). Header shallow. Hero: 24 distinct desktop photos (10 top, 7+7 sides), 14 selected phone photos (4 top,5+5 sides), central text/portrait side-by-side wide and text above portrait mobile. No photo filter/generation; source black bands may be excluded with CSS crop while preserving face/body.
+
+Award remains a compact actual image/copy strip. Formats share open horizontal separators; desktop number/title/copy/photo, mobile broad title/copy before supporting image. Vertical dinner source must retain head/hands/pan; it may use a wider reserved field with contained source rather than invent a landscape crop. No repeated full food inventory.
+
+Process has 01 upper left, 02 upper right, 03 lower left, 04 lower right on desktop. Fine graphite structure with restrained gold line/nodes; no decorative loops beyond route logic. Phone has separate left vertical line and wide readable content. Whole real plate and four neutral labels sit inside Menu; titles two above/two below on mobile. Fine leaders stay clear of text/food/main route. Original documentary film/poster sits inside Preparation; requested playback with controls and honest source geometry.
+
+Conversation/toast are quiet graphite illustrations, not event evidence; produce through image tooling and record provenance. Photographs/video remain original. Contact stays on paper with a thin rule, serif invitation, one square gold Instagram button, account/helper and compact footer.
+
+## Type, spacing, states
+
+Approved mobile prompt specifies body ~16px @430px; avoid tiny raster-scale body. Wide body baseline 16–20px. Existing fluid section role 32–60px and source heading proportions guide fit; full Russian headings must wrap naturally. Hero has its own source-fit serif scale. Exact type sizes, viewport transitions, crop coordinates and gaps are neutral content-fit decisions pending actual QA, not new decorative tokens. No fixed equal section heights.
+
+Minimum interactive targets 44px; visible 2px focus outline with separation; skip link retained. Hover/active changes stay within gold/ink palette. Real Instagram destination `https://www.instagram.com/evg.chef/`; no automatic send. Film uses real poster/loading fallback and reachable controls; honour reduced motion, avoid decorative animation. Body overflow must be fixed at source, not hidden at page level to conceal layout errors. Main page has no invented form/booking/empty state.
+
+Required visual widths: 1440,1280,1024,768,430,390,375px. Verify body/title wraps, contrast, focus/links, intact plate, source crop, video/poster/error fallback and horizontal overflow. Record final fitted values and results after implementation.
+
+---
+
+# Historical system (superseded where inconsistent with the local contract)
+
 # Design System
 
 ## Comparison study — not active tokens (2026-08-31)
@@ -1950,33 +2047,57 @@ This latest amendment is authoritative for the following corrections requested a
 
 Verified fitting: mobile service text/photo 1.45:1, 8px gaps, 12px sheet inset, 15px/24px description, 190px minimum photo height. At 375/390/430px descriptions measure 175.2/184.0/207.7px; award-caption-to-body gap is 20px. Map country/dish key uses 12px Montserrat and 18px Cormorant. All seven widths passed overflow/image/text-overlap checks; independent checks covered 375/390/1280/1440. Hover/focus, reduced motion and blocked media were checked. Full results and limitations: [STYLE_FIXES_2026-09-10.md](STYLE_FIXES_2026-09-10.md).
 
-## Cross-page alignment amendment — 2026-09-10
+## Image-coherence exploration — concept only, 2026-09-10
 
-- The existing page gutter is authoritative across story, present-day and personal-menu containers: 18px through 560px and 22px at 561–820px. A chapter may change its internal layout at 620px without changing the page edge. Remove the personal-menu-only 16px override through 380px; retain its documented 720px plate stage.
-- Approved seven-course groups stay 4+3. Each group shares an intrinsic image row and live caption row through CSS subgrid, retaining the existing 6px local gap. Apertures retain source aspect ratios; their bottom edges and caption first lines align within each group. Do not crop plates into equal squares or add panels.
-- The existing phone country/dish key has a closing 1px `--rule` after its last row, matching the workday table. Other frames, endpoint circles and rails remain as approved.
-- Palette, typography, containers, imagery, radii, shadows, button/hover/focus states, motion and breakpoints remain unchanged. No UI library, dependency, asset or component is introduced.
-- Validate all seven required widths, 561/620/621px gutter transitions, and enlarged text. This amendment records implementation intent; append measured outcomes after actual browser inspection.
+The requested visual mockup in `design/mockups/image-coherence-2026-09-10/` explores background joins and the existing drafting/caption treatment across different image types. It is **not approved or implemented** and changes no active token or interface contract.
+
+- Reuse paper `#f4efe5`, light paper `#fcfaf5`, ink `#0a0a0a`, muted `#6e665a`, accent `#a0792e`, small accent `#72561f`, rule `#c8c0b3`, Cormorant Garamond and Montserrat. No new motif, font, decoration or UI-library styling is proposed.
+- Preserve documentary source colours, faces, the complete approved 94-photo Hero, existing section order and the service-specific food arrangements. Coherence concerns the containing paper and existing annotations; it does not require one photographic treatment or a common object size across unrelated groups.
+- Retain the final plate's current cold white. Neutral light is a future-photography guideline only; no recolouring or replacement of the present plate is proposed.
+- Exact background masks, joins, spacing and caption fitting remain undecided pending review and implementation. The concept raster cannot replace source photographs or live text and sets no pixel-accurate implementation values.
+- No browser verification at 1440, 1280, 1024, 768, 430, 390 or 375 px has been performed for this raster-only proposal. Existing production QA remains separate. A future implementation must undergo the full responsive and anti-template checks.
+
+The concept README records the audited problem, traceable source files, preservation rules and pre-visualisation plan. These notes do not authorise publishing a redesign.
+
+## Editorial reimagining — REJECTED, archive only, 2026-09-10
+
+**Rejected by the user: «Фу, это ужас», followed by «Нет, пересобери мою идею».** The exploratory values and proposed component removals below are retained as history only. They are not active tokens, approved decisions or references for the next proposal. Do not continue the single-photo editorial replacement or its dark final spread. The approved production system is unchanged.
+
+The user's **«Ты можешь делать любой макет, и убирать и добавлять в нем что хочешь, возможно он будет лучше»** authorises free recomposition of a new mockup. It removes the previous proposal's fixed-structure constraints only within `design/mockups/editorial-reimagining-2026-09-10/`. The active website tokens and contracts above remain unchanged.
+
+- Brand continuity: reuse current paper `#f4efe5`, light paper `#fcfaf5`, ink `#0a0a0a`, muted `#6e665a`, accent `#a0792e`, small accent `#72561f`, rule `#c8c0b3`, Cormorant Garamond and Montserrat. No new active palette or typeface.
+- Proposed media rule: one leading real chef/process frame, then a selected documentary sequence of work, dishes and people. The mockup may omit the full collage, drawn cuisine map, floating food scenes and plate leaders. Existing files remain untouched. The common language comes from selection, scale and context; no mandatory warm filter or generative replacement of original identity enters production.
+- Proposed composition: asymmetric identity opening, concise factual proof, three open service chapters with content-specific image/text proportions, and a shorter personal-menu/process story. Warm flat paper and thin meaningful rules connect them; square edges, no shadows, stock cards, decorative grids, gradients or added motion.
+- Proposed final surface: a single menu/contact spread may use current ink `#0a0a0a` as its background with light-paper text, following the approved Marrow inverse text/surface principle. This is a concept-only role inversion, not a new color token, a copied dark luxury theme or a change to the active site.
+- Mobile intent: choose a source-aware crop, shorten simultaneous text/image competition, keep the identity and action readable, and present service meaning beside its corresponding photographic evidence in the reading sequence. Exact type scale, containers, grid, spacing and breakpoints remain undecided; a raster cannot establish responsive CSS values.
+- Existing visible focus, semantic link labels and minimum 44px interaction targets remain the baseline for any later implementation. No new controls, state system or UI library is proposed. Hover, focus, loading/error handling and motion cannot be verified from a raster.
+
+The [concept README](../design/mockups/editorial-reimagining-2026-09-10/README.md) records the sources, audit, plan, copy and risks. No browser QA at the seven required widths, implementation or publication is claimed for this proposal.
+
+## Original Mise en place reassembled — proposal only, 2026-09-10
+
+The current user request **«Нет, пересобери мою идею»** restores the approved original concept as the source for a new mockup in `design/mockups/mise-en-place-reassembled-2026-09-10/`. Preserve collage-frame identity, the drawn cuisine map and its plates, thin drafting service sheets, seven courses in 4+3, smaller canapés, six techniques, home film and the whole four-note plate. Do not use the rejected editorial boards as references.
+
+Use the current paper/ink/muted-gold palette, Cormorant Garamond/Montserrat roles, thin rules, square edges, original photo colours, approved factual copy and known Instagram channel. Proposed changes concern image/text proportions, deliberate blank space, consistent paper joins and source-aware object scale within each group. They do not introduce a new photographic style, dark final section, photo-only service narrative, new illustration motif, UI library, decorative effect or animation.
+
+Source-derived framing, precise type fitting, intervals and masks remain concept-only decisions. Existing active tokens are unchanged. The raster is not a production asset and has not undergone seven-width browser/state verification. The [new README](../design/mockups/mise-en-place-reassembled-2026-09-10/README.md) records the audit, references and plan.
+
+## Mise en place — evening plan, proposal only, 2026-09-10
+
+The user's **«Сделай получше идею, убери лишнее, добавь чего не хватает, нарисуй макет»** authorises a more substantial raster proposal in `design/mockups/mise-en-place-evening-plan-2026-09-10/`. Within this proposal, the previous fixed 94-photo, literal-geography and full-food-grid constraints may be reduced or transformed. This is not an active-system amendment, approval to implement, or publication instruction. Earlier generated proposal boards, including the rejected editorial direction, are not design sources.
+
+- **Brand:** preserve paper `#f4efe5`, light paper `#fcfaf5`, ink `#0a0a0a`, muted `#6e665a`, main route `#a0792e`, small accent `#72561f`, rules `#c8c0b3`, Cormorant Garamond and Montserrat. Existing text-role hierarchy remains the baseline. No active color, font or size token is changed.
+- **Hero:** retain the source-derived documentary collage frame, separate original chef portrait and existing identity heading. A curated 24-cell selection proposes larger, more legible frames in place of the 94-source density; this exact selection and geometry are not yet active. Preserve original photo color, identity and context. Add no global filter or replacement face.
+- **Evidence and services:** fit the verified MasterChef archive as a small photo/copy proof below the Hero. The three existing services share one open drawing sheet with thin square rules, concise copy and small real photographs. At most one optional small source-derived food motif per format; omit the full repeated food grids. Do not create equal stock cards, fixed equal section heights, repeated large portraits, shadows or library styling.
+- **Process language:** use the user's recorded process-first blueprint correction, not a subject illustration. One muted-gold causal route and fine graphite construction lines connect Conversation, Menu, Preparation and Evening. Meaningful existing hollow-node/guide grammar may express the stations; arbitrary icons, ornamental loops, literal Europe/car geography and generic four-card flowcharts are excluded. New stages or operational promises are not inferred from the art.
+- **Integrated media:** the whole original personal-menu plate and its neutral Main product / Garnish / Textures / Sauce notes belong to the Menu station. One original home-film poster/still belongs to Preparation. Route and labels keep clear of food and text. The plate and workday film do not reappear in large independent chapters after the process. No exact recipe or original photo alteration is implied by the raster.
+- **Inquiry:** preserve the current Instagram destination and familiar action language. A short first-message helper asks for date, guest count and format; it is an instruction, not a booking form or availability claim. No additional contact channel, guarantee, price or promotional banner is introduced.
+- **Desktop and mobile:** desktop composes all four related stations in one drawing field with content-led scale. The separate phone board deliberately reroutes the sequence through wide readable text zones, an integrated whole-plate field and a source-aware preparation aperture. Service descriptions must not be squeezed into narrow equal photo/text columns. Raster dimensions do not establish CSS breakpoints.
+- **Unspecified values and states:** exact container width, grid, spacing, font sizes, source-cell selection, aperture coordinates and breakpoints remain proposed or undecided. Existing square edges, thin borders, no-shadow/no-new-motion baseline, visible focus and minimum 44px action target apply to any future implementation. Hover/focus, loading, empty/error states, overflow and seven-width browser behavior are not verified by a raster. No UI library or new interactive component is required for this proposal.
+
+The [evening-plan README](../design/mockups/mise-en-place-evening-plan-2026-09-10/README.md) records the audit, three substantive content replacements, traceable current sources, factual Russian copy, exact prompts and completed raster inspection. Separate desktop/mobile PNGs and `PROMPTS.md` are saved. The two proposed graphite conversation/guest illustrations use the existing process-first drawing language to explain actual service stages; they are not images of verified events or active production assets. Raster/source approximation and mobile-excerpt limitations are recorded separately from future browser QA. App code, source photographs, active design decisions and the published site remain unchanged.
 
 
-- Phone workday rows remove every inherited vertical separator using the same specificity as the wider column rule. The existing 1px horizontal rules remain.
-- Header/footer backgrounds remain full width; wide link rails use `max(var(--gutter),calc((100% - var(--content))/2))`. Mobile cell padding remains as already approved. Validate the additional 1920px width alongside the required matrix.
-## Compact service illustrations — active amendment, 2026-09-11
+## Шеф4: карандашная типографика — 2026-09-11
 
-The user's current smaller/neater request supersedes earlier service-image size percentages only. Preserve the approved sheet composition, paper/ink/gold tokens, Cormorant/Montserrat roles, source crops, caption subgrid, borders, square corners, no shadows, existing interaction/focus states and 700px mobile threshold.
-
-- Dinner image aperture: 72% of its course cell above 700px; 84% in the four-column phone row. For the wider three-column phone row use `calc(63% - .84px)`, matching the first row's physical aperture width with the existing 4px grid gap. All captions retain their current widths and type scale.
-- Canapé image aperture: 56% above 700px; 70% below. Preserve 8×3 / 6×4 arrangement and existing gaps.
-- Techniques: centered field 68% above 700px; 86% below, keeping two groups of three on phone and unchanged caption size.
-- Heights continue to follow intrinsic content; no scale transforms, fixed equal sheet heights, new motion or UI primitives. Unrelated site sections retain their current system.
-- These exact sizing values derive from the requested reduction and existing geometry. See `docs/EVENT_ILLUSTRATIONS_COMPACT_2026-09-11.md` for the pre-implementation audit and responsive verification.
-
-### Compact-tablet plate fitting amendment — 2026-09-11
-
-- Preserve the existing <=430px four-note/photo/leader composition and the existing >=701px wide/tablet geometry.
-- At431–700px, reuse the phone note placement with a1:2 proportional stage, complete100%-width photo at22% from the top, two47%-width top notes and lower notes at72%/74%. Keep the existing25px maximum note title and14px body role. The plate ends at68.25% stage height, leaving a content-derived gap before the lower notes.
-- Remove the old <=700px square-stage and66%-wide image override. A new aria-hidden compact leader group preserves the430px source targets through the documented coordinate conversion; exactly four paths/dots are active at a time.
-- No colour, typeface, source photograph, note copy, button, focus, motion or layout breakpoint is added. Check both sides of430 and700 plus561/620/621px before completion.
-
-
-Final alignment verification — 2026-09-11: the seven required widths and additional 431/561/620/621/700/701/1920px boundaries were inspected or measured. Caption and aperture-bottom deltas are zero; page overflow is zero; compact plate/note separation is restored. Build, ESLint and all 9 regressions pass. Full findings, references, file list, anti-template result, verification method and limitations: [LAYOUT_ALIGNMENT_2026-09-11.md](LAYOUT_ALIGNMENT_2026-09-11.md).
+Прямой новый запрос пользователя заменяет прежнюю пару Cormorant/Montserrat: Caveat 400–700 обслуживает весь текст, заголовки, выноски и кнопки. Файлы кириллицы/латиницы размещаются в public/fonts, font-display: swap. Без искусственного курсива и отрицательного трекинга. Читающий текст 20–22px, служебный 16–18px; заголовки сохраняют адаптивную шкалу с более свободным интерлиньяжем. Палитра и композиция сохраняются. План и результаты: PENCIL_FONT_2026-09-11.md.

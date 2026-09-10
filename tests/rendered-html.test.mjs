@@ -1,798 +1,130 @@
 import assert from "node:assert/strict";
-import { createHash } from "node:crypto";
-import { access, readFile } from "node:fs/promises";
-import test from "node:test";
-import { createRequire } from "node:module";
-import { createElement } from "react";
-import { renderToStaticMarkup } from "react-dom/server";
-import ts from "typescript";
+import test, { before } from "node:test";
 
-const root = new URL("../", import.meta.url);
+const base = new URL(process.env.LOCAL_URL || "http://127.0.0.1:3004");
+assert.equal(base.protocol, "http:", "QA is restricted to local HTTP");
+assert.ok(["127.0.0.1", "localhost"].includes(base.hostname), "QA must never target a public site");
+assert.equal(base.username + base.password, "");
+const instagram = "https://www.instagram.com/evg.chef/";
+let html;
+let homeResponse;
 
-async function source(path) {
-  return readFile(new URL(path, root), "utf8");
+function decode(value = "") {
+  return value.replace(/&(?:amp|lt|gt|quot|apos|nbsp);|&#(?:x[0-9a-f]+|\d+);/gi, entity => {
+    const named = { "&amp;": "&", "&lt;": "<", "&gt;": ">", "&quot;": '"', "&apos;": "'", "&nbsp;": " " };
+    if (named[entity]) return named[entity];
+    return String.fromCodePoint(entity.startsWith("&#x") ? parseInt(entity.slice(3), 16) : parseInt(entity.slice(2), 10));
+  });
 }
 
-async function sha256(path) {
-  const bytes = await readFile(new URL(path, root));
-  return createHash("sha256").update(bytes).digest("hex");
+// These helpers inspect the actual SSR response, not source files or CSS details.
+function tags(markup, tag) {
+  return [...markup.matchAll(new RegExp(`<${tag}\\b([^>]*)>`, "gi"))].map(match => {
+    const attributes = {};
+    for (const attr of match[1].matchAll(/([^\s=/>]+)(?:\s*=\s*(?:"([^"]*)"|'([^']*)'|([^\s>]+)))?/g)) {
+      attributes[attr[1].toLowerCase()] = decode(attr[2] ?? attr[3] ?? attr[4] ?? "");
+    }
+    return attributes;
+  });
+}
+function visibleText(markup) {
+  return decode(markup.replace(/<script\b[\s\S]*?<\/script>/gi, " ").replace(/<style\b[\s\S]*?<\/style>/gi, " ").replace(/<[^>]+>/g, " ")).replace(/\s+/g, " ").trim();
+}
+async function localFetch(path, options = {}) {
+  const url = new URL(path, base);
+  assert.equal(url.origin, base.origin, "All HTTP checks must remain on the local server");
+  return fetch(url, { ...options, redirect: "error", signal: AbortSignal.timeout(30_000) });
 }
 
-const exactTriviumFonts = {
-  "public/fonts/cormorant-garamond-v21-cyrillic-ext-normal.woff2": "d04439363ec805132dc6c6e6a925f76efe17646f9811af8e10e218ea3dba5335",
-  "public/fonts/cormorant-garamond-v21-cyrillic-normal.woff2": "d81372bae1f872f1418c0b7eb412f8a92a156a950fda8d2383701c75d38969df",
-  "public/fonts/cormorant-garamond-v21-vietnamese-normal.woff2": "826f73ca737feec0eb1004808629973d6b611fddc2bd2a689b5fe331f6be6427",
-  "public/fonts/cormorant-garamond-v21-latin-ext-normal.woff2": "9dc38267bdee93a653200ef3c1e8060e3f1399073432c415c683b419d3b50464",
-  "public/fonts/cormorant-garamond-v21-latin-normal.woff2": "5d618c462b7a5b74f442e1548880086af71764d9cc7d35c16ab45353da934621",
-  "public/fonts/cormorant-garamond-v21-cyrillic-ext-italic.woff2": "919a7720ae1671f06ebdd4f65bb9c2f0d619f81f805d85aec025c89139536292",
-  "public/fonts/cormorant-garamond-v21-cyrillic-italic.woff2": "3170a883f1968a2d1135259e40fd88508da70c20337e491f171f9405d0749053",
-  "public/fonts/cormorant-garamond-v21-vietnamese-italic.woff2": "3512ad3b4ddd21fa75ab44296867da1f82948350ffba678a04afbb511015cb08",
-  "public/fonts/cormorant-garamond-v21-latin-ext-italic.woff2": "06bc9a8c179afaf7dd5d3b4987ad2f4a82ca85a542c9e498b18bf32ad0257d8e",
-  "public/fonts/cormorant-garamond-v21-latin-italic.woff2": "e6d6d1d73858aa9b66f3a3539f9dec22faab2276e61ad1d813bc04dd59c9c122",
-  "public/fonts/montserrat-v31-cyrillic-ext-normal.woff2": "744830a0e77dd14dd543a4230d6e3ce67ca961634074b5d536ebafc66c732301",
-  "public/fonts/montserrat-v31-cyrillic-normal.woff2": "0b00fbd6edcc84cd5f77364bbeb06b75ed263c740061eba34511f1e2ac1a82d3",
-  "public/fonts/montserrat-v31-vietnamese-normal.woff2": "9e2672d100bc36a37073fb250abfaa7394f5151bf5dda3f4d5fc281345eb391b",
-  "public/fonts/montserrat-v31-latin-ext-normal.woff2": "920711de9ae96c18970fa4faca73cd302b93ac5ed57ebeb6bfec2ddeff930082",
-  "public/fonts/montserrat-v31-latin-normal.woff2": "6438d7b8ea9c7c3992d5e2fd2afdb1ff948570a3ef0bedae76247b51632960ba",
-};
-
-const exactTriviumSubsetRanges = {
-  "cyrillic-ext": "U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F",
-  cyrillic: "U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116",
-  vietnamese: "U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB",
-  "latin-ext": "U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF",
-  latin: "U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD",
-};
-
-const exactRemainingReferenceCrops = {
-  "public/media/blueprint-backgrounds/personal-menu-reference-exact.png": "413c019ecc94bcbabb58069becedb9c2ce4517fe95e024fa40ebd45cd42c3ff2",
-  "public/media/blueprint-backgrounds/meat-reference-exact.png": "99b731e4236552fc70a6b1b93e700315e07b2f4bea2b4691f56489e7eb6cf6af",
-  "public/media/blueprint-backgrounds/fish-reference-exact.png": "01b4cb016f0dfffeb1211a9900cca215c533c82f088972da506aff4dbba96a08",
-  "public/media/blueprint-backgrounds/produce-reference-exact.png": "d88877c9277a1c7fffd898d08e129bba70522aea2d9fb41f5060a15e35cc0cca",
-  "public/media/blueprint-backgrounds/inquiry-spoon-reference-exact.png": "6a4dad6b4e4dc1929946abbd5478d80f8a3e5734fb5bbe63ad20980a494fedb7",
-};
-
-const obsoleteTtfFonts = [
-  "public/fonts/cormorant-garamond-300.ttf",
-  "public/fonts/cormorant-garamond-400.ttf",
-  "public/fonts/cormorant-garamond-600.ttf",
-  "public/fonts/cormorant-garamond-italic-300.ttf",
-  "public/fonts/cormorant-garamond-italic-400.ttf",
-  "public/fonts/montserrat-300.ttf",
-  "public/fonts/montserrat-400.ttf",
-  "public/fonts/montserrat-500.ttf",
-  "public/fonts/montserrat-600.ttf",
-];
-
-test("builds the approved collage frame around one central identity spread", async () => {
-  const [page, css] = await Promise.all([source("app/page.tsx"), source("app/globals.css")]);
-  const heroSources = page.slice(
-    page.indexOf("const heroCollageSources"),
-    page.indexOf("const heroCollageWideDesktop"),
-  );
-  const explicitHeroSources = heroSources.match(/"\/media\/[^"]+"/g) ?? [];
-  const desktopWide = page
-    .slice(page.indexOf("const heroCollageWideDesktop"), page.indexOf("const heroCollageWideCompact"))
-    .match(/\b\d+\b/g)
-    ?.map(Number) ?? [];
-  const compactWide = page
-    .slice(page.indexOf("const heroCollageWideCompact"), page.indexOf("const eventFormats"))
-    .match(/\b\d+\b/g)
-    ?.map(Number) ?? [];
-
-  assert.match(page, /<section className="hero" id="top"/);
-  assert.match(page, /src="\/media\/chef-hero-apron\.jpg"/);
-  assert.match(page, /const heroCollageSources = \[/);
-  assert.match(heroSources, /\{ length: 40 \}[\s\S]*?hero-instagram/);
-  assert.equal(explicitHeroSources.length, 54);
-  assert.equal(new Set(explicitHeroSources).size, 54);
-  assert.equal(40 + explicitHeroSources.length, 94);
-  assert.equal((heroSources.match(/"\/media\/hero-collage\//g) ?? []).length, 6);
-  assert.match(heroSources, /\/media\/event-formats\/private-dinner\.jpg/);
-  assert.match(heroSources, /\/media\/masterchef\/evgen-grybenyk-winner-envelope-2020\.jpg/);
-  assert.equal(desktopWide.length, 26);
-  assert.equal(new Set(desktopWide).size, 26);
-  assert.equal(compactWide.length, 26);
-  assert.equal(new Set(compactWide).size, 26);
-  assert.ok(desktopWide.every((index) => index >= 0 && index < 94));
-  assert.ok(compactWide.every((index) => index >= 0 && index < 94));
-  assert.equal(94 + desktopWide.length, 10 * 12);
-  assert.equal(94 + compactWide.length, 12 * 10);
-  assert.equal(94 + compactWide.length, 8 * 15);
-  assert.ok(!desktopWide.includes(2), "text-heavy A Napoli poster must remain a regular tile");
-  assert.ok(desktopWide.includes(4), "documentary plating field replaces the poster's wide slot");
-  for (const removed of [
-    "instagram-05.webp",
-    "instagram-10.webp",
-    "instagram-31.webp",
-    "environment-dish.webp",
-    "environment-venue.webp",
-    "hero-film-still-12.webp",
-    "gallery-venue.webp",
-    "gallery-ingredient.webp",
-    "gallery-dessert-chef.webp",
-    "chef-story-brush-villa.webp",
-  ]) assert.ok(!heroSources.includes(removed), `removed empty-looking Hero source returned: ${removed}`);
-  assert.match(page, /className="hero-media hero-collage"/);
-  assert.match(page, /className="hero-collage-grid" aria-hidden="true"/);
-  assert.match(page, /"hero-collage-tile"/);
-  assert.match(page, /"hero-collage-tile--wide-desktop"/);
-  assert.match(page, /"hero-collage-tile--wide-compact"/);
-  assert.match(page, /className="hero-stage"/);
-  assert.match(page, /className="hero-central-spread"/);
-  assert.match(page, /className="hero-service"/);
-  assert.match(page, /className="hero-apron"/);
-  assert.ok(page.indexOf('className="hero-stage"') < page.indexOf('className="hero-media hero-collage"'));
-  assert.ok(page.indexOf('className="hero-media hero-collage"') < page.indexOf('className="hero-apron"'));
-  assert.ok(page.indexOf('className="hero-central-spread"') < page.indexOf('className="hero-copy"'));
-  assert.ok(page.indexOf('className="hero-copy"') < page.indexOf('className="hero-apron"'));
-  assert.match(page, /aria-label="Евгений Грыбенюк — ваш личный Мастер-Шеф на Кипре"/);
-  assert.match(page, /<span>Грыбенюк —<\/span>/);
-  assert.match(page, /ваш личный/);
-  assert.match(page, /Мастер-Шеф на Кипре/);
-  assert.doesNotMatch(page, /hero-mosaic|CyprusPatternBand|CyprusPageRails|FormatWeaveMark/);
-  assert.doesNotMatch(css, /\.hero\s*\{[^}]*grid-template-columns:/);
-  assert.match(css, /\.hero-stage\s*\{[^}]*position:\s*relative;[^}]*height:\s*clamp\(700px,[^}]*overflow:\s*hidden/);
-  assert.match(css, /\.hero-media\s*\{[^}]*position:\s*absolute;[^}]*inset:\s*0/);
-  assert.match(css, /\.hero-central-spread\s*\{[^}]*position:\s*absolute;[^}]*z-index:\s*2;[^}]*display:\s*grid;[^}]*grid-template-columns:\s*minmax\(0, 56fr\) minmax\(0, 44fr\)/);
-  assert.match(css, /\.hero-apron\s*\{[^}]*position:\s*relative;[^}]*border-left:\s*2px solid var\(--paper-light\)/);
-  assert.match(css, /\.hero-collage-grid\s*\{[^}]*grid-template-columns:\s*repeat\(10,[^}]*grid-template-rows:\s*repeat\(12,[^}]*grid-auto-flow:\s*dense/);
-  assert.match(css, /\.hero-collage-tile--wide-desktop\s*\{\s*grid-column:\s*span 2/);
-  assert.doesNotMatch(css, /\.hero-collage-tile:nth-child\([^}]+display:\s*none/);
-  assert.match(page, /const tileSizes = \[/);
-  assert.match(page, /\(max-width: 560px\).*25vw.*12\.5vw/);
-  assert.match(page, /\(max-width: 1100px\).*16\.7vw.*8\.34vw/);
-  assert.match(page, /desktopWide \? "20vw" : "10vw"/);
-  assert.match(page, /loading="eager"/);
-  assert.match(page, /fetchPriority=\{index < 12 \? "high" : "low"\}/);
-  assert.match(page, /loading="eager"\s+fetchPriority=\{index < 12 \? "high" : "low"\}\s+decoding="async"/);
-  assert.match(css, /@media \(max-width: 430px\)/);
-  assert.match(css, /\.wordmark,\s*\.header-action\s*\{\s*white-space:\s*nowrap/);
-  assert.doesNotMatch(page, /className="site-nav"|className="hero-eyebrow"/);
-  assert.doesNotMatch(page, /Победитель «МастерШеф\. Профессионалы — 2»/);
-  assert.doesNotMatch(page, /<a href="#(?:film|menu|products)">(?:о шефе|форматы|продукты)<\/a>/);
-  assert.match(css, /\.hero h1\s*\{[^}]*margin:\s*0/);
-  const tabletHeroCss = css.slice(
-    css.indexOf("@media (max-width: 1100px)"),
-    css.indexOf("@media (max-width: 1024px)"),
-  );
-  const narrowTabletHeroCss = css.slice(
-    css.indexOf("@media (max-width: 820px)"),
-    css.indexOf("@media (min-width: 561px) and (max-width: 820px)"),
-  );
-  const phoneHeroCss = css.slice(
-    css.indexOf("@media (max-width: 560px)"),
-    css.indexOf("@media (max-width: 430px)"),
-  );
-  assert.match(tabletHeroCss, /\.hero-collage-grid\s*\{[^}]*grid-template-columns:\s*repeat\(12,[^}]*grid-template-rows:\s*repeat\(10,/);
-  assert.match(tabletHeroCss, /\.hero-collage-tile--wide-desktop\s*\{\s*grid-column:\s*auto/);
-  assert.match(tabletHeroCss, /\.hero-collage-tile--wide-compact\s*\{\s*grid-column:\s*span 2/);
-  assert.match(narrowTabletHeroCss, /\.hero-central-spread\s*\{[^}]*grid-template-columns:\s*minmax\(0, 56fr\) minmax\(0, 44fr\)/);
-  assert.match(phoneHeroCss, /\.hero-central-spread\s*\{[^}]*inset:\s*clamp\(50px, 7vw, 58px\) 18px;[^}]*grid-template-columns:\s*1fr;[^}]*grid-template-rows:\s*auto minmax\(0, 1fr\);[^}]*transform:\s*none/);
-  assert.match(phoneHeroCss, /\.hero h1\s*\{[^}]*font-size:\s*clamp\(38px, 10\.3vw, 42px\);[^}]*line-height:\s*\.9/);
-  assert.match(phoneHeroCss, /\.hero-collage-grid\s*\{[^}]*grid-template-columns:\s*repeat\(8,[^}]*grid-template-rows:\s*repeat\(15,/);
-  assert.match(phoneHeroCss, /\.hero-apron\s*\{[^}]*border-top:\s*2px solid var\(--paper-light\);[^}]*border-left:\s*0/);
-  assert.match(css, /@media \(min-width: 1101px\) and \(max-width: 1280px\)[\s\S]*?\.hero-central-spread\s*\{[^}]*right:\s*clamp\(77px,[^}]*height:\s*clamp\(498px/);
-  assert.match(css, /@media \(min-width: 1600px\)[\s\S]*?grid-template-columns:\s*minmax\(0, 1fr\) minmax\(0, 560px\)[\s\S]*?object-position:\s*50% 31%/);
-  assert.doesNotMatch(css, /\.site-nav|\.hero-eyebrow/);
-  assert.doesNotMatch(page, /hero-collage-anchor/);
-  assert.doesNotMatch(page, /className="hero-left"/);
-  assert.doesNotMatch(css, /\.cyprus-|\.page-rail|\.pattern-module|\.format-weave|backdrop-filter/i);
-  assert.equal((css.match(/border-radius\s*:/g) ?? []).length, 1);
-  assert.match(css, /\.event-sheet-spine::before,/);
-
-  assert.doesNotMatch(css, /\.menu-dish/);
+before(async () => {
+  try {
+    homeResponse = await localFetch("/");
+    assert.equal(homeResponse.status, 200, "The localhost page must render successfully");
+    html = await homeResponse.text();
+  } catch (error) {
+    throw new Error(`Start the independent local copy with npm run dev before running HTTP tests (${base.origin}).`, { cause: error });
+  }
 });
 
-test("keeps the three exact event scenarios in editorial rows", async () => {
-  const page = await source("app/page.tsx");
-  const home = page.slice(page.indexOf("export default function Home"));
-  const storyStart = home.indexOf('className="story"');
-  const sequenceStart = home.indexOf('className="story-sequence"');
-  const formatsCall = home.indexOf("<EventFormats />");
-  const storyClose = home.indexOf("</section>", formatsCall);
-  const presentDay = home.indexOf('className="present-day"');
-  const homeStory = home.indexOf('className="home-story"');
-  const homeCopy = home.indexOf('className="home-story-copy"');
-  const homeDay = home.indexOf('className="home-story-day"');
-  const presentFilm = home.indexOf('className="home-story-film"');
-
-  assert.ok(storyStart < formatsCall);
-  assert.ok(storyStart < sequenceStart);
-  assert.ok(sequenceStart < home.indexOf('className="story-origin"'));
-  assert.ok(formatsCall < storyClose);
-  assert.ok(storyClose < presentDay);
-  assert.ok(presentDay < homeStory);
-  assert.ok(homeStory < homeCopy);
-  assert.ok(homeCopy < homeDay);
-  assert.ok(homeDay < presentFilm);
-  assert.ok(presentFilm < home.indexOf('className="sources"'));
-  assert.ok(home.indexOf('className="story-award"') < home.indexOf('className="story-copy"'));
-  assert.ok(home.indexOf('className="story-copy"') < formatsCall);
-  assert.ok(formatsCall < homeStory);
-  assert.match(page, /const eventFormats = \[/);
-  assert.match(page, /<div className="story-sequence" id="menu" aria-label="Победа MasterChef и форматы мероприятий"/);
-
-  assert.doesNotMatch(page, /<section className="formats"/);
-  assert.doesNotMatch(page, /Вечера бывают разные|частные форматы|formats-title|formats-intro|story-formats/i);
-
-  const ordered = [
-    "Частный ужин",
-    "/media/event-formats/private-dinner.jpg",
-    "Приватные мероприятия",
-    "/media/event-formats/private-event-outdoor-crepes.png",
-    "Мастер-классы",
-    "/media/event-formats/masterclass.jpg",
-  ];
-  let cursor = -1;
-  for (const item of ordered) {
-    const next = page.indexOf(item, cursor + 1);
-    assert.ok(next > cursor, `${item} must keep its approved order`);
-    cursor = next;
+test("serves the approved evening page as accessible Russian HTML", () => {
+  assert.ok(homeResponse.headers.get("content-type")?.includes("text/html"));
+  assert.equal(tags(html, "html")[0]?.lang, "ru");
+  assert.equal(tags(html, "h1").length, 1, "A single page identity is required");
+  const text = visibleText(html);
+  for (const expected of ["Евгений", "Грыбенюк", "Mise en place", "Разговор", "Меню", "Подготовка", "Ваш вечер", "Начнём с вашего вечера", "Основной продукт", "Гарнир", "Текстуры", "Соус"]) {
+    assert.ok(text.toLocaleLowerCase("ru").includes(expected.toLocaleLowerCase("ru")), `Missing rendered content: ${expected}`);
   }
-
-  assert.doesNotMatch(page, /menu-stages|format-weave|triptych|carousel/i);
-
-  const workdayFacts = [
-    "частный ужин",
-    "Подготовка начинается задолго до прихода гостей: я закупаю продукты,",
-    "делаю заготовки, маринады и соусы. К вам приезжаю с готовым mise en place",
-    "и беру на себя огонь и подачу. Вы встречаете гостей и остаётесь частью",
-    "собственного вечера.",
-    "Чтобы вы были дома —",
-    "со своими.",
-    "Как проходит день частного ужина",
-    "закупаю продукты",
-    "делаю заготовки, маринады и соусы",
-    "готовлю и подаю у вас дома",
-    "домашняя кухня · подготовка, огонь, подача",
-  ];
-  for (const fact of workdayFacts) {
-    assert.ok(page.includes(fact), `missing approved workday fact: ${fact}`);
-  }
-  assert.doesNotMatch(page, /home-story-(?:media|illustration|stages)/);
-  assert.doesNotMatch(page, /present-day-accessible|story-present-process-field/);
+  assert.ok(text.includes("В первом сообщении укажите дату, число гостей и формат"));
+  assert.ok(!text.includes("до 20 гостей"), "The prototype must not invent guest capacity");
+  const steps = [...html.matchAll(/\bdata-step="([^"]+)"/g)].map(match => match[1]);
+  assert.deepEqual(steps, ["01", "02", "03", "04"]);
 });
 
-test("keeps the approved process drawings, private-dinner plates and mapped plate journey active", async () => {
-  const [page, css, credits] = await Promise.all([
-    source("app/page.tsx"),
-    source("app/globals.css"),
-    source("public/media/masterchef/CREDITS.md"),
-  ]);
-  const retiredPseudoBackgrounds = [
-    "workday-plan.webp",
-    "menu-plate-plan.webp",
-    "meat-cut-plan.webp",
-    "fish-cut-plan.webp",
-    "produce-balance-plan.webp",
-    "contact-spoon-plan.webp",
-    "personal-menu-reference-exact.png",
-    "meat-reference-exact.png",
-    "fish-reference-exact.png",
-    "produce-reference-exact.png",
-  ];
-  const retiredDetachedDrawings = [
-    "private-dinner-seven-course.png",
-    "private-event-canape-studies.png",
-  ];
-  const activeBlueprints = [
-    "/media/blueprint-backgrounds/masterchef-route-underlay-v3-desktop.webp",
-    "/media/blueprint-backgrounds/masterchef-route-underlay-v3-tablet.webp",
-    "/media/blueprint-backgrounds/masterchef-route-underlay-v3-mobile.webp",
-  ];
-  const activeArchiveMedia = [
-    "/media/masterchef/route-plates/01-paella-plate-v2-1024.webp",
-    "/media/masterchef/route-plates/02-duck-plate-v2-1024.webp",
-    "/media/masterchef/route-plates/03-ravioli-plate-v2-1024.webp",
-    "/media/masterchef/route-plates/04-octopus-plate-v2-1024.webp",
-    "/media/masterchef/route-plates/05-baklava-plate-v2-1024.webp",
-  ];
-  const activeMenuMedia = [
-    "/media/event-formats/private-dinner-seven-plates-v1.jpg",
-    "/media/event-formats/private-event-canapes-v3.webp",
+test("keeps the loopback preview private while advertising the public canonical site", async () => {
+  assert.match(homeResponse.headers.get("x-robots-tag") || "", /noindex/i);
+  const robotsMeta = tags(html, "meta").find(tag => tag.name?.toLowerCase() === "robots");
+  assert.doesNotMatch(robotsMeta?.content || "", /noindex|nofollow/i);
+  assert.match(robotsMeta?.content || "", /index/i);
+  const canonical = tags(html, "link").find(tag => tag.rel === "canonical");
+  assert.equal(new URL(canonical?.href || "").href, "https://evgenychef.com/");
+  const robotsResponse = await localFetch("/robots.txt");
+  assert.equal(robotsResponse.status, 200);
+  const robots = await robotsResponse.text();
+  assert.match(robots, /User-agent:\s*\*/i);
+  assert.match(robots, /^Allow:\s*\//im);
+  assert.doesNotMatch(robots, /^Disallow:\s*\//im);
+  assert.match(robots, /Sitemap:\s*https:\/\/evgenychef\.com\/sitemap\.xml/i);
+  const sitemap = await localFetch("/sitemap.xml");
+  assert.equal(sitemap.status, 200);
+  assert.match(await sitemap.text(), /<loc>https:\/\/evgenychef\.com\/<\/loc>/i);
+});
+
+test("provides only functional page anchors and the exact Instagram destination", () => {
+  const anchors = tags(html, "a");
+  assert.ok(anchors.length > 0);
+  const ids = new Set([...html.matchAll(/\bid="([^"]+)"/g)].map(match => decode(match[1])));
+  for (const anchor of anchors) {
+    assert.ok(anchor.href?.startsWith("#") || anchor.href === instagram, `Unexpected link: ${anchor.href}`);
+    if (anchor.href?.startsWith("#") && anchor.href.length > 1) assert.ok(ids.has(decodeURIComponent(anchor.href.slice(1))), `Missing anchor target: ${anchor.href}`);
+    if (anchor.target === "_blank") assert.match(anchor.rel || "", /noopener|noreferrer/);
+  }
+  assert.ok(anchors.some(anchor => anchor.href === instagram));
+  assert.equal(tags(html, "form").length, 0, "This page must not send an automatic inquiry");
+});
+
+test("renders 24 independent documentary collage photos and the real project assets", async () => {
+  const imageTags = tags(html, "img");
+  const collage = [...html.matchAll(/<[^>]+\bclass="[^"]*\bcollage-tile\b[^"]*"[^>]*>[\s\S]*?<img\b([^>]*)>/g)]
+    .map(match => tags(`<img ${match[1]}>`, "img")[0]);
+  assert.equal(collage.length, 24, "The approved collage requires 24 DOM photos");
+  assert.equal(new Set(collage.map(img => img.src)).size, 24, "Collage photos may not repeat");
+  const required = [
+    "/media/chef-hero-apron.jpg",
+    "/media/masterchef/evgen-grybenyk-winner-envelope-2020.jpg",
     "/media/menu/personal-menu-duck-plate-cutout-v1.webp",
   ];
-  const activeBlueprintReferences = `${page}\n${css}`.match(/\/media\/blueprint-backgrounds\/[^"')\s]+/g) ?? [];
-
-  await Promise.all(
-    [...activeBlueprints, ...activeArchiveMedia, ...activeMenuMedia].map((path) =>
-      access(new URL(`public${path}`, root)),
-    ),
-  );
-  await assert.rejects(access(new URL("app/blueprint-diagrams.tsx", root)));
-
-  assert.deepEqual(activeBlueprintReferences.toSorted(), activeBlueprints.toSorted());
-
-  for (const course of [
-    "Стартер",
-    "Холодная закуска",
-    "Горячая закуска",
-    "Рыбный курс",
-    "Освежающая пауза",
-    "Основное блюдо",
-    "Десерт",
-  ]) {
-    assert.ok(page.includes(`"${course}"`), `private-dinner course role must remain live: ${course}`);
-  }
-
-  assert.doesNotMatch(page, /mobileDrawingSrc|mobile-v4/);
-
-  assert.doesNotMatch(page, /PreparationSequence|WorkdayTrajectory|MenuComposition|SourceContour/);
-  assert.equal((page.match(/<svg/g) ?? []).length, 1);
-  assert.match(page, /className="chef-journey-underlay" aria-hidden="true"[\s\S]*?<picture>[\s\S]*?<source[\s\S]*?media="\(max-width: 560px\)"[\s\S]*?masterchef-route-underlay-v3-mobile\.webp[\s\S]*?<source[\s\S]*?media="\(max-width: 900px\)"[\s\S]*?masterchef-route-underlay-v3-tablet\.webp[\s\S]*?<img[\s\S]*?masterchef-route-underlay-v3-desktop\.webp[\s\S]*?alt=""/);
-  assert.doesNotMatch(page, /chefJourneyFlags|chef-journey-(?:map-layer|map-field|route|flag-layer|leaders|point-labels)|data-leader|route-flags|map-mediterranean-full-cc-by-sa/);
-  assert.doesNotMatch(css, /url\([^)]*\.svg|blueprint-figure|workday-trajectory|menu-composition|source-contour/);
-
-  for (const name of [...retiredPseudoBackgrounds, ...retiredDetachedDrawings]) {
-    assert.ok(!`${page}\n${css}`.includes(name), `retired blueprint must not be active: ${name}`);
-  }
-  for (const name of [
-    "masterchef-travel-photoreal-desktop.png",
-    "masterchef-travel-photoreal-mobile.png",
-  ]) {
-    assert.ok(!`${page}\n${css}`.includes(name), `retired generated route must not be active: ${name}`);
-  }
-
-  assert.doesNotMatch(page, /block-drawing|format-drawing|story-origin-drawing/);
-  assert.doesNotMatch(css, /\.block-drawing|\.format-drawing|\.story-origin-drawing/);
-  assert.doesNotMatch(css, /\.story-present::before|\.sources-intro::before|\.source-row(?:(?:-[123])?)::before|\.contact::before/);
-  const archiveSources = page.slice(
-    page.indexOf("const chefJourneyStops"),
-    page.indexOf("function PersonalMenuPlate()"),
-  );
-  assert.equal((archiveSources.match(/\/media\/masterchef\/route-plates\/[^"]+-v2-1024\.webp/g) ?? []).length, 5);
-  assert.equal((archiveSources.match(/\/media\/masterchef\/route-flags\/[^"]+\.svg/g) ?? []).length, 0);
-  assert.doesNotMatch(archiveSources, /number:/);
-  assert.doesNotMatch(page.slice(page.indexOf('className="chef-journey"'), page.indexOf("<EventFormats />")), /stop\.number|<b>0[1-6]<\/b>/);
-  assert.doesNotMatch(archiveSources, /culinary-archive\/(?:01-sauce|02-paella-service|03-ravioli-pass|04-octopus-garnish|05-pistachio-pastry)\.webp|lesson:/);
-  assert.match(page, /className="story-origin-archive-field"[\s\S]*?className="story-origin-lead"[\s\S]*?className="chef-journey-underlay"[\s\S]*?className="story-award"[\s\S]*?className="story-copy"[\s\S]*?className="section-intro story-intro"[\s\S]*?id="story-title"[\s\S]*?className="story-copy-body"[\s\S]*?className="chef-journey"[\s\S]*?role="group"[\s\S]*?aria-labelledby="chef-journey-label"[\s\S]*?aria-describedby="chef-journey-note"/);
-  assert.doesNotMatch(page, /<section className="story"[^>]*>[\s\S]{0,100}<header className="section-intro story-intro"/);
-  assert.doesNotMatch(page, /<section className="chef-journey"|chef-journey-head|chef-journey-title|Пять стран\. Пять блюд\./);
-  assert.match(page, /className="chef-journey-kicker" id="chef-journey-label">[\s\S]*?кухни на карте · 5 стран \/ 5 блюд/);
-  assert.match(page, /className="chef-journey-plate" aria-hidden="true"[\s\S]*?width="1024"[\s\S]*?height="1024"[\s\S]*?alt=""/);
-  assert.doesNotMatch(page, /aria-label=\{`\$\{stop\.number\}/);
-  assert.match(page, /Испания[\s\S]*?Паэлья[\s\S]*?Франция[\s\S]*?Утка с соусом[\s\S]*?Италия[\s\S]*?Равиоли[\s\S]*?Греция[\s\S]*?Осьминог[\s\S]*?Турция[\s\S]*?Фисташковая выпечка/);
-  assert.match(page, /className="chef-journey-cyprus" aria-hidden="true">Кипр<\/span>/);
-  assert.match(page, /<strong>Кипр — авторское меню сегодня\.<\/strong>/);
-  assert.match(page, /Карта и блюда — иллюстрации кухонь пяти стран\./);
-  assert.doesNotMatch(page, /маршрут требует подтверждения|Там я собирал рецепты/);
-  assert.match(page, /className="chef-journey-mobile-key" aria-hidden="true"/);
-  assert.doesNotMatch(page, /recipe-mary-hawker-1691\.webp|map-eastern-mediterranean-1590\.webp/);
-  assert.doesNotMatch(page, /<picture className="story-origin-process-plan"/);
-  assert.match(credits, /Pexels License/);
-  assert.match(credits, /Public Domain Mark/);
-  assert.match(credits, /Mediterranean Sea location map \(blank\)\.svg/);
-  assert.match(credits, /CC BY-SA 3\.0/);
-  assert.match(credits, /Active journey underlays/);
-  assert.match(credits, /1774 × 887[\s\S]*?1254 × 1254[\s\S]*?1086 × 1448/);
-  assert.match(credits, /editorial working set/);
-  assert.match(credits, /not photographs of\s+Evgen Grybenyk/);
-  assert.match(page, /className="home-story-copy"[\s\S]*?className="home-story-day"[\s\S]*?className="home-story-film"[\s\S]*?<ChefStoryVideo \/>[\s\S]*?домашняя кухня · подготовка, огонь, подача/);
-  const homeChapter = page.slice(page.indexOf('className="present-day"'), page.indexOf('className="sources"'));
-  assert.doesNotMatch(homeChapter, /home-story-(?:media|illustration|stages)|workday-four-step-vertical\.png/);
-
-  // The approved annotated-plate amendment replaces the former sourcing gallery.
-  assert.doesNotMatch(page, /sourceScenes|className="source-(?:gallery|sequence|provenance)"/);
-  assert.match(page, /className="personal-menu-shell"[\s\S]*?className="personal-menu-lede personal-menu-lede-secondary"[\s\S]*?<PersonalMenuPlate \/>/);
-  assert.match(page, /function PersonalMenuPlate\(\)/);
-  assert.match(page, /className="menu-plate-composition"\s+aria-label="Четыре элемента композиции блюда: основной продукт, гарнир, текстуры и соус"/);
-  assert.match(page, /src="\/media\/menu\/personal-menu-duck-plate-cutout-v1\.webp"/);
-  assert.match(page, /width="1800"[\s\S]*?height="1665"[\s\S]*?alt="Белая тарелка с нарезанным мясом, гарниром, зеленью и соусами"/);
-  assert.match(page, /className="menu-plate-leaders"[\s\S]*?aria-hidden="true"/);
-  for (const explanation of [
-    "Основной продукт",
-    "Гарнир",
-    "Текстуры",
-    "Соус",
-  ]) assert.ok(page.includes(`<h3>${explanation}</h3>`), `missing plate explanation: ${explanation}`);
-  assert.equal((page.match(/<path d=/g) ?? []).length, 16);
-  assert.equal((page.match(/<circle cx=/g) ?? []).length, 16);
-  assert.doesNotMatch(page, /Свежая зелень|Завершающий акцент, который добавляет свежесть и лёгкость/);
-  assert.doesNotMatch(`${page}\n${css}`, /source-(?:list|row|copy|images|reference-plan)|menu-reference-plan/);
-  assert.doesNotMatch(page, /className="contact(?:-reference-plan|-action)?"|id="contact"|inquiry-spoon-reference-exact\.png/);
-
-  const journeyStart = css.lastIndexOf("/* Quiet-zone MasterChef stage.");
-  const journeyPass = css.slice(
-    journeyStart,
-    css.indexOf("/* Approved event-specific drawings remain", journeyStart),
-  );
-  assert.ok(journeyStart >= 0);
-  assert.match(journeyPass, /\.story-origin-lead\s*\{[^}]*display:\s*block;[^}]*height:\s*auto;[^}]*aspect-ratio:\s*2 \/ 1;[^}]*overflow:\s*hidden;[^}]*isolation:\s*isolate/);
-  assert.match(journeyPass, /\.chef-journey-underlay,[\s\S]*?\.chef-journey-underlay img\s*\{[^}]*position:\s*absolute;[^}]*inset:\s*0;[^}]*z-index:\s*0;[^}]*width:\s*100%;[^}]*height:\s*100%/);
-  assert.match(journeyPass, /\.chef-journey-underlay img\s*\{[^}]*object-fit:\s*contain/);
-  assert.match(journeyPass, /\.story-origin-lead \.story-award\s*\{[^}]*position:\s*absolute;[^}]*z-index:\s*3;[^}]*left:\s*3%;[^}]*width:\s*min\(42%, 520px\);[^}]*background:\s*transparent/);
-  assert.match(journeyPass, /\.story-origin-lead \.story-award img\s*\{[^}]*aspect-ratio:\s*1719 \/ 900;[^}]*object-fit:\s*contain/);
-  assert.match(journeyPass, /\.story-origin-lead \.story-copy\s*\{[^}]*position:\s*absolute;[^}]*z-index:\s*3;[^}]*right:\s*3%;[^}]*width:\s*44%;[^}]*background:\s*transparent/);
-  assert.match(journeyPass, /\.chef-journey\s*\{[^}]*position:\s*absolute;[^}]*z-index:\s*2;[^}]*inset:\s*0;[^}]*pointer-events:\s*none/);
-  assert.match(journeyPass, /\.chef-journey-stops\s*\{[^}]*position:\s*absolute;[^}]*inset:\s*0;[^}]*display:\s*block/);
-  assert.match(journeyPass, /\.chef-journey-stop\s*\{[^}]*position:\s*absolute;[^}]*width:\s*clamp\(82px, 8\.2vw, 118px\)/);
-  for (const id of ["spain", "france", "italy", "greece", "turkey"]) {
-    assert.match(journeyPass, new RegExp(`\\.chef-journey-stop-${id}\\s*\\{[^}]*(?:left|right):[^;]+;[^}]*top:`));
-  }
-  assert.match(journeyPass, /\.chef-journey-plate\s*\{[^}]*aspect-ratio:\s*1 \/ 1;[^}]*overflow:\s*visible;[^}]*background:\s*transparent/);
-  assert.doesNotMatch(journeyPass, /\.chef-journey-plate\s*\{[^}]*clip-path:/);
-  assert.match(journeyPass, /\.chef-journey-plate img\s*\{[^}]*object-fit:\s*contain;[^}]*background:\s*transparent/);
-  assert.doesNotMatch(journeyPass, /\.chef-journey-(?:stop|plate)(?: img)?\s*\{[^}]*(?:border|filter|box-shadow|drop-shadow):/);
-  assert.match(journeyPass, /@media \(max-width:\s*900px\)[\s\S]*?\.story-origin-lead\s*\{[^}]*aspect-ratio:\s*23 \/ 20/);
-  assert.match(journeyPass, /@media \(max-width:\s*900px\)[\s\S]*?\.chef-journey-underlay img\s*\{[^}]*object-fit:\s*cover/);
-  assert.match(journeyPass, /@media \(max-width:\s*560px\)[\s\S]*?\.story-origin-lead\s*\{[^}]*display:\s*grid;[^}]*aspect-ratio:\s*auto/);
-  assert.match(journeyPass, /@media \(max-width:\s*560px\)[\s\S]*?\.story-origin-lead \.story-award\s*\{[^}]*position:\s*relative;[^}]*width:\s*100%/);
-  assert.match(journeyPass, /@media \(max-width:\s*560px\)[\s\S]*?\.story-origin-lead \.story-copy\s*\{[^}]*inset:\s*0;[^}]*width:\s*auto/);
-  assert.match(journeyPass, /@media \(max-width:\s*560px\)[\s\S]*?\.story-origin-lead \.story-copy-body\s*\{[^}]*position:\s*relative;[^}]*grid-column:\s*2 \/ 4/);
-  assert.match(journeyPass, /@media \(max-width:\s*560px\)[\s\S]*?\.story-origin-lead \.story-copy-body > p:first-child\s*\{[^}]*font-size:\s*14px;[^}]*line-height:\s*1\.5/);
-  assert.match(journeyPass, /@media \(max-width:\s*560px\)[\s\S]*?\.chef-journey-stop\s*\{[^}]*width:\s*clamp\(50px, 14vw, 60px\)/);
-  assert.match(journeyPass, /@media \(max-width:\s*560px\)[\s\S]*?\.chef-journey-stop figcaption strong\s*\{[^}]*clip-path:\s*inset\(50%\)/);
-  assert.doesNotMatch(page, /chef-journey-map-layer|chef-journey-flag-layer|chef-journey-leaders|chef-journey-point/);
-  assert.match(css, /\.home-story\s*\{[^}]*display:\s*grid;[^}]*grid-template-columns:\s*repeat\(12,[^}]*max-width:\s*var\(--content\)/);
-  assert.match(css, /\.home-story-copy\s*\{[^}]*grid-column:\s*1 \/ 5;[^}]*max-width:\s*470px/);
-  assert.match(css, /\.home-story-day\s*\{[^}]*grid-column:\s*1 \/ 5;[^}]*grid-row:\s*2;[^}]*border-top:\s*1px solid var\(--rule\)/);
-  assert.match(css, /\.home-story-day > div\s*\{[^}]*grid-template-columns:\s*58px minmax\(0, 1fr\);[^}]*border-bottom:\s*1px solid var\(--rule\)/);
-  assert.match(css, /\.home-story-film\s*\{[^}]*grid-column:\s*5 \/ 13;[^}]*width:\s*100%/);
-  assert.match(css, /\.home-story-film video\s*\{[^}]*aspect-ratio:\s*4 \/ 3;[^}]*object-fit:\s*cover/);
-  assert.doesNotMatch(css, /\.home-story-(?:media|illustration|stages)/);
-  assert.doesNotMatch(css, /\.present-day-accessible|\.story-present-process-/);
-
-});
-
-test("uses the measured Trivium typography on the approved editorial surfaces", async () => {
-  const [css, favicon] = await Promise.all([
-    source("app/globals.css"),
-    source("public/favicon.svg"),
-  ]);
-
-  for (const value of [
-    'font-family: "Cormorant Garamond"',
-    'font-family: "Montserrat"',
-    "--paper: #f4efe5",
-    "--paper-light: #fcfaf5",
-    "--ink: #0a0a0a",
-    "--accent: #a0792e",
-    "--accent-small: #72561f",
-    "--muted: #6e665a",
-    "--rule: #c8c0b3",
-    ".story-origin",
-    ".home-story",
-    ".personal-menu-shell",
-  ]) assert.ok(css.includes(value), `missing editorial-system marker: ${value}`);
-
-  assert.doesNotMatch(css, /font-family:\s*"(?:Roboto Flex|Literata|Oranienbaum|Onest)"|--rust/);
-  for (const path of Object.keys(exactTriviumFonts)) {
-    assert.ok(css.includes(path.replace("public", "")), `missing exact Trivium webfont source: ${path}`);
-  }
-  assert.doesNotMatch(css, /\.ttf\b|format\(["']truetype["']\)|\blocal\(/i);
-  assert.match(css, /text-rendering:\s*auto/);
-  const faceBlocks = css.match(/@font-face\s*\{[^}]+\}/g) ?? [];
-  const fontSpecs = [
-    {
-      family: "Cormorant Garamond",
-      style: "italic",
-      weights: [300, 400],
-      file: (subset) => `/fonts/cormorant-garamond-v21-${subset}-italic.woff2`,
-    },
-    {
-      family: "Cormorant Garamond",
-      style: "normal",
-      weights: [300, 400, 600, 700],
-      file: (subset) => `/fonts/cormorant-garamond-v21-${subset}-normal.woff2`,
-    },
-    {
-      family: "Montserrat",
-      style: "normal",
-      weights: [300, 400, 500, 600],
-      file: (subset) => `/fonts/montserrat-v31-${subset}-normal.woff2`,
-    },
-  ];
-
-  for (const { family, style, weights, file } of fontSpecs) {
-    for (const weight of weights) {
-      for (const [subset, unicodeRange] of Object.entries(exactTriviumSubsetRanges)) {
-        const matches = faceBlocks.filter((block) =>
-          block.includes(`font-family: "${family}"`) &&
-          block.includes(`font-style: ${style};`) &&
-          block.includes(`font-weight: ${weight};`) &&
-          block.includes(`src: url("${file(subset)}") format("woff2");`) &&
-          block.includes(`unicode-range: ${unicodeRange};`) &&
-          block.includes("font-display: swap;"),
-        );
-        assert.equal(matches.length, 1, `missing exact ${family} ${style} ${weight} ${subset} face`);
-      }
-    }
-  }
-
-  assert.equal(faceBlocks.length, 50);
-  assert.equal((css.match(/font-family:\s*"Cormorant Garamond"/g) ?? []).length, 30);
-  assert.equal((css.match(/font-family:\s*"Montserrat"/g) ?? []).length, 20);
-  assert.match(css, /\.hero h1\s*\{[^}]*font:\s*300 clamp\(50px, 4\.45vw, 64px\)\/\.89 var\(--font-display\)/);
-  assert.match(css, /\.section-intro h2\s*\{[^}]*font:\s*400 clamp\(32px, 4vw, 48px\)\/1\.2 var\(--font-display\)/);
-
-  assert.match(css, /\.story-copy p\s*\{[^}]*font:\s*300 16px\/1\.7 var\(--font-sans\)/);
-  assert.match(css, /\.personal-menu-lede\s*\{[^}]*color:\s*var\(--muted\);[^}]*font:\s*300 clamp\(16px, 1\.45vw, 20px\)\/1\.75 var\(--font-sans\)/);
-  assert.match(css, /\.menu-plate-note p\s*\{[^}]*font:\s*300 clamp\(14px, 1\.05vw, 15px\)\/1\.5 var\(--font-sans\)/);
-  assert.match(css, /\.story-award\s*\{[^}]*grid-column:\s*1 \/ 7/);
-  assert.match(css, /\.story-copy\s*\{[^}]*grid-column:\s*8 \/ 13/);
-  assert.match(css, /\.story-sequence\s*\{[^}]*max-width:\s*var\(--content\)/);
-  assert.match(css, /\.home-story\s*\{[^}]*max-width:\s*var\(--content\)/);
-  assert.doesNotMatch(css, /\.story-formats/);
-  assert.doesNotMatch(css, /\.formats-intro/);
-
-  assert.doesNotMatch(css, /\.story-origin\s*\{[^}]*border-bottom/);
-  assert.match(css, /\.present-day\s*\{[^}]*background:\s*var\(--paper-light\)/);
-  assert.match(css, /\.home-story-film video\s*\{[^}]*aspect-ratio:\s*4 \/ 3/);
-
-  assert.match(css, /\.story-origin\s*\{\s*display:\s*grid;\s*grid-template-columns:\s*repeat\(12, minmax\(0, 1fr\)\);\s*gap:\s*14px;\s*align-items:\s*start/);
-  assert.match(css, /\.story-award\s*\{[^}]*grid-column:\s*1 \/ 5;[^}]*grid-row:\s*1;[^}]*width:\s*auto/);
-  assert.match(css, /\.story-copy\s*\{[^}]*display:\s*block;[^}]*grid-column:\s*5 \/ 13;[^}]*grid-row:\s*1/);
-
-  assert.match(css, /\.story-award,\s*\.story-award img\s*\{[^}]*height:\s*clamp\(196px, 56vw, 218px\);[^}]*aspect-ratio:\s*auto/);
-  assert.match(css, /\.story-copy p\s*\{\s*color:\s*var\(--ink\);\s*font-size:\s*14px;\s*font-weight:\s*300;\s*line-height:\s*1\.55/);
-  assert.match(css, /\.hero-central-spread\s*\{[^}]*grid-template-columns:\s*minmax\(0, 56fr\) minmax\(0, 44fr\)/);
-  assert.doesNotMatch(css, /overflow-x:\s*auto/);
-  assert.doesNotMatch(css, /--forest|#18382f|#193d32|#153f37/i);
-  assert.match(css, /\.story\s*\{[^}]*background:\s*var\(--paper\)/);
-  assert.doesNotMatch(css, /\.contact(?:-reference-plan|-action)?\b/);
-  assert.match(css, /\.site-footer\s*\{[^}]*background:\s*var\(--paper-light\)/);
-
-  assert.match(css, /\.header-action\s*\{[^}]*font-family:\s*var\(--font-sans\);[^}]*font-size:\s*11\.2px/);
-  assert.match(css, /\.header-action\s*\{[^}]*color:\s*var\(--accent-small\);[^}]*font-size:\s*11\.2px;[^}]*font-weight:\s*600;[^}]*line-height:\s*1\.35;[^}]*letter-spacing:\s*\.14em/);
-  assert.match(css, /\.site-footer > a:first-child\s*\{[^}]*font:\s*600 24px\/1\.1 var\(--font-display\)/);
-  assert.match(css, /\.site-footer > a:last-child\s*\{[^}]*font-size:\s*14\.72px/);
-  assert.match(favicon, /fill="#193D32"/);
-  assert.match(favicon, /stroke="#B24F2F"/);
-  assert.match(favicon, /fill="#FFF9EE"/);
-  assert.match(css, /html\s*\{[^}]*background:\s*var\(--paper\)/);
-  assert.doesNotMatch(css, /(?:background(?:-image)?\s*:[^;}]*|box-shadow\s*:[^;}]*)(?:linear-gradient|radial-gradient)|mesh-gradient|glassmorphism|drop-shadow/i);
-});
-
-test("applies outcome-specific actions and interaction-only motion", async () => {
-  const [page, css, motion] = await Promise.all([
-    source("app/page.tsx"),
-    source("app/globals.css"),
-    source("app/media-motion.tsx"),
-  ]);
-
-  assert.equal((page.match(/Обсудить вечер в Instagram @evg\.chef/g) ?? []).length, 1);
-  assert.equal((page.match(/Обсудить меню в Instagram @evg\.chef/g) ?? []).length, 1);
-  assert.match(page, />\s*обсудить вечер <span aria-hidden="true">↗<\/span>/);
-  assert.match(page, /className="personal-menu-action"[\s\S]*?href=\{instagramUrl\}[\s\S]*?target="_blank"[\s\S]*?rel="noreferrer"[\s\S]*?>\s*обсудить меню/);
-  assert.doesNotMatch(page, /<span>обсудить вечер<\/span>|href="#contact"|id="contact"/);
-  assert.match(css, /--motion-feedback:\s*160ms ease-out/);
-  assert.match(css, /html\s*\{[^}]*scroll-behavior:\s*smooth/);
-  assert.match(css, /@media \(prefers-reduced-motion: reduce\)\s*\{\s*html\s*\{\s*scroll-behavior:\s*auto/);
-  assert.match(css, /\.header-action:active\s*\{\s*transform:\s*translateY\(1px\)/);
-  assert.doesNotMatch(css, /\.contact-action/);
-  assert.doesNotMatch(css, /animation:|animation-timeline|:hover\s+img|parallax|marquee/);
-  assert.equal((css.match(/clip-path:/g) ?? []).length, 1, "only the accessible mobile dish label uses clipping");
-  assert.match(css, /\.chef-journey-plate\s*\{[^}]*overflow:\s*visible/);
-  assert.doesNotMatch(css, /font(?:-size)?:\s*(?:[^;]*\s)?(?:8|9|10)px\b/);
-  assert.match(motion, /prefers-reduced-motion: reduce/);
-  assert.match(motion, /IntersectionObserver/);
-  assert.doesNotMatch(motion, /chef-media-motion|MediaMotionControl|data-media-paused|CustomEvent/);
-});
-
-test("preserves the approved story, personal menu and accessibility", async () => {
-  const [page, video, layout, config, favicon] = await Promise.all([
-    source("app/page.tsx"),
-    source("app/chef-story-video.tsx"),
-    source("app/layout.tsx"),
-    source("app/site-config.ts"),
-    source("public/favicon.svg"),
-  ]);
-
-  for (const text of [
-    "От MasterChef",
-    "Я —",
-    "Меню появляется",
-    "после разговора.",
-    "Вы рассказываете, что любите, каким будет ваш вечер и что важно учесть.",
-    "Каждое блюдо — это комбинация вкуса, текстур и сезонных продуктов.",
-    "обсудить меню",
-  ]) assert.ok(page.includes(text));
-  for (const rejected of [
-    "Я не работаю по меню",
-    "Хотите ягнёнка? — еду за ним в горы.",
-    "Нужна рыба? — еду в порт к рыбакам.",
-    "Свежие овощи и фрукты? — только с кипрских ферм.",
-    "как рождается блюдо",
-    "Внимание",
-    "к деталям.",
-    "Каждое блюдо — это сочетание",
-  ]) assert.ok(!page.includes(rejected), `rejected sourcing copy must be absent: ${rejected}`);
-  assert.doesNotMatch(page, /Победитель «МастерШеф\. Профессионалы — 2»/);
-
-  assert.doesNotMatch(page, /\/media\/sourcing\//);
-  assert.match(page, /src="\/media\/menu\/personal-menu-duck-plate-cutout-v1\.webp"/);
-  assert.equal((page.match(/className="personal-menu-action"/g) ?? []).length, 1);
-  assert.doesNotMatch(page, /cyprus-sheep-herd|larnaca-fish-market-seller|kissonerga-meat-counter|fishermen-catch|cyprus-strawberry-greenhouse/);
-  const sourcingCss = await source("app/globals.css");
-  assert.doesNotMatch(`${page}\n${sourcingCss}`, /source-(?:list|row|copy|images|reference-plan)|menu-reference-plan/);
-
-  assert.match(page, /className="skip-link" href="#main-content"/);
-  assert.doesNotMatch(page, /className="contact(?:-reference-plan|-action)?"|id="contact"|inquiry-spoon-reference-exact\.png|Расскажите мне,/);
-  assert.doesNotMatch(page, /className="contact-art"|chef-story-brush-villa\.png/);
-  assert.match(page, /target="_blank"[\s\S]*?rel="noreferrer"/);
-  assert.match(layout, /<html lang="ru">/);
-  assert.match(layout, /metadataBase: new URL\(SITE_URL\)/);
-  assert.match(config, /Евгений Грыбенюк/);
-  assert.doesNotMatch(`${page}\n${config}\n${favicon}`, /Грыбеник/);
-  assert.match(video, /muted/);
-  assert.match(video, /loop/);
-  assert.match(video, /playsInline/);
-  assert.match(video, /preload="none"/);
-  assert.match(video, /kind="captions"/);
-  assert.match(video, /chef-story-img-5399-poster\.jpg/);
-  assert.match(video, /chef-story-img-5399-no-grill\.mp4/);
-  assert.match(video, /chef-story-img-5399-no-grill\.ru\.vtt/);
-  assert.doesNotMatch(video, /chef-story-home-minimal/);
-  assert.doesNotMatch(video, /\bautoPlay\b|\bcontrols\b/);
-});
-
-test("keeps readability-specific desktop, tablet and narrow-phone geometry", async () => {
-  const css = await source("app/globals.css");
-
-  assert.match(css, /\.story-intro\s*\{\s*margin-bottom:\s*clamp\(48px, 5vw, 72px\)/);
-  const personalMenuPass = css.slice(css.indexOf(".personal-menu-shell {"), css.indexOf(".site-footer {"));
-  assert.match(personalMenuPass, /\.personal-menu-shell\s*\{[^}]*max-width:\s*var\(--content\)/);
-  assert.match(personalMenuPass, /\.personal-menu-lede-secondary\s*\{[^}]*margin-top:\s*clamp\(14px, 1\.6vw, 22px\)/);
-  assert.match(personalMenuPass, /\.menu-plate-photo\s*\{[^}]*width:\s*62\.5%;[^}]*height:\s*auto/);
-  assert.match(personalMenuPass, /\.menu-plate-leaders path\s*\{[^}]*stroke:\s*var\(--accent-small\);[^}]*stroke-width:\s*1\.1/);
-  assert.match(personalMenuPass, /@media \(max-width:\s*1000px\)[\s\S]*?\.menu-plate-leaders-tablet\s*\{[^}]*display:\s*block/);
-  assert.doesNotMatch(personalMenuPass, /\.personal-menu-(?:rule|detail|detail-heading|detail-copy)\b/);
-  assert.match(personalMenuPass, /@media \(max-width:\s*620px\)[\s\S]*?\.menu-plate-photo\s*\{[^}]*width:\s*100%/);
-  assert.doesNotMatch(css, /\.source-gallery\b|\.source-scene\b/);
-  assert.doesNotMatch(css, /\.source-(?:list|row|copy|images|reference-plan)\b|\.menu-reference-plan\b/);
-  assert.doesNotMatch(css, /min-height:\s*(?:700|600|392)px/);
-  assert.doesNotMatch(css, /padding:\s*26px 0 154px/);
-
-  const tabletDown = css.slice(css.indexOf("@media (max-width: 820px)"), css.indexOf("@media (min-width: 561px) and (max-width: 820px)"));
-  const tablet = css.slice(css.indexOf("@media (min-width: 561px) and (max-width: 820px)"), css.indexOf("@media (max-width: 560px)"));
-  assert.match(tabletDown, /\.hero-stage\s*\{[^}]*height:\s*clamp\(720px, calc\(100svh - 70px\), 954px\)/);
-  assert.match(tabletDown, /\.hero-central-spread\s*\{[^}]*grid-template-columns:\s*minmax\(0, 56fr\) minmax\(0, 44fr\)/);
-  assert.match(tablet, /\.story-award\s*\{\s*grid-column:\s*1 \/ 6/);
-  assert.match(tablet, /\.story-copy\s*\{\s*grid-column:\s*6 \/ 13/);
-
-  assert.match(tabletDown, /\.home-story-copy\s*\{[^}]*grid-column:\s*1 \/ 6/);
-  assert.match(tabletDown, /\.home-story-film\s*\{[^}]*grid-column:\s*6 \/ 13;[^}]*width:\s*100%/);
-  assert.match(css.slice(css.indexOf("@media (max-width: 1100px)"), css.indexOf("@media (max-width: 1024px)")), /\.home-story-day\s*\{[^}]*grid-column:\s*1 \/ -1;[^}]*grid-template-columns:\s*repeat\(3,/);
-
-  const phone = css.slice(css.indexOf("@media (max-width: 560px)"), css.indexOf("@media (max-width: 430px)"));
-  assert.match(phone, /\.present-day\s*\{\s*padding:\s*34px 18px 30px/);
-  assert.match(phone, /\.home-story\s*\{[^}]*grid-template-columns:\s*repeat\(12,[^}]*gap:\s*28px 10px/);
-  assert.match(phone, /\.home-story-film\s*\{[^}]*grid-column:\s*1 \/ -1;[^}]*width:\s*100%/);
-  assert.match(phone, /\.home-story-day\s*\{[^}]*grid-column:\s*1 \/ -1;[^}]*grid-row:\s*2;[^}]*display:\s*block/);
-  assert.doesNotMatch(phone, /\.home-story-(?:media|illustration|stages)/);
-  assert.doesNotMatch(phone, /\.present-day-accessible|\.story-present-process-/);
-  const menuPhone = personalMenuPass.slice(personalMenuPass.indexOf("@media (max-width: 620px)"));
-  assert.match(menuPhone, /\.personal-menu-lede\s*\{[^}]*font-size:\s*16px;[^}]*line-height:\s*1\.62/);
-  assert.match(menuPhone, /\.menu-plate-note p\s*\{[^}]*font-size:\s*14px/);
-  assert.match(menuPhone, /\.menu-plate-stage\s*\{[^}]*height:\s*clamp\(720px, 190vw, 780px\)/);
-  assert.match(menuPhone, /\.menu-plate-leaders-phone\s*\{[^}]*display:\s*block/);
-  assert.match(menuPhone, /\.personal-menu-action\s*\{[^}]*width:\s*100%;[^}]*min-height:\s*58px/);
-  assert.match(phone, /\.site-footer\s*\{[^}]*grid-template-columns:\s*1fr;[^}]*gap:\s*6px;[^}]*padding:\s*14px 18px 18px/);
-  assert.match(css, /\.site-footer\s*\{[^}]*grid-template-columns:\s*1fr auto/);
-  assert.doesNotMatch(css, /\.site-footer nav|\.contact(?:-reference-plan|-action)?\b/);
-
-  assert.match(css, /@media \(max-width: 400px\)[\s\S]*?\.wordmark\s*\{[^}]*font-size:\s*18px;[^}]*letter-spacing:\s*\.08em/);
-  assert.match(css, /@media \(max-width: 820px\)[\s\S]*?\.site-header\s*\{[^}]*min-height:\s*70px/);
-  assert.match(css, /@media \(max-width: 400px\)[\s\S]*?\.header-action\s*\{[^}]*font-size:\s*11\.2px;[^}]*letter-spacing:\s*\.08em/);
-  assert.match(css, /@media \(max-width: 380px\)[\s\S]*?\.header-action span\s*\{\s*display:\s*inline;\s*margin-left:\s*4px/);
-  assert.doesNotMatch(css, /background:\s*var\(--ink\);[\s\S]{0,180}\.hero-(?:stage|media|collage-tile|apron)/);
-});
-
-test("keeps records and rejects the obsolete visible-system files", async () => {
-  await Promise.all([
-    "AGENTS.md",
-    "docs/DESIGN_AUDIT.md",
-    "docs/DESIGN_REFERENCE_MAP.md",
-    "docs/DESIGN_SYSTEM.md",
-    "docs/WEBSITEFACTORY_REFERENCE_RESEARCH_2026-09-01.md",
-    "public/media/blueprint-backgrounds/workday-plan.webp",
-    "public/media/blueprint-backgrounds/menu-plate-plan.webp",
-    "public/media/blueprint-backgrounds/meat-cut-plan.webp",
-    "public/media/blueprint-backgrounds/fish-cut-plan.webp",
-    "public/media/blueprint-backgrounds/produce-balance-plan.webp",
-    "public/media/blueprint-backgrounds/contact-spoon-plan.webp",
-    "public/media/blueprint-backgrounds/masterchef-recipes-europe.png",
-    "public/media/blueprint-backgrounds/private-dinner-seven-course.png",
-    "public/media/blueprint-backgrounds/private-dinner-process-v2.png",
-    "public/media/blueprint-backgrounds/private-dinner-calculation-process.png",
-    "public/media/blueprint-backgrounds/private-event-canape-studies.png",
-    "public/media/blueprint-backgrounds/private-event-production-calculation.png",
-    "public/media/blueprint-backgrounds/masterclass-six-person-learning-process.png",
-    "public/media/blueprint-backgrounds/masterchef-recipes-europe-layout-color-v2.png",
-    "public/media/blueprint-backgrounds/masterchef-travel-photoreal-desktop.png",
-    "public/media/blueprint-backgrounds/masterchef-travel-photoreal-mobile.png",
-    "public/media/blueprint-backgrounds/masterchef-route-underlay-v3-desktop.webp",
-    "public/media/blueprint-backgrounds/masterchef-route-underlay-v3-tablet.webp",
-    "public/media/blueprint-backgrounds/masterchef-route-underlay-v3-mobile.webp",
-    "public/media/blueprint-backgrounds/private-dinner-layout-color-v2.png",
-    "public/media/blueprint-backgrounds/private-event-layout-color-v2.png",
-    "public/media/blueprint-backgrounds/masterclass-six-person-layout-color-v2.png",
-    "public/media/blueprint-backgrounds/private-dinner-event-concept-v3.png",
-    "public/media/blueprint-backgrounds/private-event-circulation-concept-v3.png",
-    "public/media/blueprint-backgrounds/masterclass-learning-concept-v3.png",
-    "public/media/blueprint-backgrounds/private-dinner-compact-mobile-v5.webp",
-    "public/media/blueprint-backgrounds/private-event-compact-mobile-v5.webp",
-    "public/media/blueprint-backgrounds/masterclass-compact-mobile-v5.webp",
-    "public/media/blueprint-backgrounds/workday-four-step-vertical.png",
-    "artifacts/home-evening-video-2026-09-09/rejected-ai-storyboard-v1.png",
-    "artifacts/home-evening-video-2026-09-09/CONCEPT.md",
-    "public/media/blueprint-backgrounds/personal-menu-reference-exact.png",
-    "public/media/blueprint-backgrounds/meat-reference-exact.png",
-    "public/media/blueprint-backgrounds/fish-reference-exact.png",
-    "public/media/blueprint-backgrounds/produce-reference-exact.png",
-    "public/media/blueprint-backgrounds/inquiry-spoon-reference-exact.png",
-    "docs/references/ideal-remaining-blueprints-2026-09-02.png",
-    "public/media/chef-hero-apron.jpg",
-    "public/media/chef-story-img-5399-no-grill.mp4",
-    "public/media/chef-story-img-5399-poster.jpg",
-    "public/media/chef-story-home-minimal.mp4",
-    "public/media/chef-story-home-minimal-poster.jpg",
-    "public/media/chef-story-home-minimal.ru.vtt",
-    "public/media/masterchef/evgen-grybenyk-winner-envelope-2020.jpg",
-    "public/media/event-formats/private-dinner.jpg",
-    "public/media/event-formats/private-event-outdoor-crepes.png",
-    "public/media/event-formats/private-event-canapes-v3.webp",
-    "public/media/event-formats/masterclass.jpg",
-    "public/media/optimized/gallery-dish.webp",
-    "public/fonts/CORMORANT-GARAMOND-OFL.txt",
-    "public/fonts/MONTSERRAT-OFL.txt",
-    ...Object.keys(exactTriviumFonts),
-    ...Array.from(
-      { length: 40 },
-      (_, index) => `public/media/hero-instagram/hero-${String(index + 1).padStart(2, "0")}.webp`,
-    ),
-  ].map((path) => access(new URL(path, root))));
-
-  await assert.rejects(access(new URL("app/hero-blur-preview/page.tsx", root)));
-  await assert.rejects(access(new URL("app/hero-mosaic-video.tsx", root)));
-  await assert.rejects(access(new URL("app/blueprint-diagrams.tsx", root)));
-  await assert.rejects(access(new URL("public/media/storyboards/home-evening-storyboard-v1.png", root)));
-  await Promise.all(obsoleteTtfFonts.map((path) => assert.rejects(access(new URL(path, root)))));
-
-  for (const [path, expectedHash] of Object.entries(exactTriviumFonts)) {
-    const bytes = await readFile(new URL(path, root));
-    assert.equal(bytes.subarray(0, 4).toString("ascii"), "wOF2", `${path} must be a WOFF2 binary`);
-    assert.equal(await sha256(path), expectedHash, `${path} must stay byte-identical to Trivium's served payload`);
-  }
-
-  for (const [path, expectedHash] of Object.entries(exactRemainingReferenceCrops)) {
-    assert.equal(await sha256(path), expectedHash, `${path} must stay byte-identical to the approved screenshot crop`);
-  }
-});
-
-test("renders all three services with accessible live copy and complete food captions", async () => {
-  const [page, component] = await Promise.all([
-    source("app/page.tsx"), source("app/event-format-sheets.tsx"),
-  ]);
-  // Compile the small server component with the project's existing compiler, without a browser dependency.
-  const { outputText } = ts.transpileModule(component, {
-    compilerOptions: { jsx: ts.JsxEmit.ReactJSX, module: ts.ModuleKind.CommonJS, esModuleInterop: true },
-  });
-  const compiledComponent = { exports: {} };
-  new Function("require", "module", "exports", outputText)(createRequire(import.meta.url), compiledComponent, compiledComponent.exports);
-  const data = page.slice(page.indexOf("const eventFormats"), page.indexOf("const chefJourneyStops"))
-    .replace("satisfies EventFormat[]", "");
-  const { eventFormats, privateDinnerCourses } = new Function(`${data}; return { eventFormats, privateDinnerCourses };`)();
-  const html = renderToStaticMarkup(createElement(compiledComponent.exports.default, {
-    formats: eventFormats, courses: privateDinnerCourses,
+  for (const path of required) assert.ok(imageTags.some(img => img.src === path), `Missing real asset: ${path}`);
+  for (const img of imageTags) assert.ok(Object.hasOwn(img, "alt"), `Image requires alt, including decorative empty alt: ${img.src}`);
+  await Promise.all([...new Set([...collage.map(img => img.src), ...required])].map(async path => {
+    const response = await localFetch(path, { method: "HEAD" });
+    assert.equal(response.status, 200, `Image must be available: ${path}`);
+    assert.match(response.headers.get("content-type") || "", /^image\//);
   }));
-  assert.equal((html.match(/<section /g) ?? []).length, 3);
-  assert.equal((html.match(/<h3 /g) ?? []).length, 3);
-  let cursor = -1;
-  for (const format of eventFormats) {
-    const next = html.indexOf(`<section id="${format.id}" aria-labelledby="${format.id}-title">`);
-    assert.ok(next > cursor, "services retain their approved reading order");
-    cursor = next;
-    assert.ok(html.includes(`<h3 id="${format.id}-title">${format.name}</h3>`));
-    assert.ok(html.includes(format.description));
-    assert.ok(html.includes(`alt="${format.alt}"`));
-  }
-  for (const label of [...privateDinnerCourses, "Нарезка", "Замес", "Лепка", "Соусы", "Обжарка", "Подача"]) {
-    assert.ok(html.includes(`>${label}<`), `caption remains live text: ${label}`);
-  }
-  const images = new Set([...html.matchAll(/src="([^"]+)"/g)].map(match => match[1]));
-  await Promise.all([...images].map(path => access(new URL(`public${path}`, root))));
-  assert.equal(images.size, 6, "three documentary photos and three food scenes load once each");
-  assert.doesNotMatch(html, /Готовит шеф|format-process-plan|design\/mockups/);
+});
+
+test("serves the original documentary video and poster with usable byte ranges", async () => {
+  const videos = tags(html, "video");
+  assert.equal(videos.length, 1);
+  assert.equal(videos[0].poster, "/media/chef-story-img-5399-poster.jpg");
+  assert.ok(!Object.hasOwn(videos[0], "autoplay"), "The film starts on an explicit user action");
+  assert.ok(Object.hasOwn(videos[0], "playsinline"));
+  const videoPath = "/media/chef-story-img-5399-no-grill.mp4";
+  assert.ok(tags(html, "source").some(source => source.src === videoPath && source.type === "video/mp4"));
+  const poster = await localFetch(videos[0].poster, { method: "HEAD" });
+  assert.equal(poster.status, 200);
+  const video = await localFetch(videoPath, { headers: { Range: "bytes=0-1023" } });
+  assert.equal(video.status, 206, "Video range requests must support seeking");
+  assert.match(video.headers.get("content-type") || "", /^video\/mp4/);
+  assert.match(video.headers.get("content-range") || "", /^bytes 0-1023\/\d+$/);
+  assert.equal((await video.arrayBuffer()).byteLength, 1024);
 });

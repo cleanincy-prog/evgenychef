@@ -1,3 +1,80 @@
+## Текущая карандашная сцена V6 — 2026-09-11
+
+Последнее уточнение пользователя: шеф смотрит вниз в блокнот, пишет, и выполнен тем же карандашным материалом, что женщина. Новое фото — user-chef-photo-011309.png. V2–V5 не являются одобренными портретами. Текущий PNG: conversation-evgen-light-pencil-v6.png. Контент рисунка проверен независимо; текущий visual-qa прошёл7/7ширин с V6. Независимый финальный просмотр всех семи PNG завершён: блокнот и пишущая рука видны, рисунок целый, новых наложений и шаблонных элементов нет. Полный актуальный отчёт, список файлов, ограничения и промпт: CHEF_PENCIL_CURRENT_REPORT.md. Эта правка не вводит UI-компоненты, новые CSS-токены, библиотеки или шаблонную композицию.
+
+## Шеф4: настоящий шеф в карандашной сцене — 2026-09-11
+
+Завершена замена вымышленного повара в «Разговоре» на рисунок Евгения по chef-hero-apron.jpg. Источники, pre-code аудит/план, полный промпт, список файлов и итог: CHEF_PENCIL_IDENTITY_2026-09-11.md. Проверены 1440/1280/1024/768/430/390/375: 7/7 PASS, пять HTTP-тестов PASS, видео и error/retry PASS. Независимый просмотр всех семи скриншотов подтвердил целую иллюстрацию, сходство с референсом, сохранённые женскую фигуру/позы/композицию и отсутствие новых шаблонных элементов. В пользовательской вкладке открыт текущий Шеф4 на 127.0.0.1:3004/#plan-title. Только src/alt в интерфейсе изменены; CSS/шрифты/фотографии сохранены. Блокеров нет; иллюстрация интерпретирует другой ракурс и не является доказательством события.
+
+# CURRENT LOCAL AUDIT — «План вечера», 2026-09-10
+
+## Media recovery — 2026-09-11
+
+User reported non-playing video and a missing pencil illustration. The original MP4 and both PNG assets were present in the isolated copy. In the user's existing in-app tab, the conversation PNG was loaded (naturalWidth1536), the toast PNG was failed (naturalWidth0), and the video had readyState0 with retry UI. Restarting localhost and reloading this same tab restored both original1536px illustrations and actual video playback (readyState4, time advanced to10.47s). No layout, CSS, photographs, generated assets or copy changed. The approved reference map/system still apply; no new visual decision or template element was introduced. A separate project-local detached launcher is being verified so the server is not tied to the transient command session. This is runtime recovery, not a redesign.
+
+
+## Root handoff verification — 2026-09-10
+
+Финальная локальная сборка, lint, TypeScript и 5 HTTP-тестов прошли. Последний браузерный прогон `artifacts/evening-plan-local/qa-report.json` прошёл на всех семи ширинах и подтвердил восстановление видео после ошибки кнопкой «Повторить». Root выполнил read-only сравнение оригинала с baseline: 726 файлов, общий SHA-256 и raw Git-статус совпали. Подробный итог и список файлов — `artifacts/evening-plan-local/REPORT.md`. Запуск только 127.0.0.1:3001; публикации не было.
+
+
+Status: **local interface implemented; seven-width browser verification and independent final anti-template audit completed**. The latest user instruction approves the evening-plan desktop/mobile mockups for implementation ONLY in this independent copy. It supersedes old “proposal only”, 94-photo, geography and publication directions below. Original folder, hosting and evgenychef.com are untouchable; localhost only.
+
+## Final local implementation and independent anti-template result
+
+Final evidence: `artifacts/evening-plan-local/qa-report.json`, run **2026-09-10 17:08:49–17:09:08 UTC**, reports PASS at all seven widths: **1440, 1280, 1024, 768, 430, 390, 375px**. Independently inspected all seven final `page-W.png` screenshots against the approved desktop/mobile mockups after the final corrections, rather than relying only on automated success.
+
+- Approved sequence is implemented: curated documentary-frame identity, compact real MasterChef proof, three open comparison rows, one four-station process and same-paper Instagram invitation. Actual photographs/video/plate remain the specified sources. The page is live text/media/controls, not a whole-page raster.
+- The initially cropped event photo was corrected to `contain`; all three service images retain genuine head/hands/working context. Source vertical dinner and documentary-film proportions deliberately differ from generated mockup apertures. The Hero portrait uses source-aware CSS cropping; photo colours remain untouched.
+- Wide service/process body is 18px. The incoming/outgoing route around 03 is separated, and the outgoing 03→04 segment now avoids the local “Соус” annotation. Station 04 has 210px upper padding above 1100px, preserving clear separation from the whole plate at 1440/1280; the 1024 layout also remains clear.
+- Tablet/mobile have their own vertical reading sequence and left line. The line now ends at station 04, without a decorative tail below it. The full plate, short four-note labels, live headings, film button and contact remain readable; no media/text/route collision was found in the final seven screenshots.
+- No repeated heavy cards, generic SaaS block sequence, decorative gradients/shadows/glass, unjustified stock icons, fake testimonials or invented business claims were introduced. Open parallel format rows are justified by comparison; the four process stations have content-derived spatial roles. The new graphite conversation/toast assets are plainly illustrations of service stages, not evidence of actual events.
+- Every major block traces to the approved local reference map. No new UI-library theme or unreferenced visual style was used. CSS `grayscale(1) contrast(1.25)` plus multiply applies only to the generated process illustrations to integrate their paper; real documentary media is unfiltered.
+
+Automated browser evidence: document/body width matches every target width; zero oversized elements; all visible images load; collage contains 24 distinct DOM sources and shows 24 above the phone breakpoint / 14 on phones. The plate uses `contain` and is not clipped. All anchors point to an existing local anchor or the exact Instagram account. The final action is keyboard reachable with a 2px visible outline and a 54/56px target height. Browser/page/local-network error counts are zero and the page attempts zero external requests. Loopback response carries the noindex header.
+
+Actual film playback was exercised: original 720×1280 video, duration approximately 37.17 seconds, native controls present, time advanced and paused without media error. A separate intentional HTTP 404 verified the preserved original poster, retry action and readable failure status. Reduced-motion preference was active for reproducible captures; film starts only on explicit user action.
+
+Remaining boundaries: screenshots/test run cover local Chrome at the specified widths, not a physical iOS/Safari session or Instagram message sending. The local UI/source-fit decisions are complete. Final original-integrity comparison, complete launch/build report and final user handoff are owned by the root task; this independent visual audit does **not** claim a newly performed hash verification or publication. No publication was part of this audit.
+
+## Inspection completed before interface code
+
+Read complete `AGENTS.md`, current `app/page.tsx`, layout/site structure, `app/chef-story-video.tsx`, `app/media-motion.tsx`, relevant service-sheet and global CSS code, self-hosted font inventory, package/root README and latest relevant DESIGN_REFERENCE_MAP / DESIGN_SYSTEM sections. Read approved mockup README and PROMPTS. BOTH PNGs were visually inspected: desktop 948×1659; mobile 960×1638, two sequential excerpts of ONE page. Presentation labels/gutter are not interface content.
+
+Real source assets confirmed: smiling `chef-hero-apron.jpg`, winner envelope photo, three service photographs, whole menu plate, film/poster. Cormorant Garamond/Montserrat local Latin/Cyrillic WOFF2 files remain the type sources.
+
+## Findings
+
+The existing design has its own identity; no stock UI-library theme was found. Its mismatch is repeated visual material: 94-frame collage, long award/geography story, three full food sheets, independent home-film and menu chapters. These compete before a visitor can understand how their evening is planned. Existing historical CSS contains incompatible per-section responsive geometries and must not accidentally control the new composition.
+
+| Existing element | Why rework | Approved replacement |
+|---|---|---|
+| 94-image Hero | Small dense fragments compete with identity | 24 distinct documentary frames on desktop, larger selected mobile frame, same real smiling chef |
+| Award + geography chapter | Evidence too large; countries/car do not explain evening planning | Small real MasterChef proof immediately after Hero |
+| Three long food sheets | Repeated object inventories obscure comparison | Three compact open ruled service rows and real supporting photographs |
+| Separate film and plate chapters | Preparation/menu story disconnected and repeated | Integrated four-stage process, real plate in Menu and original film in Preparation |
+| Old inquiry | Lacks approved first-message guidance | Exact invitation, Instagram action/account and date/guests/format helper |
+
+## Observed approved composition
+
+Desktop sheet about 90.5% raster width, ~4.7% side gutters. Hero has top/side documentary frame; central text left, real portrait right. Shallow proof follows. Services are horizontal number/name/copy/photo rows. Process is spatial: 01 upper left → 02 upper right with largest whole plate → 03 lower left with film → 04 lower right with toast. One connected route, plate leaders independent and subordinate. Contact remains on same paper.
+
+Mobile copy sits above the portrait inside the collage. Services use broad text followed by real supporting pictures. Process owns a separate left vertical route; text/media have ample width to its right. Whole plate uses two labels above/two below. Conversation/toast drawings are illustrations, not proof of actual events. Approved PROMPTS specify ~16px body at 430px.
+
+## Source-based fitting decisions before implementation
+
+Use 24 unique desktop collage frames (10 top, 7 per side), 14 selected unique frames on mobile (4 top, 5 per side) so phone photographs stay meaningful. This adapts the approximately-24 composition to the mobile reference's visibly reduced archive and does not delete source files. Actual portrait has source black bands and vertical framing: CSS crop may differ from generated mockup geometry to preserve identity and avoid bands. The real dinner photo is vertical; use a modest wide field preserving complete head/hands/pan rather than force the generated landscape crop. Film is the original vertical source, with poster and playback on request plus controls; source-aware aperture preserves head/hands/knife roll. No photographic generation/recolouring.
+
+No fabricated price, testimonial, rating, capacity, journey, recipe, cleanup promise or logistics. Four neutral plate labels only. No messages sent automatically.
+
+## Original pre-code verification checklist — now completed for the local UI
+
+The seven-width screenshot, readability, photo context, plate, video/loading/reduced-motion, link/focus, overflow and final anti-template work listed before implementation is complete; see the final result above. Final original-integrity and overall handoff checks remain with the root task.
+
+---
+
+# Historical audit (superseded where conflicting with the local brief)
+
 # Interface and Anti-Template Audit
 
 Audit date: 2026-09-01
@@ -7202,32 +7279,3 @@ The request arrives before source push/deployment, so both changes can be valida
 
 Final validation: ESLint passes, all 8 rendered-HTML regressions pass, the Sites Vinext production build
 completes and `git diff --check` passes after the record update.
-
-## Cross-page alignment and rule fitting — pre-code audit and plan — 2026-09-10
-
-Authority: the user requests an agent to align all blocks, complete necessary lines and fit both mobile and web. Read-only audit refreshed against HEAD `12cec89`: `app/page.tsx`, `app/event-format-sheets.tsx`, `app/globals.css`, media motion/video components, route/layout configuration, active design map/system, approved unified service sheet implementation and style-fix report. The page retains one route, the 94-source collage, MasterChef proof/cuisine map, three services, documentary preparation and annotated plate/Instagram action. Current fonts, images, content, semantic links, native media, colour tokens and approved source crops remain authoritative. Unapproved image-coherence/reassembled/evening-plan mockups and the rejected editorial mockup are not implementation references. Concurrent documentation additions and mockup files are outside this patch.
-
-1. **Template audit:** the three service sheets deliberately repeat an approved anatomy; that is documented service grouping rather than an unsupported generic card template. No new section, card system or visual style is needed. The current defect is inconsistent fitting: final-menu left/right gutters differ from adjacent chapters, and course caption positions vary with the source aperture heights.
-2. **Source:** existing `--gutter`/`--content`, approved desktop-v5/mobile-v4 unified service sheets, full seven-plate 4+3 contract, and home-story-day's plain ruled table for the existing phone cuisine key. The latest request authorises finishing functional lines within this vocabulary.
-3. **Remain:** all content, semantic components, source images, photo direction, title scale, four plate notes and leaders, map/collage arrangement, existing focus/hover/reduced-motion behavior and Instagram target.
-4. **Rework:** remove the 375px-only 16px personal-menu edge and use the shared gutter through the existing 620px composition boundary. This preserves 18px phone gutters and the 22px tablet gutter at 561–620px.
-5. **Rework:** make each course item span a shared image track and caption track. Intrinsic source aspect ratios remain intact; all captions in each 4/3 group start on the same horizontal line. The existing 6px image/caption gap and responsive course grouping remain. No fixed image height or text clipping.
-6. **Complete line:** add the missing bottom `--rule` border after the fifth country/dish row in the existing phone key, consistent with the neighbouring workday table. No decorative outer box, new line colour or arbitrary line through text.
-7. **New components/assets/libraries:** none. CSS Grid/subgrid and existing semantic lists supply the alignment.
-8. **Validation needed before completion:** browser inspection at 1440,1280,1024,768,430,390,375px plus 561/620/621px gutter boundaries, caption first-line/image-bottom equality, plate leader placement after the small width change, photo loading and crop, navigation/CTA focus/hover, reduced motion, overflow and relevant media fallback. Run existing validation once the complete patch is accepted. A final anti-template result and factual test outcomes must be appended after verification; this record does not claim that inspection has occurred.
-
-
-Additional pre-code findings: the <=1100px `.home-story-day > div + div` vertical borders survive the less-specific phone reset. Remove them with a matching-specificity <=560px rule so the phone table has only its approved horizontal row divisions. On ultrawide screens, header/footer currently stop growing their gutter at 76px while main chapters centre within `--content:1440px`; align their outer link rails to that same content boundary through `max(--gutter,(100% - --content)/2)`. Existing mobile padding and action fitting remain unchanged. No requirement in the active approved system contradicts using the existing main-content rail on ultrawide screens. Add a 1920px verification for this fitting.
-
-### Compact-tablet plate collision — pre-code follow-up — 2026-09-11
-
-The additional breakpoint audit found an active geometry defect outside the mandatory phone samples. At 431–620px the plate continues growing with the content width while its stage is capped at 780px; at 620px its lower edge passes behind both bottom notes. At 621–700px the retired square-stage override moves the plate while keeping the wider tablet leaders, leaving a sauce endpoint outside the photograph. The 375/390/430px authored phone composition and 768px/wider composition remain visually valid and must not change.
-
-Plan before this follow-up patch: reuse the existing phone four-note arrangement through the existing 700px content-fitting boundary. At 431–700px the stage is proportional at width:height 1:2, the complete unchanged plate starts at 22% stage height, and the lower notes remain at 72%/74%. Since the photo source ratio is 1665/1800=.925, its bottom is 22%+(.925/2)=68.25% of stage height, leaving at least 3.75% before the first lower note (29.6px at 431px and 49.2px at 700px). This avoids image/text overlap without cropping or changing font sizes. Remove only the obsolete square-stage/66%-photo overrides in the existing <=700px block. Preserve the current <=430px geometry unchanged.
-
-A separate decorative compact SVG group retains the existing four leader starts and recalculates only the endpoints from the verified 430px composition (394px stage width, 780px stage height, photo top25%). The source-preserving conversion is `newY = .22*820 + (oldY - .25*820) * (780/394/2)`: old endpoint y377/430/413/480 becomes 350.654/403.116/386.288/452.608. X endpoints are unchanged because the plate still spans 100% stage width. The four original phone paths remain active only through430px, the compact four from431–700px, tablet above700px through1000px, and wide thereafter. All groups stay aria-hidden. No new image, note, interactive component, style or library is introduced. Update the existing total-path/dot count from12 to16 to account for the additional mutually exclusive geometry; active semantic note count remains four.
-
-Required follow-up verification: 430/431,561,620/621,700/701px, note/image separation, image rim, four active endpoints and the original <=430px photo/leader positions. Confirm existing regressions/build after the additional source changes. This record states the verified defect and planned correction; it does not claim the correction has passed browser QA yet.
-
-
-Final alignment verification — 2026-09-11: the seven required widths and additional 431/561/620/621/700/701/1920px boundaries were inspected or measured. Caption and aperture-bottom deltas are zero; page overflow is zero; compact plate/note separation is restored. Build, ESLint and all 9 regressions pass. Full findings, references, file list, anti-template result, verification method and limitations: [LAYOUT_ALIGNMENT_2026-09-11.md](LAYOUT_ALIGNMENT_2026-09-11.md).

@@ -1,3 +1,89 @@
+## Коррекция выносок после замечания пользователя — 2026-09-11
+
+Статичные линии не соединяются с фактическими описаниями. Их заменяет измеряемый SVG: строго горизонтальное начало у края текста (зазор6 px), один диагональный отрезок и кольцо в фиксированной относительной точке реальной фотографии. Отдельная мобильная привязка под/над текстом, перерасчёт после переносов и загрузки шрифта. Источник — пользовательский скриншот подписей и прямое «Полоски не ровно и не доходят к описанию». Новых шрифтов/палитры/декора/библиотек нет. Прежнее утверждение о завершённой геометрии заменяется этой коррекцией. Аудит, план и проверка: [PLATE_CAPTIONS_2026-09-11.md](PLATE_CAPTIONS_2026-09-11.md).
+
+## Последнее уточнение: взгляд в блокнот и единый карандаш — V6
+
+Пользователь отверг V5 («Совсем не поход») и потребовал: смотреть в блокнот, быть нарисованным карандашом как женщина, а не выглядеть чёрно-белой фотографией. Новый первичный исходник: design/references/chef-2026-09-11/user-chef-photo-011309.png. Это заменяет прежнее направление взгляда к гостье.
+
+Предварительный аудит: у предыдущего шефа плотная фактура лица/бороды и фартука, тогда как женщина состоит из лёгких контуров с открытой штриховкой. План: заново нарисовать мужскую фигуру по новому фото в исходной разговорной сцене; женщина служит точным референсом характера линий. Голова и глаза направлены вниз на страницу, правая рука пишет, левая придерживает раскрытый блокнот. Сходство передаётся контуром и пропорциями лица, без фотореалистичной кожи, пор, зерна и плотных полутонов. Женщина и композиция сохраняются. Меняется растр/src/alt; CSS, типографика, компоненты и библиотеки не меняются. Точный промпт: design/generated/evening-plan-illustrations/CHEF_LIGHT_PENCIL_V6_PROMPT.md. V5 не является принятым пользователем портретом.
+
+## Актуальные подписи блюда — 2026-09-11
+
+| Project element | Reference | Principle used | What is not copied | Project implementation |
+|---|---|---|---|---|
+| Названия и пояснения у тарелки | [Скриншот пользователя](../design/references/plate-captions-2026-09-11/user-reference.png) | Четыре точных названия и описания; золотой заголовок, спокойное пояснение, тонкая связь с едой | Полноэкранный масштаб скриншота и смена всего сайта на печатные шрифты | Семантические figcaption/dl/dt/dd, прежний Caveat и палитра |
+| Подписи на телефоне | Approved evening-plan mobile + новый скриншот | Две подписи сверху/две снизу, целая тарелка между ними | Прежнее ограничение только короткими названиями, скрытый мелкий текст | Все пояснения видимы; размер поля определяется содержимым |
+
+Аудит и план до кода: [PLATE_CAPTIONS_2026-09-11.md](PLATE_CAPTIONS_2026-09-11.md). Прежнее требование коротких подписей уступает новому запросу. Остальные источники блоков остаются действующими.
+
+## Актуальная коррекция: сходство и естественное телосложение — V5
+
+Пользователь отклонил V4: «Теперь слишком худой и не похоож». Предыдущие положительные технические проверки не означают одобрения портрета. Источник внешности и телосложения — присланное фото design/references/chef-2026-09-11/user-chef-photo.png. До изменения интерфейса план уточнён: вернуть полноту щёк, мягкую форму челюсти, естественную шею и умеренную ширину плеч/торса ближе к фото; уменьшить поворот головы, сохранив явный взгляд на женщину. Сохранить запись в раскрытый блокнот, положение рук, женщину, графитную технику и формат. Новых компонентов, CSS-токенов или библиотек не нужно. Меняется только растр и его src. Промпт: design/generated/evening-plan-illustrations/CHEF_LIKENESS_V5_PROMPT.md. Итоговое сходство подлежит визуальному сравнению; не заявлять точную копию фотографии или пользовательское одобрение.
+
+## Приоритетное уточнение пользователя — версия 4
+
+| Project element | Reference | Principle used | What is not copied | Project implementation |
+|---|---|---|---|---|
+| Взгляд и запись шефа | Прямое уточнение про взгляд на гостью и блокнот | Слушать и фиксировать предпочтения в этапе «Разговор» | Фронтальный взгляд V3 и пустые жесты | Ручка касается страницы открытого блокнота; глаза к гостье |
+| Телосложение шефа | Прямое «он худее»; новое фото для лица/одежды | Более стройные плечи, руки и торс при сохранении личности | Массивный силуэт предыдущего рисунка | Изменение только фигуры в растре, без изменения сетки |
+
+«Стой, он должен смотреть на нее и записывать в блокнот, и он худее». V3 с фронтальным взглядом и разговорными жестами является промежуточным и не соответствует этому уточнению. До следующего изменения интерфейса план уточнён: направить голову и глаза шефа к женщине, показать правую руку с пишущим инструментом на странице раскрытого блокнота, левую руку придерживающей блокнот; сделать плечи, руки и торс заметно стройнее. Черты и одежда по новому пользовательскому фото. Женщина, роль этапа, графитная техника и текущая геометрия сохраняются. Новые UI-компоненты не нужны. Промпт: design/generated/evening-plan-illustrations/CHEF_NOTEBOOK_V4_PROMPT.md.
+
+## Приоритетный исходник лица — присланное фото, версия 3
+
+V2 отвергнут пользователем. Источник внешности теперь только design/references/chef-2026-09-11/user-chef-photo.png. Подробности и план: CHEF_PENCIL_IDENTITY_2026-09-11.md.
+
+| Project element | Reference | Principle used | What is not copied | Project implementation |
+|---|---|---|---|---|
+| Шеф в «Разговоре» | Новое фото пользователя; существующая сцена как edit target | Точные черты/ракурс/улыбка, белый китель и полосатый фартук | Лицо отвергнутого V2, экранный плеер, кухня | Карандашное редактирование сцены с приоритетом сходства |
+
+## Текущая правка Шеф4: личность шефа в рисунке — 2026-09-11
+
+Прямой запрос «Карандашем нарисовать нужно именно шефа» заменяет прежнюю вымышленную мужскую фигуру в сцене «Разговор». Полный аудит/план: CHEF_PENCIL_IDENTITY_2026-09-11.md. Активный адрес этой копии: 127.0.0.1:3004; старые адреса ниже — история.
+
+| Project element | Reference | Principle used | What is not copied | Project implementation |
+|---|---|---|---|---|
+| Мужская фигура в «Разговоре» | Прямой запрос; реальное chef-hero-apron.jpg; существующая сцена; approved evening-plan desktop | Личность Евгения, лысая голова, лицо, короткая борода, полосатый фартук; спокойный разговор на общей бумаге | Прежний вымышленный молодой повар, фон/телефонный интерфейс фотографии | Один отдельный identity-preserving PNG; существующая сцена и размеры блока |
+
+Все прочие активные блоки сохраняют свои источники из карты. Новых визуальных решений без референса не требуется.
+
+# CURRENT LOCAL REFERENCE MAP — «План вечера», 2026-09-10
+
+## Root handoff verification — 2026-09-10
+
+Финальная локальная сборка, lint, TypeScript и 5 HTTP-тестов прошли. Последний браузерный прогон `artifacts/evening-plan-local/qa-report.json` прошёл на всех семи ширинах и подтвердил восстановление видео после ошибки кнопкой «Повторить». Root выполнил read-only сравнение оригинала с baseline: 726 файлов, общий SHA-256 и raw Git-статус совпали. Подробный итог и список файлов — `artifacts/evening-plan-local/REPORT.md`. Запуск только 127.0.0.1:3001; публикации не было.
+
+
+Active authority: latest user approval of `design/mockups/mise-en-place-evening-plan-2026-09-10/evening-plan-desktop.png` and `evening-plan-mobile.png`, together with real project media. Both images and their README/PROMPTS were inspected. This chapter supersedes historical “proposal only”, fixed 94-frame, geography, complete food-grid and publication constraints in this COPY ONLY. Original site/folder remains unchanged. Rejected earlier boards are not references.
+
+## Final implementation note — 2026-09-10
+
+Implemented and independently visually checked at all seven required widths after final fitting. Evidence: `artifacts/evening-plan-local/qa-report.json` (17:08:49–17:09:08 UTC, PASS) and `page-{1440,1280,1024,768,430,390,375}.png`. The two approved PNGs remain the composition reference; the real portrait, award, service photos, original menu plate and original film/poster remain actual content. New illustration provenance is in `design/generated/evening-plan-illustrations/PROMPTS.md`.
+
+Final source adaptations: 24 distinct desktop collage files, 14 selected visible phone files; three service photographs use `contain` to preserve people/working context, so vertical dinner occupies a narrower aperture than the generated mockup. Documentary poster uses a 2:3 source-aware frame; requested playback reveals the original 9:16 film with controls. These are content-fitting adaptations, not new style. Illustration-only grayscale/contrast and multiply remove the generated paper cast; documentary photography/video is unfiltered.
+
+The wide 03→04 route is measured around the live “Соус” label; station 04 receives sufficient separation from the intact plate. The tablet/mobile line ends at the last node. Final review found no unreferenced visual decision, generic card composition or extra marketing claim. See the active system and audit for exact fit values and verified limits. Original-integrity verification remains root-owned and is not claimed here.
+
+| Project element | Reference | Principle used | What is not copied | Project implementation |
+|---|---|---|---|---|
+| Header / identity | Approved evening-plan PNGs; existing name/account | Shallow paper header and explicit Instagram | New nav kit or presentation labels | Live wordmark/home link and Instagram anchor |
+| Hero | Approved frame PNGs; actual inventory and `chef-hero-apron.jpg` | Larger documentary frame, quiet type, real smiling chef | 94-cell density, raster repeats/distorted sources, new face | 24 unique desktop cells; 14 curated mobile cells; central wide side-by-side and mobile copy-above-portrait |
+| MasterChef proof | Approved strip; `masterchef/evgen-grybenyk-winner-envelope-2020.jpg` | Small real evidence directly after identity | Huge biography, map, fabricated award | Actual small photo and verified winner title |
+| Formats | Approved ruled list; `event-formats/private-dinner.jpg`, `private-event-outdoor-crepes.png`, `masterclass.jpg`; existing copy | Three readable comparable scenarios | Heavy cards, large food grids, fictional offerings | Number/name/copy/photo wide rows; broad mobile copy and supporting photograph |
+| Main process | Approved PNG/PROMPTS; user's process-first blueprint principle | Causal sequence on shared paper | Europe/car/countries; equal flowchart cards | 01 Разговор → 02 Меню → 03 Подготовка → 04 Ваш вечер; desktop spatial route and dedicated mobile left line |
+| Plate | Actual `menu/personal-menu-duck-plate-cutout-v1.webp`; approved four-note field | Whole real food explains menu composition | New recipe, recoloured plate, mockup raster substitute | Whole source plus live Основной продукт / Гарнир / Текстуры / Соус; short mobile titles |
+| Preparation | `chef-story-img-5399-no-grill.mp4` / `chef-story-img-5399-poster.jpg`; approved preparation moment | Documentary film inside relevant stage | Substitute actor or invented cooking action | Original poster/video, head/hands/knife-roll source-aware framing, accessible requested playback |
+| Conversation/toast | Approved graphite vignettes and actual service journey | Illustrate human stages quietly | Claim that they depict actual events; stock icons | Generated process illustrations with provenance/illustrative alt text |
+| Contact | Approved exact closing copy and real Instagram URL | One main action with first-message guidance | Dark generic banner, form, fake contact or auto-send | Начнём с вашего вечера; Написать в Instagram ↗; @evg.chef; date/guests/format helper |
+| Mobile / states | Approved mobile excerpts; existing accessible baseline | Recompose real content at readable width | Scaled desktop canvas, cramped body columns | Dedicated left route, broad media, visible focus, reachable video controls, seven-width checks |
+
+Exact widths/type/crop coordinates are neutral fit decisions, to be recorded after browser QA. Real portrait/dinner/video proportions differ from generated inserts: preserve source people/context over artificial pixel matching. Mobile 14-cell selection follows the reduced readable reference frame. No new stylistic reference is missing; interaction states use the existing functional accessibility baseline.
+
+---
+
+# Historical map (superseded where conflicting with the local approval)
+
 # Design Reference Map
 
 Status: **Mobile MasterChef and event pairs repaired; exact Trivium fonts, cream interface and Hero retained**
@@ -1311,38 +1397,65 @@ Authority: the user's «Давай исправим» after SITE_STYLE_AUDIT_202
 
 No new unreferenced style is adopted. Exact widths/gaps and the functional phone key layout are neutral content-fitting choices. The factual itinerary and recipe are still unconfirmed, so the interface must avoid those assertions. Implementation plan and final verification: STYLE_FIXES_2026-09-10.md.
 
-## Cross-page alignment and completed rules — 2026-09-10
+## Image-coherence proposal — concept only, 2026-09-10
+
+The user's «Нарисуй макет, как бы ты всё исправил» authorises a visual proposal about the heterogeneous imagery. This entry does **not** supersede an approved interface contract. The concept is unapproved, unimplemented and unpublished; its raster is not a production asset.
 
 | Project element | Reference | Principle used | What is not copied | Project implementation |
 |---|---|---|---|---|
-| Final-menu outer rails | Existing `--gutter` and adjacent story/present-day/footer containers; user's all-block alignment request | One page edge at a given viewport, independent of a chapter's internal responsive breakpoint | No new global width, symmetric redesign of the Hero, new spacing scale or changed plate source | Use `var(--gutter)` for the personal-menu compact inset; remove the isolated <=380px 16px override |
-| Seven-course image and caption rows | Approved desktop-v5/mobile-v4 service-sheet references and existing 4+3 course grouping | All live labels in the same course group begin on a shared baseline while complete source plates retain their proportions | No equal object-size fiction, square photo crop, cards, extra labels or new decorative rule | Two shared intrinsic CSS Grid tracks per course group, image apertures bottom-aligned and live captions top-aligned |
-| Phone cuisine key closing line | Existing plain ruled `home-story-day` table; approved style-fix phone key; latest request to complete necessary lines | A factual row group closes with the same thin rule used between rows | No outer card, unrelated ornament, corner circles or line across text | Add one `--rule` bottom border to the final existing country/dish row |
+| Relationship between Hero, cuisine map, service scenes and final plate | Current screenshots in `artifacts/style-fixes-2026-09-10/`; approved Hero collage-frame, unified service sheets and four-note plate; existing paper/ink/gold system; current user request | Retain distinct documentary and illustrative roles while proposing consistent outer paper, quieter background joins, group-specific object scale and the existing line/caption vocabulary | No new visual style, global photo filter, recoloured food, generated replacement face, reduced 94-photo inventory, identical cards or extra section | Concept board only: `design/mockups/image-coherence-2026-09-10/image-coherence-proposal.png`; scope, sources, invariants and plan in its README; no app-code change |
 
-Only neutral content fitting is new. No unapproved concept mockup is used as a source. The browser verification record must confirm precise fitting values; no new stylistic decision remains to be invented.
+The current plate's cold white remains unchanged. Neutral lighting is only a guideline for future photography. Exact masks, joins and local spacing are unapproved fitting proposals; no active token is set. The raster concept has not undergone browser QA at the seven required widths, and earlier production QA must not be attributed to it.
 
+## Editorial reimagining — REJECTED, archive only, 2026-09-10
 
-| Additional project element | Reference | Principle used | What is not copied | Project implementation |
-|---|---|---|---|---|
-| Phone workday rows | Existing phone workday-table contract and its `border-left:0` intent | Table changes from three columns into plain rows on phones | Surviving desktop column separators or a new outer box | Correct the reset specificity for the second and third rows |
-| Ultrawide header/footer rails | Existing 1440px content cap and current header/footer responsive behavior | Link content shares the centred main-content boundary when the screen is wider than the content cap | New max-width, constrained paper background or new layout | Keep full-width backgrounds while calculating outer padding from the existing content cap and gutter |
-## Compact service illustrations — 2026-09-11
+**Rejected by the user: «Фу, это ужас», followed by «Нет, пересобери мою идею».** Do not develop this direction, use its generated boards as references, or apply its proposed removals/composition to production. The following table is historical provenance only. The active approved Mise en place interface remains unchanged.
+
+Authority for this separate proposal: the user's **«Ты можешь делать любой макет, и убирать и добавлять в нем что хочешь, возможно он будет лучше»**. Within this mockup it supersedes the earlier requirement to preserve every existing block, the full 94-image Hero, illustrated map, food arrangements and section order. It does not replace the active production contract or authorise implementation/publication.
 
 | Project element | Reference | Principle used | What is not copied | Project implementation |
 |---|---|---|---|---|
-| Seven-course plates | Current explicit request for smaller/neater plates; approved desktop-v5/mobile-v4 service sheets and shared caption tracks | Quieter object scale, complete plates and aligned live labels; normalize phone row widths | No generated replacement, new composition, crop alteration or archived proposal | 72% wide-screen apertures; 84% phone first row and equivalent second-row width within existing 4+3 grouping |
-| Canapés | Same user request; approved existing 24 source crops and 8×3 / 6×4 arrangement | Smaller individual bites with clear separation | No inventory reduction, equal food shapes or added decoration | Apertures 56% wide / 70% phone, original proportions and gaps |
-| Masterclass techniques | Same user request; approved six techniques and two phone groups | Compact centered scene with readable live labels | No removed stages, new art or typeface | Scene field 68% wide / 86% phone, existing caption scale |
+| Identity-led opening | Approved `REFERENCE_ANALYSIS_MARROW.md`: image-led asymmetric hero and concrete proof; actual project identity and working photographs | One documentary lead image and a distinct typographic voice establish the chef before the offers | Marrow's mosaic, dark palette, copy, identity or images | Concept only: large asymmetric Russian identity with one real working scene and concise MasterChef proof |
+| Services and photographic sequence | Approved `WEBSITEFACTORY_REFERENCE_RESEARCH_2026-09-01.md`: Cardinali/noma/KOL photography, events/conversion sources, MAD/Ikoyi/Plateful editorial principles; current three verified offers and source photos | Process, food and people prove different scenarios; each narrative gets a content-led composition | Repeated cards, invented events/prices/testimonials, foreign photography, common photo filter | Concept only: three open photographic chapters; omit drawn cuisine map and illustrative food grids |
+| Menu story and contact | Current home-story/menu copy, actual Instagram URL; approved Marrow operational clarity and inverse text/surface principle; existing ink/paper tokens | Explain the conversation and preparation, then distinguish the inquiry through one inverse field | Unverified itinerary/recipe, extra channel, Marrow's exact dark/teal palette or generic final banner | Concept only: documentary cooking photograph and concise personal-menu/Instagram narrative on existing `#0a0a0a` with light-paper text |
+| Mobile editorial view | Approved Marrow responsive analysis and existing target/text roles | Recompose the crop and reading sequence for the phone | A scaled desktop screenshot, narrow body columns or a floating action obscuring content | Concept-only mobile artboard; exact responsive values remain undecided |
 
-Exact percentages are neutral fitting decisions responding to the user, to be verified at all seven required widths. No new visual direction lacks a reference. Audit and plan: `docs/EVENT_ILLUSTRATIONS_COMPACT_2026-09-11.md`.
+Full source map, audit, verified Russian copy, concrete pre-visualisation plan and limitations: [editorial-reimagining README](../design/mockups/editorial-reimagining-2026-09-10/README.md). The proposed raster `editorial-desktop-mobile.png` is not a source-photo replacement, not an approved reference for production, and has no seven-width browser QA claim. Historical AI boards are not used as stylistic authority.
 
-### Compact-tablet plate fitting — 2026-09-11
+## Original Mise en place reassembled — concept only, 2026-09-10
+
+Current direction: **«Нет, пересобери мою идею»**. Return to the user's approved collage, cuisine drawing, drafting sheets, documentary film and annotated plate. The editorial replacement above is rejected and is not a source for this proposal. The task is a new raster mockup, not an app change or publication.
 
 | Project element | Reference | Principle used | What is not copied | Project implementation |
 |---|---|---|---|---|
-| Compact-tablet plate and leaders,431–700px | Existing approved four-note phone composition and verified430px geometry; original1800×1665 source; current user request to fit mobile/web; existing700px content breakpoint | Let the complete plate and surrounding notes grow together while preserving the exact target points in the source | No new plate artwork, ingredient claim, decorative leader, cropped rim, equal card grid or change to375/390/430px | Proportional1:2 stage, photo at22%, lower notes72%/74%, four source-calculated compact leaders; remove the retired square-stage exception |
+| Collage-frame Hero and real chef | Original `hero-1440.png` / `hero-390.png` in `artifacts/style-fixes-2026-09-10/`; current 94-source inventory and `chef-hero-apron.jpg` | Preserve the user's documentary collage and separate identity image; redistribute framing and quiet text space | Rejected single-photo editorial hero, generic restaurant identity or replacement face | Proposal only: reassemble original image/text proportions inside the established collage-frame language |
+| Map, award and service sheets | Original final-map/final-page screenshots; approved map underlays, route plates, event photos and service scene files | One paper field and thin drafting lines connect distinct image roles; complete food objects retain their own group scale | Rejected omission of map/grids, a new illustration style, equal photo cards, recoloured food | Proposal only: improve paper joins, proportions and spacing while retaining five-country map, MasterChef proof, 4+3 courses, small canapés and six techniques |
+| Home preparation and personal menu | Original workday/menu screenshots, current film/poster and four-note plate | Documentary preparation leads into the existing annotated composition and inquiry | Rejected dark contact spread, generic slogan, new channel or invented recipe | Proposal only: retain film, whole plate, four meaningful notes and existing Instagram actions in the current paper system |
 
-This fitting is required by measured image/note overlap and an off-photo endpoint at intermediate widths; it does not adopt any unapproved concept board or create a new visual direction.
+Full source paths, invariant checklist and pre-visualisation plan: [Mise en place reassembled README](../design/mockups/mise-en-place-reassembled-2026-09-10/README.md). Exact fitting remains proposed; raster generation is not original-photo reproduction or browser QA.
+
+## Mise en place — evening plan, proposal only, 2026-09-10
+
+Authority for this new raster proposal: **«Сделай получше идею, убери лишнее, добавь чего не хватает, нарисуй макет»**. The user requests a meaningful improvement of the original idea after the earlier revision changed too little. Within this proposal only, the explicit permission to cut and add supersedes the former fixed 94-image inventory, literal five-country map and complete food-group inventory. All active production contracts remain unchanged. Rejected and earlier generated proposal boards are not references.
+
+The direct conceptual source is the user's **Process-first blueprint correction — 2026-09-02** above: design the process, not merely the subject. Its graphite/brass grammar is retained; historical unconfirmed journey, sourcing and timing claims are not restored. Current factual copy comes from `app/page.tsx`.
+
+| Project element | Reference | Principle used | What is not copied | Project implementation |
+|---|---|---|---|---|
+| Collage-frame identity | Current `hero-1440.png` / `hero-390.png` in `artifacts/style-fixes-2026-09-10/`, `heroCollageSources`, original `chef-hero-apron.jpg` | Documentary frame, real chef and quiet identity area preserve the original idea | Rejected single-photo editorial hero, another face, stock landing composition or previous generated board | Proposal only: curate 24 larger source-image cells rather than 94; keep existing identity wording and paper/ink/gold system |
+| Compact verified proof | Existing MasterChef winner photograph and live biography | Real evidence supports the name without another large narrative chapter | Invented awards, testimonials, personal itinerary or decorative award badge | One concise photo/copy proof immediately below Hero |
+| Open choice of three formats | Current event-format objects, approved unified sheet language and original three service photographs | Compare real scenarios on one readable drawing sheet, each with its own documentary context | Repeated equal cards, full seven-plate/canapé/technique grids, new services or promised capacities | One open service sheet with three compact descriptions and real small photographs; at most one optional small food motif per format |
+| One main evening plan | Direct process-first user correction; current personal-menu/home-story copy and home-story-day | A causal route explains how the requested evening becomes menu, preparation and service | Literal Europe/car/five-country route, generic four-card flowchart, unconfirmed logistics or an extra process section added to all old sections | Replace the old geography, separate home chapter and separate final-menu chapter with «От разговора — к вашему столу»: conversation → menu → preparation → evening |
+| Plate and documentary preparation | Existing whole personal-menu plate with four neutral notes; original home-film poster/still | Embed proof and object explanation in the relevant process station | Replacement recipe, recolouring, generated new chef, detached decorative plate or repeated large film/plate chapter | Plate and four notes belong to Menu; one original workday image belongs to Preparation |
+| Inquiry and mobile composition | Current Instagram destination/actions, actual customer journey, existing phone reading/focus roles | Make the next action and first-message inputs clear; deliberately recompose route and media for phone reading | New form, availability promise, new channel, cramped equal columns or a scaled desktop board | Minimal Instagram action with date / guests / format helper; separate mobile artboard with readable text zones and integrated whole plate |
+
+Audit, three explicit cuts/replacements, factual copy, full source map, prompts and completed raster inspection: [evening-plan README](../design/mockups/mise-en-place-evening-plan-2026-09-10/README.md). Saved outputs are `evening-plan-desktop.png`, `evening-plan-mobile.png` and `PROMPTS.md`. The two new graphite conversation/guest vignettes derive from the actual service journey and existing process-first graphite vocabulary; they are proposed illustrations, not documentary evidence. Exact geometry and breakpoints remain proposed/undecided. No app code, active tokens or publication change. The README records photographic/text approximations and mobile-excerpt limits; raster inspection is not seven-width browser QA.
 
 
-Final alignment verification — 2026-09-11: the seven required widths and additional 431/561/620/621/700/701/1920px boundaries were inspected or measured. Caption and aperture-bottom deltas are zero; page overflow is zero; compact plate/note separation is restored. Build, ESLint and all 9 regressions pass. Full findings, references, file list, anti-template result, verification method and limitations: [LAYOUT_ALIGNMENT_2026-09-11.md](LAYOUT_ALIGNMENT_2026-09-11.md).
+## Шеф4: карандашный шрифт — 2026-09-11
+
+| Элемент | Референс | Принцип | Что не переносим | Реализация |
+|---|---|---|---|---|
+| Типографика всего сайта | Прямой запрос «Сделай и шрифт сайта карандашный», существующие карандашные иллюстрации | Живой рукописный штрих, читаемая кириллица | Макеты шрифтового каталога, декоративные текстуры, чужие композиции | Локальный Caveat с общей системой размеров и весов |
+
+Конкретная гарнитура выбрана для реализации направления; отдельного пользовательского образца шрифта нет. Источник: https://github.com/google/fonts/tree/main/ofl/caveat . Перенос в Шеф4 соответствует последующему прямому запросу пользователя.

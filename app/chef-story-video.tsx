@@ -1,35 +1,41 @@
 "use client";
 
-import { useRef } from "react";
-import { usePageMediaPlayback } from "./media-motion";
+import { useRef, useState } from "react";
 
 export default function ChefStoryVideo() {
   const videoRef = useRef<HTMLVideoElement>(null);
+  const playAttempt = useRef(0);
+  const [started, setStarted] = useState(false);
+  const [failed, setFailed] = useState(false);
 
-  usePageMediaPlayback(videoRef, 0.55);
+  async function playFilm() {
+    const video = videoRef.current;
+    if (!video) return;
+    const attempt = ++playAttempt.current;
+    setFailed(false);
+    setStarted(true);
+    try {
+      if (failed || video.error) video.load();
+      await video.play();
+      video.focus();
+    } catch {
+      if (attempt !== playAttempt.current) return;
+      setStarted(false);
+      setFailed(true);
+    }
+  }
 
-  return (
-    <video
-      id="story-documentary-video"
-      ref={videoRef}
-      muted
-      loop
-      playsInline
-      preload="none"
-      poster="/media/chef-story-img-5399-poster.jpg"
-      aria-label="Шеф готовит частный ужин — от подготовки до подачи"
-    >
-      <source
-        src="/media/chef-story-img-5399-no-grill.mp4"
-        type="video/mp4"
-      />
-      <track
-        kind="captions"
-        src="/media/chef-story-img-5399-no-grill.ru.vtt"
-        srcLang="ru"
-        label="Русские субтитры"
-      />
-      Ваш браузер не поддерживает воспроизведение видео.
-    </video>
-  );
+  return <figure data-video-error={failed ? true : undefined} className={`preparation-film${started ? " is-playing" : ""}`}>
+    <div className="film-stage">
+      <video id="story-documentary-video" ref={videoRef} controls={started} muted playsInline preload="none" tabIndex={started ? 0 : -1}
+        poster="/media/chef-story-img-5399-poster.jpg" aria-label="Домашний фильм: от подготовки ножей до подачи ужина"
+        onError={() => { setFailed(true); setStarted(false); }}>
+        <source src="/media/chef-story-img-5399-no-grill.mp4" type="video/mp4" onError={() => { setFailed(true); setStarted(false); }} />
+        <track kind="captions" src="/media/chef-story-img-5399-no-grill.ru.vtt" srcLang="ru" label="Русские субтитры" />
+        Ваш браузер не поддерживает видео.
+      </video>
+      {!started && <button className="film-play" type="button" onClick={() => void playFilm()}><span aria-hidden="true">▷</span>{failed ? "Повторить" : "Смотреть фильм"}</button>}
+    </div>
+    <figcaption>{failed ? <span role="status">Видео не удалось загрузить. Попробуйте ещё раз.</span> : "Домашний фильм · подготовка к вечеру"}</figcaption>
+  </figure>;
 }

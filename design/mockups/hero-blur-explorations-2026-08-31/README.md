@@ -1,6 +1,6 @@
 # Hero light-blur explorations
 
-Date: 2026-08-31  
+Date: 2026-08-31
 Status: unapproved visual exploration; no production interface code changed.
 
 ## Audit baseline

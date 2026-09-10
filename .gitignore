@@ -41,3 +41,13 @@ yarn-error.log*
 
 # Local source drop; optimized hero assets are tracked separately.
 /public/media/instagram/screenshots-inbox/
+
+# Independent local runtime caches
+/.npm-cache/
+/.tmp/
+/.local-cache/
+/.local-config/
+
+# Browser verification state and compiler caches are not source artifacts.
+/artifacts/**/runtime/
+*.tsbuildinfo

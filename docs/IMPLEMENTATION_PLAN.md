@@ -1,0 +1,37 @@
+## Коррекция выносок после замечания пользователя — 2026-09-11
+
+Статичные линии не соединяются с фактическими описаниями. Их заменяет измеряемый SVG: строго горизонтальное начало у края текста (зазор6 px), один диагональный отрезок и кольцо в фиксированной относительной точке реальной фотографии. Отдельная мобильная привязка под/над текстом, перерасчёт после переносов и загрузки шрифта. Источник — пользовательский скриншот подписей и прямое «Полоски не ровно и не доходят к описанию». Новых шрифтов/палитры/декора/библиотек нет. Прежнее утверждение о завершённой геометрии заменяется этой коррекцией. Аудит, план и проверка: [PLATE_CAPTIONS_2026-09-11.md](PLATE_CAPTIONS_2026-09-11.md).
+
+# Текущая правка: подписи блюда — 2026-09-11
+
+Аудит и план до изменения интерфейса записаны в [PLATE_CAPTIONS_2026-09-11.md](PLATE_CAPTIONS_2026-09-11.md): четыре полных пояснения из пользовательского скриншота, читаемые поля вокруг фотографии, отдельная мобильная геометрия и проверка маршрута. Новых компонентов/UI-библиотек нет. Только локальная копия 127.0.0.1:3004.
+
+# Обновление 2026-09-11: Шеф4
+
+Текущий перенос и карандашная типографика завершены. Актуальный план, аудит и результаты: [PENCIL_FONT_2026-09-11.md](PENCIL_FONT_2026-09-11.md). Адрес этой копии — 127.0.0.1:3004. Ниже сохранена историческая документация предыдущего этапа.
+
+# Implementation plan — local «План вечера», 2026-09-10
+
+## Root handoff verification — 2026-09-10
+
+Финальная локальная сборка, lint, TypeScript и 5 HTTP-тестов прошли. Последний браузерный прогон `artifacts/evening-plan-local/qa-report.json` прошёл на всех семи ширинах и подтвердил восстановление видео после ошибки кнопкой «Повторить». Root выполнил read-only сравнение оригинала с baseline: 726 файлов, общий SHA-256 и raw Git-статус совпали. Подробный итог и список файлов — `artifacts/evening-plan-local/REPORT.md`. Запуск только 127.0.0.1:3001; публикации не было.
+
+
+Status: **local interface implementation, seven-width browser verification and final independent anti-template audit complete; final original-integrity comparison and overall handoff remain with the root task**. Audit/reference map/design system updated; both approved PNGs visually inspected. All work occurs in this copy. Original folder/site/hosting stays untouched; localhost only, no deployment/public preview/tunnel/Git publication.
+
+## Completion record — 2026-09-10
+
+Steps2–7 and the design/anti-template portion of step8 are complete. The running local server is `http://127.0.0.1:3001`; final screenshot/browser run17:08:49–17:09:08 UTC passed all seven widths. Source photograph crops, route/“Соус” separation, plate/04 gap and mobile line termination were independently rechecked after corrections. Documentation records the final actual CSS values and source-media adaptations. Interface isolation/noindex and loopback behavior were observed in the local browser run; root remains responsible for the final complete infrastructure/build report, read-only baseline comparison and user handoff. No deployment or message sending is requested.
+
+1. Complete local isolation: remove Sites/hosting references only here, empty D1/R2 bindings if local Cloudflare plugin remains, bind 127.0.0.1:3001 (or free local port), local SITE_URL/noindex, retain AGENTS policy + explicit local-only instructions, root README local startup. Install independent dependencies here.
+2. Rebuild Home as approved: collage frame → compact MasterChef proof → three open format rows → four-stage evening process → Instagram invitation. Stop rendering old geography/car, full seven-plate/canapé/technique groups, separate film/menu chapters. Keep historical assets without using old contradictory layout CSS.
+3. Retain fonts, real portrait/award/service photos/plate/film. Curate 24 unique desktop Hero frames and 14 readable phone frames; preserve original colours and actual source geometry. Do not reproduce mockup-generated photographic distortions.
+4. Implement semantic open service list and process sequence: 01 Разговор → 02 Меню → 03 Подготовка → 04 Ваш вечер. Desktop spatial route; mobile separate vertical line at left. Whole plate with four live neutral labels inside Menu; original film inside Preparation.
+5. Use source-aware portrait/video crops; vertical dinner source keeps head/hands/pan in a modest supporting field. Film starts on request, has poster and accessible controls. Produce conversation/toast graphite process illustrations with image tooling, provenance and truthful illustrative alt text.
+6. Add exact “Начнём с вашего вечера”, one “Написать в Instagram ↗” primary action, @evg.chef and “В первом сообщении укажите дату, число гостей и формат”. No invented facts/recipes/prices/reviews/capacities/cleanup promises or automatic message sending.
+7. Start only on loopback. Run relevant lint/static/build checks and browser inspect 1440,1280,1024,768,430,390,375px. Verify readability, real crops, intact plate, video/loading/control/reduced-motion, headings, links/skip/focus/target size and zero horizontal overflow. Save screenshots locally.
+8. Record final anti-template audit, actual fitting values, results and limitations. Check original integrity read-only against baseline, avoiding secrets/excluded metadata. Report local URL and main created/changed files.
+
+Retain: self-hosted fonts, original media, semantic anchors/skip link and useful video behavior. Rework: Home, Hero apertures/selection, format rendering, plate integration/callouts, responsive CSS, invitation/video accessibility. Newly needed only: compact format rows, four-stage semantic process/decorative route and two process illustrations. No UI kit or form required.
+
+Anti-template test: no generic centered two-action Hero, equal cards, dark banner, arbitrary stock icon/gradient/radius/shadow, fictional slogans or merely scaled mobile desktop map. All major blocks trace to approved PNGs and real content. The implementation/visual portions of this original pre-code plan are complete: all seven widths passed the final browser run and independent screenshot review. Final original-integrity verification is not claimed by this document.
