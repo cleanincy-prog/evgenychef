@@ -1,0 +1,178 @@
+[
+  {
+    "buttonHeight": 64,
+    "buttonHref": "#contact",
+    "circles": 4,
+    "detailSize": "19px",
+    "imageComplete": true,
+    "imageNaturalWidth": 1800,
+    "leadSize": "20px",
+    "noteBodySizes": [
+      "15px",
+      "15px",
+      "15px",
+      "15px"
+    ],
+    "noteCount": 4,
+    "notesInsideStage": true,
+    "overlaps": [],
+    "paths": 4,
+    "scrollWidth": 1440,
+    "stageHeight": 893.4765625,
+    "width": 1440
+  },
+  {
+    "buttonHeight": 64,
+    "buttonHref": "#contact",
+    "circles": 4,
+    "detailSize": "17.28px",
+    "imageComplete": true,
+    "imageNaturalWidth": 1800,
+    "leadSize": "18.56px",
+    "noteBodySizes": [
+      "14px",
+      "14px",
+      "14px",
+      "14px"
+    ],
+    "noteCount": 4,
+    "notesInsideStage": true,
+    "overlaps": [],
+    "paths": 4,
+    "scrollWidth": 1280,
+    "stageHeight": 794.203125,
+    "width": 1280
+  },
+  {
+    "buttonHeight": 64,
+    "buttonHref": "#contact",
+    "circles": 4,
+    "detailSize": "16px",
+    "imageComplete": true,
+    "imageNaturalWidth": 1800,
+    "leadSize": "16px",
+    "noteBodySizes": [
+      "14px",
+      "14px",
+      "14px",
+      "14px"
+    ],
+    "noteCount": 4,
+    "notesInsideStage": true,
+    "overlaps": [],
+    "paths": 4,
+    "scrollWidth": 1024,
+    "stageHeight": 635.359375,
+    "width": 1024
+  },
+  {
+    "buttonHeight": 64,
+    "buttonHref": "#contact",
+    "circles": 4,
+    "detailSize": "16px",
+    "imageComplete": true,
+    "imageNaturalWidth": 1800,
+    "leadSize": "16px",
+    "noteBodySizes": [
+      "14px",
+      "14px",
+      "14px",
+      "14px"
+    ],
+    "noteCount": 4,
+    "notesInsideStage": true,
+    "overlaps": [],
+    "paths": 4,
+    "scrollWidth": 768,
+    "stageHeight": 494.7265625,
+    "width": 768
+  },
+  {
+    "buttonHeight": 58,
+    "buttonHref": "#contact",
+    "circles": 4,
+    "detailSize": "16px",
+    "imageComplete": true,
+    "imageNaturalWidth": 1800,
+    "leadSize": "16px",
+    "noteBodySizes": [
+      "14px",
+      "14px",
+      "14px",
+      "14px"
+    ],
+    "noteCount": 4,
+    "notesInsideStage": true,
+    "overlaps": [],
+    "paths": 4,
+    "scrollWidth": 430,
+    "stageHeight": 840,
+    "width": 430
+  },
+  {
+    "buttonHeight": 58,
+    "buttonHref": "#contact",
+    "circles": 4,
+    "detailSize": "16px",
+    "imageComplete": true,
+    "imageNaturalWidth": 1800,
+    "leadSize": "16px",
+    "noteBodySizes": [
+      "14px",
+      "14px",
+      "14px",
+      "14px"
+    ],
+    "noteCount": 4,
+    "notesInsideStage": true,
+    "overlaps": [],
+    "paths": 4,
+    "scrollWidth": 390,
+    "stageHeight": 819,
+    "width": 390
+  },
+  {
+    "buttonHeight": 58,
+    "buttonHref": "#contact",
+    "circles": 4,
+    "detailSize": "16px",
+    "imageComplete": true,
+    "imageNaturalWidth": 1800,
+    "leadSize": "16px",
+    "noteBodySizes": [
+      "14px",
+      "14px",
+      "14px",
+      "14px"
+    ],
+    "noteCount": 4,
+    "notesInsideStage": true,
+    "overlaps": [],
+    "paths": 4,
+    "scrollWidth": 375,
+    "stageHeight": 780,
+    "width": 375
+  },
+  {
+    "buttonHeight": 58,
+    "buttonHref": "#contact",
+    "circles": 4,
+    "detailSize": "16px",
+    "imageComplete": true,
+    "imageNaturalWidth": 1800,
+    "leadSize": "16px",
+    "noteBodySizes": [
+      "14px",
+      "14px",
+      "14px",
+      "14px"
+    ],
+    "noteCount": 4,
+    "notesInsideStage": true,
+    "overlaps": [],
+    "paths": 4,
+    "scrollWidth": 360,
+    "stageHeight": 780,
+    "width": 360
+  }
+]
