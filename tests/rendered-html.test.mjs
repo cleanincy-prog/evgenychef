@@ -513,13 +513,15 @@ test("keeps the approved process drawings, private-dinner plates and mapped plat
   assert.match(privateEventCanapePass, /\.format-event-canape-spread\s*\{[^}]*top:\s*48%;[^}]*right:\s*3%;[^}]*bottom:\s*5%;[^}]*left:\s*3%;[^}]*background:\s*var\(--paper\)/);
   assert.match(privateEventCanapePass, /\.format-row-2\.format-row-canape \.format-copy\s*\{[^}]*left:\s*3%;[^}]*width:\s*56%/);
   assert.match(privateEventCanapePass, /\.format-row-2\.format-row-canape \.format-media\s*\{[^}]*left:\s*68%;[^}]*width:\s*28%;[^}]*aspect-ratio:\s*6 \/ 5/);
-  assert.match(privateEventCanapePass, /\.format-row-2\.format-row-canape \.format-media img,\s*\.format-row-2\.format-row-canape \.format-event-canape-spread img\s*\{[^}]*filter:\s*sepia\(\.22\) saturate\(\.72\) contrast\(\.95\) brightness\(1\.02\)/);
+  assert.match(privateEventCanapePass, /\.format-row-2\.format-row-canape \.format-media img,\s*\.format-row-2\.format-row-canape \.format-event-canape-spread img\s*\{[^}]*filter:\s*grayscale\(1\) contrast\(\.86\) brightness\(1\.24\);[^}]*mix-blend-mode:\s*multiply;[^}]*opacity:\s*\.88/);
+  assert.match(privateEventCanapePass, /\.format-event-canape-spread\s*\{[^}]*background:\s*var\(--paper\);[^}]*isolation:\s*isolate/);
+  assert.match(privateEventCanapePass, /\.format-row-2\.format-row-canape \.format-media\s*\{[^}]*background:\s*var\(--paper\);[^}]*isolation:\s*isolate/);
   assert.match(privateEventCanapePass, /\.format-row-2\.format-row-canape \.format-media img\s*\{[^}]*object-fit:\s*cover;[^}]*object-position:\s*60% 50%/);
   assert.match(privateEventCanapePass, /@media \(min-width: 821px\) and \(max-width: 1100px\)[\s\S]*?aspect-ratio:\s*1\.45 \/ 1/);
   assert.match(privateEventCanapePass, /@media \(min-width: 561px\) and \(max-width: 820px\)[\s\S]*?aspect-ratio:\s*1 \/ 1;[\s\S]*?top:\s*43%;[^}]*bottom:\s*auto;[^}]*aspect-ratio:\s*2 \/ 1/);
   assert.match(privateEventCanapePass, /@media \(max-width: 560px\)[\s\S]*?aspect-ratio:\s*\.86 \/ 1;[\s\S]*?font-size:\s*12px[\s\S]*?top:\s*48\.5%;[^}]*bottom:\s*auto;[^}]*aspect-ratio:\s*2 \/ 1/);
   assert.match(privateEventCanapePass, /@media \(max-width: 380px\)[\s\S]*?aspect-ratio:\s*\.82 \/ 1/);
-  assert.doesNotMatch(privateEventCanapePass, /mix-blend-mode:|border-radius:|box-shadow:|linear-gradient|radial-gradient/i);
+  assert.doesNotMatch(privateEventCanapePass, /border-radius:|box-shadow:|linear-gradient|radial-gradient/i);
 });
 
 test("uses the measured Trivium typography on the approved editorial surfaces", async () => {

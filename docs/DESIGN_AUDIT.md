@@ -6692,3 +6692,32 @@ reference-bounded fitting values to be finalized through browser measurement.
 - **Remaining limitation:** the seven-course raster is an approved representative visualization, not
   documentary proof of a particular served menu; the labels intentionally name course roles rather than
   unverified dishes.
+
+## Private-event site-colour correction — pre-code audit and plan — 2026-09-10
+
+The user's latest rendered phone capture shows that the shared sepia filter did not fulfil the intended
+colour match: the canapé field still reads as rosy stone, while the chef photograph retains a separate dark
+green cast. The site's established surface is `--paper: #f4efe5` with ink/graphite imagery, so this is a
+colour-integration correction only; the approved abundance, copy, crops, dividers and responsive topology
+remain unchanged.
+
+Plan recorded before interface edits: replace the current warm filter on the two row-02 photographs with one
+paper-backed grayscale treatment; isolate each image field, multiply its tonal detail into `var(--paper)` and
+soften it to keep food and chef legible; update the exact colour contract and regression; rerun diff, lint,
+tests and production build. No asset, markup, copy, layout, breakpoint, component or library change is needed.
+
+### Implementation result and anti-template audit
+
+- **Files created:** none. **Files changed:** `app/globals.css`, `tests/rendered-html.test.mjs` and the three
+  mandatory design records.
+- **Rework:** both row-02 images now share `grayscale(1) contrast(.86) brightness(1.24)`, multiply into
+  isolated `--paper` fields and use `.88` opacity. The independent rosy, green and purple casts are removed;
+  light source surfaces resolve into the same cream paper as the surrounding sheet.
+- **References:** the latest user-supplied rendered capture and the existing `--paper`/ink palette. The exact
+  luminance values are neutral fitting decisions; no new palette, content or visual component was invented.
+- **Libraries:** none added. **Verification:** `git diff --check`, ESLint, all eight focused regressions and
+  the production Vinext build pass. Browser resizing was not requested, so the repository's seven-width
+  visual sign-off remains open; geometry is unchanged from the already validated responsive implementation.
+- **Anti-template result and remaining risk:** no card, radius, shadow, gradient, glow, icon, copy or motion
+  was introduced. The documentary and representative images are intentionally colour-reduced, so fine food
+  colour distinctions are subordinate to the explicitly requested site-colour match.

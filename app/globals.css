@@ -3665,7 +3665,8 @@ button:focus-visible,
 
 /* Private events follow the user-supplied editorial reference: one continuous
    paper field, a copy/photo pair above and an abundant canapé photograph below.
-   One restrained grade unifies both photographs; every divider uses --rule. */
+   One paper-backed graphite treatment unifies both photographs; every divider
+   uses --rule. */
 .format-row-2.format-row-canape .format-process-field {
   overflow: hidden;
   aspect-ratio: 1.65 / 1;
@@ -3728,6 +3729,7 @@ button:focus-visible,
   margin: 0;
   overflow: hidden;
   background: var(--paper);
+  isolation: isolate;
   pointer-events: none;
 }
 
@@ -3741,7 +3743,9 @@ button:focus-visible,
 
 .format-row-2.format-row-canape .format-media img,
 .format-row-2.format-row-canape .format-event-canape-spread img {
-  filter: sepia(.22) saturate(.72) contrast(.95) brightness(1.02);
+  filter: grayscale(1) contrast(.86) brightness(1.24);
+  mix-blend-mode: multiply;
+  opacity: .88;
 }
 
 .format-row-2.format-row-canape .format-copy {
@@ -3758,6 +3762,8 @@ button:focus-visible,
   width: 28%;
   height: auto;
   aspect-ratio: 6 / 5;
+  background: var(--paper);
+  isolation: isolate;
 }
 
 .format-row-2.format-row-canape .format-media img {

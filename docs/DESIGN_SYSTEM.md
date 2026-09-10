@@ -1746,9 +1746,10 @@ field, masterclass process field and all content outside event row 02 remain unc
   wide lower field.
 - The complete surface uses `--paper: #f4efe5`. Structural marks use one colour only,
   `--rule: #c8c0b3`; no accent-colour spine, multicolour panel, second paper tile or tinted card is added.
-- The documentary chef photograph and canapé photograph use the same restrained warm grade:
-  `sepia(.22) saturate(.72) contrast(.95) brightness(1.02)`. This row-specific treatment fulfils the user's
-  explicit single-palette correction and must not leak into the other event formats.
+- The documentary chef photograph and canapé photograph use the same site-colour treatment:
+  `grayscale(1) contrast(.86) brightness(1.24)`, `mix-blend-mode: multiply` and `.88` opacity on isolated
+  `--paper` image fields. Light photographic surfaces therefore resolve into the site's paper while detail
+  resolves through its warm graphite range. This treatment must not leak into the other event formats.
 - One vertical `1px` rule divides copy and chef photograph only through the upper zone. One horizontal
   `1px` rule separates the full upper pair from the canapé field. An inset perimeter plus short empty top and
   bottom rails may unify the sheet; all marks are decorative and `aria-hidden`.
@@ -1760,7 +1761,7 @@ field, masterclass process field and all content outside event row 02 remain unc
   content crop to fit the lower band. From 561–820 px the field is square. Through 560 px it becomes slightly
   portrait so the exact paragraph remains legible while copy and photo stay side by side above a deeper
   canapé field.
-- Apart from the exact shared row-02 colour grade above, no gradient, shadow, radius, glass, glow, icon,
+- Apart from the exact shared row-02 paper blend above, no gradient, shadow, radius, glass, glow, icon,
   badge, animation, UI-library theme or new business copy is introduced. The adjacent event rows preserve
   their separately approved visual grammars.
 ## Private-dinner mobile editorial-sheet amendment — 2026-09-10
