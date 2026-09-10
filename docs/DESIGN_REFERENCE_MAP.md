@@ -1310,3 +1310,39 @@ Authority: the user's «Давай исправим» after SITE_STYLE_AUDIT_202
 | Inquiry channel | Verified Instagram destination; existing footer label and supporting text roles | Set an accurate expectation for the action | New contact method, extra CTA, form or decorative icon | Small visible Instagram label within/alongside existing actions |
 
 No new unreferenced style is adopted. Exact widths/gaps and the functional phone key layout are neutral content-fitting choices. The factual itinerary and recipe are still unconfirmed, so the interface must avoid those assertions. Implementation plan and final verification: STYLE_FIXES_2026-09-10.md.
+
+## Cross-page alignment and completed rules — 2026-09-10
+
+| Project element | Reference | Principle used | What is not copied | Project implementation |
+|---|---|---|---|---|
+| Final-menu outer rails | Existing `--gutter` and adjacent story/present-day/footer containers; user's all-block alignment request | One page edge at a given viewport, independent of a chapter's internal responsive breakpoint | No new global width, symmetric redesign of the Hero, new spacing scale or changed plate source | Use `var(--gutter)` for the personal-menu compact inset; remove the isolated <=380px 16px override |
+| Seven-course image and caption rows | Approved desktop-v5/mobile-v4 service-sheet references and existing 4+3 course grouping | All live labels in the same course group begin on a shared baseline while complete source plates retain their proportions | No equal object-size fiction, square photo crop, cards, extra labels or new decorative rule | Two shared intrinsic CSS Grid tracks per course group, image apertures bottom-aligned and live captions top-aligned |
+| Phone cuisine key closing line | Existing plain ruled `home-story-day` table; approved style-fix phone key; latest request to complete necessary lines | A factual row group closes with the same thin rule used between rows | No outer card, unrelated ornament, corner circles or line across text | Add one `--rule` bottom border to the final existing country/dish row |
+
+Only neutral content fitting is new. No unapproved concept mockup is used as a source. The browser verification record must confirm precise fitting values; no new stylistic decision remains to be invented.
+
+
+| Additional project element | Reference | Principle used | What is not copied | Project implementation |
+|---|---|---|---|---|
+| Phone workday rows | Existing phone workday-table contract and its `border-left:0` intent | Table changes from three columns into plain rows on phones | Surviving desktop column separators or a new outer box | Correct the reset specificity for the second and third rows |
+| Ultrawide header/footer rails | Existing 1440px content cap and current header/footer responsive behavior | Link content shares the centred main-content boundary when the screen is wider than the content cap | New max-width, constrained paper background or new layout | Keep full-width backgrounds while calculating outer padding from the existing content cap and gutter |
+## Compact service illustrations — 2026-09-11
+
+| Project element | Reference | Principle used | What is not copied | Project implementation |
+|---|---|---|---|---|
+| Seven-course plates | Current explicit request for smaller/neater plates; approved desktop-v5/mobile-v4 service sheets and shared caption tracks | Quieter object scale, complete plates and aligned live labels; normalize phone row widths | No generated replacement, new composition, crop alteration or archived proposal | 72% wide-screen apertures; 84% phone first row and equivalent second-row width within existing 4+3 grouping |
+| Canapés | Same user request; approved existing 24 source crops and 8×3 / 6×4 arrangement | Smaller individual bites with clear separation | No inventory reduction, equal food shapes or added decoration | Apertures 56% wide / 70% phone, original proportions and gaps |
+| Masterclass techniques | Same user request; approved six techniques and two phone groups | Compact centered scene with readable live labels | No removed stages, new art or typeface | Scene field 68% wide / 86% phone, existing caption scale |
+
+Exact percentages are neutral fitting decisions responding to the user, to be verified at all seven required widths. No new visual direction lacks a reference. Audit and plan: `docs/EVENT_ILLUSTRATIONS_COMPACT_2026-09-11.md`.
+
+### Compact-tablet plate fitting — 2026-09-11
+
+| Project element | Reference | Principle used | What is not copied | Project implementation |
+|---|---|---|---|---|
+| Compact-tablet plate and leaders,431–700px | Existing approved four-note phone composition and verified430px geometry; original1800×1665 source; current user request to fit mobile/web; existing700px content breakpoint | Let the complete plate and surrounding notes grow together while preserving the exact target points in the source | No new plate artwork, ingredient claim, decorative leader, cropped rim, equal card grid or change to375/390/430px | Proportional1:2 stage, photo at22%, lower notes72%/74%, four source-calculated compact leaders; remove the retired square-stage exception |
+
+This fitting is required by measured image/note overlap and an off-photo endpoint at intermediate widths; it does not adopt any unapproved concept board or create a new visual direction.
+
+
+Final alignment verification — 2026-09-11: the seven required widths and additional 431/561/620/621/700/701/1920px boundaries were inspected or measured. Caption and aperture-bottom deltas are zero; page overflow is zero; compact plate/note separation is restored. Build, ESLint and all 9 regressions pass. Full findings, references, file list, anti-template result, verification method and limitations: [LAYOUT_ALIGNMENT_2026-09-11.md](LAYOUT_ALIGNMENT_2026-09-11.md).

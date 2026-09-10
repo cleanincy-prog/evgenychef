@@ -1949,3 +1949,34 @@ This latest amendment is authoritative for the following corrections requested a
 - Exact responsive fitting and any practical limitations are recorded in STYLE_FIXES_2026-09-10.md after verification. The missing facts are handled by neutral copy, not by inventing the itinerary or recipe.
 
 Verified fitting: mobile service text/photo 1.45:1, 8px gaps, 12px sheet inset, 15px/24px description, 190px minimum photo height. At 375/390/430px descriptions measure 175.2/184.0/207.7px; award-caption-to-body gap is 20px. Map country/dish key uses 12px Montserrat and 18px Cormorant. All seven widths passed overflow/image/text-overlap checks; independent checks covered 375/390/1280/1440. Hover/focus, reduced motion and blocked media were checked. Full results and limitations: [STYLE_FIXES_2026-09-10.md](STYLE_FIXES_2026-09-10.md).
+
+## Cross-page alignment amendment — 2026-09-10
+
+- The existing page gutter is authoritative across story, present-day and personal-menu containers: 18px through 560px and 22px at 561–820px. A chapter may change its internal layout at 620px without changing the page edge. Remove the personal-menu-only 16px override through 380px; retain its documented 720px plate stage.
+- Approved seven-course groups stay 4+3. Each group shares an intrinsic image row and live caption row through CSS subgrid, retaining the existing 6px local gap. Apertures retain source aspect ratios; their bottom edges and caption first lines align within each group. Do not crop plates into equal squares or add panels.
+- The existing phone country/dish key has a closing 1px `--rule` after its last row, matching the workday table. Other frames, endpoint circles and rails remain as approved.
+- Palette, typography, containers, imagery, radii, shadows, button/hover/focus states, motion and breakpoints remain unchanged. No UI library, dependency, asset or component is introduced.
+- Validate all seven required widths, 561/620/621px gutter transitions, and enlarged text. This amendment records implementation intent; append measured outcomes after actual browser inspection.
+
+
+- Phone workday rows remove every inherited vertical separator using the same specificity as the wider column rule. The existing 1px horizontal rules remain.
+- Header/footer backgrounds remain full width; wide link rails use `max(var(--gutter),calc((100% - var(--content))/2))`. Mobile cell padding remains as already approved. Validate the additional 1920px width alongside the required matrix.
+## Compact service illustrations — active amendment, 2026-09-11
+
+The user's current smaller/neater request supersedes earlier service-image size percentages only. Preserve the approved sheet composition, paper/ink/gold tokens, Cormorant/Montserrat roles, source crops, caption subgrid, borders, square corners, no shadows, existing interaction/focus states and 700px mobile threshold.
+
+- Dinner image aperture: 72% of its course cell above 700px; 84% in the four-column phone row. For the wider three-column phone row use `calc(63% - .84px)`, matching the first row's physical aperture width with the existing 4px grid gap. All captions retain their current widths and type scale.
+- Canapé image aperture: 56% above 700px; 70% below. Preserve 8×3 / 6×4 arrangement and existing gaps.
+- Techniques: centered field 68% above 700px; 86% below, keeping two groups of three on phone and unchanged caption size.
+- Heights continue to follow intrinsic content; no scale transforms, fixed equal sheet heights, new motion or UI primitives. Unrelated site sections retain their current system.
+- These exact sizing values derive from the requested reduction and existing geometry. See `docs/EVENT_ILLUSTRATIONS_COMPACT_2026-09-11.md` for the pre-implementation audit and responsive verification.
+
+### Compact-tablet plate fitting amendment — 2026-09-11
+
+- Preserve the existing <=430px four-note/photo/leader composition and the existing >=701px wide/tablet geometry.
+- At431–700px, reuse the phone note placement with a1:2 proportional stage, complete100%-width photo at22% from the top, two47%-width top notes and lower notes at72%/74%. Keep the existing25px maximum note title and14px body role. The plate ends at68.25% stage height, leaving a content-derived gap before the lower notes.
+- Remove the old <=700px square-stage and66%-wide image override. A new aria-hidden compact leader group preserves the430px source targets through the documented coordinate conversion; exactly four paths/dots are active at a time.
+- No colour, typeface, source photograph, note copy, button, focus, motion or layout breakpoint is added. Check both sides of430 and700 plus561/620/621px before completion.
+
+
+Final alignment verification — 2026-09-11: the seven required widths and additional 431/561/620/621/700/701/1920px boundaries were inspected or measured. Caption and aperture-bottom deltas are zero; page overflow is zero; compact plate/note separation is restored. Build, ESLint and all 9 regressions pass. Full findings, references, file list, anti-template result, verification method and limitations: [LAYOUT_ALIGNMENT_2026-09-11.md](LAYOUT_ALIGNMENT_2026-09-11.md).

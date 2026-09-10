@@ -386,8 +386,8 @@ test("keeps the approved process drawings, private-dinner plates and mapped plat
     "Текстуры",
     "Соус",
   ]) assert.ok(page.includes(`<h3>${explanation}</h3>`), `missing plate explanation: ${explanation}`);
-  assert.equal((page.match(/<path d=/g) ?? []).length, 12);
-  assert.equal((page.match(/<circle cx=/g) ?? []).length, 12);
+  assert.equal((page.match(/<path d=/g) ?? []).length, 16);
+  assert.equal((page.match(/<circle cx=/g) ?? []).length, 16);
   assert.doesNotMatch(page, /Свежая зелень|Завершающий акцент, который добавляет свежесть и лёгкость/);
   assert.doesNotMatch(`${page}\n${css}`, /source-(?:list|row|copy|images|reference-plan)|menu-reference-plan/);
   assert.doesNotMatch(page, /className="contact(?:-reference-plan|-action)?"|id="contact"|inquiry-spoon-reference-exact\.png/);

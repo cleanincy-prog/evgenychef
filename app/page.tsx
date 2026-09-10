@@ -198,6 +198,16 @@ function PersonalMenuPlate() {
             <circle cx="816" cy="455" r="4" />
             <circle cx="700" cy="585" r="4" />
           </g>
+          <g className="menu-plate-leaders-compact">
+            <path d="M 550 160 H 430 L 660 350.654" />
+            <path d="M 650 185 H 725 L 670 403.116" />
+            <path d="M 650 590 H 720 L 936 386.288" />
+            <path d="M 550 600 H 480 L 700 452.608" />
+            <circle cx="660" cy="350.654" r="4" />
+            <circle cx="670" cy="403.116" r="4" />
+            <circle cx="936" cy="386.288" r="4" />
+            <circle cx="700" cy="452.608" r="4" />
+          </g>
           <g className="menu-plate-leaders-phone">
             <path d="M 550 160 H 430 L 660 377" />
             <path d="M 650 185 H 725 L 670 430" />

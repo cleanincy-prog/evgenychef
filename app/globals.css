@@ -519,7 +519,7 @@ button:focus-visible,
   grid-template-columns: 1fr auto;
   align-items: center;
   min-height: 76px;
-  padding: 0 var(--gutter);
+  padding: 0 max(var(--gutter), calc((100% - var(--content)) / 2));
   border-bottom: 1px solid var(--rule);
   background: var(--paper-light);
 }
@@ -1012,7 +1012,8 @@ button:focus-visible,
 }
 
 .menu-plate-leaders-tablet,
-.menu-plate-leaders-phone {
+.menu-plate-leaders-phone,
+.menu-plate-leaders-compact {
   display: none;
 }
 
@@ -1150,24 +1151,11 @@ button:focus-visible,
     max-width: 640px;
   }
 
-  .menu-plate-stage {
-    aspect-ratio: 1 / 1;
-  }
-
-  .menu-plate-photo {
-    top: 12%;
-    left: 17%;
-    width: 66%;
-  }
-
-  .menu-plate-note {
-    width: 24%;
-  }
 }
 
 @media (max-width: 620px) {
   .sources {
-    padding: 46px 18px 58px;
+    padding: 46px var(--gutter) 58px;
   }
 
   .personal-menu-intro .section-kicker {
@@ -1271,12 +1259,67 @@ button:focus-visible,
 }
 
 @media (max-width: 380px) {
-  .sources {
-    padding-inline: 16px;
-  }
-
   .menu-plate-stage {
     height: 720px;
+  }
+}
+
+/* Continue the authored phone composition on compact tablets. The plate and
+   its leaders share a width-based coordinate plane instead of a capped height. */
+@media (min-width: 431px) and (max-width: 700px) {
+  .menu-plate-stage {
+    aspect-ratio: 1 / 2;
+    height: auto;
+  }
+
+  .menu-plate-photo {
+    top: 22%;
+    left: 0;
+    width: 100%;
+  }
+
+  .menu-plate-leaders-tablet,
+  .menu-plate-leaders-phone {
+    display: none;
+  }
+
+  .menu-plate-leaders-compact {
+    display: block;
+  }
+
+  .menu-plate-note {
+    width: 47%;
+  }
+
+  .menu-plate-note h3 {
+    font-size: 25px;
+  }
+
+  .menu-plate-note p {
+    margin-top: 7px;
+    font-size: 14px;
+    line-height: 1.42;
+  }
+
+  .menu-plate-note-duck {
+    top: 0;
+    left: 0;
+  }
+
+  .menu-plate-note-vegetables {
+    top: 0;
+    right: 0;
+  }
+
+  .menu-plate-note-puree {
+    top: 72%;
+    right: 0;
+  }
+
+  .menu-plate-note-sauce {
+    top: 74%;
+    bottom: auto;
+    left: 0;
   }
 }
 
@@ -1286,7 +1329,7 @@ button:focus-visible,
   align-items: center;
   gap: clamp(28px, 5vw, 80px);
   min-height: 130px;
-  padding: 28px var(--gutter);
+  padding: 28px max(var(--gutter), calc((100% - var(--content)) / 2));
   border-top: 1px solid var(--rule);
   background: var(--paper-light);
   color: var(--ink);
@@ -1536,6 +1579,10 @@ button:focus-visible,
     grid-template-columns: 52px minmax(0, 1fr);
     gap: 10px;
     padding: 10px 0;
+    border-left: 0;
+  }
+
+  .home-story-day > div + div {
     border-left: 0;
   }
 
@@ -2550,6 +2597,10 @@ button:focus-visible,
     border-top: 1px solid var(--rule);
   }
 
+  .chef-journey-mobile-key > div:last-child {
+    border-bottom: 1px solid var(--rule);
+  }
+
   .chef-journey-mobile-key dt {
     color: var(--accent-small);
     font: 500 12px/1.5 var(--font-sans);
@@ -2703,13 +2754,23 @@ button:focus-visible,
   text-align: center;
   font: 400 clamp(12px, 1.5vw, 22px)/1.2 var(--font-display);
 }
-.event-courses > li { grid-column: span 2; min-width: 0; }
+/* Share image and caption tracks so different source apertures cannot stagger
+   the seven course labels. Each plate keeps its original aspect ratio. */
+.event-courses > li {
+  display: grid;
+  grid-column: span 2;
+  grid-row: span 2;
+  grid-template-rows: subgrid;
+  row-gap: 6px;
+  min-width: 0;
+}
+.event-courses .event-scene-crop { align-self: end; }
 .event-courses > li:nth-child(5) { grid-column: 2 / span 2; }
-.event-courses .event-scene-crop { width: 85%; margin-inline: auto; mix-blend-mode: multiply; }
+.event-courses .event-scene-crop { width: 72%; margin-inline: auto; mix-blend-mode: multiply; }
 .event-courses .event-scene-crop {
   mask-image: radial-gradient(ellipse 50% 50% at 50% 50%, #000 90%, transparent 100%);
 }
-.event-courses span { display: block; margin-top: 6px; }
+.event-courses span { display: block; align-self: start; margin-top: 0; }
 .event-canapes {
   display: grid;
   grid-template-columns: repeat(8, minmax(0, 1fr));
@@ -2718,8 +2779,8 @@ button:focus-visible,
   padding-block: 4px 20px;
 }
 .event-canape { display: flex; align-items: center; justify-content: center; min-width: 0; }
-.event-canape .event-scene-crop { width: 67%; }
-.event-techniques { display: grid; grid-template-columns: 1015fr 1056fr; width: 80%; margin-inline: auto; }
+.event-canape .event-scene-crop { width: 56%; }
+.event-techniques { display: grid; grid-template-columns: 1015fr 1056fr; width: 68%; margin-inline: auto; }
 .event-techniques ol {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -2756,14 +2817,17 @@ button:focus-visible,
   .event-sheet-techniques .event-sheet-photo img { object-position: 67% 50%; }
   .event-sheet-content { padding-block: 24px 18px; }
   .event-courses { gap: 22px 4px; font-size: clamp(12px, 3.35vw, 15px); }
-  .event-courses .event-scene-crop { width: 100%; }
+  .event-courses .event-scene-crop { width: 84%; }
   .event-courses > li:nth-child(n + 5) { grid-column: auto; }
   .event-courses { grid-template-columns: repeat(12, minmax(0, 1fr)); }
   .event-courses > li:nth-child(-n + 4) { grid-column: span 3; }
   .event-courses > li:nth-child(n + 5) { grid-column: span 4; }
+  /* Three wider caption cells keep the same plate width as the four above.
+     With a 4px gap, the first-row cell is 75% of a last-row cell minus 1px. */
+  .event-courses > li:nth-child(n + 5) .event-scene-crop { width: calc(63% - .84px); }
   .event-canapes { grid-template-columns: repeat(6, minmax(0, 1fr)); gap: 22px 4px; padding-block: 6px; }
-  .event-canape .event-scene-crop { width: 84%; }
-  .event-techniques { grid-template-columns: minmax(0, 1fr); width: 100%; gap: 26px; }
+  .event-canape .event-scene-crop { width: 70%; }
+  .event-techniques { grid-template-columns: minmax(0, 1fr); width: 86%; gap: 26px; }
   .event-techniques ol { font-size: clamp(16px, 4.4vw, 20px); }
   .event-techniques figcaption { margin-top: 6px; }
 }
