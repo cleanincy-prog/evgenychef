@@ -67,7 +67,7 @@ const heroCollageSources = [
 ];
 
 const heroCollageWideDesktop = new Set([
-  2, 5, 8, 12, 15, 18, 22, 25, 28, 32, 35, 38, 42,
+  4, 5, 8, 12, 15, 18, 22, 25, 28, 32, 35, 38, 42,
   45, 48, 52, 55, 58, 62, 66, 70, 74, 79, 84, 89, 93,
 ]);
 
@@ -454,7 +454,7 @@ export default function Home() {
                         sizes={tileSizes}
                         loading="eager"
                         fetchPriority={index < 12 ? "high" : "low"}
-                        decoding="sync"
+                        decoding="async"
                       />
                     </span>
                   );
@@ -480,7 +480,7 @@ export default function Home() {
                   src="/media/chef-hero-apron.jpg"
                   alt="Евгений Грыбенюк в форме шефа"
                   fill
-                  sizes="(max-width: 560px) 76vw, (max-width: 820px) 40vw, 38vw"
+                  sizes="(max-width: 560px) calc(100vw - 36px), (max-width: 820px) 40vw, (min-width: 1600px) 560px, 38vw"
                   preload
                   fetchPriority="high"
                   decoding="async"

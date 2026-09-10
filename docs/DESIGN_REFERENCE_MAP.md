@@ -1140,18 +1140,42 @@ are neutral fitting decisions that must be checked at 430, 390 and 375 px and mu
 
 The user's supplied `Photo 1.jpg` is the confirmed composition reference for `Приватные мероприятия`.
 The instruction adds explicit partitions between copy, documentary photograph and canapé material and asks
-for one continuous palette. The user's follow-up explicitly confirms that the lower field must contain many
-canapés. The latest rendered phone capture is an anti-reference for colour: the rosy food surface and dark
-green chef photograph must instead resolve into the site's paper-and-graphite palette.
+for one continuous block surface. The user's follow-up explicitly confirms that the lower field must contain
+many canapés. The latest direct correction supersedes the earlier image-palette interpretation: the single
+colour belongs only to the surrounding paper field, while both photographs retain their original colour.
 
 | Project element | Reference | Principle used | What is not copied | Project implementation |
 |---|---|---|---|---|
 | Whole private-event field | User-supplied `Photo 1.jpg`; existing approved paper/ink system | Treat copy, chef photograph and canapé study as one square-edged editorial sheet on a single warm surface | Phone screenshot chrome, black gallery margins, another brand's exact typography, copied chef or canapé photography | Replace only row 02's dense circulation underlay with one `var(--paper)` field; retain the existing live copy and documentary Evgen photograph |
 | Upper copy/photo pair | Same reference and exact current `Приватные мероприятия` content | Keep copy on the left and the working chef image on the right with deliberate unequal widths | No centred hero, card pair, new claim, CTA, badge, stock chef image or rewritten paragraph | Position the unchanged copy and `/media/event-formats/private-event-outdoor-crepes.png` in the upper zone at every breakpoint |
 | Canapé field | Same reference's abundant wide lower food photograph; user's direct follow-up `много канапе` | Fill one wide supporting photograph with many distinct bite-size canapés and no second text hierarchy | No screenshot crop, copied food photograph, quantity claim, menu name, repeated card grid or reactivation of the event-circulation scene | Use the original generated 1774 × 887 `private-event-canapes-v1.webp`, containing 23 distinct complete bites in three rows, as the decorative lower field |
-| Shared image palette | User's direct correction `Должны быть в одинаковый цвет с сайтом`; latest rendered phone capture; approved `--paper` / graphite system | Remove the independent rosy, green and purple casts and make both photographs read as tonal impressions printed on the same site paper | No new coloured tint, gradient overlay, opaque colour panel, recoloured live copy or global image treatment | Render only the two row-02 photographs as a paper-backed graphite duotone: grayscale and soften their luminance, then multiply them into `var(--paper)` inside isolated image fields |
+| Original image colour | User's direct correction `фото перекрасил, цвет убрал, а нужно было всего фон блока сделать в один цвет`; supplied current phone capture; approved `--paper` surface | Keep the sheet visually unified through its containing surface without altering the photographs | No grayscale, sepia, blend mode, tint overlay, reduced image opacity, replacement asset or crop change | Render both row-02 photographs in their original source colour at full opacity; keep only the process field and image apertures on the single `var(--paper)` background |
 | Partitions | User's direct request for dividers between text, photograph and canapés; existing `1px --rule` drafting vocabulary | A vertical rule separates copy from photo and a horizontal rule separates the upper pair from the lower canapé field | No arrows, endpoints, timeline, labels, measurements, icons or pseudo-technical route | Add an empty `aria-hidden` perimeter/rule layer; all structural strokes use the same `--rule` colour on the same paper surface |
 | Responsive composition | Supplied phone reference; project's deliberate-mobile rule | Preserve the same three reading zones while giving the lower canapé field more depth on narrow screens | No mechanical one-column stack, horizontal scroll, clipped live copy or desktop-only proportions | Use a shallow landscape field on wide screens, a square tablet field and a slightly portrait phone field; copy and chef photograph remain side by side above the canapé study |
+
+## Full visual-defect repair — 2026-09-10
+
+The user's 4096 × 2374 desktop capture and direct correction that only two dominant photographs—not the
+complete Hero or its image count—should be reduced supersede the phone-wide Hero reduction introduced in
+`2e1d94a`. The preceding two-agent desktop/mobile inspection supplies measured defect evidence; it is not a
+new visual reference.
+
+| Project element | Reference | Principle used | What is not copied | Project implementation |
+|---|---|---|---|---|
+| Hero field and documentary density | User capture; approved collage-frame Hero; direct instruction to preserve the Hero and photo count | Keep the full 94-image documentary field and its authored 10 × 12, 12 × 10 and 8 × 15 maps | No reduced stage, hidden source, carousel, new collage pattern or generic centred Hero | Preserve the existing stage heights, all 94 sources and every grid occupancy rule; restore the pre-`2e1d94a` phone spread geometry and type scale |
+| Two dominant chef photographs | Same capture and direct `уменьшить 2 фото` correction; existing approved Hero/MasterChef evidence roles | Reduce only the two visually dominant proof apertures while keeping their content and documentary role | No image deletion, replacement portrait, retouching, generated person or global media scaling | Cap the ultrawide Hero apron column and give it a face-safe crop; reduce the MasterChef award aperture at phone width while moving its biography below so neither text nor proof is compressed |
+| Ultrawide Hero crop | User capture showing the foreground portrait cropped above the face | A portrait must retain identity before decorative torso/apron detail | No enlargement of the entire Hero and no source-pixel edit | At wide desktop widths keep the spread and collage at full scale, cap the portrait column and move its object position upward; preserve the caption and square edges |
+| Hero breakpoint continuity | Two-agent measured QA at 1100/1101 px; existing continuous clamp vocabulary | Adjacent widths must not create a visible central-spread jump | No new breakpoint or layout mode | Align the >1100 and <=1100 inset/height clamps so the spread changes continuously around 1100 px |
+| Hero loading | QA observation of temporary paper-colour gaps; existing priority portrait and documentary collage | Start every first-viewport cell immediately, prioritise the identity portrait and first visible collage row, and decode without blocking paint | No source removal or fake placeholder | Keep all 94 collage requests eager because the complete mosaic is in the first Hero viewport; give the first 12 high priority, the rest low priority, and decode every cell asynchronously |
+| MasterChef phone reading order | User-approved single evidence field; mobile audit at 375/390/430 px | Pair title and compact proof first, then allow the biography to use the full readable width before the route | No mechanical desktop stack, card, timeline or rewritten claim | Keep title and smaller award in the upper field; place biography and route label across the field below them; enlarge route plates and labels without changing the five-country content |
+| Event-format typography | Existing approved alternating editorial fields; mobile audit | Service descriptions are primary reading copy, not metadata | No new cards, icons, claims or section headings | Raise phone descriptions to 13 px minimum with more leading and rebalance only their local quiet zones |
+| Header action | Existing `обсудить вечер ↗` action; 44 px target rule | Preserve the directional cue when it fits | No icon library or replacement symbol | Keep the existing arrow visible through 375 px and trim spacing instead of hiding it |
+| Personal-menu annotations | Approved real-plate annotation composition; mobile audit | Live labels and leaders must remain legible without colliding with the plate | No generated dish, new annotation vocabulary or decorative callout cards | Give the phone stage slightly more vertical room, align the top labels outside the plate and keep the sauce note below its leader |
+
+Decisions without a separate reference: the exact 560 px ultrawide portrait cap and the phone percentage
+coordinates are neutral fitting values derived from the supplied capture and must be verified at 2048, 1440,
+1280, 1101/1100, 1024, 768, 430, 390 and 375 px. No new colour, typeface, radius, shadow, decorative asset,
+copy or interface library is authorised by this repair.
 
 Exact breakpoint percentages and the desktop canapé crop are neutral collision-fitting decisions. They must
 keep every divider in a quiet gap, retain the live paragraph at 12 px or larger on phones and avoid changing

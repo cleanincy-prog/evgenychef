@@ -95,6 +95,8 @@ test("builds the approved collage frame around one central identity spread", asy
   assert.equal(94 + desktopWide.length, 10 * 12);
   assert.equal(94 + compactWide.length, 12 * 10);
   assert.equal(94 + compactWide.length, 8 * 15);
+  assert.ok(!desktopWide.includes(2), "text-heavy A Napoli poster must remain a regular tile");
+  assert.ok(desktopWide.includes(4), "documentary plating field replaces the poster's wide slot");
   for (const removed of [
     "instagram-05.webp",
     "instagram-10.webp",
@@ -139,7 +141,7 @@ test("builds the approved collage frame around one central identity spread", asy
   assert.match(page, /desktopWide \? "20vw" : "10vw"/);
   assert.match(page, /loading="eager"/);
   assert.match(page, /fetchPriority=\{index < 12 \? "high" : "low"\}/);
-  assert.match(page, /loading="eager"\s+fetchPriority=\{index < 12 \? "high" : "low"\}\s+decoding="sync"/);
+  assert.match(page, /loading="eager"\s+fetchPriority=\{index < 12 \? "high" : "low"\}\s+decoding="async"/);
   assert.match(css, /@media \(max-width: 430px\)/);
   assert.match(css, /\.wordmark,\s*\.header-action\s*\{\s*white-space:\s*nowrap/);
   assert.doesNotMatch(page, /className="site-nav"|className="hero-eyebrow"/);
@@ -162,10 +164,12 @@ test("builds the approved collage frame around one central identity spread", asy
   assert.match(tabletHeroCss, /\.hero-collage-tile--wide-desktop\s*\{\s*grid-column:\s*auto/);
   assert.match(tabletHeroCss, /\.hero-collage-tile--wide-compact\s*\{\s*grid-column:\s*span 2/);
   assert.match(narrowTabletHeroCss, /\.hero-central-spread\s*\{[^}]*grid-template-columns:\s*minmax\(0, 56fr\) minmax\(0, 44fr\)/);
-  assert.match(phoneHeroCss, /\.hero-central-spread\s*\{[^}]*top:\s*50%;[^}]*right:\s*clamp\(42px, 12vw, 66px\);[^}]*bottom:\s*auto;[^}]*left:\s*clamp\(42px, 12vw, 66px\);[^}]*grid-template-columns:\s*1fr;[^}]*grid-template-rows:\s*auto auto;[^}]*transform:\s*translateY\(-50%\)/);
-  assert.match(phoneHeroCss, /\.hero h1\s*\{[^}]*font-size:\s*clamp\(30px, 8\.2vw, 34px\);[^}]*line-height:\s*\.9/);
+  assert.match(phoneHeroCss, /\.hero-central-spread\s*\{[^}]*inset:\s*clamp\(50px, 7vw, 58px\) 18px;[^}]*grid-template-columns:\s*1fr;[^}]*grid-template-rows:\s*auto minmax\(0, 1fr\);[^}]*transform:\s*none/);
+  assert.match(phoneHeroCss, /\.hero h1\s*\{[^}]*font-size:\s*clamp\(38px, 10\.3vw, 42px\);[^}]*line-height:\s*\.9/);
   assert.match(phoneHeroCss, /\.hero-collage-grid\s*\{[^}]*grid-template-columns:\s*repeat\(8,[^}]*grid-template-rows:\s*repeat\(15,/);
-  assert.match(phoneHeroCss, /\.hero-apron\s*\{[^}]*max-height:\s*430px;[^}]*aspect-ratio:\s*4 \/ 5;[^}]*border-top:\s*2px solid var\(--paper-light\);[^}]*border-left:\s*0/);
+  assert.match(phoneHeroCss, /\.hero-apron\s*\{[^}]*border-top:\s*2px solid var\(--paper-light\);[^}]*border-left:\s*0/);
+  assert.match(css, /@media \(min-width: 1101px\) and \(max-width: 1280px\)[\s\S]*?\.hero-central-spread\s*\{[^}]*right:\s*clamp\(77px,[^}]*height:\s*clamp\(498px/);
+  assert.match(css, /@media \(min-width: 1600px\)[\s\S]*?grid-template-columns:\s*minmax\(0, 1fr\) minmax\(0, 560px\)[\s\S]*?object-position:\s*50% 31%/);
   assert.doesNotMatch(css, /\.site-nav|\.hero-eyebrow/);
   assert.doesNotMatch(page, /hero-collage-anchor/);
   assert.doesNotMatch(page, /className="hero-left"/);
@@ -436,7 +440,7 @@ test("keeps the approved process drawings, private-dinner plates and mapped plat
   assert.match(journeyPass, /\.story-origin-lead\s*\{[^}]*display:\s*block;[^}]*height:\s*auto;[^}]*aspect-ratio:\s*2 \/ 1;[^}]*overflow:\s*hidden;[^}]*isolation:\s*isolate/);
   assert.match(journeyPass, /\.chef-journey-underlay,[\s\S]*?\.chef-journey-underlay img\s*\{[^}]*position:\s*absolute;[^}]*inset:\s*0;[^}]*z-index:\s*0;[^}]*width:\s*100%;[^}]*height:\s*100%/);
   assert.match(journeyPass, /\.chef-journey-underlay img\s*\{[^}]*object-fit:\s*contain/);
-  assert.match(journeyPass, /\.story-origin-lead \.story-award\s*\{[^}]*position:\s*absolute;[^}]*z-index:\s*3;[^}]*left:\s*3%;[^}]*width:\s*42%;[^}]*background:\s*transparent/);
+  assert.match(journeyPass, /\.story-origin-lead \.story-award\s*\{[^}]*position:\s*absolute;[^}]*z-index:\s*3;[^}]*left:\s*3%;[^}]*width:\s*min\(42%, 520px\);[^}]*background:\s*transparent/);
   assert.match(journeyPass, /\.story-origin-lead \.story-award img\s*\{[^}]*aspect-ratio:\s*1719 \/ 900;[^}]*object-fit:\s*contain/);
   assert.match(journeyPass, /\.story-origin-lead \.story-copy\s*\{[^}]*position:\s*absolute;[^}]*z-index:\s*3;[^}]*right:\s*3%;[^}]*width:\s*44%;[^}]*background:\s*transparent/);
   assert.match(journeyPass, /\.chef-journey\s*\{[^}]*position:\s*absolute;[^}]*z-index:\s*2;[^}]*inset:\s*0;[^}]*pointer-events:\s*none/);
@@ -451,9 +455,12 @@ test("keeps the approved process drawings, private-dinner plates and mapped plat
   assert.doesNotMatch(journeyPass, /\.chef-journey-(?:stop|plate)(?: img)?\s*\{[^}]*(?:border|filter|box-shadow|drop-shadow):/);
   assert.match(journeyPass, /@media \(max-width:\s*900px\)[\s\S]*?\.story-origin-lead\s*\{[^}]*aspect-ratio:\s*23 \/ 20/);
   assert.match(journeyPass, /@media \(max-width:\s*900px\)[\s\S]*?\.chef-journey-underlay img\s*\{[^}]*object-fit:\s*cover/);
-  assert.match(journeyPass, /@media \(max-width:\s*560px\)[\s\S]*?\.story-origin-lead\s*\{[^}]*aspect-ratio:\s*3 \/ 4/);
-  assert.match(journeyPass, /@media \(max-width:\s*560px\)[\s\S]*?\.story-origin-lead \.story-award\s*\{[^}]*left:\s*2%;[^}]*width:\s*46\.5%/);
-  assert.match(journeyPass, /@media \(max-width:\s*560px\)[\s\S]*?\.story-origin-lead \.story-copy\s*\{[^}]*right:\s*2%;[^}]*width:\s*48%/);
+  assert.match(journeyPass, /@media \(max-width:\s*560px\)[\s\S]*?\.story-origin-lead\s*\{[^}]*aspect-ratio:\s*2 \/ 3/);
+  assert.match(journeyPass, /@media \(max-width:\s*560px\)[\s\S]*?\.story-origin-lead \.story-award\s*\{[^}]*left:\s*3%;[^}]*width:\s*36%/);
+  assert.match(journeyPass, /@media \(max-width:\s*560px\)[\s\S]*?\.story-origin-lead \.story-copy\s*\{[^}]*inset:\s*0;[^}]*width:\s*auto/);
+  assert.match(journeyPass, /@media \(max-width:\s*560px\)[\s\S]*?\.story-origin-lead \.story-copy-body\s*\{[^}]*position:\s*absolute;[^}]*top:\s*22%;[^}]*right:\s*3%;[^}]*left:\s*3%/);
+  assert.match(journeyPass, /@media \(max-width:\s*560px\)[\s\S]*?\.story-origin-lead \.story-copy-body > p:first-child\s*\{[^}]*font-size:\s*13px;[^}]*line-height:\s*1\.5/);
+  assert.match(journeyPass, /@media \(max-width:\s*560px\)[\s\S]*?\.chef-journey-stop\s*\{[^}]*width:\s*clamp\(50px, 14vw, 60px\)/);
   assert.match(journeyPass, /@media \(max-width:\s*560px\)[\s\S]*?\.chef-journey-stop figcaption strong\s*\{[^}]*display:\s*none/);
   assert.doesNotMatch(page, /chef-journey-map-layer|chef-journey-flag-layer|chef-journey-leaders|chef-journey-point/);
   assert.match(css, /\.home-story\s*\{[^}]*display:\s*grid;[^}]*grid-template-columns:\s*repeat\(12,[^}]*max-width:\s*var\(--content\)/);
@@ -503,6 +510,7 @@ test("keeps the approved process drawings, private-dinner plates and mapped plat
   assert.match(privateDinnerMenuPass, /@media \(max-width: 560px\)[\s\S]*?aspect-ratio:\s*\.62 \/ 1;[\s\S]*?border:\s*1px solid var\(--rule\)/);
   assert.match(privateDinnerMenuPass, /@media \(max-width: 560px\)[\s\S]*?\.format-row-1\.format-row-menu \.format-copy\s*\{[^}]*left:\s*4\.3%;[^}]*width:\s*41%/);
   assert.match(privateDinnerMenuPass, /@media \(max-width: 560px\)[\s\S]*?\.format-row-1\.format-row-menu \.format-media\s*\{[^}]*left:\s*51\.5%;[^}]*width:\s*44\.2%;[^}]*aspect-ratio:\s*1152 \/ 1572/);
+  assert.match(privateDinnerMenuPass, /@media \(max-width: 560px\)[\s\S]*?\.format-row-1\.format-row-menu \.format-copy p\s*\{[^}]*font:\s*400 clamp\(13px, 3\.2vw, 13\.6px\)\/1\.55 var\(--font-sans\)/);
   assert.match(privateDinnerMenuPass, /\.format-course-group-four \.format-course-labels\s*\{[^}]*grid-template-columns:\s*repeat\(4,/);
   assert.match(privateDinnerMenuPass, /\.format-course-group-three \.format-course-labels\s*\{[^}]*grid-template-columns:\s*repeat\(3,/);
   const privateEventCanapePass = css.slice(css.lastIndexOf("/* Private events follow"));
@@ -513,14 +521,14 @@ test("keeps the approved process drawings, private-dinner plates and mapped plat
   assert.match(privateEventCanapePass, /\.format-event-canape-spread\s*\{[^}]*top:\s*48%;[^}]*right:\s*3%;[^}]*bottom:\s*5%;[^}]*left:\s*3%;[^}]*background:\s*var\(--paper\)/);
   assert.match(privateEventCanapePass, /\.format-row-2\.format-row-canape \.format-copy\s*\{[^}]*left:\s*3%;[^}]*width:\s*56%/);
   assert.match(privateEventCanapePass, /\.format-row-2\.format-row-canape \.format-media\s*\{[^}]*left:\s*68%;[^}]*width:\s*28%;[^}]*aspect-ratio:\s*6 \/ 5/);
-  assert.match(privateEventCanapePass, /\.format-row-2\.format-row-canape \.format-media img,\s*\.format-row-2\.format-row-canape \.format-event-canape-spread img\s*\{[^}]*filter:\s*grayscale\(1\) contrast\(\.86\) brightness\(1\.24\);[^}]*mix-blend-mode:\s*multiply;[^}]*opacity:\s*\.88/);
+  assert.doesNotMatch(privateEventCanapePass, /grayscale\(|mix-blend-mode:|\.format-row-2\.format-row-canape[^}]*img[^}]*opacity:/i);
   assert.match(privateEventCanapePass, /\.format-event-canape-spread\s*\{[^}]*background:\s*var\(--paper\);[^}]*isolation:\s*isolate/);
   assert.match(privateEventCanapePass, /\.format-row-2\.format-row-canape \.format-media\s*\{[^}]*background:\s*var\(--paper\);[^}]*isolation:\s*isolate/);
   assert.match(privateEventCanapePass, /\.format-row-2\.format-row-canape \.format-media img\s*\{[^}]*object-fit:\s*cover;[^}]*object-position:\s*60% 50%/);
   assert.match(privateEventCanapePass, /@media \(min-width: 821px\) and \(max-width: 1100px\)[\s\S]*?aspect-ratio:\s*1\.45 \/ 1/);
   assert.match(privateEventCanapePass, /@media \(min-width: 561px\) and \(max-width: 820px\)[\s\S]*?aspect-ratio:\s*1 \/ 1;[\s\S]*?top:\s*43%;[^}]*bottom:\s*auto;[^}]*aspect-ratio:\s*2 \/ 1/);
-  assert.match(privateEventCanapePass, /@media \(max-width: 560px\)[\s\S]*?aspect-ratio:\s*\.86 \/ 1;[\s\S]*?font-size:\s*12px[\s\S]*?top:\s*48\.5%;[^}]*bottom:\s*auto;[^}]*aspect-ratio:\s*2 \/ 1/);
-  assert.match(privateEventCanapePass, /@media \(max-width: 380px\)[\s\S]*?aspect-ratio:\s*\.82 \/ 1/);
+  assert.match(privateEventCanapePass, /@media \(max-width: 560px\)[\s\S]*?aspect-ratio:\s*\.78 \/ 1;[\s\S]*?font-size:\s*13px[\s\S]*?top:\s*48\.5%;[^}]*bottom:\s*auto;[^}]*aspect-ratio:\s*2 \/ 1/);
+  assert.match(privateEventCanapePass, /@media \(max-width: 380px\)[\s\S]*?aspect-ratio:\s*\.74 \/ 1/);
   assert.doesNotMatch(privateEventCanapePass, /border-radius:|box-shadow:|linear-gradient|radial-gradient/i);
 });
 
@@ -753,7 +761,7 @@ test("keeps readability-specific desktop, tablet and narrow-phone geometry", asy
   assert.match(personalMenuPass, /\.menu-plate-photo\s*\{[^}]*width:\s*70%;[^}]*height:\s*auto/);
   assert.match(personalMenuPass, /\.menu-plate-leaders path\s*\{[^}]*stroke:\s*var\(--accent-small\);[^}]*stroke-width:\s*1\.15/);
   assert.match(personalMenuPass, /@media \(max-width:\s*940px\)[\s\S]*?\.menu-plate-composition\s*\{[^}]*grid-column:\s*1 \/ -1/);
-  assert.match(personalMenuPass, /@media \(max-width:\s*560px\)[\s\S]*?\.menu-plate-stage\s*\{[^}]*aspect-ratio:\s*1 \/ 1\.08/);
+  assert.match(personalMenuPass, /@media \(max-width:\s*560px\)[\s\S]*?\.menu-plate-stage\s*\{[^}]*aspect-ratio:\s*4 \/ 5/);
   assert.match(css, /\.source-gallery\s*\{[^}]*grid-template-columns:\s*minmax\(0, 5fr\) minmax\(0, 4fr\) minmax\(0, 3fr\)/);
   assert.match(css, /\.source-scene figcaption\s*\{[^}]*position:\s*absolute;[^}]*background:\s*#f7f4ef/);
   assert.doesNotMatch(css, /\.source-(?:list|row|copy|images|reference-plan)\b|\.menu-reference-plan\b/);
@@ -799,7 +807,7 @@ test("keeps readability-specific desktop, tablet and narrow-phone geometry", asy
   assert.match(css, /@media \(max-width: 400px\)[\s\S]*?\.wordmark\s*\{[^}]*font-size:\s*18px;[^}]*letter-spacing:\s*\.08em/);
   assert.match(css, /@media \(max-width: 820px\)[\s\S]*?\.site-header\s*\{[^}]*min-height:\s*70px/);
   assert.match(css, /@media \(max-width: 400px\)[\s\S]*?\.header-action\s*\{[^}]*font-size:\s*11\.2px;[^}]*letter-spacing:\s*\.08em/);
-  assert.match(css, /@media \(max-width: 380px\)[\s\S]*?\.header-action span\s*\{\s*display:\s*none/);
+  assert.match(css, /@media \(max-width: 380px\)[\s\S]*?\.header-action span\s*\{\s*display:\s*inline;\s*margin-left:\s*4px/);
   assert.doesNotMatch(css, /background:\s*var\(--ink\);[\s\S]{0,180}\.hero-(?:stage|media|collage-tile|apron)/);
 });
 

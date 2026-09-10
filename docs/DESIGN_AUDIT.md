@@ -6721,3 +6721,147 @@ tests and production build. No asset, markup, copy, layout, breakpoint, componen
 - **Anti-template result and remaining risk:** no card, radius, shadow, gradient, glow, icon, copy or motion
   was introduced. The documentary and representative images are intentionally colour-reduced, so fine food
   colour distinctions are subordinate to the explicitly requested site-colour match.
+
+## Private-event original-photo colour restoration — pre-code audit and plan — 2026-09-10
+
+The user clarified that the preceding site-colour correction changed the photographs themselves by removing
+their colour. The intended correction was only to make the containing block one colour. The supplied current
+phone capture is therefore an anti-reference for image treatment while its existing three-zone composition,
+abundant canapé field and dividers remain approved.
+
+Audit findings:
+
+1. The private-event process field, both image apertures and all structural rules already use the approved
+   single surface `var(--paper)` and `var(--rule)`.
+2. The only source of photographic recolouring is the row-specific declaration applying `grayscale(1)`,
+   contrast/brightness adjustment, `mix-blend-mode: multiply` and `.88` opacity to both images.
+3. The user's direct correction requires the original pixels to remain visible. No replacement media, crop,
+   layout, breakpoint, copy, divider, component or new palette is needed.
+
+Implementation plan recorded before interface edits: delete only the shared image-treatment declaration;
+retain the one-colour paper field and all geometry; change the regression from requiring that treatment to
+forbidding grayscale, blend mode and reduced image opacity in row 02; supersede the outdated reference-map
+and design-system colour instructions; then run diff, lint, focused tests and production build. The Sites
+workflow does not permit browser screenshots or viewport resizing without an explicit browser-testing
+request, so the seven-width visual sign-off remains open even though no geometry changes.
+
+Templated elements found: none. The defect is an unjustified destructive colour treatment inside an otherwise
+reference-led editorial sheet. Components retained: every current image, content zone, crop, divider,
+breakpoint, semantic role and neighbouring format. Components reworked: only row 02's image rendering rule
+and its documented/tested contract. New components and UI libraries required: none.
+
+### Implementation result and final anti-template audit
+
+- **Files created:** none.
+- **Files changed:** `app/globals.css`, `tests/rendered-html.test.mjs`, `docs/DESIGN_REFERENCE_MAP.md`,
+  `docs/DESIGN_SYSTEM.md` and this audit.
+- **Templated element found:** none. The corrected defect was the row-specific grayscale/blend treatment.
+- **Rework:** the treatment declaration was removed. Both existing row-02 photographs now render in their
+  original colour and full opacity; the single `var(--paper)` field, image-aperture fallbacks, crops,
+  perimeter, dividers, copy and responsive geometry are unchanged.
+- **Reference used:** the user's supplied current capture and direct clarification that only the block
+  background—not the photographs—must use one colour. No new visual decision or unreferenced fitting value
+  was introduced.
+- **UI libraries:** none added or visibly used; existing semantic React and CSS remain technical primitives.
+- **Validation:** `git diff --check`, ESLint, the Vinext production build and all eight regressions pass. The
+  focused regression now forbids grayscale, blend mode and reduced image opacity inside the private-event
+  block while retaining the `--paper` surface contract.
+- **Desktop/mobile verification:** the unchanged responsive contracts remain present for wide, 821–1100,
+  561–820, 560-and-below and 380-and-below layouts. Browser resizing and screenshots were not explicitly
+  requested and are prohibited by the Sites workflow in that case, so fresh visual sign-off at 1440, 1280,
+  1024, 768, 430, 390 and 375 px remains an open repository-definition limitation; no geometry changed.
+- **Remaining limitations/risks:** the canapé image remains the approved representative visualization rather
+  than documentary event evidence and therefore keeps empty alternative text. The two unrelated pre-existing
+  untracked personal-menu experiments were not edited or referenced. Publishing was not requested, so no
+  production deployment or audience change was performed.
+
+## Full desktop/mobile visual-defect repair — pre-code audit and plan — 2026-09-10
+
+The user requested implementation of every defect reported by the preceding dedicated desktop and mobile
+agents. The project structure, single active route, 94 Hero sources, three responsive collage maps, foreground
+portrait, MasterChef archive field, three event-format fields, personal-menu composition, fonts, tokens,
+breakpoints, supplied desktop capture, live local route, regression suite and uncommitted user work were
+audited before interface code.
+
+Audit findings:
+
+1. `2e1d94a` narrowed the entire phone central spread from 18 px insets to `12vw`, reduced the Hero title from
+   `38–42px` to `30–34px`, compressed copy padding and bounded the portrait. The Hero still contains 94
+   sources, so the reported loss is perceived scale and composition—not a deleted dataset.
+2. At 2048 px the central spread keeps growing while its portrait column receives 44% of the width and the
+   complete spread is capped at 560 px high. The 576 × 1280 apron source therefore fills a very wide aperture
+   and crops the face; the source is also stretched unnecessarily.
+3. The >1100 and <=1100 clamp families have incompatible endpoints, producing a measurable spread jump
+   between 1100 and 1101 px.
+4. All 94 mosaic images are eager and synchronously decoded. This delays nonessential cells and exposes paper
+   fallbacks during first paint.
+5. The phone MasterChef field holds a long biography in a narrow 48% column beside the award proof at
+   11–14 px depending on the late override. Route plates and country labels become too delicate at 375 px.
+6. Row-specific phone event descriptions fall to 11–12 px inside narrow quiet zones. The desktop headings are
+   also visually subordinate to their very large drawing fields.
+7. The existing header arrow is explicitly hidden below 380 px although the action remains wide enough after
+   tightening its spacing. Personal-menu annotations use the same crowded square stage at the narrowest
+   widths and can collide with plate/leaders.
+
+Templated elements found: none. The active composition is project-specific and reference-led. The defects are
+local scale, crop, readability, breakpoint and loading problems. Components retained: the complete page,
+content order, all 94 Hero sources, three grid maps, all real photographs, five-country route, event-format
+content, personal-menu plate, header action, borders, square apertures and palette. Components reworked: only
+responsive Hero fitting, image delivery attributes, ultrawide apron crop/column, phone MasterChef placement,
+phone route/readability values, event-copy scale, header arrow rule and phone plate-annotation fitting. New
+components, routes, copy, assets, decorative effects and UI libraries required: none.
+
+Implementation sequence recorded before code: restore the approved pre-`2e1d94a` phone Hero geometry without
+altering stage height, mosaic sources or occupancy; cap and recrop the Hero apron only on ultrawide screens;
+reduce the phone MasterChef award aperture and reflow its copy below the upper proof/title pair; reconcile the
+1100 px clamps; start all first-viewport collage cells eagerly, prioritise only the first twelve and decode
+all collage cells asynchronously;
+raise phone route/format/annotation text and targets; retain the header arrow; add focused regression
+contracts; run diff, lint, production build and all tests; visually inspect 2048 plus the seven mandatory
+widths and the 1100/1101 boundary; complete the anti-template audit; then publish the validated current Site
+through its existing access policy.
+
+### Implementation result and final anti-template audit
+
+- **Files created:** none.
+- **Files changed:** `app/page.tsx`, `app/globals.css`, `tests/rendered-html.test.mjs`,
+  `docs/DESIGN_REFERENCE_MAP.md`, `docs/DESIGN_SYSTEM.md` and this audit. Two pre-existing untracked
+  personal-menu experiment images remain untouched and unreferenced.
+- **Hero repair:** all 94 sources and the three occupancy maps remain active. The text-heavy `A Napoli`
+  poster is no longer one of the 26 wide desktop cells; the documentary plating image takes that exact wide
+  slot, so the occupied 120-cell map and photo count remain unchanged. Phone Hero geometry and the
+  `38–42px` title scale are restored without changing stage height. The ultrawide apron column is capped at
+  560 px and uses a face-safe 31% vertical crop. A narrow 1101–1280 interpolation makes the 1100/1101
+  transition differ by only 10 px in spread width and less than 1 px in height instead of the former large
+  jump. All mosaic cells start eagerly, only the first twelve are high-priority and every cell decodes
+  asynchronously.
+- **Two-photo correction:** the large Hero apron is reduced only at ultrawide widths, while the MasterChef
+  award is capped at 520 px on wide screens and reduced to 36% of its phone field. Neither source, colour,
+  documentary role nor caption changed.
+- **Mobile reading repair:** the MasterChef field now gives title/proof a compact upper pair and places the
+  complete biography across 94% of the field at 13 px/1.5. Five plates measure 52.5–60 px at 375–430 px and
+  country labels render at 12 px. All three event descriptions render at 13–13.6 px with at least 1.52
+  leading and remain inside their authored fields. The header arrow remains visible through 375 px.
+  Personal-menu annotations receive a taller 4:5 stage and inward-fitted plate without label collisions.
+- **References used:** the user's 4096 × 2374 desktop capture, the direct instruction to reduce only two
+  photos rather than the Hero/photo count, the approved collage-frame Hero, the existing single-field
+  MasterChef and event-format designs, and measured two-agent QA evidence. No external template, inferred
+  style or new brand source was used.
+- **Decisions without references:** only neutral fitting values—560 px apron cap, 31% crop, 520 px award cap,
+  36% phone award width and local percentage positions. They were checked at every required width.
+- **UI libraries:** none added or visibly used. Existing semantic React/Next Image and CSS remain technical
+  primitives; no stock component appearance was introduced.
+- **Automated validation:** `git diff --check`, ESLint, all eight rendered/source/delivery tests and the Vinext
+  production build pass.
+- **Desktop/mobile verification:** live browser checks pass at 2048, 1440, 1280, 1101, 1100, 1024, 768,
+  430, 390 and 375 px. Every width has zero horizontal overflow, 94/94 displayed Hero cells and zero broken
+  images. The Hero apron retains face/apron/hands at 2048 and on phones; the restored phone spread measures
+  394/354/339 px wide at 430/390/375. MasterChef biography and all event paragraphs remain inside their
+  fields; the action arrow is visible; plate annotations are separated from the photograph and leaders.
+- **Anti-template result:** no card grid, repeated radius, shadow, stock gradient, glass, glow, decorative
+  object, generic claim, icon set, animation, template section or desktop-only mobile stack was added. The
+  changes preserve the project's irregular documentary frame and deliberate mobile editorial sheets.
+- **Remaining limitation/risk:** the 576 px-wide Hero source is still a phone screenshot and can look softer
+  than the surrounding collage on high-density ultrawide displays. Its smaller aperture avoids additional
+  stretching, but a higher-resolution original without screenshot bands would be the definitive asset-level
+  improvement. The live Site is public, so publication of this validated version requires explicit approval.

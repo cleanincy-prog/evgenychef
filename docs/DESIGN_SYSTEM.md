@@ -1746,10 +1746,9 @@ field, masterclass process field and all content outside event row 02 remain unc
   wide lower field.
 - The complete surface uses `--paper: #f4efe5`. Structural marks use one colour only,
   `--rule: #c8c0b3`; no accent-colour spine, multicolour panel, second paper tile or tinted card is added.
-- The documentary chef photograph and canapé photograph use the same site-colour treatment:
-  `grayscale(1) contrast(.86) brightness(1.24)`, `mix-blend-mode: multiply` and `.88` opacity on isolated
-  `--paper` image fields. Light photographic surfaces therefore resolve into the site's paper while detail
-  resolves through its warm graphite range. This treatment must not leak into the other event formats.
+- The documentary chef photograph and canapé photograph retain their original source colour at full opacity.
+  The shared site colour belongs to the containing `--paper` sheet and its image apertures only. Row 02 must
+  not apply grayscale, sepia, blend modes, tint overlays or reduced opacity to either photograph.
 - One vertical `1px` rule divides copy and chef photograph only through the upper zone. One horizontal
   `1px` rule separates the full upper pair from the canapé field. An inset perimeter plus short empty top and
   bottom rails may unify the sheet; all marks are decorative and `aria-hidden`.
@@ -1761,9 +1760,34 @@ field, masterclass process field and all content outside event row 02 remain unc
   content crop to fit the lower band. From 561–820 px the field is square. Through 560 px it becomes slightly
   portrait so the exact paragraph remains legible while copy and photo stay side by side above a deeper
   canapé field.
-- Apart from the exact shared row-02 paper blend above, no gradient, shadow, radius, glass, glow, icon,
+- Apart from the exact shared row-02 paper surface above, no gradient, shadow, radius, glass, glow, icon,
   badge, animation, UI-library theme or new business copy is introduced. The adjacent event rows preserve
   their separately approved visual grammars.
+
+## Visual-defect repair amendment — 2026-09-10
+
+- Hero documentary inventory is fixed at 94 local sources. Responsive maps remain 10 × 12 desktop,
+  12 × 10 compact and 8 × 15 phone; no source is hidden to alter perceived density.
+- Hero stage heights remain `700–824px` wide, `720–954px` tablet and `720–866px` phone. On phones the
+  central editorial spread again uses the approved 18 px side inset and the `38–42px` display scale. The
+  stage, collage and title are not globally reduced.
+- Only two proof apertures are reduced: the Hero apron column is capped at 560 px on ultrawide screens and
+  the phone MasterChef award uses a smaller bounded aperture. The Hero portrait uses an upward face-safe crop
+  at ultrawide width; source pixels, caption, borders and photographic colour remain unchanged.
+- The Hero spread must remain visually continuous across 1100/1101 px. Both sides of that breakpoint share
+  compatible inset and height endpoints; no new composition begins there.
+- Hero loading starts all 94 first-viewport mosaic cells eagerly. The identity portrait and first twelve
+  cells are high-priority; the remaining cells are low-priority, and every mosaic image decodes
+  asynchronously so it cannot synchronously block the first paint.
+- Through 560 px, MasterChef biography text is at least 13 px with `1.5` leading and receives a full-width
+  band below the title/proof pair. Route plates are at least 50 px in the 375–430 px range; country labels are
+  at least 12 px. Format descriptions are at least 13 px with `1.5` leading.
+- The header action arrow remains visible at all supported widths down to 375 px. The complete action keeps a
+  44 px minimum target and may tighten spacing/letter-spacing only in the <=400 px rule.
+- Phone personal-menu annotations use a taller square-to-portrait stage; top notes remain outside the plate,
+  the sauce note remains below its leader, and all text stays at least 12 px.
+- No palette, font family, card system, radius, shadow, gradient, generated imagery, icon library or motion
+  rule is added by this amendment.
 ## Private-dinner mobile editorial-sheet amendment — 2026-09-10
 
 This amendment supersedes only the phone rules in `Private-dinner seven-plate amendment`.
