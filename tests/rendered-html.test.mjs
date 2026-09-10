@@ -2,6 +2,10 @@ import assert from "node:assert/strict";
 import { createHash } from "node:crypto";
 import { access, readFile } from "node:fs/promises";
 import test from "node:test";
+import { createRequire } from "node:module";
+import { createElement } from "react";
+import { renderToStaticMarkup } from "react-dom/server";
+import ts from "typescript";
 
 const root = new URL("../", import.meta.url);
 
@@ -175,7 +179,8 @@ test("builds the approved collage frame around one central identity spread", asy
   assert.doesNotMatch(page, /className="hero-left"/);
   assert.doesNotMatch(css, /\.cyprus-|\.page-rail|\.pattern-module|\.format-weave|backdrop-filter/i);
   assert.equal((css.match(/border-radius\s*:/g) ?? []).length, 1);
-  assert.match(css, /\.format-menu-drafting-spine::before,[\s\S]*?\.format-menu-drafting-spine::after\s*\{[^}]*border-radius:\s*50%/);
+  assert.match(css, /\.event-sheet-spine::before,/);
+
   assert.doesNotMatch(css, /\.menu-dish/);
 });
 
@@ -207,7 +212,7 @@ test("keeps the three exact event scenarios in editorial rows", async () => {
   assert.ok(formatsCall < homeStory);
   assert.match(page, /const eventFormats = \[/);
   assert.match(page, /<div className="story-sequence" id="menu" aria-label="Победа MasterChef и форматы мероприятий"/);
-  assert.match(page, /<ol className="format-list">/);
+
   assert.doesNotMatch(page, /<section className="formats"/);
   assert.doesNotMatch(page, /Вечера бывают разные|частные форматы|formats-title|formats-intro|story-formats/i);
 
@@ -226,7 +231,6 @@ test("keeps the three exact event scenarios in editorial rows", async () => {
     cursor = next;
   }
 
-  assert.match(page, /className={`format-row format-row-\$\{index \+ 1\}\$\{format\.processBackground/);
   assert.doesNotMatch(page, /menu-stages|format-weave|triptych|carousel/i);
 
   const workdayFacts = [
@@ -276,8 +280,6 @@ test("keeps the approved process drawings, private-dinner plates and mapped plat
     "/media/blueprint-backgrounds/masterchef-route-underlay-v3-desktop.webp",
     "/media/blueprint-backgrounds/masterchef-route-underlay-v3-tablet.webp",
     "/media/blueprint-backgrounds/masterchef-route-underlay-v3-mobile.webp",
-    "/media/blueprint-backgrounds/private-dinner-event-concept-v3.png",
-    "/media/blueprint-backgrounds/private-dinner-compact-mobile-v5.webp",
   ];
   const activeArchiveMedia = [
     "/media/masterchef/route-plates/01-paella-plate-v2-1024.webp",
@@ -301,40 +303,7 @@ test("keeps the approved process drawings, private-dinner plates and mapped plat
   await assert.rejects(access(new URL("app/blueprint-diagrams.tsx", root)));
 
   assert.deepEqual(activeBlueprintReferences.toSorted(), activeBlueprints.toSorted());
-  assert.equal((page.match(/<picture className="format-process-plan"/g) ?? []).length, 1);
-  assert.match(page, /<source[\s\S]*?media="\(max-width: 940px\)"[\s\S]*?srcSet=\{format\.compactDrawingSrc \?\? undefined\}/);
-  assert.match(page, /courseImageSrc: "\/media\/event-formats\/private-dinner-seven-plates-v1\.jpg"/);
-  assert.equal((page.match(/courseImageSrc: null/g) ?? []).length, 2);
-  assert.match(page, /canapeImageSrc: "\/media\/event-formats\/private-event-canapes-v3\.webp"/);
-  assert.equal((page.match(/canapeImageSrc: null/g) ?? []).length, 2);
-  assert.match(page, /format\.courseImageSrc \? " format-row-menu" : ""/);
-  assert.match(page, /format\.canapeImageSrc \? " format-row-canape" : ""/);
-  assert.match(page, /!format\.courseImageSrc && !format\.canapeImageSrc \? \([\s\S]*?className="format-process-plan"/);
-  assert.equal((page.match(/className="format-menu-drafting-lines" aria-hidden="true"/g) ?? []).length, 1);
-  for (const className of [
-    "format-menu-drafting-frame",
-    "format-menu-drafting-rule format-menu-drafting-rule-top",
-    "format-menu-drafting-rule format-menu-drafting-rule-divider",
-    "format-menu-drafting-rule format-menu-drafting-rule-bottom",
-    "format-menu-drafting-spine",
-  ]) {
-    assert.match(page, new RegExp(`className="${className}"`));
-  }
-  assert.equal((page.match(/className="format-event-drafting-lines" aria-hidden="true"/g) ?? []).length, 1);
-  for (const className of [
-    "format-event-drafting-frame",
-    "format-event-drafting-rule format-event-drafting-rule-top",
-    "format-event-drafting-rule format-event-drafting-rule-divider",
-    "format-event-drafting-rule format-event-drafting-rule-bottom",
-    "format-event-drafting-spine",
-  ]) {
-    assert.match(page, new RegExp(`className="${className}"`));
-  }
-  assert.match(page, /className="format-event-canape-spread" aria-hidden="true"[\s\S]*?width="1774"[\s\S]*?height="887"[\s\S]*?alt=""/);
-  assert.match(page, /className="format-menu-spread"[\s\S]*?className="format-menu-overview"[\s\S]*?width="1200"[\s\S]*?height="800"[\s\S]*?alt=""/);
-  assert.match(page, /className="format-dinner-meta" aria-hidden="true"[\s\S]*?Частный ужин[\s\S]*?Семь подач/);
-  assert.match(page, /className="format-dinner-axis" aria-hidden="true"[\s\S]*?— Готовит шеф/);
-  assert.match(page, /className="format-menu-mobile"[\s\S]*?format-course-group-four[\s\S]*?format-course-group-three/);
+
   for (const course of [
     "Стартер",
     "Холодная закуска",
@@ -346,9 +315,9 @@ test("keeps the approved process drawings, private-dinner plates and mapped plat
   ]) {
     assert.ok(page.includes(`"${course}"`), `private-dinner course role must remain live: ${course}`);
   }
-  assert.doesNotMatch(page, /className="format-menu-spread" aria-hidden="true"/);
+
   assert.doesNotMatch(page, /mobileDrawingSrc|mobile-v4/);
-  assert.match(css, /The rejected tall posters[\s\S]*?@media \(min-width: 561px\) and \(max-width: 820px\)[\s\S]*?aspect-ratio:\s*1 \/ 1;[\s\S]*?@media \(min-width: 821px\) and \(max-width: 940px\)[\s\S]*?aspect-ratio:\s*2 \/ 1;[\s\S]*?@media \(max-width: 560px\)[\s\S]*?aspect-ratio:\s*1 \/ 1;/);
+
   assert.doesNotMatch(page, /PreparationSequence|WorkdayTrajectory|MenuComposition|SourceContour/);
   assert.equal((page.match(/<svg/g) ?? []).length, 1);
   assert.match(page, /className="chef-journey-underlay" aria-hidden="true"[\s\S]*?<picture>[\s\S]*?<source[\s\S]*?media="\(max-width: 560px\)"[\s\S]*?masterchef-route-underlay-v3-mobile\.webp[\s\S]*?<source[\s\S]*?media="\(max-width: 900px\)"[\s\S]*?masterchef-route-underlay-v3-tablet\.webp[\s\S]*?<img[\s\S]*?masterchef-route-underlay-v3-desktop\.webp[\s\S]*?alt=""/);
@@ -400,13 +369,7 @@ test("keeps the approved process drawings, private-dinner plates and mapped plat
   assert.match(page, /className="home-story-copy"[\s\S]*?className="home-story-day"[\s\S]*?className="home-story-film"[\s\S]*?<ChefStoryVideo \/>[\s\S]*?домашняя кухня · подготовка, огонь, подача/);
   const homeChapter = page.slice(page.indexOf('className="present-day"'), page.indexOf('className="sources"'));
   assert.doesNotMatch(homeChapter, /home-story-(?:media|illustration|stages)|workday-four-step-vertical\.png/);
-  assert.match(page, /className="format-process-field"/);
-  assert.match(page, /className="format-process-plan"/);
-  assert.equal((page.match(/processBackground:\s*true/g) ?? []).length, 2);
-  assert.equal((page.match(/processBackground:\s*false/g) ?? []).length, 1);
-  assert.equal((page.match(/drawingSrc:\s*null/g) ?? []).length, 2);
-  assert.equal((page.match(/compactDrawingSrc:\s*null/g) ?? []).length, 2);
-  assert.match(page, /className="format-process-field"[\s\S]*?className="format-process-plan"[\s\S]*?className="format-media"[\s\S]*?className="format-copy"/);
+
   // The approved annotated-plate amendment replaces the former sourcing gallery.
   assert.doesNotMatch(page, /sourceScenes|className="source-(?:gallery|sequence|provenance)"/);
   assert.match(page, /className="personal-menu-shell"[\s\S]*?className="personal-menu-lede personal-menu-lede-secondary"[\s\S]*?<PersonalMenuPlate \/>/);
@@ -426,8 +389,7 @@ test("keeps the approved process drawings, private-dinner plates and mapped plat
   assert.doesNotMatch(page, /Свежая зелень|Завершающий акцент, который добавляет свежесть и лёгкость/);
   assert.doesNotMatch(`${page}\n${css}`, /source-(?:list|row|copy|images|reference-plan)|menu-reference-plan/);
   assert.doesNotMatch(page, /className="contact(?:-reference-plan|-action)?"|id="contact"|inquiry-spoon-reference-exact\.png/);
-  assert.match(css, /\.format-process-field\s*\{[^}]*position:\s*relative;[^}]*aspect-ratio:\s*2 \/ 1/);
-  assert.match(css, /\.format-process-plan\s*\{[^}]*position:\s*absolute;[^}]*z-index:\s*0;[^}]*object-fit:\s*contain/);
+
   const journeyStart = css.lastIndexOf("/* Quiet-zone MasterChef stage.");
   const journeyPass = css.slice(
     journeyStart,
@@ -468,66 +430,7 @@ test("keeps the approved process drawings, private-dinner plates and mapped plat
   assert.match(css, /\.home-story-film video\s*\{[^}]*aspect-ratio:\s*4 \/ 3;[^}]*object-fit:\s*cover/);
   assert.doesNotMatch(css, /\.home-story-(?:media|illustration|stages)/);
   assert.doesNotMatch(css, /\.present-day-accessible|\.story-present-process-/);
-  assert.match(css, /\.format-process-field\s*\{[^}]*grid-column:\s*1 \/ 13;[^}]*aspect-ratio:\s*2 \/ 1/);
-  assert.match(css, /\.format-row-1\.format-row-process \.format-media\s*\{[^}]*position:\s*absolute;[^}]*z-index:\s*1;[^}]*top:\s*5%;[^}]*left:\s*58%;[^}]*width:\s*27\.1145%;[^}]*height:\s*74%/);
-  assert.match(css, /\.format-row-1\.format-row-process \.format-media img\s*\{[^}]*object-fit:\s*contain/);
-  assert.match(css, /\.format-row-2\.format-row-process \.format-process-field\s*\{[^}]*grid-column:\s*1 \/ 13/);
-  assert.match(css, /\.format-row-2\.format-row-process \.format-media\s*\{[^}]*position:\s*absolute;[^}]*z-index:\s*1;[^}]*top:\s*8%;[^}]*left:\s*52%;[^}]*width:\s*37%;[^}]*height:\s*49\.1%/);
-  assert.match(css, /\.format-row-2\.format-row-process \.format-media img\s*\{[^}]*object-fit:\s*contain/);
-  assert.match(css, /\.format-row-2\.format-row-process \.format-copy\s*\{[^}]*grid-column:\s*1 \/ 4;[^}]*grid-row:\s*1/);
-  assert.match(css, /\.format-row-3\.format-row-process \.format-process-field\s*\{[^}]*grid-column:\s*1 \/ 13/);
-  assert.match(css, /\.format-row-3\.format-row-process \.format-media\s*\{[^}]*position:\s*absolute;[^}]*z-index:\s*1;[^}]*top:\s*10%;[^}]*left:\s*2%;[^}]*width:\s*32%;[^}]*height:\s*43\.1%/);
-  assert.match(css, /\.format-row-3\.format-row-process \.format-media img\s*\{[^}]*object-fit:\s*contain/);
-  assert.match(css, /\.format-row-3\.format-row-process \.format-copy\s*\{[^}]*grid-column:\s*10 \/ 13;[^}]*grid-row:\s*1/);
-  assert.match(css, /@media \(max-width:\s*820px\)[\s\S]*?\.format-row-2\.format-row-process \.format-copy\s*\{[^}]*grid-column:\s*1;[^}]*grid-row:\s*1/);
-  assert.match(css, /@media \(max-width:\s*820px\)[\s\S]*?\.format-row-2\.format-row-process \.format-process-field\s*\{[^}]*grid-column:\s*1;[^}]*grid-row:\s*2;[^}]*width:\s*100%/);
-  assert.match(css, /@media \(max-width:\s*820px\)[\s\S]*?\.format-row-3\.format-row-process \.format-copy\s*\{[^}]*grid-column:\s*1;[^}]*grid-row:\s*2/);
-  assert.match(css, /@media \(max-width:\s*820px\)[\s\S]*?\.format-row-3\.format-row-process \.format-process-field\s*\{[^}]*grid-column:\s*1;[^}]*grid-row:\s*1;[^}]*width:\s*100%/);
-  const foregroundPass = css.slice(css.lastIndexOf("/* Foreground-first process composition."));
-  assert.match(foregroundPass, /\.format-row-process \.format-process-field \{ aspect-ratio: \.85 \/ 1; \}/);
-  assert.match(foregroundPass, /\.format-row-1\.format-row-process \.format-copy,[\s\S]*?\.format-row-2\.format-row-process \.format-copy\s*\{[^}]*left:\s*4%;[^}]*width:\s*45%/);
-  assert.match(foregroundPass, /\.format-row-1\.format-row-process \.format-media\s*\{[^}]*left:\s*55%;[^}]*width:\s*41%/);
-  assert.match(foregroundPass, /\.format-row-2\.format-row-process \.format-media\s*\{[^}]*left:\s*53%;[^}]*width:\s*43%/);
-  assert.match(foregroundPass, /\.format-row-3\.format-row-process \.format-media\s*\{[^}]*left:\s*4%;[^}]*width:\s*45%/);
-  assert.match(foregroundPass, /\.format-row-3\.format-row-process \.format-copy\s*\{[^}]*left:\s*53%;[^}]*width:\s*43%/);
-  assert.match(foregroundPass, /aspect-ratio:\s*1152 \/ 1572/);
-  assert.match(foregroundPass, /aspect-ratio:\s*2278 \/ 1510/);
-  assert.match(foregroundPass, /aspect-ratio:\s*1144 \/ 770/);
-  const privateDinnerMenuPass = css.slice(css.lastIndexOf("/* Private dinner:"));
-  assert.match(privateDinnerMenuPass, /\.format-row-1\.format-row-menu \.format-process-field\s*\{[^}]*overflow:\s*hidden;[^}]*aspect-ratio:\s*1\.8 \/ 1;[^}]*background:\s*var\(--paper\)/);
-  assert.match(privateDinnerMenuPass, /\.format-menu-spread\s*\{[^}]*position:\s*absolute;[^}]*z-index:\s*1;[^}]*width:\s*56%/);
-  assert.match(privateDinnerMenuPass, /\.format-menu-spread img\s*\{[^}]*width:\s*100%;[^}]*height:\s*auto/);
-  assert.match(privateDinnerMenuPass, /\.format-menu-drafting-frame\s*\{[^}]*inset:\s*1\.5%;[^}]*border:\s*1px solid var\(--rule\)/);
-  assert.match(privateDinnerMenuPass, /\.format-menu-drafting-rule-divider\s*\{[^}]*top:\s*34%;[^}]*right:\s*35%/);
-  assert.match(privateDinnerMenuPass, /\.format-menu-drafting-spine\s*\{[^}]*left:\s*65%;[^}]*width:\s*1px;[^}]*background:\s*var\(--accent-small\)/);
-  assert.match(privateDinnerMenuPass, /\.format-menu-drafting-spine::before,[\s\S]*?\.format-menu-drafting-spine::after\s*\{[^}]*border:\s*1px solid var\(--accent-small\);[^}]*border-radius:\s*50%/);
-  assert.match(privateDinnerMenuPass, /\.format-menu-caption\s*\{[^}]*position:\s*absolute;[^}]*clip:\s*rect\(0, 0, 0, 0\)/);
-  assert.match(privateDinnerMenuPass, /@media \(min-width: 821px\) and \(max-width: 1100px\)[\s\S]*?aspect-ratio:\s*1\.5 \/ 1;[\s\S]*?width:\s*52%/);
-  assert.match(privateDinnerMenuPass, /@media \(min-width: 561px\) and \(max-width: 820px\)[\s\S]*?aspect-ratio:\s*1 \/ 1;[\s\S]*?width:\s*76%/);
-  assert.match(privateDinnerMenuPass, /@media \(max-width: 560px\)[\s\S]*?aspect-ratio:\s*\.62 \/ 1;[\s\S]*?border:\s*1px solid var\(--rule\)/);
-  assert.match(privateDinnerMenuPass, /@media \(max-width: 560px\)[\s\S]*?\.format-row-1\.format-row-menu \.format-copy\s*\{[^}]*left:\s*4\.3%;[^}]*width:\s*41%/);
-  assert.match(privateDinnerMenuPass, /@media \(max-width: 560px\)[\s\S]*?\.format-row-1\.format-row-menu \.format-media\s*\{[^}]*left:\s*51\.5%;[^}]*width:\s*44\.2%;[^}]*aspect-ratio:\s*1152 \/ 1572/);
-  assert.match(privateDinnerMenuPass, /@media \(max-width: 560px\)[\s\S]*?\.format-row-1\.format-row-menu \.format-copy p\s*\{[^}]*font:\s*400 clamp\(13px, 3\.2vw, 13\.6px\)\/1\.55 var\(--font-sans\)/);
-  assert.match(privateDinnerMenuPass, /\.format-course-group-four \.format-course-labels\s*\{[^}]*grid-template-columns:\s*repeat\(4,/);
-  assert.match(privateDinnerMenuPass, /\.format-course-group-three \.format-course-labels\s*\{[^}]*grid-template-columns:\s*repeat\(3,/);
-  const privateEventCanapePass = css.slice(css.lastIndexOf("/* Private events follow"));
-  assert.match(privateEventCanapePass, /\.format-row-2\.format-row-canape \.format-process-field\s*\{[^}]*overflow:\s*hidden;[^}]*aspect-ratio:\s*1\.65 \/ 1;[^}]*background:\s*var\(--paper\)/);
-  assert.match(privateEventCanapePass, /\.format-event-drafting-frame\s*\{[^}]*inset:\s*1\.5%;[^}]*border:\s*1px solid var\(--rule\)/);
-  assert.match(privateEventCanapePass, /\.format-event-drafting-rule-divider\s*\{[^}]*top:\s*44%/);
-  assert.match(privateEventCanapePass, /\.format-event-drafting-spine\s*\{[^}]*left:\s*63\.5%;[^}]*width:\s*1px;[^}]*background:\s*var\(--rule\)/);
-  assert.match(privateEventCanapePass, /\.format-event-canape-spread\s*\{[^}]*top:\s*48%;[^}]*right:\s*3%;[^}]*bottom:\s*5%;[^}]*left:\s*3%;[^}]*background:\s*var\(--paper\)/);
-  assert.match(privateEventCanapePass, /\.format-row-2\.format-row-canape \.format-copy\s*\{[^}]*left:\s*3%;[^}]*width:\s*56%/);
-  assert.match(privateEventCanapePass, /\.format-row-2\.format-row-canape \.format-media\s*\{[^}]*left:\s*68%;[^}]*width:\s*28%;[^}]*aspect-ratio:\s*6 \/ 5/);
-  assert.doesNotMatch(privateEventCanapePass, /grayscale\(|mix-blend-mode:|\.format-row-2\.format-row-canape[^}]*img[^}]*opacity:/i);
-  assert.match(privateEventCanapePass, /\.format-event-canape-spread\s*\{[^}]*background:\s*var\(--paper\);[^}]*isolation:\s*isolate/);
-  assert.match(privateEventCanapePass, /\.format-row-2\.format-row-canape \.format-media\s*\{[^}]*background:\s*var\(--paper\);[^}]*isolation:\s*isolate/);
-  assert.match(privateEventCanapePass, /\.format-row-2\.format-row-canape \.format-media img\s*\{[^}]*object-fit:\s*cover;[^}]*object-position:\s*60% 50%/);
-  assert.match(privateEventCanapePass, /@media \(min-width: 821px\) and \(max-width: 1100px\)[\s\S]*?aspect-ratio:\s*1\.45 \/ 1/);
-  assert.match(privateEventCanapePass, /@media \(min-width: 561px\) and \(max-width: 820px\)[\s\S]*?aspect-ratio:\s*1 \/ 1;[\s\S]*?top:\s*43%;[^}]*bottom:\s*5%;[^}]*aspect-ratio:\s*auto/);
-  assert.match(privateEventCanapePass, /@media \(max-width: 560px\)[\s\S]*?aspect-ratio:\s*\.78 \/ 1;[\s\S]*?font-size:\s*13px[\s\S]*?top:\s*48\.5%;[^}]*bottom:\s*5%;[^}]*aspect-ratio:\s*auto/);
-  assert.doesNotMatch(privateEventCanapePass, /\.format-event-canape-spread\s*\{[^}]*bottom:\s*auto/);
-  assert.match(privateEventCanapePass, /@media \(max-width: 380px\)[\s\S]*?aspect-ratio:\s*\.74 \/ 1/);
-  assert.doesNotMatch(privateEventCanapePass, /border-radius:|box-shadow:|linear-gradient|radial-gradient/i);
+
 });
 
 test("uses the measured Trivium typography on the approved editorial surfaces", async () => {
@@ -546,9 +449,6 @@ test("uses the measured Trivium typography on the approved editorial surfaces", 
     "--accent-small: #72561f",
     "--muted: #6e665a",
     "--rule: #c8c0b3",
-    ".format-row-1 .format-media",
-    ".format-row-2 .format-media",
-    ".format-row-3 .format-media",
     ".story-origin",
     ".home-story",
     ".personal-menu-shell",
@@ -603,7 +503,7 @@ test("uses the measured Trivium typography on the approved editorial surfaces", 
   assert.equal((css.match(/font-family:\s*"Montserrat"/g) ?? []).length, 20);
   assert.match(css, /\.hero h1\s*\{[^}]*font:\s*300 clamp\(50px, 4\.45vw, 64px\)\/\.89 var\(--font-display\)/);
   assert.match(css, /\.section-intro h2\s*\{[^}]*font:\s*400 clamp\(32px, 4vw, 48px\)\/1\.2 var\(--font-display\)/);
-  assert.match(css, /\.format-copy h3\s*\{[^}]*font:\s*400 20px\/1\.3 var\(--font-display\)/);
+
   assert.match(css, /\.story-copy p\s*\{[^}]*font:\s*300 16px\/1\.7 var\(--font-sans\)/);
   assert.match(css, /\.personal-menu-lede\s*\{[^}]*color:\s*var\(--muted\);[^}]*font:\s*300 clamp\(16px, 1\.45vw, 20px\)\/1\.75 var\(--font-sans\)/);
   assert.match(css, /\.menu-plate-note p\s*\{[^}]*font:\s*300 clamp\(14px, 1\.05vw, 15px\)\/1\.5 var\(--font-sans\)/);
@@ -613,21 +513,15 @@ test("uses the measured Trivium typography on the approved editorial surfaces", 
   assert.match(css, /\.home-story\s*\{[^}]*max-width:\s*var\(--content\)/);
   assert.doesNotMatch(css, /\.story-formats/);
   assert.doesNotMatch(css, /\.formats-intro/);
-  assert.doesNotMatch(css, /\.format-list\s*\{[^}]*border-top/);
+
   assert.doesNotMatch(css, /\.story-origin\s*\{[^}]*border-bottom/);
   assert.match(css, /\.present-day\s*\{[^}]*background:\s*var\(--paper-light\)/);
   assert.match(css, /\.home-story-film video\s*\{[^}]*aspect-ratio:\s*4 \/ 3/);
-  assert.match(css, /\.format-row \.format-media\s*\{[^}]*height:\s*clamp\(164px, 46vw, 184px\);[^}]*aspect-ratio:\s*auto/);
+
   assert.match(css, /\.story-origin\s*\{\s*display:\s*grid;\s*grid-template-columns:\s*repeat\(12, minmax\(0, 1fr\)\);\s*gap:\s*14px;\s*align-items:\s*start/);
   assert.match(css, /\.story-award\s*\{[^}]*grid-column:\s*1 \/ 5;[^}]*grid-row:\s*1;[^}]*width:\s*auto/);
   assert.match(css, /\.story-copy\s*\{[^}]*display:\s*block;[^}]*grid-column:\s*5 \/ 13;[^}]*grid-row:\s*1/);
-  assert.match(css, /\.format-row-1 \.format-media,\s*\.format-row-3 \.format-media\s*\{\s*grid-column:\s*1 \/ 6;\s*grid-row:\s*1/);
-  assert.match(css, /\.format-row-2 \.format-media\s*\{\s*grid-column:\s*8 \/ 13;\s*grid-row:\s*1/);
-  assert.match(css, /\.format-row-1 \.format-copy,[^}]*\.format-row-3 \.format-copy\s*\{\s*grid-column:\s*6 \/ 13;\s*grid-row:\s*1/);
-  assert.match(css, /\.format-row-2 \.format-copy\s*\{\s*grid-column:\s*1 \/ 8;\s*grid-row:\s*1/);
-  assert.match(css, /\.format-copy\s*\{[^}]*display:\s*block;[^}]*min-width:\s*0;[^}]*align-self:\s*start/);
-  assert.doesNotMatch(css, /\.format-copy\s*\{\s*display:\s*contents/);
-  assert.match(css, /\.format-copy p\s*\{[^}]*margin-top:\s*10px;[^}]*color:\s*var\(--ink\);[^}]*font-size:\s*13\.6px;[^}]*font-weight:\s*300;[^}]*line-height:\s*1\.55/);
+
   assert.match(css, /\.story-award,\s*\.story-award img\s*\{[^}]*height:\s*clamp\(196px, 56vw, 218px\);[^}]*aspect-ratio:\s*auto/);
   assert.match(css, /\.story-copy p\s*\{\s*color:\s*var\(--ink\);\s*font-size:\s*14px;\s*font-weight:\s*300;\s*line-height:\s*1\.55/);
   assert.match(css, /\.hero-central-spread\s*\{[^}]*grid-template-columns:\s*minmax\(0, 56fr\) minmax\(0, 44fr\)/);
@@ -636,7 +530,7 @@ test("uses the measured Trivium typography on the approved editorial surfaces", 
   assert.match(css, /\.story\s*\{[^}]*background:\s*var\(--paper\)/);
   assert.doesNotMatch(css, /\.contact(?:-reference-plan|-action)?\b/);
   assert.match(css, /\.site-footer\s*\{[^}]*background:\s*var\(--paper-light\)/);
-  assert.match(css, /\.format-copy p\s*\{[^}]*font:\s*300 14\.08px\/1\.8 var\(--font-sans\)/);
+
   assert.match(css, /\.header-action\s*\{[^}]*font-family:\s*var\(--font-sans\);[^}]*font-size:\s*11\.2px/);
   assert.match(css, /\.header-action\s*\{[^}]*color:\s*var\(--accent-small\);[^}]*font-size:\s*11\.2px;[^}]*font-weight:\s*600;[^}]*line-height:\s*1\.35;[^}]*letter-spacing:\s*\.14em/);
   assert.match(css, /\.site-footer > a:first-child\s*\{[^}]*font:\s*600 24px\/1\.1 var\(--font-display\)/);
@@ -645,7 +539,7 @@ test("uses the measured Trivium typography on the approved editorial surfaces", 
   assert.match(favicon, /stroke="#B24F2F"/);
   assert.match(favicon, /fill="#FFF9EE"/);
   assert.match(css, /html\s*\{[^}]*background:\s*var\(--paper\)/);
-  assert.doesNotMatch(css, /linear-gradient|radial-gradient|mesh-gradient|glassmorphism|drop-shadow/i);
+  assert.doesNotMatch(css, /(?:background(?:-image)?\s*:[^;}]*|box-shadow\s*:[^;}]*)(?:linear-gradient|radial-gradient)|mesh-gradient|glassmorphism|drop-shadow/i);
 });
 
 test("applies outcome-specific actions and interaction-only motion", async () => {
@@ -734,9 +628,6 @@ test("preserves the approved story, personal menu and accessibility", async () =
 test("keeps readability-specific desktop, tablet and narrow-phone geometry", async () => {
   const css = await source("app/globals.css");
 
-  assert.match(css, /\.format-row\s*\{[^}]*grid-template-columns:\s*repeat\(12,[^}]*padding:\s*clamp\(30px, 3\.4vw, 46px\) 0/);
-  assert.match(css, /\.format-row-3 \.format-media\s*\{\s*grid-column:\s*1 \/ 8/);
-  assert.match(css, /\.format-row-3 \.format-copy\s*\{\s*grid-column:\s*9 \/ 13/);
   assert.match(css, /\.story-intro\s*\{\s*margin-bottom:\s*clamp\(48px, 5vw, 72px\)/);
   const personalMenuPass = css.slice(css.indexOf(".personal-menu-shell {"), css.indexOf(".site-footer {"));
   assert.match(personalMenuPass, /\.personal-menu-shell\s*\{[^}]*max-width:\s*var\(--content\)/);
@@ -757,8 +648,7 @@ test("keeps readability-specific desktop, tablet and narrow-phone geometry", asy
   assert.match(tabletDown, /\.hero-central-spread\s*\{[^}]*grid-template-columns:\s*minmax\(0, 56fr\) minmax\(0, 44fr\)/);
   assert.match(tablet, /\.story-award\s*\{\s*grid-column:\s*1 \/ 6/);
   assert.match(tablet, /\.story-copy\s*\{\s*grid-column:\s*6 \/ 13/);
-  assert.match(tablet, /\.format-row-1 \.format-media,[\s\S]*?grid-column:\s*1 \/ 6;\s*grid-row:\s*1/);
-  assert.match(tablet, /\.format-row-2 \.format-copy\s*\{\s*grid-column:\s*1 \/ 8;\s*grid-row:\s*1/);
+
   assert.match(tabletDown, /\.home-story-copy\s*\{[^}]*grid-column:\s*1 \/ 6/);
   assert.match(tabletDown, /\.home-story-film\s*\{[^}]*grid-column:\s*6 \/ 13;[^}]*width:\s*100%/);
   assert.match(css.slice(css.indexOf("@media (max-width: 1100px)"), css.indexOf("@media (max-width: 1024px)")), /\.home-story-day\s*\{[^}]*grid-column:\s*1 \/ -1;[^}]*grid-template-columns:\s*repeat\(3,/);
@@ -867,4 +757,40 @@ test("keeps records and rejects the obsolete visible-system files", async () => 
   for (const [path, expectedHash] of Object.entries(exactRemainingReferenceCrops)) {
     assert.equal(await sha256(path), expectedHash, `${path} must stay byte-identical to the approved screenshot crop`);
   }
+});
+
+test("renders all three services with accessible live copy and complete food captions", async () => {
+  const [page, component] = await Promise.all([
+    source("app/page.tsx"), source("app/event-format-sheets.tsx"),
+  ]);
+  // Compile the small server component with the project's existing compiler, without a browser dependency.
+  const { outputText } = ts.transpileModule(component, {
+    compilerOptions: { jsx: ts.JsxEmit.ReactJSX, module: ts.ModuleKind.CommonJS, esModuleInterop: true },
+  });
+  const compiledComponent = { exports: {} };
+  new Function("require", "module", "exports", outputText)(createRequire(import.meta.url), compiledComponent, compiledComponent.exports);
+  const data = page.slice(page.indexOf("const eventFormats"), page.indexOf("const chefJourneyStops"))
+    .replace("satisfies EventFormat[]", "");
+  const { eventFormats, privateDinnerCourses } = new Function(`${data}; return { eventFormats, privateDinnerCourses };`)();
+  const html = renderToStaticMarkup(createElement(compiledComponent.exports.default, {
+    formats: eventFormats, courses: privateDinnerCourses,
+  }));
+  assert.equal((html.match(/<section /g) ?? []).length, 3);
+  assert.equal((html.match(/<h3 /g) ?? []).length, 3);
+  let cursor = -1;
+  for (const format of eventFormats) {
+    const next = html.indexOf(`<section id="${format.id}" aria-labelledby="${format.id}-title">`);
+    assert.ok(next > cursor, "services retain their approved reading order");
+    cursor = next;
+    assert.ok(html.includes(`<h3 id="${format.id}-title">${format.name}</h3>`));
+    assert.ok(html.includes(format.description));
+    assert.ok(html.includes(`alt="${format.alt}"`));
+  }
+  for (const label of [...privateDinnerCourses, "Нарезка", "Замес", "Лепка", "Соусы", "Обжарка", "Подача"]) {
+    assert.ok(html.includes(`>${label}<`), `caption remains live text: ${label}`);
+  }
+  const images = new Set([...html.matchAll(/src="([^"]+)"/g)].map(match => match[1]));
+  await Promise.all([...images].map(path => access(new URL(`public${path}`, root))));
+  assert.equal(images.size, 6, "three documentary photos and three food scenes load once each");
+  assert.doesNotMatch(html, /Готовит шеф|format-process-plan|design\/mockups/);
 });

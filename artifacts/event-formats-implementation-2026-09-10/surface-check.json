@@ -1,0 +1,232 @@
+{
+  "controls": [
+    {
+      "height": 44,
+      "href": "#main-content",
+      "label": "перейти к содержанию",
+      "tag": "A",
+      "width": 251.84375
+    },
+    {
+      "height": 66,
+      "href": "#top",
+      "label": "Evgen Grybenyk — начало страницы",
+      "tag": "A",
+      "width": 161.0234375
+    },
+    {
+      "height": 66,
+      "href": "https://www.instagram.com/evg.chef/",
+      "label": "Обсудить вечер в Instagram @evg.chef — откроется в новой вкладке",
+      "tag": "A",
+      "width": 158.7890625
+    },
+    {
+      "height": 58,
+      "href": "https://www.instagram.com/evg.chef/",
+      "label": "Обсудить меню в Instagram @evg.chef — откроется в новой вкладке",
+      "tag": "A",
+      "width": 343
+    },
+    {
+      "height": 44,
+      "href": "#top",
+      "label": "Evgen Grybenyk",
+      "tag": "A",
+      "width": 339
+    },
+    {
+      "height": 44,
+      "href": "https://www.instagram.com/evg.chef/",
+      "label": "Instagram @evg.chef — откроется в новой вкладке",
+      "tag": "A",
+      "width": 172.9453125
+    }
+  ],
+  "fonts": "loaded",
+  "lang": "ru",
+  "serviceControls": 0,
+  "serviceImages": [
+    {
+      "complete": true,
+      "naturalWidth": 1152,
+      "src": "/media/event-formats/private-dinner.jpg"
+    },
+    {
+      "complete": true,
+      "naturalWidth": 1536,
+      "src": "/media/event-formats/private-dinner-seven-plates-white-v2.png"
+    },
+    {
+      "complete": true,
+      "naturalWidth": 1536,
+      "src": "/media/event-formats/private-dinner-seven-plates-white-v2.png"
+    },
+    {
+      "complete": true,
+      "naturalWidth": 1536,
+      "src": "/media/event-formats/private-dinner-seven-plates-white-v2.png"
+    },
+    {
+      "complete": true,
+      "naturalWidth": 1536,
+      "src": "/media/event-formats/private-dinner-seven-plates-white-v2.png"
+    },
+    {
+      "complete": true,
+      "naturalWidth": 1536,
+      "src": "/media/event-formats/private-dinner-seven-plates-white-v2.png"
+    },
+    {
+      "complete": true,
+      "naturalWidth": 1536,
+      "src": "/media/event-formats/private-dinner-seven-plates-white-v2.png"
+    },
+    {
+      "complete": true,
+      "naturalWidth": 1536,
+      "src": "/media/event-formats/private-dinner-seven-plates-white-v2.png"
+    },
+    {
+      "complete": true,
+      "naturalWidth": 2278,
+      "src": "/media/event-formats/private-event-outdoor-crepes.png"
+    },
+    {
+      "complete": true,
+      "naturalWidth": 1774,
+      "src": "/media/event-formats/private-event-canapes-v3.webp"
+    },
+    {
+      "complete": true,
+      "naturalWidth": 1774,
+      "src": "/media/event-formats/private-event-canapes-v3.webp"
+    },
+    {
+      "complete": true,
+      "naturalWidth": 1774,
+      "src": "/media/event-formats/private-event-canapes-v3.webp"
+    },
+    {
+      "complete": true,
+      "naturalWidth": 1774,
+      "src": "/media/event-formats/private-event-canapes-v3.webp"
+    },
+    {
+      "complete": true,
+      "naturalWidth": 1774,
+      "src": "/media/event-formats/private-event-canapes-v3.webp"
+    },
+    {
+      "complete": true,
+      "naturalWidth": 1774,
+      "src": "/media/event-formats/private-event-canapes-v3.webp"
+    },
+    {
+      "complete": true,
+      "naturalWidth": 1774,
+      "src": "/media/event-formats/private-event-canapes-v3.webp"
+    },
+    {
+      "complete": true,
+      "naturalWidth": 1774,
+      "src": "/media/event-formats/private-event-canapes-v3.webp"
+    },
+    {
+      "complete": true,
+      "naturalWidth": 1774,
+      "src": "/media/event-formats/private-event-canapes-v3.webp"
+    },
+    {
+      "complete": true,
+      "naturalWidth": 1774,
+      "src": "/media/event-formats/private-event-canapes-v3.webp"
+    },
+    {
+      "complete": true,
+      "naturalWidth": 1774,
+      "src": "/media/event-formats/private-event-canapes-v3.webp"
+    },
+    {
+      "complete": true,
+      "naturalWidth": 1774,
+      "src": "/media/event-formats/private-event-canapes-v3.webp"
+    },
+    {
+      "complete": true,
+      "naturalWidth": 1774,
+      "src": "/media/event-formats/private-event-canapes-v3.webp"
+    },
+    {
+      "complete": true,
+      "naturalWidth": 1774,
+      "src": "/media/event-formats/private-event-canapes-v3.webp"
+    },
+    {
+      "complete": true,
+      "naturalWidth": 1774,
+      "src": "/media/event-formats/private-event-canapes-v3.webp"
+    },
+    {
+      "complete": true,
+      "naturalWidth": 1774,
+      "src": "/media/event-formats/private-event-canapes-v3.webp"
+    },
+    {
+      "complete": true,
+      "naturalWidth": 1774,
+      "src": "/media/event-formats/private-event-canapes-v3.webp"
+    },
+    {
+      "complete": true,
+      "naturalWidth": 1774,
+      "src": "/media/event-formats/private-event-canapes-v3.webp"
+    },
+    {
+      "complete": true,
+      "naturalWidth": 1774,
+      "src": "/media/event-formats/private-event-canapes-v3.webp"
+    },
+    {
+      "complete": true,
+      "naturalWidth": 1774,
+      "src": "/media/event-formats/private-event-canapes-v3.webp"
+    },
+    {
+      "complete": true,
+      "naturalWidth": 1774,
+      "src": "/media/event-formats/private-event-canapes-v3.webp"
+    },
+    {
+      "complete": true,
+      "naturalWidth": 1774,
+      "src": "/media/event-formats/private-event-canapes-v3.webp"
+    },
+    {
+      "complete": true,
+      "naturalWidth": 1774,
+      "src": "/media/event-formats/private-event-canapes-v3.webp"
+    },
+    {
+      "complete": true,
+      "naturalWidth": 1774,
+      "src": "/media/event-formats/private-event-canapes-v3.webp"
+    },
+    {
+      "complete": true,
+      "naturalWidth": 1144,
+      "src": "/media/event-formats/masterclass.jpg"
+    },
+    {
+      "complete": true,
+      "naturalWidth": 2071,
+      "src": "/media/event-formats/masterclasses-six-stages-paper-v2.webp"
+    },
+    {
+      "complete": true,
+      "naturalWidth": 2071,
+      "src": "/media/event-formats/masterclasses-six-stages-paper-v2.webp"
+    }
+  ],
+  "serviceOverflow": []
+}

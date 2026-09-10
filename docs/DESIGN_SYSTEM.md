@@ -1912,3 +1912,25 @@ Same-paper verification: the v2 lossless WebP has real alpha; clear background r
 - Remove the swipe hint and keyboard focus stop once the scene fits the viewport. CSS-hidden alternate layout must also leave the accessibility tree. No client state, new controls, library or animation.
 - Verify 1440, 1280, 1024, 768, 430, 390 and 375 px, plus 560/561 and 700/701 px. Exact final crop and size values are recorded in DESIGN_AUDIT.md after visual inspection.
 - Compact perimeter fitting: retain 1.5% side insets, but use 12 px vertically (half the existing 24 px section padding). A percentage of the much taller two-strip section can otherwise cross the upper rail near 700 px; this keeps the same frame outside the content rails at every compact width.
+
+
+## Unified service-sheet contract — approved 2026-09-10
+
+This contract supersedes ALL earlier service-specific geometry, title scale, numbering, photo-side and mobile exceptions for the three service sheets. Authority: user's `Делай` following the final unified mockups and direct smaller-canape / alternating-photo / shared-line corrections.
+
+- Preserve --paper #f4efe5, --ink #0a0a0a, --muted #6e665a, --rule #c8c0b3 and --accent-small #72561f. Keep Cormorant Garamond for titles/captions and Montserrat for paragraphs. No new font, palette, shadow, radius, gradient or motion.
+- One reusable normal-flow service sheet. Existing page container remains. Frame and rules are 1px; content padding fits the approved inset treatment, initially 16–32px. Services have natural, not forced-equal heights.
+- Shared wide title initially clamp(36px,4.2vw,60px); shared description initially clamp(16px,1.55vw,22px) / 1.55. A long title wraps at the same size. Number and its short gold rule use the same style in all three services.
+- Wide headers pair text and documentary photo, with photo on RIGHT / LEFT / RIGHT. A quiet gap contains a 1px gold spine with 6px hollow endpoints. Upper/lower rails and the supporting-image separator use --rule. No endpoint decorations at the perimeter corners.
+- At <=700px, each service has its number and full-width title above the description/photo pair. Title initially clamp(28px,7.7vw,34px), body 15px / 1.55. Text and photo remain side-by-side with the approved alternating direction; row height follows its content. Titles, descriptions and photos must not collide at 375px or enlarged text.
+- Seven courses remain 4+3 with complete plate rims and live labels. Labels share a serif role, initially clamp(12px,1.5vw,22px). Plate raster is representative illustration, not proof of an actual menu; no dish claims are added.
+- Canapes retain the existing alpha source, full natural color and a reduced displayed scale with quiet gaps. Fit source-derived apertures without cards; never claim a fixed event quantity from the illustration.
+- Six techniques retain the existing alpha scene. Wide: six across. Mobile: two unboxed groups of three with the existing live names. No scroll hint or extra focus stop.
+- Documentary source files remain unchanged. Crops may fit the approved aperture but must preserve the chef identity and the event context. The first portrait may require a source-aware fit rather than imitating the generated mockup pixels.
+- Existing global hover/focus states and >=44px action targets remain; these static service sheets introduce no new controls. No animation or library primitive is needed. Text and labels remain available if decorative media fail.
+- Exact clamps, gaps and aperture coordinates are neutral fitting values subject to visual QA at 1440,1280,1024,768,430,390,375px, including heading wraps, loading, overflow and photo context. The final audit records any adjustment.
+
+### Verified implementation values
+The seven-plate source uses a white exterior and multiply blending instead of the planned alpha extraction; its soft mask is a functional source crop. Canapés use 24 source apertures: 8 columns wide / 6 compact, with image widths 67% / 84% of each cell. This keeps their scale below the plates and preserves breathing room. Techniques occupy 80% of the wide content field and 100% in the two compact rows. Wide documentary photos use 4:3 apertures; dinner crop focus is 50% 18%, event 57% 50%. At ≤700 px, photos occupy the side column with a minimum 210 px height and source-aware positioning. Russian paragraphs use automatic hyphenation with `hyphenate-limit-chars: 6 3 3` and a long-word fallback.
+
+Shared type is identical across all three services at each measured width: 60/22 px at 1440; 53.76/19.84 at 1280; 43.008/16 at 1024; 36/16 at 768; 33.11/15 at 430; 30.03/15 at 390; 28.875/15 at 375 (heading/body). Captions remain live text. Muted copy has 4.94:1 contrast on paper; ink 17.28:1; small accent 5.98:1. All seven widths passed overflow and image-loading checks in Chrome. [Evidence](../artifacts/event-formats-implementation-2026-09-10/metrics.json).

@@ -1,0 +1,1089 @@
+[
+  {
+    "height": 1000,
+    "pageOverflow": false,
+    "rows": [
+      {
+        "h3": {
+          "height": 33.3984375,
+          "lineHeight": "33.408px",
+          "size": "28.8px",
+          "width": 470.7109375,
+          "x": 105.453125,
+          "y": 1820.9453125
+        },
+        "images": [
+          {
+            "complete": true,
+            "naturalWidth": 1200,
+            "src": "/media/event-formats/private-dinner-seven-plates-v1.jpg"
+          },
+          {
+            "complete": true,
+            "naturalWidth": 1152,
+            "src": "/media/event-formats/private-dinner.jpg"
+          }
+        ],
+        "number": {
+          "display": "inline",
+          "size": "16px",
+          "text": "01"
+        },
+        "p": {
+          "height": 48.96875,
+          "lineHeight": "24.4944px",
+          "size": "15.12px",
+          "width": 430,
+          "x": 105.453125,
+          "y": 1870.34375
+        },
+        "photo": {
+          "height": 463.890625,
+          "width": 339.953125,
+          "x": 981.5,
+          "y": 1760.7265625
+        },
+        "row": {
+          "height": 819.40625,
+          "width": 1307.53125,
+          "x": 66.234375,
+          "y": 1678.40625
+        },
+        "title": "Частный ужин"
+      },
+      {
+        "h3": {
+          "height": 33.3984375,
+          "lineHeight": "33.408px",
+          "size": "28.8px",
+          "width": 732.2109375,
+          "x": 105.453125,
+          "y": 2644.9765625
+        },
+        "images": [
+          {
+            "complete": true,
+            "naturalWidth": 1774,
+            "src": "/media/event-formats/private-event-canapes-v3.webp"
+          },
+          {
+            "complete": true,
+            "naturalWidth": 2278,
+            "src": "/media/event-formats/private-event-outdoor-crepes.png"
+          }
+        ],
+        "number": {
+          "display": "inline",
+          "size": "16px",
+          "text": "02"
+        },
+        "p": {
+          "height": 48.96875,
+          "lineHeight": "24.4944px",
+          "size": "15.12px",
+          "width": 430,
+          "x": 105.453125,
+          "y": 2694.375
+        },
+        "photo": {
+          "height": 305.078125,
+          "width": 366.1015625,
+          "x": 955.3515625,
+          "y": 2591.3515625
+        },
+        "row": {
+          "height": 885.4375,
+          "width": 1307.53125,
+          "x": 66.234375,
+          "y": 2497.8125
+        },
+        "title": "Приватные мероприятия"
+      },
+      {
+        "h3": {
+          "height": 66,
+          "lineHeight": "66px",
+          "size": "60px",
+          "width": 614.4765625,
+          "x": 105.453125,
+          "y": 3599.7265625
+        },
+        "images": [
+          {
+            "complete": true,
+            "naturalWidth": 1144,
+            "src": "/media/event-formats/masterclass.jpg"
+          },
+          {
+            "complete": true,
+            "naturalWidth": 2071,
+            "src": "/media/event-formats/masterclasses-six-stages-paper-v2.webp"
+          }
+        ],
+        "number": {
+          "display": "flex",
+          "size": "18px",
+          "text": "03"
+        },
+        "p": {
+          "height": 112.5,
+          "lineHeight": "37.5px",
+          "size": "25px",
+          "width": 559.296875,
+          "x": 105.453125,
+          "y": 3683.7265625
+        },
+        "photo": {
+          "height": 375.9921875,
+          "width": 558.6171875,
+          "x": 775.9296875,
+          "y": 3489.28125
+        },
+        "row": {
+          "height": 1092.7734375,
+          "width": 1307.53125,
+          "x": 66.234375,
+          "y": 3383.25
+        },
+        "title": "Мастер-классы"
+      }
+    ],
+    "width": 1440
+  },
+  {
+    "height": 1000,
+    "pageOverflow": false,
+    "rows": [
+      {
+        "h3": {
+          "height": 29.6953125,
+          "lineHeight": "29.696px",
+          "size": "25.6px",
+          "width": 418.40625,
+          "x": 93.7421875,
+          "y": 1743.8125
+        },
+        "images": [
+          {
+            "complete": true,
+            "naturalWidth": 1200,
+            "src": "/media/event-formats/private-dinner-seven-plates-v1.jpg"
+          },
+          {
+            "complete": true,
+            "naturalWidth": 1152,
+            "src": "/media/event-formats/private-dinner.jpg"
+          }
+        ],
+        "number": {
+          "display": "inline",
+          "size": "16px",
+          "text": "01"
+        },
+        "p": {
+          "height": 45.359375,
+          "lineHeight": "22.68px",
+          "size": "14px",
+          "width": 418.40625,
+          "x": 93.7421875,
+          "y": 1789.5078125
+        },
+        "photo": {
+          "height": 412.34375,
+          "width": 302.1796875,
+          "x": 872.4453125,
+          "y": 1685.203125
+        },
+        "row": {
+          "height": 733.71875,
+          "width": 1162.25,
+          "x": 58.875,
+          "y": 1609.40625
+        },
+        "title": "Частный ужин"
+      },
+      {
+        "h3": {
+          "height": 29.6953125,
+          "lineHeight": "29.696px",
+          "size": "25.6px",
+          "width": 650.859375,
+          "x": 93.7421875,
+          "y": 2481.640625
+        },
+        "images": [
+          {
+            "complete": true,
+            "naturalWidth": 1774,
+            "src": "/media/event-formats/private-event-canapes-v3.webp"
+          },
+          {
+            "complete": true,
+            "naturalWidth": 2278,
+            "src": "/media/event-formats/private-event-outdoor-crepes.png"
+          }
+        ],
+        "number": {
+          "display": "inline",
+          "size": "16px",
+          "text": "02"
+        },
+        "p": {
+          "height": 45.359375,
+          "lineHeight": "22.68px",
+          "size": "14px",
+          "width": 430,
+          "x": 93.7421875,
+          "y": 2527.3359375
+        },
+        "photo": {
+          "height": 271.1875,
+          "width": 325.4296875,
+          "x": 849.203125,
+          "y": 2428.8984375
+        },
+        "row": {
+          "height": 792.421875,
+          "width": 1162.25,
+          "x": 58.875,
+          "y": 2343.125
+        },
+        "title": "Приватные мероприятия"
+      },
+      {
+        "h3": {
+          "height": 60.5390625,
+          "lineHeight": "60.544px",
+          "size": "55.04px",
+          "width": 545.453125,
+          "x": 93.7421875,
+          "y": 3326.1171875
+        },
+        "images": [
+          {
+            "complete": true,
+            "naturalWidth": 1144,
+            "src": "/media/event-formats/masterclass.jpg"
+          },
+          {
+            "complete": true,
+            "naturalWidth": 2071,
+            "src": "/media/event-formats/masterclasses-six-stages-paper-v2.webp"
+          }
+        ],
+        "number": {
+          "display": "flex",
+          "size": "18px",
+          "text": "03"
+        },
+        "p": {
+          "height": 109.4296875,
+          "lineHeight": "36.48px",
+          "size": "24.32px",
+          "width": 544.0859375,
+          "x": 93.7421875,
+          "y": 3404.65625
+        },
+        "photo": {
+          "height": 333.75,
+          "width": 495.8671875,
+          "x": 690.390625,
+          "y": 3232.53125
+        },
+        "row": {
+          "height": 976.4609375,
+          "width": 1162.25,
+          "x": 58.875,
+          "y": 3135.546875
+        },
+        "title": "Мастер-классы"
+      }
+    ],
+    "width": 1280
+  },
+  {
+    "height": 1000,
+    "pageOverflow": false,
+    "rows": [
+      {
+        "h3": {
+          "height": 27.8359375,
+          "lineHeight": "27.84px",
+          "size": "24px",
+          "width": 334.7265625,
+          "x": 74.9921875,
+          "y": 1654.578125
+        },
+        "images": [
+          {
+            "complete": true,
+            "naturalWidth": 1200,
+            "src": "/media/event-formats/private-dinner-seven-plates-v1.jpg"
+          },
+          {
+            "complete": true,
+            "naturalWidth": 1152,
+            "src": "/media/event-formats/private-dinner.jpg"
+          }
+        ],
+        "number": {
+          "display": "inline",
+          "size": "16px",
+          "text": "01"
+        },
+        "p": {
+          "height": 68.0390625,
+          "lineHeight": "22.68px",
+          "size": "14px",
+          "width": 334.7265625,
+          "x": 74.9921875,
+          "y": 1698.4140625
+        },
+        "photo": {
+          "height": 329.875,
+          "width": 241.7421875,
+          "x": 697.953125,
+          "y": 1596.4921875
+        },
+        "row": {
+          "height": 690.484375,
+          "width": 929.796875,
+          "x": 47.1015625,
+          "y": 1530.6875
+        },
+        "title": "Частный ужин"
+      },
+      {
+        "h3": {
+          "height": 27.8359375,
+          "lineHeight": "27.84px",
+          "size": "24px",
+          "width": 483.4921875,
+          "x": 74.9921875,
+          "y": 2340.1484375
+        },
+        "images": [
+          {
+            "complete": true,
+            "naturalWidth": 1774,
+            "src": "/media/event-formats/private-event-canapes-v3.webp"
+          },
+          {
+            "complete": true,
+            "naturalWidth": 2278,
+            "src": "/media/event-formats/private-event-outdoor-crepes.png"
+          }
+        ],
+        "number": {
+          "display": "inline",
+          "size": "16px",
+          "text": "02"
+        },
+        "p": {
+          "height": 45.359375,
+          "lineHeight": "22.68px",
+          "size": "14px",
+          "width": 430,
+          "x": 74.9921875,
+          "y": 2383.984375
+        },
+        "photo": {
+          "height": 255.6875,
+          "width": 306.828125,
+          "x": 632.8671875,
+          "y": 2294.453125
+        },
+        "row": {
+          "height": 711.859375,
+          "width": 929.796875,
+          "x": 47.1015625,
+          "y": 2221.171875
+        },
+        "title": "Приватные мероприятия"
+      },
+      {
+        "h3": {
+          "height": 48.4296875,
+          "lineHeight": "48.4352px",
+          "size": "44.032px",
+          "width": 436.359375,
+          "x": 74.9921875,
+          "y": 3088.6796875
+        },
+        "images": [
+          {
+            "complete": true,
+            "naturalWidth": 1144,
+            "src": "/media/event-formats/masterclass.jpg"
+          },
+          {
+            "complete": true,
+            "naturalWidth": 2071,
+            "src": "/media/event-formats/masterclasses-six-stages-paper-v2.webp"
+          }
+        ],
+        "number": {
+          "display": "flex",
+          "size": "18px",
+          "text": "03"
+        },
+        "p": {
+          "height": 87.5390625,
+          "lineHeight": "29.184px",
+          "size": "19.456px",
+          "width": 435.2421875,
+          "x": 74.9921875,
+          "y": 3155.109375
+        },
+        "photo": {
+          "height": 267.0078125,
+          "width": 396.703125,
+          "x": 552.3046875,
+          "y": 3011.4609375
+        },
+        "row": {
+          "height": 783.703125,
+          "width": 929.796875,
+          "x": 47.1015625,
+          "y": 2933.03125
+        },
+        "title": "Мастер-классы"
+      }
+    ],
+    "width": 1024
+  },
+  {
+    "height": 1000,
+    "pageOverflow": false,
+    "rows": [
+      {
+        "h3": {
+          "height": 25.828125,
+          "lineHeight": "25.8278px",
+          "size": "21.888px",
+          "width": 362,
+          "x": 43.71875,
+          "y": 1848.640625
+        },
+        "images": [
+          {
+            "complete": true,
+            "naturalWidth": 1200,
+            "src": "/media/event-formats/private-dinner-seven-plates-v1.jpg"
+          },
+          {
+            "complete": true,
+            "naturalWidth": 1152,
+            "src": "/media/event-formats/private-dinner.jpg"
+          }
+        ],
+        "number": {
+          "display": "inline",
+          "size": "11px",
+          "text": "01"
+        },
+        "p": {
+          "height": 69.890625,
+          "lineHeight": "23.3011px",
+          "size": "15.744px",
+          "width": 362,
+          "x": 43.71875,
+          "y": 1881.46875
+        },
+        "photo": {
+          "height": 298.640625,
+          "width": 238.9140625,
+          "x": 470.875,
+          "y": 1815.4453125
+        },
+        "row": {
+          "height": 801,
+          "width": 724,
+          "x": 22,
+          "y": 1741.25
+        },
+        "title": "Частный ужин"
+      },
+      {
+        "h3": {
+          "height": 25.828125,
+          "lineHeight": "25.8278px",
+          "size": "21.888px",
+          "width": 347.515625,
+          "x": 43.71875,
+          "y": 2649.640625
+        },
+        "images": [
+          {
+            "complete": true,
+            "naturalWidth": 1774,
+            "src": "/media/event-formats/private-event-canapes-v3.webp"
+          },
+          {
+            "complete": true,
+            "naturalWidth": 2278,
+            "src": "/media/event-formats/private-event-outdoor-crepes.png"
+          }
+        ],
+        "number": {
+          "display": "inline",
+          "size": "11px",
+          "text": "02"
+        },
+        "p": {
+          "height": 69.890625,
+          "lineHeight": "23.3011px",
+          "size": "15.744px",
+          "width": 347.515625,
+          "x": 43.71875,
+          "y": 2682.46875
+        },
+        "photo": {
+          "height": 247.359375,
+          "width": 296.8359375,
+          "x": 427.4375,
+          "y": 2616.4453125
+        },
+        "row": {
+          "height": 801,
+          "width": 724,
+          "x": 22,
+          "y": 2542.25
+        },
+        "title": "Приватные мероприятия"
+      },
+      {
+        "h3": {
+          "height": 41.796875,
+          "lineHeight": "41.8px",
+          "size": "38px",
+          "width": 340.390625,
+          "x": 43.71875,
+          "y": 3481.1875
+        },
+        "images": [
+          {
+            "complete": true,
+            "naturalWidth": 1144,
+            "src": "/media/event-formats/masterclass.jpg"
+          },
+          {
+            "complete": true,
+            "naturalWidth": 2071,
+            "src": "/media/event-formats/masterclasses-six-stages-paper-v2.webp"
+          }
+        ],
+        "number": {
+          "display": "flex",
+          "size": "18px",
+          "text": "03"
+        },
+        "p": {
+          "height": 72,
+          "lineHeight": "24px",
+          "size": "16px",
+          "width": 340.390625,
+          "x": 43.71875,
+          "y": 3540.984375
+        },
+        "photo": {
+          "height": 208.28125,
+          "width": 309.453125,
+          "x": 414.828125,
+          "y": 3422.25
+        },
+        "row": {
+          "height": 652.6953125,
+          "width": 724,
+          "x": 22,
+          "y": 3343.25
+        },
+        "title": "Мастер-классы"
+      }
+    ],
+    "width": 768
+  },
+  {
+    "height": 1000,
+    "pageOverflow": false,
+    "rows": [
+      {
+        "h3": {
+          "height": 73.3125,
+          "lineHeight": "36.6618px",
+          "size": "37.41px",
+          "width": 160.71875,
+          "x": 35.8515625,
+          "y": 1739.8515625
+        },
+        "images": [
+          {
+            "complete": true,
+            "naturalWidth": 1200,
+            "src": "/media/event-formats/private-dinner-seven-plates-v1.jpg"
+          },
+          {
+            "complete": true,
+            "naturalWidth": 1200,
+            "src": "/media/event-formats/private-dinner-seven-plates-v1.jpg"
+          },
+          {
+            "complete": true,
+            "naturalWidth": 1152,
+            "src": "/media/event-formats/private-dinner.jpg"
+          }
+        ],
+        "number": {
+          "display": "none",
+          "size": "11px",
+          "text": "01"
+        },
+        "p": {
+          "height": 105.390625,
+          "lineHeight": "21.08px",
+          "size": "13.6px",
+          "width": 160.71875,
+          "x": 35.8515625,
+          "y": 1834.6640625
+        },
+        "photo": {
+          "height": 236.421875,
+          "width": 173.2578125,
+          "x": 220.875,
+          "y": 1729.0859375
+        },
+        "row": {
+          "height": 684.4765625,
+          "width": 394,
+          "x": 18,
+          "y": 1641.375
+        },
+        "title": "Частный ужин"
+      },
+      {
+        "h3": {
+          "height": 20.0546875,
+          "lineHeight": "20.06px",
+          "size": "17px",
+          "width": 193.0546875,
+          "x": 29.8125,
+          "y": 2392.1015625
+        },
+        "images": [
+          {
+            "complete": true,
+            "naturalWidth": 1774,
+            "src": "/media/event-formats/private-event-canapes-v3.webp"
+          },
+          {
+            "complete": true,
+            "naturalWidth": 2278,
+            "src": "/media/event-formats/private-event-outdoor-crepes.png"
+          }
+        ],
+        "number": {
+          "display": "block",
+          "size": "11px",
+          "text": "02"
+        },
+        "p": {
+          "height": 98.7890625,
+          "lineHeight": "19.76px",
+          "size": "13px",
+          "width": 193.0546875,
+          "x": 29.8125,
+          "y": 2419.15625
+        },
+        "photo": {
+          "height": 131.328125,
+          "width": 157.59375,
+          "x": 242.578125,
+          "y": 2375.1015625
+        },
+        "row": {
+          "height": 554.125,
+          "width": 394,
+          "x": 18,
+          "y": 2325.8515625
+        },
+        "title": "Приватные мероприятия"
+      },
+      {
+        "h3": {
+          "height": 47.296875,
+          "lineHeight": "47.3px",
+          "size": "43px",
+          "width": 370.375,
+          "x": 29.8125,
+          "y": 2979.7734375
+        },
+        "images": [
+          {
+            "complete": true,
+            "naturalWidth": 1144,
+            "src": "/media/event-formats/masterclass.jpg"
+          },
+          {
+            "complete": true,
+            "naturalWidth": 2071,
+            "src": "/media/event-formats/masterclasses-six-stages-paper-v2.webp"
+          },
+          {
+            "complete": true,
+            "naturalWidth": 2071,
+            "src": "/media/event-formats/masterclasses-six-stages-paper-v2.webp"
+          }
+        ],
+        "number": {
+          "display": "flex",
+          "size": "16px",
+          "text": "03"
+        },
+        "p": {
+          "height": 72,
+          "lineHeight": "24px",
+          "size": "15px",
+          "width": 357.5859375,
+          "x": 29.8125,
+          "y": 3041.0703125
+        },
+        "photo": {
+          "height": 249.2890625,
+          "width": 370.375,
+          "x": 29.8125,
+          "y": 3137.0703125
+        },
+        "row": {
+          "height": 1186.5390625,
+          "width": 394,
+          "x": 18,
+          "y": 2879.9765625
+        },
+        "title": "Мастер-классы"
+      }
+    ],
+    "width": 430
+  },
+  {
+    "height": 1000,
+    "pageOverflow": false,
+    "rows": [
+      {
+        "h3": {
+          "height": 66.5,
+          "lineHeight": "33.2514px",
+          "size": "33.93px",
+          "width": 144.3125,
+          "x": 34.1328125,
+          "y": 1672.3671875
+        },
+        "images": [
+          {
+            "complete": true,
+            "naturalWidth": 1200,
+            "src": "/media/event-formats/private-dinner-seven-plates-v1.jpg"
+          },
+          {
+            "complete": true,
+            "naturalWidth": 1200,
+            "src": "/media/event-formats/private-dinner-seven-plates-v1.jpg"
+          },
+          {
+            "complete": true,
+            "naturalWidth": 1152,
+            "src": "/media/event-formats/private-dinner.jpg"
+          }
+        ],
+        "number": {
+          "display": "none",
+          "size": "11px",
+          "text": "01"
+        },
+        "p": {
+          "height": 120.890625,
+          "lineHeight": "20.15px",
+          "size": "13px",
+          "width": 144.3125,
+          "x": 34.1328125,
+          "y": 1758.3671875
+        },
+        "photo": {
+          "height": 212.296875,
+          "width": 155.578125,
+          "x": 200.2734375,
+          "y": 1662.6953125
+        },
+        "row": {
+          "height": 619.9609375,
+          "width": 354,
+          "x": 18,
+          "y": 1581.375
+        },
+        "title": "Частный ужин"
+      },
+      {
+        "h3": {
+          "height": 20.0546875,
+          "lineHeight": "20.06px",
+          "size": "17px",
+          "width": 173.453125,
+          "x": 28.6171875,
+          "y": 2265.0234375
+        },
+        "images": [
+          {
+            "complete": true,
+            "naturalWidth": 1774,
+            "src": "/media/event-formats/private-event-canapes-v3.webp"
+          },
+          {
+            "complete": true,
+            "naturalWidth": 2278,
+            "src": "/media/event-formats/private-event-outdoor-crepes.png"
+          }
+        ],
+        "number": {
+          "display": "block",
+          "size": "11px",
+          "text": "02"
+        },
+        "p": {
+          "height": 98.7890625,
+          "lineHeight": "19.76px",
+          "size": "13px",
+          "width": 173.453125,
+          "x": 28.6171875,
+          "y": 2292.078125
+        },
+        "photo": {
+          "height": 117.9921875,
+          "width": 141.59375,
+          "x": 219.7734375,
+          "y": 2248.0234375
+        },
+        "row": {
+          "height": 502.84375,
+          "width": 354,
+          "x": 18,
+          "y": 2201.3359375
+        },
+        "title": "Приватные мероприятия"
+      },
+      {
+        "h3": {
+          "height": 42.8984375,
+          "lineHeight": "42.9px",
+          "size": "39px",
+          "width": 332.765625,
+          "x": 28.6171875,
+          "y": 2803.9765625
+        },
+        "images": [
+          {
+            "complete": true,
+            "naturalWidth": 1144,
+            "src": "/media/event-formats/masterclass.jpg"
+          },
+          {
+            "complete": true,
+            "naturalWidth": 2071,
+            "src": "/media/event-formats/masterclasses-six-stages-paper-v2.webp"
+          },
+          {
+            "complete": true,
+            "naturalWidth": 2071,
+            "src": "/media/event-formats/masterclasses-six-stages-paper-v2.webp"
+          }
+        ],
+        "number": {
+          "display": "flex",
+          "size": "16px",
+          "text": "03"
+        },
+        "p": {
+          "height": 72,
+          "lineHeight": "24px",
+          "size": "15px",
+          "width": 332.765625,
+          "x": 28.6171875,
+          "y": 2860.875
+        },
+        "photo": {
+          "height": 223.9765625,
+          "width": 332.765625,
+          "x": 28.6171875,
+          "y": 2956.875
+        },
+        "row": {
+          "height": 1101.6796875,
+          "width": 354,
+          "x": 18,
+          "y": 2704.1796875
+        },
+        "title": "Мастер-классы"
+      }
+    ],
+    "width": 390
+  },
+  {
+    "height": 1000,
+    "pageOverflow": false,
+    "rows": [
+      {
+        "h3": {
+          "height": 63.9375,
+          "lineHeight": "31.9725px",
+          "size": "32.625px",
+          "width": 138.1640625,
+          "x": 33.484375,
+          "y": 1647.0625
+        },
+        "images": [
+          {
+            "complete": true,
+            "naturalWidth": 1200,
+            "src": "/media/event-formats/private-dinner-seven-plates-v1.jpg"
+          },
+          {
+            "complete": true,
+            "naturalWidth": 1200,
+            "src": "/media/event-formats/private-dinner-seven-plates-v1.jpg"
+          },
+          {
+            "complete": true,
+            "naturalWidth": 1152,
+            "src": "/media/event-formats/private-dinner.jpg"
+          }
+        ],
+        "number": {
+          "display": "none",
+          "size": "11px",
+          "text": "01"
+        },
+        "p": {
+          "height": 120.890625,
+          "lineHeight": "20.15px",
+          "size": "13px",
+          "width": 138.1640625,
+          "x": 33.484375,
+          "y": 1729.75
+        },
+        "photo": {
+          "height": 203.2578125,
+          "width": 148.953125,
+          "x": 192.5546875,
+          "y": 1637.8046875
+        },
+        "row": {
+          "height": 595.7734375,
+          "width": 339,
+          "x": 18,
+          "y": 1558.875
+        },
+        "title": "Частный ужин"
+      },
+      {
+        "h3": {
+          "height": 40.109375,
+          "lineHeight": "20.06px",
+          "size": "17px",
+          "width": 166.109375,
+          "x": 28.1640625,
+          "y": 2218.546875
+        },
+        "images": [
+          {
+            "complete": true,
+            "naturalWidth": 1774,
+            "src": "/media/event-formats/private-event-canapes-v3.webp"
+          },
+          {
+            "complete": true,
+            "naturalWidth": 2278,
+            "src": "/media/event-formats/private-event-outdoor-crepes.png"
+          }
+        ],
+        "number": {
+          "display": "block",
+          "size": "11px",
+          "text": "02"
+        },
+        "p": {
+          "height": 98.7890625,
+          "lineHeight": "19.76px",
+          "size": "13px",
+          "width": 166.109375,
+          "x": 28.1640625,
+          "y": 2265.65625
+        },
+        "photo": {
+          "height": 112.9921875,
+          "width": 135.59375,
+          "x": 211.2265625,
+          "y": 2201.546875
+        },
+        "row": {
+          "height": 507.1015625,
+          "width": 339,
+          "x": 18,
+          "y": 2154.6484375
+        },
+        "title": "Приватные мероприятия"
+      },
+      {
+        "h3": {
+          "height": 41.25,
+          "lineHeight": "41.25px",
+          "size": "37.5px",
+          "width": 318.671875,
+          "x": 28.1640625,
+          "y": 2761.546875
+        },
+        "images": [
+          {
+            "complete": true,
+            "naturalWidth": 1144,
+            "src": "/media/event-formats/masterclass.jpg"
+          },
+          {
+            "complete": true,
+            "naturalWidth": 2071,
+            "src": "/media/event-formats/masterclasses-six-stages-paper-v2.webp"
+          },
+          {
+            "complete": true,
+            "naturalWidth": 2071,
+            "src": "/media/event-formats/masterclasses-six-stages-paper-v2.webp"
+          }
+        ],
+        "number": {
+          "display": "flex",
+          "size": "16px",
+          "text": "03"
+        },
+        "p": {
+          "height": 72,
+          "lineHeight": "24px",
+          "size": "15px",
+          "width": 318.671875,
+          "x": 28.1640625,
+          "y": 2816.796875
+        },
+        "photo": {
+          "height": 214.484375,
+          "width": 318.671875,
+          "x": 28.1640625,
+          "y": 2912.796875
+        },
+        "row": {
+          "height": 1069.8671875,
+          "width": 339,
+          "x": 18,
+          "y": 2661.75
+        },
+        "title": "Мастер-классы"
+      }
+    ],
+    "width": 375
+  }
+]

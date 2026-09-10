@@ -1,6 +1,6 @@
 import Image from "next/image";
 import ChefStoryVideo from "./chef-story-video";
-import MasterclassesSection from "./masterclasses-section";
+import EventFormatSheets, { type EventFormat } from "./event-format-sheets";
 
 /* eslint-disable @next/next/no-img-element -- local documentary images use CSS-directed editorial crops */
 
@@ -79,6 +79,8 @@ const heroCollageWideCompact = new Set([
 
 const eventFormats = [
   {
+    id: "private-dinner",
+    kind: "dinner",
     name: "Частный ужин",
     description:
       "Я приготовлю любимые блюда для близких или создам гастрономический маршрут в семь подач.",
@@ -86,13 +88,10 @@ const eventFormats = [
     width: 1152,
     height: 1572,
     alt: "Евгений Грыбенюк готовит блюдо на сковороде для частного ужина",
-    drawingSrc: "/media/blueprint-backgrounds/private-dinner-event-concept-v3.png",
-    compactDrawingSrc: "/media/blueprint-backgrounds/private-dinner-compact-mobile-v5.webp",
-    courseImageSrc: "/media/event-formats/private-dinner-seven-plates-v1.jpg",
-    canapeImageSrc: null,
-    processBackground: true,
   },
   {
+    id: "private-events",
+    kind: "canapes",
     name: "Приватные мероприятия",
     description:
       "Я соберу свободный формат с небольшими закусками и блюдами, которые удобно есть за разговором.",
@@ -100,13 +99,10 @@ const eventFormats = [
     width: 2278,
     height: 1510,
     alt: "Евгений Грыбенюк готовит блины перед гостями на приватном мероприятии",
-    drawingSrc: null,
-    compactDrawingSrc: null,
-    courseImageSrc: null,
-    canapeImageSrc: "/media/event-formats/private-event-canapes-v3.webp",
-    processBackground: true,
   },
   {
+    id: "masterclasses",
+    kind: "techniques",
     name: "Мастер-классы",
     description:
       "Я покажу гостям профессиональные приёмы, мы вместе приготовим блюда, а затем сядем за общий стол.",
@@ -114,13 +110,8 @@ const eventFormats = [
     width: 1144,
     height: 770,
     alt: "Евгений Грыбенюк показывает участникам мастер-класса профессиональные приёмы",
-    drawingSrc: null,
-    compactDrawingSrc: null,
-    courseImageSrc: null,
-    canapeImageSrc: null,
-    processBackground: false,
   },
-];
+] satisfies EventFormat[];
 
 const privateDinnerCourses = [
   "Стартер",
@@ -243,181 +234,7 @@ function PersonalMenuPlate() {
 }
 
 function EventFormats() {
-  return (
-    <div className="format-chapter">
-      <ol className="format-list">
-        {eventFormats.map((format, index) => (
-          <li
-            className={`format-row format-row-${index + 1}${format.processBackground ? " format-row-process" : ""}${format.courseImageSrc ? " format-row-menu" : ""}${format.canapeImageSrc ? " format-row-canape" : ""}${format.name === "Мастер-классы" ? " format-row-masterclasses" : ""}`}
-            id={index === 0 ? "private-dinner" : undefined}
-            key={format.name}
-          >
-            {format.name === "Мастер-классы" ? (
-              <MasterclassesSection
-                title={format.name}
-                description={format.description}
-                src={format.src}
-                width={format.width}
-                height={format.height}
-                alt={format.alt}
-              />
-            ) : format.processBackground ? (
-              <div className="format-process-field">
-                {format.courseImageSrc ? (
-                  <span className="format-menu-drafting-lines" aria-hidden="true">
-                    <span className="format-menu-drafting-frame" />
-                    <span className="format-menu-drafting-rule format-menu-drafting-rule-top" />
-                    <span className="format-menu-drafting-rule format-menu-drafting-rule-divider" />
-                    <span className="format-menu-drafting-rule format-menu-drafting-rule-bottom" />
-                    <span className="format-menu-drafting-spine" />
-                  </span>
-                ) : null}
-                {format.canapeImageSrc ? (
-                  <span className="format-event-drafting-lines" aria-hidden="true">
-                    <span className="format-event-drafting-frame" />
-                    <span className="format-event-drafting-rule format-event-drafting-rule-top" />
-                    <span className="format-event-drafting-rule format-event-drafting-rule-divider" />
-                    <span className="format-event-drafting-rule format-event-drafting-rule-bottom" />
-                    <span className="format-event-drafting-spine" />
-                  </span>
-                ) : null}
-                {!format.courseImageSrc && !format.canapeImageSrc ? (
-                  <picture className="format-process-plan">
-                    <source
-                      media="(max-width: 940px)"
-                      srcSet={format.compactDrawingSrc ?? undefined}
-                    />
-                    <img
-                      src={format.drawingSrc ?? undefined}
-                      width="1774"
-                      height="887"
-                      loading="lazy"
-                      decoding="async"
-                      alt=""
-                    />
-                  </picture>
-                ) : null}
-                {format.courseImageSrc ? (
-                  <>
-                    <div className="format-dinner-meta" aria-hidden="true">
-                      <span>Частный ужин</span>
-                      <span>Семь подач</span>
-                    </div>
-                    <div className="format-dinner-axis" aria-hidden="true">
-                      <span>— Готовит шеф</span>
-                    </div>
-                    <figure className="format-menu-spread">
-                      <img
-                        className="format-menu-overview"
-                        src={format.courseImageSrc}
-                        width="1200"
-                        height="800"
-                        loading="lazy"
-                        decoding="async"
-                        alt=""
-                      />
-                      <div className="format-menu-mobile">
-                        <div className="format-course-group format-course-group-four">
-                          <div className="format-course-strip" aria-hidden="true">
-                            <img
-                              src={format.courseImageSrc}
-                              width="1200"
-                              height="800"
-                              loading="lazy"
-                              decoding="async"
-                              alt=""
-                            />
-                          </div>
-                          <ol className="format-course-labels">
-                            {privateDinnerCourses.slice(0, 4).map((course) => (
-                              <li key={course}>{course}</li>
-                            ))}
-                          </ol>
-                        </div>
-                        <div className="format-course-group format-course-group-three">
-                          <div className="format-course-strip" aria-hidden="true">
-                            <img
-                              src={format.courseImageSrc}
-                              width="1200"
-                              height="800"
-                              loading="lazy"
-                              decoding="async"
-                              alt=""
-                            />
-                          </div>
-                          <ol className="format-course-labels" start={5}>
-                            {privateDinnerCourses.slice(4).map((course) => (
-                              <li key={course}>{course}</li>
-                            ))}
-                          </ol>
-                        </div>
-                      </div>
-                      <figcaption className="format-menu-caption">
-                        Семь подач: {privateDinnerCourses.join(", ")}.
-                      </figcaption>
-                    </figure>
-                  </>
-                ) : null}
-                {format.canapeImageSrc ? (
-                  <figure className="format-event-canape-spread" aria-hidden="true">
-                    <img
-                      src={format.canapeImageSrc}
-                      width="1774"
-                      height="887"
-                      loading="lazy"
-                      decoding="async"
-                      alt=""
-                    />
-                  </figure>
-                ) : null}
-                <figure className="format-media">
-                  <img
-                    src={format.src}
-                    width={format.width}
-                    height={format.height}
-                    loading="lazy"
-                    decoding="async"
-                    alt={format.alt}
-                  />
-                </figure>
-                <div className="format-copy">
-                  <span aria-hidden="true">0{index + 1}</span>
-                  <h3>
-                    {format.courseImageSrc ? (
-                      <>
-                        Частный <br className="format-dinner-title-break" aria-hidden="true" /> ужин
-                      </>
-                    ) : (
-                      format.name
-                    )}
-                  </h3>
-                  <p>{format.description}</p>
-                </div>
-              </div>
-            ) : (
-              <>
-                <figure className="format-media">
-                  <img
-                    src={format.src}
-                    width={format.width}
-                    height={format.height}
-                    loading="lazy"
-                    decoding="async"
-                    alt={format.alt}
-                  />
-                </figure>
-                <div className="format-copy">
-                  <span aria-hidden="true">0{index + 1}</span>
-                  <h3>{format.name}</h3>
-                  <p>{format.description}</p>
-                </div>
-              </>
-            )}
-          </li>
-        ))}
-      </ol>
-    </div>
-  );
+  return <EventFormatSheets formats={eventFormats} courses={privateDinnerCourses} />;
 }
 
 export default function Home() {

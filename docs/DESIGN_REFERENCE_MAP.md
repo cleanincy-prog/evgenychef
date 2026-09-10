@@ -1269,3 +1269,28 @@ This amendment supersedes only the previous 560 px / 900 px phone scrolling trea
 | Narrow header and rules | Approved stacked header and neighbour drafting system; existing 700 px content breakpoint | Readable copy, complete photo, horizontal hairlines between content bands | Forced tiny columns, new controls, rounded panels | Stack at 700 px and below; preserve the existing frame, paper and one fine rule between stage rows |
 
 Exact aperture split and sizes are neutral fits to visible objects, verified in the browser. There is no missing style reference and no new visual asset.
+
+
+## Unified service sheets — approved implementation — 2026-09-10
+
+The user's `Делай` approves the jointly refined desktop-v5-unified-lines.png and mobile-v4-unified-lines.png in `design/mockups/event-formats-unified-2026-09-10/`. This supersedes the separate dinner/event/masterclass layout, typography, photo-side and mobile exceptions above for these three service sections only.
+
+| Project element | Reference | Principle used | What is not copied | Project implementation |
+|---|---|---|---|---|
+| Shared service structure | User-approved final mockups; inspection report; direct unity request | Equal status, one editorial sheet anatomy, content-derived height | Separate hand-tuned coordinate canvases, three incompatible type scales, fixed equal heights | One reusable semantic service component with common header, copy/photo pair, drafting layer and supporting content |
+| Photo direction | Direct `первое справа потом слева потом справа` correction | Right / left / right, including phones | Mirrored people, generated replacement portraits | Existing documentary files in alternating grid columns; neutral responsive crop fitting |
+| Typography | Approved final mockups; existing Cormorant/Montserrat roles | Identical titles/descriptions for all services; long names wrap | Shrinking only the events heading, raster text or new copy | One fluid title/body scale; full-width phone title before the copy/photo pair |
+| Drafting lines | User's named private-dinner reference; existing format-menu drafting rules | Thin square frame, horizontal rails and muted gold spine with hollow endpoints | Accidental circles at the outer corners of the generated board, vertical utility text or food-item boxes | One aria-hidden line primitive in the copy/photo gap, 1px neutral structural rules |
+| Seven plates | Existing seven-plate source; approved 4+3 layout | Complete plates and seven live course labels on shared paper | Linen rectangle, altered business claims or generated screenshot as content | Background-only alpha extraction of the representative source; two course groups using the retained 4+3 sequence |
+| Canape scale | Direct request to make canapes smaller; refined mockups | Small bites with more paper between them | Enlarged cover crop, labels or promises about counts | Reuse alpha source and fit smaller objects within a continuous unboxed field; retain source content |
+| Techniques | Existing alpha six-stage asset; approved mockups | One continuous wide scene, two three-stage bands on phones | New food, individual cards, scrolling controls | Reuse existing image and source-derived CSS apertures with live labels |
+| Mobile composition | Approved mobile-v4 and actual long Russian heading | Title above paired text/photo; source-specific food arrangements | A simple desktop stack, tiny type or one exceptional full-width photo | Common <=700px composition with intrinsic text height and intentional lower grouping |
+
+Exact sizes, source-aperture coordinates and photo object positions are neutral fitting values. They require the seven-width visual check and do not introduce a new style. Source photographs must remain original local files; generated concept images are references only.
+
+### Final source fitting and verification
+- Seven plates: the alpha attempt failed and is not used. The accepted fallback is `private-dinner-seven-plates-white-v2.png`, an ImageGen edit of the existing illustrative seven-course scene. White exterior + CSS multiply + soft source mask blend the plates into the approved paper. [Provenance and exact prompt](../design/generated/private-dinner-seven-plates-white-v2/README.md).
+- Canapés: 24 non-overlapping examples selected from the original 27-object alpha scene; 8 × 3 on desktop, 6 × 4 on mobile. Exact object count is not a product claim. The smaller size comes from the user's explicit instruction; arrangement comes from the approved boards and intact source objects.
+- Photos: common 4:3 wide aperture, dinner focus at 50% 18% preserves the chef's head. Compact frames preserve the right / left / right relation and enough scene context; portrait dinner may grow naturally at 430 px.
+- No new visual language or missing style reference was introduced. Exact crop coordinates, source masks and Russian hyphenation are content-fitting choices. The gradient appears only in an alpha mask, never a decorative background.
+- Final browser QA and anti-template audit: [implementation report](EVENT_FORMATS_IMPLEMENTATION_2026-09-10.md).
