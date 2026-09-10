@@ -7064,3 +7064,47 @@ The user explicitly requests committing all changes, pushing Git and publishing 
 
 
 Release validation update: the latest parallel user correction removes the separate greens note, leaving four active plate annotations; the source, design records and regression expectations now agree. The former gallery/geometry assertions were replaced with the current documented content and responsive rules. The undocumented button radius was removed to preserve the approved square edge. Visual checks at 1440, 1280, 1024, 768, 430, 390 and 375 px confirm radius 0, intact label, #contact destination, 64 px desktop/tablet target and 58 px phone target, without page overflow. Production build, ESLint, all eight regression tests and diff whitespace checks pass. This supersedes the earlier 5/8 test limitation. The combined release includes current masterclasses, private-event background, personal-menu changes, design records and QA artifacts. No credentials or build outputs are committed.
+
+## Personal-menu annotated plate — final implementation report — 2026-09-10
+
+This report closes only the reference-driven `#products` re-layout recorded above. It does
+not authorize or perform the release action described by older project history. The current
+request explicitly remains local.
+
+1. **Files created:** final QA images, `responsive-metrics-final.json` and their README under
+   `artifacts/personal-menu-redesign-2026-09-10/`.
+2. **Files changed:** `app/page.tsx`, `app/globals.css`, `tests/rendered-html.test.mjs`,
+   `docs/DESIGN_REFERENCE_MAP.md`, `docs/DESIGN_SYSTEM.md` and this audit. Existing unrelated
+   working-tree changes and assets were preserved.
+3. **Templated elements found:** the old generic three-step sequence, repeated three-image
+   sourcing gallery, gallery provenance line and detached example caption conflicted with the
+   supplied one-chapter composition.
+4. **Rework:** `#products` is now one editorial flow: exact opening statement, one divider,
+   the two-part dish rationale, complete existing plate, live ingredient notes with adaptive
+   leader geometry and one square-edged action to the existing contact section. The user's
+   final correction removes `Свежая зелень` completely; each wide/tablet/phone SVG group now
+   has four paths and four endpoint dots. The phone stage was shortened to
+   `clamp(720px, 190vw, 780px)` and its lower leaders were separated so they do not cross.
+5. **References used:** the supplied `Снимок экрана 2026-09-10 в 11.30.57.png`, the exact
+   accompanying Russian content, the existing approved plate asset, project typography,
+   colour/rule tokens and the existing `#contact` journey.
+6. **Decisions without references:** only responsive coordinates and the nearest truthful
+   targets in the available photograph. The source does not exactly contain the screenshot's
+   pale purée and roasted-carrot arrangement; no pixels or ingredients were fabricated.
+7. **UI libraries:** none added or visibly used. Semantic server-rendered JSX, CSS Grid,
+   native image loading and a decorative SVG leader layer are the only primitives.
+8. **Desktop/mobile verification:** inspected at 1440, 1280, 1024, 768, 430, 390, 375 and
+   360 px in the local browser. Every width reports four notes, four visible leaders and four
+   endpoint dots, no note overlap, no horizontal page overflow, all notes inside the authored
+   stage, a loaded 1800 px source, 14 px minimum note copy, at least 16 px lead/detail copy,
+   and a 64 px desktop/tablet or 58 px phone CTA. The CTA resolves to `#contact`; the existing
+   global `:focus-visible` outline and reduced-motion rules remain active. The block has no
+   asynchronous empty state; intrinsic image dimensions reserve space while loading.
+9. **Anti-template audit and limits:** no cards, repeated grid, rounded pill, shadow, gradient,
+   glass, glow, arbitrary icon, generic copy or decorative animation remains in the chapter.
+   The mobile composition is authored separately instead of being a scaled desktop canvas.
+   Browser verification is not a physical-device test. Image-rights provenance remains as
+   documented in `public/media/menu/CREDITS.md`. No commit, push or deployment was performed.
+
+Final validation: ESLint passes; all 8 rendered-HTML regressions pass; the Sites Vinext
+production build completes; `git diff --check` is run after this record update.
