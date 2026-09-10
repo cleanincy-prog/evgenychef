@@ -1614,6 +1614,35 @@ Direction `04 · Коллаж-рамка` is user-approved and becomes the activ
 - **Prohibitions:** no new copy, CTA, icon, generated media, stock image, gradient, blur, glass, shadow,
   radius, hover spectacle or UI-library appearance belongs to the Hero.
 
+## Private-dinner seven-plate amendment — 2026-09-09
+
+This restored historical amendment superseded the active private-dinner process drawing while leaving the
+other two event formats unchanged. Its wide/tablet media rules remain active; its phone hierarchy is
+superseded by the later Photo 2 amendment below.
+
+- The first event field originally retained its live `01`, `Частный ужин`, exact paragraph and real portrait
+  photograph. The later phone amendment removes only the decorative `01` through 560 px.
+- Its supporting visual is one overhead photographic composition with exactly seven complete plates in a
+  fixed two-row rhythm: four on the upper row and three centred below.
+- The original version deliberately contained no course number, type, dish name, arrow, route connector,
+  legend or caption. The later Photo 2 amendment explicitly reinstates seven live course-type labels on
+  phones; it does not bake text into the representative raster.
+- The plate composition is representative generated imagery, not evidence of an actual client menu. It is
+  decorative, while every factual promise remains accessible live HTML.
+- Reuse only the approved `Transparent route plates` photo grammar: near-overhead 70° camera, normal-lens
+  perspective, consistent plate scale, matte warm porcelain, soft upper-left daylight, natural texture and
+  small preparation imperfections. Do not reuse its five named route dishes as factual private-dinner menu
+  claims. Reject glossy CGI, impossible ingredients, duplicate plates, props, hands and watermarks.
+- The source keeps its native `3 / 2` ratio and complete `4 + 3` topology. Its placement may change across
+  wide, tablet and phone layouts, but complete ceramic rims and separation from live copy/photo are fixed.
+- The historical first-format field ratios are `1.8 / 1` above 1100 px, `1.5 / 1` from 821–1100 px,
+  `1 / 1` from 561–820 px and `.92 / 1` through 560 px. The last value is superseded by the Photo 2 phone
+  sheet; the wider ratios remain the existing baseline.
+- This exception removes only the first format's obsolete blueprint underlay. Private-event and masterclass
+  retain their event-specific wide/compact rasters and geometry.
+- Continue square edges and the established paper/ink/gold system. Add no card, radius, shadow, gradient,
+  glass, glow, icon, hover effect, animation or UI-library theme.
+
 ## Annotated real plate amendment — 2026-09-09
 
 This amendment adds one approved real plate to the personal-menu introduction and supersedes only the
@@ -1674,3 +1703,54 @@ the inline map, route polyline, flag layer, point-label layer or leader layer.
   the stage ratio.
 - Active JSX must not reference the historic Mediterranean SVG or route-flag files. Those files and their
   credits remain stored only as historical source records.
+
+## Private-dinner drafting-rule amendment — 2026-09-10
+
+This restored historical contract records the thin-rule structure approved immediately before Photo 2.
+Its structural perimeter/separator principle remains; its phone prohibition on labels is superseded by the
+next amendment.
+
+- The `Частный ужин` process field has one inset square perimeter keyline plus three structural hairlines:
+  upper rail, lower rail and the divider before the seven-plate field.
+- One vertical spine separates live copy from the documentary photograph only in the upper content zone.
+  It ends in two hollow circular points using the existing paper and `--accent-small` colours.
+- All strokes are `1px` and use `--rule`; endpoints are restrained drafting accents. The line layer is
+  non-interactive and `aria-hidden`.
+- The historical version attached no word, number, course name, legend, measurement or icon to these lines.
+  Above 560 px that remains the rule. Through 560 px Photo 2 makes `ГОТОВИТ ШЕФ` and seven course roles the
+  explicit exceptions, rendered as live HTML rather than as raster or SVG text.
+- At wider breakpoints, line length and the vertical spine adapt to the existing asymmetric composition so
+  neither crosses text, a face or a plate. The obsolete phone `.92 / 1` geometry is not retained.
+- Add no card surface, radius, shadow, gradient, glass, glow, motion or library component.
+
+## Private-dinner mobile editorial-sheet amendment — 2026-09-10
+
+This is the latest and authoritative phone contract. It supersedes the phone rules in
+`Private-dinner seven-plate amendment` and the phone no-label/no-copy constraints and geometry in
+`Private-dinner drafting-rule amendment`.
+
+- Through 560 px, `Частный ужин` is one tall, single-surface editorial sheet with a thin outer `--rule`
+  border. It is not the former `.92 / 1` near-square process field and not a reusable card.
+- The decorative `01` is absent. A compact uppercase utility row reads `ЧАСТНЫЙ УЖИН` at left and
+  `СЕМЬ ПОДАЧ` at right, followed by one restrained gold rule.
+- The upper composition keeps live title and exact paragraph at left and the complete documentary portrait
+  at right. The portrait is approximately half the usable width and may scale but must not be cropped,
+  stretched or reduced to a thumbnail.
+- A narrow centre seam uses a CSS hairline, two open endpoint dots and the vertical live label
+  `ГОТОВИТ ШЕФ`. No SVG or meaningless construction line is permitted.
+- One horizontal rule separates the upper pair from the menu sequence.
+- The lower composition contains exactly seven course positions: four equal items in the first row and
+  three equal items centred in the second. Every ceramic rim remains visible.
+- Course labels are live HTML and use exactly: `Стартер`, `Холодная закуска`, `Горячая закуска`,
+  `Рыбный курс`, `Освежающая пауза`, `Основное блюдо`, `Десерт`. They identify course roles only and
+  must not be expanded into unverified dish claims.
+- The representative course raster remains non-documentary and decorative; the seven labels form semantic
+  ordered lists. The chef photograph retains its literal alternative text.
+- Use the existing warm paper, ink, muted and gold tokens and current Cormorant/Montserrat roles. Labels
+  remain at least 11 px. No radius, shadow, gradient, glass, texture, icon, animation or UI-library theme.
+- The exact phone aspect ratio, copy/photo share and insets are reference-bounded fitting decisions. They
+  must preserve the full composition at 430, 390 and 375 px without page overflow.
+- Because the shared process-field phone rules are declared later for the other two formats, the private-
+  dinner `.62 / 1` field, 41% copy rail and 44.2% portrait rail are restated once at the end of the mobile
+  cascade. This is breakpoint ownership, not a second visual treatment; `!important` is not permitted.
+- Above 560 px the existing private-dinner geometry remains until a separate wider reference supersedes it.

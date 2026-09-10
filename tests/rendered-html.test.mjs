@@ -286,10 +286,14 @@ test("keeps the approved process drawings and mapped photoreal plate journey act
     "/media/masterchef/route-plates/04-octopus-plate-v2-1024.webp",
     "/media/masterchef/route-plates/05-baklava-plate-v2-1024.webp",
   ];
+  const activeMenuMedia = [
+    "/media/event-formats/private-dinner-seven-plates-v1.jpg",
+    "/media/menu/personal-menu-duck-plate-cutout-v1.webp",
+  ];
   const activeBlueprintReferences = `${page}\n${css}`.match(/\/media\/blueprint-backgrounds\/[^"')\s]+/g) ?? [];
 
   await Promise.all(
-    [...activeBlueprints, ...activeArchiveMedia].map((path) =>
+    [...activeBlueprints, ...activeArchiveMedia, ...activeMenuMedia].map((path) =>
       access(new URL(`public${path}`, root)),
     ),
   );
@@ -298,6 +302,26 @@ test("keeps the approved process drawings and mapped photoreal plate journey act
   assert.deepEqual(activeBlueprintReferences.toSorted(), activeBlueprints.toSorted());
   assert.equal((page.match(/<picture className="format-process-plan"/g) ?? []).length, 1);
   assert.match(page, /<source media="\(max-width: 940px\)" srcSet=\{format\.compactDrawingSrc\}/);
+  assert.match(page, /courseImageSrc: "\/media\/event-formats\/private-dinner-seven-plates-v1\.jpg"/);
+  assert.equal((page.match(/courseImageSrc: null/g) ?? []).length, 2);
+  assert.match(page, /format\.courseImageSrc \? " format-row-menu" : ""/);
+  assert.match(page, /!format\.courseImageSrc \? \([\s\S]*?className="format-process-plan"/);
+  assert.match(page, /className="format-menu-spread"[\s\S]*?className="format-menu-overview"[\s\S]*?width="1200"[\s\S]*?height="800"[\s\S]*?alt=""/);
+  assert.match(page, /className="format-dinner-meta" aria-hidden="true"[\s\S]*?Частный ужин[\s\S]*?Семь подач/);
+  assert.match(page, /className="format-dinner-axis" aria-hidden="true"[\s\S]*?— Готовит шеф/);
+  assert.match(page, /className="format-menu-mobile"[\s\S]*?format-course-group-four[\s\S]*?format-course-group-three/);
+  for (const course of [
+    "Стартер",
+    "Холодная закуска",
+    "Горячая закуска",
+    "Рыбный курс",
+    "Освежающая пауза",
+    "Основное блюдо",
+    "Десерт",
+  ]) {
+    assert.ok(page.includes(`"${course}"`), `private-dinner course role must remain live: ${course}`);
+  }
+  assert.doesNotMatch(page, /className="format-menu-spread" aria-hidden="true"/);
   assert.doesNotMatch(page, /mobileDrawingSrc|mobile-v4/);
   assert.match(css, /The rejected tall posters[\s\S]*?@media \(min-width: 561px\) and \(max-width: 820px\)[\s\S]*?aspect-ratio:\s*1 \/ 1;[\s\S]*?@media \(min-width: 821px\) and \(max-width: 940px\)[\s\S]*?aspect-ratio:\s*2 \/ 1;[\s\S]*?@media \(max-width: 560px\)[\s\S]*?aspect-ratio:\s*1 \/ 1;/);
   assert.doesNotMatch(page, /PreparationSequence|WorkdayTrajectory|MenuComposition|SourceContour/);
@@ -427,6 +451,22 @@ test("keeps the approved process drawings and mapped photoreal plate journey act
   assert.match(foregroundPass, /aspect-ratio:\s*1152 \/ 1572/);
   assert.match(foregroundPass, /aspect-ratio:\s*2278 \/ 1510/);
   assert.match(foregroundPass, /aspect-ratio:\s*1144 \/ 770/);
+  const privateDinnerMenuPass = css.slice(css.lastIndexOf("/* Private dinner:"));
+  assert.match(privateDinnerMenuPass, /\.format-row-1\.format-row-menu \.format-process-field\s*\{[^}]*overflow:\s*hidden;[^}]*aspect-ratio:\s*1\.8 \/ 1;[^}]*background:\s*var\(--paper\)/);
+  assert.match(privateDinnerMenuPass, /\.format-menu-spread\s*\{[^}]*position:\s*absolute;[^}]*z-index:\s*1;[^}]*width:\s*56%/);
+  assert.match(privateDinnerMenuPass, /\.format-menu-caption\s*\{[^}]*position:\s*absolute;[^}]*clip:\s*rect\(0, 0, 0, 0\)/);
+  assert.match(privateDinnerMenuPass, /@media \(min-width: 821px\) and \(max-width: 1100px\)[\s\S]*?aspect-ratio:\s*1\.5 \/ 1;[\s\S]*?width:\s*52%/);
+  assert.match(privateDinnerMenuPass, /@media \(min-width: 561px\) and \(max-width: 820px\)[\s\S]*?aspect-ratio:\s*1 \/ 1;[\s\S]*?width:\s*76%/);
+  assert.match(privateDinnerMenuPass, /@media \(max-width: 560px\)[\s\S]*?aspect-ratio:\s*\.62 \/ 1;[\s\S]*?border:\s*1px solid var\(--rule\)/);
+  assert.match(privateDinnerMenuPass, /@media \(max-width: 560px\)[\s\S]*?\.format-row-1\.format-row-menu \.format-copy\s*\{[^}]*left:\s*4\.3%;[^}]*width:\s*41%/);
+  assert.match(privateDinnerMenuPass, /@media \(max-width: 560px\)[\s\S]*?\.format-row-1\.format-row-menu \.format-media\s*\{[^}]*left:\s*51\.5%;[^}]*width:\s*44\.2%;[^}]*aspect-ratio:\s*1152 \/ 1572/);
+  assert.match(privateDinnerMenuPass, /\.format-course-group-four \.format-course-labels\s*\{[^}]*grid-template-columns:\s*repeat\(4,/);
+  assert.match(privateDinnerMenuPass, /\.format-course-group-three \.format-course-labels\s*\{[^}]*grid-template-columns:\s*repeat\(3,/);
+  const privateDinnerCascadeLock = css.slice(css.lastIndexOf("/* Private-dinner mobile cascade lock:"));
+  assert.ok(css.lastIndexOf("/* Private-dinner mobile cascade lock:") > css.lastIndexOf(".format-row-process .format-media img"));
+  assert.match(privateDinnerCascadeLock, /@media \(max-width: 560px\)[\s\S]*?\.format-row-1\.format-row-menu \.format-process-field\s*\{[^}]*aspect-ratio:\s*\.62 \/ 1/);
+  assert.match(privateDinnerCascadeLock, /\.format-row-1\.format-row-menu \.format-copy\s*\{[^}]*top:\s*11\.6%;[^}]*left:\s*4\.3%;[^}]*width:\s*41%/);
+  assert.match(privateDinnerCascadeLock, /\.format-row-1\.format-row-menu \.format-media\s*\{[^}]*top:\s*9\.9%;[^}]*left:\s*51\.5%;[^}]*width:\s*44\.2%;[^}]*aspect-ratio:\s*1152 \/ 1572/);
 });
 
 test("uses the measured Trivium typography on the approved editorial surfaces", async () => {

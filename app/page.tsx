@@ -87,6 +87,7 @@ const eventFormats = [
     alt: "Евгений Грыбенюк готовит блюдо на сковороде для частного ужина",
     drawingSrc: "/media/blueprint-backgrounds/private-dinner-event-concept-v3.png",
     compactDrawingSrc: "/media/blueprint-backgrounds/private-dinner-compact-mobile-v5.webp",
+    courseImageSrc: "/media/event-formats/private-dinner-seven-plates-v1.jpg",
     processBackground: true,
   },
   {
@@ -99,6 +100,7 @@ const eventFormats = [
     alt: "Евгений Грыбенюк готовит блины перед гостями на приватном мероприятии",
     drawingSrc: "/media/blueprint-backgrounds/private-event-circulation-concept-v3.png",
     compactDrawingSrc: "/media/blueprint-backgrounds/private-event-compact-mobile-v5.webp",
+    courseImageSrc: null,
     processBackground: true,
   },
   {
@@ -111,8 +113,19 @@ const eventFormats = [
     alt: "Евгений Грыбенюк показывает участникам мастер-класса профессиональные приёмы",
     drawingSrc: "/media/blueprint-backgrounds/masterclass-learning-concept-v3.png",
     compactDrawingSrc: "/media/blueprint-backgrounds/masterclass-compact-mobile-v5.webp",
+    courseImageSrc: null,
     processBackground: true,
   },
+];
+
+const privateDinnerCourses = [
+  "Стартер",
+  "Холодная закуска",
+  "Горячая закуска",
+  "Рыбный курс",
+  "Освежающая пауза",
+  "Основное блюдо",
+  "Десерт",
 ];
 
 const chefJourneyStops = [
@@ -225,23 +238,86 @@ function EventFormats() {
       <ol className="format-list">
         {eventFormats.map((format, index) => (
           <li
-            className={`format-row format-row-${index + 1}${format.processBackground ? " format-row-process" : ""}`}
+            className={`format-row format-row-${index + 1}${format.processBackground ? " format-row-process" : ""}${format.courseImageSrc ? " format-row-menu" : ""}`}
             id={index === 0 ? "private-dinner" : undefined}
             key={format.name}
           >
             {format.processBackground ? (
               <div className="format-process-field">
-                <picture className="format-process-plan">
-                  <source media="(max-width: 940px)" srcSet={format.compactDrawingSrc} />
-                  <img
-                    src={format.drawingSrc ?? undefined}
-                    width="1774"
-                    height="887"
-                    loading="lazy"
-                    decoding="async"
-                    alt=""
-                  />
-                </picture>
+                {!format.courseImageSrc ? (
+                  <picture className="format-process-plan">
+                    <source media="(max-width: 940px)" srcSet={format.compactDrawingSrc} />
+                    <img
+                      src={format.drawingSrc ?? undefined}
+                      width="1774"
+                      height="887"
+                      loading="lazy"
+                      decoding="async"
+                      alt=""
+                    />
+                  </picture>
+                ) : null}
+                {format.courseImageSrc ? (
+                  <>
+                    <div className="format-dinner-meta" aria-hidden="true">
+                      <span>Частный ужин</span>
+                      <span>Семь подач</span>
+                    </div>
+                    <div className="format-dinner-axis" aria-hidden="true">
+                      <span>— Готовит шеф</span>
+                    </div>
+                    <figure className="format-menu-spread">
+                      <img
+                        className="format-menu-overview"
+                        src={format.courseImageSrc}
+                        width="1200"
+                        height="800"
+                        loading="lazy"
+                        decoding="async"
+                        alt=""
+                      />
+                      <div className="format-menu-mobile">
+                        <div className="format-course-group format-course-group-four">
+                          <div className="format-course-strip" aria-hidden="true">
+                            <img
+                              src={format.courseImageSrc}
+                              width="1200"
+                              height="800"
+                              loading="lazy"
+                              decoding="async"
+                              alt=""
+                            />
+                          </div>
+                          <ol className="format-course-labels">
+                            {privateDinnerCourses.slice(0, 4).map((course) => (
+                              <li key={course}>{course}</li>
+                            ))}
+                          </ol>
+                        </div>
+                        <div className="format-course-group format-course-group-three">
+                          <div className="format-course-strip" aria-hidden="true">
+                            <img
+                              src={format.courseImageSrc}
+                              width="1200"
+                              height="800"
+                              loading="lazy"
+                              decoding="async"
+                              alt=""
+                            />
+                          </div>
+                          <ol className="format-course-labels" start={5}>
+                            {privateDinnerCourses.slice(4).map((course) => (
+                              <li key={course}>{course}</li>
+                            ))}
+                          </ol>
+                        </div>
+                      </div>
+                      <figcaption className="format-menu-caption">
+                        Семь подач: {privateDinnerCourses.join(", ")}.
+                      </figcaption>
+                    </figure>
+                  </>
+                ) : null}
                 <figure className="format-media">
                   <img
                     src={format.src}
@@ -254,7 +330,15 @@ function EventFormats() {
                 </figure>
                 <div className="format-copy">
                   <span aria-hidden="true">0{index + 1}</span>
-                  <h3>{format.name}</h3>
+                  <h3>
+                    {format.courseImageSrc ? (
+                      <>
+                        Частный <br className="format-dinner-title-break" aria-hidden="true" /> ужин
+                      </>
+                    ) : (
+                      format.name
+                    )}
+                  </h3>
                   <p>{format.description}</p>
                 </div>
               </div>

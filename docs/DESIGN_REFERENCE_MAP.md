@@ -1088,3 +1088,42 @@ This table supersedes the active inline-map and proportional-field rows immediat
 | Mobile underlay | User's requirement for a deliberate mobile composition with the same photo-left/text-right relationship | Recompose the same visual grammar vertically and keep the route complete from Spain to Cyprus | No mechanically shrunken desktop map, horizontal scroll, hidden endpoint or stacked photo-over-text layout | `masterchef-route-underlay-v3-mobile.webp`, 1086 × 1448, uses a protected upper 58% and lower map band |
 | Route evidence | User's approved map-and-car concept and five country dishes | One continuous ochre line and vintage car connect the countries; food remains a separate realistic overlay | No active flag badges, leader network, country words baked into the image or SVG fragments | Underlay supplies map/route/car; five v2 native-alpha plate assets sit only in the lower band; live captions identify country and dish |
 | Accessibility and provenance | Existing approved semantic itinerary and explicit disclosure | Decorative raster stays hidden from assistive technology while itinerary remains readable HTML | No essential words in the generated asset and no misleading documentary-food claim | Empty-alt `picture`; semantic ordered list/captions; disclose generated underlay and plate visualizations plus unconfirmed itinerary |
+
+## Private-dinner photographic course field — restored history — 2026-09-09
+
+This restored entry records the approved realistic seven-plate source and its wider-layout baseline. Its
+earlier phone prohibition on labels and near-square ratio are superseded by the Photo 2 entry below.
+
+| Project element | Reference | Principle used | What is not copied | Project implementation |
+|---|---|---|---|---|
+| Seven-course visual | User's request for more realistic imagery in two rows; the live seven-course promise | Make seven restaurant courses immediately recognisable through photographic food rather than an abstract route | No diagram circles, technical arrows, numbers or baked raster words | Use exactly seven complete plates in a `4 + 3` overhead composition |
+| Image character | User's rejection of AI-looking diagrams; approved `Transparent route plates` photographic grammar | Preserve normal-lens perspective, coherent porcelain scale, soft daylight and natural imperfections | No glossy CGI, impossible garnish, duplicate plate, props, hands, logo or watermark | `private-dinner-seven-plates-v1.jpg` remains a representative menu visual, never documentary proof of a delivered menu |
+| Existing live pair | Approved `Частный ужин` paragraph and `/media/event-formats/private-dinner.jpg` | Keep the chef and offer factual while the plate field supports them | No rewritten promise, second CTA or replacement chef image | Preserve the live copy and complete documentary photograph; place the course visual in the remaining paper field |
+| Responsive baseline | User's `4 + 3` requirement and deliberate-mobile rule | Keep all seven rims and their two-row relationship visible | No horizontal scroller, one-column card list or clipped plates | Wider layouts retain the content-fitted source; the following Photo 2 entry independently replaces only the phone sheet |
+
+## Unlabelled drafting rules for the private-dinner field — restored history — 2026-09-10
+
+This entry records the thin-rule correction approved immediately before Photo 2. Its perimeter and
+separator rationale remains useful; its prohibition on phone labels is explicitly superseded through
+560 px by the next entry.
+
+| Project element | Reference | Principle used | What is not copied | Project implementation |
+|---|---|---|---|---|
+| Perimeter keyline | Earlier user-supplied private-dinner mockup; approved square-edge paper system | Make the composition read as one authored sheet instead of loose content | No card fill, radius, shadow, double frame or generic panel styling | One inset `1px` `--rule` frame inside the first-format field |
+| Upper/lower rules | Earlier direction `по периметру, сверху, снизу, между` | Establish quiet structural bands | No invented measurement, icon, route or baked text | One restrained rule near each edge; Photo 2 later gives the upper band live service/scope text on phones |
+| Content separators | Earlier mockup; current copy/photo/`4 + 3` geometry | Distinguish copy from documentary photo and upper evidence from the course field | No pseudo-technical timeline, arrows or strokes across food/faces | A vertical spine in the upper gap and a horizontal divider before the plate zone |
+| Endpoints | Hollow termini in the earlier approved mockup; `--accent-small` token | Give the spine a deliberate start and finish | No icon, legend, interaction or repeated dot pattern | Two small hollow CSS endpoints; the line layer stays hidden from assistive technology |
+
+## Private-dinner mobile editorial sheet — 2026-09-10
+
+Photo 1 is a current-state anti-reference. Photo 2 is the authoritative positive reference through 560 px.
+This latest entry supersedes the restored mobile directions to retain `01`, omit labels, use an empty spine
+and fit one complete near-square montage beneath the upper pair.
+
+| Project element | Reference | Principle used | What is not copied | Project implementation |
+|---|---|---|---|---|
+| One mobile sheet | User-supplied Photo 2 and direct instruction that Photo 1 must look like it | Copy, documentary photo and seven-course evidence form one tall editorial rectangle | Browser chrome, detached technical poster, nested cards or unrelated empty paper | One square-edged bordered field with consistent inset and a content-derived portrait height |
+| Utility header | Photo 2 | State service and scope before the display title | Decorative `01`, badge or second heading level | Live utility row `ЧАСТНЫЙ УЖИН` / `СЕМЬ ПОДАЧ` with one fine gold rule |
+| Copy/photo pair | Photo 2; approved private-dinner copy and portrait | Give the offer and chef equal visual authority | Thumbnail photo, tiny title, cropped evidence or meaningless centre guide | Dominant title/paragraph left, complete portrait right, CSS divider with dots and `ГОТОВИТ ШЕФ` between them |
+| Course sequence | Photo 2; existing seven-course source | Make the seven stages legible by directly pairing each plate with its role | Dish claims, arrows, diagram circles, numbers or one-column cards | Four labelled courses above and three centred below with the exact seven live course-type labels |
+| Responsive/accessibility | Project deliberate-mobile rule | Author the phone composition independently and preserve semantic meaning | Scaled desktop canvas, horizontal scroller, baked raster text or SVG diagram | Semantic ordered lists; representative plate raster remains decorative; chef photo retains specific alt; all visible labels remain HTML |
