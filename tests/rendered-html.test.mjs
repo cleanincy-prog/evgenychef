@@ -775,6 +775,7 @@ test("keeps readability-specific desktop, tablet and narrow-phone geometry", asy
   const menuPhone = personalMenuPass.slice(personalMenuPass.indexOf("@media (max-width: 620px)"));
   assert.match(menuPhone, /\.personal-menu-lede\s*\{[^}]*font-size:\s*16px;[^}]*line-height:\s*1\.62/);
   assert.match(menuPhone, /\.menu-plate-note p\s*\{[^}]*font-size:\s*14px/);
+  assert.match(menuPhone, /\.menu-plate-stage\s*\{[^}]*height:\s*clamp\(720px, 190vw, 780px\)/);
   assert.match(menuPhone, /\.menu-plate-leaders-phone\s*\{[^}]*display:\s*block/);
   assert.match(menuPhone, /\.personal-menu-action\s*\{[^}]*width:\s*100%;[^}]*min-height:\s*58px/);
   assert.match(phone, /\.contact\s*\{[^}]*margin:\s*0 18px 24px;[^}]*padding:\s*34px 18px 24px/);

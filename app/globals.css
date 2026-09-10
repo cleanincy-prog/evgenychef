@@ -1324,7 +1324,7 @@ button:focus-visible,
 
   .menu-plate-stage {
     aspect-ratio: auto;
-    height: clamp(780px, 210vw, 840px);
+    height: clamp(720px, 190vw, 780px);
   }
 
   .menu-plate-photo {
@@ -1370,12 +1370,12 @@ button:focus-visible,
   }
 
   .menu-plate-note-puree {
-    top: 65%;
+    top: 72%;
     right: 0;
   }
 
   .menu-plate-note-sauce {
-    top: 67%;
+    top: 74%;
     bottom: auto;
     left: 0;
   }
@@ -1403,7 +1403,7 @@ button:focus-visible,
   }
 
   .menu-plate-stage {
-    height: 780px;
+    height: 720px;
   }
 }
 

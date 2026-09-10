@@ -210,8 +210,8 @@ function PersonalMenuPlate() {
           <g className="menu-plate-leaders-phone">
             <path d="M 550 160 H 430 L 660 377" />
             <path d="M 650 185 H 725 L 670 430" />
-            <path d="M 650 530 H 600 L 936 413" />
-            <path d="M 550 520 H 620 L 700 480" />
+            <path d="M 650 590 H 720 L 936 413" />
+            <path d="M 550 600 H 480 L 700 480" />
             <circle cx="660" cy="377" r="4" />
             <circle cx="670" cy="430" r="4" />
             <circle cx="936" cy="413" r="4" />
