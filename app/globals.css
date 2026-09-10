@@ -526,6 +526,9 @@ button:focus-visible,
 
 .wordmark,
 .header-action {
+  flex-direction: column;
+  justify-content: center;
+  gap: 3px;
   display: inline-flex;
   align-items: center;
   min-height: 44px;
@@ -555,7 +558,14 @@ button:focus-visible,
   transition: color var(--motion-feedback);
 }
 
-.header-action span { margin-left: 10px; }
+.header-action-copy { display: block; }
+.header-action-copy > span { margin-left: 10px; }
+.header-action-channel {
+  color: var(--muted);
+  font: 400 12px/1.3 var(--font-sans);
+  letter-spacing: normal;
+  text-transform: none;
+}
 .header-action:hover { color: var(--ink); }
 .header-action:active { transform: translateY(1px); }
 
@@ -1077,6 +1087,13 @@ button:focus-visible,
 .personal-menu-action:hover {
   border-color: var(--ink);
   background: var(--ink);
+}
+
+.personal-menu-channel {
+  margin-top: 12px;
+  color: var(--muted);
+  font: 400 13px/1.5 var(--font-sans);
+  text-align: center;
 }
 
 .personal-menu-action:active {
@@ -2144,6 +2161,7 @@ button:focus-visible,
 
 .story-origin-lead .story-copy .story-intro .section-kicker {
   margin: 0 0 8px;
+  font: 600 11.2px/1.7 var(--font-sans);
 }
 
 .story-origin-lead .story-copy .story-intro h2 {
@@ -2212,7 +2230,7 @@ button:focus-visible,
 }
 
 .chef-journey-stop-spain { left: 10%; top: 84%; }
-.chef-journey-stop-france { left: 21%; top: 64%; }
+.chef-journey-stop-france { left: 21%; top: 68%; }
 .chef-journey-stop-italy { left: 49%; top: 83%; }
 .chef-journey-stop-greece { left: 69%; top: 64%; }
 .chef-journey-stop-turkey { left: 88%; top: 82%; }
@@ -2253,6 +2271,12 @@ button:focus-visible,
   left: 50%;
 }
 
+.chef-journey-stop-france figcaption,
+.chef-journey-stop-greece figcaption {
+  top: auto;
+  bottom: calc(100% + 4px);
+}
+
 .chef-journey-stop figcaption span,
 .chef-journey-stop figcaption strong {
   display: block;
@@ -2263,14 +2287,14 @@ button:focus-visible,
 
 .chef-journey-stop figcaption span {
   color: var(--accent-small);
-  font: 600 11px/1.12 var(--font-sans);
+  font: 600 12px/1.2 var(--font-sans);
   letter-spacing: .035em;
   text-transform: uppercase;
 }
 
 .chef-journey-stop figcaption strong {
   margin-top: 1px;
-  font: 400 clamp(13px, 1.15vw, 16px)/1.02 var(--font-display);
+  font: 400 clamp(14px, 1.15vw, 16px)/1.15 var(--font-display);
   letter-spacing: -.01em;
 }
 
@@ -2292,8 +2316,10 @@ button:focus-visible,
   width: 100%;
   margin: 8px 0 0;
   color: var(--muted);
-  font: 400 11px/1.35 var(--font-sans);
+  font: 400 12px/1.5 var(--font-sans);
 }
+
+.chef-journey-mobile-key { display: none; }
 
 .chef-journey-credit {
   letter-spacing: .05em;
@@ -2381,13 +2407,36 @@ button:focus-visible,
 
 @media (max-width: 560px) {
   .story-origin-lead {
-    aspect-ratio: 2 / 3;
+    --journey-map-height: clamp(220px, 58vw, 320px);
+    display: grid;
+    grid-template-columns: 3% 36% minmax(0, 1fr) 3%;
+    row-gap: 20px;
+    min-height: 0;
+    padding-top: 16px;
+    aspect-ratio: auto;
+  }
+
+  .chef-journey-underlay {
+    top: auto;
+    bottom: 0;
+    height: var(--journey-map-height);
+    overflow: hidden;
+  }
+
+  .chef-journey-underlay img {
+    top: auto;
+    bottom: 0;
+    height: auto;
+    object-fit: contain;
   }
 
   .story-origin-lead .story-award {
-    top: 4%;
-    left: 3%;
-    width: 36%;
+    position: relative;
+    top: auto;
+    left: auto;
+    grid-column: 2;
+    grid-row: 1;
+    width: 100%;
   }
 
   .story-origin-lead .story-award figcaption {
@@ -2397,15 +2446,20 @@ button:focus-visible,
   }
 
   .story-origin-lead .story-copy {
+    display: contents;
     inset: 0;
     width: auto;
   }
 
   .story-origin-lead .story-copy .story-intro {
-    position: absolute;
-    top: 2.7%;
-    right: 3%;
-    width: 55%;
+    position: relative;
+    z-index: 3;
+    top: auto;
+    right: auto;
+    grid-column: 3;
+    grid-row: 1;
+    width: auto;
+    margin-left: 12px;
   }
 
   .story-origin-lead .story-copy .story-intro .section-kicker {
@@ -2419,16 +2473,19 @@ button:focus-visible,
   }
 
   .story-origin-lead .story-copy-body {
-    position: absolute;
-    top: 22%;
-    right: 3%;
-    left: 3%;
+    position: relative;
+    z-index: 3;
+    top: auto;
+    right: auto;
+    left: auto;
+    grid-column: 2 / 4;
+    grid-row: 2;
     margin: 0;
   }
 
   .story-origin-lead .story-copy-body > p:first-child {
     max-width: none;
-    font-size: 13px;
+    font-size: 14px;
     line-height: 1.5;
   }
 
@@ -2443,11 +2500,19 @@ button:focus-visible,
     width: clamp(50px, 14vw, 60px);
   }
 
-  .chef-journey-stop-spain { left: 9%; top: 70%; }
-  .chef-journey-stop-france { left: 29%; top: 87%; }
-  .chef-journey-stop-italy { left: 50%; top: 68%; }
-  .chef-journey-stop-greece { left: 71%; top: 87%; }
-  .chef-journey-stop-turkey { left: 91%; top: 70%; }
+  .chef-journey {
+    position: relative;
+    inset: auto;
+    grid-column: 1 / -1;
+    grid-row: 3;
+    height: var(--journey-map-height);
+  }
+
+  .chef-journey-stop-spain { left: 9%; top: 28%; }
+  .chef-journey-stop-france { left: 29%; top: 72%; }
+  .chef-journey-stop-italy { left: 50%; top: 24%; }
+  .chef-journey-stop-greece { left: 71%; top: 72%; }
+  .chef-journey-stop-turkey { left: 91%; top: 28%; }
 
   .chef-journey-stop figcaption {
     width: 60px;
@@ -2463,7 +2528,36 @@ button:focus-visible,
   }
 
   .chef-journey-stop figcaption strong {
-    display: none;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip-path: inset(50%);
+    white-space: nowrap;
+  }
+
+  .chef-journey-mobile-key {
+    display: block;
+    margin: 16px 0 0;
+  }
+
+  .chef-journey-mobile-key > div {
+    display: grid;
+    grid-template-columns: 96px minmax(0, 1fr);
+    column-gap: 16px;
+    align-items: baseline;
+    padding-block: 8px;
+    border-top: 1px solid var(--rule);
+  }
+
+  .chef-journey-mobile-key dt {
+    color: var(--accent-small);
+    font: 500 12px/1.5 var(--font-sans);
+  }
+
+  .chef-journey-mobile-key dd {
+    margin: 0;
+    font: 400 18px/1.3 var(--font-display);
   }
 
   .chef-journey-stop-france figcaption,
@@ -2480,9 +2574,9 @@ button:focus-visible,
 
   .chef-journey-meta {
     display: block;
-    margin-top: 6px;
-    font-size: 11px;
-    line-height: 1.35;
+    margin-block: 12px 20px;
+    font-size: 12px;
+    line-height: 1.5;
   }
 
   .chef-journey-note {
@@ -2638,24 +2732,25 @@ button:focus-visible,
 
 @media (max-width: 700px) {
   .event-sheets { gap: 24px; }
-  .event-sheet { padding: 16px; }
+  .event-sheet { padding: 12px; }
   .event-sheet-header,
   .event-sheet-canapes .event-sheet-header {
-    --sheet-gap: 12px;
-    grid-template-columns: minmax(0, 1fr) 1px minmax(0, 1fr);
+    --sheet-gap: 8px;
+    grid-template-columns: minmax(0, 1.45fr) 1px minmax(0, 1fr);
     grid-template-areas: "heading heading heading" "description spine photo";
     row-gap: 22px;
     padding-block: 18px;
   }
   .event-sheet-canapes .event-sheet-header {
+    grid-template-columns: minmax(0, 1fr) 1px minmax(0, 1.45fr);
     grid-template-areas: "heading heading heading" "photo spine description";
   }
   .event-sheet-heading { align-self: start; }
   .event-sheet-number { margin-bottom: 12px; font-size: 16px; }
   .event-sheet-number::after { width: 44px; }
   .event-sheet-heading h3 { font-size: clamp(28px, 7.7vw, 34px); line-height: 1.06; }
-  .event-sheet-description { align-self: center; margin-top: 0; font-size: 15px; line-height: 1.55; hyphens: auto; hyphenate-limit-chars: 6 3 3; overflow-wrap: break-word; }
-  .event-sheet-photo { align-self: stretch; min-height: 210px; }
+  .event-sheet-description { align-self: center; margin-top: 0; font-size: 15px; line-height: 1.6; hyphens: none; overflow-wrap: normal; }
+  .event-sheet-photo { align-self: stretch; min-height: 190px; }
   .event-sheet-photo img { height: 100%; aspect-ratio: auto; object-position: 50% 50%; }
   .event-sheet-canapes .event-sheet-photo img { object-position: 56% 50%; }
   .event-sheet-techniques .event-sheet-photo img { object-position: 67% 50%; }

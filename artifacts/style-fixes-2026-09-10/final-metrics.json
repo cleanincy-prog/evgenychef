@@ -1,0 +1,2761 @@
+{
+  "url": "http://localhost:3000/",
+  "at": "2026-09-10T15:26:13.336Z",
+  "browser": "152.0.7977.83",
+  "results": [
+    {
+      "width": 1440,
+      "scrollWidth": 1440,
+      "height": 7683,
+      "sheets": [
+        {
+          "description": {
+            "text": "Я приготовлю любимые блюда для близких или создам гастрономический маршрут в семь подач.",
+            "rect": {
+              "x": 98.90625,
+              "y": 1937.515625,
+              "width": 524.453125,
+              "height": 102.28125,
+              "bottom": 2039.796875,
+              "right": 623.359375
+            },
+            "font": "22px / 34.1px Montserrat, Arial, sans-serif",
+            "hyphens": "manual",
+            "scrollWidth": 524
+          },
+          "title": {
+            "text": "Частный ужин",
+            "rect": {
+              "x": 98.90625,
+              "y": 1857.921875,
+              "width": 633.375,
+              "height": 63.59375,
+              "bottom": 1921.515625,
+              "right": 732.28125
+            },
+            "font": "60px / 63.6px \"Cormorant Garamond\", Georgia, serif",
+            "hyphens": "manual",
+            "scrollWidth": 633
+          },
+          "photo": {
+            "x": 813.28125,
+            "y": 1733.234375,
+            "width": 527.8125,
+            "height": 395.859375,
+            "bottom": 2129.09375,
+            "right": 1341.09375
+          }
+        },
+        {
+          "description": {
+            "text": "Я соберу свободный формат с небольшими закусками и блюдами, которые удобно есть за разговором.",
+            "rect": {
+              "x": 707.71875,
+              "y": 3140.953125,
+              "width": 524.453125,
+              "height": 102.28125,
+              "bottom": 3243.234375,
+              "right": 1232.171875
+            },
+            "font": "22px / 34.1px Montserrat, Arial, sans-serif",
+            "hyphens": "manual",
+            "scrollWidth": 524
+          },
+          "title": {
+            "text": "Приватные мероприятия",
+            "rect": {
+              "x": 707.71875,
+              "y": 3061.359375,
+              "width": 633.375,
+              "height": 63.59375,
+              "bottom": 3124.953125,
+              "right": 1341.09375
+            },
+            "font": "60px / 63.6px \"Cormorant Garamond\", Georgia, serif",
+            "hyphens": "manual",
+            "scrollWidth": 633
+          },
+          "photo": {
+            "x": 98.90625,
+            "y": 2936.671875,
+            "width": 527.8125,
+            "height": 395.859375,
+            "bottom": 3332.53125,
+            "right": 626.71875
+          }
+        },
+        {
+          "description": {
+            "text": "Я покажу гостям профессиональные приёмы, мы вместе приготовим блюда, а затем сядем за общий стол.",
+            "rect": {
+              "x": 98.90625,
+              "y": 4195.75,
+              "width": 524.453125,
+              "height": 102.28125,
+              "bottom": 4298.03125,
+              "right": 623.359375
+            },
+            "font": "22px / 34.1px Montserrat, Arial, sans-serif",
+            "hyphens": "manual",
+            "scrollWidth": 524
+          },
+          "title": {
+            "text": "Мастер-классы",
+            "rect": {
+              "x": 98.90625,
+              "y": 4116.15625,
+              "width": 633.375,
+              "height": 63.59375,
+              "bottom": 4179.75,
+              "right": 732.28125
+            },
+            "font": "60px / 63.6px \"Cormorant Garamond\", Georgia, serif",
+            "hyphens": "manual",
+            "scrollWidth": 633
+          },
+          "photo": {
+            "x": 813.28125,
+            "y": 3991.46875,
+            "width": 527.8125,
+            "height": 395.859375,
+            "bottom": 4387.328125,
+            "right": 1341.09375
+          }
+        }
+      ],
+      "captionGap": -145.328125,
+      "kickers": [
+        {
+          "text": "О ШЕФЕ",
+          "rect": {
+            "x": 759.234375,
+            "y": 1027.9375,
+            "width": 575.3125,
+            "height": 19.03125,
+            "bottom": 1046.96875,
+            "right": 1334.546875
+          },
+          "font": "600 11.2px / 19.04px Montserrat, Arial, sans-serif",
+          "hyphens": "manual",
+          "scrollWidth": 575
+        },
+        {
+          "text": "ЧАСТНЫЙ УЖИН",
+          "rect": {
+            "x": 66.234375,
+            "y": 5046.46875,
+            "width": 407.046875,
+            "height": 19.03125,
+            "bottom": 5065.5,
+            "right": 473.28125
+          },
+          "font": "600 11.2px / 19.04px Montserrat, Arial, sans-serif",
+          "hyphens": "manual",
+          "scrollWidth": 407
+        },
+        {
+          "text": "ПЕРСОНАЛЬНОЕ МЕНЮ",
+          "rect": {
+            "x": 66.234375,
+            "y": 5915.875,
+            "width": 627.84375,
+            "height": 19.03125,
+            "bottom": 5934.90625,
+            "right": 694.078125
+          },
+          "font": "600 11.2px / 19.04px Montserrat, Arial, sans-serif",
+          "hyphens": "manual",
+          "scrollWidth": 628
+        }
+      ],
+      "mapCaptions": [
+        {
+          "text": "ИСПАНИЯ\nПаэлья",
+          "rect": {
+            "x": 133.984375,
+            "y": 1606.953125,
+            "width": 126,
+            "height": 33.78125,
+            "bottom": 1640.734375,
+            "right": 259.984375
+          },
+          "font": "300 16px / 27.2px Montserrat, Arial, sans-serif",
+          "hyphens": "manual",
+          "scrollWidth": 126
+        },
+        {
+          "text": "ФРАНЦИЯ\nУтка с соусом",
+          "rect": {
+            "x": 277.8125,
+            "y": 1323.421875,
+            "width": 126,
+            "height": 33.78125,
+            "bottom": 1357.203125,
+            "right": 403.8125
+          },
+          "font": "300 16px / 27.2px Montserrat, Arial, sans-serif",
+          "hyphens": "manual",
+          "scrollWidth": 126
+        },
+        {
+          "text": "ИТАЛИЯ\nРавиоли",
+          "rect": {
+            "x": 643.921875,
+            "y": 1600.421875,
+            "width": 126,
+            "height": 33.78125,
+            "bottom": 1634.203125,
+            "right": 769.921875
+          },
+          "font": "300 16px / 27.2px Montserrat, Arial, sans-serif",
+          "hyphens": "manual",
+          "scrollWidth": 126
+        },
+        {
+          "text": "ГРЕЦИЯ\nОсьминог",
+          "rect": {
+            "x": 905.421875,
+            "y": 1323.421875,
+            "width": 126,
+            "height": 33.78125,
+            "bottom": 1357.203125,
+            "right": 1031.421875
+          },
+          "font": "300 16px / 27.2px Montserrat, Arial, sans-serif",
+          "hyphens": "manual",
+          "scrollWidth": 126
+        },
+        {
+          "text": "ТУРЦИЯ\nФисташковая выпечка",
+          "rect": {
+            "x": 1153.859375,
+            "y": 1593.875,
+            "width": 126,
+            "height": 52.171875,
+            "bottom": 1646.046875,
+            "right": 1279.859375
+          },
+          "font": "300 16px / 27.2px Montserrat, Arial, sans-serif",
+          "hyphens": "manual",
+          "scrollWidth": 126
+        }
+      ],
+      "mobileKeyVisible": false,
+      "noteOverlap": [],
+      "notes": [
+        {
+          "text": "Основной продукт\n\nС него начинается подбор остальных элементов блюда.",
+          "rect": {
+            "x": 66.234375,
+            "y": 6570.046875,
+            "width": 248.421875,
+            "height": 81.796875,
+            "bottom": 6651.84375,
+            "right": 314.65625
+          },
+          "font": "300 16px / 27.2px Montserrat, Arial, sans-serif",
+          "hyphens": "manual",
+          "scrollWidth": 248
+        },
+        {
+          "text": "Гарнир\n\nДополняет основной продукт и поддерживает общее сочетание вкусов.",
+          "rect": {
+            "x": 1125.34375,
+            "y": 6480.703125,
+            "width": 248.421875,
+            "height": 104.296875,
+            "bottom": 6585,
+            "right": 1373.765625
+          },
+          "font": "300 16px / 27.2px Montserrat, Arial, sans-serif",
+          "hyphens": "manual",
+          "scrollWidth": 248
+        },
+        {
+          "text": "Текстуры\n\nМягкие и плотные элементы создают контраст.",
+          "rect": {
+            "x": 1125.34375,
+            "y": 6713,
+            "width": 248.421875,
+            "height": 81.796875,
+            "bottom": 6794.796875,
+            "right": 1373.765625
+          },
+          "font": "300 16px / 27.2px Montserrat, Arial, sans-serif",
+          "hyphens": "manual",
+          "scrollWidth": 248
+        },
+        {
+          "text": "Соус\n\nСвязывает элементы блюда и добавляет завершающий акцент.",
+          "rect": {
+            "x": 66.234375,
+            "y": 7126.9375,
+            "width": 248.421875,
+            "height": 104.296875,
+            "bottom": 7231.234375,
+            "right": 314.65625
+          },
+          "font": "300 16px / 27.2px Montserrat, Arial, sans-serif",
+          "hyphens": "manual",
+          "scrollWidth": 248
+        }
+      ],
+      "brokenImages": [],
+      "controls": [
+        {
+          "text": "ПЕРЕЙТИ К СОДЕРЖАНИЮ",
+          "rect": {
+            "x": 12,
+            "y": -58.400001525878906,
+            "width": 251.84375,
+            "height": 44,
+            "bottom": -14.400001525878906,
+            "right": 263.84375
+          },
+          "font": "600 11.2px / 19.04px Montserrat, Arial, sans-serif",
+          "hyphens": "manual",
+          "scrollWidth": 252
+        },
+        {
+          "text": "Evgen Grybenyk",
+          "rect": {
+            "x": 66.234375,
+            "y": 15.5,
+            "width": 196.140625,
+            "height": 44,
+            "bottom": 59.5,
+            "right": 262.375
+          },
+          "font": "600 24px / 26.4px \"Cormorant Garamond\", Georgia, serif",
+          "hyphens": "manual",
+          "scrollWidth": 196
+        },
+        {
+          "text": "ОБСУДИТЬ ВЕЧЕР ↗\nInstagram",
+          "rect": {
+            "x": 1215.234375,
+            "y": 15.5,
+            "width": 158.53125,
+            "height": 44,
+            "bottom": 59.5,
+            "right": 1373.765625
+          },
+          "font": "600 11.2px / 15.12px Montserrat, Arial, sans-serif",
+          "hyphens": "manual",
+          "scrollWidth": 159
+        },
+        {
+          "text": "ОБСУДИТЬ МЕНЮ",
+          "rect": {
+            "x": 525,
+            "y": 7342.421875,
+            "width": 390,
+            "height": 64,
+            "bottom": 7406.421875,
+            "right": 915
+          },
+          "font": "600 13px / 18.2px Montserrat, Arial, sans-serif",
+          "hyphens": "manual",
+          "scrollWidth": 388
+        },
+        {
+          "text": "Evgen Grybenyk",
+          "rect": {
+            "x": 66.234375,
+            "y": 7596.609375,
+            "width": 1062.578125,
+            "height": 44,
+            "bottom": 7640.609375,
+            "right": 1128.8125
+          },
+          "font": "600 24px / 26.4px \"Cormorant Garamond\", Georgia, serif",
+          "hyphens": "manual",
+          "scrollWidth": 1063
+        },
+        {
+          "text": "Instagram @evg.chef ↗",
+          "rect": {
+            "x": 1200.8125,
+            "y": 7596.609375,
+            "width": 172.953125,
+            "height": 44,
+            "bottom": 7640.609375,
+            "right": 1373.765625
+          },
+          "font": "300 14.72px / 25.024px Montserrat, Arial, sans-serif",
+          "hyphens": "manual",
+          "scrollWidth": 173
+        }
+      ],
+      "errors": []
+    },
+    {
+      "width": 1280,
+      "scrollWidth": 1280,
+      "height": 7030,
+      "sheets": [
+        {
+          "description": {
+            "text": "Я приготовлю любимые блюда для близких или создам гастрономический маршрут в семь подач.",
+            "rect": {
+              "x": 88.03125,
+              "y": 1829.71875,
+              "width": 472.96875,
+              "height": 92.25,
+              "bottom": 1921.96875,
+              "right": 561
+            },
+            "font": "19.84px / 30.752px Montserrat, Arial, sans-serif",
+            "hyphens": "manual",
+            "scrollWidth": 473
+          },
+          "title": {
+            "text": "Частный ужин",
+            "rect": {
+              "x": 88.03125,
+              "y": 1756.734375,
+              "width": 562.515625,
+              "height": 56.984375,
+              "bottom": 1813.71875,
+              "right": 650.546875
+            },
+            "font": "53.76px / 56.9856px \"Cormorant Garamond\", Georgia, serif",
+            "hyphens": "manual",
+            "scrollWidth": 563
+          },
+          "photo": {
+            "x": 723.203125,
+            "y": 1645.875,
+            "width": 468.75,
+            "height": 351.5625,
+            "bottom": 1997.4375,
+            "right": 1191.953125
+          }
+        },
+        {
+          "description": {
+            "text": "Я соберу свободный формат с небольшими закусками и блюдами, которые удобно есть за разговором.",
+            "rect": {
+              "x": 629.4375,
+              "y": 2907.359375,
+              "width": 472.96875,
+              "height": 92.25,
+              "bottom": 2999.609375,
+              "right": 1102.40625
+            },
+            "font": "19.84px / 30.752px Montserrat, Arial, sans-serif",
+            "hyphens": "manual",
+            "scrollWidth": 473
+          },
+          "title": {
+            "text": "Приватные мероприятия",
+            "rect": {
+              "x": 629.4375,
+              "y": 2834.375,
+              "width": 562.53125,
+              "height": 56.984375,
+              "bottom": 2891.359375,
+              "right": 1191.96875
+            },
+            "font": "53.76px / 56.9856px \"Cormorant Garamond\", Georgia, serif",
+            "hyphens": "manual",
+            "scrollWidth": 563
+          },
+          "photo": {
+            "x": 88.03125,
+            "y": 2723.515625,
+            "width": 468.75,
+            "height": 351.5625,
+            "bottom": 3075.078125,
+            "right": 556.78125
+          }
+        },
+        {
+          "description": {
+            "text": "Я покажу гостям профессиональные приёмы, мы вместе приготовим блюда, а затем сядем за общий стол.",
+            "rect": {
+              "x": 88.03125,
+              "y": 3853.328125,
+              "width": 472.96875,
+              "height": 92.25,
+              "bottom": 3945.578125,
+              "right": 561
+            },
+            "font": "19.84px / 30.752px Montserrat, Arial, sans-serif",
+            "hyphens": "manual",
+            "scrollWidth": 473
+          },
+          "title": {
+            "text": "Мастер-классы",
+            "rect": {
+              "x": 88.03125,
+              "y": 3780.34375,
+              "width": 562.515625,
+              "height": 56.984375,
+              "bottom": 3837.328125,
+              "right": 650.546875
+            },
+            "font": "53.76px / 56.9856px \"Cormorant Garamond\", Georgia, serif",
+            "hyphens": "manual",
+            "scrollWidth": 563
+          },
+          "photo": {
+            "x": 723.203125,
+            "y": 3669.484375,
+            "width": 468.75,
+            "height": 351.5625,
+            "bottom": 4021.046875,
+            "right": 1191.953125
+          }
+        }
+      ],
+      "captionGap": -142.125,
+      "kickers": [
+        {
+          "text": "О ШЕФЕ",
+          "rect": {
+            "x": 674.890625,
+            "y": 1013.828125,
+            "width": 511.375,
+            "height": 19.03125,
+            "bottom": 1032.859375,
+            "right": 1186.265625
+          },
+          "font": "600 11.2px / 19.04px Montserrat, Arial, sans-serif",
+          "hyphens": "manual",
+          "scrollWidth": 511
+        },
+        {
+          "text": "ЧАСТНЫЙ УЖИН",
+          "rect": {
+            "x": 58.875,
+            "y": 4612.109375,
+            "width": 361.8125,
+            "height": 19.03125,
+            "bottom": 4631.140625,
+            "right": 420.6875
+          },
+          "font": "600 11.2px / 19.04px Montserrat, Arial, sans-serif",
+          "hyphens": "manual",
+          "scrollWidth": 362
+        },
+        {
+          "text": "ПЕРСОНАЛЬНОЕ МЕНЮ",
+          "rect": {
+            "x": 58.875,
+            "y": 5392.5625,
+            "width": 558.078125,
+            "height": 19.03125,
+            "bottom": 5411.59375,
+            "right": 616.953125
+          },
+          "font": "600 11.2px / 19.04px Montserrat, Arial, sans-serif",
+          "hyphens": "manual",
+          "scrollWidth": 558
+        }
+      ],
+      "mapCaptions": [
+        {
+          "text": "ИСПАНИЯ\nПаэлья",
+          "rect": {
+            "x": 113.6484375,
+            "y": 1528.2109375,
+            "width": 122.875,
+            "height": 32.3125,
+            "bottom": 1560.5234375,
+            "right": 236.5234375
+          },
+          "font": "300 16px / 27.2px Montserrat, Arial, sans-serif",
+          "hyphens": "manual",
+          "scrollWidth": 123
+        },
+        {
+          "text": "ФРАНЦИЯ\nУтка с соусом",
+          "rect": {
+            "x": 241.4921875,
+            "y": 1273.7109375,
+            "width": 122.875,
+            "height": 32.3125,
+            "bottom": 1306.0234375,
+            "right": 364.3671875
+          },
+          "font": "300 16px / 27.2px Montserrat, Arial, sans-serif",
+          "hyphens": "manual",
+          "scrollWidth": 123
+        },
+        {
+          "text": "ИТАЛИЯ\nРавиоли",
+          "rect": {
+            "x": 566.9296875,
+            "y": 1522.3984375,
+            "width": 122.875,
+            "height": 32.3125,
+            "bottom": 1554.7109375,
+            "right": 689.8046875
+          },
+          "font": "300 16px / 27.2px Montserrat, Arial, sans-serif",
+          "hyphens": "manual",
+          "scrollWidth": 123
+        },
+        {
+          "text": "ГРЕЦИЯ\nОсьминог",
+          "rect": {
+            "x": 799.3671875,
+            "y": 1273.7109375,
+            "width": 122.875,
+            "height": 32.3125,
+            "bottom": 1306.0234375,
+            "right": 922.2421875
+          },
+          "font": "300 16px / 27.2px Montserrat, Arial, sans-serif",
+          "hyphens": "manual",
+          "scrollWidth": 123
+        },
+        {
+          "text": "ТУРЦИЯ\nФисташковая выпечка",
+          "rect": {
+            "x": 1020.1953125,
+            "y": 1516.5859375,
+            "width": 122.875,
+            "height": 49.234375,
+            "bottom": 1565.8203125,
+            "right": 1143.0703125
+          },
+          "font": "300 16px / 27.2px Montserrat, Arial, sans-serif",
+          "hyphens": "manual",
+          "scrollWidth": 123
+        }
+      ],
+      "mobileKeyVisible": false,
+      "noteOverlap": [],
+      "notes": [
+        {
+          "text": "Основной продукт\n\nС него начинается подбор остальных элементов блюда.",
+          "rect": {
+            "x": 58.875,
+            "y": 6015.671875,
+            "width": 220.8125,
+            "height": 75.59375,
+            "bottom": 6091.265625,
+            "right": 279.6875
+          },
+          "font": "300 16px / 27.2px Montserrat, Arial, sans-serif",
+          "hyphens": "manual",
+          "scrollWidth": 221
+        },
+        {
+          "text": "Гарнир\n\nДополняет основной продукт и поддерживает общее сочетание вкусов.",
+          "rect": {
+            "x": 1000.3125,
+            "y": 5936.25,
+            "width": 220.8125,
+            "height": 96.59375,
+            "bottom": 6032.84375,
+            "right": 1221.125
+          },
+          "font": "300 16px / 27.2px Montserrat, Arial, sans-serif",
+          "hyphens": "manual",
+          "scrollWidth": 221
+        },
+        {
+          "text": "Текстуры\n\nМягкие и плотные элементы создают контраст.",
+          "rect": {
+            "x": 1000.3125,
+            "y": 6142.75,
+            "width": 220.8125,
+            "height": 75.59375,
+            "bottom": 6218.34375,
+            "right": 1221.125
+          },
+          "font": "300 16px / 27.2px Montserrat, Arial, sans-serif",
+          "hyphens": "manual",
+          "scrollWidth": 221
+        },
+        {
+          "text": "Соус\n\nСвязывает элементы блюда и добавляет завершающий акцент.",
+          "rect": {
+            "x": 58.875,
+            "y": 6506.8125,
+            "width": 220.8125,
+            "height": 96.59375,
+            "bottom": 6603.40625,
+            "right": 279.6875
+          },
+          "font": "300 16px / 27.2px Montserrat, Arial, sans-serif",
+          "hyphens": "manual",
+          "scrollWidth": 221
+        }
+      ],
+      "brokenImages": [],
+      "controls": [
+        {
+          "text": "ПЕРЕЙТИ К СОДЕРЖАНИЮ",
+          "rect": {
+            "x": 12,
+            "y": -58.400001525878906,
+            "width": 251.84375,
+            "height": 44,
+            "bottom": -14.400001525878906,
+            "right": 263.84375
+          },
+          "font": "600 11.2px / 19.04px Montserrat, Arial, sans-serif",
+          "hyphens": "manual",
+          "scrollWidth": 252
+        },
+        {
+          "text": "Evgen Grybenyk",
+          "rect": {
+            "x": 58.875,
+            "y": 15.5,
+            "width": 196.140625,
+            "height": 44,
+            "bottom": 59.5,
+            "right": 255.015625
+          },
+          "font": "600 24px / 26.4px \"Cormorant Garamond\", Georgia, serif",
+          "hyphens": "manual",
+          "scrollWidth": 196
+        },
+        {
+          "text": "ОБСУДИТЬ ВЕЧЕР ↗\nInstagram",
+          "rect": {
+            "x": 1062.59375,
+            "y": 15.5,
+            "width": 158.53125,
+            "height": 44,
+            "bottom": 59.5,
+            "right": 1221.125
+          },
+          "font": "600 11.2px / 15.12px Montserrat, Arial, sans-serif",
+          "hyphens": "manual",
+          "scrollWidth": 159
+        },
+        {
+          "text": "ОБСУДИТЬ МЕНЮ",
+          "rect": {
+            "x": 460.796875,
+            "y": 6702.234375,
+            "width": 358.390625,
+            "height": 64,
+            "bottom": 6766.234375,
+            "right": 819.1875
+          },
+          "font": "600 13px / 18.2px Montserrat, Arial, sans-serif",
+          "hyphens": "manual",
+          "scrollWidth": 356
+        },
+        {
+          "text": "Evgen Grybenyk",
+          "rect": {
+            "x": 58.875,
+            "y": 6943.625,
+            "width": 925.296875,
+            "height": 44,
+            "bottom": 6987.625,
+            "right": 984.171875
+          },
+          "font": "600 24px / 26.4px \"Cormorant Garamond\", Georgia, serif",
+          "hyphens": "manual",
+          "scrollWidth": 925
+        },
+        {
+          "text": "Instagram @evg.chef ↗",
+          "rect": {
+            "x": 1048.171875,
+            "y": 6943.625,
+            "width": 172.953125,
+            "height": 44,
+            "bottom": 6987.625,
+            "right": 1221.125
+          },
+          "font": "300 14.72px / 25.024px Montserrat, Arial, sans-serif",
+          "hyphens": "manual",
+          "scrollWidth": 173
+        }
+      ],
+      "errors": []
+    },
+    {
+      "width": 1024,
+      "scrollWidth": 1024,
+      "height": 6068,
+      "sheets": [
+        {
+          "description": {
+            "text": "Я приготовлю любимые блюда для близких или создам гастрономический маршрут в семь подач.",
+            "rect": {
+              "x": 70.609375,
+              "y": 1713.34375,
+              "width": 381.421875,
+              "height": 74.390625,
+              "bottom": 1787.734375,
+              "right": 452.03125
+            },
+            "font": "16px / 24.8px Montserrat, Arial, sans-serif",
+            "hyphens": "manual",
+            "scrollWidth": 381
+          },
+          "title": {
+            "text": "Частный ужин",
+            "rect": {
+              "x": 70.609375,
+              "y": 1651.75,
+              "width": 449.6875,
+              "height": 45.59375,
+              "bottom": 1697.34375,
+              "right": 520.296875
+            },
+            "font": "43.008px / 45.5885px \"Cormorant Garamond\", Georgia, serif",
+            "hyphens": "manual",
+            "scrollWidth": 450
+          },
+          "photo": {
+            "x": 578.640625,
+            "y": 1561.515625,
+            "width": 374.75,
+            "height": 281.0625,
+            "bottom": 1842.578125,
+            "right": 953.390625
+          }
+        },
+        {
+          "description": {
+            "text": "Я соберу свободный формат с небольшими закусками и блюдами, которые удобно есть за разговором.",
+            "rect": {
+              "x": 503.6875,
+              "y": 2589.09375,
+              "width": 381.421875,
+              "height": 74.390625,
+              "bottom": 2663.484375,
+              "right": 885.109375
+            },
+            "font": "16px / 24.8px Montserrat, Arial, sans-serif",
+            "hyphens": "manual",
+            "scrollWidth": 381
+          },
+          "title": {
+            "text": "Приватные мероприятия",
+            "rect": {
+              "x": 503.6875,
+              "y": 2527.5,
+              "width": 449.703125,
+              "height": 45.59375,
+              "bottom": 2573.09375,
+              "right": 953.390625
+            },
+            "font": "43.008px / 45.5885px \"Cormorant Garamond\", Georgia, serif",
+            "hyphens": "manual",
+            "scrollWidth": 450
+          },
+          "photo": {
+            "x": 70.609375,
+            "y": 2437.28125,
+            "width": 374.734375,
+            "height": 281.046875,
+            "bottom": 2718.328125,
+            "right": 445.34375
+          }
+        },
+        {
+          "description": {
+            "text": "Я покажу гостям профессиональные приёмы, мы вместе приготовим блюда, а затем сядем за общий стол.",
+            "rect": {
+              "x": 70.609375,
+              "y": 3356.578125,
+              "width": 381.421875,
+              "height": 74.390625,
+              "bottom": 3430.96875,
+              "right": 452.03125
+            },
+            "font": "16px / 24.8px Montserrat, Arial, sans-serif",
+            "hyphens": "manual",
+            "scrollWidth": 381
+          },
+          "title": {
+            "text": "Мастер-классы",
+            "rect": {
+              "x": 70.609375,
+              "y": 3294.984375,
+              "width": 449.6875,
+              "height": 45.59375,
+              "bottom": 3340.578125,
+              "right": 520.296875
+            },
+            "font": "43.008px / 45.5885px \"Cormorant Garamond\", Georgia, serif",
+            "hyphens": "manual",
+            "scrollWidth": 450
+          },
+          "photo": {
+            "x": 578.640625,
+            "y": 3204.75,
+            "width": 374.75,
+            "height": 281.0625,
+            "bottom": 3485.8125,
+            "right": 953.390625
+          }
+        }
+      ],
+      "captionGap": -102.5625,
+      "kickers": [
+        {
+          "text": "О ШЕФЕ",
+          "rect": {
+            "x": 539.90625,
+            "y": 993.796875,
+            "width": 409.109375,
+            "height": 19.03125,
+            "bottom": 1012.828125,
+            "right": 949.015625
+          },
+          "font": "600 11.2px / 19.04px Montserrat, Arial, sans-serif",
+          "hyphens": "manual",
+          "scrollWidth": 409
+        },
+        {
+          "text": "ЧАСТНЫЙ УЖИН",
+          "rect": {
+            "x": 47.09375,
+            "y": 3967.609375,
+            "width": 289.453125,
+            "height": 19.03125,
+            "bottom": 3986.640625,
+            "right": 336.546875
+          },
+          "font": "600 11.2px / 19.04px Montserrat, Arial, sans-serif",
+          "hyphens": "manual",
+          "scrollWidth": 289
+        },
+        {
+          "text": "ПЕРСОНАЛЬНОЕ МЕНЮ",
+          "rect": {
+            "x": 47.09375,
+            "y": 4697.0625,
+            "width": 446.46875,
+            "height": 19.03125,
+            "bottom": 4716.09375,
+            "right": 493.5625
+          },
+          "font": "600 11.2px / 19.04px Montserrat, Arial, sans-serif",
+          "hyphens": "manual",
+          "scrollWidth": 446
+        }
+      ],
+      "mapCaptions": [
+        {
+          "text": "ИСПАНИЯ\nПаэлья",
+          "rect": {
+            "x": 90.90625,
+            "y": 1448.7734375,
+            "width": 98.296875,
+            "height": 31.484375,
+            "bottom": 1480.2578125,
+            "right": 189.203125
+          },
+          "font": "300 16px / 27.2px Montserrat, Arial, sans-serif",
+          "hyphens": "manual",
+          "scrollWidth": 98
+        },
+        {
+          "text": "ФРАНЦИЯ\nУтка с соусом",
+          "rect": {
+            "x": 193.1875,
+            "y": 1228.3359375,
+            "width": 98.296875,
+            "height": 31.484375,
+            "bottom": 1259.8203125,
+            "right": 291.484375
+          },
+          "font": "300 16px / 27.2px Montserrat, Arial, sans-serif",
+          "hyphens": "manual",
+          "scrollWidth": 98
+        },
+        {
+          "text": "ИТАЛИЯ\nРавиоли",
+          "rect": {
+            "x": 453.53125,
+            "y": 1443.5703125,
+            "width": 98.296875,
+            "height": 31.484375,
+            "bottom": 1475.0546875,
+            "right": 551.828125
+          },
+          "font": "300 16px / 27.2px Montserrat, Arial, sans-serif",
+          "hyphens": "manual",
+          "scrollWidth": 98
+        },
+        {
+          "text": "ГРЕЦИЯ\nОсьминог",
+          "rect": {
+            "x": 639.5,
+            "y": 1228.3359375,
+            "width": 98.296875,
+            "height": 31.484375,
+            "bottom": 1259.8203125,
+            "right": 737.796875
+          },
+          "font": "300 16px / 27.2px Montserrat, Arial, sans-serif",
+          "hyphens": "manual",
+          "scrollWidth": 98
+        },
+        {
+          "text": "ТУРЦИЯ\nФисташковая выпечка",
+          "rect": {
+            "x": 816.171875,
+            "y": 1438.3671875,
+            "width": 98.296875,
+            "height": 47.578125,
+            "bottom": 1485.9453125,
+            "right": 914.46875
+          },
+          "font": "300 16px / 27.2px Montserrat, Arial, sans-serif",
+          "hyphens": "manual",
+          "scrollWidth": 98
+        }
+      ],
+      "mobileKeyVisible": false,
+      "noteOverlap": [],
+      "notes": [
+        {
+          "text": "Основной продукт\n\nС него начинается подбор остальных элементов блюда.",
+          "rect": {
+            "x": 47.09375,
+            "y": 5210.9375,
+            "width": 176.65625,
+            "height": 91.484375,
+            "bottom": 5302.421875,
+            "right": 223.75
+          },
+          "font": "300 16px / 27.2px Montserrat, Arial, sans-serif",
+          "hyphens": "manual",
+          "scrollWidth": 177
+        },
+        {
+          "text": "Гарнир\n\nДополняет основной продукт и поддерживает общее сочетание вкусов.",
+          "rect": {
+            "x": 800.25,
+            "y": 5147.40625,
+            "width": 176.65625,
+            "height": 112.484375,
+            "bottom": 5259.890625,
+            "right": 976.90625
+          },
+          "font": "300 16px / 27.2px Montserrat, Arial, sans-serif",
+          "hyphens": "manual",
+          "scrollWidth": 177
+        },
+        {
+          "text": "Текстуры\n\nМягкие и плотные элементы создают контраст.",
+          "rect": {
+            "x": 800.25,
+            "y": 5312.59375,
+            "width": 176.65625,
+            "height": 91.484375,
+            "bottom": 5404.078125,
+            "right": 976.90625
+          },
+          "font": "300 16px / 27.2px Montserrat, Arial, sans-serif",
+          "hyphens": "manual",
+          "scrollWidth": 177
+        },
+        {
+          "text": "Соус\n\nСвязывает элементы блюда и добавляет завершающий акцент.",
+          "rect": {
+            "x": 47.09375,
+            "y": 5589.640625,
+            "width": 176.65625,
+            "height": 91.484375,
+            "bottom": 5681.125,
+            "right": 223.75
+          },
+          "font": "300 16px / 27.2px Montserrat, Arial, sans-serif",
+          "hyphens": "manual",
+          "scrollWidth": 177
+        }
+      ],
+      "brokenImages": [],
+      "controls": [
+        {
+          "text": "ПЕРЕЙТИ К СОДЕРЖАНИЮ",
+          "rect": {
+            "x": 12,
+            "y": -58.400001525878906,
+            "width": 251.84375,
+            "height": 44,
+            "bottom": -14.400001525878906,
+            "right": 263.84375
+          },
+          "font": "600 11.2px / 19.04px Montserrat, Arial, sans-serif",
+          "hyphens": "manual",
+          "scrollWidth": 252
+        },
+        {
+          "text": "Evgen Grybenyk",
+          "rect": {
+            "x": 47.09375,
+            "y": 15.5,
+            "width": 196.140625,
+            "height": 44,
+            "bottom": 59.5,
+            "right": 243.234375
+          },
+          "font": "600 24px / 26.4px \"Cormorant Garamond\", Georgia, serif",
+          "hyphens": "manual",
+          "scrollWidth": 196
+        },
+        {
+          "text": "ОБСУДИТЬ ВЕЧЕР ↗\nInstagram",
+          "rect": {
+            "x": 818.375,
+            "y": 15.5,
+            "width": 158.53125,
+            "height": 44,
+            "bottom": 59.5,
+            "right": 976.90625
+          },
+          "font": "600 11.2px / 15.12px Montserrat, Arial, sans-serif",
+          "hyphens": "manual",
+          "scrollWidth": 159
+        },
+        {
+          "text": "ОБСУДИТЬ МЕНЮ",
+          "rect": {
+            "x": 368.640625,
+            "y": 5760.1875,
+            "width": 286.71875,
+            "height": 64,
+            "bottom": 5824.1875,
+            "right": 655.359375
+          },
+          "font": "600 13px / 18.2px Montserrat, Arial, sans-serif",
+          "hyphens": "manual",
+          "scrollWidth": 285
+        },
+        {
+          "text": "Evgen Grybenyk",
+          "rect": {
+            "x": 47.09375,
+            "y": 5981.1875,
+            "width": 705.671875,
+            "height": 44,
+            "bottom": 6025.1875,
+            "right": 752.765625
+          },
+          "font": "600 24px / 26.4px \"Cormorant Garamond\", Georgia, serif",
+          "hyphens": "manual",
+          "scrollWidth": 706
+        },
+        {
+          "text": "Instagram @evg.chef ↗",
+          "rect": {
+            "x": 803.953125,
+            "y": 5981.1875,
+            "width": 172.953125,
+            "height": 44,
+            "bottom": 6025.1875,
+            "right": 976.90625
+          },
+          "font": "300 14.72px / 25.024px Montserrat, Arial, sans-serif",
+          "hyphens": "manual",
+          "scrollWidth": 173
+        }
+      ],
+      "errors": []
+    },
+    {
+      "width": 768,
+      "scrollWidth": 768,
+      "height": 5659,
+      "sheets": [
+        {
+          "description": {
+            "text": "Я приготовлю любимые блюда для близких или создам гастрономический маршрут в семь подач.",
+            "rect": {
+              "x": 39.890625,
+              "y": 1901.828125,
+              "width": 351.390625,
+              "height": 74.390625,
+              "bottom": 1976.21875,
+              "right": 391.28125
+            },
+            "font": "16px / 24.8px Montserrat, Arial, sans-serif",
+            "hyphens": "manual",
+            "scrollWidth": 351
+          },
+          "title": {
+            "text": "Частный ужин",
+            "rect": {
+              "x": 39.890625,
+              "y": 1847.671875,
+              "width": 351.390625,
+              "height": 38.15625,
+              "bottom": 1885.828125,
+              "right": 391.28125
+            },
+            "font": "36px / 38.16px \"Cormorant Garamond\", Georgia, serif",
+            "hyphens": "manual",
+            "scrollWidth": 351
+          },
+          "photo": {
+            "x": 435.28125,
+            "y": 1784.453125,
+            "width": 292.8125,
+            "height": 219.609375,
+            "bottom": 2004.0625,
+            "right": 728.09375
+          }
+        },
+        {
+          "description": {
+            "text": "Я соберу свободный формат с небольшими закусками и блюдами, которые удобно есть за разговором.",
+            "rect": {
+              "x": 376.703125,
+              "y": 2621.265625,
+              "width": 351.390625,
+              "height": 74.390625,
+              "bottom": 2695.65625,
+              "right": 728.09375
+            },
+            "font": "16px / 24.8px Montserrat, Arial, sans-serif",
+            "hyphens": "manual",
+            "scrollWidth": 351
+          },
+          "title": {
+            "text": "Приватные мероприятия",
+            "rect": {
+              "x": 376.703125,
+              "y": 2528.953125,
+              "width": 351.390625,
+              "height": 76.3125,
+              "bottom": 2605.265625,
+              "right": 728.09375
+            },
+            "font": "36px / 38.16px \"Cormorant Garamond\", Georgia, serif",
+            "hyphens": "manual",
+            "scrollWidth": 351
+          },
+          "photo": {
+            "x": 39.890625,
+            "y": 2484.8125,
+            "width": 292.8125,
+            "height": 219.609375,
+            "bottom": 2704.421875,
+            "right": 332.703125
+          }
+        },
+        {
+          "description": {
+            "text": "Я покажу гостям профессиональные приёмы, мы вместе приготовим блюда, а затем сядем за общий стол.",
+            "rect": {
+              "x": 39.890625,
+              "y": 3212.890625,
+              "width": 351.390625,
+              "height": 74.390625,
+              "bottom": 3287.28125,
+              "right": 391.28125
+            },
+            "font": "16px / 24.8px Montserrat, Arial, sans-serif",
+            "hyphens": "manual",
+            "scrollWidth": 351
+          },
+          "title": {
+            "text": "Мастер-классы",
+            "rect": {
+              "x": 39.890625,
+              "y": 3158.734375,
+              "width": 351.390625,
+              "height": 38.15625,
+              "bottom": 3196.890625,
+              "right": 391.28125
+            },
+            "font": "36px / 38.16px \"Cormorant Garamond\", Georgia, serif",
+            "hyphens": "manual",
+            "scrollWidth": 351
+          },
+          "photo": {
+            "x": 435.28125,
+            "y": 3095.515625,
+            "width": 292.8125,
+            "height": 219.609375,
+            "bottom": 3315.125,
+            "right": 728.09375
+          }
+        }
+      ],
+      "captionGap": -62.015625,
+      "kickers": [
+        {
+          "text": "О ШЕФЕ",
+          "rect": {
+            "x": 398.484375,
+            "y": 1099.171875,
+            "width": 325.796875,
+            "height": 19.03125,
+            "bottom": 1118.203125,
+            "right": 724.28125
+          },
+          "font": "600 11.2px / 19.04px Montserrat, Arial, sans-serif",
+          "hyphens": "manual",
+          "scrollWidth": 326
+        },
+        {
+          "text": "ЧАСТНЫЙ УЖИН",
+          "rect": {
+            "x": 22,
+            "y": 3736.265625,
+            "width": 287.65625,
+            "height": 19.03125,
+            "bottom": 3755.296875,
+            "right": 309.65625
+          },
+          "font": "600 11.2px / 19.04px Montserrat, Arial, sans-serif",
+          "hyphens": "manual",
+          "scrollWidth": 288
+        },
+        {
+          "text": "ПЕРСОНАЛЬНОЕ МЕНЮ",
+          "rect": {
+            "x": 22,
+            "y": 4427.28125,
+            "width": 348.171875,
+            "height": 19.03125,
+            "bottom": 4446.3125,
+            "right": 370.171875
+          },
+          "font": "600 11.2px / 19.04px Montserrat, Arial, sans-serif",
+          "hyphens": "manual",
+          "scrollWidth": 348
+        }
+      ],
+      "mapCaptions": [
+        {
+          "text": "ИСПАНИЯ\nПаэлья",
+          "rect": {
+            "x": 53.390625,
+            "y": 1608.65625,
+            "width": 82,
+            "height": 31.484375,
+            "bottom": 1640.140625,
+            "right": 135.390625
+          },
+          "font": "300 16px / 27.2px Montserrat, Arial, sans-serif",
+          "hyphens": "manual",
+          "scrollWidth": 82
+        },
+        {
+          "text": "ФРАНЦИЯ\nУтка с соусом",
+          "rect": {
+            "x": 147.515625,
+            "y": 1401.109375,
+            "width": 82,
+            "height": 31.484375,
+            "bottom": 1432.59375,
+            "right": 229.515625
+          },
+          "font": "300 16px / 27.2px Montserrat, Arial, sans-serif",
+          "hyphens": "manual",
+          "scrollWidth": 82
+        },
+        {
+          "text": "ИТАЛИЯ\nРавиоли",
+          "rect": {
+            "x": 335.75,
+            "y": 1627.546875,
+            "width": 82,
+            "height": 31.484375,
+            "bottom": 1659.03125,
+            "right": 417.75
+          },
+          "font": "300 16px / 27.2px Montserrat, Arial, sans-serif",
+          "hyphens": "manual",
+          "scrollWidth": 82
+        },
+        {
+          "text": "ГРЕЦИЯ\nОсьминог",
+          "rect": {
+            "x": 480.546875,
+            "y": 1407.40625,
+            "width": 82,
+            "height": 31.484375,
+            "bottom": 1438.890625,
+            "right": 562.546875
+          },
+          "font": "300 16px / 27.2px Montserrat, Arial, sans-serif",
+          "hyphens": "manual",
+          "scrollWidth": 82
+        },
+        {
+          "text": "ТУРЦИЯ\nФисташковая выпечка",
+          "rect": {
+            "x": 618.109375,
+            "y": 1621.25,
+            "width": 82,
+            "height": 47.578125,
+            "bottom": 1668.828125,
+            "right": 700.109375
+          },
+          "font": "300 16px / 27.2px Montserrat, Arial, sans-serif",
+          "hyphens": "manual",
+          "scrollWidth": 82
+        }
+      ],
+      "mobileKeyVisible": false,
+      "noteOverlap": [],
+      "notes": [
+        {
+          "text": "Основной продукт\n\nС него начинается подбор остальных элементов блюда.",
+          "rect": {
+            "x": 22,
+            "y": 4920.03125,
+            "width": 159.265625,
+            "height": 87.046875,
+            "bottom": 5007.078125,
+            "right": 181.265625
+          },
+          "font": "300 16px / 27.2px Montserrat, Arial, sans-serif",
+          "hyphens": "manual",
+          "scrollWidth": 159
+        },
+        {
+          "text": "Гарнир\n\nДополняет основной продукт и поддерживает общее сочетание вкусов.",
+          "rect": {
+            "x": 586.734375,
+            "y": 4821.09375,
+            "width": 159.265625,
+            "height": 107.0625,
+            "bottom": 4928.15625,
+            "right": 746
+          },
+          "font": "300 16px / 27.2px Montserrat, Arial, sans-serif",
+          "hyphens": "manual",
+          "scrollWidth": 159
+        },
+        {
+          "text": "Текстуры\n\nМягкие и плотные элементы создают контраст.",
+          "rect": {
+            "x": 586.734375,
+            "y": 5058.546875,
+            "width": 159.265625,
+            "height": 87.046875,
+            "bottom": 5145.59375,
+            "right": 746
+          },
+          "font": "300 16px / 27.2px Montserrat, Arial, sans-serif",
+          "hyphens": "manual",
+          "scrollWidth": 159
+        },
+        {
+          "text": "Соус\n\nСвязывает элементы блюда и добавляет завершающий акцент.",
+          "rect": {
+            "x": 22,
+            "y": 5179.078125,
+            "width": 159.265625,
+            "height": 107.0625,
+            "bottom": 5286.140625,
+            "right": 181.265625
+          },
+          "font": "300 16px / 27.2px Montserrat, Arial, sans-serif",
+          "hyphens": "manual",
+          "scrollWidth": 159
+        }
+      ],
+      "brokenImages": [],
+      "controls": [
+        {
+          "text": "ПЕРЕЙТИ К СОДЕРЖАНИЮ",
+          "rect": {
+            "x": 12,
+            "y": -58.400001525878906,
+            "width": 251.84375,
+            "height": 44,
+            "bottom": -14.400001525878906,
+            "right": 263.84375
+          },
+          "font": "600 11.2px / 19.04px Montserrat, Arial, sans-serif",
+          "hyphens": "manual",
+          "scrollWidth": 252
+        },
+        {
+          "text": "Evgen Grybenyk",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 240.140625,
+            "height": 70,
+            "bottom": 70,
+            "right": 240.140625
+          },
+          "font": "600 24px / 26.4px \"Cormorant Garamond\", Georgia, serif",
+          "hyphens": "manual",
+          "scrollWidth": 240
+        },
+        {
+          "text": "ОБСУДИТЬ ВЕЧЕР ↗\nInstagram",
+          "rect": {
+            "x": 564.46875,
+            "y": 0,
+            "width": 203.53125,
+            "height": 70,
+            "bottom": 70,
+            "right": 768
+          },
+          "font": "600 11.2px / 15.12px Montserrat, Arial, sans-serif",
+          "hyphens": "manual",
+          "scrollWidth": 203
+        },
+        {
+          "text": "ОБСУДИТЬ МЕНЮ",
+          "rect": {
+            "x": 254,
+            "y": 5351.8125,
+            "width": 260,
+            "height": 64,
+            "bottom": 5415.8125,
+            "right": 514
+          },
+          "font": "600 13px / 18.2px Montserrat, Arial, sans-serif",
+          "hyphens": "manual",
+          "scrollWidth": 258
+        },
+        {
+          "text": "Evgen Grybenyk",
+          "rect": {
+            "x": 22,
+            "y": 5572.8125,
+            "width": 533.046875,
+            "height": 44,
+            "bottom": 5616.8125,
+            "right": 555.046875
+          },
+          "font": "600 24px / 26.4px \"Cormorant Garamond\", Georgia, serif",
+          "hyphens": "manual",
+          "scrollWidth": 533
+        },
+        {
+          "text": "Instagram @evg.chef ↗",
+          "rect": {
+            "x": 573.046875,
+            "y": 5572.8125,
+            "width": 172.953125,
+            "height": 44,
+            "bottom": 5616.8125,
+            "right": 746
+          },
+          "font": "300 14.72px / 25.024px Montserrat, Arial, sans-serif",
+          "hyphens": "manual",
+          "scrollWidth": 173
+        }
+      ],
+      "errors": []
+    },
+    {
+      "width": 430,
+      "scrollWidth": 430,
+      "height": 6582,
+      "sheets": [
+        {
+          "description": {
+            "text": "Я приготовлю любимые блюда для близких или создам гастрономический маршрут в семь подач.",
+            "rect": {
+              "x": 31,
+              "y": 1879.8125,
+              "width": 207.734375,
+              "height": 120,
+              "bottom": 1999.8125,
+              "right": 238.734375
+            },
+            "font": "15px / 24px Montserrat, Arial, sans-serif",
+            "hyphens": "none",
+            "scrollWidth": 208
+          },
+          "title": {
+            "text": "Частный ужин",
+            "rect": {
+              "x": 31,
+              "y": 1784.984375,
+              "width": 368,
+              "height": 35.09375,
+              "bottom": 1820.078125,
+              "right": 399
+            },
+            "font": "33.11px / 35.0966px \"Cormorant Garamond\", Georgia, serif",
+            "hyphens": "manual",
+            "scrollWidth": 368
+          },
+          "photo": {
+            "x": 255.734375,
+            "y": 1842.078125,
+            "width": 143.265625,
+            "height": 195.484375,
+            "bottom": 2037.5625,
+            "right": 399
+          }
+        },
+        {
+          "description": {
+            "text": "Я соберу свободный формат с небольшими закусками и блюдами, которые удобно есть за разговором.",
+            "rect": {
+              "x": 191.25,
+              "y": 2595.171875,
+              "width": 207.75,
+              "height": 120,
+              "bottom": 2715.171875,
+              "right": 399
+            },
+            "font": "15px / 24px Montserrat, Arial, sans-serif",
+            "hyphens": "none",
+            "scrollWidth": 208
+          },
+          "title": {
+            "text": "Приватные мероприятия",
+            "rect": {
+              "x": 31,
+              "y": 2503.078125,
+              "width": 368,
+              "height": 35.09375,
+              "bottom": 2538.171875,
+              "right": 399
+            },
+            "font": "33.11px / 35.0966px \"Cormorant Garamond\", Georgia, serif",
+            "hyphens": "manual",
+            "scrollWidth": 368
+          },
+          "photo": {
+            "x": 31,
+            "y": 2560.171875,
+            "width": 143.25,
+            "height": 190,
+            "bottom": 2750.171875,
+            "right": 174.25
+          }
+        },
+        {
+          "description": {
+            "text": "Я покажу гостям профессиональные приёмы, мы вместе приготовим блюда, а затем сядем за общий стол.",
+            "rect": {
+              "x": 31,
+              "y": 3310.703125,
+              "width": 207.734375,
+              "height": 144,
+              "bottom": 3454.703125,
+              "right": 238.734375
+            },
+            "font": "15px / 24px Montserrat, Arial, sans-serif",
+            "hyphens": "none",
+            "scrollWidth": 208
+          },
+          "title": {
+            "text": "Мастер-классы",
+            "rect": {
+              "x": 31,
+              "y": 3230.609375,
+              "width": 368,
+              "height": 35.09375,
+              "bottom": 3265.703125,
+              "right": 399
+            },
+            "font": "33.11px / 35.0966px \"Cormorant Garamond\", Georgia, serif",
+            "hyphens": "manual",
+            "scrollWidth": 368
+          },
+          "photo": {
+            "x": 255.734375,
+            "y": 3287.703125,
+            "width": 143.265625,
+            "height": 190,
+            "bottom": 3477.703125,
+            "right": 399
+          }
+        }
+      ],
+      "captionGap": 20,
+      "kickers": [
+        {
+          "text": "О ШЕФЕ",
+          "rect": {
+            "x": 203.640625,
+            "y": 910,
+            "width": 186.546875,
+            "height": 18.6875,
+            "bottom": 928.6875,
+            "right": 390.1875
+          },
+          "font": "600 11px / 18.7px Montserrat, Arial, sans-serif",
+          "hyphens": "manual",
+          "scrollWidth": 187
+        },
+        {
+          "text": "ЧАСТНЫЙ УЖИН",
+          "rect": {
+            "x": 18,
+            "y": 4174.171875,
+            "width": 394,
+            "height": 19.03125,
+            "bottom": 4193.203125,
+            "right": 412
+          },
+          "font": "600 11.2px / 19.04px Montserrat, Arial, sans-serif",
+          "hyphens": "manual",
+          "scrollWidth": 394
+        },
+        {
+          "text": "ПЕРСОНАЛЬНОЕ МЕНЮ",
+          "rect": {
+            "x": 18,
+            "y": 5069.5,
+            "width": 394,
+            "height": 18.6875,
+            "bottom": 5088.1875,
+            "right": 412
+          },
+          "font": "600 11px / 18.7px Montserrat, Arial, sans-serif",
+          "hyphens": "manual",
+          "scrollWidth": 394
+        }
+      ],
+      "mapCaptions": [
+        {
+          "text": "ИСПАНИЯ\nПаэлья",
+          "rect": {
+            "x": 23.453125,
+            "y": 1260.671875,
+            "width": 60,
+            "height": 13.1875,
+            "bottom": 1273.859375,
+            "right": 83.453125
+          },
+          "font": "300 16px / 27.2px Montserrat, Arial, sans-serif",
+          "hyphens": "manual",
+          "scrollWidth": 66
+        },
+        {
+          "text": "ФРАНЦИЯ\nУтка с соусом",
+          "rect": {
+            "x": 102.25,
+            "y": 1303.203125,
+            "width": 60,
+            "height": 13.1875,
+            "bottom": 1316.390625,
+            "right": 162.25
+          },
+          "font": "300 16px / 27.2px Montserrat, Arial, sans-serif",
+          "hyphens": "manual",
+          "scrollWidth": 67
+        },
+        {
+          "text": "ИТАЛИЯ\nРавиоли",
+          "rect": {
+            "x": 185,
+            "y": 1250.6875,
+            "width": 60,
+            "height": 13.1875,
+            "bottom": 1263.875,
+            "right": 245
+          },
+          "font": "300 16px / 27.2px Montserrat, Arial, sans-serif",
+          "hyphens": "manual",
+          "scrollWidth": 60
+        },
+        {
+          "text": "ГРЕЦИЯ\nОсьминог",
+          "rect": {
+            "x": 267.734375,
+            "y": 1303.203125,
+            "width": 60,
+            "height": 13.1875,
+            "bottom": 1316.390625,
+            "right": 327.734375
+          },
+          "font": "300 16px / 27.2px Montserrat, Arial, sans-serif",
+          "hyphens": "manual",
+          "scrollWidth": 60
+        },
+        {
+          "text": "ТУРЦИЯ\nФисташковая выпечка",
+          "rect": {
+            "x": 346.53125,
+            "y": 1260.671875,
+            "width": 60,
+            "height": 13.1875,
+            "bottom": 1273.859375,
+            "right": 406.53125
+          },
+          "font": "300 16px / 27.2px Montserrat, Arial, sans-serif",
+          "hyphens": "manual",
+          "scrollWidth": 60
+        }
+      ],
+      "mobileKeyVisible": true,
+      "noteOverlap": [],
+      "notes": [
+        {
+          "text": "Основной продукт\n\nС него начинается подбор остальных элементов блюда.",
+          "rect": {
+            "x": 18,
+            "y": 5507.34375,
+            "width": 185.171875,
+            "height": 91.625,
+            "bottom": 5598.96875,
+            "right": 203.171875
+          },
+          "font": "300 16px / 27.2px Montserrat, Arial, sans-serif",
+          "hyphens": "manual",
+          "scrollWidth": 185
+        },
+        {
+          "text": "Гарнир\n\nДополняет основной продукт и поддерживает общее сочетание вкусов.",
+          "rect": {
+            "x": 226.828125,
+            "y": 5507.34375,
+            "width": 185.171875,
+            "height": 91.625,
+            "bottom": 5598.96875,
+            "right": 412
+          },
+          "font": "300 16px / 27.2px Montserrat, Arial, sans-serif",
+          "hyphens": "manual",
+          "scrollWidth": 185
+        },
+        {
+          "text": "Текстуры\n\nМягкие и плотные элементы создают контраст.",
+          "rect": {
+            "x": 226.828125,
+            "y": 6068.9375,
+            "width": 185.171875,
+            "height": 91.625,
+            "bottom": 6160.5625,
+            "right": 412
+          },
+          "font": "300 16px / 27.2px Montserrat, Arial, sans-serif",
+          "hyphens": "manual",
+          "scrollWidth": 185
+        },
+        {
+          "text": "Соус\n\nСвязывает элементы блюда и добавляет завершающий акцент.",
+          "rect": {
+            "x": 18,
+            "y": 6084.53125,
+            "width": 185.171875,
+            "height": 91.625,
+            "bottom": 6176.15625,
+            "right": 203.171875
+          },
+          "font": "300 16px / 27.2px Montserrat, Arial, sans-serif",
+          "hyphens": "manual",
+          "scrollWidth": 185
+        }
+      ],
+      "brokenImages": [],
+      "controls": [
+        {
+          "text": "ПЕРЕЙТИ К СОДЕРЖАНИЮ",
+          "rect": {
+            "x": 12,
+            "y": -58.400001525878906,
+            "width": 251.84375,
+            "height": 44,
+            "bottom": -14.400001525878906,
+            "right": 263.84375
+          },
+          "font": "600 11.2px / 19.04px Montserrat, Arial, sans-serif",
+          "hyphens": "manual",
+          "scrollWidth": 252
+        },
+        {
+          "text": "Evgen Grybenyk",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 195.453125,
+            "height": 66,
+            "bottom": 66,
+            "right": 195.453125
+          },
+          "font": "600 20px / 22px \"Cormorant Garamond\", Georgia, serif",
+          "hyphens": "manual",
+          "scrollWidth": 195
+        },
+        {
+          "text": "ОБСУДИТЬ ВЕЧЕР ↗\nInstagram",
+          "rect": {
+            "x": 206.640625,
+            "y": 0,
+            "width": 223.359375,
+            "height": 66,
+            "bottom": 66,
+            "right": 430
+          },
+          "font": "600 13.6px / 18.36px Montserrat, Arial, sans-serif",
+          "hyphens": "manual",
+          "scrollWidth": 222
+        },
+        {
+          "text": "ОБСУДИТЬ МЕНЮ",
+          "rect": {
+            "x": 18,
+            "y": 6317.34375,
+            "width": 394,
+            "height": 58,
+            "bottom": 6375.34375,
+            "right": 412
+          },
+          "font": "600 13px / 18.2px Montserrat, Arial, sans-serif",
+          "hyphens": "manual",
+          "scrollWidth": 392
+        },
+        {
+          "text": "Evgen Grybenyk",
+          "rect": {
+            "x": 18,
+            "y": 6477.84375,
+            "width": 394,
+            "height": 44,
+            "bottom": 6521.84375,
+            "right": 412
+          },
+          "font": "600 20px / 22px \"Cormorant Garamond\", Georgia, serif",
+          "hyphens": "manual",
+          "scrollWidth": 394
+        },
+        {
+          "text": "Instagram @evg.chef ↗",
+          "rect": {
+            "x": 239.046875,
+            "y": 6521.84375,
+            "width": 172.953125,
+            "height": 44,
+            "bottom": 6565.84375,
+            "right": 412
+          },
+          "font": "300 14.72px / 25.024px Montserrat, Arial, sans-serif",
+          "hyphens": "manual",
+          "scrollWidth": 173
+        }
+      ],
+      "errors": []
+    },
+    {
+      "width": 390,
+      "scrollWidth": 390,
+      "height": 6386,
+      "sheets": [
+        {
+          "description": {
+            "text": "Я приготовлю любимые блюда для близких или создам гастрономический маршрут в семь подач.",
+            "rect": {
+              "x": 31,
+              "y": 1843.078125,
+              "width": 184.046875,
+              "height": 120,
+              "bottom": 1963.078125,
+              "right": 215.046875
+            },
+            "font": "15px / 24px Montserrat, Arial, sans-serif",
+            "hyphens": "none",
+            "scrollWidth": 184
+          },
+          "title": {
+            "text": "Частный ужин",
+            "rect": {
+              "x": 31,
+              "y": 1754.25,
+              "width": 328,
+              "height": 31.828125,
+              "bottom": 1786.078125,
+              "right": 359
+            },
+            "font": "30.03px / 31.8318px \"Cormorant Garamond\", Georgia, serif",
+            "hyphens": "manual",
+            "scrollWidth": 328
+          },
+          "photo": {
+            "x": 232.046875,
+            "y": 1808.078125,
+            "width": 126.953125,
+            "height": 190,
+            "bottom": 1998.078125,
+            "right": 359
+          }
+        },
+        {
+          "description": {
+            "text": "Я соберу свободный формат с небольшими закусками и блюдами, которые удобно есть за разговором.",
+            "rect": {
+              "x": 174.9375,
+              "y": 2523.453125,
+              "width": 184.0625,
+              "height": 120,
+              "bottom": 2643.453125,
+              "right": 359
+            },
+            "font": "15px / 24px Montserrat, Arial, sans-serif",
+            "hyphens": "none",
+            "scrollWidth": 184
+          },
+          "title": {
+            "text": "Приватные мероприятия",
+            "rect": {
+              "x": 31,
+              "y": 2434.625,
+              "width": 328,
+              "height": 31.828125,
+              "bottom": 2466.453125,
+              "right": 359
+            },
+            "font": "30.03px / 31.8318px \"Cormorant Garamond\", Georgia, serif",
+            "hyphens": "manual",
+            "scrollWidth": 328
+          },
+          "photo": {
+            "x": 31,
+            "y": 2488.453125,
+            "width": 126.9375,
+            "height": 190,
+            "bottom": 2678.453125,
+            "right": 157.9375
+          }
+        },
+        {
+          "description": {
+            "text": "Я покажу гостям профессиональные приёмы, мы вместе приготовим блюда, а затем сядем за общий стол.",
+            "rect": {
+              "x": 31,
+              "y": 3208.265625,
+              "width": 184.046875,
+              "height": 144,
+              "bottom": 3352.265625,
+              "right": 215.046875
+            },
+            "font": "15px / 24px Montserrat, Arial, sans-serif",
+            "hyphens": "none",
+            "scrollWidth": 184
+          },
+          "title": {
+            "text": "Мастер-классы",
+            "rect": {
+              "x": 31,
+              "y": 3131.4375,
+              "width": 328,
+              "height": 31.828125,
+              "bottom": 3163.265625,
+              "right": 359
+            },
+            "font": "30.03px / 31.8318px \"Cormorant Garamond\", Georgia, serif",
+            "hyphens": "manual",
+            "scrollWidth": 328
+          },
+          "photo": {
+            "x": 232.046875,
+            "y": 3185.265625,
+            "width": 126.953125,
+            "height": 190,
+            "bottom": 3375.265625,
+            "right": 359
+          }
+        }
+      ],
+      "captionGap": 20,
+      "kickers": [
+        {
+          "text": "О ШЕФЕ",
+          "rect": {
+            "x": 188.046875,
+            "y": 910,
+            "width": 163.34375,
+            "height": 18.6875,
+            "bottom": 928.6875,
+            "right": 351.390625
+          },
+          "font": "600 11px / 18.7px Montserrat, Arial, sans-serif",
+          "hyphens": "manual",
+          "scrollWidth": 163
+        },
+        {
+          "text": "ЧАСТНЫЙ УЖИН",
+          "rect": {
+            "x": 18,
+            "y": 4016.125,
+            "width": 354,
+            "height": 19.03125,
+            "bottom": 4035.15625,
+            "right": 372
+          },
+          "font": "600 11.2px / 19.04px Montserrat, Arial, sans-serif",
+          "hyphens": "manual",
+          "scrollWidth": 354
+        },
+        {
+          "text": "ПЕРСОНАЛЬНОЕ МЕНЮ",
+          "rect": {
+            "x": 18,
+            "y": 4890.703125,
+            "width": 354,
+            "height": 18.6875,
+            "bottom": 4909.390625,
+            "right": 372
+          },
+          "font": "600 11px / 18.7px Montserrat, Arial, sans-serif",
+          "hyphens": "manual",
+          "scrollWidth": 354
+        }
+      ],
+      "mapCaptions": [
+        {
+          "text": "ИСПАНИЯ\nПаэлья",
+          "rect": {
+            "x": 19.859375,
+            "y": 1243.9375,
+            "width": 60,
+            "height": 13.1875,
+            "bottom": 1257.125,
+            "right": 79.859375
+          },
+          "font": "300 16px / 27.2px Montserrat, Arial, sans-serif",
+          "hyphens": "manual",
+          "scrollWidth": 66
+        },
+        {
+          "text": "ФРАНЦИЯ\nУтка с соусом",
+          "rect": {
+            "x": 90.65625,
+            "y": 1281.671875,
+            "width": 60,
+            "height": 13.1875,
+            "bottom": 1294.859375,
+            "right": 150.65625
+          },
+          "font": "300 16px / 27.2px Montserrat, Arial, sans-serif",
+          "hyphens": "manual",
+          "scrollWidth": 67
+        },
+        {
+          "text": "ИТАЛИЯ\nРавиоли",
+          "rect": {
+            "x": 165,
+            "y": 1234.890625,
+            "width": 60,
+            "height": 13.1875,
+            "bottom": 1248.078125,
+            "right": 225
+          },
+          "font": "300 16px / 27.2px Montserrat, Arial, sans-serif",
+          "hyphens": "manual",
+          "scrollWidth": 60
+        },
+        {
+          "text": "ГРЕЦИЯ\nОсьминог",
+          "rect": {
+            "x": 239.328125,
+            "y": 1281.671875,
+            "width": 60,
+            "height": 13.1875,
+            "bottom": 1294.859375,
+            "right": 299.328125
+          },
+          "font": "300 16px / 27.2px Montserrat, Arial, sans-serif",
+          "hyphens": "manual",
+          "scrollWidth": 60
+        },
+        {
+          "text": "ТУРЦИЯ\nФисташковая выпечка",
+          "rect": {
+            "x": 310.125,
+            "y": 1243.9375,
+            "width": 60,
+            "height": 13.1875,
+            "bottom": 1257.125,
+            "right": 370.125
+          },
+          "font": "300 16px / 27.2px Montserrat, Arial, sans-serif",
+          "hyphens": "manual",
+          "scrollWidth": 60
+        }
+      ],
+      "mobileKeyVisible": true,
+      "noteOverlap": [],
+      "notes": [
+        {
+          "text": "Основной продукт\n\nС него начинается подбор остальных элементов блюда.",
+          "rect": {
+            "x": 18,
+            "y": 5350.609375,
+            "width": 166.375,
+            "height": 90.8125,
+            "bottom": 5441.421875,
+            "right": 184.375
+          },
+          "font": "300 16px / 27.2px Montserrat, Arial, sans-serif",
+          "hyphens": "manual",
+          "scrollWidth": 166
+        },
+        {
+          "text": "Гарнир\n\nДополняет основной продукт и поддерживает общее сочетание вкусов.",
+          "rect": {
+            "x": 205.625,
+            "y": 5350.609375,
+            "width": 166.375,
+            "height": 110.6875,
+            "bottom": 5461.296875,
+            "right": 372
+          },
+          "font": "300 16px / 27.2px Montserrat, Arial, sans-serif",
+          "hyphens": "manual",
+          "scrollWidth": 166
+        },
+        {
+          "text": "Текстуры\n\nМягкие и плотные элементы создают контраст.",
+          "rect": {
+            "x": 205.625,
+            "y": 5884.125,
+            "width": 166.375,
+            "height": 90.8125,
+            "bottom": 5974.9375,
+            "right": 372
+          },
+          "font": "300 16px / 27.2px Montserrat, Arial, sans-serif",
+          "hyphens": "manual",
+          "scrollWidth": 166
+        },
+        {
+          "text": "Соус\n\nСвязывает элементы блюда и добавляет завершающий акцент.",
+          "rect": {
+            "x": 18,
+            "y": 5898.9375,
+            "width": 166.375,
+            "height": 90.8125,
+            "bottom": 5989.75,
+            "right": 184.375
+          },
+          "font": "300 16px / 27.2px Montserrat, Arial, sans-serif",
+          "hyphens": "manual",
+          "scrollWidth": 166
+        }
+      ],
+      "brokenImages": [],
+      "controls": [
+        {
+          "text": "ПЕРЕЙТИ К СОДЕРЖАНИЮ",
+          "rect": {
+            "x": 12,
+            "y": -58.400001525878906,
+            "width": 251.84375,
+            "height": 44,
+            "bottom": -14.400001525878906,
+            "right": 263.84375
+          },
+          "font": "600 11.2px / 19.04px Montserrat, Arial, sans-serif",
+          "hyphens": "manual",
+          "scrollWidth": 252
+        },
+        {
+          "text": "Evgen Grybenyk",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 161.03125,
+            "height": 66,
+            "bottom": 66,
+            "right": 161.03125
+          },
+          "font": "600 18px / 19.8px \"Cormorant Garamond\", Georgia, serif",
+          "hyphens": "manual",
+          "scrollWidth": 161
+        },
+        {
+          "text": "ОБСУДИТЬ ВЕЧЕР ↗\nInstagram",
+          "rect": {
+            "x": 219.21875,
+            "y": 0,
+            "width": 170.78125,
+            "height": 66,
+            "bottom": 66,
+            "right": 390
+          },
+          "font": "600 11.2px / 15.12px Montserrat, Arial, sans-serif",
+          "hyphens": "manual",
+          "scrollWidth": 170
+        },
+        {
+          "text": "ОБСУДИТЬ МЕНЮ",
+          "rect": {
+            "x": 18,
+            "y": 6121.609375,
+            "width": 354,
+            "height": 58,
+            "bottom": 6179.609375,
+            "right": 372
+          },
+          "font": "600 13px / 18.2px Montserrat, Arial, sans-serif",
+          "hyphens": "manual",
+          "scrollWidth": 352
+        },
+        {
+          "text": "Evgen Grybenyk",
+          "rect": {
+            "x": 18,
+            "y": 6282.109375,
+            "width": 354,
+            "height": 44,
+            "bottom": 6326.109375,
+            "right": 372
+          },
+          "font": "600 20px / 22px \"Cormorant Garamond\", Georgia, serif",
+          "hyphens": "manual",
+          "scrollWidth": 354
+        },
+        {
+          "text": "Instagram @evg.chef ↗",
+          "rect": {
+            "x": 199.046875,
+            "y": 6326.109375,
+            "width": 172.953125,
+            "height": 44,
+            "bottom": 6370.109375,
+            "right": 372
+          },
+          "font": "300 14.72px / 25.024px Montserrat, Arial, sans-serif",
+          "hyphens": "manual",
+          "scrollWidth": 173
+        }
+      ],
+      "errors": []
+    },
+    {
+      "width": 375,
+      "scrollWidth": 375,
+      "height": 6312,
+      "sheets": [
+        {
+          "description": {
+            "text": "Я приготовлю любимые блюда для близких или создам гастрономический маршрут в семь подач.",
+            "rect": {
+              "x": 31,
+              "y": 1841.828125,
+              "width": 175.171875,
+              "height": 144,
+              "bottom": 1985.828125,
+              "right": 206.171875
+            },
+            "font": "15px / 24px Montserrat, Arial, sans-serif",
+            "hyphens": "none",
+            "scrollWidth": 175
+          },
+          "title": {
+            "text": "Частный ужин",
+            "rect": {
+              "x": 31,
+              "y": 1766.234375,
+              "width": 312.984375,
+              "height": 30.59375,
+              "bottom": 1796.828125,
+              "right": 343.984375
+            },
+            "font": "28.875px / 30.6075px \"Cormorant Garamond\", Georgia, serif",
+            "hyphens": "manual",
+            "scrollWidth": 313
+          },
+          "photo": {
+            "x": 223.171875,
+            "y": 1818.828125,
+            "width": 120.8125,
+            "height": 190,
+            "bottom": 2008.828125,
+            "right": 343.984375
+          }
+        },
+        {
+          "description": {
+            "text": "Я соберу свободный формат с небольшими закусками и блюдами, которые удобно есть за разговором.",
+            "rect": {
+              "x": 168.8125,
+              "y": 2498.109375,
+              "width": 175.1875,
+              "height": 168,
+              "bottom": 2666.109375,
+              "right": 344
+            },
+            "font": "15px / 24px Montserrat, Arial, sans-serif",
+            "hyphens": "none",
+            "scrollWidth": 175
+          },
+          "title": {
+            "text": "Приватные мероприятия",
+            "rect": {
+              "x": 31,
+              "y": 2434.515625,
+              "width": 313,
+              "height": 30.59375,
+              "bottom": 2465.109375,
+              "right": 344
+            },
+            "font": "28.875px / 30.6075px \"Cormorant Garamond\", Georgia, serif",
+            "hyphens": "manual",
+            "scrollWidth": 313
+          },
+          "photo": {
+            "x": 31,
+            "y": 2487.109375,
+            "width": 120.8125,
+            "height": 190,
+            "bottom": 2677.109375,
+            "right": 151.8125
+          }
+        },
+        {
+          "description": {
+            "text": "Я покажу гостям профессиональные приёмы, мы вместе приготовим блюда, а затем сядем за общий стол.",
+            "rect": {
+              "x": 31,
+              "y": 3195.390625,
+              "width": 175.171875,
+              "height": 144,
+              "bottom": 3339.390625,
+              "right": 206.171875
+            },
+            "font": "15px / 24px Montserrat, Arial, sans-serif",
+            "hyphens": "none",
+            "scrollWidth": 175
+          },
+          "title": {
+            "text": "Мастер-классы",
+            "rect": {
+              "x": 31,
+              "y": 3119.796875,
+              "width": 312.984375,
+              "height": 30.59375,
+              "bottom": 3150.390625,
+              "right": 343.984375
+            },
+            "font": "28.875px / 30.6075px \"Cormorant Garamond\", Georgia, serif",
+            "hyphens": "manual",
+            "scrollWidth": 313
+          },
+          "photo": {
+            "x": 223.171875,
+            "y": 3172.390625,
+            "width": 120.8125,
+            "height": 190,
+            "bottom": 3362.390625,
+            "right": 343.984375
+          }
+        }
+      ],
+      "captionGap": 20,
+      "kickers": [
+        {
+          "text": "О ШЕФЕ",
+          "rect": {
+            "x": 182.1875,
+            "y": 910,
+            "width": 154.65625,
+            "height": 18.6875,
+            "bottom": 928.6875,
+            "right": 336.84375
+          },
+          "font": "600 11px / 18.7px Montserrat, Arial, sans-serif",
+          "hyphens": "manual",
+          "scrollWidth": 155
+        },
+        {
+          "text": "ЧАСТНЫЙ УЖИН",
+          "rect": {
+            "x": 18,
+            "y": 3982.40625,
+            "width": 339,
+            "height": 19.03125,
+            "bottom": 4001.4375,
+            "right": 357
+          },
+          "font": "600 11.2px / 19.04px Montserrat, Arial, sans-serif",
+          "hyphens": "manual",
+          "scrollWidth": 339
+        },
+        {
+          "text": "ПЕРСОНАЛЬНОЕ МЕНЮ",
+          "rect": {
+            "x": 16,
+            "y": 4840.609375,
+            "width": 343,
+            "height": 18.6875,
+            "bottom": 4859.296875,
+            "right": 359
+          },
+          "font": "600 11px / 18.7px Montserrat, Arial, sans-serif",
+          "hyphens": "manual",
+          "scrollWidth": 343
+        }
+      ],
+      "mapCaptions": [
+        {
+          "text": "ИСПАНИЯ\nПаэлья",
+          "rect": {
+            "x": 18.5,
+            "y": 1259.328125,
+            "width": 60,
+            "height": 13.1875,
+            "bottom": 1272.515625,
+            "right": 78.5
+          },
+          "font": "300 16px / 27.2px Montserrat, Arial, sans-serif",
+          "hyphens": "manual",
+          "scrollWidth": 66
+        },
+        {
+          "text": "ФРАНЦИЯ\nУтка с соусом",
+          "rect": {
+            "x": 86.296875,
+            "y": 1296.4375,
+            "width": 60,
+            "height": 13.1875,
+            "bottom": 1309.625,
+            "right": 146.296875
+          },
+          "font": "300 16px / 27.2px Montserrat, Arial, sans-serif",
+          "hyphens": "manual",
+          "scrollWidth": 67
+        },
+        {
+          "text": "ИТАЛИЯ\nРавиоли",
+          "rect": {
+            "x": 157.5,
+            "y": 1250.53125,
+            "width": 60,
+            "height": 13.1875,
+            "bottom": 1263.71875,
+            "right": 217.5
+          },
+          "font": "300 16px / 27.2px Montserrat, Arial, sans-serif",
+          "hyphens": "manual",
+          "scrollWidth": 60
+        },
+        {
+          "text": "ГРЕЦИЯ\nОсьминог",
+          "rect": {
+            "x": 228.6875,
+            "y": 1296.4375,
+            "width": 60,
+            "height": 13.1875,
+            "bottom": 1309.625,
+            "right": 288.6875
+          },
+          "font": "300 16px / 27.2px Montserrat, Arial, sans-serif",
+          "hyphens": "manual",
+          "scrollWidth": 60
+        },
+        {
+          "text": "ТУРЦИЯ\nФисташковая выпечка",
+          "rect": {
+            "x": 296.484375,
+            "y": 1259.328125,
+            "width": 60,
+            "height": 13.1875,
+            "bottom": 1272.515625,
+            "right": 356.484375
+          },
+          "font": "300 16px / 27.2px Montserrat, Arial, sans-serif",
+          "hyphens": "manual",
+          "scrollWidth": 60
+        }
+      ],
+      "mobileKeyVisible": true,
+      "noteOverlap": [],
+      "notes": [
+        {
+          "text": "Основной продукт\n\nС него начинается подбор остальных элементов блюда.",
+          "rect": {
+            "x": 16,
+            "y": 5297.046875,
+            "width": 161.203125,
+            "height": 89.875,
+            "bottom": 5386.921875,
+            "right": 177.203125
+          },
+          "font": "300 16px / 27.2px Montserrat, Arial, sans-serif",
+          "hyphens": "manual",
+          "scrollWidth": 161
+        },
+        {
+          "text": "Гарнир\n\nДополняет основной продукт и поддерживает общее сочетание вкусов.",
+          "rect": {
+            "x": 197.796875,
+            "y": 5297.046875,
+            "width": 161.203125,
+            "height": 109.75,
+            "bottom": 5406.796875,
+            "right": 359
+          },
+          "font": "300 16px / 27.2px Montserrat, Arial, sans-serif",
+          "hyphens": "manual",
+          "scrollWidth": 161
+        },
+        {
+          "text": "Текстуры\n\nМягкие и плотные элементы создают контраст.",
+          "rect": {
+            "x": 197.796875,
+            "y": 5815.4375,
+            "width": 161.203125,
+            "height": 89.875,
+            "bottom": 5905.3125,
+            "right": 359
+          },
+          "font": "300 16px / 27.2px Montserrat, Arial, sans-serif",
+          "hyphens": "manual",
+          "scrollWidth": 161
+        },
+        {
+          "text": "Соус\n\nСвязывает элементы блюда и добавляет завершающий акцент.",
+          "rect": {
+            "x": 16,
+            "y": 5829.84375,
+            "width": 161.203125,
+            "height": 109.75,
+            "bottom": 5939.59375,
+            "right": 177.203125
+          },
+          "font": "300 16px / 27.2px Montserrat, Arial, sans-serif",
+          "hyphens": "manual",
+          "scrollWidth": 161
+        }
+      ],
+      "brokenImages": [],
+      "controls": [
+        {
+          "text": "ПЕРЕЙТИ К СОДЕРЖАНИЮ",
+          "rect": {
+            "x": 12,
+            "y": -58.400001525878906,
+            "width": 251.84375,
+            "height": 44,
+            "bottom": -14.400001525878906,
+            "right": 263.84375
+          },
+          "font": "600 11.2px / 19.04px Montserrat, Arial, sans-serif",
+          "hyphens": "manual",
+          "scrollWidth": 252
+        },
+        {
+          "text": "Evgen Grybenyk",
+          "rect": {
+            "x": 0,
+            "y": 0,
+            "width": 161.03125,
+            "height": 66,
+            "bottom": 66,
+            "right": 161.03125
+          },
+          "font": "600 18px / 19.8px \"Cormorant Garamond\", Georgia, serif",
+          "hyphens": "manual",
+          "scrollWidth": 161
+        },
+        {
+          "text": "ОБСУДИТЬ ВЕЧЕР ↗\nInstagram",
+          "rect": {
+            "x": 208.21875,
+            "y": 0,
+            "width": 166.78125,
+            "height": 66,
+            "bottom": 66,
+            "right": 375
+          },
+          "font": "600 11.2px / 15.12px Montserrat, Arial, sans-serif",
+          "hyphens": "manual",
+          "scrollWidth": 166
+        },
+        {
+          "text": "ОБСУДИТЬ МЕНЮ",
+          "rect": {
+            "x": 16,
+            "y": 6047.046875,
+            "width": 343,
+            "height": 58,
+            "bottom": 6105.046875,
+            "right": 359
+          },
+          "font": "600 13px / 18.2px Montserrat, Arial, sans-serif",
+          "hyphens": "manual",
+          "scrollWidth": 341
+        },
+        {
+          "text": "Evgen Grybenyk",
+          "rect": {
+            "x": 18,
+            "y": 6207.546875,
+            "width": 339,
+            "height": 44,
+            "bottom": 6251.546875,
+            "right": 357
+          },
+          "font": "600 20px / 22px \"Cormorant Garamond\", Georgia, serif",
+          "hyphens": "manual",
+          "scrollWidth": 339
+        },
+        {
+          "text": "Instagram @evg.chef ↗",
+          "rect": {
+            "x": 184.046875,
+            "y": 6251.546875,
+            "width": 172.953125,
+            "height": 44,
+            "bottom": 6295.546875,
+            "right": 357
+          },
+          "font": "300 14.72px / 25.024px Montserrat, Arial, sans-serif",
+          "hyphens": "manual",
+          "scrollWidth": 173
+        }
+      ],
+      "errors": []
+    }
+  ],
+  "focus": [
+    {
+      "text": "перейти к содержанию",
+      "visible": true,
+      "outline": "rgb(160, 121, 46) solid 2px",
+      "height": 44
+    },
+    {
+      "text": "Evgen Grybenyk",
+      "visible": true,
+      "outline": "rgb(160, 121, 46) solid 2px",
+      "height": 66
+    },
+    {
+      "text": "обсудить вечер ↗Instagram",
+      "visible": true,
+      "outline": "rgb(160, 121, 46) solid 2px",
+      "height": 66
+    },
+    {
+      "text": "обсудить меню",
+      "visible": true,
+      "outline": "rgb(160, 121, 46) solid 2px",
+      "height": 58
+    },
+    {
+      "text": "Evgen Grybenyk",
+      "visible": true,
+      "outline": "rgb(160, 121, 46) solid 2px",
+      "height": 44
+    },
+    {
+      "text": "Instagram @evg.chef ↗",
+      "visible": true,
+      "outline": "rgb(160, 121, 46) solid 2px",
+      "height": 44
+    }
+  ],
+  "hover": {
+    "background": "rgb(10, 10, 10)",
+    "color": "rgb(252, 250, 245)"
+  },
+  "reducedMotion": {
+    "paused": true,
+    "preload": "none"
+  },
+  "failedMedia": {
+    "textVisible": true,
+    "overflow": 0,
+    "descriptionCount": 3,
+    "noteCount": 4
+  }
+}

@@ -160,7 +160,7 @@ function PersonalMenuPlate() {
   return (
     <figure
       className="menu-plate-composition"
-      aria-label="Состав блюда: утиная грудка, печёные овощи, нежное пюре и соус из красных ягод"
+      aria-label="Четыре элемента композиции блюда: основной продукт, гарнир, текстуры и соус"
     >
       <div className="menu-plate-stage">
         <img
@@ -170,7 +170,7 @@ function PersonalMenuPlate() {
           height="1665"
           loading="lazy"
           decoding="async"
-          alt="Белая тарелка с нарезанной утиной грудкой, гарниром, зеленью и соусами"
+          alt="Белая тарелка с нарезанным мясом, гарниром, зеленью и соусами"
         />
         <svg
           className="menu-plate-leaders"
@@ -210,23 +210,20 @@ function PersonalMenuPlate() {
           </g>
         </svg>
         <div className="menu-plate-note menu-plate-note-duck">
-          <h3>Утиная грудка</h3>
-          <p>Нежное мясо с хрустящей корочкой. Выразительный вкус без острых специй.</p>
+          <h3>Основной продукт</h3>
+          <p>С него начинается подбор остальных элементов блюда.</p>
         </div>
         <div className="menu-plate-note menu-plate-note-vegetables">
-          <h3>Печёные овощи</h3>
-          <p>
-            Сезонные овощи с лёгким дымным ароматом дополняют основное блюдо и добавляют
-            естественную сладость.
-          </p>
+          <h3>Гарнир</h3>
+          <p>Дополняет основной продукт и поддерживает общее сочетание вкусов.</p>
         </div>
         <div className="menu-plate-note menu-plate-note-puree">
-          <h3>Нежное пюре</h3>
-          <p>Воздушная текстура уравновешивает вкус и делает блюдо более деликатным.</p>
+          <h3>Текстуры</h3>
+          <p>Мягкие и плотные элементы создают контраст.</p>
         </div>
         <div className="menu-plate-note menu-plate-note-sauce">
-          <h3>Соус из красных ягод</h3>
-          <p>Лёгкая кислинка подчёркивает вкус мяса и добавляет глубину.</p>
+          <h3>Соус</h3>
+          <p>Связывает элементы блюда и добавляет завершающий акцент.</p>
         </div>
       </div>
     </figure>
@@ -255,7 +252,8 @@ export default function Home() {
           rel="noreferrer"
           aria-label="Обсудить вечер в Instagram @evg.chef — откроется в новой вкладке"
         >
-          обсудить вечер <span aria-hidden="true">↗</span>
+          <span className="header-action-copy">обсудить вечер <span aria-hidden="true">↗</span></span>
+          <small className="header-action-channel">Instagram</small>
         </a>
       </header>
 
@@ -371,12 +369,11 @@ export default function Home() {
                     </header>
                     <div className="story-copy-body">
                       <p>
-                        Победа в «МастерШеф. Профессионалы» открыла мне путь к новым кухням Европы
-                        и Средиземноморья. Там я собирал рецепты и техники, которые сегодня
-                        превращаю в частные ужины, мероприятия и мастер-классы на Кипре.
+                        Я — победитель «МастерШеф. Профессионалы». Сегодня готовлю частные ужины
+                        и меню для мероприятий, провожу мастер-классы на Кипре.
                       </p>
                       <p className="chef-journey-kicker" id="chef-journey-label">
-                        маршрут вкусов · 5 стран / 5 блюд
+                        кухни на карте · 5 стран / 5 блюд
                       </p>
                     </div>
                   </div>
@@ -386,7 +383,7 @@ export default function Home() {
                     aria-labelledby="chef-journey-label"
                     aria-describedby="chef-journey-note"
                   >
-                    <ol className="chef-journey-stops" aria-label="Страны и блюда маршрута">
+                    <ol className="chef-journey-stops" aria-label="Пять кухонь и блюд">
                       {chefJourneyStops.map((stop) => (
                         <li
                           className={`chef-journey-stop chef-journey-stop-${stop.id}`}
@@ -414,11 +411,19 @@ export default function Home() {
                     <span className="chef-journey-cyprus" aria-hidden="true">Кипр</span>
                   </div>
                 </div>
+                <dl className="chef-journey-mobile-key" aria-hidden="true">
+                  {chefJourneyStops.map((stop) => (
+                    <div key={stop.id}>
+                      <dt>{stop.country}</dt>
+                      <dd>{stop.dish}</dd>
+                    </div>
+                  ))}
+                </dl>
                 <p className="chef-journey-meta">
-                  <span className="chef-journey-credit">схема маршрута · визуализация</span>
+                  <span className="chef-journey-credit">карта кухонь · иллюстрация</span>
                   <span className="chef-journey-note" id="chef-journey-note">
                     <strong>Кипр — авторское меню сегодня.</strong>{" "}
-                    Блюда и маршрут — фотореалистичные визуализации; маршрут требует подтверждения шефа.
+                    Карта и блюда — иллюстрации кухонь пяти стран.
                   </span>
                 </p>
               </div>
@@ -505,6 +510,7 @@ export default function Home() {
               </a>
               <span aria-hidden="true" />
             </div>
+            <p className="personal-menu-channel">Instagram @evg.chef</p>
           </div>
         </section>
 

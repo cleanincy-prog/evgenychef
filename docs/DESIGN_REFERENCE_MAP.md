@@ -1294,3 +1294,19 @@ Exact sizes, source-aperture coordinates and photo object positions are neutral 
 - Photos: common 4:3 wide aperture, dinner focus at 50% 18% preserves the chef's head. Compact frames preserve the right / left / right relation and enough scene context; portrait dinner may grow naturally at 430 px.
 - No new visual language or missing style reference was introduced. Exact crop coordinates, source masks and Russian hyphenation are content-fitting choices. The gradient appears only in an alpha mask, never a decorative background.
 - Final browser QA and anti-template audit: [implementation report](EVENT_FORMATS_IMPLEMENTATION_2026-09-10.md).
+# Style-inspection corrections — 2026-09-10
+
+Map label fitting follow-up: independent QA found the existing ochre route behind France/Greece text on desktop. Reuse the mobile caption-above-plate principle for those two wide labels, retaining the map/plate sources. Country text reuses the existing 12px phone size; dish text keeps at least 14px. This is functional fitting, not a new visual reference.
+
+Authority: the user's «Давай исправим» after SITE_STYLE_AUDIT_2026-09-10.md. This amendment takes precedence over earlier contradictory mobile-caption, fixed-position biography, factual ingredient and unconfirmed-route wording requirements for the elements below. All other approved directions remain.
+
+| Project element | Reference | Principle used | What is not copied | Project implementation |
+|---|---|---|---|---|
+| Mobile service descriptions | Approved unified service sheets; measured 140–148px text width in the accepted audit | Preserve equal service status and right/left/right photo placement while making complete words readable | New cards, rewritten offers, smaller text or unrelated mobile template | Rebalance existing columns and spacing; normal word wrapping; content-derived height |
+| Biography kicker and caption spacing | Existing section-kicker in home/menu chapters; accepted audit | Same semantic role shares the same typography; caption and paragraph have separate readable space | New heading level, badge, photo treatment or decorative spacer | Reuse the approved kicker role; normal-flow phone photo/title and following copy above the map |
+| Map wording | Existing five-country/five-dish art; accepted audit; missing factual confirmation | Explain cuisines without asserting a personal travel history | Fabricated itinerary or silent removal of uncertainty while retaining the claim | Neutral cuisine-map wording; retain known MasterChef win and current services |
+| Mobile dish key | Existing map content and home-story-day plain rows | Keep all five dishes visible at readable size | New section, cards, map artwork changes or invented dishes | Compact phone-only country/dish rows below the map with existing rules and type roles |
+| Plate annotations | Approved four-note plate; documented ingredient mismatch; earlier composition-principle annotations | Explain how a dish is composed without claiming an exact recipe | Retouched food, fabricated ingredients, cold/warm recolouring or a substitute image | Four live notes: main product, garnish, textures and sauce; retain real source and leader geometry |
+| Inquiry channel | Verified Instagram destination; existing footer label and supporting text roles | Set an accurate expectation for the action | New contact method, extra CTA, form or decorative icon | Small visible Instagram label within/alongside existing actions |
+
+No new unreferenced style is adopted. Exact widths/gaps and the functional phone key layout are neutral content-fitting choices. The factual itinerary and recipe are still unconfirmed, so the interface must avoid those assertions. Implementation plan and final verification: STYLE_FIXES_2026-09-10.md.

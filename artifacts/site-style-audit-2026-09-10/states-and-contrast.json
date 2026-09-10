@@ -1,0 +1,198 @@
+{
+  "keyboard": [
+    {
+      "text": "перейти к содержанию",
+      "cls": "skip-link",
+      "outline": "rgb(160, 121, 46) solid 2px",
+      "shadow": "rgb(252, 250, 245) 0px 0px 0px 6px",
+      "transform": "matrix(1, 0, 0, 1, 0, 0)",
+      "visible": true,
+      "rect": {
+        "x": 12,
+        "y": 12,
+        "width": 251.84375,
+        "height": 44
+      }
+    },
+    {
+      "text": "Evgen Grybenyk",
+      "cls": "wordmark",
+      "outline": "rgb(160, 121, 46) solid 2px",
+      "shadow": "rgb(252, 250, 245) 0px 0px 0px 6px",
+      "transform": "none",
+      "visible": true,
+      "rect": {
+        "x": 0,
+        "y": 0,
+        "width": 161.03125,
+        "height": 66
+      }
+    },
+    {
+      "text": "обсудить вечер ↗",
+      "cls": "header-action",
+      "outline": "rgb(160, 121, 46) solid 2px",
+      "shadow": "rgb(160, 121, 46) 0px 0px 0px 2px inset",
+      "transform": "none",
+      "visible": true,
+      "rect": {
+        "x": 229.203125,
+        "y": 0,
+        "width": 160.796875,
+        "height": 66
+      }
+    },
+    {
+      "text": "обсудить меню",
+      "cls": "personal-menu-action",
+      "outline": "rgb(160, 121, 46) solid 2px",
+      "shadow": "rgb(252, 250, 245) 0px 0px 0px 6px",
+      "transform": "none",
+      "visible": true,
+      "rect": {
+        "x": 18,
+        "y": 611.09375,
+        "width": 354,
+        "height": 58
+      }
+    },
+    {
+      "text": "Evgen Grybenyk",
+      "cls": "",
+      "outline": "rgb(160, 121, 46) solid 2px",
+      "shadow": "rgb(252, 250, 245) 0px 0px 0px 6px",
+      "transform": "none",
+      "visible": true,
+      "rect": {
+        "x": 18,
+        "y": 740.09375,
+        "width": 354,
+        "height": 44
+      }
+    },
+    {
+      "text": "Instagram @evg.chef ↗",
+      "cls": "",
+      "outline": "rgb(160, 121, 46) solid 2px",
+      "shadow": "rgb(252, 250, 245) 0px 0px 0px 6px",
+      "transform": "none",
+      "visible": true,
+      "rect": {
+        "x": 199.046875,
+        "y": 784.09375,
+        "width": 172.953125,
+        "height": 44
+      }
+    }
+  ],
+  "hover": {
+    "color": "rgb(252, 250, 245)",
+    "background": "rgb(10, 10, 10)",
+    "outline": "rgb(252, 250, 245) none 3px",
+    "href": "https://www.instagram.com/evg.chef/",
+    "label": "Обсудить меню в Instagram @evg.chef — откроется в новой вкладке"
+  },
+  "bg": [
+    {
+      "cls": "site-header",
+      "background": "rgb(252, 250, 245)"
+    },
+    {
+      "cls": "hero",
+      "background": "rgb(244, 239, 229)"
+    },
+    {
+      "cls": "story",
+      "background": "rgb(244, 239, 229)"
+    },
+    {
+      "cls": "story-origin-lead",
+      "background": "rgb(252, 246, 239)"
+    },
+    {
+      "cls": "section-intro story-intro",
+      "background": "rgba(0, 0, 0, 0)"
+    },
+    {
+      "cls": "event-sheet event-sheet-dinner",
+      "background": "rgb(244, 239, 229)"
+    },
+    {
+      "cls": "event-sheet event-sheet-canapes",
+      "background": "rgb(244, 239, 229)"
+    },
+    {
+      "cls": "event-sheet event-sheet-techniques",
+      "background": "rgb(244, 239, 229)"
+    },
+    {
+      "cls": "present-day",
+      "background": "rgb(252, 250, 245)"
+    },
+    {
+      "cls": "home-story-copy",
+      "background": "rgba(0, 0, 0, 0)"
+    },
+    {
+      "cls": "sources",
+      "background": "rgb(247, 244, 239)"
+    },
+    {
+      "cls": "personal-menu-intro",
+      "background": "rgba(0, 0, 0, 0)"
+    },
+    {
+      "cls": "site-footer",
+      "background": "rgb(252, 250, 245)"
+    }
+  ],
+  "contrasts": [
+    {
+      "fg": "#0a0a0a",
+      "bg": "#f4efe5",
+      "ratio": 17.275907827530833
+    },
+    {
+      "fg": "#6e665a",
+      "bg": "#f4efe5",
+      "ratio": 4.93768145969694
+    },
+    {
+      "fg": "#a0792e",
+      "bg": "#f4efe5",
+      "ratio": 3.477745737198786
+    },
+    {
+      "fg": "#72561f",
+      "bg": "#f4efe5",
+      "ratio": 5.975982271637965
+    },
+    {
+      "fg": "#fcfaf5",
+      "bg": "#72561f",
+      "ratio": 6.565340542505374
+    },
+    {
+      "fg": "#6e665a",
+      "bg": "#f7f4ef",
+      "ratio": 5.157787757311884
+    }
+  ],
+  "serviceMetrics": [
+    {
+      "height": 679.59375,
+      "title": "30.03px",
+      "body": "15px"
+    },
+    {
+      "height": 695.34375,
+      "title": "30.03px",
+      "body": "15px"
+    },
+    {
+      "height": 902.296875,
+      "title": "30.03px",
+      "body": "15px"
+    }
+  ]
+}
