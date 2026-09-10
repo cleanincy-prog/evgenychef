@@ -1859,6 +1859,17 @@ chapter, navigation item, contact surface or global token.
   360 px check is additional. At each width confirm exact copy, four visible notes and leaders, endpoints,
   full plate rim, button focus, no overlap and no horizontal scroll.
 
+### Closing-contact removal amendment — 2026-09-10
+
+- Remove the bordered `.contact` field, its spoon reference image, duplicate action and all responsive
+  layout overrides; do not leave an empty `#contact` target or compensate with decorative whitespace.
+- The personal-menu action becomes the sole closing CTA and links directly to the established
+  `https://www.instagram.com/evg.chef/` destination in a new tab with the existing accessible label pattern.
+- Remove the duplicate footer `контакты` anchor. The footer keeps only the chef name and verified Instagram
+  link in a two-column wide layout and a deliberate stacked compact layout.
+- Preserve the existing square-edge button, focus-visible outline, hover state, paper palette, typography,
+  minimum target size and reduced-motion behavior. No new breakpoint, asset, component or library is added.
+
 
 ## Masterclasses editorial section amendment — 2026-09-10
 

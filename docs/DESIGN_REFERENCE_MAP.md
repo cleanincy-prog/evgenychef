@@ -1215,6 +1215,14 @@ Decisions without a separate reference: exact breakpoint coordinates and the map
 orange purée-like and vegetable/mushroom garnish areas are neutral fitting decisions forced by the absent
 exact dish source. They must be verified visually and remain documented as a source mismatch.
 
+### Closing-contact removal amendment — 2026-09-10
+
+| Project element | Reference | Principle used | What is not copied | Project implementation |
+|---|---|---|---|---|
+| Page ending after personal menu | User-supplied `Снимок экрана 2026-09-10 в 14.52.36.png` and direct instruction `Этот блок не нужен` | Remove the pictured bordered `Ваш вечер` panel without introducing a replacement section | Browser notification overlay, extra CTA, new form, decorative substitute or hidden empty anchor | End main content after the personal-menu action; send that remaining action directly to the already verified Instagram URL and keep a compact two-link footer |
+
+The screenshot identifies the removal target only. It does not authorize a new closing composition.
+
 
 ## Masterclasses flat-lay section — 2026-09-10
 

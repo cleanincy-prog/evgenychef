@@ -278,7 +278,6 @@ test("keeps the approved process drawings, private-dinner plates and mapped plat
     "/media/blueprint-backgrounds/masterchef-route-underlay-v3-mobile.webp",
     "/media/blueprint-backgrounds/private-dinner-event-concept-v3.png",
     "/media/blueprint-backgrounds/private-dinner-compact-mobile-v5.webp",
-    "/media/blueprint-backgrounds/inquiry-spoon-reference-exact.png",
   ];
   const activeArchiveMedia = [
     "/media/masterchef/route-plates/01-paella-plate-v2-1024.webp",
@@ -426,7 +425,7 @@ test("keeps the approved process drawings, private-dinner plates and mapped plat
   assert.equal((page.match(/<circle cx=/g) ?? []).length, 12);
   assert.doesNotMatch(page, /Свежая зелень|Завершающий акцент, который добавляет свежесть и лёгкость/);
   assert.doesNotMatch(`${page}\n${css}`, /source-(?:list|row|copy|images|reference-plan)|menu-reference-plan/);
-  assert.match(page, /className="contact-reference-plan" aria-hidden="true"[\s\S]*?inquiry-spoon-reference-exact\.png/);
+  assert.doesNotMatch(page, /className="contact(?:-reference-plan|-action)?"|id="contact"|inquiry-spoon-reference-exact\.png/);
   assert.match(css, /\.format-process-field\s*\{[^}]*position:\s*relative;[^}]*aspect-ratio:\s*2 \/ 1/);
   assert.match(css, /\.format-process-plan\s*\{[^}]*position:\s*absolute;[^}]*z-index:\s*0;[^}]*object-fit:\s*contain/);
   const journeyStart = css.lastIndexOf("/* Quiet-zone MasterChef stage.");
@@ -608,7 +607,6 @@ test("uses the measured Trivium typography on the approved editorial surfaces", 
   assert.match(css, /\.story-copy p\s*\{[^}]*font:\s*300 16px\/1\.7 var\(--font-sans\)/);
   assert.match(css, /\.personal-menu-lede\s*\{[^}]*color:\s*var\(--muted\);[^}]*font:\s*300 clamp\(16px, 1\.45vw, 20px\)\/1\.75 var\(--font-sans\)/);
   assert.match(css, /\.menu-plate-note p\s*\{[^}]*font:\s*300 clamp\(14px, 1\.05vw, 15px\)\/1\.5 var\(--font-sans\)/);
-  assert.match(css, /\.contact h2\s*\{[^}]*font:\s*400 clamp\(32px, 4vw, 48px\)\/1\.2 var\(--font-display\)/);
   assert.match(css, /\.story-award\s*\{[^}]*grid-column:\s*1 \/ 7/);
   assert.match(css, /\.story-copy\s*\{[^}]*grid-column:\s*8 \/ 13/);
   assert.match(css, /\.story-sequence\s*\{[^}]*max-width:\s*var\(--content\)/);
@@ -636,10 +634,9 @@ test("uses the measured Trivium typography on the approved editorial surfaces", 
   assert.doesNotMatch(css, /overflow-x:\s*auto/);
   assert.doesNotMatch(css, /--forest|#18382f|#193d32|#153f37/i);
   assert.match(css, /\.story\s*\{[^}]*background:\s*var\(--paper\)/);
-  assert.match(css, /\.contact\s*\{[^}]*background:\s*#f7f4ef/);
+  assert.doesNotMatch(css, /\.contact(?:-reference-plan|-action)?\b/);
   assert.match(css, /\.site-footer\s*\{[^}]*background:\s*var\(--paper-light\)/);
   assert.match(css, /\.format-copy p\s*\{[^}]*font:\s*300 14\.08px\/1\.8 var\(--font-sans\)/);
-  assert.match(css, /\.contact-action\s*\{[^}]*border:\s*0;[^}]*color:\s*var\(--ink\);[^}]*font:\s*600 12px\/1\.7 var\(--font-sans\)/);
   assert.match(css, /\.header-action\s*\{[^}]*font-family:\s*var\(--font-sans\);[^}]*font-size:\s*11\.2px/);
   assert.match(css, /\.header-action\s*\{[^}]*color:\s*var\(--accent-small\);[^}]*font-size:\s*11\.2px;[^}]*font-weight:\s*600;[^}]*line-height:\s*1\.35;[^}]*letter-spacing:\s*\.14em/);
   assert.match(css, /\.site-footer > a:first-child\s*\{[^}]*font:\s*600 24px\/1\.1 var\(--font-display\)/);
@@ -658,14 +655,16 @@ test("applies outcome-specific actions and interaction-only motion", async () =>
     source("app/media-motion.tsx"),
   ]);
 
-  assert.equal((page.match(/Обсудить вечер в Instagram @evg\.chef/g) ?? []).length, 2);
+  assert.equal((page.match(/Обсудить вечер в Instagram @evg\.chef/g) ?? []).length, 1);
+  assert.equal((page.match(/Обсудить меню в Instagram @evg\.chef/g) ?? []).length, 1);
   assert.match(page, />\s*обсудить вечер <span aria-hidden="true">↗<\/span>/);
-  assert.match(page, /<span>обсудить вечер<\/span>/);
+  assert.match(page, /className="personal-menu-action"[\s\S]*?href=\{instagramUrl\}[\s\S]*?target="_blank"[\s\S]*?rel="noreferrer"[\s\S]*?>\s*обсудить меню/);
+  assert.doesNotMatch(page, /<span>обсудить вечер<\/span>|href="#contact"|id="contact"/);
   assert.match(css, /--motion-feedback:\s*160ms ease-out/);
   assert.match(css, /html\s*\{[^}]*scroll-behavior:\s*smooth/);
   assert.match(css, /@media \(prefers-reduced-motion: reduce\)\s*\{\s*html\s*\{\s*scroll-behavior:\s*auto/);
   assert.match(css, /\.header-action:active\s*\{\s*transform:\s*translateY\(1px\)/);
-  assert.match(css, /\.contact-action:active\s*\{\s*transform:\s*translateY\(1px\)/);
+  assert.doesNotMatch(css, /\.contact-action/);
   assert.doesNotMatch(css, /animation:|animation-timeline|:hover\s+img|parallax|marquee/);
   assert.equal((css.match(/clip-path:/g) ?? []).length, 0);
   assert.match(css, /\.chef-journey-plate\s*\{[^}]*overflow:\s*visible/);
@@ -694,7 +693,6 @@ test("preserves the approved story, personal menu and accessibility", async () =
     "Внимание",
     "к деталям.",
     "обсудить меню",
-    "Расскажите мне,",
   ]) assert.ok(page.includes(text));
   for (const rejected of [
     "Я не работаю по меню",
@@ -706,14 +704,13 @@ test("preserves the approved story, personal menu and accessibility", async () =
 
   assert.doesNotMatch(page, /\/media\/sourcing\//);
   assert.match(page, /src="\/media\/menu\/personal-menu-duck-plate-cutout-v1\.webp"/);
-  assert.equal((page.match(/className="personal-menu-action" href="#contact"/g) ?? []).length, 1);
+  assert.equal((page.match(/className="personal-menu-action"/g) ?? []).length, 1);
   assert.doesNotMatch(page, /cyprus-sheep-herd|larnaca-fish-market-seller|kissonerga-meat-counter|fishermen-catch|cyprus-strawberry-greenhouse/);
   const sourcingCss = await source("app/globals.css");
   assert.doesNotMatch(`${page}\n${sourcingCss}`, /source-(?:list|row|copy|images|reference-plan)|menu-reference-plan/);
 
   assert.match(page, /className="skip-link" href="#main-content"/);
-  assert.match(page, /className="contact-reference-plan" aria-hidden="true"/);
-  assert.match(page, /src="\/media\/blueprint-backgrounds\/inquiry-spoon-reference-exact\.png"/);
+  assert.doesNotMatch(page, /className="contact(?:-reference-plan|-action)?"|id="contact"|inquiry-spoon-reference-exact\.png|Расскажите мне,/);
   assert.doesNotMatch(page, /className="contact-art"|chef-story-brush-villa\.png/);
   assert.match(page, /target="_blank"[\s\S]*?rel="noreferrer"/);
   assert.match(layout, /<html lang="ru">/);
@@ -739,7 +736,7 @@ test("keeps readability-specific desktop, tablet and narrow-phone geometry", asy
   assert.match(css, /\.format-row-3 \.format-media\s*\{\s*grid-column:\s*1 \/ 8/);
   assert.match(css, /\.format-row-3 \.format-copy\s*\{\s*grid-column:\s*9 \/ 13/);
   assert.match(css, /\.story-intro\s*\{\s*margin-bottom:\s*clamp\(48px, 5vw, 72px\)/);
-  const personalMenuPass = css.slice(css.indexOf(".personal-menu-shell {"), css.indexOf(".contact {"));
+  const personalMenuPass = css.slice(css.indexOf(".personal-menu-shell {"), css.indexOf(".site-footer {"));
   assert.match(personalMenuPass, /\.personal-menu-shell\s*\{[^}]*max-width:\s*var\(--content\)/);
   assert.match(personalMenuPass, /\.personal-menu-detail\s*\{[^}]*grid-template-columns:\s*minmax\(0, 5fr\) 1px minmax\(0, 7fr\)/);
   assert.match(personalMenuPass, /\.menu-plate-photo\s*\{[^}]*width:\s*62\.5%;[^}]*height:\s*auto/);
@@ -765,7 +762,6 @@ test("keeps readability-specific desktop, tablet and narrow-phone geometry", asy
   assert.match(css.slice(css.indexOf("@media (max-width: 1100px)"), css.indexOf("@media (max-width: 1024px)")), /\.home-story-day\s*\{[^}]*grid-column:\s*1 \/ -1;[^}]*grid-template-columns:\s*repeat\(3,/);
 
   const phone = css.slice(css.indexOf("@media (max-width: 560px)"), css.indexOf("@media (max-width: 430px)"));
-  const narrowPhone = css.slice(css.indexOf("@media (max-width: 430px)"), css.indexOf("@media (max-width: 400px)"));
   assert.match(phone, /\.present-day\s*\{\s*padding:\s*34px 18px 30px/);
   assert.match(phone, /\.home-story\s*\{[^}]*grid-template-columns:\s*repeat\(12,[^}]*gap:\s*28px 10px/);
   assert.match(phone, /\.home-story-film\s*\{[^}]*grid-column:\s*1 \/ -1;[^}]*width:\s*100%/);
@@ -778,12 +774,9 @@ test("keeps readability-specific desktop, tablet and narrow-phone geometry", asy
   assert.match(menuPhone, /\.menu-plate-stage\s*\{[^}]*height:\s*clamp\(720px, 190vw, 780px\)/);
   assert.match(menuPhone, /\.menu-plate-leaders-phone\s*\{[^}]*display:\s*block/);
   assert.match(menuPhone, /\.personal-menu-action\s*\{[^}]*width:\s*100%;[^}]*min-height:\s*58px/);
-  assert.match(phone, /\.contact\s*\{[^}]*margin:\s*0 18px 24px;[^}]*padding:\s*34px 18px 24px/);
-  assert.match(phone, /\.contact-reference-plan\s*\{\s*margin-top:\s*8px/);
-  assert.match(narrowPhone, /\.contact-reference-plan\s*\{\s*margin-top:\s*6px/);
-  assert.match(phone, /\.site-footer\s*\{[^}]*grid-template-columns:\s*minmax\(0, 1fr\) auto;[^}]*padding:\s*14px 18px 18px/);
-  assert.match(css, /\.contact-reference-plan\s*\{[^}]*grid-column:\s*5 \/ 10;[^}]*grid-row:\s*1 \/ 3;[^}]*width:\s*100%/);
-  assert.match(css, /\.contact-reference-plan img\s*\{[^}]*width:\s*100%;[^}]*height:\s*auto/);
+  assert.match(phone, /\.site-footer\s*\{[^}]*grid-template-columns:\s*1fr;[^}]*gap:\s*6px;[^}]*padding:\s*14px 18px 18px/);
+  assert.match(css, /\.site-footer\s*\{[^}]*grid-template-columns:\s*1fr auto/);
+  assert.doesNotMatch(css, /\.site-footer nav|\.contact(?:-reference-plan|-action)?\b/);
 
   assert.match(css, /@media \(max-width: 400px\)[\s\S]*?\.wordmark\s*\{[^}]*font-size:\s*18px;[^}]*letter-spacing:\s*\.08em/);
   assert.match(css, /@media \(max-width: 820px\)[\s\S]*?\.site-header\s*\{[^}]*min-height:\s*70px/);

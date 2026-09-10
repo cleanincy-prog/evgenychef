@@ -7108,3 +7108,53 @@ request explicitly remains local.
 
 Final validation: ESLint passes; all 8 rendered-HTML regressions pass; the Sites Vinext
 production build completes; `git diff --check` is run after this record update.
+
+## Closing contact block removal — pre-code audit and plan — 2026-09-10
+
+The current route, footer, personal-menu action, complete `.contact` cascade, responsive overrides,
+regression assertions, supplied screenshot and clean Git state were inspected before interface edits.
+The direct user instruction identifies the bordered `Ваш вечер / Расскажите мне, чего хочется.` panel as
+unnecessary. The screenshot is target evidence only; its browser notification is not page content.
+
+1. **Templated/superseded element:** the closing bordered panel repeats the same Instagram outcome already
+   offered by the header, personal-menu CTA and footer, adds a second closing action, and now conflicts with
+   the user's explicit removal request.
+2. **Reference replacing it:** no new visual is required. The direct removal instruction supersedes earlier
+   map/system entries that preserved `#contact`.
+3. **Keep:** every section through the personal-menu annotated plate, the personal-menu button appearance,
+   verified Instagram URL, header action, footer identity/link, tokens, breakpoints and other page content.
+4. **Rework:** delete the contact section and all of its scoped CSS; point `ОБСУДИТЬ МЕНЮ` directly to the
+   existing Instagram URL; remove the now-broken/redundant footer `контакты` anchor; reduce footer grid to
+   the two remaining links.
+5. **New components/assets:** none. The spoon bitmap may remain in the repository as historical media but
+   must no longer be referenced by the active page.
+6. **Validation plan:** update obsolete regression expectations, run ESLint, all rendered-HTML tests, Sites
+   production build and `git diff --check`; inspect the main/footer boundary at 1440, 768, 430, 390 and
+   375 px and confirm the remaining CTA target, keyboard focus, no empty anchor and no page overflow.
+
+### Closing contact block removal — implementation result
+
+1. **Files created:** `artifacts/contact-removal-2026-09-10/README.md` and final 1440/390 browser captures.
+2. **Files changed:** `app/page.tsx`, `app/globals.css`, `tests/rendered-html.test.mjs`,
+   `docs/DESIGN_REFERENCE_MAP.md`, `docs/DESIGN_SYSTEM.md` and this audit.
+3. **Templated element found:** the pictured bordered close duplicated the same Instagram outcome and was
+   explicitly rejected by the user.
+4. **Rework:** the complete contact section, spoon reference, duplicate action and responsive CSS were
+   removed. `ОБСУДИТЬ МЕНЮ` now opens the established Instagram URL directly. The obsolete footer
+   `контакты` link was removed, leaving identity plus Instagram in a wide two-column or phone stacked footer.
+5. **Reference used:** the supplied `Снимок экрана 2026-09-10 в 14.52.36.png` solely to identify the block,
+   plus the direct removal instruction and existing verified contact destination.
+6. **Decisions without references:** none that introduce a visual style. The footer's compact stacking is a
+   neutral fit for its two surviving links.
+7. **UI libraries:** none added or visibly used.
+8. **Desktop/mobile verification:** inspected at 1440, 1280, 1024, 768, 430, 390 and 375 px. Every width
+   reports zero contact elements and `#contact` links, two footer links, no horizontal overflow, zero gap
+   between the final main section and footer, a 64 px wide/tablet or 58 px phone CTA, and the exact
+   `https://www.instagram.com/evg.chef/` target with `_blank` and `noreferrer`.
+9. **Anti-template audit and limits:** no replacement panel, card, form, decoration, duplicate CTA, radius,
+   shadow, gradient, animation or hidden empty anchor was introduced. Existing asset files remain as
+   historical project media but are not referenced by the active page. Browser checks are not physical-device
+   checks.
+
+Final validation: ESLint passes, all 8 rendered-HTML regressions pass, the Sites Vinext production build
+completes and `git diff --check` is run after this record update.

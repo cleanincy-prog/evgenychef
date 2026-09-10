@@ -690,7 +690,13 @@ export default function Home() {
 
             <div className="personal-menu-action-row">
               <span aria-hidden="true" />
-              <a className="personal-menu-action" href="#contact">
+              <a
+                className="personal-menu-action"
+                href={instagramUrl}
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Обсудить меню в Instagram @evg.chef — откроется в новой вкладке"
+              >
                 обсудить меню
               </a>
               <span aria-hidden="true" />
@@ -698,41 +704,10 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="contact" id="contact" aria-labelledby="contact-title">
-          <p className="section-kicker">ваш вечер</p>
-          <h2 id="contact-title">
-            Расскажите мне,
-            <br />
-            <em>чего хочется.</em>
-          </h2>
-          <figure className="contact-reference-plan" aria-hidden="true">
-            <img
-              src="/media/blueprint-backgrounds/inquiry-spoon-reference-exact.png"
-              width="417"
-              height="157"
-              loading="lazy"
-              decoding="async"
-              alt=""
-            />
-          </figure>
-          <a
-            className="contact-action"
-            href={instagramUrl}
-            target="_blank"
-            rel="noreferrer"
-            aria-label="Обсудить вечер в Instagram @evg.chef — откроется в новой вкладке"
-          >
-            <span>обсудить вечер</span>
-            <span aria-hidden="true">Instagram @evg.chef ↗</span>
-          </a>
-        </section>
       </main>
 
       <footer className="site-footer">
         <a href="#top">Evgen Grybenyk</a>
-        <nav aria-label="Навигация в подвале">
-          <a href="#contact">контакты</a>
-        </nav>
         <a
           href={instagramUrl}
           target="_blank"
