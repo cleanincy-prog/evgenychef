@@ -7158,3 +7158,47 @@ unnecessary. The screenshot is target evidence only; its browser notification is
 
 Final validation: ESLint passes, all 8 rendered-HTML regressions pass, the Sites Vinext production build
 completes and `git diff --check` is run after this record update.
+
+## Personal-menu copy simplification — pre-code audit and plan — 2026-09-10
+
+Before further interface edits, the newly supplied exact copy was compared with the current JSX, scoped
+personal-menu CSS, regression contract, reference map/system and the previously validated contact removal.
+The request arrives before source push/deployment, so both changes can be validated and released together.
+
+1. **Superseded element:** the screenshot-led `как рождается блюдо` kicker, `Внимание к деталям` display
+   heading and vertical-divider composition are no longer present in the user's authoritative replacement.
+2. **Replacement:** retain the opening kicker/title/first paragraph exactly, then render the exact second
+   paragraph with `комбинация вкуса` directly underneath before the annotated plate.
+3. **Keep:** plate image, four callouts/leaders, Instagram CTA, deleted closing contact panel, simplified
+   footer, all surrounding sections and existing tokens.
+4. **Rework:** remove the detail markup, divider and their unused wide/mobile CSS. Add only a secondary-lede
+   spacing hook; no component or asset is required.
+5. **Validation:** update exact-copy and absence regressions, rerun the eight tests, ESLint, Sites production
+   build and diff check, then visually inspect the simplified text-to-plate transition at the mandatory
+   desktop/tablet/phone widths before committing and publishing the combined source.
+
+### Personal-menu copy simplification — implementation result
+
+1. **Files created:** `artifacts/personal-menu-copy-simplification-2026-09-10/README.md` and browser
+   captures at 1440, 1280, 1024, 768, 430, 390 and 375 px.
+2. **Files changed:** `app/page.tsx`, `app/globals.css`, `tests/rendered-html.test.mjs`,
+   `docs/DESIGN_REFERENCE_MAP.md`, `docs/DESIGN_SYSTEM.md` and this audit.
+3. **Templated/superseded elements found:** the extra `как рождается блюдо` kicker, `Внимание к деталям`
+   display heading and vertical-divider sub-composition no longer matched the user's exact replacement.
+4. **Rework:** the first paragraph is unchanged; the exact `Каждое блюдо — это комбинация...` paragraph
+   now follows it in the same lede role. Obsolete JSX and every scoped rule/detail CSS selector were deleted.
+5. **References used:** the user's exact copy is authoritative; the existing approved personal-menu type,
+   measure, colour and plate composition remain unchanged.
+6. **Decisions without references:** only the neutral 14–22 px paragraph gap, fitted within the existing
+   spacing scale. No new visual language was introduced.
+7. **UI libraries:** none added or visibly used.
+8. **Desktop/mobile verification:** inspected at 1440, 1280, 1024, 768, 430, 390 and 375 px. Every width
+   reports two ledes, exact new copy, zero old detail/rule/contact elements, zero `#contact` links, no
+   horizontal overflow and no broken images. Paragraph gap is 14–22 px, text-to-plate gap is 34–65 px;
+   the remaining CTA is 64 px tall through tablet and 58 px on phones.
+9. **Anti-template audit and limits:** no replacement card, divider, heading, decorative object, radius,
+   shadow, gradient, duplicate action or invented copy was added. Mobile retains its authored plate layout,
+   not a scaled desktop canvas. Browser checks are not physical-device tests.
+
+Final validation: ESLint passes, all 8 rendered-HTML regressions pass, the Sites Vinext production build
+completes and `git diff --check` passes after the record update.

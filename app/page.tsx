@@ -667,24 +667,11 @@ export default function Home() {
                 Вы рассказываете, что любите, каким будет ваш вечер и что важно учесть. Я подбираю
                 продукты, продумываю сочетания и создаю меню специально для вас.
               </p>
-            </header>
-
-            <div className="personal-menu-rule" aria-hidden="true" />
-
-            <div className="personal-menu-detail">
-              <div className="personal-menu-detail-heading">
-                <p className="section-kicker">как рождается блюдо</p>
-                <h3>
-                  Внимание
-                  <br />
-                  <em>к деталям.</em>
-                </h3>
-              </div>
-              <p className="personal-menu-detail-copy">
-                Каждое блюдо — это сочетание вкуса, текстур и сезонных продуктов. Я продумываю все
+              <p className="personal-menu-lede personal-menu-lede-secondary">
+                Каждое блюдо — это комбинация вкуса, текстур и сезонных продуктов. Я продумываю все
                 элементы, чтобы они гармонично работали вместе и создавали цельное впечатление.
               </p>
-            </div>
+            </header>
 
             <PersonalMenuPlate />
 

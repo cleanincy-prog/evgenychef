@@ -409,7 +409,7 @@ test("keeps the approved process drawings, private-dinner plates and mapped plat
   assert.match(page, /className="format-process-field"[\s\S]*?className="format-process-plan"[\s\S]*?className="format-media"[\s\S]*?className="format-copy"/);
   // The approved annotated-plate amendment replaces the former sourcing gallery.
   assert.doesNotMatch(page, /sourceScenes|className="source-(?:gallery|sequence|provenance)"/);
-  assert.match(page, /className="personal-menu-shell"[\s\S]*?className="personal-menu-detail"/);
+  assert.match(page, /className="personal-menu-shell"[\s\S]*?className="personal-menu-lede personal-menu-lede-secondary"[\s\S]*?<PersonalMenuPlate \/>/);
   assert.match(page, /function PersonalMenuPlate\(\)/);
   assert.match(page, /className="menu-plate-composition"\s+aria-label="Состав блюда: утиная грудка, печёные овощи, нежное пюре и соус из красных ягод"/);
   assert.match(page, /src="\/media\/menu\/personal-menu-duck-plate-cutout-v1\.webp"/);
@@ -689,9 +689,7 @@ test("preserves the approved story, personal menu and accessibility", async () =
     "Меню появляется",
     "после разговора.",
     "Вы рассказываете, что любите, каким будет ваш вечер и что важно учесть.",
-    "как рождается блюдо",
-    "Внимание",
-    "к деталям.",
+    "Каждое блюдо — это комбинация вкуса, текстур и сезонных продуктов.",
     "обсудить меню",
   ]) assert.ok(page.includes(text));
   for (const rejected of [
@@ -699,6 +697,10 @@ test("preserves the approved story, personal menu and accessibility", async () =
     "Хотите ягнёнка? — еду за ним в горы.",
     "Нужна рыба? — еду в порт к рыбакам.",
     "Свежие овощи и фрукты? — только с кипрских ферм.",
+    "как рождается блюдо",
+    "Внимание",
+    "к деталям.",
+    "Каждое блюдо — это сочетание",
   ]) assert.ok(!page.includes(rejected), `rejected sourcing copy must be absent: ${rejected}`);
   assert.doesNotMatch(page, /Победитель «МастерШеф\. Профессионалы — 2»/);
 
@@ -738,11 +740,11 @@ test("keeps readability-specific desktop, tablet and narrow-phone geometry", asy
   assert.match(css, /\.story-intro\s*\{\s*margin-bottom:\s*clamp\(48px, 5vw, 72px\)/);
   const personalMenuPass = css.slice(css.indexOf(".personal-menu-shell {"), css.indexOf(".site-footer {"));
   assert.match(personalMenuPass, /\.personal-menu-shell\s*\{[^}]*max-width:\s*var\(--content\)/);
-  assert.match(personalMenuPass, /\.personal-menu-detail\s*\{[^}]*grid-template-columns:\s*minmax\(0, 5fr\) 1px minmax\(0, 7fr\)/);
+  assert.match(personalMenuPass, /\.personal-menu-lede-secondary\s*\{[^}]*margin-top:\s*clamp\(14px, 1\.6vw, 22px\)/);
   assert.match(personalMenuPass, /\.menu-plate-photo\s*\{[^}]*width:\s*62\.5%;[^}]*height:\s*auto/);
   assert.match(personalMenuPass, /\.menu-plate-leaders path\s*\{[^}]*stroke:\s*var\(--accent-small\);[^}]*stroke-width:\s*1\.1/);
   assert.match(personalMenuPass, /@media \(max-width:\s*1000px\)[\s\S]*?\.menu-plate-leaders-tablet\s*\{[^}]*display:\s*block/);
-  assert.match(personalMenuPass, /@media \(max-width:\s*700px\)[\s\S]*?\.personal-menu-detail\s*\{[^}]*display:\s*block/);
+  assert.doesNotMatch(personalMenuPass, /\.personal-menu-(?:rule|detail|detail-heading|detail-copy)\b/);
   assert.match(personalMenuPass, /@media \(max-width:\s*620px\)[\s\S]*?\.menu-plate-photo\s*\{[^}]*width:\s*100%/);
   assert.doesNotMatch(css, /\.source-gallery\b|\.source-scene\b/);
   assert.doesNotMatch(css, /\.source-(?:list|row|copy|images|reference-plan)\b|\.menu-reference-plan\b/);

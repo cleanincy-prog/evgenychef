@@ -1870,6 +1870,15 @@ chapter, navigation item, contact surface or global token.
 - Preserve the existing square-edge button, focus-visible outline, hover state, paper palette, typography,
   minimum target size and reduced-motion behavior. No new breakpoint, asset, component or library is added.
 
+### Personal-menu copy simplification amendment — 2026-09-10
+
+- Keep one opening text column: `ПЕРСОНАЛЬНОЕ МЕНЮ`, the existing two-line title, the existing first paragraph,
+  then the user's exact second paragraph beginning `Каждое блюдо — это комбинация`.
+- Retire `.personal-menu-rule`, `.personal-menu-detail`, `.personal-menu-detail-heading` and
+  `.personal-menu-detail-copy` from active markup and CSS. Do not retain their divider as decoration.
+- Both explanatory paragraphs use the existing 16–20 px Montserrat lede role and the same readable measure;
+  only a restrained content gap separates them. The plate composition and all later behavior remain unchanged.
+
 
 ## Masterclasses editorial section amendment — 2026-09-10
 

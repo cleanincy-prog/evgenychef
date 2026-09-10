@@ -993,8 +993,7 @@ button:focus-visible,
   letter-spacing: -.025em;
 }
 
-.personal-menu-intro h2 em,
-.personal-menu-detail-heading h3 em {
+.personal-menu-intro h2 em {
   color: var(--accent-small);
   font-family: var(--font-accent);
   font-style: italic;
@@ -1009,47 +1008,8 @@ button:focus-visible,
   font: 300 clamp(16px, 1.45vw, 20px)/1.75 var(--font-sans);
 }
 
-.personal-menu-rule {
-  height: 1px;
-  margin: clamp(48px, 5vw, 72px) 0 clamp(44px, 4.5vw, 64px);
-  background: var(--rule);
-}
-
-.personal-menu-detail {
-  position: relative;
-  display: grid;
-  grid-template-columns: minmax(0, 5fr) 1px minmax(0, 7fr);
-  gap: clamp(34px, 4vw, 62px);
-  align-items: center;
-}
-
-.personal-menu-detail::after {
-  grid-column: 2;
-  grid-row: 1;
-  align-self: stretch;
-  width: 1px;
-  background: var(--rule);
-  content: "";
-}
-
-.personal-menu-detail-heading {
-  grid-column: 1;
-  grid-row: 1;
-  min-width: 0;
-}
-
-.personal-menu-detail-heading h3 {
-  margin-top: clamp(16px, 1.7vw, 24px);
-  font: 400 clamp(48px, 5vw, 72px)/.87 var(--font-display);
-  letter-spacing: -.02em;
-}
-
-.personal-menu-detail-copy {
-  grid-column: 3;
-  grid-row: 1;
-  max-width: 680px;
-  color: var(--muted);
-  font: 300 clamp(16px, 1.35vw, 19px)/1.72 var(--font-sans);
+.personal-menu-lede-secondary {
+  margin-top: clamp(14px, 1.6vw, 22px);
 }
 
 .menu-plate-composition {
@@ -1190,11 +1150,6 @@ button:focus-visible,
     grid-column: 1 / 11;
   }
 
-  .personal-menu-detail {
-    grid-template-columns: minmax(0, 5fr) 1px minmax(0, 6fr);
-    gap: 30px;
-  }
-
   .menu-plate-note {
     width: 22%;
   }
@@ -1239,19 +1194,6 @@ button:focus-visible,
     max-width: 640px;
   }
 
-  .personal-menu-detail {
-    display: block;
-  }
-
-  .personal-menu-detail::after {
-    display: none;
-  }
-
-  .personal-menu-detail-copy {
-    max-width: 640px;
-    margin-top: 24px;
-  }
-
   .menu-plate-stage {
     aspect-ratio: 1 / 1;
   }
@@ -1289,20 +1231,8 @@ button:focus-visible,
     line-height: 1.62;
   }
 
-  .personal-menu-rule {
-    margin: 38px 0 34px;
-  }
-
-  .personal-menu-detail-heading h3 {
+  .personal-menu-lede-secondary {
     margin-top: 14px;
-    font-size: clamp(43px, 12vw, 49px);
-  }
-
-  .personal-menu-detail-copy {
-    margin-top: 24px;
-    color: var(--ink);
-    font-size: 16px;
-    line-height: 1.62;
   }
 
   .menu-plate-composition {

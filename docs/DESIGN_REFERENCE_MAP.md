@@ -1223,6 +1223,14 @@ exact dish source. They must be verified visually and remain documented as a sou
 
 The screenshot identifies the removal target only. It does not authorize a new closing composition.
 
+### Personal-menu copy simplification amendment — 2026-09-10
+
+| Project element | Reference | Principle used | What is not copied | Project implementation |
+|---|---|---|---|---|
+| Personal-menu text before the plate | User's exact replacement copy supplied after the closing-block removal | Keep one uninterrupted explanation beneath the existing title | The superseded `как рождается блюдо` kicker, `Внимание к деталям` subheading, vertical divider, additional claim or replacement decoration | Preserve the opening kicker/title/paragraph verbatim, follow it with the exact `Каждое блюдо — это комбинация...` paragraph, then continue directly to the annotated plate |
+
+The exact replacement text is authoritative over the earlier screenshot-led two-part introduction.
+
 
 ## Masterclasses flat-lay section — 2026-09-10
 
