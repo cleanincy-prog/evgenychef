@@ -6865,3 +6865,202 @@ through its existing access policy.
   than the surrounding collage on high-density ultrawide displays. Its smaller aperture avoids additional
   stretching, but a higher-resolution original without screenshot bands would be the definitive asset-level
   improvement. The live Site is public, so publication of this validated version requires explicit approval.
+
+## Private-event canapé field fit correction — pre-code audit and plan — 2026-09-10
+
+The user's latest phone capture and direct correction identify two local defects in the lower row-02 field:
+the canapé raster's pink-grey stone remains visibly separate from the approved `--paper: #f4efe5` sheet, and
+the fixed `2 / 1` mobile aperture ends before the lower rule, leaving an unintended empty band. The page,
+event data, source and generated media, row-02 dividers, all responsive declarations, current design records
+and focused regression were audited before interface edits.
+
+Templated elements found: none. The defect is an asset/sizing mismatch inside the approved three-zone sheet.
+The live copy, chef photograph, canapé arrangement, upper proportions, square perimeter, paper/ink/rule
+palette and neighbouring formats remain. Only the exposed tabletop in the representative canapé bitmap and
+the lower aperture's block fit must change. No new component, copy, interaction or UI library is required.
+
+Implementation plan recorded before code: use the existing canapé bitmap as the edit target and the supplied
+phone capture as colour context; replace only the exposed tabletop with a restrained matte `#f4efe5`-matched
+surface while preserving natural food colour and the dense three-row composition; save the result as a new
+versioned project WebP; switch row 02 to that asset; make the 561–820 and phone apertures terminate at the
+existing lower inset instead of preserving a detached `2 / 1` rectangle; update the reference map, design
+system and regression contract; then run asset inspection, `git diff --check`, lint, tests, production build
+and the mandatory desktop/mobile visual matrix. The exact responsive crop is a neutral fitting decision and
+must keep the field abundant without introducing distortion, filters, tint overlays or clipped live copy.
+
+## Personal-menu annotated plate — pre-code audit and implementation plan — 2026-09-10
+
+The current route, `PersonalMenuPlate`, source-section markup, cascade, responsive passes, local fonts, tokens,
+menu media, source credits, current visual records and uncommitted work were inspected before implementation.
+The supplied screenshot is the confirmed composition reference and the accompanying exact-content brief is
+authoritative for copy and interaction. Existing unrelated canapé changes in `app/page.tsx`, `app/globals.css`,
+the three design records, tests and the new canapé WebP must be preserved.
+
+Templated or superseded elements found:
+
+1. `.source-sequence` is a generic three-step arrow row and is explicitly prohibited by the new brief.
+2. `.source-gallery` repeats three sourcing images after the requested composition and must no longer appear
+   in this chapter.
+3. `.source-provenance` belongs only to the removed gallery.
+4. The three shorthand annotations do not express the initially required five components; the user's later
+   direct correction removes `Свежая зелень`, leaving four active component notes.
+5. `пример композиции блюда` is an explicitly prohibited caption.
+6. The current copy/plate split lacks the reference's opening divider, `Как рождается блюдо` introduction,
+   explanatory paragraph and closing `ОБСУДИТЬ МЕНЮ` action.
+
+Confirmed replacement: use the exact user copy and the supplied editorial composition; preserve the existing
+approved fonts/tokens and alpha plate asset. Components retained: the `#products` section/anchor,
+`PersonalMenuPlate`, the complete plate image and the unchanged `#contact` destination. Components reworked:
+the personal-menu section structure, plate annotations and responsive geometry. Genuinely required additions:
+one live-text four-callout layer, separate wide/tablet/phone decorative SVG leader groups and one in-section anchor to
+the existing contact destination. No dependency or UI library is needed.
+
+Implementation sequence recorded before interface code: append the current reference map and design-system
+amendment; replace only the personal-menu JSX and its scoped CSS; remove now-unused `sourceScenes`; update the
+focused regression assertions to the new content boundary; start the existing local server, open the first
+meaningful preview, then inspect and correct 1440, 1280, 1024, 768, 430, 390, 375 and 360 px. Finally run lint,
+the focused test suite, the Sites production build and `git diff --check`, and perform the anti-template audit.
+
+Known source limitation before code: the project has no separate photograph matching the screenshot exactly.
+The retained approved source clearly shows duck and sauces; its orange purée-like forms and lower
+vegetable/mushroom garnish are the closest available targets for the purée and baked-vegetable notes. The
+implementation must not fabricate ingredients or claim exact photographic correspondence.
+
+Direct follow-up during implementation: remove the `Свежая зелень` note and its leader so the composition
+fits more comfortably. The active layout therefore contains four notes and four visible lines at every width;
+phone stage height is reduced while the plate remains large and uncropped.
+
+### Implementation result and final anti-template audit
+
+- **File created:** `public/media/event-formats/private-event-canapes-v3.webp`, a 1774 × 887 WebP with alpha.
+  The built-in image-editing workflow preserved the dense three-row food arrangement; the generated flat
+  surface was then extracted into alpha so the exact block paper shows through instead of an approximate
+  baked colour. The failed checkerboard and interim colour trials remain outside the workspace; the unused
+  workspace v2 conversion was removed.
+- **Files changed:** `app/page.tsx`, `app/globals.css`, `tests/rendered-html.test.mjs`,
+  `docs/DESIGN_REFERENCE_MAP.md`, `docs/DESIGN_SYSTEM.md` and this audit.
+- **Element reworked:** row 02 now loads the transparent v3 canapé layer over its existing `var(--paper)`
+  aperture. The tablet and phone aperture ends at the same 5% lower inset as the wide layout instead of
+  keeping a detached `2 / 1` tile and empty lower band. `object-fit: cover` scales without bitmap distortion.
+- **References used:** the user's supplied phone capture, direct colour/size correction and the approved
+  paper/ink/rule system. The exact breakpoint top edges, perimeter, upper copy/photo pair, copy and chef crop
+  remain unchanged. The 5% lower inset is an existing system value; no new unreferenced visual style was
+  introduced.
+- **UI libraries:** none added or visibly used. Semantic React markup, CSS positioning and native image
+  rendering remain the only interface primitives.
+- **Automated validation:** the alpha asset reports 1774 × 887 with transparency; `git diff --check`, ESLint,
+  all eight focused regressions and the Vinext production build pass.
+- **Desktop/mobile verification:** browser captures were inspected at 1440, 1280, 1024, 768, 430, 390 and
+  375 px. Each width loads both row images, uses the exact `rgb(244, 239, 229)` aperture background, keeps
+  `filter: none`, `opacity: 1`, `mix-blend-mode: normal`, contains copy/photo inside the field and reports
+  `scrollWidth === innerWidth`. The lower inset is maintained at 5% and no empty band remains.
+- **Anti-template result:** no card, radius, shadow, gradient, glass, glow, icon, claim, CTA, animation or
+  repeated template composition was added. The correction remains confined to the approved editorial sheet.
+- **Remaining risk:** the canapé layer is a representative generated visualization, not documentary proof of
+  a delivered menu, so it remains decorative with empty alternative text. Wide/tablet `cover` crops may clip
+  edge bites deliberately to convey abundance; no food is stretched or recoloured. Publication was not
+  requested and no live deployment was performed.
+
+
+## Masterclasses replacement — pre-code audit and implementation plan — 2026-09-10
+
+Audit completed before interface edits: inspected app/page.tsx, layout, global tokens and all row-03 responsive overrides, package/scripts, routes, event assets and provenance, current design records, user brief and screenshot. The stack is React 19 on Vinext with Next-compatible server components and plain global CSS. Current typography is local Cormorant Garamond/Montserrat, warm paper and fine rules. There are already uncommitted changes to row 02 and other records/tests; they are preserved.
+
+1. Templated elements: no stock UI-library cards were found. The third service inherits the shared absolute-positioned blueprint shell, which repeats a technical field and no longer expresses the requested six concrete skills. Its small phone copy and schematic lower area conflict with the new reference.
+2. Replacement authority: the supplied screenshot and exact user brief; existing approved typography/palette/container and documentary masterclass.jpg. Previous row-03 layout decisions are superseded only within this section.
+3. Keep: all other page sections, navigation, inquiry, existing photographs, fonts/tokens, first and second service layouts and user edits.
+4. Rework: render the third item through a dedicated MasterclassesSection; remove its active blueprint references; use a natural-flow copy-left/photo-right grid and one full-width scene.
+5. Required new component/asset: one server component and one text-free realistic linen flat-lay containing six requested techniques. Existing subject images do not cover this content; the screenshot is a composition reference, not a production crop.
+6. Responsive/accessibility plan: retain desktop/tablet two columns, switch upper content to copy then photo on phones, keep the lower scene in native horizontal scrolling with readable HTML labels, keyboard focus and semantic alternative text. No library or JS dependency.
+7. Validation plan: inspect the generated asset, run existing regression checks (update obsolete row-03 source assertions only), type/build checks and diff check. Verify all seven required viewport widths, mobile scroll end and keyboard focus, layout with images unavailable, loading dimensions and unchanged neighbouring navigation. Finish with an anti-template audit and documented limitations.
+
+
+### Masterclasses implementation result and final anti-template audit
+
+- **Created:** `app/masterclasses-section.tsx`, `public/media/event-formats/masterclasses-six-stages-flatlay.webp`, and the asset provenance/prompt in `design/generated/masterclasses-flatlay-2026-09-10/`.
+- **Changed:** `app/page.tsx`, `app/globals.css`, `tests/rendered-html.test.mjs`, `docs/DESIGN_REFERENCE_MAP.md`, `docs/DESIGN_SYSTEM.md` and this audit. AGENTS.md remains present and unchanged. Pre-existing uncommitted changes, including row 02's canapé asset, were preserved.
+- **Implementation:** the third format now contains the reusable server component; it uses the exact supplied text, 03/rule, original documentary photo, one generated 2071 × 759 linen scene and six live ordered labels. Only the technique scene is new imagery (WebP, 422836 bytes); there are no placeholders. The deprecated row-03 blueprint images are no longer referenced by the page. Historical CSS is not removed wholesale: its selectors cannot match the new component.
+- **References and fitting decisions:** user's 944 × 710 screenshot and six-stage brief, approved masterclass.jpg and neighbouring photo-led fields, current paper/rule and Cormorant/Montserrat system. Header columns 1.1:1, 24–56 px gap, title 38–60 px, body 16–25 px, desktop captions 18–27 px and 900 px phone scene are neutral content-fitting values. Phone title 36–44 px, body 15 px/1.6 and captions 21 px. No missing decorative/style reference remains.
+- **Libraries:** none added. Semantic React, CSS Grid, native lazy images and native overflow are the only primitives; no client component, custom scrolling JS, animation or new dependency. The narrowly documented tabindex lint exception enables native keyboard scrolling of the labelled region; its accessible instruction explicitly applies only on narrow screens.
+- **Visual verification:** inspected in the in-app browser at all widths below. All six HTML labels remain readable and in the required order. Both new-section images load at every width, the photograph is never cropped, copy stays in normal flow and the scene never leaks into page overflow.
+
+| Viewport | Section width | Upper layout | Body / captions | Scene width / visible width | Page overflow |
+|---:|---:|---|---|---|---|
+| 1440 | 1307.53 px | Two columns | 25 / 27 px | 1308 / 1308 px | None |
+| 1280 | 1162.25 px | Two columns | 24.32 / 24.32 px | 1162 / 1162 px | None |
+| 1024 | 929.80 px | Two columns | 19.456 / 19.456 px | 930 / 930 px | None |
+| 768 | 724 px | Two columns | 16 / 18 px | 724 / 724 px | None |
+| 430 | 394 px | Copy then full photo | 15 / 21 px | 900 / 394 px | None |
+| 390 | 354 px | Copy then full photo | 15 / 21 px | 900 / 354 px | None |
+| 375 | 339 px | Copy then full photo | 15 / 21 px | 900 / 339 px | None |
+
+- **Interaction/accessibility:** at 375 px ArrowRight focuses the region and moves it by 40 px; the existing 2 px accent focus outline is visible. Horizontal input reaches the 561 px end offset and shows Обжарка/Подача completely while page width remains 375 px. Body contrast is 4.94:1 against --paper. No links, buttons, forms, empty data or asynchronous state are introduced. Image loading/error handling uses reserved width/height and descriptive native alt; heading, paragraph and captions are independent HTML. A failed-network visual simulation was not performed, and no automatic image retry is claimed. The existing header/footer links retain their source targets.
+- **Checks:** Vinext production build and all eight existing regression tests pass. Obsolete tests were adjusted only for row 03's two removed blueprint references, changed blueprint counts and the explicitly permitted scene scroller. ESLint passes with the documented keyboard-scroll exception; git diff --check passes. Standalone `tsc --noEmit` is blocked by existing missing Cloudflare declarations in `db/index.ts` (`cloudflare:workers`) and `worker/index.ts` (`Fetcher`, `D1Database`); it reported no errors in the new component.
+- **Anti-template result:** no stock layout/theme, repeated technique cards, uniform rounding, shadows, gradients, glass, glow, icons, generic marketing text, decorative motion or unrelated section. The phone sequence is deliberately composed with a continuous scrollable technique scene. Independent read-only component review found no blocking semantic or cascade issues.
+- **Limitations:** the lower scene is an illustrative generated image, not evidence of an actual class or a promised menu. Its native ratio is 2.729:1, slightly taller than the brief's approximate strip; retaining the full image preserves every tool and stage. Keyboard/scroll behavior was verified in the available in-app browser, not on physical mobile devices. This task implements code in an existing site; live publication was not requested and was not performed.
+
+
+## Masterclasses background and rules — pre-code follow-up audit — 2026-09-10
+
+Inspected current component, scoped masterclasses CSS, existing private-dinner/private-event frame/rail/spine CSS, design records and live neighbouring block. The linen background is baked into the new image, while row 02 already uses transparent food objects over `--paper`. The masterclass currently has only top/bottom rules and lacks the inset perimeter and interior partition requested by the user.
+
+Templated elements: none. The issue is visual mismatch with the specifically named neighbours. Keep the complete page, upper photo, copy, typography, six subjects, labels and mobile scroller. Rework only the lower image background and local rule structure. Plan recorded before interface edits: built-in image edit removes linen to alpha without replacing the subject composition; use a versioned WebP with alpha; reuse the 1.5% perimeter/3% inset and 1 px --rule vocabulary; use content-flow horizontal rails and a column divider that turns horizontal between copy and photo on phones. No new component or dependency is necessary. Then inspect the alpha and natural colours, run build/existing checks and inspect 1440, 1280, 1024, 768, 430, 390 and 375 px plus the scroll endpoint/focus. Preserve all prior uncommitted changes.
+
+
+### Follow-up result and final anti-template check
+
+- **Created:** `public/media/event-formats/masterclasses-six-stages-paper-v2.webp`, `design/generated/masterclasses-flatlay-2026-09-10/PAPER_EDIT_PROMPT.md` and `alpha-preparation.json`.
+- **Changed:** `app/masterclasses-section.tsx` (asset and accurate alt), `app/globals.css` (perimeter/rails/seam), the asset README, `docs/DESIGN_REFERENCE_MAP.md`, `docs/DESIGN_SYSTEM.md` and this audit. No change to other sections, page routing, tests or AGENTS.md was needed in this follow-up.
+- **Background:** image_gen removed the linen; generated flat backing was prepared as a real alpha channel using Sharp. The production lossless WebP retains 2071 × 759 and the generated foreground RGB. Its 58.15% transparent area shows exactly `rgb(244, 239, 229)` from the existing --paper token. No raster checkerboard, paper-colour rectangle, image tint, blend mode or food desaturation remains. The documentary photograph is untouched.
+- **Rules:** the new 1.5% inset perimeter and 3% content inset come from the named neighbour; all structural rules use `1px --rule` (`rgb(200,192,179)`). Upper/lower rails and the copy/scene divider span the content width. The upper seam is vertical on desktop/tablet and horizontal between copy and photo on phones. Its position follows grid content rather than fixed absolute text coordinates.
+- **References:** explicit follow-up, approved private-event/private-dinner rule vocabulary and row 02's same-paper food treatment. No new decorative reference or visual style was invented; only neutral fitting of existing line spacing was required. No UI libraries or runtime dependencies were added.
+- **Visual checks:** 1440, 1280, 1024, 768, 430, 390 and 375 px; both images loaded at every width; document width equals viewport width throughout. Scene visible widths are respectively 1229, 1093, 874, 681, 370, 333 and 319 px. Phone scene remains 900 px wide with legible 21 px captions. Lines stay in quiet gaps and neither clip nor cross live text. On 375 px ArrowRight moves 40 px with visible focus and horizontal input reaches the 581 px endpoint, showing the entire final Подача label. Other interactions/state handling remain as verified in the original section audit.
+- **Validation:** all eight existing regressions, ESLint, production build and git diff --check pass. The previously documented standalone Cloudflare type declarations limitation is unchanged and unrelated to this correction.
+- **Anti-template outcome:** no cards, rounded corners, UI theme, arbitrary graphic marks, generic copy, gradients or decorative animation were introduced. The required rules have a direct neighbour reference and the continuous teaching composition remains intact.
+- **Limits:** the technique scene is still an illustrative image, and mobile checks used the in-app browser rather than physical devices. No publication was requested or performed.
+
+## Masterclasses mobile and web adaptation — pre-code audit and plan — 2026-09-10
+
+The user's next request is to adapt the section for mobile and web. Re-inspected the component, global styles, assets, original mobile brief, approved neighbouring course strips, design records, routes and build/test setup. A read-only second-agent review confirms the finding: at 375 px the 900 px composition hides four techniques; at 561 px it abruptly shrinks to 486 px and the upper grid has only 242/220 px columns. This is a content-fitting defect, not a stock-library template.
+
+Plan recorded before interface changes:
+1. Keep the existing wide two-column heading/photo composition, full photograph, exact copy, all six objects, paper and drafting rules. Do not change unrelated sections.
+2. Replace the narrow 900 px scroller with two continuous strips of three techniques. The original brief explicitly permits careful rearrangement; the approved private-dinner phone course strips provide a compatible local precedent. No individual cards or six stacked items.
+3. At the existing project 700 px content-fitting breakpoint, stack copy/photo and show the two strips. Above it preserve the complete single-row scene. Check both sides of the breakpoint as well as 560/561 px.
+4. Reuse the same cached transparent asset through CSS apertures, splitting in the gap near source x=1015 rather than blindly bisecting the sauce bowl. Do not edit or generate raster imagery. Retain meaningful alternative text and live ordered captions for each active view.
+5. Remove obsolete swipe instructions, focusable scroller and its lint exception. No new component, client JS, UI library or dependency is needed.
+6. Verify the required seven widths, boundary widths, image crops, heading wrapping, captions, accessibility tree, page overflow, unchanged navigation/forms, and existing build/regression checks. Record the final anti-template audit. This responsive amendment supersedes previous instructions in these records to retain a 900 px phone scroller.
+
+### Responsive result and final anti-template audit
+
+1. **Files created in this follow-up:** none. The component and transparent WebP from the earlier stage are reused; no new bitmap or dependency is introduced.
+2. **Files changed:** `app/masterclasses-section.tsx`, `app/globals.css`, `tests/rendered-html.test.mjs`, `docs/DESIGN_AUDIT.md`, `docs/DESIGN_REFERENCE_MAP.md`, `docs/DESIGN_SYSTEM.md`. This follow-up does not edit `app/page.tsx`, other components or AGENTS.md. Parallel changes to the personal-menu section remain intact.
+3. **Templated elements found:** none in the scoped section. The actual defect was a phone scroller exposing only two techniques and the cramped 560/561 px layout transition.
+4. **Rework:** at 700 px and below the header stacks and the six techniques occupy two continuous three-stage strips. CSS apertures expose x=0–1015 and x=1015–2071 from the same cached image, preserving aspect ratios and complete subjects. A single fine rule divides the strips; captions remain live text. The obsolete swipe instruction, focus stop and lint exception are removed. Above 700 px the approved fluid two-column header and complete six-stage panorama remain. Compact frame vertical insets are 12 px, half of the existing section padding, so the perimeter stays outside content rails even at 700 px.
+5. **References used:** the supplied screenshot, original brief explicitly allowing careful mobile rearrangement, latest mobile/web request, neighbouring private-dinner course strips and existing drafting/paper/type system.
+6. **Decisions without references:** none requiring a new style. Breakpoint and aperture measurements are neutral content-fitting values; the source split was independently reviewed and visually checked before acceptance.
+7. **UI libraries:** none added. Existing server-rendered React, CSS Grid, native image loading and semantic figures/lists are the only primitives. No client state, animation or interaction was added.
+8. **Desktop/mobile visual results:** every width below was inspected in the browser; all visible images load, all six captions occur once in the active layout and `documentElement.scrollWidth === innerWidth`. Heading, paragraph, photograph, subjects and labels stay inside the section; the photograph remains uncropped. The existing colour contrast is retained. The accessibility tree contains only the active alternate layout and the second compact list starts at 4. The section has no unnecessary tab stop. Header/footer navigation targets are preserved; there are no forms or new hover/focus/empty states. Image width/height and meaningful alt remain available for loading/error fallback; no failed-network visual simulation or automatic retry is claimed. Browser error logs are empty.
+
+| Viewport | Section width / height | Header | Techniques | Body / caption px | Overflow |
+|---:|---|---|---|---|---|
+| 1440 | 1308 / 1001 | Two columns | One row of six | 25 / 27 | None |
+| 1280 | 1162 / 889 | Two columns | One row of six | 24.32 / 24.32 | None |
+| 1024 | 930 / 714 | Two columns | One row of six | 19.46 / 19.46 | None |
+| 768 | 724 / 577 | Two columns | One row of six | 16 / 18 | None |
+| 430 | 394 / 1139 | Copy then photo | Two rows of three | 15 / 20.64 | None |
+| 390 | 354 / 1054 | Copy then photo | Two rows of three | 15 / 18.72 | None |
+| 375 | 339 / 1022 | Copy then photo | Two rows of three | 15 / 18 | None |
+
+Additional 560, 561, 700 and 701 px checks pass. At 560/561 the section keeps the same compact layout; its small width change comes from the existing page gutter. At 700/701 the composition deliberately switches layouts while retaining all content. At 700 px the compact section is 1671 px tall and uses normal page scrolling.
+
+9. **Remaining limits and anti-template result:** tested in the available browser, not physical devices. The existing lower image is an illustrative scene, not documentary event evidence. No cards, stock UI theme, radius, shadow, gradient, generic text, icon or decorative effect has been added to Masterclasses. The final independent review found no semantic, crop or cascade blockers. Preview remains local; no publication was requested. Global regression checks include stale expectations for a concurrently changing personal-menu section; validation status is recorded below rather than treating those unrelated failures as a Masterclasses defect.
+
+**Final validation:** production build, ESLint and `git diff --check` pass. Global tests finish with 5 passed / 3 failed. Failures are outside Masterclasses: the whole-stylesheet radius count now sees the separately changed personal-menu action; the typography marker still requires the retired `.source-gallery`; the geometry test still requires removed `.sources-copy` and the old plate CSS block. Two other obsolete personal-menu content/gallery assertions were updated to the already documented five-ingredient composition, preserving the approved current UI; further CSS assertion changes were deferred because that unrelated section continued changing concurrently. No Masterclasses visual or semantic failure remains. The existing standalone Cloudflare type-declaration limitation documented earlier was not re-tested. Full site regression status must not be represented as green.
+
+## Combined release preparation — 2026-09-10
+
+The user explicitly requests committing all changes, pushing Git and publishing to the existing domain. A read-only release audit reviewed the complete diff, untracked assets/QA artifacts, design records and failing checks. All new files are intended project content; no credentials or build outputs are included. The tests still assert the retired personal-menu gallery, process captions and old plate coordinates. Before packaging, update those assertions to the approved five-ingredient plate and its existing responsive layouts. The personal-menu action has an undocumented 2 px radius despite the recorded square-edge rule; remove only that declaration, keeping the documented button design. No new component, template, library or style is introduced. Refresh the SVG implementation record and verify the action at the seven required widths, then run build, lint and regression checks before committing one exact release.
+
+
+Release validation update: the latest parallel user correction removes the separate greens note, leaving four active plate annotations; the source, design records and regression expectations now agree. The former gallery/geometry assertions were replaced with the current documented content and responsive rules. The undocumented button radius was removed to preserve the approved square edge. Visual checks at 1440, 1280, 1024, 768, 430, 390 and 375 px confirm radius 0, intact label, #contact destination, 64 px desktop/tablet target and 58 px phone target, without page overflow. Production build, ESLint, all eight regression tests and diff whitespace checks pass. This supersedes the earlier 5/8 test limitation. The combined release includes current masterclasses, private-event background, personal-menu changes, design records and QA artifacts. No credentials or build outputs are committed.

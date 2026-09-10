@@ -1752,14 +1752,17 @@ field, masterclass process field and all content outside event row 02 remain unc
 - One vertical `1px` rule divides copy and chef photograph only through the upper zone. One horizontal
   `1px` rule separates the full upper pair from the canapé field. An inset perimeter plus short empty top and
   bottom rails may unify the sheet; all marks are decorative and `aria-hidden`.
-- The lower visual is `/media/event-formats/private-event-canapes-v1.webp`: an original generated 1774 × 887
-  editorial photograph with 23 distinct canapés in three rows. It remains decorative with empty alternative
-  text and does not assert delivered menu items, quantities or a specific client event. The former canapé
+- The lower visual is `/media/event-formats/private-event-canapes-v3.webp`: a revised original 1774 × 887
+  transparent WebP layer with many distinct canapés in three dense rows. The removed tabletop resolves to the
+  aperture's exact `--paper` background, while every ingredient and its soft contact shadow retain natural
+  colour at full opacity. It remains decorative with empty alternative text and does not assert delivered
+  menu items, quantities or a specific client event. The former canapé
   illustration plus circulation/guest-route and compact circulation rasters are no longer active for row 02.
 - Above 1100 px the field is a shallow landscape composition and the canapé raster may use a centred
   content crop to fit the lower band. From 561–820 px the field is square. Through 560 px it becomes slightly
   portrait so the exact paragraph remains legible while copy and photo stay side by side above a deeper
-  canapé field.
+  canapé field. At every breakpoint the lower aperture ends at the established 5% inset; tablet and phone
+  must not reinstate a detached `2 / 1` tile or leave an empty band before the bottom rule.
 - Apart from the exact shared row-02 paper surface above, no gradient, shadow, radius, glass, glow, icon,
   badge, animation, UI-library theme or new business copy is introduced. The adjacent event rows preserve
   their separately approved visual grammars.
@@ -1814,3 +1817,78 @@ This amendment supersedes only the phone rules in `Private-dinner seven-plate am
 - The exact phone aspect ratio, copy/photo share and insets are reference-bounded fitting decisions. They
   must preserve the full composition at 430, 390 and 375 px without page overflow.
 - Above 560 px the existing private-dinner geometry remains until a separate wider reference supersedes it.
+
+## Personal-menu annotated plate amendment — 2026-09-10
+
+This amendment supersedes the active personal-menu three-step sequence, sourcing-photo gallery, provenance
+line, three shorthand annotations and `пример композиции блюда` caption. It does not alter any other page
+chapter, navigation item, contact surface or global token.
+
+- **Surface and container:** `#products` remains a warm editorial field using `#f7f4ef`, `--ink`, `--muted`,
+  `--accent-small` and `--rule`. Content stays inside `--content` with the current responsive `--gutter`.
+- **Typography:** display copy uses Cormorant Garamond; the gold italic lines use the same family through
+  `--font-accent`; body copy and utility labels use Montserrat. Opening and detail body copy stay at 16 px or
+  larger. Ingredient descriptions stay at least 14 px. Kicker roles retain uppercase tracking.
+- **Opening rhythm:** kicker, two-line display title and exact paragraph form one left-led editorial block.
+  One horizontal `--rule` divider separates it from the dish explanation. There is no process stepper.
+- **Dish explanation:** above 700 px the title and paragraph occupy unequal columns separated by one vertical
+  hairline. At 700 px and below they stack and the vertical line is removed. No card or alternate surface is
+  introduced.
+- **Plate stage:** the existing 1800 × 1665 alpha WebP is always rendered with `height: auto`; the full rim
+  remains visible. Four-path wide, tablet and phone leader groups share the stage's `0 0 1200 820` coordinate
+  system. SVG is decorative and contains no text.
+- **Callouts:** four live HTML notes use italic Cormorant titles in `--accent-small` and Montserrat descriptions
+  in `--muted`. No background, radius, border, number, icon or large marker. Leaders use `--accent-small`, a
+  non-scaling stroke and small terminal dots backed by the section paper.
+- **Wide geometry:** the complete plate occupies the centre while notes use the perimeter. The left and right
+  title/description columns do not intersect leaders. Exact positions may vary only to keep each endpoint on
+  the photographed ingredient at the current source aspect ratio.
+- **Phone geometry:** through 620 px the plate stage becomes deliberately tall. Duck and vegetable notes sit
+  above; sauce and purée sit below the large plate. All descriptions stay visible,
+  there is no interaction-dependent disclosure and the page must not overflow horizontally.
+- **Action:** a single square-edged `ОБСУДИТЬ МЕНЮ` anchor links to `#contact`. Above 620 px it is flanked by
+  two thin rules; on phones the rules may be omitted to preserve the 44 px target and legible label.
+- **States and motion:** preserve the global visible `:focus-visible` outline. Hover may darken the button
+  background without movement or decorative animation; reduced-motion behavior remains unchanged.
+- **Image limitation:** the approved source visibly contains duck, sauce, orange purée-like elements
+  and a vegetable/mushroom garnish, but it does not exactly reproduce the screenshot's pale purée and roasted
+  carrot arrangement. No ingredient pixels are generated or altered to hide that mismatch.
+- **Anti-template boundary:** no gallery, numbered sequence, cards, badges, icons, gradient, glass, shadow,
+  decorative background, FAQ, testimonial, extra CTA or replacement marketing copy is permitted.
+- **Verification matrix:** visually check 1440, 1280, 1024, 768, 430, 390 and 375 px; the user's requested
+  360 px check is additional. At each width confirm exact copy, four visible notes and leaders, endpoints,
+  full plate rim, button focus, no overlap and no horizontal scroll.
+
+
+## Masterclasses editorial section amendment — 2026-09-10
+
+- This explicit user brief replaces only row 03's blueprint/photo-left design. Reuse the current `format-list` container and the approved `--paper`, `--paper-light`, `--ink`, `--muted`, `--rule`, `--accent-small`, `--font-display` (Cormorant Garamond) and `--font-sans` (Montserrat) tokens.
+- A separate server-rendered `MasterclassesSection` uses normal document flow, two upper columns (copy then photo), a full-width six-stage scene and 1 px horizontal rules. It has no outer radius, card border, drop shadow, filtering, decorative icon, CTA or animation.
+- The explicit `03` plus short rule is restored for this section only. The title uses the existing serif family, description the sans family, stage captions the serif family. Exact requested Russian wording remains live HTML.
+- Reuse the approved 1144 × 770 masterclass photograph at its natural ratio; no face generation, recolouring, stretching or aggressive crop. One new text-free overhead scene uses a continuous light linen surface; labels are aligned to six equal subject positions, outside the image semantics but inside the same figure.
+- Desktop/tablet preserve the upper two-column structure while space permits. Through 560 px copy precedes the complete photo. The continuous scene retains a readable intrinsic width in a native horizontal overflow region with six live ordered labels, a concise scroll hint and the existing visible focus style. No JavaScript or controls are necessary.
+- Phone text must remain legible (description 15 px minimum; scene captions 18 px minimum); image dimensions reserve space during lazy loading. Alternative text describes image content; the representative scene identifies itself as an illustration of techniques, not event evidence. A failed image must leave the heading, copy, captions and accessible description available.
+- Exact neutral fitting values will be recorded with visual results. Required widths: 1440, 1280, 1024, 768, 430, 390, 375 px. No unreferenced decorative decisions are introduced.
+
+
+Masterclasses verified fitting values: header 1.1:1 with 24–56 px gap; vertical section/scene spacing 20–32 px; desktop title 38–60 px, body 16–25 px/1.5, captions 18–27 px/1.3. Through 560 px: 24 px section padding and header gap, 36–44 px title, 15 px/1.6 body, 900 px unbroken scene with 21 px captions. Live captions occupy the clear bottom linen at 5% inset. The section uses zero radii, no shadows and no animation. These values were visually checked at the complete seven-width matrix; see DESIGN_AUDIT.md for results and the existing Cloudflare typecheck limitation.
+
+
+## Masterclasses same-paper amendment — 2026-09-10 follow-up
+
+- The user's latest correction replaces the linen tabletop with actual transparent image background over the exact existing `--paper` surface. Keep ingredient/tool colours and the documentary photo unfiltered and at full opacity. No mix-blend or approximation of the background colour.
+- Reuse private-event/private-dinner construction lines: square inset perimeter at 1.5%, content insets 3%, 1 px `--rule` rails above and below the upper pair, a lower rail after the technique scene, and a separator in the upper column gap. Lines are noninteractive and have no semantic content.
+- Keep content in normal flow. On phones the copy/photo separator becomes horizontal within the existing single-column reading order. Do not divide the six technique groups into cards or break their continuous scroll.
+- The original backdrop wording and no-perimeter rule in the prior masterclass amendment are superseded. Typography, section number, images' subject matter, captions, photo ratio and 560 px breakpoint remain unchanged.
+
+
+Same-paper verification: the v2 lossless WebP has real alpha; clear background reveals the exact --paper token. The image edit used built-in image_gen, followed by alpha preparation of its flat backing; no CSS filter or blend mode is involved. Section vertical insets are 24–38 px, upper rail padding 16–22 px, inset frame 1.5%, content inset 3%; the separator uses the existing 24–56 px grid gap (24 px on phones). The seven required widths and keyboard scroll endpoint pass; all structure lines use --rule.
+
+## Masterclasses mobile/web amendment — 2026-09-10
+
+- Supersedes the previous phone scroller and 560 px breakpoint only. Above 700 px retain the existing two-column header and complete six-stage scene. At 700 px and below use copy, complete photograph, then two continuous three-stage strips. The 700 px boundary is already used for content-fitting elsewhere in the site and avoids the observed narrow columns at 561 px.
+- Reuse the existing alpha WebP at its natural proportions through two CSS apertures split near x=1015/2071, in the clear space before the sauce bowl. No new image, cropping of individual subjects, recolouring, per-item panels or cards. Each active figure has meaningful alt text and an ordered caption list; the second compact list continues at 4.
+- Preserve all existing tokens, wide type clamps, square 1.5% perimeter, 3% inset and 1 px rules. Compact header retains the 24 px gap and 36–44 px heading; use 15–16 px body copy and 18–22 px captions fitted to available width. Compact stage bands share the same paper and one horizontal divider.
+- Remove the swipe hint and keyboard focus stop once the scene fits the viewport. CSS-hidden alternate layout must also leave the accessibility tree. No client state, new controls, library or animation.
+- Verify 1440, 1280, 1024, 768, 430, 390 and 375 px, plus 560/561 and 700/701 px. Exact final crop and size values are recorded in DESIGN_AUDIT.md after visual inspection.
+- Compact perimeter fitting: retain 1.5% side insets, but use 12 px vertically (half the existing 24 px section padding). A percentage of the much taller two-strip section can otherwise cross the upper rail near 700 px; this keeps the same frame outside the content rails at every compact width.

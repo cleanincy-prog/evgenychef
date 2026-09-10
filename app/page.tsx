@@ -1,5 +1,6 @@
 import Image from "next/image";
 import ChefStoryVideo from "./chef-story-video";
+import MasterclassesSection from "./masterclasses-section";
 
 /* eslint-disable @next/next/no-img-element -- local documentary images use CSS-directed editorial crops */
 
@@ -102,7 +103,7 @@ const eventFormats = [
     drawingSrc: null,
     compactDrawingSrc: null,
     courseImageSrc: null,
-    canapeImageSrc: "/media/event-formats/private-event-canapes-v1.webp",
+    canapeImageSrc: "/media/event-formats/private-event-canapes-v3.webp",
     processBackground: true,
   },
   {
@@ -113,11 +114,11 @@ const eventFormats = [
     width: 1144,
     height: 770,
     alt: "Евгений Грыбенюк показывает участникам мастер-класса профессиональные приёмы",
-    drawingSrc: "/media/blueprint-backgrounds/masterclass-learning-concept-v3.png",
-    compactDrawingSrc: "/media/blueprint-backgrounds/masterclass-compact-mobile-v5.webp",
+    drawingSrc: null,
+    compactDrawingSrc: null,
     courseImageSrc: null,
     canapeImageSrc: null,
-    processBackground: true,
+    processBackground: false,
   },
 ];
 
@@ -164,36 +165,12 @@ const chefJourneyStops = [
   },
 ] as const;
 
-const sourceScenes = [
-  {
-    id: "meat",
-    caption: "ягнёнок · горы",
-    src: "/media/sourcing/evgen-half-lamb-market-v1.webp",
-    width: 1448,
-    height: 1086,
-    alt: "Евгений Грыбенюк осматривает половину барана в мясной лавке",
-  },
-  {
-    id: "fish",
-    caption: "рыба · порт",
-    src: "/media/sourcing/evgen-fish-harbour-market-v1.webp",
-    width: 1448,
-    height: 1086,
-    alt: "Евгений Грыбенюк выбирает свежую рыбу у гавани",
-  },
-  {
-    id: "produce",
-    caption: "урожай · фермы Кипра",
-    src: "/media/sourcing/evgen-grape-harvest.webp",
-    width: 1794,
-    height: 1898,
-    alt: "Евгений Грыбенюк с ящиком собранного винограда",
-  },
-] as const;
-
 function PersonalMenuPlate() {
   return (
-    <figure className="menu-plate-composition" aria-labelledby="menu-plate-caption">
+    <figure
+      className="menu-plate-composition"
+      aria-label="Состав блюда: утиная грудка, печёные овощи, нежное пюре и соус из красных ягод"
+    >
       <div className="menu-plate-stage">
         <img
           className="menu-plate-photo"
@@ -202,35 +179,65 @@ function PersonalMenuPlate() {
           height="1665"
           loading="lazy"
           decoding="async"
-          alt="Белая тарелка с нарезанным мясом, гарниром, зеленью и несколькими соусами"
+          alt="Белая тарелка с нарезанной утиной грудкой, гарниром, зеленью и соусами"
         />
         <svg
           className="menu-plate-leaders"
-          viewBox="0 0 1000 760"
+          viewBox="0 0 1200 820"
           preserveAspectRatio="none"
           aria-hidden="true"
         >
-          <path d="M 184 112 H 272 L 512 324" />
-          <path d="M 816 166 H 746 L 608 194" />
-          <path d="M 194 626 H 304 L 560 530" />
-          <circle cx="512" cy="324" r="4" />
-          <circle cx="608" cy="194" r="4" />
-          <circle cx="560" cy="530" r="4" />
+          <g className="menu-plate-leaders-wide">
+            <path d="M 230 205 H 280 L 625 420" />
+            <path d="M 970 175 H 905 L 640 520" />
+            <path d="M 990 390 H 915 L 816 455" />
+            <path d="M 230 665 H 315 L 700 585" />
+            <circle cx="625" cy="420" r="4" />
+            <circle cx="640" cy="520" r="4" />
+            <circle cx="816" cy="455" r="4" />
+            <circle cx="700" cy="585" r="4" />
+          </g>
+          <g className="menu-plate-leaders-tablet">
+            <path d="M 265 205 H 300 L 625 420" />
+            <path d="M 935 300 H 880 L 640 520" />
+            <path d="M 935 440 H 880 L 816 455" />
+            <path d="M 265 665 H 315 L 700 585" />
+            <circle cx="625" cy="420" r="4" />
+            <circle cx="640" cy="520" r="4" />
+            <circle cx="816" cy="455" r="4" />
+            <circle cx="700" cy="585" r="4" />
+          </g>
+          <g className="menu-plate-leaders-phone">
+            <path d="M 550 160 H 430 L 660 377" />
+            <path d="M 650 185 H 725 L 670 430" />
+            <path d="M 650 530 H 600 L 936 413" />
+            <path d="M 550 520 H 620 L 700 480" />
+            <circle cx="660" cy="377" r="4" />
+            <circle cx="670" cy="430" r="4" />
+            <circle cx="936" cy="413" r="4" />
+            <circle cx="700" cy="480" r="4" />
+          </g>
         </svg>
-        <p className="menu-plate-note menu-plate-note-texture">
-          баланс текстур
-          <span>и температур</span>
-        </p>
-        <p className="menu-plate-note menu-plate-note-season">
-          локальные продукты
-          <span>· сезон</span>
-        </p>
-        <p className="menu-plate-note menu-plate-note-sauce">
-          соус связывает
-          <span>вкус и блюдо</span>
-        </p>
+        <div className="menu-plate-note menu-plate-note-duck">
+          <h3>Утиная грудка</h3>
+          <p>Нежное мясо с хрустящей корочкой. Выразительный вкус без острых специй.</p>
+        </div>
+        <div className="menu-plate-note menu-plate-note-vegetables">
+          <h3>Печёные овощи</h3>
+          <p>
+            Сезонные овощи с лёгким дымным ароматом дополняют основное блюдо и добавляют
+            естественную сладость.
+          </p>
+        </div>
+        <div className="menu-plate-note menu-plate-note-puree">
+          <h3>Нежное пюре</h3>
+          <p>Воздушная текстура уравновешивает вкус и делает блюдо более деликатным.</p>
+        </div>
+        <div className="menu-plate-note menu-plate-note-sauce">
+          <h3>Соус из красных ягод</h3>
+          <p>Лёгкая кислинка подчёркивает вкус мяса и добавляет глубину.</p>
+        </div>
       </div>
-      <figcaption id="menu-plate-caption">пример композиции блюда</figcaption>
     </figure>
   );
 }
@@ -241,11 +248,20 @@ function EventFormats() {
       <ol className="format-list">
         {eventFormats.map((format, index) => (
           <li
-            className={`format-row format-row-${index + 1}${format.processBackground ? " format-row-process" : ""}${format.courseImageSrc ? " format-row-menu" : ""}${format.canapeImageSrc ? " format-row-canape" : ""}`}
+            className={`format-row format-row-${index + 1}${format.processBackground ? " format-row-process" : ""}${format.courseImageSrc ? " format-row-menu" : ""}${format.canapeImageSrc ? " format-row-canape" : ""}${format.name === "Мастер-классы" ? " format-row-masterclasses" : ""}`}
             id={index === 0 ? "private-dinner" : undefined}
             key={format.name}
           >
-            {format.processBackground ? (
+            {format.name === "Мастер-классы" ? (
+              <MasterclassesSection
+                title={format.name}
+                description={format.description}
+                src={format.src}
+                width={format.width}
+                height={format.height}
+                alt={format.alt}
+              />
+            ) : format.processBackground ? (
               <div className="format-process-field">
                 {format.courseImageSrc ? (
                   <span className="format-menu-drafting-lines" aria-hidden="true">
@@ -639,49 +655,47 @@ export default function Home() {
         </section>
 
         <section className="sources" id="products" aria-labelledby="sources-title">
-          <header className="section-intro sources-intro">
-            <div className="sources-copy">
-              <div className="sources-heading">
-                <p className="section-kicker">персональное меню</p>
-                <h2 id="sources-title">
-                  Меню появляется
-                  <br />
-                  <em>после разговора.</em>
-                </h2>
-              </div>
-              <div className="sources-story">
-                <p className="sources-lede">
-                  Вы рассказываете, что любите и что важно учесть. Я выбираю продукты под этот вечер —
-                  и только потом собираю меню.
-                </p>
-                <ol className="source-sequence" aria-label="Как создаётся меню">
-                  <li>ваш вкус</li>
-                  <li>продукты</li>
-                  <li>меню вечера</li>
-                </ol>
-              </div>
-            </div>
-            <PersonalMenuPlate />
-          </header>
+          <div className="personal-menu-shell">
+            <header className="personal-menu-intro">
+              <p className="section-kicker">персональное меню</p>
+              <h2 id="sources-title">
+                Меню появляется
+                <br />
+                <em>после разговора.</em>
+              </h2>
+              <p className="personal-menu-lede">
+                Вы рассказываете, что любите, каким будет ваш вечер и что важно учесть. Я подбираю
+                продукты, продумываю сочетания и создаю меню специально для вас.
+              </p>
+            </header>
 
-          <div className="source-gallery" role="group" aria-label="Выбор продуктов для персонального меню">
-            {sourceScenes.map((scene) => (
-              <figure className={`source-scene source-scene-${scene.id}`} key={scene.id}>
-                <img
-                  src={scene.src}
-                  width={scene.width}
-                  height={scene.height}
-                  loading="lazy"
-                  decoding="async"
-                  alt={scene.alt}
-                />
-                <figcaption>{scene.caption}</figcaption>
-              </figure>
-            ))}
+            <div className="personal-menu-rule" aria-hidden="true" />
+
+            <div className="personal-menu-detail">
+              <div className="personal-menu-detail-heading">
+                <p className="section-kicker">как рождается блюдо</p>
+                <h3>
+                  Внимание
+                  <br />
+                  <em>к деталям.</em>
+                </h3>
+              </div>
+              <p className="personal-menu-detail-copy">
+                Каждое блюдо — это сочетание вкуса, текстур и сезонных продуктов. Я продумываю все
+                элементы, чтобы они гармонично работали вместе и создавали цельное впечатление.
+              </p>
+            </div>
+
+            <PersonalMenuPlate />
+
+            <div className="personal-menu-action-row">
+              <span aria-hidden="true" />
+              <a className="personal-menu-action" href="#contact">
+                обсудить меню
+              </a>
+              <span aria-hidden="true" />
+            </div>
           </div>
-          <p className="source-provenance">
-            Рыночные сцены — визуализации; сбор винограда — личный архив.
-          </p>
         </section>
 
         <section className="contact" id="contact" aria-labelledby="contact-title">
