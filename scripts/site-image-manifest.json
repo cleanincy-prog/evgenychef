@@ -978,18 +978,18 @@
       "hasAlpha": false
     },
     {
-      "name": "private-dinner",
+      "name": "private-dinner-wide-v2",
       "role": "format",
-      "source": "/media/event-formats/private-dinner.jpg",
+      "source": "/media/event-formats/private-dinner-wide-v2.png",
       "widths": [
         384,
         768
       ],
       "quality": 70,
-      "sourceWidth": 1152,
-      "sourceHeight": 1572,
-      "sourceBytes": 225717,
-      "sourceSha256": "ee5b4997d169cc854907fd4d84c0c823972fe63659a0c943da16577b0ecff8c4",
+      "sourceWidth": 1536,
+      "sourceHeight": 1024,
+      "sourceBytes": 1769595,
+      "sourceSha256": "965957f4fc48e45433018e4c7deed086c183c096d280655cdacace9161603959",
       "hasAlpha": false
     },
     {

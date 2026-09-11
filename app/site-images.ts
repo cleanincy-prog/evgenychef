@@ -393,11 +393,11 @@ export const siteImages = {
     "width": 1280,
     "height": 1160
   },
-  "private-dinner": {
-    "src": "/media/web/private-dinner-768.webp",
-    "srcSet": "/media/web/private-dinner-384.webp 384w, /media/web/private-dinner-768.webp 768w",
-    "width": 1152,
-    "height": 1572
+  "private-dinner-wide-v2": {
+    "src": "/media/web/private-dinner-wide-v2-768.webp",
+    "srcSet": "/media/web/private-dinner-wide-v2-384.webp 384w, /media/web/private-dinner-wide-v2-768.webp 768w",
+    "width": 1536,
+    "height": 1024
   },
   "private-events": {
     "src": "/media/web/private-events-768.webp",

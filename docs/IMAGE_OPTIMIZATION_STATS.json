@@ -1,9 +1,9 @@
 {
   "totals": {
-    "sourceUniqueCount": 68,
-    "sourceBytes": 14167565,
-    "smallestVariantBytes": 654552,
-    "largestVariantBytes": 1950318,
+    "sourceUniqueCount": 69,
+    "sourceBytes": 15937160,
+    "smallestVariantBytes": 655248,
+    "largestVariantBytes": 1951956,
     "collageSourceBytes": 8389641,
     "collageSmallestBytes": 311156,
     "collageLargestBytes": 776776
@@ -1310,22 +1310,22 @@
       ]
     },
     {
-      "name": "private-dinner",
+      "name": "private-dinner-wide-v2",
       "role": "format",
-      "source": "/media/event-formats/private-dinner.jpg",
-      "sourceBytes": 225717,
+      "source": "/media/event-formats/private-dinner-wide-v2.png",
+      "sourceBytes": 1769595,
       "variants": [
         {
-          "url": "/media/web/private-dinner-384.webp",
+          "url": "/media/web/private-dinner-wide-v2-384.webp",
           "requestedWidth": 384,
           "width": 384,
-          "bytes": 8366
+          "bytes": 9062
         },
         {
-          "url": "/media/web/private-dinner-768.webp",
+          "url": "/media/web/private-dinner-wide-v2-768.webp",
           "requestedWidth": 768,
           "width": 768,
-          "bytes": 18880
+          "bytes": 20518
         }
       ]
     },

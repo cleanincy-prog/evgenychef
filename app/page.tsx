@@ -22,7 +22,7 @@ const formats = [
   {
     id: "private-dinner", name: "Частный ужин",
     description: "Любимые блюда для близких или гастрономический маршрут в семь подач.",
-    ...siteImages["private-dinner"],
+    ...siteImages["private-dinner-wide-v2"],
     alt: "Евгений готовит блюдо на сковороде: видны лицо, руки и подача",
   },
   {

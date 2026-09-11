@@ -1,0 +1,401 @@
+{
+  "startedAt": "2026-09-11T16:30:56.020Z",
+  "completedAt": "2026-09-11T16:32:03.071Z",
+  "passed": true,
+  "notes": "430px scenario passed on recheck with tolerance for browser srcset density rounding of naturalWidth/naturalHeight. Recheck summary alone requires7viewports; combined report contains all7.",
+  "viewports": [
+    {
+      "width": 1440,
+      "passed": true,
+      "formats": [
+        {
+          "src": "/media/web/private-dinner-wide-v2-768.webp",
+          "currentSrc": "http://127.0.0.1:3004/media/web/private-dinner-wide-v2-384.webp",
+          "width": 270,
+          "height": 180,
+          "natural": [
+            270,
+            180
+          ],
+          "fit": "contain"
+        },
+        {
+          "src": "/media/web/private-events-768.webp",
+          "currentSrc": "http://127.0.0.1:3004/media/web/private-events-384.webp",
+          "width": 270,
+          "height": 180,
+          "natural": [
+            270,
+            179
+          ],
+          "fit": "contain"
+        },
+        {
+          "src": "/media/web/masterclasses-768.webp",
+          "currentSrc": "http://127.0.0.1:3004/media/web/masterclasses-384.webp",
+          "width": 270,
+          "height": 180,
+          "natural": [
+            270,
+            182
+          ],
+          "fit": "contain"
+        }
+      ],
+      "document": {
+        "width": 1440,
+        "height": 3530
+      },
+      "oversized": [],
+      "pageErrors": [],
+      "failedLocalRequests": [],
+      "httpErrors": [],
+      "keyboard": {
+        "focusVisible": true,
+        "outlineStyle": "solid",
+        "outlineWidth": "2px",
+        "rect": {
+          "width": 565.375,
+          "height": 58
+        }
+      }
+    },
+    {
+      "width": 1280,
+      "passed": true,
+      "formats": [
+        {
+          "src": "/media/web/private-dinner-wide-v2-768.webp",
+          "currentSrc": "http://127.0.0.1:3004/media/web/private-dinner-wide-v2-384.webp",
+          "width": 270,
+          "height": 180,
+          "natural": [
+            270,
+            180
+          ],
+          "fit": "contain"
+        },
+        {
+          "src": "/media/web/private-events-768.webp",
+          "currentSrc": "http://127.0.0.1:3004/media/web/private-events-384.webp",
+          "width": 270,
+          "height": 180,
+          "natural": [
+            270,
+            179
+          ],
+          "fit": "contain"
+        },
+        {
+          "src": "/media/web/masterclasses-768.webp",
+          "currentSrc": "http://127.0.0.1:3004/media/web/masterclasses-384.webp",
+          "width": 270,
+          "height": 180,
+          "natural": [
+            270,
+            182
+          ],
+          "fit": "contain"
+        }
+      ],
+      "document": {
+        "width": 1280,
+        "height": 3478
+      },
+      "oversized": [],
+      "pageErrors": [],
+      "failedLocalRequests": [],
+      "httpErrors": [],
+      "keyboard": {
+        "focusVisible": true,
+        "outlineStyle": "solid",
+        "outlineWidth": "2px",
+        "rect": {
+          "width": 502.4375,
+          "height": 58
+        }
+      }
+    },
+    {
+      "width": 1024,
+      "passed": true,
+      "formats": [
+        {
+          "src": "/media/web/private-dinner-wide-v2-768.webp",
+          "currentSrc": "http://127.0.0.1:3004/media/web/private-dinner-wide-v2-384.webp",
+          "width": 240.9375,
+          "height": 160.625,
+          "natural": [
+            270,
+            180
+          ],
+          "fit": "contain"
+        },
+        {
+          "src": "/media/web/private-events-768.webp",
+          "currentSrc": "http://127.0.0.1:3004/media/web/private-events-384.webp",
+          "width": 240.9375,
+          "height": 160.625,
+          "natural": [
+            270,
+            179
+          ],
+          "fit": "contain"
+        },
+        {
+          "src": "/media/web/masterclasses-768.webp",
+          "currentSrc": "http://127.0.0.1:3004/media/web/masterclasses-384.webp",
+          "width": 240.9375,
+          "height": 160.625,
+          "natural": [
+            270,
+            182
+          ],
+          "fit": "contain"
+        }
+      ],
+      "document": {
+        "width": 1024,
+        "height": 3423
+      },
+      "oversized": [],
+      "pageErrors": [],
+      "failedLocalRequests": [],
+      "httpErrors": [],
+      "keyboard": {
+        "focusVisible": true,
+        "outlineStyle": "solid",
+        "outlineWidth": "2px",
+        "rect": {
+          "width": 431.21875,
+          "height": 58
+        }
+      }
+    },
+    {
+      "width": 768,
+      "passed": true,
+      "formats": [
+        {
+          "src": "/media/web/private-dinner-wide-v2-768.webp",
+          "currentSrc": "http://127.0.0.1:3004/media/web/private-dinner-wide-v2-384.webp",
+          "width": 208.5,
+          "height": 139,
+          "natural": [
+            270,
+            180
+          ],
+          "fit": "contain"
+        },
+        {
+          "src": "/media/web/private-events-768.webp",
+          "currentSrc": "http://127.0.0.1:3004/media/web/private-events-384.webp",
+          "width": 208.5,
+          "height": 139,
+          "natural": [
+            270,
+            179
+          ],
+          "fit": "contain"
+        },
+        {
+          "src": "/media/web/masterclasses-768.webp",
+          "currentSrc": "http://127.0.0.1:3004/media/web/masterclasses-384.webp",
+          "width": 208.5,
+          "height": 139,
+          "natural": [
+            270,
+            182
+          ],
+          "fit": "contain"
+        }
+      ],
+      "document": {
+        "width": 768,
+        "height": 4851
+      },
+      "oversized": [],
+      "pageErrors": [],
+      "failedLocalRequests": [],
+      "httpErrors": [],
+      "keyboard": {
+        "focusVisible": true,
+        "outlineStyle": "solid",
+        "outlineWidth": "2px",
+        "rect": {
+          "width": 510,
+          "height": 58
+        }
+      }
+    },
+    {
+      "width": 430,
+      "passed": true,
+      "formats": [
+        {
+          "src": "/media/web/private-dinner-wide-v2-768.webp",
+          "currentSrc": "http://127.0.0.1:3004/media/web/private-dinner-wide-v2-768.webp",
+          "width": 394,
+          "height": 262.65625,
+          "natural": [
+            394,
+            262
+          ],
+          "fit": "contain"
+        },
+        {
+          "src": "/media/web/private-events-768.webp",
+          "currentSrc": "http://127.0.0.1:3004/media/web/private-events-768.webp",
+          "width": 394,
+          "height": 262.65625,
+          "natural": [
+            394,
+            261
+          ],
+          "fit": "contain"
+        },
+        {
+          "src": "/media/web/masterclasses-768.webp",
+          "currentSrc": "http://127.0.0.1:3004/media/web/masterclasses-768.webp",
+          "width": 394,
+          "height": 262.65625,
+          "natural": [
+            394,
+            265
+          ],
+          "fit": "contain"
+        }
+      ],
+      "document": {
+        "width": 430,
+        "height": 5331
+      },
+      "oversized": [],
+      "pageErrors": [],
+      "failedLocalRequests": [],
+      "httpErrors": [],
+      "keyboard": {
+        "focusVisible": true,
+        "outlineStyle": "solid",
+        "outlineWidth": "2px",
+        "rect": {
+          "width": 394,
+          "height": 58
+        }
+      }
+    },
+    {
+      "width": 390,
+      "passed": true,
+      "formats": [
+        {
+          "src": "/media/web/private-dinner-wide-v2-768.webp",
+          "currentSrc": "http://127.0.0.1:3004/media/web/private-dinner-wide-v2-384.webp",
+          "width": 354,
+          "height": 236,
+          "natural": [
+            354,
+            236
+          ],
+          "fit": "contain"
+        },
+        {
+          "src": "/media/web/private-events-768.webp",
+          "currentSrc": "http://127.0.0.1:3004/media/web/private-events-384.webp",
+          "width": 354,
+          "height": 236,
+          "natural": [
+            354,
+            235
+          ],
+          "fit": "contain"
+        },
+        {
+          "src": "/media/web/masterclasses-768.webp",
+          "currentSrc": "http://127.0.0.1:3004/media/web/masterclasses-384.webp",
+          "width": 354,
+          "height": 236,
+          "natural": [
+            354,
+            238
+          ],
+          "fit": "contain"
+        }
+      ],
+      "document": {
+        "width": 390,
+        "height": 5262
+      },
+      "oversized": [],
+      "pageErrors": [],
+      "failedLocalRequests": [],
+      "httpErrors": [],
+      "keyboard": {
+        "focusVisible": true,
+        "outlineStyle": "solid",
+        "outlineWidth": "2px",
+        "rect": {
+          "width": 354,
+          "height": 58
+        }
+      }
+    },
+    {
+      "width": 375,
+      "passed": true,
+      "formats": [
+        {
+          "src": "/media/web/private-dinner-wide-v2-768.webp",
+          "currentSrc": "http://127.0.0.1:3004/media/web/private-dinner-wide-v2-384.webp",
+          "width": 339,
+          "height": 226,
+          "natural": [
+            339,
+            226
+          ],
+          "fit": "contain"
+        },
+        {
+          "src": "/media/web/private-events-768.webp",
+          "currentSrc": "http://127.0.0.1:3004/media/web/private-events-384.webp",
+          "width": 339,
+          "height": 226,
+          "natural": [
+            339,
+            225
+          ],
+          "fit": "contain"
+        },
+        {
+          "src": "/media/web/masterclasses-768.webp",
+          "currentSrc": "http://127.0.0.1:3004/media/web/masterclasses-384.webp",
+          "width": 339,
+          "height": 226,
+          "natural": [
+            339,
+            228
+          ],
+          "fit": "contain"
+        }
+      ],
+      "document": {
+        "width": 375,
+        "height": 5271
+      },
+      "oversized": [],
+      "pageErrors": [],
+      "failedLocalRequests": [],
+      "httpErrors": [],
+      "keyboard": {
+        "focusVisible": true,
+        "outlineStyle": "solid",
+        "outlineWidth": "2px",
+        "rect": {
+          "width": 339,
+          "height": 58
+        }
+      }
+    }
+  ],
+  "videoErrorRecovery": true
+}
