@@ -1,9 +1,9 @@
 {
   "totals": {
     "sourceUniqueCount": 68,
-    "sourceBytes": 14167565,
-    "smallestVariantBytes": 654552,
-    "largestVariantBytes": 1950318,
+    "sourceBytes": 14505540,
+    "smallestVariantBytes": 657434,
+    "largestVariantBytes": 1957406,
     "collageSourceBytes": 8389641,
     "collageSmallestBytes": 311156,
     "collageLargestBytes": 776776
@@ -1270,22 +1270,22 @@
       ]
     },
     {
-      "name": "chef-hero-apron",
+      "name": "chef-hero-apron-cream",
       "role": "portrait",
-      "source": "/media/chef-hero-apron.jpg",
-      "sourceBytes": 57075,
+      "source": "/media/chef-hero-apron-cream.png",
+      "sourceBytes": 395050,
       "variants": [
         {
-          "url": "/media/web/chef-hero-apron-320.webp",
+          "url": "/media/web/chef-hero-apron-cream-320.webp",
           "requestedWidth": 320,
           "width": 320,
-          "bytes": 14858
+          "bytes": 17740
         },
         {
-          "url": "/media/web/chef-hero-apron-576.webp",
+          "url": "/media/web/chef-hero-apron-cream-576.webp",
           "requestedWidth": 576,
           "width": 576,
-          "bytes": 32766
+          "bytes": 39854
         }
       ]
     },
