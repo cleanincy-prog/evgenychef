@@ -66,7 +66,7 @@ export default function Home() {
   return <>
     <a className="skip-link" href="#main-content">Перейти к содержанию</a>
     <header className="site-header sheet" id="top">
-      <a className="wordmark" href="#top" aria-label="Евгений Грыбенюк — начало страницы">Evgen Grybenyk</a>
+      <a className="wordmark" href="#top" aria-label="Евгений Гребеник — начало страницы">Evgen Grebenik</a>
       <a className="header-action" href={instagramUrl} target="_blank" rel="noopener noreferrer">
         <span className="header-action-desktop">Обсудить вечер <span aria-hidden="true">↗</span></span>
         <span className="header-action-mobile">Instagram <span aria-hidden="true">↗</span></span>
@@ -74,7 +74,7 @@ export default function Home() {
       </a>
     </header>
     <main className="sheet" id="main-content" tabIndex={-1}>
-      <section className="hero" aria-label="Евгений Грыбенюк — ваш личный Мастер-Шеф на Кипре">
+      <section className="hero" aria-label="Евгений Гребеник — ваш личный Мастер-Шеф на Кипре">
         <div className="hero-frame">
           <div className="hero-collage" aria-hidden="true">
             <div className="hero-collage-grid">
@@ -91,8 +91,8 @@ export default function Home() {
             </div>
           </div>
           <div className="hero-identity">
-            <div className="hero-copy"><h1><span>Евгений</span><span>Грыбенюк —</span><em>ваш личный</em><span>Мастер-Шеф</span><span>на Кипре</span></h1></div>
-            <figure className="hero-portrait"><img {...siteImages["chef-hero-apron"]} sizes="(max-width: 620px) 56vw, 34vw" alt="Евгений Грыбенюк улыбается, стоя в полосатом поварском фартуке" fetchPriority="high" decoding="async" /></figure>
+            <div className="hero-copy"><h1><span>Евгений</span><span>Гребеник —</span><em>ваш личный</em><span>Мастер-Шеф</span><span>на Кипре</span></h1></div>
+            <figure className="hero-portrait"><img {...siteImages["chef-hero-apron"]} sizes="(max-width: 620px) 56vw, 34vw" alt="Евгений Гребеник улыбается, стоя в полосатом поварском фартуке" fetchPriority="high" decoding="async" /></figure>
           </div>
         </div>
         <div className="award-proof">
@@ -149,6 +149,6 @@ export default function Home() {
         </div>
       </section>
     </main>
-    <footer className="site-footer sheet"><a className="wordmark" href="#top">Evgen Grybenyk</a><a href={instagramUrl} target="_blank" rel="noopener noreferrer">Instagram @evg.chef</a></footer>
+    <footer className="site-footer sheet"><a className="wordmark" href="#top">Evgen Grebenik</a><a href={instagramUrl} target="_blank" rel="noopener noreferrer">Instagram @evg.chef</a></footer>
   </>;
 }

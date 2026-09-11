@@ -2,7 +2,7 @@
 
 | Local file | Source | Visible evidence | Rights status |
 |---|---|---|---|
-| `evgen-grybenyk-winner-envelope-2020.jpg` | [Fakty interview, 19 July 2020](https://fakty.ua/ru/349986-ya-byl-moralno-istocshen-neozhidannoe-priznanie-pobeditelya-mastershef-professionaly-foto); contemporaneous [KP coverage](https://kp.ua/culture/672544-pobedytel-mastershef-professyonaly-2-o-povarskoi-rezne-svadbe-potapa-y-nasty-y-zakulyse-teleshou) credits its finale photography to STB | Evgen Grybenyk in his season-two chef jacket holding the black branded winner envelope | User explicitly requested local site use on 2026-08-31. No commercial/promotional license or publication authorization is stored in the repository; confirm rights with STB/rightsholder before public commercial release. |
+| `evgen-grybenyk-winner-envelope-2020.jpg` | [Fakty interview, 19 July 2020](https://fakty.ua/ru/349986-ya-byl-moralno-istocshen-neozhidannoe-priznanie-pobeditelya-mastershef-professionaly-foto); contemporaneous [KP coverage](https://kp.ua/culture/672544-pobedytel-mastershef-professyonaly-2-o-povarskoi-rezne-svadbe-potapa-y-nasty-y-zakulyse-teleshou) credits its finale photography to STB | Evgen Grebenik in his season-two chef jacket holding the black branded winner envelope | User explicitly requested local site use on 2026-08-31. No commercial/promotional license or publication authorization is stored in the repository; confirm rights with STB/rightsholder before public commercial release. |
 
 The file is stored without identity edits or retouching. The active archive layout shows the complete
 1719:900 photograph with proportional `object-fit: contain`; it does not establish a cup, plate,
@@ -11,7 +11,7 @@ statuette, net payout or literal cash handover.
 # Culinary archive references
 
 The Pexels images below are retained as illustrative editorial references. They are not photographs of
-Evgen Grybenyk, his dishes, his clients or his travel. Their source JPEGs are not shipped; optimized
+Evgen Grebenik, his dishes, his clients or his travel. Their source JPEGs are not shipped; optimized
 local WebP derivatives remain in the archive but are no longer rendered by the active route. The active
 route uses the separately documented photoreal plate visualizations and original quiet-zone underlays.
 
@@ -35,7 +35,7 @@ Attribution is retained here voluntarily. All five source pages were checked and
 | `culinary-archive/05-pistachio-pastry.webp` | [Delicious Pistachio Pastry Held in Hand](https://www.pexels.com/photo/delicious-pistachio-pastry-held-in-hand-29380205/) | Valeria Boltneva | 5464 × 8192 JPEG | Centre crop to 3:4, resize to 960 × 1280, WebP quality 82 |
 
 Licence: [Pexels License](https://www.pexels.com/license/). The photographers and Pexels do not endorse
-Evgen Grybenyk or this website.
+Evgen Grebenik or this website.
 
 ## Historical facsimiles
 

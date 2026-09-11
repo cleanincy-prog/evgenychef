@@ -8,7 +8,7 @@
 - Production treatment: the real source photograph is preserved; only pixels outside the outer plate rim are made transparent, followed by delivery resizing and WebP encoding.
 - Rights note: commercial publication rights were not independently verified. User approval of the visual does not itself establish a reusable licence.
 
-This image is presented on the site only as an example of plate composition. It must not be described as a dish cooked, served or photographed by Evgen Grybenyk without separate confirmation.
+This image is presented on the site only as an example of plate composition. It must not be described as a dish cooked, served or photographed by Evgen Grebenik without separate confirmation.
 
 ## `personal-menu-duck-plate-cream-v2.webp` — 2026-09-11
 

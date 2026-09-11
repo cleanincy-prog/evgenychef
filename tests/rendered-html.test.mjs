@@ -51,7 +51,7 @@ test("serves the approved evening page as accessible Russian HTML", () => {
   assert.equal(tags(html, "html")[0]?.lang, "ru");
   assert.equal(tags(html, "h1").length, 1, "A single page identity is required");
   const text = visibleText(html);
-  for (const expected of ["Евгений", "Грыбенюк", "Mise en place", "Разговор", "Меню", "Подготовка", "Ваш вечер", "Начнём с вашего вечера", "Основной продукт", "Гарнир", "Текстуры", "Соус"]) {
+  for (const expected of ["Евгений", "Гребеник", "Mise en place", "Разговор", "Меню", "Подготовка", "Ваш вечер", "Начнём с вашего вечера", "Основной продукт", "Гарнир", "Текстуры", "Соус"]) {
     assert.ok(text.toLocaleLowerCase("ru").includes(expected.toLocaleLowerCase("ru")), `Missing rendered content: ${expected}`);
   }
   assert.ok(text.includes("В первом сообщении укажите дату, число гостей и формат"));
