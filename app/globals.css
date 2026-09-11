@@ -75,11 +75,14 @@ img { display: block; max-width: 100%; }
 .formats h2 > span { text-decoration: underline; text-decoration-color: var(--gold); text-decoration-thickness: 2px; text-underline-offset: .18em; text-decoration-skip-ink: auto; }
 .format-list, .process-list { padding: 0; margin: 0; list-style: none; }
 .format-list { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); align-items: start; gap: 44px; padding: 20px 24px 36px; }
-/* One paper sticker per service, from the user's approved complete-sticker mockup. */
-.format-row { --sticker-tilt: -1.4deg; grid-column: 1 / span 6; min-width: 0; padding: 10px; background: #fffdf7; border-radius: 10px; box-shadow: 0 3px 10px rgb(92 70 35 / 12%), 0 1px 2px rgb(92 70 35 / 6%); transform: rotate(var(--sticker-tilt)); }
+/* The selected paper-edge sticker uses the page color; only its cut edge and local shadow separate it. */
+.format-row { --sticker-tilt: -1.4deg; position: relative; isolation: isolate; grid-column: 1 / span 6; min-width: 0; padding: 10px; border-radius: 6px 8px 5px 7px; transform: rotate(var(--sticker-tilt)); }
+.format-row::before, .format-row::after { content: ""; position: absolute; pointer-events: none; }
+.format-row::before { z-index: -1; inset: 0; border-radius: inherit; background: var(--paper) url("/media/sticker-paper-edge.svg") center / 100% 100% no-repeat; }
+.format-row::after { z-index: -2; left: 4px; bottom: 3px; width: 57%; height: 28px; border-radius: 0 0 50% 6px; box-shadow: -3px 6px 6px rgb(92 70 35 / 20%); transform: rotate(-1deg); }
 .format-private-events { --sticker-tilt: 1.2deg; grid-column: 7 / span 6; margin-top: 48px; }
 .format-masterclasses { --sticker-tilt: -1deg; grid-column: 4 / span 6; }
-.format-image { width: 100%; aspect-ratio: 3 / 2; background: #fffdf7; border-radius: 3px; overflow: hidden; }
+.format-image { width: 100%; aspect-ratio: 3 / 2; background: var(--paper); border-radius: 3px; overflow: hidden; }
 .format-image img { display: block; width: 100%; height: 100%; object-fit: contain; object-position: center; }
 .format-caption { padding: 14px 12px 16px; }
 .format-caption h3 { font-size: clamp(32px, 2.8vw, 42px); line-height: 1.12; }
