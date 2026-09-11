@@ -21,13 +21,13 @@ const heroCollageWideCompact = new Set([
 const formats = [
   {
     id: "private-dinner", name: "Частный ужин",
-    description: "Любимые блюда для близких или гастрономический маршрут в семь подач.",
+    description: "Любимые блюда для близких — или гастрономический маршрут в\u00a0семь\u00a0подач.",
     ...siteImages["private-dinner-wide-v2"],
     alt: "Евгений готовит блюдо на сковороде: видны лицо, руки и подача",
   },
   {
     id: "private-events", name: "Приватные мероприятия",
-    description: "Небольшие закуски и блюда, которые удобно есть за разговором.",
+    description: "Закуски и блюда, которые удобно есть за разговором.",
     ...siteImages["private-events"],
     alt: "Евгений готовит блины на открытом воздухе перед гостями",
   },
@@ -105,14 +105,16 @@ export default function Home() {
         </div>
       </section>
       <section className="formats" aria-labelledby="formats-title">
-        <h2 id="formats-title">Какой будет ваш вечер?</h2>
-        <ol className="format-list">
-          {formats.map((format, index) => <li className={`format-row format-${format.id}`} key={format.id}>
-            <span className="format-number" aria-hidden="true">0{index + 1}</span>
-            <h3>{format.name}</h3><p>{format.description}</p>
-            <figure className="format-image"><img src={format.src} srcSet={format.srcSet} sizes="(max-width: 620px) calc(100vw - 36px), 270px" alt={format.alt} width={format.width} height={format.height} loading="lazy" decoding="async" /></figure>
+        <h2 id="formats-title"><span>Какой будет ваш вечер?</span></h2>
+        <ul className="format-list">
+          {formats.map(format => <li className={`format-row format-${format.id}`} key={format.id}>
+            <figure className="format-image"><img src={format.src} srcSet={format.srcSet} sizes="(max-width: 620px) calc(100vw - 64px), (max-width: 900px) 540px, (max-width: 1460px) calc(45.25vw - 66px), 594px" alt={format.alt} width={format.width} height={format.height} loading="lazy" decoding="async" /></figure>
+            <div className="format-caption">
+              <h3><span>{format.name}</span></h3>
+              <p>{format.description}</p>
+            </div>
           </li>)}
-        </ol>
+        </ul>
       </section>
       <section className="evening-plan" aria-labelledby="plan-title">
         <h2 id="plan-title">От разговора — <span>к вашему столу.</span></h2>

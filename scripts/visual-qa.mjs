@@ -9,7 +9,8 @@ const localUrl = new URL(process.env.LOCAL_URL || "http://127.0.0.1:3004");
 assert.equal(localUrl.protocol, "http:");
 assert.ok(["localhost", "127.0.0.1"].includes(localUrl.hostname), "Visual QA is restricted to localhost");
 assert.equal(localUrl.username + localUrl.password, "");
-const artifacts = path.join(root, "artifacts/photos-only-collage-2026-09-11");
+const artifacts = path.resolve(root, process.env.QA_OUTPUT || "artifacts/photos-only-collage-2026-09-11");
+assert.ok(artifacts.startsWith(path.join(root, "artifacts") + path.sep), "QA output must stay in project artifacts");
 const temporary = path.join(root, "work/.tmp");
 await mkdir(artifacts, { recursive: true });
 await mkdir(temporary, { recursive: true });
@@ -106,6 +107,49 @@ async function inspectLayout(page) {
   });
 }
 
+async function checkFormatStickers(page) {
+  const result = await page.locator(".formats").evaluate(section => {
+    const bounds = element => {
+      const r = element.getBoundingClientRect();
+      return { left: r.left, top: r.top + scrollY, right: r.right, bottom: r.bottom + scrollY };
+    };
+    return {
+      listType: section.querySelector(".format-list").tagName,
+      numbers: section.querySelectorAll(".format-number").length,
+      dates: section.querySelectorAll("time").length,
+      heading: bounds(section.querySelector("h2")),
+      nextSection: bounds(document.querySelector(".evening-plan")),
+      stickers: [...section.querySelectorAll(".format-row")].map(sticker => {
+        const photo = sticker.querySelector(".format-image");
+        const img = photo.querySelector("img");
+        const photoStyle = getComputedStyle(photo);
+        return {
+          title: sticker.querySelector("h3").textContent,
+          caption: sticker.querySelector(".format-caption p").textContent,
+          box: bounds(sticker),
+          photo: { width: parseFloat(photoStyle.width), height: parseFloat(photoStyle.height), fit: getComputedStyle(img).objectFit, loaded: img.complete && img.naturalWidth > 0, src: img.getAttribute("src") },
+        };
+      }),
+    };
+  });
+  assert.deepEqual(result.stickers.map(sticker => sticker.title), ["Частный ужин", "Приватные мероприятия", "Мастер-классы"]);
+  verify(result.listType === "UL" && result.numbers === 0 && result.dates === 0, "Formats are alternatives without numbers or dates");
+  const widths = result.stickers.map(sticker => sticker.photo.width);
+  verify(Math.max(...widths) - Math.min(...widths) < 1, "All sticker photos need equal display width");
+  for (const sticker of result.stickers) {
+    verify(Math.abs(sticker.photo.width / sticker.photo.height - 1.5) < 0.01 && sticker.photo.fit === "contain" && sticker.photo.loaded, "Full photos must load in true 3:2 windows without cropping");
+    verify(sticker.box.top >= result.heading.bottom + 8, "Sticker cannot cover the section heading");
+    verify(sticker.box.bottom + 12 <= result.nextSection.top, "Sticker cannot cover the next section");
+  }
+  for (let i = 0; i < result.stickers.length; i++) for (let j = i + 1; j < result.stickers.length; j++) {
+    const a = result.stickers[i].box, b = result.stickers[j].box;
+    const x = Math.min(a.right, b.right) - Math.max(a.left, b.left);
+    const y = Math.min(a.bottom, b.bottom) - Math.max(a.top, b.top);
+    verify(x <= 0 || y <= 0, "Rotated stickers cannot overlap each other");
+  }
+  return result;
+}
+
 async function checkKeyboard(page, width) {
   const button = page.locator(".instagram-button");
   verify(await button.count() === 1, "One final Instagram button is required");
@@ -196,6 +240,8 @@ try {
       verify(layout.links.every(link => link.targetExists), "Every internal link target must exist");
       verify(layout.video?.source === "/media/chef-story-img-5399-no-grill.mp4" && layout.video.poster === "/media/web/film-poster-540.webp", "The original film and poster must be retained");
       verify(layout.video.playsInline && !layout.video.autoplay && layout.video.paused, "The film must be inline and user initiated");
+      record.formats = await checkFormatStickers(page);
+      await page.locator(".formats").screenshot({ path: path.join(artifacts, `formats-${width}.png`), animations: "disabled" });
       await page.screenshot({ path: path.join(artifacts, `page-${width}.png`), fullPage: true, animations: "disabled" });
       await page.locator('.hero').screenshot({ path: path.join(artifacts, `hero-${width}.png`), animations: "disabled" });
       record.keyboard = await checkKeyboard(page, width);
