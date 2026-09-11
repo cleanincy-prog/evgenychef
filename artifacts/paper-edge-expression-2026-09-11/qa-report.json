@@ -1,0 +1,4359 @@
+{
+  "url": "http://127.0.0.1:3004",
+  "startedAt": "2026-09-11T18:41:31.515Z",
+  "browser": "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+  "profile": "/Users/dmitro/Documents/ChatGPT/Шеф4/work/.tmp/chrome-profile-Edi3KU",
+  "viewports": [
+    {
+      "width": 1440,
+      "passed": true,
+      "pageErrors": [],
+      "failedLocalRequests": [],
+      "cancelledLocalRequests": [],
+      "externalRequests": [],
+      "httpErrors": [],
+      "layout": {
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "document": {
+          "width": 1440,
+          "height": 4128
+        },
+        "bodyWidth": 1440,
+        "oversized": [],
+        "headings": [
+          {
+            "level": 1,
+            "text": "Евгений Грыбенюк — ваш личный Мастер-Шеф на Кипре"
+          },
+          {
+            "level": 2,
+            "text": "Какой будет ваш вечер?"
+          },
+          {
+            "level": 3,
+            "text": "Частный ужин"
+          },
+          {
+            "level": 3,
+            "text": "Приватные мероприятия"
+          },
+          {
+            "level": 3,
+            "text": "Мастер-классы"
+          },
+          {
+            "level": 2,
+            "text": "От разговора — к вашему столу."
+          },
+          {
+            "level": 3,
+            "text": "Разговор"
+          },
+          {
+            "level": 3,
+            "text": "Меню"
+          },
+          {
+            "level": 3,
+            "text": "Подготовка"
+          },
+          {
+            "level": 3,
+            "text": "Ваш вечер"
+          },
+          {
+            "level": 2,
+            "text": "Начнём с вашего вечера."
+          }
+        ],
+        "stations": [
+          {
+            "step": "01",
+            "text": "Разговор",
+            "box": {
+              "x": 68.40625,
+              "y": 2733.78125,
+              "width": 599.453125,
+              "height": 479,
+              "right": 667.859375,
+              "bottom": 3212.78125
+            }
+          },
+          {
+            "step": "02",
+            "text": "Меню",
+            "box": {
+              "x": 667.859375,
+              "y": 2733.78125,
+              "width": 703.71875,
+              "height": 479,
+              "right": 1371.578125,
+              "bottom": 3212.78125
+            }
+          },
+          {
+            "step": "03",
+            "text": "Подготовка",
+            "box": {
+              "x": 68.40625,
+              "y": 3212.78125,
+              "width": 599.453125,
+              "height": 626.25,
+              "right": 667.859375,
+              "bottom": 3839.03125
+            }
+          },
+          {
+            "step": "04",
+            "text": "Ваш вечер",
+            "box": {
+              "x": 667.859375,
+              "y": 3212.78125,
+              "width": 703.71875,
+              "height": 626.25,
+              "right": 1371.578125,
+              "bottom": 3839.03125
+            }
+          }
+        ],
+        "collage": {
+          "total": 63,
+          "unique": 63,
+          "visible": 63,
+          "visibleUnique": 63
+        },
+        "images": [
+          {
+            "src": "/media/web/hero-01-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-02-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-03-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-04-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-05-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-06-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-07-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-08-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-09-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-10-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-11-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-12-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-13-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-14-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-15-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-16-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-17-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-18-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-19-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-20-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-21-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-22-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-23-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-24-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-25-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-26-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-27-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-28-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-29-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-30-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-31-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-32-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-33-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-34-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-35-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-36-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-37-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-38-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-39-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-40-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-41-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-42-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-43-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-44-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-45-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-46-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-47-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-48-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-49-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-50-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-51-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-52-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-53-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-54-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-55-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-56-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-57-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-58-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-59-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-60-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-61-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-62-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-63-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/chef-hero-apron-576.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/masterchef-640.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/private-dinner-wide-v2-768.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/private-events-768.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/masterclasses-768.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/conversation-960.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/duck-plate-960.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/toast-960.webp",
+            "loaded": true,
+            "altPresent": true
+          }
+        ],
+        "plate": {
+          "source": "/media/web/duck-plate-960.webp",
+          "box": {
+            "x": 799.3125,
+            "y": 2936.203125,
+            "width": 421.65625,
+            "height": 400.171875,
+            "right": 1220.96875,
+            "bottom": 3336.375
+          },
+          "intrinsic": [
+            421,
+            390
+          ],
+          "objectFit": "contain",
+          "clips": []
+        },
+        "links": [
+          {
+            "href": "#main-content",
+            "text": "Перейти к содержанию",
+            "targetExists": true
+          },
+          {
+            "href": "#top",
+            "text": "Evgen Grybenyk",
+            "targetExists": true
+          },
+          {
+            "href": "https://www.instagram.com/evg.chef/",
+            "text": "Обсудить вечер ↗\nInstagram @evg.chef",
+            "targetExists": true
+          },
+          {
+            "href": "https://www.instagram.com/evg.chef/",
+            "text": "Написать в Instagram\n↗",
+            "targetExists": true
+          },
+          {
+            "href": "#top",
+            "text": "Evgen Grybenyk",
+            "targetExists": true
+          },
+          {
+            "href": "https://www.instagram.com/evg.chef/",
+            "text": "Instagram @evg.chef",
+            "targetExists": true
+          }
+        ],
+        "video": {
+          "source": "/media/chef-story-img-5399-no-grill.mp4",
+          "poster": "/media/web/film-poster-540.webp",
+          "autoplay": false,
+          "paused": true,
+          "controls": false,
+          "playsInline": true
+        },
+        "reducedMotion": true
+      },
+      "formats": {
+        "listType": "UL",
+        "numbers": 0,
+        "dates": 0,
+        "heading": {
+          "left": 68.40625,
+          "top": 1237.53125,
+          "right": 1371.59375,
+          "bottom": 1311.4375
+        },
+        "nextSection": {
+          "left": 68.40625,
+          "top": 2593.875,
+          "right": 1371.59375,
+          "bottom": 3839.03125
+        },
+        "stickers": [
+          {
+            "title": "Частный ужин",
+            "caption": "Любимые блюда для близких — или гастрономический маршрут в семь подач.",
+            "box": {
+              "left": 85.66899108886719,
+              "top": 1356.1229248046875,
+              "right": 704.7372283935547,
+              "bottom": 1929.6583251953125
+            },
+            "photo": {
+              "width": 585.594,
+              "height": 390.391,
+              "fit": "contain",
+              "loaded": true,
+              "src": "/media/web/private-dinner-wide-v2-768.webp"
+            }
+          },
+          {
+            "title": "Приватные мероприятия",
+            "caption": "Закуски и блюда, которые удобно есть за разговором.",
+            "box": {
+              "left": 736.5248413085938,
+              "top": 1405.1541748046875,
+              "right": 1353.06884765625,
+              "bottom": 1946.939453125
+            },
+            "photo": {
+              "width": 585.594,
+              "height": 390.391,
+              "fit": "contain",
+              "loaded": true,
+              "src": "/media/web/private-events-768.webp"
+            }
+          },
+          {
+            "title": "Мастер-классы",
+            "caption": "Готовим вместе, осваиваем приёмы и садимся за общий стол.",
+            "box": {
+              "left": 412.63116455078125,
+              "top": 1979.4119873046875,
+              "right": 1027.368896484375,
+              "bottom": 2519.119140625
+            },
+            "photo": {
+              "width": 585.594,
+              "height": 390.391,
+              "fit": "contain",
+              "loaded": true,
+              "src": "/media/web/masterclasses-768.webp"
+            }
+          }
+        ]
+      },
+      "keyboard": {
+        "focusVisible": true,
+        "outlineStyle": "solid",
+        "outlineWidth": "2px",
+        "rect": {
+          "width": 565.375,
+          "height": 58
+        }
+      },
+      "playback": {
+        "time": 0.206766,
+        "controls": true,
+        "videoWidth": 720,
+        "videoHeight": 1280,
+        "duration": 37.166667,
+        "currentSrc": "http://127.0.0.1:3004/media/chef-story-img-5399-no-grill.mp4",
+        "paused": {
+          "paused": true,
+          "time": 0.475673,
+          "error": null
+        }
+      }
+    },
+    {
+      "width": 1280,
+      "passed": true,
+      "pageErrors": [],
+      "failedLocalRequests": [],
+      "cancelledLocalRequests": [],
+      "externalRequests": [],
+      "httpErrors": [],
+      "layout": {
+        "viewport": {
+          "width": 1280,
+          "height": 1000
+        },
+        "document": {
+          "width": 1280,
+          "height": 3970
+        },
+        "bodyWidth": 1280,
+        "oversized": [],
+        "headings": [
+          {
+            "level": 1,
+            "text": "Евгений Грыбенюк — ваш личный Мастер-Шеф на Кипре"
+          },
+          {
+            "level": 2,
+            "text": "Какой будет ваш вечер?"
+          },
+          {
+            "level": 3,
+            "text": "Частный ужин"
+          },
+          {
+            "level": 3,
+            "text": "Приватные мероприятия"
+          },
+          {
+            "level": 3,
+            "text": "Мастер-классы"
+          },
+          {
+            "level": 2,
+            "text": "От разговора — к вашему столу."
+          },
+          {
+            "level": 3,
+            "text": "Разговор"
+          },
+          {
+            "level": 3,
+            "text": "Меню"
+          },
+          {
+            "level": 3,
+            "text": "Подготовка"
+          },
+          {
+            "level": 3,
+            "text": "Ваш вечер"
+          },
+          {
+            "level": 2,
+            "text": "Начнём с вашего вечера."
+          }
+        ],
+        "stations": [
+          {
+            "step": "01",
+            "text": "Разговор",
+            "box": {
+              "x": 60.796875,
+              "y": 2582.5625,
+              "width": 532.859375,
+              "height": 476,
+              "right": 593.65625,
+              "bottom": 3058.5625
+            }
+          },
+          {
+            "step": "02",
+            "text": "Меню",
+            "box": {
+              "x": 593.65625,
+              "y": 2582.5625,
+              "width": 625.515625,
+              "height": 476,
+              "right": 1219.171875,
+              "bottom": 3058.5625
+            }
+          },
+          {
+            "step": "03",
+            "text": "Подготовка",
+            "box": {
+              "x": 60.796875,
+              "y": 3058.5625,
+              "width": 532.859375,
+              "height": 622.40625,
+              "right": 593.65625,
+              "bottom": 3680.96875
+            }
+          },
+          {
+            "step": "04",
+            "text": "Ваш вечер",
+            "box": {
+              "x": 593.65625,
+              "y": 3058.5625,
+              "width": 625.515625,
+              "height": 622.40625,
+              "right": 1219.171875,
+              "bottom": 3680.96875
+            }
+          }
+        ],
+        "collage": {
+          "total": 63,
+          "unique": 63,
+          "visible": 63,
+          "visibleUnique": 63
+        },
+        "images": [
+          {
+            "src": "/media/web/hero-01-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-02-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-03-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-04-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-05-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-06-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-07-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-08-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-09-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-10-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-11-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-12-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-13-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-14-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-15-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-16-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-17-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-18-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-19-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-20-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-21-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-22-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-23-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-24-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-25-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-26-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-27-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-28-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-29-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-30-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-31-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-32-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-33-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-34-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-35-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-36-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-37-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-38-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-39-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-40-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-41-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-42-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-43-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-44-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-45-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-46-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-47-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-48-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-49-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-50-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-51-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-52-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-53-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-54-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-55-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-56-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-57-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-58-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-59-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-60-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-61-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-62-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-63-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/chef-hero-apron-576.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/masterchef-640.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/private-dinner-wide-v2-768.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/private-events-768.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/masterclasses-768.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/conversation-960.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/duck-plate-960.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/toast-960.webp",
+            "loaded": true,
+            "altPresent": true
+          }
+        ],
+        "plate": {
+          "source": "/media/web/duck-plate-960.webp",
+          "box": {
+            "x": 710.5,
+            "y": 2771.203125,
+            "width": 374.796875,
+            "height": 355.703125,
+            "right": 1085.296875,
+            "bottom": 3126.90625
+          },
+          "intrinsic": [
+            374,
+            346
+          ],
+          "objectFit": "contain",
+          "clips": []
+        },
+        "links": [
+          {
+            "href": "#main-content",
+            "text": "Перейти к содержанию",
+            "targetExists": true
+          },
+          {
+            "href": "#top",
+            "text": "Evgen Grybenyk",
+            "targetExists": true
+          },
+          {
+            "href": "https://www.instagram.com/evg.chef/",
+            "text": "Обсудить вечер ↗\nInstagram @evg.chef",
+            "targetExists": true
+          },
+          {
+            "href": "https://www.instagram.com/evg.chef/",
+            "text": "Написать в Instagram\n↗",
+            "targetExists": true
+          },
+          {
+            "href": "#top",
+            "text": "Evgen Grybenyk",
+            "targetExists": true
+          },
+          {
+            "href": "https://www.instagram.com/evg.chef/",
+            "text": "Instagram @evg.chef",
+            "targetExists": true
+          }
+        ],
+        "video": {
+          "source": "/media/chef-story-img-5399-no-grill.mp4",
+          "poster": "/media/web/film-poster-540.webp",
+          "autoplay": false,
+          "paused": true,
+          "controls": false,
+          "playsInline": true
+        },
+        "reducedMotion": true
+      },
+      "formats": {
+        "listType": "UL",
+        "numbers": 0,
+        "dates": 0,
+        "heading": {
+          "left": 60.796875,
+          "top": 1207.34375,
+          "right": 1219.1875,
+          "bottom": 1274
+        },
+        "nextSection": {
+          "left": 60.796875,
+          "top": 2449.90625,
+          "right": 1219.1875,
+          "bottom": 3680.96875
+        },
+        "stickers": [
+          {
+            "title": "Частный ужин",
+            "caption": "Любимые блюда для близких — или гастрономический маршрут в семь подач.",
+            "box": {
+              "left": 78.69950866699219,
+              "top": 1319.56201171875,
+              "right": 624.0817108154297,
+              "bottom": 1838.07861328125
+            },
+            "photo": {
+              "width": 513.188,
+              "height": 342.125,
+              "fit": "contain",
+              "loaded": true,
+              "src": "/media/web/private-dinner-wide-v2-768.webp"
+            }
+          },
+          {
+            "title": "Приватные мероприятия",
+            "caption": "Закуски и блюда, которые удобно есть за разговором.",
+            "box": {
+              "left": 657.0590209960938,
+              "top": 1368.4688720703125,
+              "right": 1200.11279296875,
+              "bottom": 1855.484130859375
+            },
+            "photo": {
+              "width": 513.203,
+              "height": 342.125,
+              "fit": "contain",
+              "loaded": true,
+              "src": "/media/web/private-events-768.webp"
+            }
+          },
+          {
+            "title": "Мастер-классы",
+            "caption": "Готовим вместе, осваиваем приёмы и садимся за общий стол.",
+            "box": {
+              "left": 369.2779541015625,
+              "top": 1889.336669921875,
+              "right": 910.6907958984375,
+              "bottom": 2374.522705078125
+            },
+            "photo": {
+              "width": 513.188,
+              "height": 342.125,
+              "fit": "contain",
+              "loaded": true,
+              "src": "/media/web/masterclasses-768.webp"
+            }
+          }
+        ]
+      },
+      "keyboard": {
+        "focusVisible": true,
+        "outlineStyle": "solid",
+        "outlineWidth": "2px",
+        "rect": {
+          "width": 502.4375,
+          "height": 58
+        }
+      }
+    },
+    {
+      "width": 1024,
+      "passed": true,
+      "pageErrors": [],
+      "failedLocalRequests": [],
+      "cancelledLocalRequests": [],
+      "externalRequests": [],
+      "httpErrors": [],
+      "layout": {
+        "viewport": {
+          "width": 1024,
+          "height": 1000
+        },
+        "document": {
+          "width": 1024,
+          "height": 3831
+        },
+        "bodyWidth": 1024,
+        "oversized": [],
+        "headings": [
+          {
+            "level": 1,
+            "text": "Евгений Грыбенюк — ваш личный Мастер-Шеф на Кипре"
+          },
+          {
+            "level": 2,
+            "text": "Какой будет ваш вечер?"
+          },
+          {
+            "level": 3,
+            "text": "Частный ужин"
+          },
+          {
+            "level": 3,
+            "text": "Приватные мероприятия"
+          },
+          {
+            "level": 3,
+            "text": "Мастер-классы"
+          },
+          {
+            "level": 2,
+            "text": "От разговора — к вашему столу."
+          },
+          {
+            "level": 3,
+            "text": "Разговор"
+          },
+          {
+            "level": 3,
+            "text": "Меню"
+          },
+          {
+            "level": 3,
+            "text": "Подготовка"
+          },
+          {
+            "level": 3,
+            "text": "Ваш вечер"
+          },
+          {
+            "level": 2,
+            "text": "Начнём с вашего вечера."
+          }
+        ],
+        "stations": [
+          {
+            "step": "01",
+            "text": "Разговор",
+            "box": {
+              "x": 48.640625,
+              "y": 2535.265625,
+              "width": 426.28125,
+              "height": 414,
+              "right": 474.921875,
+              "bottom": 2949.265625
+            }
+          },
+          {
+            "step": "02",
+            "text": "Меню",
+            "box": {
+              "x": 474.921875,
+              "y": 2535.265625,
+              "width": 500.421875,
+              "height": 414,
+              "right": 975.34375,
+              "bottom": 2949.265625
+            }
+          },
+          {
+            "step": "03",
+            "text": "Подготовка",
+            "box": {
+              "x": 48.640625,
+              "y": 2949.265625,
+              "width": 426.28125,
+              "height": 593.0625,
+              "right": 474.921875,
+              "bottom": 3542.328125
+            }
+          },
+          {
+            "step": "04",
+            "text": "Ваш вечер",
+            "box": {
+              "x": 474.921875,
+              "y": 2949.265625,
+              "width": 500.421875,
+              "height": 593.0625,
+              "right": 975.34375,
+              "bottom": 3542.328125
+            }
+          }
+        ],
+        "collage": {
+          "total": 63,
+          "unique": 63,
+          "visible": 63,
+          "visibleUnique": 63
+        },
+        "images": [
+          {
+            "src": "/media/web/hero-01-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-02-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-03-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-04-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-05-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-06-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-07-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-08-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-09-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-10-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-11-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-12-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-13-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-14-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-15-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-16-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-17-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-18-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-19-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-20-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-21-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-22-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-23-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-24-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-25-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-26-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-27-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-28-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-29-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-30-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-31-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-32-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-33-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-34-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-35-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-36-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-37-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-38-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-39-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-40-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-41-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-42-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-43-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-44-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-45-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-46-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-47-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-48-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-49-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-50-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-51-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-52-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-53-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-54-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-55-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-56-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-57-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-58-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-59-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-60-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-61-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-62-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-63-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/chef-hero-apron-576.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/masterchef-640.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/private-dinner-wide-v2-768.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/private-events-768.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/masterclasses-768.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/conversation-960.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/duck-plate-960.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/toast-960.webp",
+            "loaded": true,
+            "altPresent": true
+          }
+        ],
+        "plate": {
+          "source": "/media/web/duck-plate-960.webp",
+          "box": {
+            "x": 568.40625,
+            "y": 2696.375,
+            "width": 299.84375,
+            "height": 284.546875,
+            "right": 868.25,
+            "bottom": 2980.921875
+          },
+          "intrinsic": [
+            299,
+            277
+          ],
+          "objectFit": "contain",
+          "clips": []
+        },
+        "links": [
+          {
+            "href": "#main-content",
+            "text": "Перейти к содержанию",
+            "targetExists": true
+          },
+          {
+            "href": "#top",
+            "text": "Evgen Grybenyk",
+            "targetExists": true
+          },
+          {
+            "href": "https://www.instagram.com/evg.chef/",
+            "text": "Обсудить вечер ↗\nInstagram @evg.chef",
+            "targetExists": true
+          },
+          {
+            "href": "https://www.instagram.com/evg.chef/",
+            "text": "Написать в Instagram\n↗",
+            "targetExists": true
+          },
+          {
+            "href": "#top",
+            "text": "Evgen Grybenyk",
+            "targetExists": true
+          },
+          {
+            "href": "https://www.instagram.com/evg.chef/",
+            "text": "Instagram @evg.chef",
+            "targetExists": true
+          }
+        ],
+        "video": {
+          "source": "/media/chef-story-img-5399-no-grill.mp4",
+          "poster": "/media/web/film-poster-540.webp",
+          "autoplay": false,
+          "paused": true,
+          "controls": false,
+          "playsInline": true
+        },
+        "reducedMotion": true
+      },
+      "formats": {
+        "listType": "UL",
+        "numbers": 0,
+        "dates": 0,
+        "heading": {
+          "left": 48.640625,
+          "top": 1328.171875,
+          "right": 975.359375,
+          "bottom": 1381.484375
+        },
+        "nextSection": {
+          "left": 48.640625,
+          "top": 2415.953125,
+          "right": 975.359375,
+          "bottom": 3542.328125
+        },
+        "stickers": [
+          {
+            "title": "Частный ужин",
+            "caption": "Любимые блюда для близких — или гастрономический маршрут в семь подач.",
+            "box": {
+              "left": 67.5876235961914,
+              "top": 1428.4483642578125,
+              "right": 495.05301666259766,
+              "bottom": 1857.2547607421875
+            },
+            "photo": {
+              "width": 397.359,
+              "height": 264.906,
+              "fit": "contain",
+              "loaded": true,
+              "src": "/media/web/private-dinner-wide-v2-768.webp"
+            }
+          },
+          {
+            "title": "Приватные мероприятия",
+            "caption": "Закуски и блюда, которые удобно есть за разговором.",
+            "box": {
+              "left": 529.94384765625,
+              "top": 1477.1571044921875,
+              "right": 955.41552734375,
+              "bottom": 1877.5460205078125
+            },
+            "photo": {
+              "width": 397.359,
+              "height": 264.906,
+              "fit": "contain",
+              "loaded": true,
+              "src": "/media/web/private-events-768.webp"
+            }
+          },
+          {
+            "title": "Мастер-классы",
+            "caption": "Готовим вместе, осваиваем приёмы и садимся за общий стол.",
+            "box": {
+              "left": 299.6903076171875,
+              "top": 1913.608642578125,
+              "right": 724.2940673828125,
+              "bottom": 2339.563232421875
+            },
+            "photo": {
+              "width": 397.359,
+              "height": 264.906,
+              "fit": "contain",
+              "loaded": true,
+              "src": "/media/web/masterclasses-768.webp"
+            }
+          }
+        ]
+      },
+      "keyboard": {
+        "focusVisible": true,
+        "outlineStyle": "solid",
+        "outlineWidth": "2px",
+        "rect": {
+          "width": 431.21875,
+          "height": 58
+        }
+      }
+    },
+    {
+      "width": 768,
+      "passed": true,
+      "pageErrors": [],
+      "failedLocalRequests": [],
+      "cancelledLocalRequests": [],
+      "externalRequests": [],
+      "httpErrors": [],
+      "layout": {
+        "viewport": {
+          "width": 768,
+          "height": 900
+        },
+        "document": {
+          "width": 768,
+          "height": 5955
+        },
+        "bodyWidth": 768,
+        "oversized": [],
+        "headings": [
+          {
+            "level": 1,
+            "text": "Евгений Грыбенюк — ваш личный Мастер-Шеф на Кипре"
+          },
+          {
+            "level": 2,
+            "text": "Какой будет ваш вечер?"
+          },
+          {
+            "level": 3,
+            "text": "Частный ужин"
+          },
+          {
+            "level": 3,
+            "text": "Приватные мероприятия"
+          },
+          {
+            "level": 3,
+            "text": "Мастер-классы"
+          },
+          {
+            "level": 2,
+            "text": "От разговора — к вашему столу."
+          },
+          {
+            "level": 3,
+            "text": "Разговор"
+          },
+          {
+            "level": 3,
+            "text": "Меню"
+          },
+          {
+            "level": 3,
+            "text": "Подготовка"
+          },
+          {
+            "level": 3,
+            "text": "Ваш вечер"
+          },
+          {
+            "level": 2,
+            "text": "Начнём с вашего вечера."
+          }
+        ],
+        "stations": [
+          {
+            "step": "01",
+            "text": "Разговор",
+            "box": {
+              "x": 36.484375,
+              "y": 3072.4375,
+              "width": 695.03125,
+              "height": 447.3125,
+              "right": 731.515625,
+              "bottom": 3519.75
+            }
+          },
+          {
+            "step": "02",
+            "text": "Меню",
+            "box": {
+              "x": 36.484375,
+              "y": 3519.75,
+              "width": 695.03125,
+              "height": 959.5,
+              "right": 731.515625,
+              "bottom": 4479.25
+            }
+          },
+          {
+            "step": "03",
+            "text": "Подготовка",
+            "box": {
+              "x": 36.484375,
+              "y": 4479.25,
+              "width": 695.03125,
+              "height": 699.90625,
+              "right": 731.515625,
+              "bottom": 5179.15625
+            }
+          },
+          {
+            "step": "04",
+            "text": "Ваш вечер",
+            "box": {
+              "x": 36.484375,
+              "y": 5179.15625,
+              "width": 695.03125,
+              "height": 409.640625,
+              "right": 731.515625,
+              "bottom": 5588.796875
+            }
+          }
+        ],
+        "collage": {
+          "total": 63,
+          "unique": 63,
+          "visible": 63,
+          "visibleUnique": 63
+        },
+        "images": [
+          {
+            "src": "/media/web/hero-01-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-02-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-03-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-04-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-05-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-06-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-07-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-08-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-09-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-10-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-11-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-12-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-13-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-14-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-15-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-16-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-17-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-18-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-19-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-20-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-21-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-22-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-23-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-24-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-25-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-26-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-27-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-28-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-29-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-30-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-31-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-32-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-33-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-34-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-35-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-36-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-37-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-38-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-39-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-40-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-41-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-42-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-43-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-44-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-45-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-46-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-47-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-48-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-49-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-50-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-51-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-52-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-53-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-54-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-55-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-56-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-57-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-58-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-59-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-60-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-61-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-62-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-63-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/chef-hero-apron-576.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/masterchef-640.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/private-dinner-wide-v2-768.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/private-events-768.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/masterclasses-768.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/conversation-960.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/duck-plate-960.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/toast-960.webp",
+            "loaded": true,
+            "altPresent": true
+          }
+        ],
+        "plate": {
+          "source": "/media/web/duck-plate-960.webp",
+          "box": {
+            "x": 74.484375,
+            "y": 3786.65625,
+            "width": 600,
+            "height": 516,
+            "right": 674.484375,
+            "bottom": 4302.65625
+          },
+          "intrinsic": [
+            600,
+            555
+          ],
+          "objectFit": "contain",
+          "clips": []
+        },
+        "links": [
+          {
+            "href": "#main-content",
+            "text": "Перейти к содержанию",
+            "targetExists": true
+          },
+          {
+            "href": "#top",
+            "text": "Evgen Grybenyk",
+            "targetExists": true
+          },
+          {
+            "href": "https://www.instagram.com/evg.chef/",
+            "text": "Обсудить вечер ↗\nInstagram @evg.chef",
+            "targetExists": true
+          },
+          {
+            "href": "https://www.instagram.com/evg.chef/",
+            "text": "Написать в Instagram\n↗",
+            "targetExists": true
+          },
+          {
+            "href": "#top",
+            "text": "Evgen Grybenyk",
+            "targetExists": true
+          },
+          {
+            "href": "https://www.instagram.com/evg.chef/",
+            "text": "Instagram @evg.chef",
+            "targetExists": true
+          }
+        ],
+        "video": {
+          "source": "/media/chef-story-img-5399-no-grill.mp4",
+          "poster": "/media/web/film-poster-540.webp",
+          "autoplay": false,
+          "paused": true,
+          "controls": false,
+          "playsInline": true
+        },
+        "reducedMotion": true
+      },
+      "formats": {
+        "listType": "UL",
+        "numbers": 0,
+        "dates": 0,
+        "heading": {
+          "left": 36.484375,
+          "top": 1258.359375,
+          "right": 731.515625,
+          "bottom": 1303.15625
+        },
+        "nextSection": {
+          "left": 36.484375,
+          "top": 2992.640625,
+          "right": 731.515625,
+          "bottom": 5588.796875
+        },
+        "stickers": [
+          {
+            "title": "Частный ужин",
+            "caption": "Любимые блюда для близких — или гастрономический маршрут в семь подач.",
+            "box": {
+              "left": 50.29098892211914,
+              "top": 1346.3919677734375,
+              "right": 622.6777076721191,
+              "bottom": 1873.748779296875
+            },
+            "photo": {
+              "width": 540,
+              "height": 360,
+              "fit": "contain",
+              "loaded": true,
+              "src": "/media/web/private-dinner-wide-v2-768.webp"
+            }
+          },
+          {
+            "title": "Приватные мероприятия",
+            "caption": "Закуски и блюда, которые удобно есть за разговором.",
+            "box": {
+              "left": 146.47935485839844,
+              "top": 1899.173828125,
+              "right": 716.5518646240234,
+              "bottom": 2397.623046875
+            },
+            "photo": {
+              "width": 540,
+              "height": 360,
+              "fit": "contain",
+              "loaded": true,
+              "src": "/media/web/private-events-768.webp"
+            }
+          },
+          {
+            "title": "Мастер-классы",
+            "caption": "Готовим вместе, осваиваем приёмы и садимся за общий стол.",
+            "box": {
+              "left": 99.79447937011719,
+              "top": 2424.962890625,
+              "right": 668.2054901123047,
+              "bottom": 2921.490234375
+            },
+            "photo": {
+              "width": 540,
+              "height": 360,
+              "fit": "contain",
+              "loaded": true,
+              "src": "/media/web/masterclasses-768.webp"
+            }
+          }
+        ]
+      },
+      "keyboard": {
+        "focusVisible": true,
+        "outlineStyle": "solid",
+        "outlineWidth": "2px",
+        "rect": {
+          "width": 510,
+          "height": 58
+        }
+      }
+    },
+    {
+      "width": 430,
+      "passed": true,
+      "pageErrors": [],
+      "failedLocalRequests": [],
+      "cancelledLocalRequests": [],
+      "externalRequests": [],
+      "httpErrors": [],
+      "layout": {
+        "viewport": {
+          "width": 430,
+          "height": 900
+        },
+        "document": {
+          "width": 430,
+          "height": 5393
+        },
+        "bodyWidth": 430,
+        "oversized": [],
+        "headings": [
+          {
+            "level": 1,
+            "text": "Евгений Грыбенюк — ваш личный Мастер-Шеф на Кипре"
+          },
+          {
+            "level": 2,
+            "text": "Какой будет ваш вечер?"
+          },
+          {
+            "level": 3,
+            "text": "Частный ужин"
+          },
+          {
+            "level": 3,
+            "text": "Приватные мероприятия"
+          },
+          {
+            "level": 3,
+            "text": "Мастер-классы"
+          },
+          {
+            "level": 2,
+            "text": "От разговора — к вашему столу."
+          },
+          {
+            "level": 3,
+            "text": "Разговор"
+          },
+          {
+            "level": 3,
+            "text": "Меню"
+          },
+          {
+            "level": 3,
+            "text": "Подготовка"
+          },
+          {
+            "level": 3,
+            "text": "Ваш вечер"
+          },
+          {
+            "level": 2,
+            "text": "Начнём с вашего вечера."
+          }
+        ],
+        "stations": [
+          {
+            "step": "01",
+            "text": "Разговор",
+            "box": {
+              "x": 18,
+              "y": 2947.1875,
+              "width": 394,
+              "height": 379.828125,
+              "right": 412,
+              "bottom": 3327.015625
+            }
+          },
+          {
+            "step": "02",
+            "text": "Меню",
+            "box": {
+              "x": 18,
+              "y": 3327.015625,
+              "width": 394,
+              "height": 750.109375,
+              "right": 412,
+              "bottom": 4077.125
+            }
+          },
+          {
+            "step": "03",
+            "text": "Подготовка",
+            "box": {
+              "x": 18,
+              "y": 4077.125,
+              "width": 394,
+              "height": 624.421875,
+              "right": 412,
+              "bottom": 4701.546875
+            }
+          },
+          {
+            "step": "04",
+            "text": "Ваш вечер",
+            "box": {
+              "x": 18,
+              "y": 4701.546875,
+              "width": 394,
+              "height": 349.828125,
+              "right": 412,
+              "bottom": 5051.375
+            }
+          }
+        ],
+        "collage": {
+          "total": 63,
+          "unique": 63,
+          "visible": 63,
+          "visibleUnique": 63
+        },
+        "images": [
+          {
+            "src": "/media/web/hero-01-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-02-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-03-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-04-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-05-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-06-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-07-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-08-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-09-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-10-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-11-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-12-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-13-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-14-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-15-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-16-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-17-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-18-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-19-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-20-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-21-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-22-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-23-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-24-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-25-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-26-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-27-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-28-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-29-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-30-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-31-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-32-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-33-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-34-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-35-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-36-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-37-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-38-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-39-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-40-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-41-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-42-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-43-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-44-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-45-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-46-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-47-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-48-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-49-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-50-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-51-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-52-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-53-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-54-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-55-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-56-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-57-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-58-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-59-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-60-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-61-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-62-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-63-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/chef-hero-apron-576.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/masterchef-640.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/private-dinner-wide-v2-768.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/private-events-768.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/masterclasses-768.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/conversation-960.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/duck-plate-960.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/toast-960.webp",
+            "loaded": true,
+            "altPresent": true
+          }
+        ],
+        "plate": {
+          "source": "/media/web/duck-plate-960.webp",
+          "box": {
+            "x": 51,
+            "y": 3592.75,
+            "width": 361,
+            "height": 310.453125,
+            "right": 412,
+            "bottom": 3903.203125
+          },
+          "intrinsic": [
+            361,
+            333
+          ],
+          "objectFit": "contain",
+          "clips": []
+        },
+        "links": [
+          {
+            "href": "#main-content",
+            "text": "Перейти к содержанию",
+            "targetExists": true
+          },
+          {
+            "href": "#top",
+            "text": "Evgen Grybenyk",
+            "targetExists": true
+          },
+          {
+            "href": "https://www.instagram.com/evg.chef/",
+            "text": "Instagram ↗",
+            "targetExists": true
+          },
+          {
+            "href": "https://www.instagram.com/evg.chef/",
+            "text": "Написать в Instagram\n↗",
+            "targetExists": true
+          },
+          {
+            "href": "#top",
+            "text": "Evgen Grybenyk",
+            "targetExists": true
+          },
+          {
+            "href": "https://www.instagram.com/evg.chef/",
+            "text": "Instagram @evg.chef",
+            "targetExists": true
+          }
+        ],
+        "video": {
+          "source": "/media/chef-story-img-5399-no-grill.mp4",
+          "poster": "/media/web/film-poster-540.webp",
+          "autoplay": false,
+          "paused": true,
+          "controls": false,
+          "playsInline": true
+        },
+        "reducedMotion": true
+      },
+      "formats": {
+        "listType": "UL",
+        "numbers": 0,
+        "dates": 0,
+        "heading": {
+          "left": 18,
+          "top": 1450.5,
+          "right": 412,
+          "bottom": 1496.234375
+        },
+        "nextSection": {
+          "left": 18,
+          "top": 2827.71875,
+          "right": 412,
+          "bottom": 5051.375
+        },
+        "stickers": [
+          {
+            "title": "Частный ужин",
+            "caption": "Любимые блюда для близких — или гастрономический маршрут в семь подач.",
+            "box": {
+              "left": 19.959917068481445,
+              "top": 1532.277099609375,
+              "right": 410.0400562286377,
+              "bottom": 1930.019775390625
+            },
+            "photo": {
+              "width": 366,
+              "height": 244,
+              "fit": "contain",
+              "loaded": true,
+              "src": "/media/web/private-dinner-wide-v2-768.webp"
+            }
+          },
+          {
+            "title": "Приватные мероприятия",
+            "caption": "Закуски и блюда, которые удобно есть за разговором.",
+            "box": {
+              "left": 20.627370834350586,
+              "top": 1952.7587890625,
+              "right": 409.3726100921631,
+              "bottom": 2349.1943359375
+            },
+            "photo": {
+              "width": 366,
+              "height": 244,
+              "fit": "contain",
+              "loaded": true,
+              "src": "/media/web/private-events-768.webp"
+            }
+          },
+          {
+            "title": "Мастер-классы",
+            "caption": "Готовим вместе, осваиваем приёмы и садимся за общий стол.",
+            "box": {
+              "left": 21.297191619873047,
+              "top": 2373.242919921875,
+              "right": 408.70283126831055,
+              "bottom": 2768.36669921875
+            },
+            "photo": {
+              "width": 366,
+              "height": 244,
+              "fit": "contain",
+              "loaded": true,
+              "src": "/media/web/masterclasses-768.webp"
+            }
+          }
+        ]
+      },
+      "keyboard": {
+        "focusVisible": true,
+        "outlineStyle": "solid",
+        "outlineWidth": "2px",
+        "rect": {
+          "width": 394,
+          "height": 58
+        }
+      }
+    },
+    {
+      "width": 390,
+      "passed": true,
+      "pageErrors": [],
+      "failedLocalRequests": [],
+      "cancelledLocalRequests": [],
+      "externalRequests": [],
+      "httpErrors": [],
+      "layout": {
+        "viewport": {
+          "width": 390,
+          "height": 900
+        },
+        "document": {
+          "width": 390,
+          "height": 5324
+        },
+        "bodyWidth": 390,
+        "oversized": [],
+        "headings": [
+          {
+            "level": 1,
+            "text": "Евгений Грыбенюк — ваш личный Мастер-Шеф на Кипре"
+          },
+          {
+            "level": 2,
+            "text": "Какой будет ваш вечер?"
+          },
+          {
+            "level": 3,
+            "text": "Частный ужин"
+          },
+          {
+            "level": 3,
+            "text": "Приватные мероприятия"
+          },
+          {
+            "level": 3,
+            "text": "Мастер-классы"
+          },
+          {
+            "level": 2,
+            "text": "От разговора — к вашему столу."
+          },
+          {
+            "level": 3,
+            "text": "Разговор"
+          },
+          {
+            "level": 3,
+            "text": "Меню"
+          },
+          {
+            "level": 3,
+            "text": "Подготовка"
+          },
+          {
+            "level": 3,
+            "text": "Ваш вечер"
+          },
+          {
+            "level": 2,
+            "text": "Начнём с вашего вечера."
+          }
+        ],
+        "stations": [
+          {
+            "step": "01",
+            "text": "Разговор",
+            "box": {
+              "x": 18,
+              "y": 2872.171875,
+              "width": 354,
+              "height": 380.15625,
+              "right": 372,
+              "bottom": 3252.328125
+            }
+          },
+          {
+            "step": "02",
+            "text": "Меню",
+            "box": {
+              "x": 18,
+              "y": 3252.328125,
+              "width": 354,
+              "height": 733.859375,
+              "right": 372,
+              "bottom": 3986.1875
+            }
+          },
+          {
+            "step": "03",
+            "text": "Подготовка",
+            "box": {
+              "x": 18,
+              "y": 3986.1875,
+              "width": 354,
+              "height": 624.421875,
+              "right": 372,
+              "bottom": 4610.609375
+            }
+          },
+          {
+            "step": "04",
+            "text": "Ваш вечер",
+            "box": {
+              "x": 18,
+              "y": 4610.609375,
+              "width": 354,
+              "height": 350.15625,
+              "right": 372,
+              "bottom": 4960.765625
+            }
+          }
+        ],
+        "collage": {
+          "total": 63,
+          "unique": 63,
+          "visible": 63,
+          "visibleUnique": 63
+        },
+        "images": [
+          {
+            "src": "/media/web/hero-01-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-02-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-03-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-04-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-05-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-06-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-07-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-08-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-09-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-10-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-11-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-12-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-13-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-14-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-15-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-16-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-17-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-18-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-19-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-20-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-21-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-22-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-23-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-24-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-25-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-26-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-27-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-28-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-29-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-30-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-31-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-32-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-33-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-34-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-35-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-36-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-37-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-38-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-39-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-40-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-41-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-42-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-43-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-44-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-45-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-46-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-47-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-48-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-49-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-50-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-51-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-52-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-53-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-54-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-55-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-56-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-57-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-58-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-59-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-60-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-61-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-62-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-63-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/chef-hero-apron-576.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/masterchef-640.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/private-dinner-wide-v2-768.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/private-events-768.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/masterclasses-768.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/conversation-960.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/duck-plate-960.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/toast-960.webp",
+            "loaded": true,
+            "altPresent": true
+          }
+        ],
+        "plate": {
+          "source": "/media/web/duck-plate-960.webp",
+          "box": {
+            "x": 51,
+            "y": 3539.015625,
+            "width": 321,
+            "height": 276.046875,
+            "right": 372,
+            "bottom": 3815.0625
+          },
+          "intrinsic": [
+            321,
+            296
+          ],
+          "objectFit": "contain",
+          "clips": []
+        },
+        "links": [
+          {
+            "href": "#main-content",
+            "text": "Перейти к содержанию",
+            "targetExists": true
+          },
+          {
+            "href": "#top",
+            "text": "Evgen Grybenyk",
+            "targetExists": true
+          },
+          {
+            "href": "https://www.instagram.com/evg.chef/",
+            "text": "Instagram ↗",
+            "targetExists": true
+          },
+          {
+            "href": "https://www.instagram.com/evg.chef/",
+            "text": "Написать в Instagram\n↗",
+            "targetExists": true
+          },
+          {
+            "href": "#top",
+            "text": "Evgen Grybenyk",
+            "targetExists": true
+          },
+          {
+            "href": "https://www.instagram.com/evg.chef/",
+            "text": "Instagram @evg.chef",
+            "targetExists": true
+          }
+        ],
+        "video": {
+          "source": "/media/chef-story-img-5399-no-grill.mp4",
+          "poster": "/media/web/film-poster-540.webp",
+          "autoplay": false,
+          "paused": true,
+          "controls": false,
+          "playsInline": true
+        },
+        "reducedMotion": true
+      },
+      "formats": {
+        "listType": "UL",
+        "numbers": 0,
+        "dates": 0,
+        "heading": {
+          "left": 18,
+          "top": 1468.25,
+          "right": 372,
+          "bottom": 1509.734375
+        },
+        "nextSection": {
+          "left": 18,
+          "top": 2761.203125,
+          "right": 372,
+          "bottom": 4960.765625
+        },
+        "stickers": [
+          {
+            "title": "Частный ужин",
+            "caption": "Любимые блюда для близких — или гастрономический маршрут в семь подач.",
+            "box": {
+              "left": 20.234817504882812,
+              "top": 1546.1929931640625,
+              "right": 369.76515197753906,
+              "bottom": 1916.431884765625
+            },
+            "photo": {
+              "width": 326,
+              "height": 217.328,
+              "fit": "contain",
+              "loaded": true,
+              "src": "/media/web/private-dinner-wide-v2-768.webp"
+            }
+          },
+          {
+            "title": "Приватные мероприятия",
+            "caption": "Закуски и блюда, которые удобно есть за разговором.",
+            "box": {
+              "left": 20.85706901550293,
+              "top": 1939.9339599609375,
+              "right": 369.14295768737793,
+              "bottom": 2309.003662109375
+            },
+            "photo": {
+              "width": 326,
+              "height": 217.328,
+              "fit": "contain",
+              "loaded": true,
+              "src": "/media/web/private-events-768.webp"
+            }
+          },
+          {
+            "title": "Мастер-классы",
+            "caption": "Готовим вместе, осваиваем приёмы и садимся за общий стол.",
+            "box": {
+              "left": 21.481441497802734,
+              "top": 2333.677001953125,
+              "right": 368.51855087280273,
+              "bottom": 2701.572998046875
+            },
+            "photo": {
+              "width": 326,
+              "height": 217.328,
+              "fit": "contain",
+              "loaded": true,
+              "src": "/media/web/masterclasses-768.webp"
+            }
+          }
+        ]
+      },
+      "keyboard": {
+        "focusVisible": true,
+        "outlineStyle": "solid",
+        "outlineWidth": "2px",
+        "rect": {
+          "width": 354,
+          "height": 58
+        }
+      }
+    },
+    {
+      "width": 375,
+      "passed": true,
+      "pageErrors": [],
+      "failedLocalRequests": [],
+      "cancelledLocalRequests": [],
+      "externalRequests": [],
+      "httpErrors": [],
+      "layout": {
+        "viewport": {
+          "width": 375,
+          "height": 900
+        },
+        "document": {
+          "width": 375,
+          "height": 5306
+        },
+        "bodyWidth": 375,
+        "oversized": [],
+        "headings": [
+          {
+            "level": 1,
+            "text": "Евгений Грыбенюк — ваш личный Мастер-Шеф на Кипре"
+          },
+          {
+            "level": 2,
+            "text": "Какой будет ваш вечер?"
+          },
+          {
+            "level": 3,
+            "text": "Частный ужин"
+          },
+          {
+            "level": 3,
+            "text": "Приватные мероприятия"
+          },
+          {
+            "level": 3,
+            "text": "Мастер-классы"
+          },
+          {
+            "level": 2,
+            "text": "От разговора — к вашему столу."
+          },
+          {
+            "level": 3,
+            "text": "Разговор"
+          },
+          {
+            "level": 3,
+            "text": "Меню"
+          },
+          {
+            "level": 3,
+            "text": "Подготовка"
+          },
+          {
+            "level": 3,
+            "text": "Ваш вечер"
+          },
+          {
+            "level": 2,
+            "text": "Начнём с вашего вечера."
+          }
+        ],
+        "stations": [
+          {
+            "step": "01",
+            "text": "Разговор",
+            "box": {
+              "x": 18,
+              "y": 2837.125,
+              "width": 339,
+              "height": 370.15625,
+              "right": 357,
+              "bottom": 3207.28125
+            }
+          },
+          {
+            "step": "02",
+            "text": "Меню",
+            "box": {
+              "x": 18,
+              "y": 3207.28125,
+              "width": 339,
+              "height": 772.25,
+              "right": 357,
+              "bottom": 3979.53125
+            }
+          },
+          {
+            "step": "03",
+            "text": "Подготовка",
+            "box": {
+              "x": 18,
+              "y": 3979.53125,
+              "width": 339,
+              "height": 624.421875,
+              "right": 357,
+              "bottom": 4603.953125
+            }
+          },
+          {
+            "step": "04",
+            "text": "Ваш вечер",
+            "box": {
+              "x": 18,
+              "y": 4603.953125,
+              "width": 339,
+              "height": 340.15625,
+              "right": 357,
+              "bottom": 4944.109375
+            }
+          }
+        ],
+        "collage": {
+          "total": 63,
+          "unique": 63,
+          "visible": 63,
+          "visibleUnique": 63
+        },
+        "images": [
+          {
+            "src": "/media/web/hero-01-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-02-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-03-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-04-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-05-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-06-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-07-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-08-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-09-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-10-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-11-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-12-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-13-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-14-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-15-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-16-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-17-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-18-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-19-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-20-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-21-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-22-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-23-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-24-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-25-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-26-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-27-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-28-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-29-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-30-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-31-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-32-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-33-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-34-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-35-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-36-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-37-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-38-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-39-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-40-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-41-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-42-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-43-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-44-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-45-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-46-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-47-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-48-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-49-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-50-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-51-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-52-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-53-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-54-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-55-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-56-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-57-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-58-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-59-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-60-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-61-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-62-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/hero-63-384.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/chef-hero-apron-576.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/masterchef-640.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/private-dinner-wide-v2-768.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/private-events-768.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/masterclasses-768.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/conversation-960.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/duck-plate-960.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/web/toast-960.webp",
+            "loaded": true,
+            "altPresent": true
+          }
+        ],
+        "plate": {
+          "source": "/media/web/duck-plate-960.webp",
+          "box": {
+            "x": 51,
+            "y": 3522.546875,
+            "width": 306,
+            "height": 263.15625,
+            "right": 357,
+            "bottom": 3785.703125
+          },
+          "intrinsic": [
+            306,
+            283
+          ],
+          "objectFit": "contain",
+          "clips": []
+        },
+        "links": [
+          {
+            "href": "#main-content",
+            "text": "Перейти к содержанию",
+            "targetExists": true
+          },
+          {
+            "href": "#top",
+            "text": "Evgen Grybenyk",
+            "targetExists": true
+          },
+          {
+            "href": "https://www.instagram.com/evg.chef/",
+            "text": "Instagram ↗",
+            "targetExists": true
+          },
+          {
+            "href": "https://www.instagram.com/evg.chef/",
+            "text": "Написать в Instagram\n↗",
+            "targetExists": true
+          },
+          {
+            "href": "#top",
+            "text": "Evgen Grybenyk",
+            "targetExists": true
+          },
+          {
+            "href": "https://www.instagram.com/evg.chef/",
+            "text": "Instagram @evg.chef",
+            "targetExists": true
+          }
+        ],
+        "video": {
+          "source": "/media/chef-story-img-5399-no-grill.mp4",
+          "poster": "/media/web/film-poster-540.webp",
+          "autoplay": false,
+          "paused": true,
+          "controls": false,
+          "playsInline": true
+        },
+        "reducedMotion": true
+      },
+      "formats": {
+        "listType": "UL",
+        "numbers": 0,
+        "dates": 0,
+        "heading": {
+          "left": 18,
+          "top": 1463.34375,
+          "right": 357,
+          "bottom": 1504.78125
+        },
+        "nextSection": {
+          "left": 18,
+          "top": 2726.25,
+          "right": 357,
+          "bottom": 4944.109375
+        },
+        "stickers": [
+          {
+            "title": "Частный ужин",
+            "caption": "Любимые блюда для близких — или гастрономический маршрут в семь подач.",
+            "box": {
+              "left": 20.3378849029541,
+              "top": 1541.3958740234375,
+              "right": 354.6621036529541,
+              "bottom": 1901.3228759765625
+            },
+            "photo": {
+              "width": 311,
+              "height": 207.328,
+              "fit": "contain",
+              "loaded": true,
+              "src": "/media/web/private-dinner-wide-v2-768.webp"
+            }
+          },
+          {
+            "title": "Приватные мероприятия",
+            "caption": "Закуски и блюда, которые удобно есть за разговором.",
+            "box": {
+              "left": 20.943187713623047,
+              "top": 1925.1109619140625,
+              "right": 354.05683517456055,
+              "bottom": 2283.92041015625
+            },
+            "photo": {
+              "width": 311,
+              "height": 207.328,
+              "fit": "contain",
+              "loaded": true,
+              "src": "/media/web/private-events-768.webp"
+            }
+          },
+          {
+            "title": "Мастер-классы",
+            "caption": "Готовим вместе, осваиваем приёмы и садимся за общий стол.",
+            "box": {
+              "left": 21.550521850585938,
+              "top": 2308.828125,
+              "right": 353.4495086669922,
+              "bottom": 2666.515625
+            },
+            "photo": {
+              "width": 311,
+              "height": 207.328,
+              "fit": "contain",
+              "loaded": true,
+              "src": "/media/web/masterclasses-768.webp"
+            }
+          }
+        ]
+      },
+      "keyboard": {
+        "focusVisible": true,
+        "outlineStyle": "solid",
+        "outlineWidth": "2px",
+        "rect": {
+          "width": 339,
+          "height": 58
+        }
+      }
+    }
+  ],
+  "errorFallback": {
+    "simulatedHttpStatus": 404,
+    "before": {
+      "text": "▷\nСмотреть фильм",
+      "poster": "/media/web/film-poster-540.webp"
+    },
+    "after": {
+      "videoPresent": true,
+      "poster": "/media/web/film-poster-540.webp",
+      "error": null,
+      "fallbackText": "Ваш браузер не поддерживает видео.▷ПовторитьВидео не удалось загрузить. Попробуйте ещё раз.",
+      "localText": "▷\nПовторить"
+    },
+    "present": true,
+    "retryRecovered": true
+  },
+  "passed": true,
+  "completedAt": "2026-09-11T18:41:58.226Z",
+  "failures": []
+}
