@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef, useState } from "react";
+import { siteImages } from "./site-images";
 
 export default function ChefStoryVideo() {
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -28,7 +29,7 @@ export default function ChefStoryVideo() {
   return <figure data-video-error={failed ? true : undefined} className={`preparation-film${started ? " is-playing" : ""}`}>
     <div className="film-stage">
       <video id="story-documentary-video" ref={videoRef} controls={started} muted playsInline preload="none" tabIndex={started ? 0 : -1}
-        poster="/media/chef-story-img-5399-poster.jpg" aria-label="Домашний фильм: от подготовки ножей до подачи ужина"
+        poster={siteImages["film-poster"].src} aria-label="Домашний фильм: от подготовки ножей до подачи ужина"
         onError={() => { setFailed(true); setStarted(false); }}>
         <source src="/media/chef-story-img-5399-no-grill.mp4" type="video/mp4" onError={() => { setFailed(true); setStarted(false); }} />
         <track kind="captions" src="/media/chef-story-img-5399-no-grill.ru.vtt" srcLang="ru" label="Русские субтитры" />

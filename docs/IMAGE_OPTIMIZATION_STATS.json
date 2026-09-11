@@ -1,0 +1,1447 @@
+{
+  "totals": {
+    "sourceUniqueCount": 68,
+    "sourceBytes": 14167565,
+    "smallestVariantBytes": 654552,
+    "largestVariantBytes": 1950318,
+    "collageSourceBytes": 8389641,
+    "collageSmallestBytes": 311156,
+    "collageLargestBytes": 776776
+  },
+  "images": [
+    {
+      "name": "hero-01",
+      "role": "collage",
+      "source": "/media/hero-instagram/hero-01.webp",
+      "sourceBytes": 81044,
+      "variants": [
+        {
+          "url": "/media/web/hero-01-192.webp",
+          "requestedWidth": 192,
+          "width": 192,
+          "bytes": 9182
+        },
+        {
+          "url": "/media/web/hero-01-384.webp",
+          "requestedWidth": 384,
+          "width": 384,
+          "bytes": 23584
+        }
+      ]
+    },
+    {
+      "name": "hero-02",
+      "role": "collage",
+      "source": "/media/hero-instagram/hero-02.webp",
+      "sourceBytes": 133912,
+      "variants": [
+        {
+          "url": "/media/web/hero-02-192.webp",
+          "requestedWidth": 192,
+          "width": 192,
+          "bytes": 5332
+        },
+        {
+          "url": "/media/web/hero-02-384.webp",
+          "requestedWidth": 384,
+          "width": 384,
+          "bytes": 14556
+        }
+      ]
+    },
+    {
+      "name": "hero-03",
+      "role": "collage",
+      "source": "/media/hero-instagram/hero-03.webp",
+      "sourceBytes": 86170,
+      "variants": [
+        {
+          "url": "/media/web/hero-03-192.webp",
+          "requestedWidth": 192,
+          "width": 192,
+          "bytes": 5102
+        },
+        {
+          "url": "/media/web/hero-03-384.webp",
+          "requestedWidth": 384,
+          "width": 384,
+          "bytes": 13498
+        }
+      ]
+    },
+    {
+      "name": "hero-04",
+      "role": "collage",
+      "source": "/media/hero-instagram/hero-04.webp",
+      "sourceBytes": 70812,
+      "variants": [
+        {
+          "url": "/media/web/hero-04-192.webp",
+          "requestedWidth": 192,
+          "width": 192,
+          "bytes": 8246
+        },
+        {
+          "url": "/media/web/hero-04-384.webp",
+          "requestedWidth": 384,
+          "width": 384,
+          "bytes": 19844
+        }
+      ]
+    },
+    {
+      "name": "hero-05",
+      "role": "collage",
+      "source": "/media/hero-instagram/hero-05.webp",
+      "sourceBytes": 40930,
+      "variants": [
+        {
+          "url": "/media/web/hero-05-192.webp",
+          "requestedWidth": 192,
+          "width": 192,
+          "bytes": 5796
+        },
+        {
+          "url": "/media/web/hero-05-384.webp",
+          "requestedWidth": 384,
+          "width": 384,
+          "bytes": 12114
+        }
+      ]
+    },
+    {
+      "name": "hero-06",
+      "role": "collage",
+      "source": "/media/hero-instagram/hero-06.webp",
+      "sourceBytes": 66292,
+      "variants": [
+        {
+          "url": "/media/web/hero-06-192.webp",
+          "requestedWidth": 192,
+          "width": 192,
+          "bytes": 4682
+        },
+        {
+          "url": "/media/web/hero-06-384.webp",
+          "requestedWidth": 384,
+          "width": 384,
+          "bytes": 12278
+        }
+      ]
+    },
+    {
+      "name": "hero-07",
+      "role": "collage",
+      "source": "/media/hero-instagram/hero-07.webp",
+      "sourceBytes": 107428,
+      "variants": [
+        {
+          "url": "/media/web/hero-07-192.webp",
+          "requestedWidth": 192,
+          "width": 192,
+          "bytes": 4756
+        },
+        {
+          "url": "/media/web/hero-07-384.webp",
+          "requestedWidth": 384,
+          "width": 384,
+          "bytes": 11956
+        }
+      ]
+    },
+    {
+      "name": "hero-08",
+      "role": "collage",
+      "source": "/media/hero-instagram/hero-08.webp",
+      "sourceBytes": 78472,
+      "variants": [
+        {
+          "url": "/media/web/hero-08-192.webp",
+          "requestedWidth": 192,
+          "width": 192,
+          "bytes": 6680
+        },
+        {
+          "url": "/media/web/hero-08-384.webp",
+          "requestedWidth": 384,
+          "width": 384,
+          "bytes": 16554
+        }
+      ]
+    },
+    {
+      "name": "hero-09",
+      "role": "collage",
+      "source": "/media/hero-instagram/hero-09.webp",
+      "sourceBytes": 81714,
+      "variants": [
+        {
+          "url": "/media/web/hero-09-192.webp",
+          "requestedWidth": 192,
+          "width": 192,
+          "bytes": 4136
+        },
+        {
+          "url": "/media/web/hero-09-384.webp",
+          "requestedWidth": 384,
+          "width": 384,
+          "bytes": 11022
+        }
+      ]
+    },
+    {
+      "name": "hero-10",
+      "role": "collage",
+      "source": "/media/hero-instagram/hero-10.webp",
+      "sourceBytes": 52880,
+      "variants": [
+        {
+          "url": "/media/web/hero-10-192.webp",
+          "requestedWidth": 192,
+          "width": 192,
+          "bytes": 3272
+        },
+        {
+          "url": "/media/web/hero-10-384.webp",
+          "requestedWidth": 384,
+          "width": 384,
+          "bytes": 8460
+        }
+      ]
+    },
+    {
+      "name": "hero-11",
+      "role": "collage",
+      "source": "/media/hero-instagram/hero-11.webp",
+      "sourceBytes": 105048,
+      "variants": [
+        {
+          "url": "/media/web/hero-11-192.webp",
+          "requestedWidth": 192,
+          "width": 192,
+          "bytes": 5474
+        },
+        {
+          "url": "/media/web/hero-11-384.webp",
+          "requestedWidth": 384,
+          "width": 384,
+          "bytes": 14980
+        }
+      ]
+    },
+    {
+      "name": "hero-12",
+      "role": "collage",
+      "source": "/media/hero-instagram/hero-12.webp",
+      "sourceBytes": 143482,
+      "variants": [
+        {
+          "url": "/media/web/hero-12-192.webp",
+          "requestedWidth": 192,
+          "width": 192,
+          "bytes": 6312
+        },
+        {
+          "url": "/media/web/hero-12-384.webp",
+          "requestedWidth": 384,
+          "width": 384,
+          "bytes": 20034
+        }
+      ]
+    },
+    {
+      "name": "hero-13",
+      "role": "collage",
+      "source": "/media/hero-instagram/hero-13.webp",
+      "sourceBytes": 51562,
+      "variants": [
+        {
+          "url": "/media/web/hero-13-192.webp",
+          "requestedWidth": 192,
+          "width": 192,
+          "bytes": 4238
+        },
+        {
+          "url": "/media/web/hero-13-384.webp",
+          "requestedWidth": 384,
+          "width": 384,
+          "bytes": 9360
+        }
+      ]
+    },
+    {
+      "name": "hero-14",
+      "role": "collage",
+      "source": "/media/hero-instagram/hero-14.webp",
+      "sourceBytes": 112688,
+      "variants": [
+        {
+          "url": "/media/web/hero-14-192.webp",
+          "requestedWidth": 192,
+          "width": 192,
+          "bytes": 7546
+        },
+        {
+          "url": "/media/web/hero-14-384.webp",
+          "requestedWidth": 384,
+          "width": 384,
+          "bytes": 19362
+        }
+      ]
+    },
+    {
+      "name": "hero-15",
+      "role": "collage",
+      "source": "/media/hero-instagram/hero-15.webp",
+      "sourceBytes": 55312,
+      "variants": [
+        {
+          "url": "/media/web/hero-15-192.webp",
+          "requestedWidth": 192,
+          "width": 192,
+          "bytes": 4406
+        },
+        {
+          "url": "/media/web/hero-15-384.webp",
+          "requestedWidth": 384,
+          "width": 384,
+          "bytes": 10218
+        }
+      ]
+    },
+    {
+      "name": "hero-16",
+      "role": "collage",
+      "source": "/media/hero-instagram/hero-16.webp",
+      "sourceBytes": 59738,
+      "variants": [
+        {
+          "url": "/media/web/hero-16-192.webp",
+          "requestedWidth": 192,
+          "width": 192,
+          "bytes": 5428
+        },
+        {
+          "url": "/media/web/hero-16-384.webp",
+          "requestedWidth": 384,
+          "width": 384,
+          "bytes": 12674
+        }
+      ]
+    },
+    {
+      "name": "hero-17",
+      "role": "collage",
+      "source": "/media/hero-instagram/hero-17.webp",
+      "sourceBytes": 50876,
+      "variants": [
+        {
+          "url": "/media/web/hero-17-192.webp",
+          "requestedWidth": 192,
+          "width": 192,
+          "bytes": 3622
+        },
+        {
+          "url": "/media/web/hero-17-384.webp",
+          "requestedWidth": 384,
+          "width": 384,
+          "bytes": 9002
+        }
+      ]
+    },
+    {
+      "name": "hero-18",
+      "role": "collage",
+      "source": "/media/hero-instagram/hero-18.webp",
+      "sourceBytes": 92366,
+      "variants": [
+        {
+          "url": "/media/web/hero-18-192.webp",
+          "requestedWidth": 192,
+          "width": 192,
+          "bytes": 4618
+        },
+        {
+          "url": "/media/web/hero-18-384.webp",
+          "requestedWidth": 384,
+          "width": 384,
+          "bytes": 12474
+        }
+      ]
+    },
+    {
+      "name": "hero-19",
+      "role": "collage",
+      "source": "/media/hero-instagram/hero-19.webp",
+      "sourceBytes": 67424,
+      "variants": [
+        {
+          "url": "/media/web/hero-19-192.webp",
+          "requestedWidth": 192,
+          "width": 192,
+          "bytes": 6118
+        },
+        {
+          "url": "/media/web/hero-19-384.webp",
+          "requestedWidth": 384,
+          "width": 384,
+          "bytes": 14008
+        }
+      ]
+    },
+    {
+      "name": "hero-20",
+      "role": "collage",
+      "source": "/media/hero-instagram/hero-20.webp",
+      "sourceBytes": 75166,
+      "variants": [
+        {
+          "url": "/media/web/hero-20-192.webp",
+          "requestedWidth": 192,
+          "width": 192,
+          "bytes": 4008
+        },
+        {
+          "url": "/media/web/hero-20-384.webp",
+          "requestedWidth": 384,
+          "width": 384,
+          "bytes": 10364
+        }
+      ]
+    },
+    {
+      "name": "hero-21",
+      "role": "collage",
+      "source": "/media/hero-instagram/hero-21.webp",
+      "sourceBytes": 86708,
+      "variants": [
+        {
+          "url": "/media/web/hero-21-192.webp",
+          "requestedWidth": 192,
+          "width": 192,
+          "bytes": 4762
+        },
+        {
+          "url": "/media/web/hero-21-384.webp",
+          "requestedWidth": 384,
+          "width": 384,
+          "bytes": 12182
+        }
+      ]
+    },
+    {
+      "name": "hero-22",
+      "role": "collage",
+      "source": "/media/hero-instagram/hero-22.webp",
+      "sourceBytes": 100876,
+      "variants": [
+        {
+          "url": "/media/web/hero-22-192.webp",
+          "requestedWidth": 192,
+          "width": 192,
+          "bytes": 5978
+        },
+        {
+          "url": "/media/web/hero-22-384.webp",
+          "requestedWidth": 384,
+          "width": 384,
+          "bytes": 16718
+        }
+      ]
+    },
+    {
+      "name": "hero-23",
+      "role": "collage",
+      "source": "/media/hero-instagram/hero-23.webp",
+      "sourceBytes": 63556,
+      "variants": [
+        {
+          "url": "/media/web/hero-23-192.webp",
+          "requestedWidth": 192,
+          "width": 192,
+          "bytes": 5164
+        },
+        {
+          "url": "/media/web/hero-23-384.webp",
+          "requestedWidth": 384,
+          "width": 384,
+          "bytes": 12000
+        }
+      ]
+    },
+    {
+      "name": "hero-24",
+      "role": "collage",
+      "source": "/media/hero-instagram/hero-24.webp",
+      "sourceBytes": 66930,
+      "variants": [
+        {
+          "url": "/media/web/hero-24-192.webp",
+          "requestedWidth": 192,
+          "width": 192,
+          "bytes": 4550
+        },
+        {
+          "url": "/media/web/hero-24-384.webp",
+          "requestedWidth": 384,
+          "width": 384,
+          "bytes": 11506
+        }
+      ]
+    },
+    {
+      "name": "hero-25",
+      "role": "collage",
+      "source": "/media/hero-instagram/hero-25.webp",
+      "sourceBytes": 33356,
+      "variants": [
+        {
+          "url": "/media/web/hero-25-192.webp",
+          "requestedWidth": 192,
+          "width": 192,
+          "bytes": 2370
+        },
+        {
+          "url": "/media/web/hero-25-384.webp",
+          "requestedWidth": 384,
+          "width": 384,
+          "bytes": 5432
+        }
+      ]
+    },
+    {
+      "name": "hero-26",
+      "role": "collage",
+      "source": "/media/hero-instagram/hero-26.webp",
+      "sourceBytes": 84806,
+      "variants": [
+        {
+          "url": "/media/web/hero-26-192.webp",
+          "requestedWidth": 192,
+          "width": 192,
+          "bytes": 6300
+        },
+        {
+          "url": "/media/web/hero-26-384.webp",
+          "requestedWidth": 384,
+          "width": 384,
+          "bytes": 15218
+        }
+      ]
+    },
+    {
+      "name": "hero-27",
+      "role": "collage",
+      "source": "/media/hero-instagram/hero-27.webp",
+      "sourceBytes": 61544,
+      "variants": [
+        {
+          "url": "/media/web/hero-27-192.webp",
+          "requestedWidth": 192,
+          "width": 192,
+          "bytes": 4516
+        },
+        {
+          "url": "/media/web/hero-27-384.webp",
+          "requestedWidth": 384,
+          "width": 384,
+          "bytes": 10518
+        }
+      ]
+    },
+    {
+      "name": "hero-28",
+      "role": "collage",
+      "source": "/media/hero-instagram/hero-28.webp",
+      "sourceBytes": 66232,
+      "variants": [
+        {
+          "url": "/media/web/hero-28-192.webp",
+          "requestedWidth": 192,
+          "width": 192,
+          "bytes": 4040
+        },
+        {
+          "url": "/media/web/hero-28-384.webp",
+          "requestedWidth": 384,
+          "width": 384,
+          "bytes": 10138
+        }
+      ]
+    },
+    {
+      "name": "hero-29",
+      "role": "collage",
+      "source": "/media/hero-instagram/hero-29.webp",
+      "sourceBytes": 63240,
+      "variants": [
+        {
+          "url": "/media/web/hero-29-192.webp",
+          "requestedWidth": 192,
+          "width": 192,
+          "bytes": 4310
+        },
+        {
+          "url": "/media/web/hero-29-384.webp",
+          "requestedWidth": 384,
+          "width": 384,
+          "bytes": 10444
+        }
+      ]
+    },
+    {
+      "name": "hero-30",
+      "role": "collage",
+      "source": "/media/hero-instagram/hero-30.webp",
+      "sourceBytes": 48186,
+      "variants": [
+        {
+          "url": "/media/web/hero-30-192.webp",
+          "requestedWidth": 192,
+          "width": 192,
+          "bytes": 3370
+        },
+        {
+          "url": "/media/web/hero-30-384.webp",
+          "requestedWidth": 384,
+          "width": 384,
+          "bytes": 7988
+        }
+      ]
+    },
+    {
+      "name": "hero-31",
+      "role": "collage",
+      "source": "/media/hero-instagram/hero-31.webp",
+      "sourceBytes": 86592,
+      "variants": [
+        {
+          "url": "/media/web/hero-31-192.webp",
+          "requestedWidth": 192,
+          "width": 192,
+          "bytes": 4694
+        },
+        {
+          "url": "/media/web/hero-31-384.webp",
+          "requestedWidth": 384,
+          "width": 384,
+          "bytes": 13860
+        }
+      ]
+    },
+    {
+      "name": "hero-32",
+      "role": "collage",
+      "source": "/media/hero-instagram/hero-32.webp",
+      "sourceBytes": 66414,
+      "variants": [
+        {
+          "url": "/media/web/hero-32-192.webp",
+          "requestedWidth": 192,
+          "width": 192,
+          "bytes": 4700
+        },
+        {
+          "url": "/media/web/hero-32-384.webp",
+          "requestedWidth": 384,
+          "width": 384,
+          "bytes": 11396
+        }
+      ]
+    },
+    {
+      "name": "hero-33",
+      "role": "collage",
+      "source": "/media/hero-instagram/hero-33.webp",
+      "sourceBytes": 72198,
+      "variants": [
+        {
+          "url": "/media/web/hero-33-192.webp",
+          "requestedWidth": 192,
+          "width": 192,
+          "bytes": 3680
+        },
+        {
+          "url": "/media/web/hero-33-384.webp",
+          "requestedWidth": 384,
+          "width": 384,
+          "bytes": 11470
+        }
+      ]
+    },
+    {
+      "name": "hero-34",
+      "role": "collage",
+      "source": "/media/hero-instagram/hero-34.webp",
+      "sourceBytes": 68874,
+      "variants": [
+        {
+          "url": "/media/web/hero-34-192.webp",
+          "requestedWidth": 192,
+          "width": 192,
+          "bytes": 4836
+        },
+        {
+          "url": "/media/web/hero-34-384.webp",
+          "requestedWidth": 384,
+          "width": 384,
+          "bytes": 12758
+        }
+      ]
+    },
+    {
+      "name": "hero-35",
+      "role": "collage",
+      "source": "/media/hero-instagram/hero-35.webp",
+      "sourceBytes": 49104,
+      "variants": [
+        {
+          "url": "/media/web/hero-35-192.webp",
+          "requestedWidth": 192,
+          "width": 192,
+          "bytes": 3928
+        },
+        {
+          "url": "/media/web/hero-35-384.webp",
+          "requestedWidth": 384,
+          "width": 384,
+          "bytes": 8866
+        }
+      ]
+    },
+    {
+      "name": "hero-36",
+      "role": "collage",
+      "source": "/media/hero-instagram/hero-36.webp",
+      "sourceBytes": 65322,
+      "variants": [
+        {
+          "url": "/media/web/hero-36-192.webp",
+          "requestedWidth": 192,
+          "width": 192,
+          "bytes": 5088
+        },
+        {
+          "url": "/media/web/hero-36-384.webp",
+          "requestedWidth": 384,
+          "width": 384,
+          "bytes": 11446
+        }
+      ]
+    },
+    {
+      "name": "hero-37",
+      "role": "collage",
+      "source": "/media/hero-instagram/hero-37.webp",
+      "sourceBytes": 127340,
+      "variants": [
+        {
+          "url": "/media/web/hero-37-192.webp",
+          "requestedWidth": 192,
+          "width": 192,
+          "bytes": 7784
+        },
+        {
+          "url": "/media/web/hero-37-384.webp",
+          "requestedWidth": 384,
+          "width": 384,
+          "bytes": 22790
+        }
+      ]
+    },
+    {
+      "name": "hero-38",
+      "role": "collage",
+      "source": "/media/hero-instagram/hero-38.webp",
+      "sourceBytes": 68998,
+      "variants": [
+        {
+          "url": "/media/web/hero-38-192.webp",
+          "requestedWidth": 192,
+          "width": 192,
+          "bytes": 4806
+        },
+        {
+          "url": "/media/web/hero-38-384.webp",
+          "requestedWidth": 384,
+          "width": 384,
+          "bytes": 11722
+        }
+      ]
+    },
+    {
+      "name": "hero-39",
+      "role": "collage",
+      "source": "/media/hero-instagram/hero-39.webp",
+      "sourceBytes": 67608,
+      "variants": [
+        {
+          "url": "/media/web/hero-39-192.webp",
+          "requestedWidth": 192,
+          "width": 192,
+          "bytes": 4872
+        },
+        {
+          "url": "/media/web/hero-39-384.webp",
+          "requestedWidth": 384,
+          "width": 384,
+          "bytes": 12140
+        }
+      ]
+    },
+    {
+      "name": "hero-40",
+      "role": "collage",
+      "source": "/media/hero-instagram/hero-40.webp",
+      "sourceBytes": 82498,
+      "variants": [
+        {
+          "url": "/media/web/hero-40-192.webp",
+          "requestedWidth": 192,
+          "width": 192,
+          "bytes": 6612
+        },
+        {
+          "url": "/media/web/hero-40-384.webp",
+          "requestedWidth": 384,
+          "width": 384,
+          "bytes": 15962
+        }
+      ]
+    },
+    {
+      "name": "hero-41",
+      "role": "collage",
+      "source": "/media/optimized/instagram/instagram-01.webp",
+      "sourceBytes": 23434,
+      "variants": [
+        {
+          "url": "/media/web/hero-41-192.webp",
+          "requestedWidth": 192,
+          "width": 192,
+          "bytes": 6960
+        },
+        {
+          "url": "/media/web/hero-41-384.webp",
+          "requestedWidth": 384,
+          "width": 384,
+          "bytes": 15448
+        }
+      ]
+    },
+    {
+      "name": "hero-42",
+      "role": "collage",
+      "source": "/media/optimized/instagram/instagram-02.webp",
+      "sourceBytes": 12548,
+      "variants": [
+        {
+          "url": "/media/web/hero-42-192.webp",
+          "requestedWidth": 192,
+          "width": 192,
+          "bytes": 4202
+        },
+        {
+          "url": "/media/web/hero-42-384.webp",
+          "requestedWidth": 384,
+          "width": 384,
+          "bytes": 8628
+        }
+      ]
+    },
+    {
+      "name": "hero-43",
+      "role": "collage",
+      "source": "/media/optimized/instagram/instagram-04.webp",
+      "sourceBytes": 30446,
+      "variants": [
+        {
+          "url": "/media/web/hero-43-192.webp",
+          "requestedWidth": 192,
+          "width": 192,
+          "bytes": 6690
+        },
+        {
+          "url": "/media/web/hero-43-384.webp",
+          "requestedWidth": 384,
+          "width": 384,
+          "bytes": 17154
+        }
+      ]
+    },
+    {
+      "name": "hero-44",
+      "role": "collage",
+      "source": "/media/optimized/instagram/instagram-06.webp",
+      "sourceBytes": 15512,
+      "variants": [
+        {
+          "url": "/media/web/hero-44-192.webp",
+          "requestedWidth": 192,
+          "width": 192,
+          "bytes": 3840
+        },
+        {
+          "url": "/media/web/hero-44-384.webp",
+          "requestedWidth": 384,
+          "width": 384,
+          "bytes": 9312
+        }
+      ]
+    },
+    {
+      "name": "hero-45",
+      "role": "collage",
+      "source": "/media/optimized/instagram/instagram-07.webp",
+      "sourceBytes": 26164,
+      "variants": [
+        {
+          "url": "/media/web/hero-45-192.webp",
+          "requestedWidth": 192,
+          "width": 192,
+          "bytes": 3852
+        },
+        {
+          "url": "/media/web/hero-45-384.webp",
+          "requestedWidth": 384,
+          "width": 384,
+          "bytes": 12234
+        }
+      ]
+    },
+    {
+      "name": "hero-46",
+      "role": "collage",
+      "source": "/media/optimized/instagram/instagram-11.webp",
+      "sourceBytes": 14684,
+      "variants": [
+        {
+          "url": "/media/web/hero-46-192.webp",
+          "requestedWidth": 192,
+          "width": 192,
+          "bytes": 4014
+        },
+        {
+          "url": "/media/web/hero-46-384.webp",
+          "requestedWidth": 384,
+          "width": 384,
+          "bytes": 9194
+        }
+      ]
+    },
+    {
+      "name": "hero-47",
+      "role": "collage",
+      "source": "/media/optimized/instagram/instagram-12.webp",
+      "sourceBytes": 16604,
+      "variants": [
+        {
+          "url": "/media/web/hero-47-192.webp",
+          "requestedWidth": 192,
+          "width": 192,
+          "bytes": 4232
+        },
+        {
+          "url": "/media/web/hero-47-384.webp",
+          "requestedWidth": 384,
+          "width": 384,
+          "bytes": 10292
+        }
+      ]
+    },
+    {
+      "name": "hero-48",
+      "role": "collage",
+      "source": "/media/optimized/instagram/instagram-09.webp",
+      "sourceBytes": 22528,
+      "variants": [
+        {
+          "url": "/media/web/hero-48-192.webp",
+          "requestedWidth": 192,
+          "width": 192,
+          "bytes": 5460
+        },
+        {
+          "url": "/media/web/hero-48-384.webp",
+          "requestedWidth": 384,
+          "width": 384,
+          "bytes": 13698
+        }
+      ]
+    },
+    {
+      "name": "hero-49",
+      "role": "collage",
+      "source": "/media/optimized/instagram/instagram-08.webp",
+      "sourceBytes": 19548,
+      "variants": [
+        {
+          "url": "/media/web/hero-49-192.webp",
+          "requestedWidth": 192,
+          "width": 192,
+          "bytes": 5560
+        },
+        {
+          "url": "/media/web/hero-49-384.webp",
+          "requestedWidth": 384,
+          "width": 384,
+          "bytes": 12670
+        }
+      ]
+    },
+    {
+      "name": "hero-50",
+      "role": "collage",
+      "source": "/media/optimized/instagram/instagram-13.webp",
+      "sourceBytes": 14286,
+      "variants": [
+        {
+          "url": "/media/web/hero-50-192.webp",
+          "requestedWidth": 192,
+          "width": 192,
+          "bytes": 3320
+        },
+        {
+          "url": "/media/web/hero-50-384.webp",
+          "requestedWidth": 384,
+          "width": 384,
+          "bytes": 8008
+        }
+      ]
+    },
+    {
+      "name": "hero-51",
+      "role": "collage",
+      "source": "/media/optimized/instagram/instagram-14.webp",
+      "sourceBytes": 30192,
+      "variants": [
+        {
+          "url": "/media/web/hero-51-192.webp",
+          "requestedWidth": 192,
+          "width": 192,
+          "bytes": 11986
+        },
+        {
+          "url": "/media/web/hero-51-384.webp",
+          "requestedWidth": 384,
+          "width": 315,
+          "bytes": 26204
+        }
+      ]
+    },
+    {
+      "name": "hero-52",
+      "role": "collage",
+      "source": "/media/optimized/instagram/instagram-17.webp",
+      "sourceBytes": 6612,
+      "variants": [
+        {
+          "url": "/media/web/hero-52-192.webp",
+          "requestedWidth": 192,
+          "width": 192,
+          "bytes": 2928
+        },
+        {
+          "url": "/media/web/hero-52-384.webp",
+          "requestedWidth": 384,
+          "width": 315,
+          "bytes": 5424
+        }
+      ]
+    },
+    {
+      "name": "hero-53",
+      "role": "collage",
+      "source": "/media/optimized/instagram/instagram-18.webp",
+      "sourceBytes": 13770,
+      "variants": [
+        {
+          "url": "/media/web/hero-53-192.webp",
+          "requestedWidth": 192,
+          "width": 192,
+          "bytes": 3730
+        },
+        {
+          "url": "/media/web/hero-53-384.webp",
+          "requestedWidth": 384,
+          "width": 384,
+          "bytes": 8680
+        }
+      ]
+    },
+    {
+      "name": "hero-54",
+      "role": "collage",
+      "source": "/media/optimized/instagram/instagram-16.webp",
+      "sourceBytes": 12576,
+      "variants": [
+        {
+          "url": "/media/web/hero-54-192.webp",
+          "requestedWidth": 192,
+          "width": 192,
+          "bytes": 3014
+        },
+        {
+          "url": "/media/web/hero-54-384.webp",
+          "requestedWidth": 384,
+          "width": 384,
+          "bytes": 7148
+        }
+      ]
+    },
+    {
+      "name": "hero-55",
+      "role": "collage",
+      "source": "/media/optimized/instagram/instagram-19.webp",
+      "sourceBytes": 12862,
+      "variants": [
+        {
+          "url": "/media/web/hero-55-192.webp",
+          "requestedWidth": 192,
+          "width": 192,
+          "bytes": 3416
+        },
+        {
+          "url": "/media/web/hero-55-384.webp",
+          "requestedWidth": 384,
+          "width": 384,
+          "bytes": 7970
+        }
+      ]
+    },
+    {
+      "name": "hero-56",
+      "role": "collage",
+      "source": "/media/optimized/instagram/instagram-20.webp",
+      "sourceBytes": 14610,
+      "variants": [
+        {
+          "url": "/media/web/hero-56-192.webp",
+          "requestedWidth": 192,
+          "width": 192,
+          "bytes": 2448
+        },
+        {
+          "url": "/media/web/hero-56-384.webp",
+          "requestedWidth": 384,
+          "width": 384,
+          "bytes": 7410
+        }
+      ]
+    },
+    {
+      "name": "hero-57",
+      "role": "collage",
+      "source": "/media/optimized/chef-portrait.webp",
+      "sourceBytes": 27668,
+      "variants": [
+        {
+          "url": "/media/web/hero-57-192.webp",
+          "requestedWidth": 192,
+          "width": 192,
+          "bytes": 4044
+        },
+        {
+          "url": "/media/web/hero-57-384.webp",
+          "requestedWidth": 384,
+          "width": 384,
+          "bytes": 10486
+        }
+      ]
+    },
+    {
+      "name": "hero-58",
+      "role": "collage",
+      "source": "/media/event-formats/private-dinner.jpg",
+      "sourceBytes": 225717,
+      "variants": [
+        {
+          "url": "/media/web/hero-58-192.webp",
+          "requestedWidth": 192,
+          "width": 192,
+          "bytes": 3168
+        },
+        {
+          "url": "/media/web/hero-58-384.webp",
+          "requestedWidth": 384,
+          "width": 384,
+          "bytes": 7038
+        }
+      ]
+    },
+    {
+      "name": "hero-59",
+      "role": "collage",
+      "source": "/media/event-formats/private-event-outdoor-crepes.png",
+      "sourceBytes": 4372392,
+      "variants": [
+        {
+          "url": "/media/web/hero-59-192.webp",
+          "requestedWidth": 192,
+          "width": 192,
+          "bytes": 3764
+        },
+        {
+          "url": "/media/web/hero-59-384.webp",
+          "requestedWidth": 384,
+          "width": 384,
+          "bytes": 10248
+        }
+      ]
+    },
+    {
+      "name": "hero-60",
+      "role": "collage",
+      "source": "/media/optimized/gallery-portrait.webp",
+      "sourceBytes": 22034,
+      "variants": [
+        {
+          "url": "/media/web/hero-60-192.webp",
+          "requestedWidth": 192,
+          "width": 192,
+          "bytes": 3480
+        },
+        {
+          "url": "/media/web/hero-60-384.webp",
+          "requestedWidth": 384,
+          "width": 384,
+          "bytes": 8848
+        }
+      ]
+    },
+    {
+      "name": "hero-61",
+      "role": "collage",
+      "source": "/media/event-formats/masterclass.jpg",
+      "sourceBytes": 241049,
+      "variants": [
+        {
+          "url": "/media/web/hero-61-192.webp",
+          "requestedWidth": 192,
+          "width": 192,
+          "bytes": 4328
+        },
+        {
+          "url": "/media/web/hero-61-384.webp",
+          "requestedWidth": 384,
+          "width": 384,
+          "bytes": 10678
+        }
+      ]
+    },
+    {
+      "name": "hero-62",
+      "role": "collage",
+      "source": "/media/optimized/gallery-dish.webp",
+      "sourceBytes": 46294,
+      "variants": [
+        {
+          "url": "/media/web/hero-62-192.webp",
+          "requestedWidth": 192,
+          "width": 192,
+          "bytes": 6640
+        },
+        {
+          "url": "/media/web/hero-62-384.webp",
+          "requestedWidth": 384,
+          "width": 384,
+          "bytes": 17906
+        }
+      ]
+    },
+    {
+      "name": "hero-63",
+      "role": "collage",
+      "source": "/media/masterchef/evgen-masterchef-user-2026-09-11.jpg",
+      "sourceBytes": 124413,
+      "variants": [
+        {
+          "url": "/media/web/hero-63-192.webp",
+          "requestedWidth": 192,
+          "width": 192,
+          "bytes": 4766
+        },
+        {
+          "url": "/media/web/hero-63-384.webp",
+          "requestedWidth": 384,
+          "width": 384,
+          "bytes": 11202
+        }
+      ]
+    },
+    {
+      "name": "chef-hero-apron",
+      "role": "portrait",
+      "source": "/media/chef-hero-apron.jpg",
+      "sourceBytes": 57075,
+      "variants": [
+        {
+          "url": "/media/web/chef-hero-apron-320.webp",
+          "requestedWidth": 320,
+          "width": 320,
+          "bytes": 14858
+        },
+        {
+          "url": "/media/web/chef-hero-apron-576.webp",
+          "requestedWidth": 576,
+          "width": 576,
+          "bytes": 32766
+        }
+      ]
+    },
+    {
+      "name": "masterchef",
+      "role": "award",
+      "source": "/media/masterchef/evgen-masterchef-user-2026-09-11.jpg",
+      "sourceBytes": 124413,
+      "variants": [
+        {
+          "url": "/media/web/masterchef-320.webp",
+          "requestedWidth": 320,
+          "width": 320,
+          "bytes": 11300
+        },
+        {
+          "url": "/media/web/masterchef-640.webp",
+          "requestedWidth": 640,
+          "width": 640,
+          "bytes": 26134
+        }
+      ]
+    },
+    {
+      "name": "private-dinner",
+      "role": "format",
+      "source": "/media/event-formats/private-dinner.jpg",
+      "sourceBytes": 225717,
+      "variants": [
+        {
+          "url": "/media/web/private-dinner-384.webp",
+          "requestedWidth": 384,
+          "width": 384,
+          "bytes": 8366
+        },
+        {
+          "url": "/media/web/private-dinner-768.webp",
+          "requestedWidth": 768,
+          "width": 768,
+          "bytes": 18880
+        }
+      ]
+    },
+    {
+      "name": "private-events",
+      "role": "format",
+      "source": "/media/event-formats/private-event-outdoor-crepes.png",
+      "sourceBytes": 4372392,
+      "variants": [
+        {
+          "url": "/media/web/private-events-384.webp",
+          "requestedWidth": 384,
+          "width": 384,
+          "bytes": 12790
+        },
+        {
+          "url": "/media/web/private-events-768.webp",
+          "requestedWidth": 768,
+          "width": 768,
+          "bytes": 30920
+        }
+      ]
+    },
+    {
+      "name": "masterclasses",
+      "role": "format",
+      "source": "/media/event-formats/masterclass.jpg",
+      "sourceBytes": 241049,
+      "variants": [
+        {
+          "url": "/media/web/masterclasses-384.webp",
+          "requestedWidth": 384,
+          "width": 384,
+          "bytes": 12712
+        },
+        {
+          "url": "/media/web/masterclasses-768.webp",
+          "requestedWidth": 768,
+          "width": 768,
+          "bytes": 28400
+        }
+      ]
+    },
+    {
+      "name": "conversation",
+      "role": "illustration",
+      "source": "/media/evening-plan/conversation-evgen-paper-flowers-v8.png",
+      "sourceBytes": 1939296,
+      "variants": [
+        {
+          "url": "/media/web/conversation-480.webp",
+          "requestedWidth": 480,
+          "width": 480,
+          "bytes": 106706
+        },
+        {
+          "url": "/media/web/conversation-960.webp",
+          "requestedWidth": 960,
+          "width": 960,
+          "bytes": 442590
+        }
+      ]
+    },
+    {
+      "name": "toast",
+      "role": "illustration",
+      "source": "/media/evening-plan/toast-illustration.png",
+      "sourceBytes": 2086296,
+      "variants": [
+        {
+          "url": "/media/web/toast-480.webp",
+          "requestedWidth": 480,
+          "width": 480,
+          "bytes": 121058
+        },
+        {
+          "url": "/media/web/toast-960.webp",
+          "requestedWidth": 960,
+          "width": 960,
+          "bytes": 487146
+        }
+      ]
+    },
+    {
+      "name": "duck-plate",
+      "role": "plate",
+      "source": "/media/menu/personal-menu-duck-plate-cream-v2.webp",
+      "sourceBytes": 1525162,
+      "variants": [
+        {
+          "url": "/media/web/duck-plate-480.webp",
+          "requestedWidth": 480,
+          "width": 480,
+          "bytes": 27612
+        },
+        {
+          "url": "/media/web/duck-plate-960.webp",
+          "requestedWidth": 960,
+          "width": 960,
+          "bytes": 78712
+        }
+      ]
+    },
+    {
+      "name": "film-poster",
+      "role": "poster",
+      "source": "/media/chef-story-img-5399-poster.jpg",
+      "sourceBytes": 170095,
+      "variants": [
+        {
+          "url": "/media/web/film-poster-540.webp",
+          "requestedWidth": 540,
+          "width": 540,
+          "bytes": 27994
+        }
+      ]
+    }
+  ]
+}

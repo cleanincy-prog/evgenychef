@@ -1,0 +1,1087 @@
+{
+  "version": 1,
+  "outputDirectory": "public/media/web",
+  "images": [
+    {
+      "name": "hero-01",
+      "role": "collage",
+      "source": "/media/hero-instagram/hero-01.webp",
+      "widths": [
+        192,
+        384
+      ],
+      "quality": 54,
+      "sourceWidth": 736,
+      "sourceHeight": 1200,
+      "sourceBytes": 81044,
+      "sourceSha256": "c9eff6c29c6022e7acece740ed9da72d2f9744660e03d8927fae2709691df0e1",
+      "hasAlpha": false
+    },
+    {
+      "name": "hero-02",
+      "role": "collage",
+      "source": "/media/hero-instagram/hero-02.webp",
+      "widths": [
+        192,
+        384
+      ],
+      "quality": 54,
+      "sourceWidth": 1200,
+      "sourceHeight": 970,
+      "sourceBytes": 133912,
+      "sourceSha256": "2d619965c9d0825daa5b56a3601ea5404b871d8efd84295cd9e2f4a1333e9701",
+      "hasAlpha": false
+    },
+    {
+      "name": "hero-03",
+      "role": "collage",
+      "source": "/media/hero-instagram/hero-03.webp",
+      "widths": [
+        192,
+        384
+      ],
+      "quality": 54,
+      "sourceWidth": 1200,
+      "sourceHeight": 1163,
+      "sourceBytes": 86170,
+      "sourceSha256": "d968e6bbd683a8116ae7bcfc41bf4819672caec30411bb50a475dc480d2b6216",
+      "hasAlpha": false
+    },
+    {
+      "name": "hero-04",
+      "role": "collage",
+      "source": "/media/hero-instagram/hero-04.webp",
+      "widths": [
+        192,
+        384
+      ],
+      "quality": 54,
+      "sourceWidth": 803,
+      "sourceHeight": 1200,
+      "sourceBytes": 70812,
+      "sourceSha256": "e5f1d8704245b6de0f5dbf99823063bea9b4dc7a9ee096e440adb5d2bf6219a9",
+      "hasAlpha": false
+    },
+    {
+      "name": "hero-05",
+      "role": "collage",
+      "source": "/media/hero-instagram/hero-05.webp",
+      "widths": [
+        192,
+        384
+      ],
+      "quality": 54,
+      "sourceWidth": 807,
+      "sourceHeight": 1200,
+      "sourceBytes": 40930,
+      "sourceSha256": "f237a82c80ceb4a13593fe4fb2711e8e72340b69fec3073f31a04bfe189a3754",
+      "hasAlpha": false
+    },
+    {
+      "name": "hero-06",
+      "role": "collage",
+      "source": "/media/hero-instagram/hero-06.webp",
+      "widths": [
+        192,
+        384
+      ],
+      "quality": 54,
+      "sourceWidth": 1041,
+      "sourceHeight": 1200,
+      "sourceBytes": 66292,
+      "sourceSha256": "ea8f055a9d49ea37ad3f1c99c74a5e57a026bbb27f73d9b2c814f77e59c40fbe",
+      "hasAlpha": false
+    },
+    {
+      "name": "hero-07",
+      "role": "collage",
+      "source": "/media/hero-instagram/hero-07.webp",
+      "widths": [
+        192,
+        384
+      ],
+      "quality": 54,
+      "sourceWidth": 1200,
+      "sourceHeight": 1146,
+      "sourceBytes": 107428,
+      "sourceSha256": "b09aab8cefbc6a0cca3605a6f3dd0eab09d1bfb56c2b63fe9d1893a8892cce65",
+      "hasAlpha": false
+    },
+    {
+      "name": "hero-08",
+      "role": "collage",
+      "source": "/media/hero-instagram/hero-08.webp",
+      "widths": [
+        192,
+        384
+      ],
+      "quality": 54,
+      "sourceWidth": 962,
+      "sourceHeight": 1200,
+      "sourceBytes": 78472,
+      "sourceSha256": "1ab5507413cee66549bd90bc08d8305dc67a108cec8cb3010c407dd98cfbf2a2",
+      "hasAlpha": false
+    },
+    {
+      "name": "hero-09",
+      "role": "collage",
+      "source": "/media/hero-instagram/hero-09.webp",
+      "widths": [
+        192,
+        384
+      ],
+      "quality": 54,
+      "sourceWidth": 1200,
+      "sourceHeight": 975,
+      "sourceBytes": 81714,
+      "sourceSha256": "38b8d5d191f8059a2c0abbe01db035b7769a92d319c9c6ce9223a1793f1b3f3b",
+      "hasAlpha": false
+    },
+    {
+      "name": "hero-10",
+      "role": "collage",
+      "source": "/media/hero-instagram/hero-10.webp",
+      "widths": [
+        192,
+        384
+      ],
+      "quality": 54,
+      "sourceWidth": 1200,
+      "sourceHeight": 798,
+      "sourceBytes": 52880,
+      "sourceSha256": "52211c97a251db5487ae3a0bd65db1d067b3c60387888557a0f0c6207482ee78",
+      "hasAlpha": false
+    },
+    {
+      "name": "hero-11",
+      "role": "collage",
+      "source": "/media/hero-instagram/hero-11.webp",
+      "widths": [
+        192,
+        384
+      ],
+      "quality": 54,
+      "sourceWidth": 1200,
+      "sourceHeight": 1158,
+      "sourceBytes": 105048,
+      "sourceSha256": "51e63474fed3e3d61ee4cd64a045521aa69c3f469caff808a4cece027dba0df8",
+      "hasAlpha": false
+    },
+    {
+      "name": "hero-12",
+      "role": "collage",
+      "source": "/media/hero-instagram/hero-12.webp",
+      "widths": [
+        192,
+        384
+      ],
+      "quality": 54,
+      "sourceWidth": 1135,
+      "sourceHeight": 1200,
+      "sourceBytes": 143482,
+      "sourceSha256": "e7f0280c164be700aab87fa51f324763c620502dfea5b4375561a16199d503c3",
+      "hasAlpha": false
+    },
+    {
+      "name": "hero-13",
+      "role": "collage",
+      "source": "/media/hero-instagram/hero-13.webp",
+      "widths": [
+        192,
+        384
+      ],
+      "quality": 54,
+      "sourceWidth": 927,
+      "sourceHeight": 1200,
+      "sourceBytes": 51562,
+      "sourceSha256": "7f8952920903f7443d83018d7da0cebc19e89c26dbfd07772976c45f4c417567",
+      "hasAlpha": false
+    },
+    {
+      "name": "hero-14",
+      "role": "collage",
+      "source": "/media/hero-instagram/hero-14.webp",
+      "widths": [
+        192,
+        384
+      ],
+      "quality": 54,
+      "sourceWidth": 967,
+      "sourceHeight": 1200,
+      "sourceBytes": 112688,
+      "sourceSha256": "432b5cc8b64616731eb999a8f38dc65907ac4859d596b0651aa407751c23cb8d",
+      "hasAlpha": false
+    },
+    {
+      "name": "hero-15",
+      "role": "collage",
+      "source": "/media/hero-instagram/hero-15.webp",
+      "widths": [
+        192,
+        384
+      ],
+      "quality": 54,
+      "sourceWidth": 1175,
+      "sourceHeight": 1200,
+      "sourceBytes": 55312,
+      "sourceSha256": "d7731803624ee6a0725ea8f644b83640a81ef51c48c1e4c9edda15dfc9a01e95",
+      "hasAlpha": false
+    },
+    {
+      "name": "hero-16",
+      "role": "collage",
+      "source": "/media/hero-instagram/hero-16.webp",
+      "widths": [
+        192,
+        384
+      ],
+      "quality": 54,
+      "sourceWidth": 964,
+      "sourceHeight": 1200,
+      "sourceBytes": 59738,
+      "sourceSha256": "8413552da5cf195f91785eb27758a37ded00dc23540c91f62a66e74e2cd9a4a3",
+      "hasAlpha": false
+    },
+    {
+      "name": "hero-17",
+      "role": "collage",
+      "source": "/media/hero-instagram/hero-17.webp",
+      "widths": [
+        192,
+        384
+      ],
+      "quality": 54,
+      "sourceWidth": 1010,
+      "sourceHeight": 1200,
+      "sourceBytes": 50876,
+      "sourceSha256": "a6e047fd2a8963e823577a47cab9df87e7c493dde9866b901d469f61d27a36b3",
+      "hasAlpha": false
+    },
+    {
+      "name": "hero-18",
+      "role": "collage",
+      "source": "/media/hero-instagram/hero-18.webp",
+      "widths": [
+        192,
+        384
+      ],
+      "quality": 54,
+      "sourceWidth": 1200,
+      "sourceHeight": 1119,
+      "sourceBytes": 92366,
+      "sourceSha256": "3b6260899953638bf6a8ee82b007877e107504fe36f3cedb60560c919255ed71",
+      "hasAlpha": false
+    },
+    {
+      "name": "hero-19",
+      "role": "collage",
+      "source": "/media/hero-instagram/hero-19.webp",
+      "widths": [
+        192,
+        384
+      ],
+      "quality": 54,
+      "sourceWidth": 984,
+      "sourceHeight": 1200,
+      "sourceBytes": 67424,
+      "sourceSha256": "c13b6207e1472015f491fde898b53efd10cb4aad26d5339ece283531f98b71b2",
+      "hasAlpha": false
+    },
+    {
+      "name": "hero-20",
+      "role": "collage",
+      "source": "/media/hero-instagram/hero-20.webp",
+      "widths": [
+        192,
+        384
+      ],
+      "quality": 54,
+      "sourceWidth": 1200,
+      "sourceHeight": 1189,
+      "sourceBytes": 75166,
+      "sourceSha256": "c05b58d80f8512e254b1dfb37a894d6f045573f5f51c76fedfca5f608cd2f140",
+      "hasAlpha": false
+    },
+    {
+      "name": "hero-21",
+      "role": "collage",
+      "source": "/media/hero-instagram/hero-21.webp",
+      "widths": [
+        192,
+        384
+      ],
+      "quality": 54,
+      "sourceWidth": 1182,
+      "sourceHeight": 1200,
+      "sourceBytes": 86708,
+      "sourceSha256": "fbecac8332e433f8f46c248789c9891154a251d7b1d72f7f8898f127393c428c",
+      "hasAlpha": false
+    },
+    {
+      "name": "hero-22",
+      "role": "collage",
+      "source": "/media/hero-instagram/hero-22.webp",
+      "widths": [
+        192,
+        384
+      ],
+      "quality": 54,
+      "sourceWidth": 1016,
+      "sourceHeight": 1200,
+      "sourceBytes": 100876,
+      "sourceSha256": "bc656b1dc7cf940fb71caf97e130acc7b341b197c9da13494d41e580e1ebfa5e",
+      "hasAlpha": false
+    },
+    {
+      "name": "hero-23",
+      "role": "collage",
+      "source": "/media/hero-instagram/hero-23.webp",
+      "widths": [
+        192,
+        384
+      ],
+      "quality": 54,
+      "sourceWidth": 972,
+      "sourceHeight": 1200,
+      "sourceBytes": 63556,
+      "sourceSha256": "aee7ff172e10a519f689fe99ef20b43b42cd30c9d753821d5b020cdaa6bb6a60",
+      "hasAlpha": false
+    },
+    {
+      "name": "hero-24",
+      "role": "collage",
+      "source": "/media/hero-instagram/hero-24.webp",
+      "widths": [
+        192,
+        384
+      ],
+      "quality": 54,
+      "sourceWidth": 1200,
+      "sourceHeight": 798,
+      "sourceBytes": 66930,
+      "sourceSha256": "5b30dbc9e0d615a36f06de3f1e431a839ad06919ca2980d13f35031cd92f5f14",
+      "hasAlpha": false
+    },
+    {
+      "name": "hero-25",
+      "role": "collage",
+      "source": "/media/hero-instagram/hero-25.webp",
+      "widths": [
+        192,
+        384
+      ],
+      "quality": 54,
+      "sourceWidth": 1200,
+      "sourceHeight": 672,
+      "sourceBytes": 33356,
+      "sourceSha256": "738e4781fcb3ac7bfb98329ed33e9f084c100ae1b8570ca45a2fff0c5e98553f",
+      "hasAlpha": false
+    },
+    {
+      "name": "hero-26",
+      "role": "collage",
+      "source": "/media/hero-instagram/hero-26.webp",
+      "widths": [
+        192,
+        384
+      ],
+      "quality": 54,
+      "sourceWidth": 1200,
+      "sourceHeight": 1064,
+      "sourceBytes": 84806,
+      "sourceSha256": "b1d08e7d1a542f5046e323de29a5894b8a0665ae4c91e2a37af67db7eed74ad4",
+      "hasAlpha": false
+    },
+    {
+      "name": "hero-27",
+      "role": "collage",
+      "source": "/media/hero-instagram/hero-27.webp",
+      "widths": [
+        192,
+        384
+      ],
+      "quality": 54,
+      "sourceWidth": 1200,
+      "sourceHeight": 938,
+      "sourceBytes": 61544,
+      "sourceSha256": "54b9657d8acb3412b875a51dcce394ed66e8a54bddb68f2fe208e58340bf9f20",
+      "hasAlpha": false
+    },
+    {
+      "name": "hero-28",
+      "role": "collage",
+      "source": "/media/hero-instagram/hero-28.webp",
+      "widths": [
+        192,
+        384
+      ],
+      "quality": 54,
+      "sourceWidth": 1200,
+      "sourceHeight": 952,
+      "sourceBytes": 66232,
+      "sourceSha256": "fbc174fa4c3d6fcf905da7ac23c0e3685d9661946f49defe14c1ddeb51bc399b",
+      "hasAlpha": false
+    },
+    {
+      "name": "hero-29",
+      "role": "collage",
+      "source": "/media/hero-instagram/hero-29.webp",
+      "widths": [
+        192,
+        384
+      ],
+      "quality": 54,
+      "sourceWidth": 1200,
+      "sourceHeight": 969,
+      "sourceBytes": 63240,
+      "sourceSha256": "cfbe4e597f22e3a43a732046862098ca7a56c40d04b9a0c357f6cae4e78b559c",
+      "hasAlpha": false
+    },
+    {
+      "name": "hero-30",
+      "role": "collage",
+      "source": "/media/hero-instagram/hero-30.webp",
+      "widths": [
+        192,
+        384
+      ],
+      "quality": 54,
+      "sourceWidth": 1200,
+      "sourceHeight": 785,
+      "sourceBytes": 48186,
+      "sourceSha256": "a5268aa0062480559cfaabb458a894625047bf7289d226b30f0e506591fefdfe",
+      "hasAlpha": false
+    },
+    {
+      "name": "hero-31",
+      "role": "collage",
+      "source": "/media/hero-instagram/hero-31.webp",
+      "widths": [
+        192,
+        384
+      ],
+      "quality": 54,
+      "sourceWidth": 942,
+      "sourceHeight": 1200,
+      "sourceBytes": 86592,
+      "sourceSha256": "c46f0f0e6e64ae7c4f9429934254ff491d9d21211aaa07f1d6c2a15b426d561f",
+      "hasAlpha": false
+    },
+    {
+      "name": "hero-32",
+      "role": "collage",
+      "source": "/media/hero-instagram/hero-32.webp",
+      "widths": [
+        192,
+        384
+      ],
+      "quality": 54,
+      "sourceWidth": 1149,
+      "sourceHeight": 1200,
+      "sourceBytes": 66414,
+      "sourceSha256": "c0163b30d218e270e79e7bde1028ed0b8165e79cbbdfdee7d55f4501ea49d396",
+      "hasAlpha": false
+    },
+    {
+      "name": "hero-33",
+      "role": "collage",
+      "source": "/media/hero-instagram/hero-33.webp",
+      "widths": [
+        192,
+        384
+      ],
+      "quality": 54,
+      "sourceWidth": 981,
+      "sourceHeight": 1200,
+      "sourceBytes": 72198,
+      "sourceSha256": "4639ad7eb85eed2f3d96c9ec16030d9cbbdfc5ae537c783b8795b91bbd284de6",
+      "hasAlpha": false
+    },
+    {
+      "name": "hero-34",
+      "role": "collage",
+      "source": "/media/hero-instagram/hero-34.webp",
+      "widths": [
+        192,
+        384
+      ],
+      "quality": 54,
+      "sourceWidth": 989,
+      "sourceHeight": 1200,
+      "sourceBytes": 68874,
+      "sourceSha256": "3b5618bb165e7407beaf63db74205c42709879e7336c2a096ffb5b510ec92e79",
+      "hasAlpha": false
+    },
+    {
+      "name": "hero-35",
+      "role": "collage",
+      "source": "/media/hero-instagram/hero-35.webp",
+      "widths": [
+        192,
+        384
+      ],
+      "quality": 54,
+      "sourceWidth": 1200,
+      "sourceHeight": 1189,
+      "sourceBytes": 49104,
+      "sourceSha256": "fa4b991e4492d66f6cde0cabcb4decef580bd5ec54ad199f6944f1d025b65734",
+      "hasAlpha": false
+    },
+    {
+      "name": "hero-36",
+      "role": "collage",
+      "source": "/media/hero-instagram/hero-36.webp",
+      "widths": [
+        192,
+        384
+      ],
+      "quality": 54,
+      "sourceWidth": 1197,
+      "sourceHeight": 1200,
+      "sourceBytes": 65322,
+      "sourceSha256": "72a214bcdce048c4b8ac1e3c1923227e18367d7c7dd3aae65f2efe624ad6e5d8",
+      "hasAlpha": false
+    },
+    {
+      "name": "hero-37",
+      "role": "collage",
+      "source": "/media/hero-instagram/hero-37.webp",
+      "widths": [
+        192,
+        384
+      ],
+      "quality": 54,
+      "sourceWidth": 988,
+      "sourceHeight": 1200,
+      "sourceBytes": 127340,
+      "sourceSha256": "67890a3830f59495edddaf580bb1bbc6a789213495236ffc2712adcde3b05e21",
+      "hasAlpha": false
+    },
+    {
+      "name": "hero-38",
+      "role": "collage",
+      "source": "/media/hero-instagram/hero-38.webp",
+      "widths": [
+        192,
+        384
+      ],
+      "quality": 54,
+      "sourceWidth": 1200,
+      "sourceHeight": 790,
+      "sourceBytes": 68998,
+      "sourceSha256": "aa4f58ac9bf2d5ca7d4f38640851a6e3717114e664010e513e4ef4e9691f2546",
+      "hasAlpha": false
+    },
+    {
+      "name": "hero-39",
+      "role": "collage",
+      "source": "/media/hero-instagram/hero-39.webp",
+      "widths": [
+        192,
+        384
+      ],
+      "quality": 54,
+      "sourceWidth": 1053,
+      "sourceHeight": 1200,
+      "sourceBytes": 67608,
+      "sourceSha256": "19cc15e1ba7cbe109614112efbe1d63006f8bba6a540d393d6e9160d5fbe9640",
+      "hasAlpha": false
+    },
+    {
+      "name": "hero-40",
+      "role": "collage",
+      "source": "/media/hero-instagram/hero-40.webp",
+      "widths": [
+        192,
+        384
+      ],
+      "quality": 54,
+      "sourceWidth": 1062,
+      "sourceHeight": 1200,
+      "sourceBytes": 82498,
+      "sourceSha256": "fbf2bd41f72c0c4ea114269bc1b10d6f1bcf0e973984c1c9eca4f12bd66c07e6",
+      "hasAlpha": false
+    },
+    {
+      "name": "hero-41",
+      "role": "collage",
+      "source": "/media/optimized/instagram/instagram-01.webp",
+      "widths": [
+        192,
+        384
+      ],
+      "quality": 54,
+      "sourceWidth": 420,
+      "sourceHeight": 420,
+      "sourceBytes": 23434,
+      "sourceSha256": "913c8f7eec6c36f42069e0e3eb831d55c88564bb618ff7898e5ba961f01e8506",
+      "hasAlpha": false
+    },
+    {
+      "name": "hero-42",
+      "role": "collage",
+      "source": "/media/optimized/instagram/instagram-02.webp",
+      "widths": [
+        192,
+        384
+      ],
+      "quality": 54,
+      "sourceWidth": 420,
+      "sourceHeight": 420,
+      "sourceBytes": 12548,
+      "sourceSha256": "3048ab7edbb0d6366743774a47eb8e499195b9eeb4534e883078eaa9f5452da4",
+      "hasAlpha": false
+    },
+    {
+      "name": "hero-43",
+      "role": "collage",
+      "source": "/media/optimized/instagram/instagram-04.webp",
+      "widths": [
+        192,
+        384
+      ],
+      "quality": 54,
+      "sourceWidth": 420,
+      "sourceHeight": 420,
+      "sourceBytes": 30446,
+      "sourceSha256": "8a6aa0028ebc7c998f7bb507fa2a2ae76e4d849716fc5c47b0173e839632836d",
+      "hasAlpha": false
+    },
+    {
+      "name": "hero-44",
+      "role": "collage",
+      "source": "/media/optimized/instagram/instagram-06.webp",
+      "widths": [
+        192,
+        384
+      ],
+      "quality": 54,
+      "sourceWidth": 420,
+      "sourceHeight": 420,
+      "sourceBytes": 15512,
+      "sourceSha256": "3962a70f398f225778e17e74c30ea679ec3bca49ac03349632d6bf9eed8d9a6b",
+      "hasAlpha": false
+    },
+    {
+      "name": "hero-45",
+      "role": "collage",
+      "source": "/media/optimized/instagram/instagram-07.webp",
+      "widths": [
+        192,
+        384
+      ],
+      "quality": 54,
+      "sourceWidth": 420,
+      "sourceHeight": 420,
+      "sourceBytes": 26164,
+      "sourceSha256": "8b19f9c252450a956a551a22f77e313d6e3ae1fe479e891bab237472a2934c89",
+      "hasAlpha": false
+    },
+    {
+      "name": "hero-46",
+      "role": "collage",
+      "source": "/media/optimized/instagram/instagram-11.webp",
+      "widths": [
+        192,
+        384
+      ],
+      "quality": 54,
+      "sourceWidth": 420,
+      "sourceHeight": 420,
+      "sourceBytes": 14684,
+      "sourceSha256": "6651cce741e15b3c0cf0329acf072a66fd30be40fbe3068056344b72d34d2cdb",
+      "hasAlpha": false
+    },
+    {
+      "name": "hero-47",
+      "role": "collage",
+      "source": "/media/optimized/instagram/instagram-12.webp",
+      "widths": [
+        192,
+        384
+      ],
+      "quality": 54,
+      "sourceWidth": 420,
+      "sourceHeight": 420,
+      "sourceBytes": 16604,
+      "sourceSha256": "abe84670c2e79d30f578b5ba6ed345bc2999ab17779a687bb7bf1c5e9e78d66e",
+      "hasAlpha": false
+    },
+    {
+      "name": "hero-48",
+      "role": "collage",
+      "source": "/media/optimized/instagram/instagram-09.webp",
+      "widths": [
+        192,
+        384
+      ],
+      "quality": 54,
+      "sourceWidth": 420,
+      "sourceHeight": 420,
+      "sourceBytes": 22528,
+      "sourceSha256": "c69a116054c98f1cd0edaa53ce93fe2e32a6ac5c12e9eff4292641a0908ee263",
+      "hasAlpha": false
+    },
+    {
+      "name": "hero-49",
+      "role": "collage",
+      "source": "/media/optimized/instagram/instagram-08.webp",
+      "widths": [
+        192,
+        384
+      ],
+      "quality": 54,
+      "sourceWidth": 420,
+      "sourceHeight": 420,
+      "sourceBytes": 19548,
+      "sourceSha256": "f099d3825ec6640b50883138adc808528c0ec0a250fe36e89755d271bf4489f4",
+      "hasAlpha": false
+    },
+    {
+      "name": "hero-50",
+      "role": "collage",
+      "source": "/media/optimized/instagram/instagram-13.webp",
+      "widths": [
+        192,
+        384
+      ],
+      "quality": 54,
+      "sourceWidth": 420,
+      "sourceHeight": 420,
+      "sourceBytes": 14286,
+      "sourceSha256": "8ed9f3f4c17c4bf1639acee21236069fb3012c6c680a400d96caac7a844bc987",
+      "hasAlpha": false
+    },
+    {
+      "name": "hero-51",
+      "role": "collage",
+      "source": "/media/optimized/instagram/instagram-14.webp",
+      "widths": [
+        192,
+        384
+      ],
+      "quality": 54,
+      "sourceWidth": 315,
+      "sourceHeight": 560,
+      "sourceBytes": 30192,
+      "sourceSha256": "3c3b312ae20c0777f7d2b6665aec8f11cb9e8f82c9e4d338a0c723299673bbed",
+      "hasAlpha": false
+    },
+    {
+      "name": "hero-52",
+      "role": "collage",
+      "source": "/media/optimized/instagram/instagram-17.webp",
+      "widths": [
+        192,
+        384
+      ],
+      "quality": 54,
+      "sourceWidth": 315,
+      "sourceHeight": 560,
+      "sourceBytes": 6612,
+      "sourceSha256": "808a83809b0d4aad3e30e28531fa7760ebe00ecde517bc9b083aff9f7f21825d",
+      "hasAlpha": false
+    },
+    {
+      "name": "hero-53",
+      "role": "collage",
+      "source": "/media/optimized/instagram/instagram-18.webp",
+      "widths": [
+        192,
+        384
+      ],
+      "quality": 54,
+      "sourceWidth": 420,
+      "sourceHeight": 525,
+      "sourceBytes": 13770,
+      "sourceSha256": "79c3cf7d1e31f23ec99be832df60ef16c88cb6513f7207f951bac74ac5180787",
+      "hasAlpha": false
+    },
+    {
+      "name": "hero-54",
+      "role": "collage",
+      "source": "/media/optimized/instagram/instagram-16.webp",
+      "widths": [
+        192,
+        384
+      ],
+      "quality": 54,
+      "sourceWidth": 420,
+      "sourceHeight": 560,
+      "sourceBytes": 12576,
+      "sourceSha256": "fa8c46a38ce726c02fc9870674bbb0a1c3cfb3ae098c945ebb79c7485e31ca04",
+      "hasAlpha": false
+    },
+    {
+      "name": "hero-55",
+      "role": "collage",
+      "source": "/media/optimized/instagram/instagram-19.webp",
+      "widths": [
+        192,
+        384
+      ],
+      "quality": 54,
+      "sourceWidth": 420,
+      "sourceHeight": 525,
+      "sourceBytes": 12862,
+      "sourceSha256": "2f7491007390351ef63fa6c4d4694fee29c69833cbd9f0354cc4fd7257d048fa",
+      "hasAlpha": false
+    },
+    {
+      "name": "hero-56",
+      "role": "collage",
+      "source": "/media/optimized/instagram/instagram-20.webp",
+      "widths": [
+        192,
+        384
+      ],
+      "quality": 54,
+      "sourceWidth": 420,
+      "sourceHeight": 525,
+      "sourceBytes": 14610,
+      "sourceSha256": "17dbcfef813c56b77a0dd55a09a0f36869ddec528bbed3193ea36b66df5057a4",
+      "hasAlpha": false
+    },
+    {
+      "name": "hero-57",
+      "role": "collage",
+      "source": "/media/optimized/chef-portrait.webp",
+      "widths": [
+        192,
+        384
+      ],
+      "quality": 54,
+      "sourceWidth": 512,
+      "sourceHeight": 640,
+      "sourceBytes": 27668,
+      "sourceSha256": "f4cf4e5d9c9831cdb80e805b554e6788433a28e06ccdff836d6954fd76537d1e",
+      "hasAlpha": false
+    },
+    {
+      "name": "hero-58",
+      "role": "collage",
+      "source": "/media/event-formats/private-dinner.jpg",
+      "widths": [
+        192,
+        384
+      ],
+      "quality": 54,
+      "sourceWidth": 1152,
+      "sourceHeight": 1572,
+      "sourceBytes": 225717,
+      "sourceSha256": "ee5b4997d169cc854907fd4d84c0c823972fe63659a0c943da16577b0ecff8c4",
+      "hasAlpha": false
+    },
+    {
+      "name": "hero-59",
+      "role": "collage",
+      "source": "/media/event-formats/private-event-outdoor-crepes.png",
+      "widths": [
+        192,
+        384
+      ],
+      "quality": 54,
+      "sourceWidth": 2278,
+      "sourceHeight": 1510,
+      "sourceBytes": 4372392,
+      "sourceSha256": "e77687dcab88f7341ee180255d379c654b9629d7564c45fd91de0465896a023e",
+      "hasAlpha": true
+    },
+    {
+      "name": "hero-60",
+      "role": "collage",
+      "source": "/media/optimized/gallery-portrait.webp",
+      "widths": [
+        192,
+        384
+      ],
+      "quality": 54,
+      "sourceWidth": 512,
+      "sourceHeight": 640,
+      "sourceBytes": 22034,
+      "sourceSha256": "c83301cf7cc75b64e56cbb897762e1e18816a76b8fa46be666138409adb88ddc",
+      "hasAlpha": false
+    },
+    {
+      "name": "hero-61",
+      "role": "collage",
+      "source": "/media/event-formats/masterclass.jpg",
+      "widths": [
+        192,
+        384
+      ],
+      "quality": 54,
+      "sourceWidth": 1144,
+      "sourceHeight": 770,
+      "sourceBytes": 241049,
+      "sourceSha256": "c6d6374d55bf2acf47afe872bed27b5210343b1a04ef194faa96fcd830b6ca13",
+      "hasAlpha": false
+    },
+    {
+      "name": "hero-62",
+      "role": "collage",
+      "source": "/media/optimized/gallery-dish.webp",
+      "widths": [
+        192,
+        384
+      ],
+      "quality": 54,
+      "sourceWidth": 512,
+      "sourceHeight": 640,
+      "sourceBytes": 46294,
+      "sourceSha256": "7ffee0b652cd1f2f6d7245105716cfe992a495bac6318103b5f6ee09ab18b7e6",
+      "hasAlpha": false
+    },
+    {
+      "name": "hero-63",
+      "role": "collage",
+      "source": "/media/masterchef/evgen-masterchef-user-2026-09-11.jpg",
+      "widths": [
+        192,
+        384
+      ],
+      "quality": 54,
+      "sourceWidth": 1280,
+      "sourceHeight": 1160,
+      "sourceBytes": 124413,
+      "sourceSha256": "08c08eeb53099e4e5315de12ad7e3ced1f89afd58f6aa30963655409170faf3b",
+      "hasAlpha": false
+    },
+    {
+      "name": "chef-hero-apron",
+      "role": "portrait",
+      "source": "/media/chef-hero-apron.jpg",
+      "widths": [
+        320,
+        576
+      ],
+      "quality": 78,
+      "sourceWidth": 576,
+      "sourceHeight": 1280,
+      "sourceBytes": 57075,
+      "sourceSha256": "49f2c6542adae8b16fd4bd72f9b2eb12d203144a52cb11c612a6104beb5c8f31",
+      "hasAlpha": false
+    },
+    {
+      "name": "masterchef",
+      "role": "award",
+      "source": "/media/masterchef/evgen-masterchef-user-2026-09-11.jpg",
+      "widths": [
+        320,
+        640
+      ],
+      "quality": 74,
+      "sourceWidth": 1280,
+      "sourceHeight": 1160,
+      "sourceBytes": 124413,
+      "sourceSha256": "08c08eeb53099e4e5315de12ad7e3ced1f89afd58f6aa30963655409170faf3b",
+      "hasAlpha": false
+    },
+    {
+      "name": "private-dinner",
+      "role": "format",
+      "source": "/media/event-formats/private-dinner.jpg",
+      "widths": [
+        384,
+        768
+      ],
+      "quality": 70,
+      "sourceWidth": 1152,
+      "sourceHeight": 1572,
+      "sourceBytes": 225717,
+      "sourceSha256": "ee5b4997d169cc854907fd4d84c0c823972fe63659a0c943da16577b0ecff8c4",
+      "hasAlpha": false
+    },
+    {
+      "name": "private-events",
+      "role": "format",
+      "source": "/media/event-formats/private-event-outdoor-crepes.png",
+      "widths": [
+        384,
+        768
+      ],
+      "quality": 70,
+      "sourceWidth": 2278,
+      "sourceHeight": 1510,
+      "sourceBytes": 4372392,
+      "sourceSha256": "e77687dcab88f7341ee180255d379c654b9629d7564c45fd91de0465896a023e",
+      "hasAlpha": true
+    },
+    {
+      "name": "masterclasses",
+      "role": "format",
+      "source": "/media/event-formats/masterclass.jpg",
+      "widths": [
+        384,
+        768
+      ],
+      "quality": 70,
+      "sourceWidth": 1144,
+      "sourceHeight": 770,
+      "sourceBytes": 241049,
+      "sourceSha256": "c6d6374d55bf2acf47afe872bed27b5210343b1a04ef194faa96fcd830b6ca13",
+      "hasAlpha": false
+    },
+    {
+      "name": "conversation",
+      "role": "illustration",
+      "source": "/media/evening-plan/conversation-evgen-paper-flowers-v8.png",
+      "widths": [
+        480,
+        960
+      ],
+      "quality": 100,
+      "lossless": true,
+      "sourceWidth": 1536,
+      "sourceHeight": 1024,
+      "sourceBytes": 1939296,
+      "sourceSha256": "696655d3eaa69b0de21bdd60522083488b2d7ba9608dfe783cdf28d0abe5b862",
+      "hasAlpha": false
+    },
+    {
+      "name": "toast",
+      "role": "illustration",
+      "source": "/media/evening-plan/toast-illustration.png",
+      "widths": [
+        480,
+        960
+      ],
+      "quality": 100,
+      "lossless": true,
+      "sourceWidth": 1536,
+      "sourceHeight": 1024,
+      "sourceBytes": 2086296,
+      "sourceSha256": "02c00b5775e94361aa4b3fb99f147108528cbe59613f0d1de598966918fdae3c",
+      "hasAlpha": false
+    },
+    {
+      "name": "duck-plate",
+      "role": "plate",
+      "source": "/media/menu/personal-menu-duck-plate-cream-v2.webp",
+      "widths": [
+        480,
+        960
+      ],
+      "quality": 76,
+      "sourceWidth": 1800,
+      "sourceHeight": 1665,
+      "sourceBytes": 1525162,
+      "sourceSha256": "751d55a12301d91669fa43584b3339c3848ff66320678bc21890199929e6e467",
+      "hasAlpha": true
+    },
+    {
+      "name": "film-poster",
+      "role": "poster",
+      "source": "/media/chef-story-img-5399-poster.jpg",
+      "widths": [
+        540
+      ],
+      "quality": 70,
+      "sourceWidth": 1080,
+      "sourceHeight": 1920,
+      "sourceBytes": 170095,
+      "sourceSha256": "f112fdc6e744041ddf59749db2a6b028a09851a5af0d23c1a3a639ef9bdd5bc4",
+      "hasAlpha": false
+    }
+  ]
+}

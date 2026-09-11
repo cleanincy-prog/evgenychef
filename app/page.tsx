@@ -1,42 +1,13 @@
 import ChefStoryVideo from "./chef-story-video";
 import EveningPlanRoute from "./evening-plan-route";
 import PlateLeaders from "./plate-leaders";
+import { heroImages, siteImages } from "./site-images";
 
 /* eslint-disable @next/next/no-img-element -- original local media with source-specific editorial framing */
 
 const instagramUrl = "https://www.instagram.com/evg.chef/";
 
-// The approved collage keeps photographs; extracted film and Reel frames are excluded.
-const heroCollageSources = [
-  ...Array.from(
-    { length: 40 },
-    (_, index) => `/media/hero-instagram/hero-${String(index + 1).padStart(2, "0")}.webp`,
-  ),
-  "/media/optimized/instagram/instagram-01.webp",
-  "/media/optimized/instagram/instagram-02.webp",
-  "/media/optimized/instagram/instagram-04.webp",
-  "/media/optimized/instagram/instagram-06.webp",
-  "/media/optimized/instagram/instagram-07.webp",
-  "/media/optimized/instagram/instagram-11.webp",
-  "/media/optimized/instagram/instagram-12.webp",
-  "/media/optimized/instagram/instagram-09.webp",
-  "/media/optimized/instagram/instagram-08.webp",
-  "/media/optimized/instagram/instagram-13.webp",
-  "/media/optimized/instagram/instagram-14.webp",
-  "/media/optimized/instagram/instagram-17.webp",
-  "/media/optimized/instagram/instagram-18.webp",
-  "/media/optimized/instagram/instagram-16.webp",
-  "/media/optimized/instagram/instagram-19.webp",
-  "/media/optimized/instagram/instagram-20.webp",
-  "/media/optimized/chef-portrait.webp",
-  "/media/event-formats/private-dinner.jpg",
-  "/media/event-formats/private-event-outdoor-crepes.png",
-  "/media/optimized/gallery-portrait.webp",
-  "/media/event-formats/masterclass.jpg",
-  "/media/optimized/gallery-dish.webp",
-  "/media/masterchef/evgen-masterchef-user-2026-09-11.jpg",
-];
-
+// The approved 63 photographs use dedicated WebP thumbnails.
 const heroCollageWideDesktop = new Set([
   4, 5, 8, 12, 15, 18, 22, 25, 28, 32, 35, 38,
   42, 45, 48, 52, 55,
@@ -51,19 +22,19 @@ const formats = [
   {
     id: "private-dinner", name: "Частный ужин",
     description: "Любимые блюда для близких или гастрономический маршрут в семь подач.",
-    src: "/media/event-formats/private-dinner.jpg", width: 1152, height: 1572,
+    ...siteImages["private-dinner"],
     alt: "Евгений готовит блюдо на сковороде: видны лицо, руки и подача",
   },
   {
     id: "private-events", name: "Приватные мероприятия",
     description: "Небольшие закуски и блюда, которые удобно есть за разговором.",
-    src: "/media/event-formats/private-event-outdoor-crepes.png", width: 2278, height: 1510,
+    ...siteImages["private-events"],
     alt: "Евгений готовит блины на открытом воздухе перед гостями",
   },
   {
     id: "masterclasses", name: "Мастер-классы",
     description: "Готовим вместе, осваиваем приёмы и садимся за общий стол.",
-    src: "/media/event-formats/masterclass.jpg", width: 1144, height: 770,
+    ...siteImages.masterclasses,
     alt: "Участники мастер-класса наблюдают за работой Евгения",
   },
 ];
@@ -79,7 +50,7 @@ function StationHeading({ number, title, children }: { number: string; title: st
 function MenuPlate() {
   return <figure className="menu-plate" aria-label="Композиция блюда: основной продукт, гарнир, текстуры и соус">
     <div className="plate-visual">
-    <img className="menu-plate-photo" src="/media/menu/personal-menu-duck-plate-cream-v2.webp" alt="Кремовая тарелка с уткой, гарниром и соусами" width="1800" height="1665" loading="lazy" decoding="async" />
+    <img className="menu-plate-photo" {...siteImages["duck-plate"]} sizes="(max-width: 620px) calc(100vw - 69px), (max-width: 900px) min(calc(90.5vw - 38px), 600px), min(29.29vw, 428px)" alt="Кремовая тарелка с уткой, гарниром и соусами" loading="lazy" decoding="async" />
     </div>
     <PlateLeaders />
     <figcaption className="plate-notes"><dl className="plate-note-list">
@@ -107,25 +78,25 @@ export default function Home() {
         <div className="hero-frame">
           <div className="hero-collage" aria-hidden="true">
             <div className="hero-collage-grid">
-              {heroCollageSources.map((src, index) => <div
+              {heroImages.map((image, index) => <div
                 className={[
                   "collage-tile",
                   heroCollageWideDesktop.has(index) ? "collage-tile--wide-desktop" : "",
                   heroCollageWideCompact.has(index) ? "collage-tile--wide-compact" : "",
                 ].filter(Boolean).join(" ")}
-                key={src}
+                key={image.src}
               >
-                <img src={src} alt="" width="240" height="180" loading="eager" decoding="async" fetchPriority="low" />
+                <img {...image} sizes={`(max-width: 620px) ${heroCollageWideCompact.has(index) ? "25vw" : "12.5vw"}, (max-width: 1100px) ${heroCollageWideCompact.has(index) ? "20vw" : "10vw"}, ${heroCollageWideDesktop.has(index) ? "20vw" : "10vw"}`} alt="" loading="eager" decoding="async" fetchPriority="low" />
               </div>)}
             </div>
           </div>
           <div className="hero-identity">
             <div className="hero-copy"><h1><span>Евгений</span><span>Грыбенюк —</span><em>ваш личный</em><span>Мастер-Шеф</span><span>на Кипре</span></h1></div>
-            <figure className="hero-portrait"><img src="/media/chef-hero-apron.jpg" alt="Евгений Грыбенюк улыбается, стоя в полосатом поварском фартуке" width="576" height="1280" fetchPriority="high" decoding="async" /></figure>
+            <figure className="hero-portrait"><img {...siteImages["chef-hero-apron"]} sizes="(max-width: 620px) 56vw, 34vw" alt="Евгений Грыбенюк улыбается, стоя в полосатом поварском фартуке" fetchPriority="high" decoding="async" /></figure>
           </div>
         </div>
         <div className="award-proof">
-          <img src="/media/masterchef/evgen-masterchef-user-2026-09-11.jpg" alt="Евгений в белом кителе с конвертом на фоне эмблемы «МастерШеф»" width="1280" height="1160" loading="eager" decoding="async" />
+          <img {...siteImages.masterchef} sizes="(max-width: 620px) 36vw, 23vw" alt="Евгений в белом кителе с конвертом на фоне эмблемы «МастерШеф»" loading="lazy" decoding="async" />
           <div><p className="award-title">Победитель «МастерШеф. Профессионалы»</p><p className="award-note">Частные ужины и мероприятия на Кипре.</p></div>
         </div>
       </section>
@@ -135,7 +106,7 @@ export default function Home() {
           {formats.map((format, index) => <li className={`format-row format-${format.id}`} key={format.id}>
             <span className="format-number" aria-hidden="true">0{index + 1}</span>
             <h3>{format.name}</h3><p>{format.description}</p>
-            <figure className="format-image"><img src={format.src} alt={format.alt} width={format.width} height={format.height} loading="lazy" decoding="async" /></figure>
+            <figure className="format-image"><img src={format.src} srcSet={format.srcSet} sizes="(max-width: 620px) calc(100vw - 36px), 270px" alt={format.alt} width={format.width} height={format.height} loading="lazy" decoding="async" /></figure>
           </li>)}
         </ol>
       </section>
@@ -146,7 +117,7 @@ export default function Home() {
           <ol className="process-list">
             <li className="process-station station-conversation" data-step="01">
               <StationHeading number="01" title="Разговор">Вы рассказываете, что любите, каким будет вечер и что важно учесть.</StationHeading>
-              <figure className="process-illustration conversation-illustration"><img src="/media/evening-plan/conversation-evgen-paper-flowers-v8.png" alt="Карандашный рисунок: Евгений с лёгкой улыбкой записывает пожелания гостьи в блокнот; на столе небольшая ваза с цветами и два стакана воды" width="1536" height="1024" loading="lazy" decoding="async" /></figure>
+              <figure className="process-illustration conversation-illustration"><img {...siteImages.conversation} sizes="(max-width: 620px) calc(100vw - 70px), (max-width: 900px) min(63.35vw, 450px), min(36.64vw, 450px)" alt="Карандашный рисунок: Евгений с лёгкой улыбкой записывает пожелания гостьи в блокнот; на столе небольшая ваза с цветами и два стакана воды" loading="lazy" decoding="async" /></figure>
             </li>
             <li className="process-station station-menu" data-step="02">
               <StationHeading number="02" title="Меню">Я подбираю продукты, продумываю сочетания и составляю меню для вас.</StationHeading>
@@ -158,7 +129,7 @@ export default function Home() {
             </li>
             <li className="process-station station-evening" data-step="04">
               <StationHeading number="04" title="Ваш вечер">Готовлю и подаю. Вы встречаете гостей и остаётесь частью собственного вечера.</StationHeading>
-              <figure className="process-illustration toast-illustration"><img src="/media/evening-plan/toast-illustration.png" alt="Карандашная иллюстрация: гости поднимают бокалы за общим столом" width="1536" height="1024" loading="lazy" decoding="async" /></figure>
+              <figure className="process-illustration toast-illustration"><img {...siteImages.toast} sizes="(max-width: 620px) calc(100vw - 70px), (max-width: 900px) min(67.88vw, 440px), min(38.07vw, 440px)" alt="Карандашная иллюстрация: гости поднимают бокалы за общим столом" loading="lazy" decoding="async" /></figure>
             </li>
           </ol>
         </div>

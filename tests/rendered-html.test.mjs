@@ -102,23 +102,33 @@ test("renders 63 independent documentary collage photos and the real project ass
     assert.doesNotMatch(image.src, /hero-film-still|hero-collage\/|hero-plating-poster|chef-environment-poster|gallery-cooking|instagram-(?:2[1-9]|3[0-2])\.webp/, "Extracted video frames must not return to the collage");
   }
   const required = [
-    "/media/chef-hero-apron.jpg",
-    "/media/masterchef/evgen-masterchef-user-2026-09-11.jpg",
-    "/media/menu/personal-menu-duck-plate-cream-v2.webp",
+    "/media/web/chef-hero-apron-576.webp",
+    "/media/web/masterchef-640.webp",
+    "/media/web/duck-plate-960.webp",
   ];
   for (const path of required) assert.ok(imageTags.some(img => img.src === path), `Missing real asset: ${path}`);
   for (const img of imageTags) assert.ok(Object.hasOwn(img, "alt"), `Image requires alt, including decorative empty alt: ${img.src}`);
-  await Promise.all([...new Set([...collage.map(img => img.src), ...required])].map(async path => {
-    const response = await localFetch(path, { method: "HEAD" });
-    assert.equal(response.status, 200, `Image must be available: ${path}`);
-    assert.match(response.headers.get("content-type") || "", /^image\//);
-  }));
+  const imagePaths = imageTags.flatMap(img => {
+    assert.ok(Number(img.width) > 0 && Number(img.height) > 0, `Image requires intrinsic dimensions: ${img.src}`);
+    assert.ok(img.srcset && img.sizes, `Responsive image requires source choices and display sizes: ${img.src}`);
+    return [img.src, ...img.srcset.split(",").map(source => source.trim().split(/\s+/)[0])];
+  });
+  const uniqueImagePaths = [...new Set(imagePaths)];
+  // Keep local HTTP concurrency bounded while checking every responsive variant.
+  for (let start = 0; start < uniqueImagePaths.length; start += 8) {
+    await Promise.all(uniqueImagePaths.slice(start, start + 8).map(async path => {
+      assert.match(path, /^\/media\/web\/.+\.webp$/, `Page images must use optimized WebP: ${path}`);
+      const response = await localFetch(path, { method: "HEAD" });
+      assert.equal(response.status, 200, `Image must be available: ${path}`);
+      assert.match(response.headers.get("content-type") || "", /^image\/webp/);
+    }));
+  }
 });
 
 test("serves the original documentary video and poster with usable byte ranges", async () => {
   const videos = tags(html, "video");
   assert.equal(videos.length, 1);
-  assert.equal(videos[0].poster, "/media/chef-story-img-5399-poster.jpg");
+  assert.equal(videos[0].poster, "/media/web/film-poster-540.webp");
   assert.ok(!Object.hasOwn(videos[0], "autoplay"), "The film starts on an explicit user action");
   assert.ok(Object.hasOwn(videos[0], "playsinline"));
   const videoPath = "/media/chef-story-img-5399-no-grill.mp4";
