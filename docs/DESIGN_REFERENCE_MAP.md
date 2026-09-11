@@ -1,3 +1,11 @@
+## Более заметный фон Hero — 2026-09-11
+
+| Project element | Reference | Principle used | What is not copied | Project implementation |
+|---|---|---|---|---|
+| Фон Hero | Новый запрос: «Нужен больше блюр» после варианта 0.3px | Умеренная мягкость фоновых фото с чётким центром | Фильтр портрета/текста и анимация | blur(0.7px) только на hero-collage-grid, между прежними 0.3px и 1.1px |
+
+Это активное значение. Предыдущие записи ниже сохранены как история. Новых композиционных решений или элементов без референса нет.
+
 ## Едва заметный фон Hero — 2026-09-11
 
 | Project element | Reference | Principle used | What is not copied | Project implementation |
