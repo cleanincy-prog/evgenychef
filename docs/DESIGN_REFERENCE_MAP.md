@@ -1,3 +1,9 @@
+## Уточнение заголовка «МастерШеф» — 2026-09-11
+
+| Project element | Reference | Principle used | What is not copied | Project implementation |
+|---|---|---|---|---|
+| award-title | Прямой запрос «Сделай текст Больше 25 лет в гастрономии» | Заголовок об опыте шефа | Повтор той же фразы сразу в описании | Фраза перенесена из первого абзаца в заголовок; прежний Caveat и сетка |
+
 ## Текст блока «МастерШеф» — 2026-09-11
 
 | Project element | Reference | Principle used | What is not copied | Project implementation |
