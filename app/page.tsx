@@ -34,7 +34,7 @@ const heroCollageSources = [
   "/media/optimized/gallery-portrait.webp",
   "/media/event-formats/masterclass.jpg",
   "/media/optimized/gallery-dish.webp",
-  "/media/masterchef/evgen-grybenyk-winner-envelope-2020.jpg",
+  "/media/masterchef/evgen-masterchef-user-2026-09-11.jpg",
 ];
 
 const heroCollageWideDesktop = new Set([
@@ -125,7 +125,7 @@ export default function Home() {
           </div>
         </div>
         <div className="award-proof">
-          <img src="/media/masterchef/evgen-grybenyk-winner-envelope-2020.jpg" alt="Евгений с наградой победителя «МастерШеф. Профессионалы»" width="1200" height="675" loading="eager" decoding="async" />
+          <img src="/media/masterchef/evgen-masterchef-user-2026-09-11.jpg" alt="Евгений в белом кителе с конвертом на фоне эмблемы «МастерШеф»" width="1280" height="1160" loading="eager" decoding="async" />
           <div><p className="award-title">Победитель «МастерШеф. Профессионалы»</p><p className="award-note">Частные ужины и мероприятия на Кипре.</p></div>
         </div>
       </section>
