@@ -381,9 +381,9 @@ export const heroImages = [
 ] as const;
 
 export const siteImages = {
-  "chef-hero-apron-cream": {
-    "src": "/media/web/chef-hero-apron-cream-576.webp",
-    "srcSet": "/media/web/chef-hero-apron-cream-320.webp 320w, /media/web/chef-hero-apron-cream-576.webp 576w",
+  "chef-hero-apron": {
+    "src": "/media/web/chef-hero-apron-576.webp",
+    "srcSet": "/media/web/chef-hero-apron-320.webp 320w, /media/web/chef-hero-apron-576.webp 576w",
     "width": 576,
     "height": 1280
   },

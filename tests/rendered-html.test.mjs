@@ -102,7 +102,7 @@ test("renders 63 independent documentary collage photos and the real project ass
     assert.doesNotMatch(image.src, /hero-film-still|hero-collage\/|hero-plating-poster|chef-environment-poster|gallery-cooking|instagram-(?:2[1-9]|3[0-2])\.webp/, "Extracted video frames must not return to the collage");
   }
   const required = [
-    "/media/web/chef-hero-apron-cream-576.webp",
+    "/media/web/chef-hero-apron-576.webp",
     "/media/web/masterchef-640.webp",
     "/media/web/duck-plate-960.webp",
   ];

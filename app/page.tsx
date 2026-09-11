@@ -92,7 +92,7 @@ export default function Home() {
           </div>
           <div className="hero-identity">
             <div className="hero-copy"><h1><span>Евгений</span><span>Грыбенюк —</span><em>ваш личный</em><span>Мастер-Шеф</span><span>на Кипре</span></h1></div>
-            <figure className="hero-portrait"><img {...siteImages["chef-hero-apron-cream"]} sizes="(max-width: 620px) 56vw, 34vw" alt="Евгений Грыбенюк улыбается, стоя в полосатом поварском фартуке" fetchPriority="high" decoding="async" /></figure>
+            <figure className="hero-portrait"><img {...siteImages["chef-hero-apron"]} sizes="(max-width: 620px) 56vw, 34vw" alt="Евгений Грыбенюк улыбается, стоя в полосатом поварском фартуке" fetchPriority="high" decoding="async" /></figure>
           </div>
         </div>
         <div className="award-proof">

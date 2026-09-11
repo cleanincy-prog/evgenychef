@@ -948,9 +948,9 @@
       "hasAlpha": false
     },
     {
-      "name": "chef-hero-apron-cream",
+      "name": "chef-hero-apron",
       "role": "portrait",
-      "source": "/media/chef-hero-apron-cream.png",
+      "source": "/media/chef-hero-apron.jpg",
       "widths": [
         320,
         576
@@ -958,9 +958,9 @@
       "quality": 78,
       "sourceWidth": 576,
       "sourceHeight": 1280,
-      "sourceBytes": 395050,
-      "sourceSha256": "98cff05da4b798305d307d1f6a9732a36a6cd35d29b9e8aa0aa1ccf67140c864",
-      "hasAlpha": true
+      "sourceBytes": 57075,
+      "sourceSha256": "49f2c6542adae8b16fd4bd72f9b2eb12d203144a52cb11c612a6104beb5c8f31",
+      "hasAlpha": false
     },
     {
       "name": "masterchef",
