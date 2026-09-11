@@ -97,7 +97,11 @@ export default function Home() {
         </div>
         <div className="award-proof">
           <img {...siteImages.masterchef} sizes="(max-width: 620px) 36vw, 23vw" alt="Евгений в белом кителе с конвертом на фоне эмблемы «МастерШеф»" loading="lazy" decoding="async" />
-          <div><p className="award-title">Победитель «МастерШеф. Профессионалы»</p><p className="award-note">Частные ужины и мероприятия на Кипре.</p></div>
+          <div className="award-copy">
+            <p className="award-title">Победитель «МастерШеф. Профессионалы»</p>
+            <p className="award-note">Больше 25 лет в гастрономии. Победа в «МастерШеф. Профессионалы» открыла мне путь к новым кухням Европы и Средиземноморья.</p>
+            <p className="award-note">Этот опыт стал основой моего стиля — современной европейской кухни с авторским характером. Сегодня на Кипре создаю персональные меню для частных ужинов и особых событий, а на мастер-классах делюсь тонкостями своего ремесла. В каждом блюде — внимание к вашим вкусам, в каждой детали — забота об атмосфере вечера.</p>
+          </div>
         </div>
       </section>
       <section className="formats" aria-labelledby="formats-title">
