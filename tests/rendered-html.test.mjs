@@ -92,12 +92,15 @@ test("provides only functional page anchors and the exact Instagram destination"
   assert.equal(tags(html, "form").length, 0, "This page must not send an automatic inquiry");
 });
 
-test("renders 94 independent documentary collage photos and the real project assets", async () => {
+test("renders 63 independent documentary collage photos and the real project assets", async () => {
   const imageTags = tags(html, "img");
   const collage = [...html.matchAll(/<[^>]+\bclass="[^"]*\bcollage-tile\b[^"]*"[^>]*>[\s\S]*?<img\b([^>]*)>/g)]
     .map(match => tags(`<img ${match[1]}>`, "img")[0]);
-  assert.equal(collage.length, 94, "The requested full collage requires 94 DOM photos");
-  assert.equal(new Set(collage.map(img => img.src)).size, 94, "Collage photos may not repeat");
+  assert.equal(collage.length, 63, "The requested full collage requires 63 DOM photos");
+  assert.equal(new Set(collage.map(img => img.src)).size, 63, "Collage photos may not repeat");
+  for (const image of collage) {
+    assert.doesNotMatch(image.src, /hero-film-still|hero-collage\/|hero-plating-poster|chef-environment-poster|gallery-cooking|instagram-(?:2[1-9]|3[0-2])\.webp/, "Extracted video frames must not return to the collage");
+  }
   const required = [
     "/media/chef-hero-apron.jpg",
     "/media/masterchef/evgen-grybenyk-winner-envelope-2020.jpg",

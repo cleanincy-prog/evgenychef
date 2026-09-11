@@ -6,7 +6,7 @@ import PlateLeaders from "./plate-leaders";
 
 const instagramUrl = "https://www.instagram.com/evg.chef/";
 
-// Full documentary collage from the approved Mise en place version.
+// The approved collage keeps photographs; extracted film and Reel frames are excluded.
 const heroCollageSources = [
   ...Array.from(
     { length: 40 },
@@ -26,56 +26,25 @@ const heroCollageSources = [
   "/media/optimized/instagram/instagram-17.webp",
   "/media/optimized/instagram/instagram-18.webp",
   "/media/optimized/instagram/instagram-16.webp",
-  "/media/optimized/instagram/instagram-27.webp",
   "/media/optimized/instagram/instagram-19.webp",
   "/media/optimized/instagram/instagram-20.webp",
-  "/media/optimized/instagram/instagram-21.webp",
-  "/media/optimized/instagram/instagram-23.webp",
-  "/media/optimized/instagram/instagram-24.webp",
-  "/media/optimized/instagram/instagram-26.webp",
-  "/media/optimized/instagram/instagram-22.webp",
-  "/media/optimized/hero-plating-poster.webp",
-  "/media/optimized/instagram/instagram-29.webp",
-  "/media/optimized/instagram/instagram-30.webp",
-  "/media/optimized/instagram/instagram-32.webp",
   "/media/optimized/chef-portrait.webp",
-  "/media/optimized/chef-environment-poster.webp",
-  "/media/hero-collage/environment-chef.webp",
-  "/media/optimized/instagram/instagram-28.webp",
-  "/media/optimized/hero-film-still-01.webp",
-  "/media/hero-collage/story-chef-prep.webp",
-  "/media/hero-collage/story-cucumber-prep.webp",
-  "/media/hero-collage/story-pepper-prep.webp",
-  "/media/optimized/hero-film-still-04.webp",
-  "/media/optimized/hero-film-still-09.webp",
-  "/media/optimized/hero-film-still-11.webp",
-  "/media/hero-collage/story-mussels-prep.webp",
-  "/media/optimized/hero-film-still-02.webp",
-  "/media/optimized/hero-film-still-03.webp",
-  "/media/optimized/hero-film-still-05.webp",
-  "/media/optimized/hero-film-still-06.webp",
-  "/media/optimized/hero-film-still-07.webp",
-  "/media/optimized/hero-film-still-08.webp",
-  "/media/optimized/hero-film-still-10.webp",
-  "/media/optimized/hero-film-still-13.webp",
   "/media/event-formats/private-dinner.jpg",
   "/media/event-formats/private-event-outdoor-crepes.png",
-  "/media/optimized/gallery-cooking.webp",
   "/media/optimized/gallery-portrait.webp",
   "/media/event-formats/masterclass.jpg",
   "/media/optimized/gallery-dish.webp",
   "/media/masterchef/evgen-grybenyk-winner-envelope-2020.jpg",
-  "/media/hero-collage/story-service-plating.webp",
 ];
 
 const heroCollageWideDesktop = new Set([
-  4, 5, 8, 12, 15, 18, 22, 25, 28, 32, 35, 38, 42,
-  45, 48, 52, 55, 58, 62, 66, 70, 74, 79, 84, 89, 93,
+  4, 5, 8, 12, 15, 18, 22, 25, 28, 32, 35, 38,
+  42, 45, 48, 52, 55,
 ]);
 
 const heroCollageWideCompact = new Set([
-  1, 4, 7, 10, 13, 17, 20, 23, 26, 29, 33, 36, 39,
-  42, 46, 49, 52, 55, 59, 63, 67, 71, 76, 81, 87, 92,
+  1, 4, 7, 10, 13, 17, 20, 23, 26, 29, 33, 36,
+  39, 42, 46, 49, 52,
 ]);
 
 const formats = [

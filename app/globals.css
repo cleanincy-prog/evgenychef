@@ -53,7 +53,7 @@ img { display: block; max-width: 100%; }
 /* Full-field photo packing from the approved Mise en place collage. */
 .hero-frame { position: relative; isolation: isolate; display: grid; grid-template-columns: 11.7% minmax(0, 1fr) 11.7%; align-items: center; min-height: clamp(700px, calc(100svh - 80px), 824px); padding-block: clamp(68px, 6.65vw, 96px); column-gap: 2px; background: var(--paper); }
 .hero-collage { position: absolute; z-index: -1; top: 0; bottom: 0; left: calc((100% - 100vw) / 2); width: 100vw; overflow: hidden; background: var(--paper); }
-.hero-collage-grid { position: absolute; inset: 0; display: grid; grid-template-columns: repeat(10, minmax(0, 1fr)); grid-template-rows: repeat(12, minmax(0, 1fr)); grid-auto-flow: dense; gap: 2px; }
+.hero-collage-grid { position: absolute; inset: 0; display: grid; grid-template-columns: repeat(10, minmax(0, 1fr)); grid-template-rows: repeat(8, minmax(0, 1fr)); grid-auto-flow: dense; gap: 2px; }
 .collage-tile { position: relative; overflow: hidden; min-width: 0; min-height: 0; }
 .collage-tile--wide-desktop { grid-column: span 2; }
 .collage-tile img { width: 100%; height: 100%; position: absolute; object-fit: cover; }
@@ -136,7 +136,7 @@ img { display: block; max-width: 100%; }
 .site-footer .wordmark { font-size: 23px; }
 .site-footer > a:last-child { font-size: 12px; min-height: 44px; display: flex; align-items: center; color: var(--muted); }
 @media (max-width: 1100px) {
-  .hero-collage-grid { grid-template-columns: repeat(12, minmax(0, 1fr)); grid-template-rows: repeat(10, minmax(0, 1fr)); }
+  .hero-collage-grid { grid-template-columns: repeat(10, minmax(0, 1fr)); grid-template-rows: repeat(8, minmax(0, 1fr)); }
   .collage-tile--wide-desktop { grid-column: auto; }
   .collage-tile--wide-compact { grid-column: span 2; }
   .hero-copy { padding-inline: 20px; }
@@ -198,7 +198,7 @@ img { display: block; max-width: 100%; }
   .header-action-mobile { display: inline; color: var(--ink); }
   .header-action-mobile > span { color: var(--gold-text); padding-left: 4px; }
   .hero-frame { grid-template-columns: 19% minmax(0, 1fr) 19%; min-height: clamp(720px, calc(100svh - 74px), 866px); padding-block: clamp(60px, 16vw, 84px); }
-  .hero-collage-grid { grid-template-columns: repeat(8, minmax(0, 1fr)); grid-template-rows: repeat(15, minmax(0, 1fr)); }
+  .hero-collage-grid { grid-template-columns: repeat(8, minmax(0, 1fr)); grid-template-rows: repeat(10, minmax(0, 1fr)); }
   .hero-identity { display: flex; flex-direction: column; height: auto; gap: 2px; }
   .hero-copy { padding: 19px 8px 20px; flex: 0 0 auto; }
   .hero-copy h1 { font-size: clamp(31px, 8.4vw, 48px); line-height: 1.08; letter-spacing: 0; }
