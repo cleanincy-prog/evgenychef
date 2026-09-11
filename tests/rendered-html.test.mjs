@@ -92,12 +92,12 @@ test("provides only functional page anchors and the exact Instagram destination"
   assert.equal(tags(html, "form").length, 0, "This page must not send an automatic inquiry");
 });
 
-test("renders 24 independent documentary collage photos and the real project assets", async () => {
+test("renders 94 independent documentary collage photos and the real project assets", async () => {
   const imageTags = tags(html, "img");
   const collage = [...html.matchAll(/<[^>]+\bclass="[^"]*\bcollage-tile\b[^"]*"[^>]*>[\s\S]*?<img\b([^>]*)>/g)]
     .map(match => tags(`<img ${match[1]}>`, "img")[0]);
-  assert.equal(collage.length, 24, "The approved collage requires 24 DOM photos");
-  assert.equal(new Set(collage.map(img => img.src)).size, 24, "Collage photos may not repeat");
+  assert.equal(collage.length, 94, "The requested full collage requires 94 DOM photos");
+  assert.equal(new Set(collage.map(img => img.src)).size, 94, "Collage photos may not repeat");
   const required = [
     "/media/chef-hero-apron.jpg",
     "/media/masterchef/evgen-grybenyk-winner-envelope-2020.jpg",

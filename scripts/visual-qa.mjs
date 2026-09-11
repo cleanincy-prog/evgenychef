@@ -9,7 +9,7 @@ const localUrl = new URL(process.env.LOCAL_URL || "http://127.0.0.1:3004");
 assert.equal(localUrl.protocol, "http:");
 assert.ok(["localhost", "127.0.0.1"].includes(localUrl.hostname), "Visual QA is restricted to localhost");
 assert.equal(localUrl.username + localUrl.password, "");
-const artifacts = path.join(root, "artifacts/evening-plan-local");
+const artifacts = path.join(root, "artifacts/large-collage-2026-09-11");
 const temporary = path.join(root, "work/.tmp");
 await mkdir(artifacts, { recursive: true });
 await mkdir(temporary, { recursive: true });
@@ -185,8 +185,8 @@ try {
       assert.deepEqual(layout.stations.map(s => s.step), ["01", "02", "03", "04"]);
       assert.deepEqual(layout.stations.map(s => s.text), ["Разговор", "Меню", "Подготовка", "Ваш вечер"]);
       if (width <= 900) verify(layout.stations.every((station, index, items) => index === 0 || station.box.y >= items[index - 1].box.bottom - 1), "Tablet and mobile process stations must follow a vertical reading order");
-      const expectedVisible = width <= 620 ? 14 : 24;
-      verify(layout.collage.total === 24 && layout.collage.unique === 24, "The collage requires exactly 24 unique DOM photo sources");
+      const expectedVisible = 94;
+      verify(layout.collage.total === 94 && layout.collage.unique === 94, "The full collage requires exactly 94 unique DOM photo sources");
       verify(layout.collage.visible === expectedVisible && layout.collage.visibleUnique === expectedVisible, `Expected ${expectedVisible} unique visible collage photos, got ${JSON.stringify(layout.collage)}`);
       verify(layout.images.every(img => img.loaded && img.altPresent), "Every rendered image must load and have an alt attribute");
       verify(layout.plate?.source === "/media/menu/personal-menu-duck-plate-cream-v2.webp", "The real cutout plate must be used");
@@ -197,7 +197,7 @@ try {
       verify(layout.video?.source === "/media/chef-story-img-5399-no-grill.mp4" && layout.video.poster === "/media/chef-story-img-5399-poster.jpg", "The original film and poster must be retained");
       verify(layout.video.playsInline && !layout.video.autoplay && layout.video.paused, "The film must be inline and user initiated");
       await page.screenshot({ path: path.join(artifacts, `page-${width}.png`), fullPage: true, animations: "disabled" });
-      await page.locator('.conversation-illustration').screenshot({ path: path.join(artifacts, `conversation-${width}.png`), animations: "disabled" });
+      await page.locator('.hero').screenshot({ path: path.join(artifacts, `hero-${width}.png`), animations: "disabled" });
       record.keyboard = await checkKeyboard(page, width);
       if (width === 1440) record.playback = await checkVideo(page);
       verify(pageErrors.length === 0, `Browser errors: ${JSON.stringify(pageErrors)}`);

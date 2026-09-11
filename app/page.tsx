@@ -6,39 +6,77 @@ import PlateLeaders from "./plate-leaders";
 
 const instagramUrl = "https://www.instagram.com/evg.chef/";
 
-// A curated documentary archive. Each source appears once in the frame.
-const collage = {
-  top: [
-    "/media/optimized/instagram/instagram-01.webp",
-    "/media/hero-instagram/hero-35.webp",
-    "/media/optimized/instagram/instagram-13.webp",
-    "/media/hero-instagram/hero-06.webp",
-    "/media/hero-instagram/hero-03.webp",
-    "/media/hero-instagram/hero-05.webp",
-    "/media/hero-instagram/hero-29.webp",
-    "/media/hero-instagram/hero-27.webp",
-    "/media/hero-instagram/hero-31.webp",
-    "/media/hero-instagram/hero-40.webp",
-  ],
-  left: [
-    "/media/hero-instagram/hero-09.webp",
-    "/media/optimized/instagram/instagram-12.webp",
-    "/media/optimized/instagram/instagram-27.webp",
-    "/media/hero-instagram/hero-24.webp",
-    "/media/hero-instagram/hero-32.webp",
-    "/media/hero-instagram/hero-12.webp",
-    "/media/hero-instagram/hero-38.webp",
-  ],
-  right: [
-    "/media/hero-instagram/hero-04.webp",
-    "/media/hero-instagram/hero-21.webp",
-    "/media/optimized/instagram/instagram-02.webp",
-    "/media/hero-collage/story-mussels-prep.webp",
-    "/media/optimized/instagram/instagram-07.webp",
-    "/media/hero-instagram/hero-28.webp",
-    "/media/hero-instagram/hero-30.webp",
-  ],
-};
+// Full documentary collage from the approved Mise en place version.
+const heroCollageSources = [
+  ...Array.from(
+    { length: 40 },
+    (_, index) => `/media/hero-instagram/hero-${String(index + 1).padStart(2, "0")}.webp`,
+  ),
+  "/media/optimized/instagram/instagram-01.webp",
+  "/media/optimized/instagram/instagram-02.webp",
+  "/media/optimized/instagram/instagram-04.webp",
+  "/media/optimized/instagram/instagram-06.webp",
+  "/media/optimized/instagram/instagram-07.webp",
+  "/media/optimized/instagram/instagram-11.webp",
+  "/media/optimized/instagram/instagram-12.webp",
+  "/media/optimized/instagram/instagram-09.webp",
+  "/media/optimized/instagram/instagram-08.webp",
+  "/media/optimized/instagram/instagram-13.webp",
+  "/media/optimized/instagram/instagram-14.webp",
+  "/media/optimized/instagram/instagram-17.webp",
+  "/media/optimized/instagram/instagram-18.webp",
+  "/media/optimized/instagram/instagram-16.webp",
+  "/media/optimized/instagram/instagram-27.webp",
+  "/media/optimized/instagram/instagram-19.webp",
+  "/media/optimized/instagram/instagram-20.webp",
+  "/media/optimized/instagram/instagram-21.webp",
+  "/media/optimized/instagram/instagram-23.webp",
+  "/media/optimized/instagram/instagram-24.webp",
+  "/media/optimized/instagram/instagram-26.webp",
+  "/media/optimized/instagram/instagram-22.webp",
+  "/media/optimized/hero-plating-poster.webp",
+  "/media/optimized/instagram/instagram-29.webp",
+  "/media/optimized/instagram/instagram-30.webp",
+  "/media/optimized/instagram/instagram-32.webp",
+  "/media/optimized/chef-portrait.webp",
+  "/media/optimized/chef-environment-poster.webp",
+  "/media/hero-collage/environment-chef.webp",
+  "/media/optimized/instagram/instagram-28.webp",
+  "/media/optimized/hero-film-still-01.webp",
+  "/media/hero-collage/story-chef-prep.webp",
+  "/media/hero-collage/story-cucumber-prep.webp",
+  "/media/hero-collage/story-pepper-prep.webp",
+  "/media/optimized/hero-film-still-04.webp",
+  "/media/optimized/hero-film-still-09.webp",
+  "/media/optimized/hero-film-still-11.webp",
+  "/media/hero-collage/story-mussels-prep.webp",
+  "/media/optimized/hero-film-still-02.webp",
+  "/media/optimized/hero-film-still-03.webp",
+  "/media/optimized/hero-film-still-05.webp",
+  "/media/optimized/hero-film-still-06.webp",
+  "/media/optimized/hero-film-still-07.webp",
+  "/media/optimized/hero-film-still-08.webp",
+  "/media/optimized/hero-film-still-10.webp",
+  "/media/optimized/hero-film-still-13.webp",
+  "/media/event-formats/private-dinner.jpg",
+  "/media/event-formats/private-event-outdoor-crepes.png",
+  "/media/optimized/gallery-cooking.webp",
+  "/media/optimized/gallery-portrait.webp",
+  "/media/event-formats/masterclass.jpg",
+  "/media/optimized/gallery-dish.webp",
+  "/media/masterchef/evgen-grybenyk-winner-envelope-2020.jpg",
+  "/media/hero-collage/story-service-plating.webp",
+];
+
+const heroCollageWideDesktop = new Set([
+  4, 5, 8, 12, 15, 18, 22, 25, 28, 32, 35, 38, 42,
+  45, 48, 52, 55, 58, 62, 66, 70, 74, 79, 84, 89, 93,
+]);
+
+const heroCollageWideCompact = new Set([
+  1, 4, 7, 10, 13, 17, 20, 23, 26, 29, 33, 36, 39,
+  42, 46, 49, 52, 55, 59, 63, 67, 71, 76, 81, 87, 92,
+]);
 
 const formats = [
   {
@@ -60,14 +98,6 @@ const formats = [
     alt: "Участники мастер-класса наблюдают за работой Евгения",
   },
 ];
-
-function CollageStrip({ side }: { side: keyof typeof collage }) {
-  return <div className={`collage-strip collage-${side}`} aria-hidden="true">
-    {collage[side].map((src, index) => <div className="collage-tile" key={src}>
-      <img src={src} alt="" width="240" height="180" loading="eager" decoding="async" fetchPriority={index < 4 && side === "top" ? "high" : "low"} />
-    </div>)}
-  </div>;
-}
 
 function StationHeading({ number, title, children }: { number: string; title: string; children: React.ReactNode }) {
   return <div className="station-heading">
@@ -106,13 +136,24 @@ export default function Home() {
     <main className="sheet" id="main-content" tabIndex={-1}>
       <section className="hero" aria-label="Евгений Грыбенюк — ваш личный Мастер-Шеф на Кипре">
         <div className="hero-frame">
-          <CollageStrip side="top" />
-          <CollageStrip side="left" />
+          <div className="hero-collage" aria-hidden="true">
+            <div className="hero-collage-grid">
+              {heroCollageSources.map((src, index) => <div
+                className={[
+                  "collage-tile",
+                  heroCollageWideDesktop.has(index) ? "collage-tile--wide-desktop" : "",
+                  heroCollageWideCompact.has(index) ? "collage-tile--wide-compact" : "",
+                ].filter(Boolean).join(" ")}
+                key={src}
+              >
+                <img src={src} alt="" width="240" height="180" loading="eager" decoding="async" fetchPriority="low" />
+              </div>)}
+            </div>
+          </div>
           <div className="hero-identity">
             <div className="hero-copy"><h1><span>Евгений</span><span>Грыбенюк —</span><em>ваш личный</em><span>Мастер-Шеф</span><span>на Кипре</span></h1></div>
             <figure className="hero-portrait"><img src="/media/chef-hero-apron.jpg" alt="Евгений Грыбенюк улыбается, стоя в полосатом поварском фартуке" width="576" height="1280" fetchPriority="high" decoding="async" /></figure>
           </div>
-          <CollageStrip side="right" />
         </div>
         <div className="award-proof">
           <img src="/media/masterchef/evgen-grybenyk-winner-envelope-2020.jpg" alt="Евгений с наградой победителя «МастерШеф. Профессионалы»" width="1200" height="675" loading="eager" decoding="async" />
