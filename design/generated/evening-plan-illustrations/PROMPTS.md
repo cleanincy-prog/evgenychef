@@ -1,3 +1,7 @@
+## Active V8 — approved chef, flowers, two water glasses, paper background
+
+The user approved V7, requested matching the website paper color, then approved the shown V8 and explicitly requested GitHub and domain publication. Final asset: `public/media/evening-plan/conversation-evgen-paper-flowers-v8.png`, 1536×1024. Built-in image_gen; exact prompts in `CHEF_FLOWERS_PAPER_V7_V8_PROMPTS.md`. Identity reference: `design/references/chef-2026-09-11/user-chef-photo-112114.png`. Existing graphite rendering CSS is retained. Earlier sections are historical, not the active asset. Current report: `docs/CHEF_PENCIL_CURRENT_REPORT.md`.
+
 ## Active V6: notebook gaze, shared pencil technique
 
 The live scene now uses `public/media/evening-plan/conversation-evgen-light-pencil-v6.png`. Latest user photo: `design/references/chef-2026-09-11/user-chef-photo-011309.png`. Exact built-in image_gen prompt: `CHEF_LIGHT_PENCIL_V6_PROMPT.md`. The chef looks down into his notebook and writes; facial/clothing contours and open graphite hatching match the woman's drawing language. Prior V2–V5 sections below are historical and do not imply user approval. Current report: `docs/CHEF_PENCIL_CURRENT_REPORT.md`.

@@ -189,7 +189,7 @@ try {
       verify(layout.collage.total === 24 && layout.collage.unique === 24, "The collage requires exactly 24 unique DOM photo sources");
       verify(layout.collage.visible === expectedVisible && layout.collage.visibleUnique === expectedVisible, `Expected ${expectedVisible} unique visible collage photos, got ${JSON.stringify(layout.collage)}`);
       verify(layout.images.every(img => img.loaded && img.altPresent), "Every rendered image must load and have an alt attribute");
-      verify(layout.plate?.source === "/media/menu/personal-menu-duck-plate-cutout-v1.webp", "The real cutout plate must be used");
+      verify(layout.plate?.source === "/media/menu/personal-menu-duck-plate-cream-v2.webp", "The real cutout plate must be used");
       verify(layout.plate.objectFit === "contain", "The plate must use object-fit: contain");
       verify(layout.plate.box.x >= -1 && layout.plate.box.right <= width + 1 && layout.plate.clips.length === 0, "The complete plate must fit without clipping");
       verify(layout.links.every(link => link.href?.startsWith("#") || link.href === "https://www.instagram.com/evg.chef/"), "All links must target page anchors or the exact Instagram account");
@@ -197,6 +197,7 @@ try {
       verify(layout.video?.source === "/media/chef-story-img-5399-no-grill.mp4" && layout.video.poster === "/media/chef-story-img-5399-poster.jpg", "The original film and poster must be retained");
       verify(layout.video.playsInline && !layout.video.autoplay && layout.video.paused, "The film must be inline and user initiated");
       await page.screenshot({ path: path.join(artifacts, `page-${width}.png`), fullPage: true, animations: "disabled" });
+      await page.locator('.conversation-illustration').screenshot({ path: path.join(artifacts, `conversation-${width}.png`), animations: "disabled" });
       record.keyboard = await checkKeyboard(page, width);
       if (width === 1440) record.playback = await checkVideo(page);
       verify(pageErrors.length === 0, `Browser errors: ${JSON.stringify(pageErrors)}`);

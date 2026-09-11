@@ -1,0 +1,2354 @@
+{
+  "url": "http://127.0.0.1:3004",
+  "startedAt": "2026-09-11T09:38:31.064Z",
+  "browser": "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
+  "profile": "/Users/dmitro/Documents/ChatGPT/Шеф4/work/.tmp/chrome-profile-rURdBu",
+  "viewports": [
+    {
+      "width": 1440,
+      "passed": true,
+      "pageErrors": [],
+      "failedLocalRequests": [],
+      "cancelledLocalRequests": [],
+      "externalRequests": [],
+      "httpErrors": [],
+      "layout": {
+        "viewport": {
+          "width": 1440,
+          "height": 1000
+        },
+        "document": {
+          "width": 1440,
+          "height": 3115
+        },
+        "bodyWidth": 1440,
+        "oversized": [],
+        "headings": [
+          {
+            "level": 1,
+            "text": "Евгений Грыбенюк — ваш личный Мастер-Шеф на Кипре"
+          },
+          {
+            "level": 2,
+            "text": "Какой будет ваш вечер?"
+          },
+          {
+            "level": 3,
+            "text": "Частный ужин"
+          },
+          {
+            "level": 3,
+            "text": "Приватные мероприятия"
+          },
+          {
+            "level": 3,
+            "text": "Мастер-классы"
+          },
+          {
+            "level": 2,
+            "text": "От разговора — к вашему столу."
+          },
+          {
+            "level": 3,
+            "text": "Разговор"
+          },
+          {
+            "level": 3,
+            "text": "Меню"
+          },
+          {
+            "level": 3,
+            "text": "Подготовка"
+          },
+          {
+            "level": 3,
+            "text": "Ваш вечер"
+          },
+          {
+            "level": 2,
+            "text": "Начнём с вашего вечера."
+          }
+        ],
+        "stations": [
+          {
+            "step": "01",
+            "text": "Разговор",
+            "box": {
+              "x": 68.40625,
+              "y": 1720.5625,
+              "width": 599.453125,
+              "height": 479,
+              "right": 667.859375,
+              "bottom": 2199.5625
+            }
+          },
+          {
+            "step": "02",
+            "text": "Меню",
+            "box": {
+              "x": 667.859375,
+              "y": 1720.5625,
+              "width": 703.71875,
+              "height": 479,
+              "right": 1371.578125,
+              "bottom": 2199.5625
+            }
+          },
+          {
+            "step": "03",
+            "text": "Подготовка",
+            "box": {
+              "x": 68.40625,
+              "y": 2199.5625,
+              "width": 599.453125,
+              "height": 626.25,
+              "right": 667.859375,
+              "bottom": 2825.8125
+            }
+          },
+          {
+            "step": "04",
+            "text": "Ваш вечер",
+            "box": {
+              "x": 667.859375,
+              "y": 2199.5625,
+              "width": 703.71875,
+              "height": 626.25,
+              "right": 1371.578125,
+              "bottom": 2825.8125
+            }
+          }
+        ],
+        "collage": {
+          "total": 24,
+          "unique": 24,
+          "visible": 24,
+          "visibleUnique": 24
+        },
+        "images": [
+          {
+            "src": "/media/optimized/instagram/instagram-01.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/hero-instagram/hero-35.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/optimized/instagram/instagram-13.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/hero-instagram/hero-06.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/hero-instagram/hero-03.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/hero-instagram/hero-05.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/hero-instagram/hero-29.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/hero-instagram/hero-27.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/hero-instagram/hero-31.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/hero-instagram/hero-40.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/hero-instagram/hero-09.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/optimized/instagram/instagram-12.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/optimized/instagram/instagram-27.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/hero-instagram/hero-24.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/hero-instagram/hero-32.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/hero-instagram/hero-12.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/hero-instagram/hero-38.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/chef-hero-apron.jpg",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/hero-instagram/hero-04.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/hero-instagram/hero-21.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/optimized/instagram/instagram-02.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/hero-collage/story-mussels-prep.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/optimized/instagram/instagram-07.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/hero-instagram/hero-28.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/hero-instagram/hero-30.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/masterchef/evgen-grybenyk-winner-envelope-2020.jpg",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/event-formats/private-dinner.jpg",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/event-formats/private-event-outdoor-crepes.png",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/event-formats/masterclass.jpg",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/evening-plan/conversation-evgen-paper-flowers-v8.png",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/menu/personal-menu-duck-plate-cream-v2.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/evening-plan/toast-illustration.png",
+            "loaded": true,
+            "altPresent": true
+          }
+        ],
+        "plate": {
+          "source": "/media/menu/personal-menu-duck-plate-cream-v2.webp",
+          "box": {
+            "x": 799.3125,
+            "y": 1922.984375,
+            "width": 421.65625,
+            "height": 400.171875,
+            "right": 1220.96875,
+            "bottom": 2323.15625
+          },
+          "intrinsic": [
+            1800,
+            1665
+          ],
+          "objectFit": "contain",
+          "clips": []
+        },
+        "links": [
+          {
+            "href": "#main-content",
+            "text": "Перейти к содержанию",
+            "targetExists": true
+          },
+          {
+            "href": "#top",
+            "text": "Evgen Grybenyk",
+            "targetExists": true
+          },
+          {
+            "href": "https://www.instagram.com/evg.chef/",
+            "text": "Обсудить вечер ↗\nInstagram @evg.chef",
+            "targetExists": true
+          },
+          {
+            "href": "https://www.instagram.com/evg.chef/",
+            "text": "Написать в Instagram\n↗",
+            "targetExists": true
+          },
+          {
+            "href": "#top",
+            "text": "Evgen Grybenyk",
+            "targetExists": true
+          },
+          {
+            "href": "https://www.instagram.com/evg.chef/",
+            "text": "Instagram @evg.chef",
+            "targetExists": true
+          }
+        ],
+        "video": {
+          "source": "/media/chef-story-img-5399-no-grill.mp4",
+          "poster": "/media/chef-story-img-5399-poster.jpg",
+          "autoplay": false,
+          "paused": true,
+          "controls": false,
+          "playsInline": true
+        },
+        "reducedMotion": true
+      },
+      "keyboard": {
+        "focusVisible": true,
+        "outlineStyle": "solid",
+        "outlineWidth": "2px",
+        "rect": {
+          "width": 565.375,
+          "height": 58
+        }
+      },
+      "playback": {
+        "time": 0.223793,
+        "controls": true,
+        "videoWidth": 720,
+        "videoHeight": 1280,
+        "duration": 37.166667,
+        "currentSrc": "http://127.0.0.1:3004/media/chef-story-img-5399-no-grill.mp4",
+        "paused": {
+          "paused": true,
+          "time": 0.490402,
+          "error": null
+        }
+      }
+    },
+    {
+      "width": 1280,
+      "passed": true,
+      "pageErrors": [],
+      "failedLocalRequests": [],
+      "cancelledLocalRequests": [],
+      "externalRequests": [],
+      "httpErrors": [],
+      "layout": {
+        "viewport": {
+          "width": 1280,
+          "height": 1000
+        },
+        "document": {
+          "width": 1280,
+          "height": 3030
+        },
+        "bodyWidth": 1280,
+        "oversized": [],
+        "headings": [
+          {
+            "level": 1,
+            "text": "Евгений Грыбенюк — ваш личный Мастер-Шеф на Кипре"
+          },
+          {
+            "level": 2,
+            "text": "Какой будет ваш вечер?"
+          },
+          {
+            "level": 3,
+            "text": "Частный ужин"
+          },
+          {
+            "level": 3,
+            "text": "Приватные мероприятия"
+          },
+          {
+            "level": 3,
+            "text": "Мастер-классы"
+          },
+          {
+            "level": 2,
+            "text": "От разговора — к вашему столу."
+          },
+          {
+            "level": 3,
+            "text": "Разговор"
+          },
+          {
+            "level": 3,
+            "text": "Меню"
+          },
+          {
+            "level": 3,
+            "text": "Подготовка"
+          },
+          {
+            "level": 3,
+            "text": "Ваш вечер"
+          },
+          {
+            "level": 2,
+            "text": "Начнём с вашего вечера."
+          }
+        ],
+        "stations": [
+          {
+            "step": "01",
+            "text": "Разговор",
+            "box": {
+              "x": 60.796875,
+              "y": 1642.8125,
+              "width": 532.859375,
+              "height": 476,
+              "right": 593.65625,
+              "bottom": 2118.8125
+            }
+          },
+          {
+            "step": "02",
+            "text": "Меню",
+            "box": {
+              "x": 593.65625,
+              "y": 1642.8125,
+              "width": 625.515625,
+              "height": 476,
+              "right": 1219.171875,
+              "bottom": 2118.8125
+            }
+          },
+          {
+            "step": "03",
+            "text": "Подготовка",
+            "box": {
+              "x": 60.796875,
+              "y": 2118.8125,
+              "width": 532.859375,
+              "height": 622.40625,
+              "right": 593.65625,
+              "bottom": 2741.21875
+            }
+          },
+          {
+            "step": "04",
+            "text": "Ваш вечер",
+            "box": {
+              "x": 593.65625,
+              "y": 2118.8125,
+              "width": 625.515625,
+              "height": 622.40625,
+              "right": 1219.171875,
+              "bottom": 2741.21875
+            }
+          }
+        ],
+        "collage": {
+          "total": 24,
+          "unique": 24,
+          "visible": 24,
+          "visibleUnique": 24
+        },
+        "images": [
+          {
+            "src": "/media/optimized/instagram/instagram-01.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/hero-instagram/hero-35.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/optimized/instagram/instagram-13.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/hero-instagram/hero-06.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/hero-instagram/hero-03.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/hero-instagram/hero-05.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/hero-instagram/hero-29.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/hero-instagram/hero-27.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/hero-instagram/hero-31.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/hero-instagram/hero-40.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/hero-instagram/hero-09.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/optimized/instagram/instagram-12.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/optimized/instagram/instagram-27.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/hero-instagram/hero-24.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/hero-instagram/hero-32.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/hero-instagram/hero-12.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/hero-instagram/hero-38.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/chef-hero-apron.jpg",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/hero-instagram/hero-04.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/hero-instagram/hero-21.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/optimized/instagram/instagram-02.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/hero-collage/story-mussels-prep.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/optimized/instagram/instagram-07.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/hero-instagram/hero-28.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/hero-instagram/hero-30.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/masterchef/evgen-grybenyk-winner-envelope-2020.jpg",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/event-formats/private-dinner.jpg",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/event-formats/private-event-outdoor-crepes.png",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/event-formats/masterclass.jpg",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/evening-plan/conversation-evgen-paper-flowers-v8.png",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/menu/personal-menu-duck-plate-cream-v2.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/evening-plan/toast-illustration.png",
+            "loaded": true,
+            "altPresent": true
+          }
+        ],
+        "plate": {
+          "source": "/media/menu/personal-menu-duck-plate-cream-v2.webp",
+          "box": {
+            "x": 710.5,
+            "y": 1831.453125,
+            "width": 374.796875,
+            "height": 355.703125,
+            "right": 1085.296875,
+            "bottom": 2187.15625
+          },
+          "intrinsic": [
+            1800,
+            1665
+          ],
+          "objectFit": "contain",
+          "clips": []
+        },
+        "links": [
+          {
+            "href": "#main-content",
+            "text": "Перейти к содержанию",
+            "targetExists": true
+          },
+          {
+            "href": "#top",
+            "text": "Evgen Grybenyk",
+            "targetExists": true
+          },
+          {
+            "href": "https://www.instagram.com/evg.chef/",
+            "text": "Обсудить вечер ↗\nInstagram @evg.chef",
+            "targetExists": true
+          },
+          {
+            "href": "https://www.instagram.com/evg.chef/",
+            "text": "Написать в Instagram\n↗",
+            "targetExists": true
+          },
+          {
+            "href": "#top",
+            "text": "Evgen Grybenyk",
+            "targetExists": true
+          },
+          {
+            "href": "https://www.instagram.com/evg.chef/",
+            "text": "Instagram @evg.chef",
+            "targetExists": true
+          }
+        ],
+        "video": {
+          "source": "/media/chef-story-img-5399-no-grill.mp4",
+          "poster": "/media/chef-story-img-5399-poster.jpg",
+          "autoplay": false,
+          "paused": true,
+          "controls": false,
+          "playsInline": true
+        },
+        "reducedMotion": true
+      },
+      "keyboard": {
+        "focusVisible": true,
+        "outlineStyle": "solid",
+        "outlineWidth": "2px",
+        "rect": {
+          "width": 502.4375,
+          "height": 58
+        }
+      }
+    },
+    {
+      "width": 1024,
+      "passed": true,
+      "pageErrors": [],
+      "failedLocalRequests": [],
+      "cancelledLocalRequests": [],
+      "externalRequests": [],
+      "httpErrors": [],
+      "layout": {
+        "viewport": {
+          "width": 1024,
+          "height": 1000
+        },
+        "document": {
+          "width": 1024,
+          "height": 2736
+        },
+        "bodyWidth": 1024,
+        "oversized": [],
+        "headings": [
+          {
+            "level": 1,
+            "text": "Евгений Грыбенюк — ваш личный Мастер-Шеф на Кипре"
+          },
+          {
+            "level": 2,
+            "text": "Какой будет ваш вечер?"
+          },
+          {
+            "level": 3,
+            "text": "Частный ужин"
+          },
+          {
+            "level": 3,
+            "text": "Приватные мероприятия"
+          },
+          {
+            "level": 3,
+            "text": "Мастер-классы"
+          },
+          {
+            "level": 2,
+            "text": "От разговора — к вашему столу."
+          },
+          {
+            "level": 3,
+            "text": "Разговор"
+          },
+          {
+            "level": 3,
+            "text": "Меню"
+          },
+          {
+            "level": 3,
+            "text": "Подготовка"
+          },
+          {
+            "level": 3,
+            "text": "Ваш вечер"
+          },
+          {
+            "level": 2,
+            "text": "Начнём с вашего вечера."
+          }
+        ],
+        "stations": [
+          {
+            "step": "01",
+            "text": "Разговор",
+            "box": {
+              "x": 48.640625,
+              "y": 1440.03125,
+              "width": 426.28125,
+              "height": 414,
+              "right": 474.921875,
+              "bottom": 1854.03125
+            }
+          },
+          {
+            "step": "02",
+            "text": "Меню",
+            "box": {
+              "x": 474.921875,
+              "y": 1440.03125,
+              "width": 500.421875,
+              "height": 414,
+              "right": 975.34375,
+              "bottom": 1854.03125
+            }
+          },
+          {
+            "step": "03",
+            "text": "Подготовка",
+            "box": {
+              "x": 48.640625,
+              "y": 1854.03125,
+              "width": 426.28125,
+              "height": 593.0625,
+              "right": 474.921875,
+              "bottom": 2447.09375
+            }
+          },
+          {
+            "step": "04",
+            "text": "Ваш вечер",
+            "box": {
+              "x": 474.921875,
+              "y": 1854.03125,
+              "width": 500.421875,
+              "height": 593.0625,
+              "right": 975.34375,
+              "bottom": 2447.09375
+            }
+          }
+        ],
+        "collage": {
+          "total": 24,
+          "unique": 24,
+          "visible": 24,
+          "visibleUnique": 24
+        },
+        "images": [
+          {
+            "src": "/media/optimized/instagram/instagram-01.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/hero-instagram/hero-35.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/optimized/instagram/instagram-13.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/hero-instagram/hero-06.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/hero-instagram/hero-03.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/hero-instagram/hero-05.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/hero-instagram/hero-29.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/hero-instagram/hero-27.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/hero-instagram/hero-31.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/hero-instagram/hero-40.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/hero-instagram/hero-09.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/optimized/instagram/instagram-12.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/optimized/instagram/instagram-27.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/hero-instagram/hero-24.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/hero-instagram/hero-32.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/hero-instagram/hero-12.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/hero-instagram/hero-38.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/chef-hero-apron.jpg",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/hero-instagram/hero-04.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/hero-instagram/hero-21.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/optimized/instagram/instagram-02.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/hero-collage/story-mussels-prep.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/optimized/instagram/instagram-07.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/hero-instagram/hero-28.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/hero-instagram/hero-30.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/masterchef/evgen-grybenyk-winner-envelope-2020.jpg",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/event-formats/private-dinner.jpg",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/event-formats/private-event-outdoor-crepes.png",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/event-formats/masterclass.jpg",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/evening-plan/conversation-evgen-paper-flowers-v8.png",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/menu/personal-menu-duck-plate-cream-v2.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/evening-plan/toast-illustration.png",
+            "loaded": true,
+            "altPresent": true
+          }
+        ],
+        "plate": {
+          "source": "/media/menu/personal-menu-duck-plate-cream-v2.webp",
+          "box": {
+            "x": 568.40625,
+            "y": 1601.140625,
+            "width": 299.84375,
+            "height": 284.546875,
+            "right": 868.25,
+            "bottom": 1885.6875
+          },
+          "intrinsic": [
+            1800,
+            1665
+          ],
+          "objectFit": "contain",
+          "clips": []
+        },
+        "links": [
+          {
+            "href": "#main-content",
+            "text": "Перейти к содержанию",
+            "targetExists": true
+          },
+          {
+            "href": "#top",
+            "text": "Evgen Grybenyk",
+            "targetExists": true
+          },
+          {
+            "href": "https://www.instagram.com/evg.chef/",
+            "text": "Обсудить вечер ↗\nInstagram @evg.chef",
+            "targetExists": true
+          },
+          {
+            "href": "https://www.instagram.com/evg.chef/",
+            "text": "Написать в Instagram\n↗",
+            "targetExists": true
+          },
+          {
+            "href": "#top",
+            "text": "Evgen Grybenyk",
+            "targetExists": true
+          },
+          {
+            "href": "https://www.instagram.com/evg.chef/",
+            "text": "Instagram @evg.chef",
+            "targetExists": true
+          }
+        ],
+        "video": {
+          "source": "/media/chef-story-img-5399-no-grill.mp4",
+          "poster": "/media/chef-story-img-5399-poster.jpg",
+          "autoplay": false,
+          "paused": true,
+          "controls": false,
+          "playsInline": true
+        },
+        "reducedMotion": true
+      },
+      "keyboard": {
+        "focusVisible": true,
+        "outlineStyle": "solid",
+        "outlineWidth": "2px",
+        "rect": {
+          "width": 431.21875,
+          "height": 58
+        }
+      }
+    },
+    {
+      "width": 768,
+      "passed": true,
+      "pageErrors": [],
+      "failedLocalRequests": [],
+      "cancelledLocalRequests": [],
+      "externalRequests": [],
+      "httpErrors": [],
+      "layout": {
+        "viewport": {
+          "width": 768,
+          "height": 900
+        },
+        "document": {
+          "width": 768,
+          "height": 4193
+        },
+        "bodyWidth": 768,
+        "oversized": [],
+        "headings": [
+          {
+            "level": 1,
+            "text": "Евгений Грыбенюк — ваш личный Мастер-Шеф на Кипре"
+          },
+          {
+            "level": 2,
+            "text": "Какой будет ваш вечер?"
+          },
+          {
+            "level": 3,
+            "text": "Частный ужин"
+          },
+          {
+            "level": 3,
+            "text": "Приватные мероприятия"
+          },
+          {
+            "level": 3,
+            "text": "Мастер-классы"
+          },
+          {
+            "level": 2,
+            "text": "От разговора — к вашему столу."
+          },
+          {
+            "level": 3,
+            "text": "Разговор"
+          },
+          {
+            "level": 3,
+            "text": "Меню"
+          },
+          {
+            "level": 3,
+            "text": "Подготовка"
+          },
+          {
+            "level": 3,
+            "text": "Ваш вечер"
+          },
+          {
+            "level": 2,
+            "text": "Начнём с вашего вечера."
+          }
+        ],
+        "stations": [
+          {
+            "step": "01",
+            "text": "Разговор",
+            "box": {
+              "x": 36.484375,
+              "y": 1310.59375,
+              "width": 695.03125,
+              "height": 447.3125,
+              "right": 731.515625,
+              "bottom": 1757.90625
+            }
+          },
+          {
+            "step": "02",
+            "text": "Меню",
+            "box": {
+              "x": 36.484375,
+              "y": 1757.90625,
+              "width": 695.03125,
+              "height": 959.5,
+              "right": 731.515625,
+              "bottom": 2717.40625
+            }
+          },
+          {
+            "step": "03",
+            "text": "Подготовка",
+            "box": {
+              "x": 36.484375,
+              "y": 2717.40625,
+              "width": 695.03125,
+              "height": 699.90625,
+              "right": 731.515625,
+              "bottom": 3417.3125
+            }
+          },
+          {
+            "step": "04",
+            "text": "Ваш вечер",
+            "box": {
+              "x": 36.484375,
+              "y": 3417.3125,
+              "width": 695.03125,
+              "height": 409.640625,
+              "right": 731.515625,
+              "bottom": 3826.953125
+            }
+          }
+        ],
+        "collage": {
+          "total": 24,
+          "unique": 24,
+          "visible": 24,
+          "visibleUnique": 24
+        },
+        "images": [
+          {
+            "src": "/media/optimized/instagram/instagram-01.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/hero-instagram/hero-35.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/optimized/instagram/instagram-13.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/hero-instagram/hero-06.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/hero-instagram/hero-03.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/hero-instagram/hero-05.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/hero-instagram/hero-29.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/hero-instagram/hero-27.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/hero-instagram/hero-31.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/hero-instagram/hero-40.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/hero-instagram/hero-09.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/optimized/instagram/instagram-12.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/optimized/instagram/instagram-27.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/hero-instagram/hero-24.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/hero-instagram/hero-32.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/hero-instagram/hero-12.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/hero-instagram/hero-38.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/chef-hero-apron.jpg",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/hero-instagram/hero-04.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/hero-instagram/hero-21.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/optimized/instagram/instagram-02.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/hero-collage/story-mussels-prep.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/optimized/instagram/instagram-07.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/hero-instagram/hero-28.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/hero-instagram/hero-30.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/masterchef/evgen-grybenyk-winner-envelope-2020.jpg",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/event-formats/private-dinner.jpg",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/event-formats/private-event-outdoor-crepes.png",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/event-formats/masterclass.jpg",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/evening-plan/conversation-evgen-paper-flowers-v8.png",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/menu/personal-menu-duck-plate-cream-v2.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/evening-plan/toast-illustration.png",
+            "loaded": true,
+            "altPresent": true
+          }
+        ],
+        "plate": {
+          "source": "/media/menu/personal-menu-duck-plate-cream-v2.webp",
+          "box": {
+            "x": 74.484375,
+            "y": 2024.8125,
+            "width": 600,
+            "height": 516,
+            "right": 674.484375,
+            "bottom": 2540.8125
+          },
+          "intrinsic": [
+            1800,
+            1665
+          ],
+          "objectFit": "contain",
+          "clips": []
+        },
+        "links": [
+          {
+            "href": "#main-content",
+            "text": "Перейти к содержанию",
+            "targetExists": true
+          },
+          {
+            "href": "#top",
+            "text": "Evgen Grybenyk",
+            "targetExists": true
+          },
+          {
+            "href": "https://www.instagram.com/evg.chef/",
+            "text": "Обсудить вечер ↗\nInstagram @evg.chef",
+            "targetExists": true
+          },
+          {
+            "href": "https://www.instagram.com/evg.chef/",
+            "text": "Написать в Instagram\n↗",
+            "targetExists": true
+          },
+          {
+            "href": "#top",
+            "text": "Evgen Grybenyk",
+            "targetExists": true
+          },
+          {
+            "href": "https://www.instagram.com/evg.chef/",
+            "text": "Instagram @evg.chef",
+            "targetExists": true
+          }
+        ],
+        "video": {
+          "source": "/media/chef-story-img-5399-no-grill.mp4",
+          "poster": "/media/chef-story-img-5399-poster.jpg",
+          "autoplay": false,
+          "paused": true,
+          "controls": false,
+          "playsInline": true
+        },
+        "reducedMotion": true
+      },
+      "keyboard": {
+        "focusVisible": true,
+        "outlineStyle": "solid",
+        "outlineWidth": "2px",
+        "rect": {
+          "width": 510,
+          "height": 58
+        }
+      }
+    },
+    {
+      "width": 430,
+      "passed": true,
+      "pageErrors": [],
+      "failedLocalRequests": [],
+      "cancelledLocalRequests": [],
+      "externalRequests": [],
+      "httpErrors": [],
+      "layout": {
+        "viewport": {
+          "width": 430,
+          "height": 900
+        },
+        "document": {
+          "width": 430,
+          "height": 4733
+        },
+        "bodyWidth": 430,
+        "oversized": [],
+        "headings": [
+          {
+            "level": 1,
+            "text": "Евгений Грыбенюк — ваш личный Мастер-Шеф на Кипре"
+          },
+          {
+            "level": 2,
+            "text": "Какой будет ваш вечер?"
+          },
+          {
+            "level": 3,
+            "text": "Частный ужин"
+          },
+          {
+            "level": 3,
+            "text": "Приватные мероприятия"
+          },
+          {
+            "level": 3,
+            "text": "Мастер-классы"
+          },
+          {
+            "level": 2,
+            "text": "От разговора — к вашему столу."
+          },
+          {
+            "level": 3,
+            "text": "Разговор"
+          },
+          {
+            "level": 3,
+            "text": "Меню"
+          },
+          {
+            "level": 3,
+            "text": "Подготовка"
+          },
+          {
+            "level": 3,
+            "text": "Ваш вечер"
+          },
+          {
+            "level": 2,
+            "text": "Начнём с вашего вечера."
+          }
+        ],
+        "stations": [
+          {
+            "step": "01",
+            "text": "Разговор",
+            "box": {
+              "x": 18,
+              "y": 2287.796875,
+              "width": 394,
+              "height": 379.828125,
+              "right": 412,
+              "bottom": 2667.625
+            }
+          },
+          {
+            "step": "02",
+            "text": "Меню",
+            "box": {
+              "x": 18,
+              "y": 2667.625,
+              "width": 394,
+              "height": 750.109375,
+              "right": 412,
+              "bottom": 3417.734375
+            }
+          },
+          {
+            "step": "03",
+            "text": "Подготовка",
+            "box": {
+              "x": 18,
+              "y": 3417.734375,
+              "width": 394,
+              "height": 624.421875,
+              "right": 412,
+              "bottom": 4042.15625
+            }
+          },
+          {
+            "step": "04",
+            "text": "Ваш вечер",
+            "box": {
+              "x": 18,
+              "y": 4042.15625,
+              "width": 394,
+              "height": 349.828125,
+              "right": 412,
+              "bottom": 4391.984375
+            }
+          }
+        ],
+        "collage": {
+          "total": 24,
+          "unique": 24,
+          "visible": 14,
+          "visibleUnique": 14
+        },
+        "images": [
+          {
+            "src": "/media/optimized/instagram/instagram-01.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/hero-instagram/hero-35.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/optimized/instagram/instagram-13.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/hero-instagram/hero-06.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/hero-instagram/hero-09.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/optimized/instagram/instagram-12.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/optimized/instagram/instagram-27.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/hero-instagram/hero-24.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/hero-instagram/hero-32.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/chef-hero-apron.jpg",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/hero-instagram/hero-04.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/hero-instagram/hero-21.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/optimized/instagram/instagram-02.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/hero-collage/story-mussels-prep.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/optimized/instagram/instagram-07.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/masterchef/evgen-grybenyk-winner-envelope-2020.jpg",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/event-formats/private-dinner.jpg",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/event-formats/private-event-outdoor-crepes.png",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/event-formats/masterclass.jpg",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/evening-plan/conversation-evgen-paper-flowers-v8.png",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/menu/personal-menu-duck-plate-cream-v2.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/evening-plan/toast-illustration.png",
+            "loaded": true,
+            "altPresent": true
+          }
+        ],
+        "plate": {
+          "source": "/media/menu/personal-menu-duck-plate-cream-v2.webp",
+          "box": {
+            "x": 51,
+            "y": 2933.359375,
+            "width": 361,
+            "height": 310.453125,
+            "right": 412,
+            "bottom": 3243.8125
+          },
+          "intrinsic": [
+            1800,
+            1665
+          ],
+          "objectFit": "contain",
+          "clips": []
+        },
+        "links": [
+          {
+            "href": "#main-content",
+            "text": "Перейти к содержанию",
+            "targetExists": true
+          },
+          {
+            "href": "#top",
+            "text": "Evgen Grybenyk",
+            "targetExists": true
+          },
+          {
+            "href": "https://www.instagram.com/evg.chef/",
+            "text": "Instagram ↗",
+            "targetExists": true
+          },
+          {
+            "href": "https://www.instagram.com/evg.chef/",
+            "text": "Написать в Instagram\n↗",
+            "targetExists": true
+          },
+          {
+            "href": "#top",
+            "text": "Evgen Grybenyk",
+            "targetExists": true
+          },
+          {
+            "href": "https://www.instagram.com/evg.chef/",
+            "text": "Instagram @evg.chef",
+            "targetExists": true
+          }
+        ],
+        "video": {
+          "source": "/media/chef-story-img-5399-no-grill.mp4",
+          "poster": "/media/chef-story-img-5399-poster.jpg",
+          "autoplay": false,
+          "paused": true,
+          "controls": false,
+          "playsInline": true
+        },
+        "reducedMotion": true
+      },
+      "keyboard": {
+        "focusVisible": true,
+        "outlineStyle": "solid",
+        "outlineWidth": "2px",
+        "rect": {
+          "width": 394,
+          "height": 58
+        }
+      }
+    },
+    {
+      "width": 390,
+      "passed": true,
+      "pageErrors": [],
+      "failedLocalRequests": [],
+      "cancelledLocalRequests": [],
+      "externalRequests": [],
+      "httpErrors": [],
+      "layout": {
+        "viewport": {
+          "width": 390,
+          "height": 900
+        },
+        "document": {
+          "width": 390,
+          "height": 4591
+        },
+        "bodyWidth": 390,
+        "oversized": [],
+        "headings": [
+          {
+            "level": 1,
+            "text": "Евгений Грыбенюк — ваш личный Мастер-Шеф на Кипре"
+          },
+          {
+            "level": 2,
+            "text": "Какой будет ваш вечер?"
+          },
+          {
+            "level": 3,
+            "text": "Частный ужин"
+          },
+          {
+            "level": 3,
+            "text": "Приватные мероприятия"
+          },
+          {
+            "level": 3,
+            "text": "Мастер-классы"
+          },
+          {
+            "level": 2,
+            "text": "От разговора — к вашему столу."
+          },
+          {
+            "level": 3,
+            "text": "Разговор"
+          },
+          {
+            "level": 3,
+            "text": "Меню"
+          },
+          {
+            "level": 3,
+            "text": "Подготовка"
+          },
+          {
+            "level": 3,
+            "text": "Ваш вечер"
+          },
+          {
+            "level": 2,
+            "text": "Начнём с вашего вечера."
+          }
+        ],
+        "stations": [
+          {
+            "step": "01",
+            "text": "Разговор",
+            "box": {
+              "x": 18,
+              "y": 2139.578125,
+              "width": 354,
+              "height": 380.15625,
+              "right": 372,
+              "bottom": 2519.734375
+            }
+          },
+          {
+            "step": "02",
+            "text": "Меню",
+            "box": {
+              "x": 18,
+              "y": 2519.734375,
+              "width": 354,
+              "height": 733.859375,
+              "right": 372,
+              "bottom": 3253.59375
+            }
+          },
+          {
+            "step": "03",
+            "text": "Подготовка",
+            "box": {
+              "x": 18,
+              "y": 3253.59375,
+              "width": 354,
+              "height": 624.421875,
+              "right": 372,
+              "bottom": 3878.015625
+            }
+          },
+          {
+            "step": "04",
+            "text": "Ваш вечер",
+            "box": {
+              "x": 18,
+              "y": 3878.015625,
+              "width": 354,
+              "height": 350.15625,
+              "right": 372,
+              "bottom": 4228.171875
+            }
+          }
+        ],
+        "collage": {
+          "total": 24,
+          "unique": 24,
+          "visible": 14,
+          "visibleUnique": 14
+        },
+        "images": [
+          {
+            "src": "/media/optimized/instagram/instagram-01.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/hero-instagram/hero-35.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/optimized/instagram/instagram-13.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/hero-instagram/hero-06.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/hero-instagram/hero-09.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/optimized/instagram/instagram-12.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/optimized/instagram/instagram-27.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/hero-instagram/hero-24.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/hero-instagram/hero-32.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/chef-hero-apron.jpg",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/hero-instagram/hero-04.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/hero-instagram/hero-21.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/optimized/instagram/instagram-02.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/hero-collage/story-mussels-prep.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/optimized/instagram/instagram-07.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/masterchef/evgen-grybenyk-winner-envelope-2020.jpg",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/event-formats/private-dinner.jpg",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/event-formats/private-event-outdoor-crepes.png",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/event-formats/masterclass.jpg",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/evening-plan/conversation-evgen-paper-flowers-v8.png",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/menu/personal-menu-duck-plate-cream-v2.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/evening-plan/toast-illustration.png",
+            "loaded": true,
+            "altPresent": true
+          }
+        ],
+        "plate": {
+          "source": "/media/menu/personal-menu-duck-plate-cream-v2.webp",
+          "box": {
+            "x": 51,
+            "y": 2806.421875,
+            "width": 321,
+            "height": 276.046875,
+            "right": 372,
+            "bottom": 3082.46875
+          },
+          "intrinsic": [
+            1800,
+            1665
+          ],
+          "objectFit": "contain",
+          "clips": []
+        },
+        "links": [
+          {
+            "href": "#main-content",
+            "text": "Перейти к содержанию",
+            "targetExists": true
+          },
+          {
+            "href": "#top",
+            "text": "Evgen Grybenyk",
+            "targetExists": true
+          },
+          {
+            "href": "https://www.instagram.com/evg.chef/",
+            "text": "Instagram ↗",
+            "targetExists": true
+          },
+          {
+            "href": "https://www.instagram.com/evg.chef/",
+            "text": "Написать в Instagram\n↗",
+            "targetExists": true
+          },
+          {
+            "href": "#top",
+            "text": "Evgen Grybenyk",
+            "targetExists": true
+          },
+          {
+            "href": "https://www.instagram.com/evg.chef/",
+            "text": "Instagram @evg.chef",
+            "targetExists": true
+          }
+        ],
+        "video": {
+          "source": "/media/chef-story-img-5399-no-grill.mp4",
+          "poster": "/media/chef-story-img-5399-poster.jpg",
+          "autoplay": false,
+          "paused": true,
+          "controls": false,
+          "playsInline": true
+        },
+        "reducedMotion": true
+      },
+      "keyboard": {
+        "focusVisible": true,
+        "outlineStyle": "solid",
+        "outlineWidth": "2px",
+        "rect": {
+          "width": 354,
+          "height": 58
+        }
+      }
+    },
+    {
+      "width": 375,
+      "passed": true,
+      "pageErrors": [],
+      "failedLocalRequests": [],
+      "cancelledLocalRequests": [],
+      "externalRequests": [],
+      "httpErrors": [],
+      "layout": {
+        "viewport": {
+          "width": 375,
+          "height": 900
+        },
+        "document": {
+          "width": 375,
+          "height": 4585
+        },
+        "bodyWidth": 375,
+        "oversized": [],
+        "headings": [
+          {
+            "level": 1,
+            "text": "Евгений Грыбенюк — ваш личный Мастер-Шеф на Кипре"
+          },
+          {
+            "level": 2,
+            "text": "Какой будет ваш вечер?"
+          },
+          {
+            "level": 3,
+            "text": "Частный ужин"
+          },
+          {
+            "level": 3,
+            "text": "Приватные мероприятия"
+          },
+          {
+            "level": 3,
+            "text": "Мастер-классы"
+          },
+          {
+            "level": 2,
+            "text": "От разговора — к вашему столу."
+          },
+          {
+            "level": 3,
+            "text": "Разговор"
+          },
+          {
+            "level": 3,
+            "text": "Меню"
+          },
+          {
+            "level": 3,
+            "text": "Подготовка"
+          },
+          {
+            "level": 3,
+            "text": "Ваш вечер"
+          },
+          {
+            "level": 2,
+            "text": "Начнём с вашего вечера."
+          }
+        ],
+        "stations": [
+          {
+            "step": "01",
+            "text": "Разговор",
+            "box": {
+              "x": 18,
+              "y": 2115.609375,
+              "width": 339,
+              "height": 370.15625,
+              "right": 357,
+              "bottom": 2485.765625
+            }
+          },
+          {
+            "step": "02",
+            "text": "Меню",
+            "box": {
+              "x": 18,
+              "y": 2485.765625,
+              "width": 339,
+              "height": 772.25,
+              "right": 357,
+              "bottom": 3258.015625
+            }
+          },
+          {
+            "step": "03",
+            "text": "Подготовка",
+            "box": {
+              "x": 18,
+              "y": 3258.015625,
+              "width": 339,
+              "height": 624.421875,
+              "right": 357,
+              "bottom": 3882.4375
+            }
+          },
+          {
+            "step": "04",
+            "text": "Ваш вечер",
+            "box": {
+              "x": 18,
+              "y": 3882.4375,
+              "width": 339,
+              "height": 340.15625,
+              "right": 357,
+              "bottom": 4222.59375
+            }
+          }
+        ],
+        "collage": {
+          "total": 24,
+          "unique": 24,
+          "visible": 14,
+          "visibleUnique": 14
+        },
+        "images": [
+          {
+            "src": "/media/optimized/instagram/instagram-01.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/hero-instagram/hero-35.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/optimized/instagram/instagram-13.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/hero-instagram/hero-06.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/hero-instagram/hero-09.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/optimized/instagram/instagram-12.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/optimized/instagram/instagram-27.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/hero-instagram/hero-24.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/hero-instagram/hero-32.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/chef-hero-apron.jpg",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/hero-instagram/hero-04.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/hero-instagram/hero-21.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/optimized/instagram/instagram-02.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/hero-collage/story-mussels-prep.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/optimized/instagram/instagram-07.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/masterchef/evgen-grybenyk-winner-envelope-2020.jpg",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/event-formats/private-dinner.jpg",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/event-formats/private-event-outdoor-crepes.png",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/event-formats/masterclass.jpg",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/evening-plan/conversation-evgen-paper-flowers-v8.png",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/menu/personal-menu-duck-plate-cream-v2.webp",
+            "loaded": true,
+            "altPresent": true
+          },
+          {
+            "src": "/media/evening-plan/toast-illustration.png",
+            "loaded": true,
+            "altPresent": true
+          }
+        ],
+        "plate": {
+          "source": "/media/menu/personal-menu-duck-plate-cream-v2.webp",
+          "box": {
+            "x": 51,
+            "y": 2801.03125,
+            "width": 306,
+            "height": 263.15625,
+            "right": 357,
+            "bottom": 3064.1875
+          },
+          "intrinsic": [
+            1800,
+            1665
+          ],
+          "objectFit": "contain",
+          "clips": []
+        },
+        "links": [
+          {
+            "href": "#main-content",
+            "text": "Перейти к содержанию",
+            "targetExists": true
+          },
+          {
+            "href": "#top",
+            "text": "Evgen Grybenyk",
+            "targetExists": true
+          },
+          {
+            "href": "https://www.instagram.com/evg.chef/",
+            "text": "Instagram ↗",
+            "targetExists": true
+          },
+          {
+            "href": "https://www.instagram.com/evg.chef/",
+            "text": "Написать в Instagram\n↗",
+            "targetExists": true
+          },
+          {
+            "href": "#top",
+            "text": "Evgen Grybenyk",
+            "targetExists": true
+          },
+          {
+            "href": "https://www.instagram.com/evg.chef/",
+            "text": "Instagram @evg.chef",
+            "targetExists": true
+          }
+        ],
+        "video": {
+          "source": "/media/chef-story-img-5399-no-grill.mp4",
+          "poster": "/media/chef-story-img-5399-poster.jpg",
+          "autoplay": false,
+          "paused": true,
+          "controls": false,
+          "playsInline": true
+        },
+        "reducedMotion": true
+      },
+      "keyboard": {
+        "focusVisible": true,
+        "outlineStyle": "solid",
+        "outlineWidth": "2px",
+        "rect": {
+          "width": 339,
+          "height": 58
+        }
+      }
+    }
+  ],
+  "errorFallback": {
+    "simulatedHttpStatus": 404,
+    "before": {
+      "text": "▷\nСмотреть фильм",
+      "poster": "/media/chef-story-img-5399-poster.jpg"
+    },
+    "after": {
+      "videoPresent": true,
+      "poster": "/media/chef-story-img-5399-poster.jpg",
+      "error": null,
+      "fallbackText": "Ваш браузер не поддерживает видео.▷ПовторитьВидео не удалось загрузить. Попробуйте ещё раз.",
+      "localText": "▷\nПовторить"
+    },
+    "present": true,
+    "retryRecovered": true
+  },
+  "passed": true,
+  "completedAt": "2026-09-11T09:40:36.498Z",
+  "failures": []
+}

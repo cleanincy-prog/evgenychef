@@ -80,7 +80,7 @@ function StationHeading({ number, title, children }: { number: string; title: st
 function MenuPlate() {
   return <figure className="menu-plate" aria-label="Композиция блюда: основной продукт, гарнир, текстуры и соус">
     <div className="plate-visual">
-    <img className="menu-plate-photo" src="/media/menu/personal-menu-duck-plate-cutout-v1.webp" alt="Целая белая тарелка с авторской подачей блюда" width="1800" height="1665" loading="lazy" decoding="async" />
+    <img className="menu-plate-photo" src="/media/menu/personal-menu-duck-plate-cream-v2.webp" alt="Кремовая тарелка с уткой, гарниром и соусами" width="1800" height="1665" loading="lazy" decoding="async" />
     </div>
     <PlateLeaders />
     <figcaption className="plate-notes"><dl className="plate-note-list">
@@ -136,7 +136,7 @@ export default function Home() {
           <ol className="process-list">
             <li className="process-station station-conversation" data-step="01">
               <StationHeading number="01" title="Разговор">Вы рассказываете, что любите, каким будет вечер и что важно учесть.</StationHeading>
-              <figure className="process-illustration conversation-illustration"><img src="/media/evening-plan/conversation-evgen-light-pencil-v6.png" alt="Карандашный рисунок Евгения Грыбенюка: шеф в белом кителе смотрит в открытый блокнот и записывает пожелания сидящей рядом гостьи" width="1536" height="1024" loading="lazy" decoding="async" /></figure>
+              <figure className="process-illustration conversation-illustration"><img src="/media/evening-plan/conversation-evgen-paper-flowers-v8.png" alt="Карандашный рисунок: Евгений с лёгкой улыбкой записывает пожелания гостьи в блокнот; на столе небольшая ваза с цветами и два стакана воды" width="1536" height="1024" loading="lazy" decoding="async" /></figure>
             </li>
             <li className="process-station station-menu" data-step="02">
               <StationHeading number="02" title="Меню">Я подбираю продукты, продумываю сочетания и составляю меню для вас.</StationHeading>

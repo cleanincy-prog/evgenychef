@@ -101,7 +101,7 @@ test("renders 24 independent documentary collage photos and the real project ass
   const required = [
     "/media/chef-hero-apron.jpg",
     "/media/masterchef/evgen-grybenyk-winner-envelope-2020.jpg",
-    "/media/menu/personal-menu-duck-plate-cutout-v1.webp",
+    "/media/menu/personal-menu-duck-plate-cream-v2.webp",
   ];
   for (const path of required) assert.ok(imageTags.some(img => img.src === path), `Missing real asset: ${path}`);
   for (const img of imageTags) assert.ok(Object.hasOwn(img, "alt"), `Image requires alt, including decorative empty alt: ${img.src}`);

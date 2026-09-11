@@ -1,0 +1,31 @@
+{
+  "tool": "built-in image_gen",
+  "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/menu/personal-menu-duck-plate-cutout-v1.webp",
+  "source_dimensions": [
+    1800,
+    1665
+  ],
+  "outputs": [
+    {
+      "path": "/Users/dmitro/.codex/generated_images/01a08f8e-4088-7cb0-9bd8-325c723fcfa0/exec-0bbaa7a8-7077-48b4-804f-c47c86cc1cbb.png",
+      "dimensions": [
+        1303,
+        1207
+      ],
+      "mode": "RGB",
+      "alpha": false,
+      "prompt": "Use case: precise-object-edit.\nAsset type: photoreal food cutout for an existing website.\nInput image: Image 1 is the edit target; it is an 1800 × 1665 photograph of sliced duck on a ceramic plate with transparency outside the plate.\nPrimary request: Change ONLY the cool white ceramic plate to a warm ivory cream color in the #F4EFE5 family, matching the website's warm cream background. Make the plate clearly warm cream rather than blue/cool white; retain believable subtle ceramic shading, fine surface texture and restrained natural rim highlights.\nInvariants: Preserve the exact food arrangement, all sliced duck, crust and pink meat, the orange garnish and dots, green and purple leaves, black puree brushstroke, brown sauces, mushrooms, all proportions and relative positions. Preserve the same camera perspective, framing, plate size, full uncut plate silhouette and image aspect ratio of 1800:1665. Keep the image a photographic edit; no re-plating, food additions, stylization, changes of lighting on food, or new objects.\nScene/backdrop: Genuinely transparent alpha everywhere outside the plate. No solid background, table, backdrop, checkerboard drawing, added shadow outside the original silhouette, text, border or watermark. Retain full plate inside canvas; do not crop its edges.\nChange only the ceramic plate's cool white color to warm ivory cream; keep everything else as close to the input as possible."
+    },
+    {
+      "path": "/Users/dmitro/.codex/generated_images/01a08f8e-4088-7cb0-9bd8-325c723fcfa0/exec-fcecf495-c324-4e34-aa71-bc1f4d671d44.png",
+      "dimensions": [
+        1303,
+        1207
+      ],
+      "mode": "RGB",
+      "alpha": false,
+      "prompt": "Use case: background-extraction.\nInput image 1 is the edit target. It already has the approved warm ivory cream ceramic plate, sliced duck, garnish and sauces. The background outside the plate currently contains unwanted drawn gray checkerboard pixels.\nPrecise correction: Remove ONLY that entire gray checkerboard background outside the plate. Return a PNG cutout with a real alpha channel: alpha=0 in the background outside the plate, alpha=255 on the plate/food, naturally antialiased alpha at its silhouette. The transparency must be in the file's RGBA pixels; do not depict transparency with any gray, white, black or checkerboard pattern.\nPreserve the current plate and food photograph as closely as possible, including the warm #F4EFE5-family ivory ceramic tone, all duck slices, orange garnish dots, greens, black puree brushstroke and brown sauces. Keep the same framing, complete uncut plate silhouette, exact camera perspective and same 1303:1207 image aspect ratio. No added border, shadow, text, watermark or new objects. This is only removing the fake checkerboard background to actual alpha transparency."
+    }
+  ],
+  "observations": "Both passes have a warm cream ceramic plate with restrained natural shading and rim highlights. Overall dish arrangement is visually close, but source resolution is not preserved and fine details of food were regenerated; do not claim pixel-identical preservation or exact registration. Full plate is visible. Both outputs contain a drawn gray checkerboard instead of true alpha. The second output has additional food texture drift. The first is preferable as color reference, but neither is a production-ready transparent cutout."
+}

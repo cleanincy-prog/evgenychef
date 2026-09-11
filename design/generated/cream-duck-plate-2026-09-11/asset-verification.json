@@ -1,0 +1,17 @@
+{
+  "source": "public/media/menu/personal-menu-duck-plate-cutout-v1.webp",
+  "destination": "public/media/menu/personal-menu-duck-plate-cream-v2.webp",
+  "width": 1800,
+  "height": 1665,
+  "target": [
+    244,
+    239,
+    229
+  ],
+  "changedCeramicPixels": 1316146,
+  "protectedPixels": 208054,
+  "alphaDifferences": 0,
+  "protectedFoodRgbDifferences": 0,
+  "encoding": "lossless WebP",
+  "method": "imagegen colour reference; source-preserving ceramic colour preparation"
+}

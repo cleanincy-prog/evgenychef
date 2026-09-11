@@ -9,7 +9,7 @@ const localUrl = new URL(process.env.LOCAL_URL || "http://127.0.0.1:3004");
 assert.equal(localUrl.protocol, "http:");
 assert.ok(["localhost", "127.0.0.1"].includes(localUrl.hostname), "Visual QA is restricted to localhost");
 assert.equal(localUrl.username + localUrl.password, "");
-const artifacts = path.join(root, "artifacts/plate-leaders-2026-09-11");
+const artifacts = path.join(root, process.env.QA_ARTIFACTS || "artifacts/plate-leaders-2026-09-11");
 const temporary = path.join(root, "work/.tmp");
 await mkdir(artifacts, { recursive: true });
 await mkdir(temporary, { recursive: true });
@@ -189,7 +189,7 @@ try {
       verify(layout.collage.total === 24 && layout.collage.unique === 24, "The collage requires exactly 24 unique DOM photo sources");
       verify(layout.collage.visible === expectedVisible && layout.collage.visibleUnique === expectedVisible, `Expected ${expectedVisible} unique visible collage photos, got ${JSON.stringify(layout.collage)}`);
       verify(layout.images.every(img => img.loaded && img.altPresent), "Every rendered image must load and have an alt attribute");
-      verify(layout.plate?.source === "/media/menu/personal-menu-duck-plate-cutout-v1.webp", "The real cutout plate must be used");
+      verify(layout.plate?.source === "/media/menu/personal-menu-duck-plate-cream-v2.webp", "The real cutout plate must be used");
       verify(layout.plate.objectFit === "contain", "The plate must use object-fit: contain");
       verify(layout.plate.box.x >= -1 && layout.plate.box.right <= width + 1 && layout.plate.clips.length === 0, "The complete plate must fit without clipping");
       verify(layout.links.every(link => link.href?.startsWith("#") || link.href === "https://www.instagram.com/evg.chef/"), "All links must target page anchors or the exact Instagram account");
