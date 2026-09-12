@@ -8,7 +8,7 @@ export default function ChefStoryVideo() {
   const videoRef = useRef<HTMLVideoElement>(null);
   const playAttempt = useRef(0);
   const [failed, setFailed] = useState(false);
-  usePageMediaPlayback(videoRef, 0.01);
+  usePageMediaPlayback(videoRef);
 
   async function playFilm() {
     const video = videoRef.current;

@@ -189,7 +189,13 @@ async function checkVideo(page) {
   await page.waitForFunction(() => document.querySelector("video").preload === "auto");
   verify(await video.evaluate(el => el.paused), "Early preload must not play offscreen");
   const beforeHeight = await video.evaluate(el => el.getBoundingClientRect().height);
-  await video.scrollIntoViewIfNeeded();
+  await video.evaluate(el => window.scrollTo({ top: el.getBoundingClientRect().top + scrollY - innerHeight + 10, behavior: "instant" }));
+  await page.waitForTimeout(250);
+  verify(await video.evaluate(el => el.paused && el.currentTime === 0), "The first visible edge must not start playback");
+  await video.evaluate(el => window.scrollTo({ top: el.getBoundingClientRect().bottom + scrollY - innerHeight * 0.94 - 8, behavior: "instant" }));
+  await page.waitForTimeout(250);
+  verify(await video.evaluate(el => el.paused && el.currentTime === 0), "Playback must wait for the screenshot position even when the frame is fully visible");
+  await video.evaluate(el => window.scrollTo({ top: el.getBoundingClientRect().bottom + scrollY - innerHeight * 0.94 + 2, behavior: "instant" }));
   await page.waitForFunction(() => {
     const video = document.querySelector("video");
     return video && !video.paused && video.currentTime > 0.2 && video.videoWidth > 0;
@@ -198,7 +204,11 @@ async function checkVideo(page) {
   verify(start.controls && start.muted, "Scroll playback must be silent with native controls");
   verify(Math.abs(start.height - beforeHeight) < 1, "Starting must not change player height");
   verify(start.duration > 34.5 && start.duration < 34.7, "The edited film duration must match the cut");
+  await page.screenshot({ path: path.join(artifacts, `start-position-${page.viewportSize().width}.png`) });
   await page.waitForFunction(startTime => document.querySelector("video").currentTime > startTime + 0.25, start.time, { timeout: 10_000 });
+  await video.evaluate(el => window.scrollTo({ top: el.getBoundingClientRect().top + scrollY + 20, behavior: "instant" }));
+  await page.waitForTimeout(250);
+  verify(await video.evaluate(el => !el.paused), "Playback must continue after the top of the video leaves the viewport");
   await page.evaluate(() => window.scrollTo({ top: 0, behavior: "instant" }));
   await page.waitForFunction(() => document.querySelector("video").paused);
   const offscreenTime = await video.evaluate(el => el.currentTime);
@@ -212,7 +222,7 @@ async function checkVideo(page) {
   await page.waitForTimeout(300);
   verify(await video.evaluate(el => el.paused && !el.muted), "Manual pause and volume choice must survive scrolling");
   await page.emulateMedia({ reducedMotion: "reduce" });
-  return { ...start, reducedMotionManualPlayback, earlyPreload: true, offscreenPause: true, resume: true, manualPauseRetained: true, heightStable: true };
+  return { ...start, reducedMotionManualPlayback, earlyPreload: true, waitsForScreenshotPosition: true, continuesPastStart: true, offscreenPause: true, resume: true, manualPauseRetained: true, heightStable: true };
 }
 
 const widths = process.env.QA_WIDTHS ? process.env.QA_WIDTHS.split(",").map(Number) : [1440, 1280, 1024, 768, 430, 390, 375];
