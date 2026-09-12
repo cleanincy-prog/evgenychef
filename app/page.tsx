@@ -74,7 +74,7 @@ export default function Home() {
       </a>
     </header>
     <main className="sheet" id="main-content" tabIndex={-1}>
-      <section className="hero" aria-label="Евгений Гребеник · личный шеф на Кипре">
+      <section className="hero" aria-label="Евгений Гребеник — ваш личный Мастер-Шеф на Кипре">
         <div className="hero-frame">
           <div className="hero-collage" aria-hidden="true">
             <div className="hero-collage-grid">
@@ -91,11 +91,7 @@ export default function Home() {
             </div>
           </div>
           <div className="hero-identity">
-            <div className="hero-copy">
-              <p className="hero-byline">Евгений Гребеник · личный шеф на Кипре</p>
-              <h1>Кого соберём <em>за столом?</em></h1>
-              <p className="hero-intro">Расскажите о встрече, которую задумали. Я продумаю меню по вашим вкусам и приготовлю для вас.</p>
-            </div>
+            <div className="hero-copy"><h1><span>Евгений</span><span>Гребеник —</span><em>ваш личный</em><span>Мастер-Шеф</span><span>на Кипре</span></h1></div>
             <figure className="hero-portrait"><img {...siteImages["chef-hero-apron"]} sizes="(max-width: 620px) 56vw, 34vw" alt="Евгений Гребеник улыбается, стоя в полосатом поварском фартуке" fetchPriority="high" decoding="async" /></figure>
           </div>
         </div>
