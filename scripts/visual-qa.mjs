@@ -250,7 +250,7 @@ try {
       verify(layout.headings.some(h => h.text.includes("Начнём с вашего вечера")), "The closing invitation must be present");
       verify(layout.headings.every((h, i, items) => i === 0 || h.level <= items[i - 1].level + 1), "Heading levels must not skip a semantic level");
       assert.deepEqual(layout.stations.map(s => s.step), ["01", "02", "03", "04"]);
-      assert.deepEqual(layout.stations.map(s => s.text), ["Разговор", "Меню", "Подготовка", "Ваш вечер"]);
+      assert.deepEqual(layout.stations.map(s => s.text), ["Знакомимся", "Продумываю меню", "Готовлю к встрече", "Ваш вечер"]);
       if (width <= 900) verify(layout.stations.every((station, index, items) => index === 0 || station.box.y >= items[index - 1].box.bottom - 1), "Tablet and mobile process stations must follow a vertical reading order");
       const expectedVisible = 63;
       verify(layout.collage.total === 63 && layout.collage.unique === 63, "The full collage requires exactly 63 unique DOM photo sources");

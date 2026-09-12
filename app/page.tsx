@@ -21,19 +21,19 @@ const heroCollageWideCompact = new Set([
 const formats = [
   {
     id: "private-dinner", name: "Частный ужин",
-    description: "Любимые блюда для близких — или гастрономический маршрут в\u00a0семь\u00a0подач.",
+    description: "Собрать близких за одним столом и спокойно поужинать. Меню составлю по вашим вкусам, приготовление и подачу возьму на себя. Вы сможете провести это время с теми, кого пригласили.",
     ...siteImages["private-dinner-wide-v2"],
     alt: "Евгений готовит блюдо на сковороде: видны лицо, руки и подача",
   },
   {
     id: "private-events", name: "Приватные мероприятия",
-    description: "Закуски и блюда, которые удобно есть за разговором.",
+    description: "Для встреч, где главное — общение. Подберём угощение под такой ритм: закуски и блюда, которые удобно есть за разговором.",
     ...siteImages["private-events"],
     alt: "Евгений готовит блины на открытом воздухе перед гостями",
   },
   {
     id: "masterclasses", name: "Мастер-классы",
-    description: "Готовим вместе, осваиваем приёмы и садимся за общий стол.",
+    description: "Для тех, кому интересно самим встать у плиты. Готовим вместе: я показываю приёмы, объясняю детали и помогаю разобраться в процессе. Затем пробуем приготовленное за общим столом.",
     ...siteImages.masterclasses,
     alt: "Участники мастер-класса наблюдают за работой Евгения",
   },
@@ -43,7 +43,7 @@ function StationHeading({ number, title, children }: { number: string; title: st
   return <div className="station-heading">
     <span className="route-node" data-route-node aria-hidden="true" />
     <span className="station-number" aria-hidden="true">{number}</span>
-    <div className="station-copy"><h3>{title}</h3><p>{children}</p></div>
+    <div className="station-copy"><h3>{title}</h3>{children}</div>
   </div>;
 }
 
@@ -54,10 +54,10 @@ function MenuPlate() {
     </div>
     <PlateLeaders />
     <figcaption className="plate-notes"><dl className="plate-note-list">
-      <div className="plate-label plate-label-main"><dt>Основной продукт</dt><dd>С него начинается подбор остальных элементов блюда.</dd></div>
-      <div className="plate-label plate-label-side"><dt>Гарнир</dt><dd>Дополняет основной продукт и поддерживает общее сочетание вкусов.</dd></div>
-      <div className="plate-label plate-label-texture"><dt>Текстуры</dt><dd>Мягкие и плотные элементы создают контраст.</dd></div>
-      <div className="plate-label plate-label-sauce"><dt>Соус</dt><dd>Связывает элементы блюда и добавляет завершающий акцент.</dd></div>
+      <div className="plate-label plate-label-main"><dt>Основной продукт</dt><dd>Задаёт вкус и характер блюда.</dd></div>
+      <div className="plate-label plate-label-side"><dt>Гарнир</dt><dd>Дополняет основной продукт и раскрывает его вкус.</dd></div>
+      <div className="plate-label plate-label-texture"><dt>Текстуры</dt><dd>От нежного до хрустящего — разные ощущения в одном блюде.</dd></div>
+      <div className="plate-label plate-label-sauce"><dt>Соус</dt><dd>Собирает вкусы вместе.</dd></div>
     </dl></figcaption>
   </figure>;
 }
@@ -74,7 +74,7 @@ export default function Home() {
       </a>
     </header>
     <main className="sheet" id="main-content" tabIndex={-1}>
-      <section className="hero" aria-label="Евгений Гребеник — ваш личный Мастер-Шеф на Кипре">
+      <section className="hero" aria-label="Евгений Гребеник · личный шеф на Кипре">
         <div className="hero-frame">
           <div className="hero-collage" aria-hidden="true">
             <div className="hero-collage-grid">
@@ -91,7 +91,11 @@ export default function Home() {
             </div>
           </div>
           <div className="hero-identity">
-            <div className="hero-copy"><h1><span>Евгений</span><span>Гребеник —</span><em>ваш личный</em><span>Мастер-Шеф</span><span>на Кипре</span></h1></div>
+            <div className="hero-copy">
+              <p className="hero-byline">Евгений Гребеник · личный шеф на Кипре</p>
+              <h1>Кого соберём <em>за столом?</em></h1>
+              <p className="hero-intro">Расскажите о встрече, которую задумали. Я продумаю меню по вашим вкусам и приготовлю для вас.</p>
+            </div>
             <figure className="hero-portrait"><img {...siteImages["chef-hero-apron"]} sizes="(max-width: 620px) 56vw, 34vw" alt="Евгений Гребеник улыбается, стоя в полосатом поварском фартуке" fetchPriority="high" decoding="async" /></figure>
           </div>
         </div>
@@ -99,8 +103,8 @@ export default function Home() {
           <img {...siteImages.masterchef} sizes="(max-width: 620px) 36vw, 23vw" alt="Евгений в белом кителе с конвертом на фоне эмблемы «МастерШеф»" loading="lazy" decoding="async" />
           <div className="award-copy">
             <p className="award-title">Больше 25 лет в гастрономии</p>
-            <p className="award-note">Победа в «МастерШеф. Профессионалы» открыла мне путь к новым кухням Европы и Средиземноморья.</p>
-            <p className="award-note">Этот опыт стал основой моего стиля — современной европейской кухни с авторским характером. Сегодня на Кипре создаю персональные меню для частных ужинов и особых событий, а на мастер-классах делюсь тонкостями своего ремесла. В каждом блюде — внимание к вашим вкусам, в каждой детали — забота об атмосфере вечера.</p>
+            <p className="award-note">Победа в «МастерШеф. Профессионалы» открыла мне путь к новым кухням Европы и Средиземноморья. Этот опыт стал основой моего стиля — современной европейской кухни с авторским характером.</p>
+            <p className="award-note">Сегодня я готовлю на Кипре. Для частных ужинов и событий составляю персональные меню: кому-то хочется любимых, знакомых вкусов, кому-то — попробовать новое. На мастер-классах делюсь приёмами, которыми пользуюсь сам, и объясняю, что они меняют в блюде.</p>
           </div>
         </div>
       </section>
@@ -117,24 +121,35 @@ export default function Home() {
         </ul>
       </section>
       <section className="evening-plan" aria-labelledby="plan-title">
-        <h2 id="plan-title">От разговора — <span>к вашему столу.</span></h2>
+        <h2 id="plan-title">От разговора — <span>к вашему столу</span></h2>
         <div className="process-board">
           <EveningPlanRoute />
           <ol className="process-list">
             <li className="process-station station-conversation" data-step="01">
-              <StationHeading number="01" title="Разговор">Вы рассказываете, что любите, каким будет вечер и что важно учесть.</StationHeading>
+              <StationHeading number="01" title="Знакомимся">
+                <p>Расскажите, по какому поводу собираетесь и сколько будет гостей. Вспомним любимые блюда, обсудим, что хочется попробовать и чего точно не должно быть в меню.</p>
+                <p>Можно прийти с готовой идеей. Можно начать с одного пожелания.</p>
+              </StationHeading>
               <figure className="process-illustration conversation-illustration"><img {...siteImages.conversation} sizes="(max-width: 620px) calc(100vw - 70px), (max-width: 900px) min(63.35vw, 450px), min(36.64vw, 450px)" alt="Карандашный рисунок: Евгений с лёгкой улыбкой записывает пожелания гостьи в блокнот; на столе небольшая ваза с цветами и два стакана воды" loading="lazy" decoding="async" /></figure>
             </li>
             <li className="process-station station-menu" data-step="02">
-              <StationHeading number="02" title="Меню">Я подбираю продукты, продумываю сочетания и составляю меню для вас.</StationHeading>
+              <StationHeading number="02" title="Продумываю меню">
+                <p>Из нашего разговора складывается меню. Я выбираю продукты и продумываю, какие блюда приготовить и как они будут сочетаться между собой.</p>
+                <p>Внутри каждого блюда тоже есть свой замысел.</p>
+              </StationHeading>
               <MenuPlate />
             </li>
             <li className="process-station station-preparation" data-step="03">
-              <StationHeading number="03" title="Подготовка">Закупаю продукты, делаю заготовки, маринады и соусы.</StationHeading>
+              <StationHeading number="03" title="Готовлю к встрече">
+                <p>Закупаю продукты и начинаю работу на кухне: делаю заготовки, готовлю соусы и маринады. То, что требует времени, готовлю заранее.</p>
+              </StationHeading>
               <ChefStoryVideo />
             </li>
             <li className="process-station station-evening" data-step="04">
-              <StationHeading number="04" title="Ваш вечер">Готовлю и подаю. Вы встречаете гостей и остаётесь частью собственного вечера.</StationHeading>
+              <StationHeading number="04" title="Ваш вечер">
+                <p>Вы встречаете гостей и садитесь за стол вместе с ними. Я готовлю и подаю блюда.</p>
+                <p>На мастер-классе вы участвуете в приготовлении: работаем вместе, а потом вместе пробуем то, что получилось.</p>
+              </StationHeading>
               <figure className="process-illustration toast-illustration"><img {...siteImages.toast} sizes="(max-width: 620px) calc(100vw - 70px), (max-width: 900px) min(67.88vw, 440px), min(38.07vw, 440px)" alt="Карандашная иллюстрация: гости поднимают бокалы за общим столом" loading="lazy" decoding="async" /></figure>
             </li>
           </ol>
