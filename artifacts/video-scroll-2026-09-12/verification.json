@@ -1,0 +1,163 @@
+{
+  "viewports": [
+    {
+      "width": 1440,
+      "passed": true,
+      "playback": {
+        "time": 0.216662,
+        "controls": true,
+        "muted": true,
+        "videoWidth": 720,
+        "videoHeight": 1280,
+        "duration": 34.608005,
+        "currentSrc": "http://127.0.0.1:3004/media/chef-story-short-prep-2026-09-12.mp4",
+        "height": 497.765625,
+        "reducedMotionManualPlayback": true,
+        "earlyPreload": true,
+        "offscreenPause": true,
+        "resume": true,
+        "manualPauseRetained": true,
+        "heightStable": true
+      }
+    },
+    {
+      "width": 1280,
+      "passed": true,
+      "playback": {
+        "time": 0.21882,
+        "controls": true,
+        "muted": true,
+        "videoWidth": 720,
+        "videoHeight": 1280,
+        "duration": 34.608005,
+        "currentSrc": "http://127.0.0.1:3004/media/chef-story-short-prep-2026-09-12.mp4",
+        "height": 497.765625,
+        "reducedMotionManualPlayback": true,
+        "earlyPreload": true,
+        "offscreenPause": true,
+        "resume": true,
+        "manualPauseRetained": true,
+        "heightStable": true
+      }
+    },
+    {
+      "width": 1024,
+      "passed": true,
+      "playback": {
+        "time": 0.209128,
+        "controls": true,
+        "muted": true,
+        "videoWidth": 720,
+        "videoHeight": 1280,
+        "duration": 34.608005,
+        "currentSrc": "http://127.0.0.1:3004/media/chef-story-short-prep-2026-09-12.mp4",
+        "height": 533.328125,
+        "reducedMotionManualPlayback": true,
+        "earlyPreload": true,
+        "offscreenPause": true,
+        "resume": true,
+        "manualPauseRetained": true,
+        "heightStable": true
+      }
+    },
+    {
+      "width": 768,
+      "passed": true,
+      "playback": {
+        "time": 0.20791,
+        "controls": true,
+        "muted": true,
+        "videoWidth": 720,
+        "videoHeight": 1280,
+        "duration": 34.608005,
+        "currentSrc": "http://127.0.0.1:3004/media/chef-story-short-prep-2026-09-12.mp4",
+        "height": 640,
+        "reducedMotionManualPlayback": true,
+        "earlyPreload": true,
+        "offscreenPause": true,
+        "resume": true,
+        "manualPauseRetained": true,
+        "heightStable": true
+      }
+    },
+    {
+      "width": 430,
+      "passed": true,
+      "playback": {
+        "time": 0.208043,
+        "controls": true,
+        "muted": true,
+        "videoWidth": 720,
+        "videoHeight": 1280,
+        "duration": 34.608005,
+        "currentSrc": "http://127.0.0.1:3004/media/chef-story-short-prep-2026-09-12.mp4",
+        "height": 533.328125,
+        "reducedMotionManualPlayback": true,
+        "earlyPreload": true,
+        "offscreenPause": true,
+        "resume": true,
+        "manualPauseRetained": true,
+        "heightStable": true
+      }
+    },
+    {
+      "width": 390,
+      "passed": true,
+      "playback": {
+        "time": 0.211734,
+        "controls": true,
+        "muted": true,
+        "videoWidth": 720,
+        "videoHeight": 1280,
+        "duration": 34.608005,
+        "currentSrc": "http://127.0.0.1:3004/media/chef-story-short-prep-2026-09-12.mp4",
+        "height": 533.328125,
+        "reducedMotionManualPlayback": true,
+        "earlyPreload": true,
+        "offscreenPause": true,
+        "resume": true,
+        "manualPauseRetained": true,
+        "heightStable": true
+      }
+    },
+    {
+      "width": 375,
+      "passed": true,
+      "playback": {
+        "time": 0.207792,
+        "controls": true,
+        "muted": true,
+        "videoWidth": 720,
+        "videoHeight": 1280,
+        "duration": 34.608005,
+        "currentSrc": "http://127.0.0.1:3004/media/chef-story-short-prep-2026-09-12.mp4",
+        "height": 533.328125,
+        "reducedMotionManualPlayback": true,
+        "earlyPreload": true,
+        "offscreenPause": true,
+        "resume": true,
+        "manualPauseRetained": true,
+        "heightStable": true
+      }
+    }
+  ],
+  "initialErrorScenario": "Early source error could occur before hydration; corrected by a single near-viewport load when readyState is 0.",
+  "recheckPassed": true,
+  "errorFallback": {
+    "simulatedHttpStatus": 404,
+    "before": {
+      "text": "",
+      "poster": "/media/web/film-poster-540.webp"
+    },
+    "after": {
+      "videoPresent": true,
+      "poster": "/media/web/film-poster-540.webp",
+      "error": null,
+      "fallbackText": "Ваш браузер не поддерживает видео.ПовторитьВидео не удалось загрузить. Попробуйте ещё раз.",
+      "localText": "Повторить"
+    },
+    "present": true,
+    "retryRecovered": true
+  },
+  "allRequiredChecksPassed": true
+}

@@ -127,13 +127,10 @@ img { display: block; max-width: 100%; }
 .plate-label-texture { top: 51%; right: 0; width: 20%; }
 .plate-label-sauce { bottom: 0; left: 0; }
 .preparation-film { width: min(100%, 280px); margin: 20px 0 0 34px; }
-.film-stage { position: relative; aspect-ratio: 2 / 3; overflow: hidden; background: var(--paper); }
-.film-stage video { display: block; width: 100%; height: 100%; object-fit: cover; object-position: 50% 66%; }
-.preparation-film.is-playing .film-stage { aspect-ratio: 9 / 16; }
-.preparation-film.is-playing video { object-fit: contain; }
-.film-play { position: absolute; left: 12px; bottom: 12px; min-height: 44px; padding: 10px 17px; background: var(--paper); color: var(--ink); border: 1px solid var(--rule); display: flex; align-items: center; gap: 10px; font-size: 13px; }
-.film-play > span { font: 24px/1 var(--font-sans); color: var(--gold-text); }
-.film-play:hover { background: #fcfaf5; border-color: var(--gold-text); }
+.film-stage { position: relative; aspect-ratio: 9 / 16; overflow: hidden; background: var(--paper); }
+.film-stage video { display: block; width: 100%; height: 100%; object-fit: contain; }
+.film-retry { position: absolute; left: 12px; top: 12px; min-height: 44px; padding: 10px 17px; background: var(--paper); color: var(--ink); border: 1px solid var(--rule); }
+.film-retry:hover { background: #fcfaf5; border-color: var(--gold-text); }
 .preparation-film figcaption { font-size: 11px; line-height: 1.5; color: var(--muted); margin-top: 8px; }
 .contact { margin-top: 30px; padding: 24px 0; border-block: 1px solid var(--rule); display: grid; grid-template-columns: 47% 53%; align-items: center; }
 .contact h2 { font-size: clamp(36px, 3.8vw, 54px); padding-right: 28px; }
@@ -247,7 +244,6 @@ img { display: block; max-width: 100%; }
   .plate-label dt { font-size: 24px; }
   .plate-label dd { font-size: 19px; }
   .preparation-film { width: min(100% - 33px, 300px); margin: 17px 0 0 33px; }
-  .film-stage { aspect-ratio: 2 / 3; }
   .preparation-film figcaption { font-size: 11px; }
   .contact { margin-top: 23px; gap: 19px; padding: 23px 0; }
   .contact h2 { font-size: clamp(33px, 8.6vw, 46px); }
@@ -267,7 +263,7 @@ img { display: block; max-width: 100%; }
 .wordmark { font-size: 1.875rem; }
 .award-note { font-size: 1.375rem; }
 .station-copy p, .station-menu .station-copy p { font-size: 1.375rem; line-height: 1.35; }
-.film-play, .instagram-button { font-size: 1.25rem; letter-spacing: 0; }
+.film-retry, .instagram-button { font-size: 1.25rem; letter-spacing: 0; }
 .preparation-film figcaption { font-size: 1rem; line-height: 1.35; }
 .instagram-handle { font-size: 1.375rem; }
 .contact-help { font-size: 1.125rem; line-height: 1.4; }

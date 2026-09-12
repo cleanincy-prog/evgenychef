@@ -9,7 +9,7 @@ const localUrl = new URL(process.env.LOCAL_URL || "http://127.0.0.1:3004");
 assert.equal(localUrl.protocol, "http:");
 assert.ok(["localhost", "127.0.0.1"].includes(localUrl.hostname), "Visual QA is restricted to localhost");
 assert.equal(localUrl.username + localUrl.password, "");
-const artifacts = path.resolve(root, process.env.QA_OUTPUT || "artifacts/photos-only-collage-2026-09-11");
+const artifacts = path.resolve(root, process.env.QA_OUTPUT || "artifacts/video-scroll-2026-09-12");
 assert.ok(artifacts.startsWith(path.join(root, "artifacts") + path.sep), "QA output must stay in project artifacts");
 const temporary = path.join(root, "work/.tmp");
 await mkdir(artifacts, { recursive: true });
@@ -175,26 +175,49 @@ async function checkKeyboard(page, width) {
 
 async function checkVideo(page) {
   const video = page.locator("video");
+  verify(await page.getByRole("button", { name: /Смотреть фильм/i }).count() === 0, "No film-start overlay may remain");
   await video.scrollIntoViewIfNeeded();
-  verify(await video.evaluate(el => el.paused && !el.autoplay), "Documentary video must initially wait for user intent");
-  const startButton = page.getByRole("button", { name: /Смотреть фильм/i });
-  verify(await startButton.count() === 1, "A clear film-start control is required");
-  await startButton.click();
+  verify(await video.evaluate(el => el.paused && el.controls), "Reduced motion retains a paused player with controls");
+  await video.evaluate(el => el.play());
+  await page.waitForFunction(() => document.querySelector("video").currentTime > 0.2);
+  const reducedMotionManualPlayback = true;
+  // A fresh page removes the explicit pause/ended state from the previous run.
+  await page.emulateMedia({ reducedMotion: "no-preference" });
+  await page.goto(localUrl.href, { waitUntil: "networkidle" });
+  verify(await video.evaluate(el => el.paused), "Offscreen video must remain paused");
+  await video.evaluate(el => window.scrollTo({ top: el.getBoundingClientRect().top + scrollY - innerHeight - 500, behavior: "instant" }));
+  await page.waitForFunction(() => document.querySelector("video").preload === "auto");
+  verify(await video.evaluate(el => el.paused), "Early preload must not play offscreen");
+  const beforeHeight = await video.evaluate(el => el.getBoundingClientRect().height);
+  await video.scrollIntoViewIfNeeded();
   await page.waitForFunction(() => {
     const video = document.querySelector("video");
     return video && !video.paused && video.currentTime > 0.2 && video.videoWidth > 0;
   }, null, { timeout: 30_000 });
-  const start = await video.evaluate(el => ({ time: el.currentTime, controls: el.controls, videoWidth: el.videoWidth, videoHeight: el.videoHeight, duration: el.duration, currentSrc: el.currentSrc }));
-  verify(start.controls, "Native playback controls must become available after starting the film");
+  const start = await video.evaluate(el => ({ time: el.currentTime, controls: el.controls, muted: el.muted, videoWidth: el.videoWidth, videoHeight: el.videoHeight, duration: el.duration, currentSrc: el.currentSrc, height: el.getBoundingClientRect().height }));
+  verify(start.controls && start.muted, "Scroll playback must be silent with native controls");
+  verify(Math.abs(start.height - beforeHeight) < 1, "Starting must not change player height");
+  verify(start.duration > 34.5 && start.duration < 34.7, "The edited film duration must match the cut");
   await page.waitForFunction(startTime => document.querySelector("video").currentTime > startTime + 0.25, start.time, { timeout: 10_000 });
-  await video.evaluate(el => el.pause());
-  const paused = await video.evaluate(el => ({ paused: el.paused, time: el.currentTime, error: el.error?.message ?? null }));
-  verify(paused.paused && paused.time > start.time && !paused.error, "Real media playback must advance and pause cleanly");
-  return { ...start, paused };
+  await page.evaluate(() => window.scrollTo({ top: 0, behavior: "instant" }));
+  await page.waitForFunction(() => document.querySelector("video").paused);
+  const offscreenTime = await video.evaluate(el => el.currentTime);
+  await video.scrollIntoViewIfNeeded();
+  await page.waitForFunction(t => !document.querySelector("video").paused && document.querySelector("video").currentTime > t + 0.2, offscreenTime);
+  await video.evaluate(el => { el.pause(); el.muted = false; });
+  await page.waitForTimeout(100);
+  await page.evaluate(() => window.scrollTo({ top: 0, behavior: "instant" }));
+  await page.waitForTimeout(100);
+  await video.scrollIntoViewIfNeeded();
+  await page.waitForTimeout(300);
+  verify(await video.evaluate(el => el.paused && !el.muted), "Manual pause and volume choice must survive scrolling");
+  await page.emulateMedia({ reducedMotion: "reduce" });
+  return { ...start, reducedMotionManualPlayback, earlyPreload: true, offscreenPause: true, resume: true, manualPauseRetained: true, heightStable: true };
 }
 
+const widths = process.env.QA_WIDTHS ? process.env.QA_WIDTHS.split(",").map(Number) : [1440, 1280, 1024, 768, 430, 390, 375];
 try {
-  for (const width of [1440, 1280, 1024, 768, 430, 390, 375]) {
+  for (const width of widths) {
     const page = await context.newPage();
     const pageErrors = [];
     const failedLocalRequests = [];
@@ -238,14 +261,15 @@ try {
       verify(layout.plate.box.x >= -1 && layout.plate.box.right <= width + 1 && layout.plate.clips.length === 0, "The complete plate must fit without clipping");
       verify(layout.links.every(link => link.href?.startsWith("#") || link.href === "https://www.instagram.com/evg.chef/"), "All links must target page anchors or the exact Instagram account");
       verify(layout.links.every(link => link.targetExists), "Every internal link target must exist");
-      verify(layout.video?.source === "/media/chef-story-img-5399-no-grill.mp4" && layout.video.poster === "/media/web/film-poster-540.webp", "The original film and poster must be retained");
-      verify(layout.video.playsInline && !layout.video.autoplay && layout.video.paused, "The film must be inline and user initiated");
+      verify(layout.video?.source === "/media/chef-story-short-prep-2026-09-12.mp4" && layout.video.poster === "/media/web/film-poster-540.webp", "The shortened film and approved poster must be used");
+      verify(layout.video.playsInline && !layout.video.autoplay && layout.video.paused, "Reduced motion must preserve an inline paused video");
       record.formats = await checkFormatStickers(page);
       await page.locator(".formats").screenshot({ path: path.join(artifacts, `formats-${width}.png`), animations: "disabled" });
       await page.screenshot({ path: path.join(artifacts, `page-${width}.png`), fullPage: true, animations: "disabled" });
       await page.locator('.hero').screenshot({ path: path.join(artifacts, `hero-${width}.png`), animations: "disabled" });
       record.keyboard = await checkKeyboard(page, width);
-      if (width === 1440) record.playback = await checkVideo(page);
+      record.playback = await checkVideo(page);
+      await page.locator(".station-preparation").screenshot({ path: path.join(artifacts, `video-${width}.png`), animations: "disabled" });
       verify(pageErrors.length === 0, `Browser errors: ${JSON.stringify(pageErrors)}`);
       verify(failedLocalRequests.length === 0 && httpErrors.length === 0, `Failed local requests: ${JSON.stringify({ failedLocalRequests, httpErrors })}`);
       verify(externalRequests.length === 0, `The page attempted external network requests: ${externalRequests.join(", ")}`);
@@ -268,12 +292,11 @@ try {
   const fallbackPage = await context.newPage();
   try {
     await fallbackPage.setViewportSize({ width: 390, height: 900 });
-    await fallbackPage.route("**/chef-story-img-5399-no-grill.mp4", route => route.fulfill({ status: 404, contentType: "text/plain", body: "Deliberate local QA media failure" }));
+    await fallbackPage.route("**/chef-story-short-prep-2026-09-12.mp4", route => route.fulfill({ status: 404, contentType: "text/plain", body: "Deliberate local QA media failure" }));
     await fallbackPage.goto(localUrl.href, { waitUntil: "networkidle" });
     const film = fallbackPage.locator("video");
     await film.scrollIntoViewIfNeeded();
     const before = await film.evaluate(el => ({ text: el.parentElement?.innerText || "", poster: el.getAttribute("poster") }));
-    await fallbackPage.getByRole("button", { name: /Смотреть фильм/i }).click();
     await fallbackPage.waitForFunction(() => {
       const video = document.querySelector("video");
       return !video || !!video.error || !!document.querySelector("[data-video-error]");
@@ -286,7 +309,7 @@ try {
     report.errorFallback = { simulatedHttpStatus: 404, before, after, present: !!after.fallbackText || after.localText !== before.text };
     verify(after.poster === before.poster || !after.videoPresent, "Media failure must preserve the original poster or present a fallback");
     await fallbackPage.screenshot({ path: path.join(artifacts, "video-error-fallback.png") });
-    await fallbackPage.unroute("**/chef-story-img-5399-no-grill.mp4");
+    await fallbackPage.unroute("**/chef-story-short-prep-2026-09-12.mp4");
     await fallbackPage.getByRole("button", { name: "Повторить" }).click();
     await fallbackPage.waitForFunction(() => {
       const video = document.querySelector("video");
@@ -305,7 +328,7 @@ try {
   await context.close();
   report.completedAt = new Date().toISOString();
   report.failures = failures;
-  report.passed = failures.length === 0 && report.viewports.length === 7;
+  report.passed = failures.length === 0 && report.viewports.length === widths.length;
   await writeFile(path.join(artifacts, "qa-report.json"), JSON.stringify(report, null, 2) + "\n");
 }
 console.log(`Saved screenshots and QA report: ${artifacts}`);

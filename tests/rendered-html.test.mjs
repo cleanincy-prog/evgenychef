@@ -125,13 +125,16 @@ test("renders 63 independent documentary collage photos and the real project ass
   }
 });
 
-test("serves the original documentary video and poster with usable byte ranges", async () => {
+test("serves the shortened inline film with immediate controls and usable byte ranges", async () => {
   const videos = tags(html, "video");
   assert.equal(videos.length, 1);
   assert.equal(videos[0].poster, "/media/web/film-poster-540.webp");
-  assert.ok(!Object.hasOwn(videos[0], "autoplay"), "The film starts on an explicit user action");
+  assert.ok(!Object.hasOwn(videos[0], "autoplay"), "Viewport playback must not begin offscreen through the autoplay attribute");
   assert.ok(Object.hasOwn(videos[0], "playsinline"));
-  const videoPath = "/media/chef-story-img-5399-no-grill.mp4";
+  assert.ok(Object.hasOwn(videos[0], "controls"), "Controls must be available without a start overlay");
+  assert.equal(videos[0].preload, "metadata");
+  assert.doesNotMatch(visibleText(html), /Смотреть фильм/i);
+  const videoPath = "/media/chef-story-short-prep-2026-09-12.mp4";
   assert.ok(tags(html, "source").some(source => source.src === videoPath && source.type === "video/mp4"));
   const poster = await localFetch(videos[0].poster, { method: "HEAD" });
   assert.equal(poster.status, 200);
