@@ -1,3 +1,12 @@
+## Проба Shantell Sans — 2026-09-13
+
+| Project element | Reference | Principle used | What is not copied | Project implementation |
+|---|---|---|---|---|
+| Вся типографика | Прямое «Давай Shantell Sana попробуем»; выбранный [образец](../design/references/chef-font-options-2026-09-13.html); [Google Fonts](https://fonts.google.com/specimen/Shantell+Sans) | Ручной штрих с раздельными буквами в заголовках, тексте, кнопках и подписях | Новые тексты, композиция, палитра, оси декоративной деформации | Локальный Shantell Sans 300–800; размеры подгоняются к существующим колонкам и пяти строкам Hero |
+| Первый показ шрифта | Исправление FONT_LOADING_2026-09-13.md | Шрифт доступен вместе со стилями без отдельной сетевой подмены | Прежняя активная гарнитура Caveat | Два WOFF2 встроены в CSS, font-display:block |
+
+Отдельного макета размеров для Shantell Sans нет; подгонка проверяется в текущем утверждённом интерфейсе. [Аудит и план](SHANTELL_SANS_2026-09-13.md).
+
 ## Запуск видео по снимку пользователя — 2026-09-13
 
 | Project element | Reference | Principle used | What is not copied | Project implementation |
