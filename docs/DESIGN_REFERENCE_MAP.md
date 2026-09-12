@@ -1,3 +1,11 @@
+## Стабильный шрифт при обновлении — 2026-09-13
+
+| Project element | Reference | Principle used | What is not copied | Project implementation |
+|---|---|---|---|---|
+| Первый показ всей типографики | Сообщение пользователя о смене шрифта; утверждённый Caveat и FONT_PAIRING_2026-09-11.md | Показать действующий Caveat сразу вместе со стилями | Новый шрифт, изменение Hero, скрытие страницы через JavaScript | Те же WOFF2 внутри CSS через Vite inline; font-display:block на время декодирования |
+
+[Аудит, план и проверка](FONT_LOADING_2026-09-13.md). Новых визуальных решений и библиотек нет.
+
 ## Одобренный личный текст — 2026-09-13
 
 | Project element | Reference | Principle used | What is not copied | Project implementation |
