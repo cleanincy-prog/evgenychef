@@ -8,134 +8,112 @@ function loadImage(src: string) {
   return result;
 }
 
-// Each illustration stays in place: pencil, ingredient color, then the whole plate.
+type ViewMode = "scroll" | "sketch" | "final";
+const clamp = (value: number) => Math.max(0, Math.min(1, value));
+
+// Scrolling extends individual pencil strokes; color is a single, reversible cut.
 export function attachMenuAnimation(root: HTMLElement, focusOnMount: boolean) {
   const book = root.querySelector<HTMLElement>(".mb-book")!;
+  const arts = [...book.querySelectorAll<HTMLElement>(".mb-art")];
   const status = root.querySelector<HTMLElement>(".mb-status")!;
-  const playButton = root.querySelector<HTMLButtonElement>("[data-menu-play]")!;
-  const playLabel = root.querySelector<HTMLElement>("[data-menu-play-label]")!;
-  const pauseButton = root.querySelector<HTMLButtonElement>("[data-menu-pause]")!;
+  const scrollButton = root.querySelector<HTMLButtonElement>("[data-menu-scroll]")!;
+  const colorButton = root.querySelector<HTMLButtonElement>("[data-menu-color]")!;
   const sketchButton = root.querySelector<HTMLButtonElement>("[data-menu-sketch]")!;
   const retryButton = root.querySelector<HTMLButtonElement>("[data-menu-retry]")!;
   const errorMessage = root.querySelector<HTMLElement>(".mb-error")!;
   const reduced = window.matchMedia("(prefers-reduced-motion: reduce)");
-  let mode = "sketch";
-  let animations: Animation[] = [];
-  let timeline: Animation | null = null;
+  let mode: ViewMode = reduced.matches ? "final" : "scroll";
   let frame = 0;
   let disposed = false;
-  let paused = false;
+  let ready = false;
   let loadVersion = 0;
-  let observer: IntersectionObserver | undefined;
 
-  function stop() {
-    cancelAnimationFrame(frame);
-    animations.forEach(animation => animation.cancel());
-    animations = []; timeline = null; paused = false;
-    pauseButton.hidden = true; pauseButton.textContent = "Пауза";
-    root.dataset.playing = "false";
-  }
-  function setMode(next: "sketch" | "final", announce = true) {
-    stop(); mode = next; root.dataset.state = next; root.dataset.phase = next;
-    book.querySelectorAll<HTMLElement>(".mb-art").forEach(art => {
-      art.querySelector<HTMLElement>(".mb-photo")!.style.opacity = next === "final" ? "1" : "0";
-      art.querySelector<SVGSVGElement>(".mb-pencil")!.style.opacity = next === "final" ? "0" : "1";
-      art.querySelectorAll<SVGPathElement>(".mb-stroke").forEach(stroke => { stroke.style.strokeDashoffset = "0"; });
-    });
-    sketchButton.textContent = next === "final" ? "Вернуть рисунок" : "Показать подачу";
-    playLabel.textContent = "Оживить меню";
-    if (announce) status.textContent = next === "final" ? "От замысла — к готовому блюду." : "Каждое блюдо начинается с замысла.";
-  }
-  function animate(element: Element, keyframes: Keyframe[], options: KeyframeAnimationOptions) {
-    const animation = element.animate(keyframes, { fill: "both", ...options });
-    animations.push(animation);
-    return animation;
-  }
-  function play() {
-    if (playButton.disabled || disposed) return;
-    observer?.disconnect();
-    if (reduced.matches) { setMode("final"); return; }
-    setMode("sketch", false); mode = "animating"; root.dataset.playing = "true";
-    pauseButton.hidden = false; playLabel.textContent = "Начать заново";
-    timeline = animate(book, [{ opacity: 1 }, { opacity: 1 }], { duration: 6600 });
-    const active = timeline;
-    book.querySelectorAll<HTMLElement>(".mb-page").forEach((page, pageIndex) => {
-      const lag = pageIndex * 120;
-      page.querySelectorAll<HTMLElement>(".mb-art").forEach(art => {
-        const index = Number(art.dataset.part); const plate = index === 4;
-        const start = (plate ? 480 : 160 + index * 230) + lag;
-        art.querySelectorAll<SVGPathElement>(".mb-stroke").forEach((stroke, line) => {
-          animate(stroke, [{ strokeDashoffset: "1" }, { strokeDashoffset: "0" }], { delay: start + line * (plate ? 35 : 24), duration: plate ? 1200 : 950, easing: "ease-in-out" });
-        });
-        const pencil = art.querySelector(".mb-pencil")!; const photo = art.querySelector(".mb-photo")!;
-        const colorAt = (plate ? 4900 : 2850 + index * 140) + lag;
-        const duration = plate ? 1050 : 950;
-        animate(pencil, [{ opacity: 1 }, { opacity: 0 }], { delay: colorAt, duration, easing: "ease-in-out" });
-        animate(photo, [{ opacity: 0 }, { opacity: 1 }], { delay: colorAt, duration, easing: "ease-in-out" });
-      });
-    });
-    let last = -1;
-    function tick() {
-      if (timeline !== active || disposed) return;
-      const time = Number(active.currentTime || 0);
-      const phase = time < 2800 ? 0 : time < 4900 ? 1 : 2;
-      if (phase !== last && !paused) {
-        root.dataset.phase = ["pencil", "color", "plate"][phase];
-        status.textContent = ["Карандашом намечаем форму и текстуру.", "Ингредиенты обретают цвет.", "Появляется готовая подача."][phase]; last = phase;
+  function render() {
+    if (disposed) return;
+    const viewport = window.innerHeight;
+    let colored = 0;
+    arts.forEach(art => {
+      let progress = 1;
+      if (mode === "scroll") {
+        const rect = art.getBoundingClientRect();
+        const center = rect.top + rect.height / 2;
+        progress = clamp((viewport * .9 - center) / (viewport * .54));
       }
-      frame = requestAnimationFrame(tick);
-    }
-    frame = requestAnimationFrame(tick);
-    active.finished.then(() => { if (timeline === active && !disposed) { setMode("final"); playLabel.textContent = "Повторить"; } }).catch(() => {});
+      const color = mode === "final" || (mode === "scroll" && progress >= .92);
+      const draw = mode === "scroll" ? clamp(progress / .82) : 1;
+      art.style.setProperty("--draw", draw.toFixed(4));
+      art.dataset.progress = progress.toFixed(4);
+      art.dataset.color = String(color);
+      if (color) colored++;
+    });
+    root.dataset.state = colored === arts.length ? "final" : colored > 0 ? "mixed" : "sketch";
   }
-  function togglePause() {
-    if (!timeline) return;
-    paused = !paused; animations.forEach(animation => paused ? animation.pause() : animation.play());
-    pauseButton.textContent = paused ? "Продолжить" : "Пауза";
-    status.textContent = paused ? "Анимация на паузе." : "Продолжаем от замысла к подаче.";
+  function schedule() {
+    if (!ready || mode !== "scroll" || frame || disposed) return;
+    frame = requestAnimationFrame(() => { frame = 0; render(); });
   }
-  function toggleSketch() { observer?.disconnect(); setMode(mode === "final" ? "sketch" : "final"); }
-  function visibilityChanged() { if (document.hidden && timeline && !paused) togglePause(); }
-  function motionChanged() { if (reduced.matches) { observer?.disconnect(); if (timeline) setMode("final"); } }
+  function setMode(next: ViewMode) {
+    cancelAnimationFrame(frame); frame = 0;
+    mode = next; root.dataset.mode = next;
+    scrollButton.setAttribute("aria-pressed", String(next === "scroll"));
+    colorButton.setAttribute("aria-pressed", String(next === "final"));
+    sketchButton.setAttribute("aria-pressed", String(next === "sketch"));
+    status.textContent = next === "scroll"
+      ? "Прокрутите страницу, чтобы увидеть готовую подачу."
+      : next === "sketch" ? "Тонкие линии — первый образ блюда." : "От наброска — к готовому блюду.";
+    render();
+  }
+  function followScroll() { if (!reduced.matches) setMode("scroll"); }
+  function showColor() { setMode("final"); }
+  function showSketch() { setMode("sketch"); }
+  function motionChanged() {
+    scrollButton.disabled = !ready || reduced.matches;
+    if (reduced.matches) setMode("final");
+  }
   async function load() {
     const version = ++loadVersion;
-    root.dataset.ready = "false"; book.setAttribute("aria-busy", "true");
-    playButton.disabled = true; sketchButton.disabled = true; errorMessage.hidden = true;
-    status.textContent = "Готовлю страницы…";
+    ready = false; root.dataset.ready = "false"; book.setAttribute("aria-busy", "true");
+    scrollButton.disabled = true; colorButton.disabled = true; sketchButton.disabled = true;
+    errorMessage.hidden = true; status.textContent = "Готовлю страницы…";
     try {
-      const photoImages = [...book.querySelectorAll<HTMLImageElement>(".mb-photo img")];
-      const pencils = [...book.querySelectorAll<SVGImageElement>(".mb-pencil image")];
-      await Promise.all([...new Set([...photoImages.map(image => image.currentSrc || image.src), ...pencils.map(image => image.getAttribute("href")!)])].map(loadImage));
-      // decode() also resolves cached responsive images after a page turn.
-      photoImages.forEach(image => { image.loading = "eager"; });
-      await Promise.all(photoImages.map(image => image.decode()));
+      const images = [...book.querySelectorAll<HTMLImageElement>(".mb-photo img")];
+      await Promise.all([...new Set(images.map(image => image.currentSrc || image.src))].map(loadImage));
+      images.forEach(image => { image.loading = "eager"; });
+      await Promise.all(images.map(image => image.decode()));
       await document.fonts.ready;
       await new Promise(resolve => requestAnimationFrame(() => requestAnimationFrame(resolve)));
       if (disposed || version !== loadVersion) return;
-      root.dataset.ready = "true"; book.setAttribute("aria-busy", "false");
-      playButton.disabled = false; sketchButton.disabled = false; setMode(reduced.matches ? "final" : "sketch");
+      ready = true; root.dataset.ready = "true"; book.setAttribute("aria-busy", "false");
+      scrollButton.disabled = reduced.matches; colorButton.disabled = false; sketchButton.disabled = false;
       if (focusOnMount) {
         root.scrollIntoView({ block: "start", behavior: "instant" });
         book.querySelector<HTMLElement>(".mb-dish-title")?.focus({ preventScroll: true });
       }
-      if (!reduced.matches) {
-        observer = new IntersectionObserver(entries => { if (entries.some(entry => entry.intersectionRatio >= .3)) play(); }, { threshold: .3 });
-        observer.observe(root);
-      }
+      setMode(reduced.matches ? "final" : "scroll");
     } catch {
       if (disposed || version !== loadVersion) return;
       book.setAttribute("aria-busy", "false"); errorMessage.hidden = false;
-      status.textContent = "Описание блюда доступно. Изображение можно загрузить повторно.";
+      sketchButton.disabled = false;
+      setMode("sketch");
+      status.textContent = "Наброски и описание доступны. Изображение можно загрузить повторно.";
     }
   }
-  playButton.addEventListener("click", play); pauseButton.addEventListener("click", togglePause);
-  sketchButton.addEventListener("click", toggleSketch); retryButton.addEventListener("click", load);
-  reduced.addEventListener("change", motionChanged); document.addEventListener("visibilitychange", visibilityChanged);
+  window.addEventListener("scroll", schedule, { passive: true });
+  window.addEventListener("resize", schedule, { passive: true });
+  scrollButton.addEventListener("click", followScroll);
+  colorButton.addEventListener("click", showColor);
+  sketchButton.addEventListener("click", showSketch);
+  retryButton.addEventListener("click", load);
+  reduced.addEventListener("change", motionChanged);
   void load();
   return () => {
-    disposed = true; stop(); observer?.disconnect();
-    playButton.removeEventListener("click", play); pauseButton.removeEventListener("click", togglePause);
-    sketchButton.removeEventListener("click", toggleSketch); retryButton.removeEventListener("click", load);
-    reduced.removeEventListener("change", motionChanged); document.removeEventListener("visibilitychange", visibilityChanged);
+    disposed = true; cancelAnimationFrame(frame);
+    window.removeEventListener("scroll", schedule);
+    window.removeEventListener("resize", schedule);
+    scrollButton.removeEventListener("click", followScroll);
+    colorButton.removeEventListener("click", showColor);
+    sketchButton.removeEventListener("click", showSketch);
+    retryButton.removeEventListener("click", load);
+    reduced.removeEventListener("change", motionChanged);
   };
 }

@@ -128,9 +128,9 @@ test("renders 63 documentary collage photos and the selected menu-book assets", 
     }));
   }
   const pencilPaths = [...html.matchAll(/<image\b[^>]*href="([^"]+)"/g)].map(match => match[1]);
-  assert.ok(pencilPaths.includes("/media/menu/book/duck-pencil-atlas-960.webp"));
-  assert.ok(pencilPaths.includes("/media/menu/book/octopus-pencil-atlas-960.webp"));
-  for (const source of new Set(pencilPaths)) assert.equal((await localFetch(source, { method: "HEAD" })).status, 200);
+  assert.ok(!pencilPaths.some(path => path.includes('pencil-atlas')), "Menu sketches must use individual lines, not shaded bitmap studies");
+  const pencilStrokes = tags(html, "path").filter(path => path.class?.includes("mb-stroke"));
+  assert.ok(pencilStrokes.length > 0 && pencilStrokes.every(path => path.d), "Pencil gestures must be present in the rendered page");
 });
 
 test("serves the shortened inline film with immediate controls and usable byte ranges", async () => {

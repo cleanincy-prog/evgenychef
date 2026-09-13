@@ -2,6 +2,7 @@
 
 import { useEffect, useId, useRef, useState, useSyncExternalStore, type CSSProperties } from "react";
 import artwork from "./menu-book-art.json";
+import lineArtwork from "./menu-book-lines.json";
 import { attachMenuAnimation } from "./menu-book-animation";
 import "./menu-book.css";
 
@@ -28,8 +29,10 @@ const compactSnapshot = () => window.matchMedia("(max-width: 900px)").matches;
 
 function FoodArt({ recipe, partIndex }: { recipe: FoodKey; partIndex: number }) {
   const id = `menu-${useId().replace(/[^a-zA-Z0-9_-]/g, "")}`;
-  const asset = recipe === "duck" && (partIndex === 0 || partIndex === 4) ? artwork.duckOriginal : artwork[recipe];
+  const source = recipe === "duck" && (partIndex === 0 || partIndex === 4) ? "duckOriginal" : recipe;
+  const asset = artwork[source];
   const part = asset.parts[partIndex];
+  const strokes = lineArtwork[source][partIndex];
   const [x, y, w, h] = part.photoRect;
   return <div className="mb-art" data-part={partIndex} style={{ "--art-ratio": `${w} / ${h}` } as CSSProperties}>
     <svg width="0" height="0" className="mb-defs" aria-hidden="true"><defs>
@@ -43,14 +46,8 @@ function FoodArt({ recipe, partIndex }: { recipe: FoodKey; partIndex: number }) 
         style={{ width: `${asset.photoSize[0] / w * 100}%`, height: `${asset.photoSize[1] / h * 100}%`, left: `${-x / w * 100}%`, top: `${-y / h * 100}%` }} />
     </div>
     <svg className="mb-pencil" viewBox={`0 0 ${w} ${h}`} style={{ clipPath: `url(#${id}-pencil-clip)` }} aria-hidden="true">
-      <defs><mask id={`${id}-draw`} maskUnits="userSpaceOnUse" x="0" y="0" width={w} height={h}>
-        <rect width={w} height={h} fill="black" />
-        {Array.from({ length: 24 }, (_, line) => {
-          const sy = h * (line - .5) / 22;
-          return <path key={line} className="mb-stroke" pathLength="1" strokeWidth={h * .135} d={`M${-w * .15} ${sy + h * .06} Q${w * .43} ${sy - h * .04} ${w * 1.15} ${sy}`} />;
-        })}
-      </mask></defs>
-      <g mask={`url(#${id}-draw)`}><image href={asset.pencilSrc} x={-x} y={-y} width={asset.pencilSize[0]} height={asset.pencilSize[1]} preserveAspectRatio="none" /></g>
+      {strokes.map((stroke, line) => <path key={line} className="mb-stroke" pathLength="1" d={stroke.d}
+        style={{ "--stroke-start": stroke.start, "--stroke-speed": stroke.speed } as CSSProperties} />)}
     </svg>
   </div>;
 }
@@ -79,10 +76,10 @@ function MenuSpread({ first, compact, focusOnMount, navigate }: { first: number;
     if (!rootRef.current) return;
     return attachMenuAnimation(rootRef.current, focusOnMount);
   }, [focusOnMount]);
-  return <div className="menu-book" ref={rootRef} data-state="sketch" data-phase="sketch" data-playing="false" data-ready="false">
+  return <div className="menu-book" ref={rootRef} data-state="sketch" data-mode="scroll" data-ready="false">
     <div className="mb-toolbar"><p className="mb-menu-title">Меню вашего вечера</p><div className="mb-controls">
-      <button className="mb-quiet" data-menu-pause hidden>Пауза</button>
-      <button className="mb-play" data-menu-play disabled><span aria-hidden="true">↻</span> <span data-menu-play-label>Оживить меню</span></button>
+      <button className="mb-quiet" data-menu-scroll aria-pressed="true" disabled>По скроллу</button>
+      <button className="mb-play" data-menu-color aria-pressed="false" disabled>Цветная подача</button>
     </div></div>
     <p className="mb-status" role="status" aria-live="polite">Готовлю страницы…</p>
     <div className="mb-book" aria-label={visible.map(recipe => recipe.name).join(" и ")} aria-busy="true">
@@ -94,8 +91,8 @@ function MenuSpread({ first, compact, focusOnMount, navigate }: { first: number;
       <span className="mb-page-range" aria-live="polite">{compact ? `${String(first + 1).padStart(2, "0")} / 03` : `${String(first + 1).padStart(2, "0")}–${String(first + 2).padStart(2, "0")} / 03`}</span>
       <button className="mb-page-turn" data-menu-next disabled={first + count >= recipes.length} onClick={() => navigate(1)}>{first + count < recipes.length ? recipes[first + count].short : "Далее"} <span aria-hidden="true">→</span></button>
     </nav>
-    <div className="mb-bottom"><p>У каждого блюда — свой путь к вашему столу.</p><button className="mb-quiet" data-menu-sketch disabled>Показать подачу</button></div>
-    <noscript><p>Ингредиенты и готовые блюда доступны без анимации. Для перелистывания меню включите JavaScript.</p></noscript>
+    <div className="mb-bottom"><p>У каждого блюда — свой путь к вашему столу.</p><button className="mb-quiet" data-menu-sketch aria-pressed="false" disabled>Карандашный эскиз</button></div>
+    <noscript><style>{".menu-book .mb-stroke{stroke-dashoffset:0}"}</style><p>Ингредиенты и готовые блюда доступны без анимации. Для перелистывания меню включите JavaScript.</p></noscript>
   </div>;
 }
 

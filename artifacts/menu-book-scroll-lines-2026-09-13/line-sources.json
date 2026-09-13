@@ -1,0 +1,51 @@
+{
+  "method": "Sparse source-derived SVG paths: structural contours only, no raster writes or new bitmap generation.",
+  "sources": [
+    {
+      "file": "/media/menu/book/duck-pencil-atlas-960.webp",
+      "sha256": "350cfc007c674ee95772c355d74f4f03e9606a10db67f47b232b1557857ea0e7"
+    },
+    {
+      "file": "/media/menu/book/octopus-pencil-atlas-960.webp",
+      "sha256": "2f82dd1294ff127bfa51c9371af1d2c2cd26816938064ecf397eb5471d5806a7"
+    },
+    {
+      "file": "/media/menu/book/lamb-natural-pencil-atlas-960.webp",
+      "sha256": "901a1f49e7e1d936bb6d1a21da1dae7859eb6e17295472254a625226374bd392"
+    },
+    {
+      "file": "/media/menu/book/duck-original-pencil-1200.webp",
+      "sha256": "98b4154b5e2a6e7dcccbfba6fbf378f1865ec6bba2835869fcb49e6164f725be"
+    }
+  ],
+  "strokeCounts": {
+    "duck": [
+      0,
+      19,
+      19,
+      19,
+      0
+    ],
+    "octopus": [
+      19,
+      19,
+      19,
+      19,
+      34
+    ],
+    "lamb": [
+      19,
+      19,
+      19,
+      19,
+      34
+    ],
+    "duckOriginal": [
+      19,
+      0,
+      0,
+      0,
+      34
+    ]
+  }
+}
