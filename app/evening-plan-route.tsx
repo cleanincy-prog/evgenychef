@@ -25,12 +25,12 @@ export default function EveningPlanRoute() {
           const last = station?.lastElementChild;
           return heading && last ? last.getBoundingClientRect().bottom - heading.getBoundingClientRect().top : 0;
         };
-        const menuDrop = Math.ceil(contentHeight(".station-conversation") * .3);
+        const menuDrop = Math.ceil(contentHeight(".station-conversation") * .4);
         board.style.setProperty("--menu-step-drop", `${menuDrop}px`);
         const preparation = board.querySelector(".station-preparation .station-heading")?.getBoundingClientRect();
         const menuBottom = board.querySelector(".menu-plate")?.getBoundingClientRect().bottom;
         const clearMenu = preparation && menuBottom ? menuBottom - preparation.top + 56 : 0;
-        const eveningDrop = Math.ceil(Math.max(contentHeight(".station-preparation") * .3, clearMenu));
+        const eveningDrop = Math.ceil(Math.max(contentHeight(".station-preparation") * .4, clearMenu));
         board.style.setProperty("--evening-step-drop", `${eveningDrop}px`);
         // Read the final board size after the flow offsets, so the SVG never scales stale coordinates.
         rect = board.getBoundingClientRect();
