@@ -89,6 +89,7 @@ test("provides functional page anchors, photo attribution and the exact Instagra
     if (anchor.target === "_blank") assert.match(anchor.rel || "", /noopener|noreferrer/);
   }
   assert.ok(anchors.some(anchor => anchor.href === instagram));
+  assert.ok(anchors.some(anchor => anchor.href === "/media/menu/exploded/credits.html"), "Ingredient photo attribution must be reachable from the page");
   const credit = await localFetch("/media/menu/exploded/credits.html");
   assert.equal(credit.status, 200, "Photographic source and license information must be available");
   assert.match(await credit.text(), /creativecommons.org\/licenses\/by-sa\/4.0/);

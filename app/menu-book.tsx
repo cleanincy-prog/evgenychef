@@ -72,7 +72,7 @@ export default function MenuBook() {
           <div className="mb-plate" role="img" aria-label="Осьминог: готовая подача на тарелке"><FoodArt partIndex={4} /></div>
           <figcaption>Осьминога укладываем на соус, добавляем томаты, маринованные оливки и свежую зелень.</figcaption>
         </figure>
-        <footer className="mb-page-footer"><span>Евгений Гребеник</span><span className="mb-page-number">01</span></footer>
+        <footer className="mb-page-footer"><span>Евгений Гребеник</span><a href="/media/menu/exploded/credits.html">Источники фото</a><span className="mb-page-number">01</span></footer>
       </article>
     </div>
     <p className="mb-error" role="alert" hidden>Не удалось загрузить изображение. Состав и приготовление доступны. <button data-menu-retry>Попробовать ещё раз</button></p>
