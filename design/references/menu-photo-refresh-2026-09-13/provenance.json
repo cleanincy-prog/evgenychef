@@ -1,0 +1,34 @@
+{
+  "tool": "Built-in image_gen.imagegen; no API/CLI fallback",
+  "output_directory": "design/references/menu-photo-refresh-2026-09-13",
+  "photo_reference": {
+    "author": "Chevanon Photography",
+    "url": "https://www.pexels.com/photo/close-up-of-steak-meal-served-in-plate-323682/",
+    "license": "https://www.pexels.com/license/",
+    "usage": "Reference for a generated illustration; source photograph not placed on the live page"
+  },
+  "entries": [
+    {
+      "file": "duck-original-pencil.png",
+      "reference": "public/media/web/duck-plate-960.webp",
+      "type": "style-transfer",
+      "prompt": "Use case: style-transfer. Asset type: exact pencil drawing layer for an animation that fades into this exact food photograph. Edit target: the supplied top-down duck plate photograph. Convert this exact image into an elegant restrained graphite pencil study on pure white paper. Preserve the exact camera view, plate outline, duck slice positions, proportions and diagonal direction from bottom-left to top-right, tiny garnish, sauce locations and every major silhouette. Thin genuine pencil contours with occasional light irregular cross-hatching; restrained human sketch, mostly white paper, visible natural pencil grain. Do not invent, rearrange or regularize the food. No glossy shading, no engraving, no dense grey filling, no perfect repeated geometrical marks. Keep the whole plate at the same placement and scale, touching the same near-edge points as in the source, no new margins. The round plate must remain the exact same perspective ellipse. Black and white pencil only, no color, no text, no decorative marks outside the plate. Match original image aspect ratio as closely as available."
+    },
+    {
+      "file": "lamb-natural-photo-atlas.png",
+      "reference": [
+        "design/mockups/animated-menu-book-2026-09-13/assets-v2/lamb-photo-atlas.png",
+        "design/references/menu-photo-refresh-2026-09-13/lamb-pexels-323682.jpg"
+      ],
+      "type": "precise-object-edit",
+      "prompt": "Use case: precise-object-edit. Asset type: natural food illustration atlas for a chef menu. First image is edit target defining the exact 1536x1024 atlas arrangement; second image is a real food photography reference for the anatomy, roasting texture and natural imperfections of lamb, herbs and roasted vegetables. Redo the overly artificial glossy 3D food in the first image using the second image's photographic naturalism. Keep all five groups in their exact positions, same scale and no overlap: upper-left lamb, upper-middle small rosemary, bottom-left roasted carrots and parsnips, bottom-middle a small irregular puddle of dark lamb jus, right half one whole ivory ceramic plate with the finished lamb, roasted carrots, parsnips, rosemary and dark jus. Replace the stiff four-bone block with three naturally cut lamb chops, realistic irregular browned edges, bone anatomy from second reference, slight natural pink interior; no rubbery hypergloss. Vegetables are irregular real roasted carrot and parsnip pieces, thin rosemary with real small needles, restrained natural sauce without decorative giant swooshes. Right plate photographed top-down with all its rim visible; natural refined portion, spacious clean rim. Soft diffuse daylight, restrained realistic color. No CGI, no stock 3D sheen, no exaggerated saturation, no perfect repeated identical pieces, no plastic or toy look. Background must be genuinely transparent alpha around every isolated group; never draw a grey checker pattern. No text. This is an illustrative dish, not to be represented as a new real photograph."
+    },
+    {
+      "file": "lamb-natural-pencil-atlas.png",
+      "reference": "design/references/menu-photo-refresh-2026-09-13/lamb-natural-photo-atlas.png",
+      "type": "style-transfer",
+      "prompt": "Use case: style-transfer. Turn this exact food atlas into a graphite pencil drawing for a pencil-to-photo animation. Preserve image size 1536x1024, exactly the same five object groups, exact position, outline, scale and details: three lamb chops top left, rosemary upper middle, roasted roots bottom left, irregular sauce bottom middle, whole finished plate on the right. All shapes must precisely match the supplied photo because the two images will be crossfaded. Remove checkerboard; background pure white. Delicate irregular graphite strokes, light cross-hatching and thin contours, unfinished human culinary notebook study with plenty of white space. Restrained shading, no glossy texture, no dark engraving, no grey filled background. Do not change ingredients or move anything. No text. Entire image pencil black and white only."
+    }
+  ],
+  "notes": "Original generated PNG bytes retained. RGB checkerboard is hidden with source-derived SVG display clipping. Production WebP uses proportional resizing and encoding only. Duck color uses the existing approved real photo. Octopus media unchanged."
+}

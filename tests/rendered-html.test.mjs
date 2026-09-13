@@ -51,7 +51,7 @@ test("serves the approved evening page as accessible Russian HTML", () => {
   assert.equal(tags(html, "html")[0]?.lang, "ru");
   assert.equal(tags(html, "h1").length, 1, "A single page identity is required");
   const text = visibleText(html);
-  for (const expected of ["Евгений", "Гребеник", "Mise en place", "Знакомимся", "Продумываю меню", "Готовлю к встрече", "Ваш вечер", "Начнём с вашего вечера", "Утиная грудка", "Осьминог", "Сельдерей", "Томатный соус", "Оливки маринуем с травами", "Собираем подачу"]) {
+  for (const expected of ["Евгений", "Гребеник", "Mise en place", "Знакомимся", "Продумываю меню", "Готовлю к встрече", "Ваш вечер", "Начнём с вашего вечера", "Утиная грудка", "Осьминог", "Сельдерей", "Томатный соус", "Оливки маринуем с травами", "Готовая подача"]) {
     assert.ok(text.toLocaleLowerCase("ru").includes(expected.toLocaleLowerCase("ru")), `Missing rendered content: ${expected}`);
   }
   assert.ok(text.includes("В первом сообщении укажите дату, число гостей и формат"));
@@ -121,7 +121,7 @@ test("renders 63 documentary collage photos and the selected menu-book assets", 
   // Keep local HTTP concurrency bounded while checking every responsive variant.
   for (let start = 0; start < uniqueImagePaths.length; start += 8) {
     await Promise.all(uniqueImagePaths.slice(start, start + 8).map(async path => {
-      assert.match(path, /^\/media\/(?:web\/.+\.webp|menu\/(?:book|exploded)\/[a-z0-9-]+\.(?:webp|svg))$/, `Page images must use optimized local media: ${path}`);
+      assert.match(path, /^\/media\/(?:web\/.+\.webp|menu\/personal-menu-duck-plate-cream-v2\.webp|menu\/(?:book|exploded)\/[a-z0-9-]+\.(?:webp|svg))$/, `Page images must use optimized local media: ${path}`);
       const response = await localFetch(path, { method: "HEAD" });
       assert.equal(response.status, 200, `Image must be available: ${path}`);
       assert.match(response.headers.get("content-type") || "", path.endsWith(".svg") ? /^image\/svg\+xml/ : /^image\/webp/);

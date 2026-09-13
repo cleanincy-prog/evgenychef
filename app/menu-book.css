@@ -37,8 +37,8 @@
 .mb-photo img { position: absolute; max-width: none; object-fit: fill; pointer-events: none; user-select: none; }
 .mb-pencil { mix-blend-mode: multiply; filter: grayscale(1) contrast(1.03); }
 .mb-stroke { fill: none; stroke: white; stroke-linecap: round; stroke-linejoin: round; stroke-dasharray: 1; stroke-dashoffset: 0; }
-.menu-book[data-state="final"] .mb-plate .mb-photo { opacity: 1; }
-.menu-book[data-state="final"] .mb-plate .mb-pencil { opacity: 0; }
+.menu-book[data-state="final"] .mb-photo { opacity: 1; }
+.menu-book[data-state="final"] .mb-pencil { opacity: 0; }
 .mb-assembly-cue { display: flex; align-items: center; justify-content: center; gap: 14px; margin: 20px 0 2px; color: var(--muted); font: italic 400 1.0625rem/1.4 var(--font-sans); }
 .mb-assembly-cue svg { width: 48px; height: 25px; overflow: visible; flex: none; }
 .mb-assembly-cue path { fill: none; stroke: var(--muted); stroke-width: .9; stroke-linecap: round; stroke-linejoin: round; vector-effect: non-scaling-stroke; }
@@ -49,10 +49,6 @@
 .mb-page-footer { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-top: 22px; padding-top: 12px; border-top: 1px solid var(--rule); color: var(--muted); font: italic 400 .875rem/1.4 var(--font-sans); }
 .mb-page-number, .mb-page-range { font: 400 .8125rem/1.4 var(--font-mono); color: var(--muted); font-variant-numeric: tabular-nums lining-nums; }
 .mb-page-number { color: var(--gold-text); }
-.mb-flights { display: contents; }
-.mb-flight { position: absolute; z-index: 5; pointer-events: none; will-change: transform, opacity; }
-.mb-flight-art { position: relative; width: 100%; height: 100%; overflow: hidden; }
-.mb-flight .mb-photo { opacity: 1 !important; }
 .mb-navigation { display: flex; align-items: center; justify-content: space-between; gap: 20px; margin: 18px 24px 0; }
 .mb-page-turn { display: flex; align-items: center; gap: 11px; text-align: left; }
 .mb-page-turn:last-child { text-align: right; justify-content: flex-end; }
@@ -116,7 +112,6 @@
   .mb-bottom p { font-size: .875rem; max-width: 180px; }
   .mb-bottom button { max-width: 110px; text-align: right; }
 }
-@media (prefers-reduced-motion: reduce) { .mb-flight { display: none; } }
 /* Keep enlarged text legible without shrinking it into the artwork column. */
 @container menu-book-space (max-width: 19rem) {
   .mb-ingredient { grid-template-columns: minmax(0,1fr); gap: 5px; }

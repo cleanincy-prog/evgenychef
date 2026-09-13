@@ -1,0 +1,30 @@
+{
+  "operation": "Proportional resize and WebP encoding only. Original photo pixels retained; SVG clipping is presentation geometry. Octopus assets unchanged.",
+  "assets": [
+    {
+      "file": "duck-original-pencil-1200.webp",
+      "source": "design/references/menu-photo-refresh-2026-09-13/duck-original-pencil.png",
+      "sourceSha256": "c5e2e8cfb0fa24cdc2b7b0888efca907fb61bbc15fc181560980bc02f660bb5c"
+    },
+    {
+      "file": "lamb-natural-photo-atlas-960.webp",
+      "source": "design/references/menu-photo-refresh-2026-09-13/lamb-natural-photo-atlas.png",
+      "sourceSha256": "9cca6c98ff99855e2ef391c154188ffb4f89d3792bc03067868d78633289a7f0"
+    },
+    {
+      "file": "lamb-natural-photo-atlas-1536.webp",
+      "source": "design/references/menu-photo-refresh-2026-09-13/lamb-natural-photo-atlas.png",
+      "sourceSha256": "9cca6c98ff99855e2ef391c154188ffb4f89d3792bc03067868d78633289a7f0"
+    },
+    {
+      "file": "lamb-natural-pencil-atlas-960.webp",
+      "source": "design/references/menu-photo-refresh-2026-09-13/lamb-natural-pencil-atlas.png",
+      "sourceSha256": "d3ab02dd1a9011c161e3bbe4dc871b3bcb74177cbdb23e8b2017026505c5780a"
+    },
+    {
+      "file": "lamb-natural-pencil-atlas-1536.webp",
+      "source": "design/references/menu-photo-refresh-2026-09-13/lamb-natural-pencil-atlas.png",
+      "sourceSha256": "d3ab02dd1a9011c161e3bbe4dc871b3bcb74177cbdb23e8b2017026505c5780a"
+    }
+  ]
+}

@@ -3,7 +3,7 @@ import { mkdir, writeFile } from 'node:fs/promises';
 import { chromium } from 'playwright';
 import path from 'node:path';
 
-const out=path.resolve('artifacts/menu-book-site-2026-09-13');await mkdir(out,{recursive:true});
+const out=path.resolve('artifacts/menu-book-pencil-color-2026-09-13');await mkdir(out,{recursive:true});
 const url='http://127.0.0.1:3004/';
 const browser=await chromium.launch({executablePath:'/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',headless:true,args:['--disable-background-networking','--disable-component-update','--no-first-run']});
 const context=await browser.newContext({viewport:{width:1440,height:1100},reducedMotion:'reduce',locale:'ru-RU'});
@@ -49,34 +49,49 @@ try {
   await page.locator('[data-menu-next]').click();await ready();assert.equal(await page.locator('.mb-page').getAttribute('data-recipe'),'octopus');await page.locator('.menu-book').screenshot({path:path.join(out,'octopus-375.png')});
   await page.locator('[data-menu-next]').click();await ready();assert.equal(await page.locator('.mb-page').getAttribute('data-recipe'),'lamb');await page.locator('.menu-book').screenshot({path:path.join(out,'lamb-375.png')});assert.ok(await page.locator('[data-menu-next]').isDisabled());
   await page.locator('[data-menu-previous]').click();await ready();
-  await page.setViewportSize({width:1440,height:1200});await page.waitForFunction(()=>document.querySelectorAll('.mb-page').length===2);await ready();
+  // Keep the complete spread inside the viewport for state screenshots: Chrome's
+  // oversized element capture briefly changes device metrics and remounts the spread.
+  await page.setViewportSize({width:1440,height:1800});await page.waitForFunction(()=>document.querySelectorAll('.mb-page').length===2);await ready();
   assert.deepEqual(await page.locator('.mb-page').evaluateAll(es=>es.map(e=>e.dataset.recipe)),['octopus','lamb']);
   await page.locator('[data-menu-previous]').click();await ready();
   await page.locator('[data-menu-sketch]').click();assert.equal(await page.locator('.menu-book').getAttribute('data-state'),'sketch');await page.locator('.menu-book').screenshot({path:path.join(out,'pencil-1440.png')});
+  assert.equal(await page.locator('.menu-book').getAttribute('data-state'),'sketch');
+  assert.ok((await page.locator('.mb-photo').evaluateAll(es=>es.map(e=>getComputedStyle(e).opacity))).every(v=>v==='0'));
   await page.locator('[data-menu-play]').click();await final();assert.equal(await page.evaluate(()=>document.querySelector('.menu-book').getAnimations({subtree:true}).length),0);
   await page.locator('[data-menu-play]').focus();await page.keyboard.press('Tab');await page.keyboard.press('Shift+Tab');
   assert.equal(await page.locator('[data-menu-play]').evaluate(el=>document.activeElement===el&&getComputedStyle(el).outlineStyle==='solid'),true);
   await page.emulateMedia({reducedMotion:'no-preference'});await page.locator('[data-menu-play]').click();
   await page.waitForFunction(()=>[...document.querySelectorAll('.mb-stroke')].some(el=>{const n=parseFloat(getComputedStyle(el).strokeDashoffset);return n>.2&&n<.8;}));
+  assert.equal(await page.locator('.menu-book').getAttribute('data-phase'),'pencil');
+  assert.ok((await page.locator('.mb-photo').evaluateAll(es=>es.map(e=>getComputedStyle(e).opacity))).every(v=>v==='0'));
+  assert.equal(await page.locator('.mb-flight,.mb-flights').count(),0);
+  assert.ok(await page.evaluate(()=>document.querySelector('.menu-book').getAnimations({subtree:true}).every(a=>a.effect.getKeyframes().every(frame=>!('transform' in frame)))));
   await page.locator('[data-menu-pause]').click();
   // WAAPI commits pending pause tasks on the next animation frame.
   const times=await page.evaluate(async()=>{const animations=document.querySelector('.menu-book').getAnimations({subtree:true});await Promise.all(animations.map(a=>a.ready));return animations.map(a=>Number(a.currentTime));});
   await page.evaluate(()=>new Promise(resolve=>setTimeout(resolve,220)));assert.ok((await page.evaluate(()=>document.querySelector('.menu-book').getAnimations({subtree:true}).map(a=>Number(a.currentTime)))).every((t,i)=>Math.abs(t-times[i])<1));
   await page.locator('[data-menu-pause]').click();
-  await page.waitForFunction(()=>[...document.querySelectorAll('.mb-flight')].some(el=>Number(getComputedStyle(el).opacity)>.5));
-  await final();assert.ok((await page.locator('.mb-plate .mb-photo').evaluateAll(es=>es.map(e=>getComputedStyle(e).opacity))).every(v=>v==='1'));
+  await page.waitForFunction(()=>document.querySelector('.menu-book')?.dataset.phase==='color'&&[...document.querySelectorAll('.mb-ingredient .mb-photo')].every(el=>Number(getComputedStyle(el).opacity)>.99));
+  assert.ok((await page.locator('.mb-plate .mb-photo').evaluateAll(es=>es.map(e=>getComputedStyle(e).opacity))).every(v=>v==='0'));
+  await page.locator('[data-menu-pause]').click();await page.locator('.menu-book').screenshot({path:path.join(out,'phase-02-color.png')});await page.locator('[data-menu-pause]').click();
+  await page.waitForFunction(()=>document.querySelector('.menu-book')?.dataset.phase==='plate');
+  assert.equal(await page.locator('.mb-flight,.mb-flights').count(),0);
+  await final();assert.ok((await page.locator('.mb-photo').evaluateAll(es=>es.map(e=>getComputedStyle(e).opacity))).every(v=>v==='1'));
   await page.locator('[data-menu-play]').click();await page.locator('[data-menu-next]').click();await ready();await final();assert.equal(await page.locator('.mb-flight').count(),0);
   await page.emulateMedia({reducedMotion:'reduce'});await page.setViewportSize({width:390,height:844});await page.waitForFunction(()=>document.querySelectorAll('.mb-page').length===1);await ready();
   await page.emulateMedia({reducedMotion:'no-preference'});await page.locator('[data-menu-play]').click();await final();
   await page.emulateMedia({reducedMotion:'reduce'});await page.locator('.menu-book').screenshot({path:path.join(out,'mobile-finished-390.png')});
   // Root text enlargement exercises actual rem-based type and the recipe container.
   for(const width of [1440,375]){await page.setViewportSize({width,height:1100});await ready();await page.evaluate(()=>document.documentElement.style.fontSize='200%');await page.waitForTimeout(150);await ready();assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false);await page.locator('.menu-book').screenshot({path:path.join(out,`text-200-${width}.png`)});await page.evaluate(()=>document.documentElement.style.fontSize='');}
-  await page.reload();await ready();await page.locator('video').scrollIntoViewIfNeeded();await page.emulateMedia({reducedMotion:'no-preference'});
+  await page.emulateMedia({reducedMotion:'no-preference'});await page.goto(url);await ready();
+  assert.equal(await page.locator('.menu-book').getAttribute('data-state'),'sketch');
+  assert.ok((await page.locator('.mb-photo').evaluateAll(es=>es.map(e=>getComputedStyle(e).opacity))).every(v=>v==='0'));
+  await page.locator('video').scrollIntoViewIfNeeded();
   await page.locator('video').evaluate(el=>window.scrollTo({top:el.getBoundingClientRect().bottom+scrollY-innerHeight*.94+2,behavior:'instant'}));await page.waitForFunction(()=>!document.querySelector('video').paused&&document.querySelector('video').currentTime>.1);
   await page.evaluate(()=>window.scrollTo({top:0,behavior:'instant'}));await page.waitForFunction(()=>document.querySelector('video').paused);
   const failContext=await browser.newContext({viewport:{width:390,height:844},reducedMotion:'reduce'});let fail=true;
   await failContext.route('**/duck-photo-atlas-*.webp',route=>fail?route.abort():route.continue());const bad=await failContext.newPage();await bad.goto(url);await bad.locator('.mb-error').waitFor({state:'visible'});fail=false;await bad.locator('[data-menu-retry]').click();await bad.waitForFunction(()=>document.querySelector('.menu-book').dataset.ready==='true');assert.equal(await bad.locator('.mb-error').isVisible(),false);await failContext.close();
   assert.deepEqual(errors,[]);
-  await writeFile(path.join(out,'report.json'),JSON.stringify({passed:true,noindex:response.headers()['x-robots-tag'],widths,errors,tests:['Selected spread in native site, one full recipe on mobile','12 cooking operations and all three plates','Existing fonts, collage, step sequence and video retained','Route avoids book, all step copy, conversation image and video','Responsive widths and200% text','Navigation limits, drawing/serving, reduced motion, keyboard focus','Pencil animation, color, assembly, pause/resume, cleanup on recipe change','Complete mobile animation and image-error retry','Video starts at approved scroll position and pauses offscreen']},null,2));
+  await writeFile(path.join(out,'report.json'),JSON.stringify({passed:true,noindex:response.headers()['x-robots-tag'],widths,errors,tests:['Selected spread in native site, one full recipe on mobile','12 cooking operations and all three plates','Existing fonts, collage, step sequence and video retained','Route avoids book, all step copy, conversation image and video','Responsive widths and200% text','Navigation limits, drawing/serving, reduced motion, keyboard focus','Pencil first, then ingredient color, then the whole finished plate','No flight elements or transform animations; final color remains','Pause/resume, cleanup on recipe change, complete mobile animation and image-error retry','Video starts at approved scroll position and pauses offscreen']},null,2));
   console.log('All menu integration checks passed');
 }catch(error){await writeFile(path.join(out,'report.json'),JSON.stringify({passed:false,widths,errors,error:String(error)},null,2));throw error;}finally{await browser.close();}
