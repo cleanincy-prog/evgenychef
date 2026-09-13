@@ -97,9 +97,9 @@ img { display: block; max-width: 100%; }
 .process-list { display: grid; grid-template-columns: 46% 54%; grid-template-rows: max(clamp(365px, 31vw, 440px), var(--conversation-row-height, 0px)) auto; }
 .process-station { min-width: 0; position: relative; }
 .station-conversation { grid-column: 1; grid-row: 1; padding-right: 12%; }
-.station-menu { grid-column: 2; grid-row: 1; }
+.station-menu { grid-column: 2; grid-row: 1; padding-top: var(--menu-step-drop, 165px); }
 .station-preparation { grid-column: 1; grid-row: 2; padding: 0 18% 0 5%; }
-.station-evening { grid-column: 2; grid-row: 2; padding: 210px 0 0 5%; }
+.station-evening { grid-column: 2; grid-row: 2; padding: var(--evening-step-drop, 375px) 0 0 5%; }
 .station-heading { display: grid; grid-template-columns: 34px 51px minmax(0, 1fr); align-items: start; position: relative; z-index: 1; }
 .route-node { width: 22px; height: 22px; border: 1px solid var(--gold-text); border-radius: 50%; background: var(--paper); margin-top: 8px; position: relative; }
 .route-node::after { content: ""; position: absolute; inset: 6px; background: var(--ink); border-radius: 50%; }
@@ -158,7 +158,6 @@ img { display: block; max-width: 100%; }
   .station-number { font-size: 27px; }
   .station-preparation { padding-right: 12%; }
   .preparation-film { margin-left: 29px; width: min(100% - 29px, 300px); }
-  .station-evening { padding-top: 125px; }
   .contact-action { padding-inline: 6%; }
 }
 @media (max-width: 900px) {

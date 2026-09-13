@@ -13,10 +13,27 @@ export default function EveningPlanRoute() {
     let frame = 0;
     function measure() {
       if (!svg || !board) return;
-      const rect = board.getBoundingClientRect();
+      let rect = board.getBoundingClientRect();
       const conversation = board.querySelector(".conversation-illustration")?.getBoundingClientRect();
       if (conversation) {
         board.style.setProperty("--conversation-row-height", `${Math.ceil(conversation.bottom - rect.top + 56)}px`);
+      }
+      if (window.matchMedia("(min-width: 901px)").matches) {
+        const contentHeight = (selector: string) => {
+          const station = board.querySelector(selector);
+          const heading = station?.querySelector(".station-heading");
+          const last = station?.lastElementChild;
+          return heading && last ? last.getBoundingClientRect().bottom - heading.getBoundingClientRect().top : 0;
+        };
+        const menuDrop = Math.ceil(contentHeight(".station-conversation") * .3);
+        board.style.setProperty("--menu-step-drop", `${menuDrop}px`);
+        const preparation = board.querySelector(".station-preparation .station-heading")?.getBoundingClientRect();
+        const menuBottom = board.querySelector(".menu-plate")?.getBoundingClientRect().bottom;
+        const clearMenu = preparation && menuBottom ? menuBottom - preparation.top + 56 : 0;
+        const eveningDrop = Math.ceil(Math.max(contentHeight(".station-preparation") * .3, clearMenu));
+        board.style.setProperty("--evening-step-drop", `${eveningDrop}px`);
+        // Read the final board size after the flow offsets, so the SVG never scales stale coordinates.
+        rect = board.getBoundingClientRect();
       }
       const nodes = [...board.querySelectorAll("[data-route-node]")].map(node => {
         const box = node.getBoundingClientRect();
@@ -41,14 +58,14 @@ export default function EveningPlanRoute() {
       const leaveY = sauce ? Math.max(c.y + 35, sauce.bottom - rect.top + 22) : d.y - 30;
       const departureX = Math.min(departure, aisle - 20);
       setPaths([
-        `M${a.x},${a.y} C${a.x},-38 ${b.x},-38 ${b.x},${b.y}`,
+        `M${a.x},${a.y} C${a.x},-38 ${b.x},-38 ${b.x},${a.y} V${b.y}`,
         `M${b.x},${b.y} C${b.x},${b.y + 26} ${conversationRail},${b.y + 26} ${conversationRail},${turnY} V${returnY - 38} Q${conversationRail},${returnY} ${conversationRail - 44},${returnY} H${c.x + 44} Q${c.x},${returnY} ${c.x},${c.y}`,
         `M${departureX},${c.y} Q${aisle},${c.y} ${aisle},${c.y + 35} V${leaveY} Q${aisle},${d.y + 15} ${d.x},${d.y}`,
       ]);
     }
     const observer = new ResizeObserver(() => { cancelAnimationFrame(frame); frame = requestAnimationFrame(measure); });
     observer.observe(board);
-    for (const element of board.querySelectorAll(".station-heading, .menu-plate, .plate-label, .conversation-illustration")) observer.observe(element);
+    for (const element of board.querySelectorAll(".station-heading, .menu-plate, .plate-label, .conversation-illustration, .preparation-film")) observer.observe(element);
     void document.fonts.ready.then(measure);
     return () => { observer.disconnect(); cancelAnimationFrame(frame); };
   }, []);
