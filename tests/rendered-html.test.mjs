@@ -51,7 +51,7 @@ test("serves the approved evening page as accessible Russian HTML", () => {
   assert.equal(tags(html, "html")[0]?.lang, "ru");
   assert.equal(tags(html, "h1").length, 1, "A single page identity is required");
   const text = visibleText(html);
-  for (const expected of ["Евгений", "Гребеник", "Mise en place", "Знакомимся", "Продумываю меню", "Готовлю к встрече", "Ваш вечер", "Начнём с вашего вечера", "Основной продукт", "Гарнир", "Текстуры", "Соус"]) {
+  for (const expected of ["Евгений", "Гребеник", "Mise en place", "Знакомимся", "Продумываю меню", "Готовлю к встрече", "Ваш вечер", "Начнём с вашего вечера", "Утиная грудка", "Осьминог", "Сельдерей", "Томатный соус", "Оливки маринуем с травами", "Собираем подачу"]) {
     assert.ok(text.toLocaleLowerCase("ru").includes(expected.toLocaleLowerCase("ru")), `Missing rendered content: ${expected}`);
   }
   assert.ok(text.includes("В первом сообщении укажите дату, число гостей и формат"));
@@ -95,7 +95,7 @@ test("provides functional page anchors, photo attribution and the exact Instagra
   assert.equal(tags(html, "form").length, 0, "This page must not send an automatic inquiry");
 });
 
-test("renders 63 independent documentary collage photos and the real project assets", async () => {
+test("renders 63 documentary collage photos and the selected menu-book assets", async () => {
   const imageTags = tags(html, "img");
   const collage = [...html.matchAll(/<[^>]+\bclass="[^"]*\bcollage-tile\b[^"]*"[^>]*>[\s\S]*?<img\b([^>]*)>/g)]
     .map(match => tags(`<img ${match[1]}>`, "img")[0]);
@@ -107,8 +107,8 @@ test("renders 63 independent documentary collage photos and the real project ass
   const required = [
     "/media/web/chef-hero-apron-576.webp",
     "/media/web/masterchef-640.webp",
-    "/media/menu/exploded/scallop-plate-600.webp",
-    "/media/menu/exploded/scallop-360.webp",
+    "/media/menu/book/duck-photo-atlas-960.webp",
+    "/media/menu/book/octopus-photo-atlas-960.webp",
   ];
   for (const path of required) assert.ok(imageTags.some(img => img.src === path), `Missing real asset: ${path}`);
   for (const img of imageTags) assert.ok(Object.hasOwn(img, "alt"), `Image requires alt, including decorative empty alt: ${img.src}`);
@@ -121,12 +121,16 @@ test("renders 63 independent documentary collage photos and the real project ass
   // Keep local HTTP concurrency bounded while checking every responsive variant.
   for (let start = 0; start < uniqueImagePaths.length; start += 8) {
     await Promise.all(uniqueImagePaths.slice(start, start + 8).map(async path => {
-      assert.match(path, /^\/media\/(?:web\/.+\.webp|menu\/exploded\/[a-z0-9-]+\.(?:webp|svg))$/, `Page images must use local optimized photographs or the scene SVG: ${path}`);
+      assert.match(path, /^\/media\/(?:web\/.+\.webp|menu\/(?:book|exploded)\/[a-z0-9-]+\.(?:webp|svg))$/, `Page images must use optimized local media: ${path}`);
       const response = await localFetch(path, { method: "HEAD" });
       assert.equal(response.status, 200, `Image must be available: ${path}`);
       assert.match(response.headers.get("content-type") || "", path.endsWith(".svg") ? /^image\/svg\+xml/ : /^image\/webp/);
     }));
   }
+  const pencilPaths = [...html.matchAll(/<image\b[^>]*href="([^"]+)"/g)].map(match => match[1]);
+  assert.ok(pencilPaths.includes("/media/menu/book/duck-pencil-atlas-960.webp"));
+  assert.ok(pencilPaths.includes("/media/menu/book/octopus-pencil-atlas-960.webp"));
+  for (const source of new Set(pencilPaths)) assert.equal((await localFetch(source, { method: "HEAD" })).status, 200);
 });
 
 test("serves the shortened inline film with immediate controls and usable byte ranges", async () => {

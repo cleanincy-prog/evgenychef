@@ -1,0 +1,1269 @@
+{
+  "passed": true,
+  "noindex": "noindex, nofollow, noarchive",
+  "widths": [
+    {
+      "width": 1440,
+      "overflow": false,
+      "book": {
+        "left": 102.40625,
+        "top": 3259.8125,
+        "right": 1371.578125,
+        "bottom": 4605.265625,
+        "width": 1269.171875,
+        "height": 1345.453125
+      },
+      "pages": [
+        {
+          "recipe": "duck",
+          "rect": {
+            "left": 103.40625,
+            "top": 3346.8125,
+            "right": 736.984375,
+            "bottom": 4498.265625,
+            "width": 633.578125,
+            "height": 1151.453125
+          },
+          "plate": {
+            "left": 138.40625,
+            "top": 3966.21875,
+            "right": 700.984375,
+            "bottom": 4360.296875,
+            "width": 562.578125,
+            "height": 394.078125
+          },
+          "ingredients": {
+            "left": 138.40625,
+            "top": 3472.8125,
+            "right": 700.984375,
+            "bottom": 3903.8125,
+            "width": 562.578125,
+            "height": 431
+          },
+          "actions": [
+            "Обжариваем до румяной, хрустящей кожи.",
+            "Готовим нежное, гладкое пюре.",
+            "Морковь запекаем и глазируем. Зелень оставляем свежей.",
+            "Увариваем до насыщенного вкуса."
+          ],
+          "photoLoaded": true
+        },
+        {
+          "recipe": "octopus",
+          "rect": {
+            "left": 736.984375,
+            "top": 3346.8125,
+            "right": 1370.578125,
+            "bottom": 4498.265625,
+            "width": 633.59375,
+            "height": 1151.453125
+          },
+          "plate": {
+            "left": 771.984375,
+            "top": 3958.8125,
+            "right": 1335.578125,
+            "bottom": 4360.296875,
+            "width": 563.59375,
+            "height": 401.484375
+          },
+          "ingredients": {
+            "left": 771.984375,
+            "top": 3472.8125,
+            "right": 1335.578125,
+            "bottom": 3903.8125,
+            "width": 563.59375,
+            "height": 431
+          },
+          "actions": [
+            "Обжариваем до золотистых краёв.",
+            "Вялим, чтобы вкус стал насыщеннее.",
+            "Оливки маринуем с травами. Добавляем свежую зелень.",
+            "Увариваем до бархатистой текстуры."
+          ],
+          "photoLoaded": true
+        }
+      ],
+      "heading": {
+        "left": 667.859375,
+        "top": 2911.5,
+        "right": 1371.5625,
+        "bottom": 3111.8125,
+        "width": 703.703125,
+        "height": 200.3125
+      },
+      "conversation": {
+        "left": 68.40625,
+        "top": 2919.8125,
+        "right": 518.40625,
+        "bottom": 3219.8125,
+        "width": 450,
+        "height": 300
+      },
+      "stations": [
+        {
+          "step": "01",
+          "heading": {
+            "left": 68.40625,
+            "top": 2705.5,
+            "right": 595.9375,
+            "bottom": 2905.8125,
+            "width": 527.53125,
+            "height": 200.3125
+          },
+          "rect": {
+            "left": 68.40625,
+            "top": 2705.5,
+            "right": 667.859375,
+            "bottom": 3219.8125,
+            "width": 599.453125,
+            "height": 514.3125
+          }
+        },
+        {
+          "step": "02",
+          "heading": {
+            "left": 667.859375,
+            "top": 2911.5,
+            "right": 1371.5625,
+            "bottom": 3111.8125,
+            "width": 703.703125,
+            "height": 200.3125
+          },
+          "rect": {
+            "left": 68.40625,
+            "top": 2705.5,
+            "right": 1371.578125,
+            "bottom": 4605.265625,
+            "width": 1303.171875,
+            "height": 1899.765625
+          }
+        },
+        {
+          "step": "03",
+          "heading": {
+            "left": 98.375,
+            "top": 4660.265625,
+            "right": 559.96875,
+            "bottom": 4773.421875,
+            "width": 461.59375,
+            "height": 113.15625
+          },
+          "rect": {
+            "left": 68.40625,
+            "top": 4660.265625,
+            "right": 667.859375,
+            "bottom": 5404.1875,
+            "width": 599.453125,
+            "height": 743.921875
+          }
+        },
+        {
+          "step": "04",
+          "heading": {
+            "left": 703.03125,
+            "top": 4923.265625,
+            "right": 1371.578125,
+            "bottom": 5096.859375,
+            "width": 668.546875,
+            "height": 173.59375
+          },
+          "rect": {
+            "left": 667.859375,
+            "top": 4660.265625,
+            "right": 1371.578125,
+            "bottom": 5404.1875,
+            "width": 703.71875,
+            "height": 743.921875
+          }
+        }
+      ],
+      "throughBook": 0,
+      "throughCopy": 0,
+      "smallControls": [],
+      "fonts": {
+        "title": "Oranienbaum, Georgia, \"Times New Roman\", serif",
+        "copy": "\"Ysabeau Office\", system-ui, -apple-system, sans-serif",
+        "number": "\"PT Mono\", ui-monospace, Menlo, monospace"
+      },
+      "headingSizes": [
+        32,
+        20,
+        20,
+        20,
+        20,
+        32,
+        20,
+        20,
+        20,
+        20
+      ],
+      "collage": 63,
+      "video": {
+        "source": "/media/chef-story-short-prep-2026-09-12.mp4",
+        "controls": true
+      }
+    },
+    {
+      "width": 1280,
+      "overflow": false,
+      "book": {
+        "left": 94.796875,
+        "top": 3129.953125,
+        "right": 1219.171875,
+        "bottom": 4475.40625,
+        "width": 1124.375,
+        "height": 1345.453125
+      },
+      "pages": [
+        {
+          "recipe": "duck",
+          "rect": {
+            "left": 95.796875,
+            "top": 3216.953125,
+            "right": 656.984375,
+            "bottom": 4368.40625,
+            "width": 561.1875,
+            "height": 1151.453125
+          },
+          "plate": {
+            "left": 130.796875,
+            "top": 3836.359375,
+            "right": 620.984375,
+            "bottom": 4230.4375,
+            "width": 490.1875,
+            "height": 394.078125
+          },
+          "ingredients": {
+            "left": 130.796875,
+            "top": 3342.953125,
+            "right": 620.984375,
+            "bottom": 3773.953125,
+            "width": 490.1875,
+            "height": 431
+          },
+          "actions": [
+            "Обжариваем до румяной, хрустящей кожи.",
+            "Готовим нежное, гладкое пюре.",
+            "Морковь запекаем и глазируем. Зелень оставляем свежей.",
+            "Увариваем до насыщенного вкуса."
+          ],
+          "photoLoaded": true
+        },
+        {
+          "recipe": "octopus",
+          "rect": {
+            "left": 656.984375,
+            "top": 3216.953125,
+            "right": 1218.171875,
+            "bottom": 4368.40625,
+            "width": 561.1875,
+            "height": 1151.453125
+          },
+          "plate": {
+            "left": 691.984375,
+            "top": 3828.953125,
+            "right": 1183.171875,
+            "bottom": 4230.4375,
+            "width": 491.1875,
+            "height": 401.484375
+          },
+          "ingredients": {
+            "left": 691.984375,
+            "top": 3342.953125,
+            "right": 1183.171875,
+            "bottom": 3773.953125,
+            "width": 491.1875,
+            "height": 431
+          },
+          "actions": [
+            "Обжариваем до золотистых краёв.",
+            "Вялим, чтобы вкус стал насыщеннее.",
+            "Оливки маринуем с травами. Добавляем свежую зелень.",
+            "Увариваем до бархатистой текстуры."
+          ],
+          "photoLoaded": true
+        }
+      ],
+      "heading": {
+        "left": 593.640625,
+        "top": 2782.6875,
+        "right": 1219.15625,
+        "bottom": 2981.953125,
+        "width": 625.515625,
+        "height": 199.265625
+      },
+      "conversation": {
+        "left": 60.796875,
+        "top": 2789.953125,
+        "right": 510.796875,
+        "bottom": 3089.953125,
+        "width": 450,
+        "height": 300
+      },
+      "stations": [
+        {
+          "step": "01",
+          "heading": {
+            "left": 60.796875,
+            "top": 2576.6875,
+            "right": 529.71875,
+            "bottom": 2775.953125,
+            "width": 468.921875,
+            "height": 199.265625
+          },
+          "rect": {
+            "left": 60.796875,
+            "top": 2576.6875,
+            "right": 593.65625,
+            "bottom": 3089.953125,
+            "width": 532.859375,
+            "height": 513.265625
+          }
+        },
+        {
+          "step": "02",
+          "heading": {
+            "left": 593.640625,
+            "top": 2782.6875,
+            "right": 1219.15625,
+            "bottom": 2981.953125,
+            "width": 625.515625,
+            "height": 199.265625
+          },
+          "rect": {
+            "left": 60.796875,
+            "top": 2576.6875,
+            "right": 1219.171875,
+            "bottom": 4475.40625,
+            "width": 1158.375,
+            "height": 1898.71875
+          }
+        },
+        {
+          "step": "03",
+          "heading": {
+            "left": 87.4375,
+            "top": 4530.40625,
+            "right": 497.75,
+            "bottom": 4669.234375,
+            "width": 410.3125,
+            "height": 138.828125
+          },
+          "rect": {
+            "left": 60.796875,
+            "top": 4530.40625,
+            "right": 593.65625,
+            "bottom": 5283.28125,
+            "width": 532.859375,
+            "height": 752.875
+          }
+        },
+        {
+          "step": "04",
+          "heading": {
+            "left": 624.921875,
+            "top": 4803.40625,
+            "right": 1219.171875,
+            "bottom": 4975.953125,
+            "width": 594.25,
+            "height": 172.546875
+          },
+          "rect": {
+            "left": 593.65625,
+            "top": 4530.40625,
+            "right": 1219.171875,
+            "bottom": 5283.28125,
+            "width": 625.515625,
+            "height": 752.875
+          }
+        }
+      ],
+      "throughBook": 0,
+      "throughCopy": 0,
+      "smallControls": [],
+      "fonts": {
+        "title": "Oranienbaum, Georgia, \"Times New Roman\", serif",
+        "copy": "\"Ysabeau Office\", system-ui, -apple-system, sans-serif",
+        "number": "\"PT Mono\", ui-monospace, Menlo, monospace"
+      },
+      "headingSizes": [
+        32,
+        20,
+        20,
+        20,
+        20,
+        32,
+        20,
+        20,
+        20,
+        20
+      ],
+      "collage": 63,
+      "video": {
+        "source": "/media/chef-story-short-prep-2026-09-12.mp4",
+        "controls": true
+      }
+    },
+    {
+      "width": 1024,
+      "overflow": false,
+      "book": {
+        "left": 82.640625,
+        "top": 3188.5,
+        "right": 975.34375,
+        "bottom": 4526.484375,
+        "width": 892.703125,
+        "height": 1337.984375
+      },
+      "pages": [
+        {
+          "recipe": "duck",
+          "rect": {
+            "left": 83.640625,
+            "top": 3275.5,
+            "right": 528.984375,
+            "bottom": 4419.484375,
+            "width": 445.34375,
+            "height": 1143.984375
+          },
+          "plate": {
+            "left": 109.640625,
+            "top": 3913.390625,
+            "right": 501.984375,
+            "bottom": 4281.515625,
+            "width": 392.34375,
+            "height": 368.125
+          },
+          "ingredients": {
+            "left": 109.640625,
+            "top": 3398.5,
+            "right": 501.984375,
+            "bottom": 3857.421875,
+            "width": 392.34375,
+            "height": 458.921875
+          },
+          "actions": [
+            "Обжариваем до румяной, хрустящей кожи.",
+            "Готовим нежное, гладкое пюре.",
+            "Морковь запекаем и глазируем. Зелень оставляем свежей.",
+            "Увариваем до насыщенного вкуса."
+          ],
+          "photoLoaded": true
+        },
+        {
+          "recipe": "octopus",
+          "rect": {
+            "left": 528.984375,
+            "top": 3275.5,
+            "right": 974.34375,
+            "bottom": 4419.484375,
+            "width": 445.359375,
+            "height": 1143.984375
+          },
+          "plate": {
+            "left": 554.984375,
+            "top": 3905.5,
+            "right": 948.34375,
+            "bottom": 4281.515625,
+            "width": 393.359375,
+            "height": 376.015625
+          },
+          "ingredients": {
+            "left": 554.984375,
+            "top": 3398.5,
+            "right": 948.34375,
+            "bottom": 3850.5,
+            "width": 393.359375,
+            "height": 452
+          },
+          "actions": [
+            "Обжариваем до золотистых краёв.",
+            "Вялим, чтобы вкус стал насыщеннее.",
+            "Оливки маринуем с травами. Добавляем свежую зелень.",
+            "Увариваем до бархатистой текстуры."
+          ],
+          "photoLoaded": true
+        }
+      ],
+      "heading": {
+        "left": 474.921875,
+        "top": 2854.5,
+        "right": 975.328125,
+        "bottom": 3053.5,
+        "width": 500.40625,
+        "height": 199
+      },
+      "conversation": {
+        "left": 48.640625,
+        "top": 2898.21875,
+        "right": 423.78125,
+        "bottom": 3148.3125,
+        "width": 375.140625,
+        "height": 250.09375
+      },
+      "stations": [
+        {
+          "step": "01",
+          "heading": {
+            "left": 48.640625,
+            "top": 2658.5,
+            "right": 423.78125,
+            "bottom": 2884.21875,
+            "width": 375.140625,
+            "height": 225.71875
+          },
+          "rect": {
+            "left": 48.640625,
+            "top": 2658.5,
+            "right": 474.921875,
+            "bottom": 3148.3125,
+            "width": 426.28125,
+            "height": 489.8125
+          }
+        },
+        {
+          "step": "02",
+          "heading": {
+            "left": 474.921875,
+            "top": 2854.5,
+            "right": 975.328125,
+            "bottom": 3053.5,
+            "width": 500.40625,
+            "height": 199
+          },
+          "rect": {
+            "left": 48.640625,
+            "top": 2658.5,
+            "right": 975.34375,
+            "bottom": 4526.484375,
+            "width": 926.703125,
+            "height": 1867.984375
+          }
+        },
+        {
+          "step": "03",
+          "heading": {
+            "left": 69.953125,
+            "top": 4581.484375,
+            "right": 423.78125,
+            "bottom": 4720.046875,
+            "width": 353.828125,
+            "height": 138.5625
+          },
+          "rect": {
+            "left": 48.640625,
+            "top": 4581.484375,
+            "right": 474.921875,
+            "bottom": 5314.640625,
+            "width": 426.28125,
+            "height": 733.15625
+          }
+        },
+        {
+          "step": "04",
+          "heading": {
+            "left": 499.9375,
+            "top": 4868.484375,
+            "right": 975.34375,
+            "bottom": 5040.765625,
+            "width": 475.40625,
+            "height": 172.28125
+          },
+          "rect": {
+            "left": 474.921875,
+            "top": 4581.484375,
+            "right": 975.34375,
+            "bottom": 5314.640625,
+            "width": 500.421875,
+            "height": 733.15625
+          }
+        }
+      ],
+      "throughBook": 0,
+      "throughCopy": 0,
+      "smallControls": [],
+      "fonts": {
+        "title": "Oranienbaum, Georgia, \"Times New Roman\", serif",
+        "copy": "\"Ysabeau Office\", system-ui, -apple-system, sans-serif",
+        "number": "\"PT Mono\", ui-monospace, Menlo, monospace"
+      },
+      "headingSizes": [
+        29,
+        19,
+        19,
+        19,
+        19,
+        29,
+        19,
+        19,
+        19,
+        19
+      ],
+      "collage": 63,
+      "video": {
+        "source": "/media/chef-story-short-prep-2026-09-12.mp4",
+        "controls": true
+      }
+    },
+    {
+      "width": 768,
+      "overflow": false,
+      "book": {
+        "left": 74.484375,
+        "top": 3966.53125,
+        "right": 731.515625,
+        "bottom": 5305.578125,
+        "width": 657.03125,
+        "height": 1339.046875
+      },
+      "pages": [
+        {
+          "recipe": "duck",
+          "rect": {
+            "left": 75.484375,
+            "top": 4053.53125,
+            "right": 730.515625,
+            "bottom": 5198.578125,
+            "width": 655.03125,
+            "height": 1145.046875
+          },
+          "plate": {
+            "left": 113.484375,
+            "top": 4665.53125,
+            "right": 696.515625,
+            "bottom": 5059.609375,
+            "width": 583.03125,
+            "height": 394.078125
+          },
+          "ingredients": {
+            "left": 113.484375,
+            "top": 4176.53125,
+            "right": 696.515625,
+            "bottom": 4610.53125,
+            "width": 583.03125,
+            "height": 434
+          },
+          "actions": [
+            "Обжариваем до румяной, хрустящей кожи.",
+            "Готовим нежное, гладкое пюре.",
+            "Морковь запекаем и глазируем. Зелень оставляем свежей.",
+            "Увариваем до насыщенного вкуса."
+          ],
+          "photoLoaded": true
+        }
+      ],
+      "heading": {
+        "left": 36.484375,
+        "top": 3796.96875,
+        "right": 731.515625,
+        "bottom": 3942.53125,
+        "width": 695.03125,
+        "height": 145.5625
+      },
+      "conversation": {
+        "left": 130.484375,
+        "top": 3460.96875,
+        "right": 580.484375,
+        "bottom": 3760.96875,
+        "width": 450,
+        "height": 300
+      },
+      "stations": [
+        {
+          "step": "01",
+          "heading": {
+            "left": 36.484375,
+            "top": 3305.40625,
+            "right": 731.515625,
+            "bottom": 3450.96875,
+            "width": 695.03125,
+            "height": 145.5625
+          },
+          "rect": {
+            "left": 36.484375,
+            "top": 3305.40625,
+            "right": 731.515625,
+            "bottom": 3796.96875,
+            "width": 695.03125,
+            "height": 491.5625
+          }
+        },
+        {
+          "step": "02",
+          "heading": {
+            "left": 36.484375,
+            "top": 3796.96875,
+            "right": 731.515625,
+            "bottom": 3942.53125,
+            "width": 695.03125,
+            "height": 145.5625
+          },
+          "rect": {
+            "left": 36.484375,
+            "top": 3796.96875,
+            "right": 731.515625,
+            "bottom": 5341.578125,
+            "width": 695.03125,
+            "height": 1544.609375
+          }
+        },
+        {
+          "step": "03",
+          "heading": {
+            "left": 36.484375,
+            "top": 5341.578125,
+            "right": 731.515625,
+            "bottom": 5453.421875,
+            "width": 695.03125,
+            "height": 111.84375
+          },
+          "rect": {
+            "left": 36.484375,
+            "top": 5341.578125,
+            "right": 731.515625,
+            "bottom": 6174.96875,
+            "width": 695.03125,
+            "height": 833.390625
+          }
+        },
+        {
+          "step": "04",
+          "heading": {
+            "left": 36.484375,
+            "top": 6174.96875,
+            "right": 731.515625,
+            "bottom": 6320.53125,
+            "width": 695.03125,
+            "height": 145.5625
+          },
+          "rect": {
+            "left": 36.484375,
+            "top": 6174.96875,
+            "right": 731.515625,
+            "bottom": 6628.859375,
+            "width": 695.03125,
+            "height": 453.890625
+          }
+        }
+      ],
+      "throughBook": 0,
+      "throughCopy": 0,
+      "smallControls": [],
+      "fonts": {
+        "title": "Oranienbaum, Georgia, \"Times New Roman\", serif",
+        "copy": "\"Ysabeau Office\", system-ui, -apple-system, sans-serif",
+        "number": "\"PT Mono\", ui-monospace, Menlo, monospace"
+      },
+      "headingSizes": [
+        32,
+        19,
+        19,
+        19,
+        19
+      ],
+      "collage": 63,
+      "video": {
+        "source": "/media/chef-story-short-prep-2026-09-12.mp4",
+        "controls": true
+      }
+    },
+    {
+      "width": 430,
+      "overflow": false,
+      "book": {
+        "left": 51,
+        "top": 3883.3125,
+        "right": 412,
+        "bottom": 5176.109375,
+        "width": 361,
+        "height": 1292.796875
+      },
+      "pages": [
+        {
+          "recipe": "duck",
+          "rect": {
+            "left": 52,
+            "top": 3978.3125,
+            "right": 411,
+            "bottom": 5075.109375,
+            "width": 359,
+            "height": 1096.796875
+          },
+          "plate": {
+            "left": 74,
+            "top": 4638.234375,
+            "right": 393,
+            "bottom": 4937.546875,
+            "width": 319,
+            "height": 299.3125
+          },
+          "ingredients": {
+            "left": 74,
+            "top": 4095.3125,
+            "right": 393,
+            "bottom": 4584.234375,
+            "width": 319,
+            "height": 488.921875
+          },
+          "actions": [
+            "Обжариваем до румяной, хрустящей кожи.",
+            "Готовим нежное, гладкое пюре.",
+            "Морковь запекаем и глазируем. Зелень оставляем свежей.",
+            "Увариваем до насыщенного вкуса."
+          ],
+          "photoLoaded": true
+        }
+      ],
+      "heading": {
+        "left": 18,
+        "top": 3660.3125,
+        "right": 412,
+        "bottom": 3859.3125,
+        "width": 394,
+        "height": 199
+      },
+      "conversation": {
+        "left": 52,
+        "top": 3389.3125,
+        "right": 412,
+        "bottom": 3629.3125,
+        "width": 360,
+        "height": 240
+      },
+      "stations": [
+        {
+          "step": "01",
+          "heading": {
+            "left": 18,
+            "top": 3151.59375,
+            "right": 412,
+            "bottom": 3377.3125,
+            "width": 394,
+            "height": 225.71875
+          },
+          "rect": {
+            "left": 18,
+            "top": 3151.59375,
+            "right": 412,
+            "bottom": 3660.3125,
+            "width": 394,
+            "height": 508.71875
+          }
+        },
+        {
+          "step": "02",
+          "heading": {
+            "left": 18,
+            "top": 3660.3125,
+            "right": 412,
+            "bottom": 3859.3125,
+            "width": 394,
+            "height": 199
+          },
+          "rect": {
+            "left": 18,
+            "top": 3660.3125,
+            "right": 412,
+            "bottom": 5207.109375,
+            "width": 394,
+            "height": 1546.796875
+          }
+        },
+        {
+          "step": "03",
+          "heading": {
+            "left": 18,
+            "top": 5207.109375,
+            "right": 412,
+            "bottom": 5345.671875,
+            "width": 394,
+            "height": 138.5625
+          },
+          "rect": {
+            "left": 18,
+            "top": 5207.109375,
+            "right": 412,
+            "bottom": 5952.546875,
+            "width": 394,
+            "height": 745.4375
+          }
+        },
+        {
+          "step": "04",
+          "heading": {
+            "left": 18,
+            "top": 5952.546875,
+            "right": 412,
+            "bottom": 6124.828125,
+            "width": 394,
+            "height": 172.28125
+          },
+          "rect": {
+            "left": 18,
+            "top": 5952.546875,
+            "right": 412,
+            "bottom": 6377.828125,
+            "width": 394,
+            "height": 425.28125
+          }
+        }
+      ],
+      "throughBook": 0,
+      "throughCopy": 0,
+      "smallControls": [],
+      "fonts": {
+        "title": "Oranienbaum, Georgia, \"Times New Roman\", serif",
+        "copy": "\"Ysabeau Office\", system-ui, -apple-system, sans-serif",
+        "number": "\"PT Mono\", ui-monospace, Menlo, monospace"
+      },
+      "headingSizes": [
+        29,
+        19,
+        19,
+        19,
+        19
+      ],
+      "collage": 63,
+      "video": {
+        "source": "/media/chef-story-short-prep-2026-09-12.mp4",
+        "controls": true
+      }
+    },
+    {
+      "width": 390,
+      "overflow": false,
+      "book": {
+        "left": 51,
+        "top": 3870.453125,
+        "right": 372,
+        "bottom": 5148.90625,
+        "width": 321,
+        "height": 1278.453125
+      },
+      "pages": [
+        {
+          "recipe": "duck",
+          "rect": {
+            "left": 52,
+            "top": 3965.453125,
+            "right": 371,
+            "bottom": 5047.90625,
+            "width": 319,
+            "height": 1082.453125
+          },
+          "plate": {
+            "left": 74,
+            "top": 4625.375,
+            "right": 353,
+            "bottom": 4887.15625,
+            "width": 279,
+            "height": 261.78125
+          },
+          "ingredients": {
+            "left": 74,
+            "top": 4082.453125,
+            "right": 353,
+            "bottom": 4571.375,
+            "width": 279,
+            "height": 488.921875
+          },
+          "actions": [
+            "Обжариваем до румяной, хрустящей кожи.",
+            "Готовим нежное, гладкое пюре.",
+            "Морковь запекаем и глазируем. Зелень оставляем свежей.",
+            "Увариваем до насыщенного вкуса."
+          ],
+          "photoLoaded": true
+        }
+      ],
+      "heading": {
+        "left": 18,
+        "top": 3620.734375,
+        "right": 372,
+        "bottom": 3846.453125,
+        "width": 354,
+        "height": 225.71875
+      },
+      "conversation": {
+        "left": 52,
+        "top": 3376.40625,
+        "right": 372,
+        "bottom": 3589.734375,
+        "width": 320,
+        "height": 213.328125
+      },
+      "stations": [
+        {
+          "step": "01",
+          "heading": {
+            "left": 18,
+            "top": 3138.6875,
+            "right": 372,
+            "bottom": 3364.40625,
+            "width": 354,
+            "height": 225.71875
+          },
+          "rect": {
+            "left": 18,
+            "top": 3138.6875,
+            "right": 372,
+            "bottom": 3620.734375,
+            "width": 354,
+            "height": 482.046875
+          }
+        },
+        {
+          "step": "02",
+          "heading": {
+            "left": 18,
+            "top": 3620.734375,
+            "right": 372,
+            "bottom": 3846.453125,
+            "width": 354,
+            "height": 225.71875
+          },
+          "rect": {
+            "left": 18,
+            "top": 3620.734375,
+            "right": 372,
+            "bottom": 5179.90625,
+            "width": 354,
+            "height": 1559.171875
+          }
+        },
+        {
+          "step": "03",
+          "heading": {
+            "left": 18,
+            "top": 5179.90625,
+            "right": 372,
+            "bottom": 5318.46875,
+            "width": 354,
+            "height": 138.5625
+          },
+          "rect": {
+            "left": 18,
+            "top": 5179.90625,
+            "right": 372,
+            "bottom": 5925.34375,
+            "width": 354,
+            "height": 745.4375
+          }
+        },
+        {
+          "step": "04",
+          "heading": {
+            "left": 18,
+            "top": 5925.34375,
+            "right": 372,
+            "bottom": 6151.0625,
+            "width": 354,
+            "height": 225.71875
+          },
+          "rect": {
+            "left": 18,
+            "top": 5925.34375,
+            "right": 372,
+            "bottom": 6377.390625,
+            "width": 354,
+            "height": 452.046875
+          }
+        }
+      ],
+      "throughBook": 0,
+      "throughCopy": 0,
+      "smallControls": [],
+      "fonts": {
+        "title": "Oranienbaum, Georgia, \"Times New Roman\", serif",
+        "copy": "\"Ysabeau Office\", system-ui, -apple-system, sans-serif",
+        "number": "\"PT Mono\", ui-monospace, Menlo, monospace"
+      },
+      "headingSizes": [
+        29,
+        19,
+        19,
+        19,
+        19
+      ],
+      "collage": 63,
+      "video": {
+        "source": "/media/chef-story-short-prep-2026-09-12.mp4",
+        "controls": true
+      }
+    },
+    {
+      "width": 375,
+      "overflow": false,
+      "book": {
+        "left": 51,
+        "top": 3905.703125,
+        "right": 357,
+        "bottom": 5193.828125,
+        "width": 306,
+        "height": 1288.125
+      },
+      "pages": [
+        {
+          "recipe": "duck",
+          "rect": {
+            "left": 52,
+            "top": 4000.703125,
+            "right": 356,
+            "bottom": 5092.828125,
+            "width": 304,
+            "height": 1092.125
+          },
+          "plate": {
+            "left": 74,
+            "top": 4684.375,
+            "right": 338,
+            "bottom": 4932.078125,
+            "width": 264,
+            "height": 247.703125
+          },
+          "ingredients": {
+            "left": 74,
+            "top": 4117.703125,
+            "right": 338,
+            "bottom": 4630.375,
+            "width": 264,
+            "height": 512.671875
+          },
+          "actions": [
+            "Обжариваем до румяной, хрустящей кожи.",
+            "Готовим нежное, гладкое пюре.",
+            "Морковь запекаем и глазируем. Зелень оставляем свежей.",
+            "Увариваем до насыщенного вкуса."
+          ],
+          "photoLoaded": true
+        }
+      ],
+      "heading": {
+        "left": 18,
+        "top": 3655.984375,
+        "right": 357,
+        "bottom": 3881.703125,
+        "width": 339,
+        "height": 225.71875
+      },
+      "conversation": {
+        "left": 52,
+        "top": 3421.65625,
+        "right": 357,
+        "bottom": 3624.984375,
+        "width": 305,
+        "height": 203.328125
+      },
+      "stations": [
+        {
+          "step": "01",
+          "heading": {
+            "left": 18,
+            "top": 3130.5,
+            "right": 357,
+            "bottom": 3409.65625,
+            "width": 339,
+            "height": 279.15625
+          },
+          "rect": {
+            "left": 18,
+            "top": 3130.5,
+            "right": 357,
+            "bottom": 3655.984375,
+            "width": 339,
+            "height": 525.484375
+          }
+        },
+        {
+          "step": "02",
+          "heading": {
+            "left": 18,
+            "top": 3655.984375,
+            "right": 357,
+            "bottom": 3881.703125,
+            "width": 339,
+            "height": 225.71875
+          },
+          "rect": {
+            "left": 18,
+            "top": 3655.984375,
+            "right": 357,
+            "bottom": 5224.828125,
+            "width": 339,
+            "height": 1568.84375
+          }
+        },
+        {
+          "step": "03",
+          "heading": {
+            "left": 18,
+            "top": 5224.828125,
+            "right": 357,
+            "bottom": 5390.109375,
+            "width": 339,
+            "height": 165.28125
+          },
+          "rect": {
+            "left": 18,
+            "top": 5224.828125,
+            "right": 357,
+            "bottom": 5996.984375,
+            "width": 339,
+            "height": 772.15625
+          }
+        },
+        {
+          "step": "04",
+          "heading": {
+            "left": 18,
+            "top": 5996.984375,
+            "right": 357,
+            "bottom": 6222.703125,
+            "width": 339,
+            "height": 225.71875
+          },
+          "rect": {
+            "left": 18,
+            "top": 5996.984375,
+            "right": 357,
+            "bottom": 6439.03125,
+            "width": 339,
+            "height": 442.046875
+          }
+        }
+      ],
+      "throughBook": 0,
+      "throughCopy": 0,
+      "smallControls": [],
+      "fonts": {
+        "title": "Oranienbaum, Georgia, \"Times New Roman\", serif",
+        "copy": "\"Ysabeau Office\", system-ui, -apple-system, sans-serif",
+        "number": "\"PT Mono\", ui-monospace, Menlo, monospace"
+      },
+      "headingSizes": [
+        29,
+        19,
+        19,
+        19,
+        19
+      ],
+      "collage": 63,
+      "video": {
+        "source": "/media/chef-story-short-prep-2026-09-12.mp4",
+        "controls": true
+      }
+    }
+  ],
+  "errors": [],
+  "tests": [
+    "Selected spread in native site, one full recipe on mobile",
+    "12 cooking operations and all three plates",
+    "Existing fonts, collage, step sequence and video retained",
+    "Route avoids book, all step copy, conversation image and video",
+    "Responsive widths and200% text",
+    "Navigation limits, drawing/serving, reduced motion, keyboard focus",
+    "Pencil animation, color, assembly, pause/resume, cleanup on recipe change",
+    "Complete mobile animation and image-error retry",
+    "Video starts at approved scroll position and pauses offscreen"
+  ]
+}

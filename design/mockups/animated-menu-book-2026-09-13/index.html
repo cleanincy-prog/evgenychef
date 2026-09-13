@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex,nofollow,noarchive">
+  <meta name="theme-color" content="#f4efe5">
+  <title>Продумываю меню — каждое блюдо на своей странице</title>
+  <link rel="preload" href="assets/fonts/spectral-400-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/golos-text-400-900-cyrillic.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="menu.css">
+  <link rel="stylesheet" href="menu-v2.css">
+  <script src="assets-v2/food-data.js" defer></script>
+  <script src="menu-v2.js" defer></script>
+</head>
+<body>
+  <main class="menu-study">
+    <header class="introduction">
+      <span class="station-number" aria-hidden="true">02</span>
+      <div>
+        <h1>Продумываю меню</h1>
+        <p>Из нашего разговора складывается меню. Я выбираю продукты и продумываю, какие блюда приготовить и как они будут сочетаться между собой.</p>
+        <p class="quiet">Внутри каждого блюда тоже есть свой замысел.</p>
+      </div>
+    </header>
+
+    <section class="menu-experience" aria-label="Меню вашего вечера">
+      <div class="menu-toolbar">
+        <p class="menu-title">Меню вашего вечера</p>
+        <div class="animation-controls">
+          <button id="pause" class="quiet-button" hidden>Пауза</button>
+          <button id="play" class="play-button" disabled><span aria-hidden="true">↻</span> <span id="play-label">Оживить меню</span></button>
+        </div>
+      </div>
+      <p id="animation-status" class="animation-status" role="status" aria-live="polite">Готовлю страницы…</p>
+      <div id="menu-book" class="book-spread recipe-book" aria-label="Утка и осьминог" aria-busy="true"></div>
+      <p id="error-message" class="error-message" role="alert" hidden>Не удалось загрузить изображение. <button id="retry">Попробовать ещё раз</button></p>
+      <nav class="book-navigation" aria-label="Страницы меню">
+        <button id="previous" class="page-turn" disabled><span aria-hidden="true">←</span> <span id="previous-label">Назад</span></button>
+        <span id="page-range" class="page-range" aria-live="polite">01–02 / 03</span>
+        <button id="next" class="page-turn"><span id="next-label">Каре ягнёнка</span> <span aria-hidden="true">→</span></button>
+      </nav>
+      <div class="menu-bottom"><p>У каждого блюда — свой путь к вашему столу.</p><button id="sketch" class="quiet-button" disabled>Вернуть рисунок</button></div>
+    </section>
+  </main>
+  <noscript><p class="no-script">Для просмотра меню и анимации включите JavaScript в браузере.</p></noscript>
+</body>
+</html>

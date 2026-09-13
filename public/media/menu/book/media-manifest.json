@@ -1,0 +1,101 @@
+{
+  "operation": "Format conversion and proportional responsive resizing only; original composition, source PNGs and browser clip geometry retained.",
+  "assets": [
+    {
+      "file": "duck-photo-atlas-960.webp",
+      "width": 960,
+      "height": 640,
+      "bytes": 221982,
+      "source": "design/mockups/animated-menu-book-2026-09-13/assets-v2/duck-photo-atlas.png",
+      "sourceSha256": "8567942d435ad46492361dfc5854d00942c7b30a3de9c68604c8a20cc8268d45"
+    },
+    {
+      "file": "duck-photo-atlas-1536.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 417630,
+      "source": "design/mockups/animated-menu-book-2026-09-13/assets-v2/duck-photo-atlas.png",
+      "sourceSha256": "8567942d435ad46492361dfc5854d00942c7b30a3de9c68604c8a20cc8268d45"
+    },
+    {
+      "file": "duck-pencil-atlas-960.webp",
+      "width": 960,
+      "height": 640,
+      "bytes": 121680,
+      "source": "design/mockups/animated-menu-book-2026-09-13/assets-v2/duck-pencil-atlas.png",
+      "sourceSha256": "c9f484268a2063b158414e4261515544414689a5309600c26c3f5ecc1bfb0b45"
+    },
+    {
+      "file": "duck-pencil-atlas-1536.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 287610,
+      "source": "design/mockups/animated-menu-book-2026-09-13/assets-v2/duck-pencil-atlas.png",
+      "sourceSha256": "c9f484268a2063b158414e4261515544414689a5309600c26c3f5ecc1bfb0b45"
+    },
+    {
+      "file": "octopus-photo-atlas-960.webp",
+      "width": 960,
+      "height": 640,
+      "bytes": 256570,
+      "source": "design/mockups/animated-menu-book-2026-09-13/assets-v2/octopus-photo-atlas.png",
+      "sourceSha256": "7957315226812cb1755ad3994eb9df85d81e9c071fa880d53db372b6636bd2fc"
+    },
+    {
+      "file": "octopus-photo-atlas-1536.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 503306,
+      "source": "design/mockups/animated-menu-book-2026-09-13/assets-v2/octopus-photo-atlas.png",
+      "sourceSha256": "7957315226812cb1755ad3994eb9df85d81e9c071fa880d53db372b6636bd2fc"
+    },
+    {
+      "file": "octopus-pencil-atlas-960.webp",
+      "width": 960,
+      "height": 640,
+      "bytes": 152666,
+      "source": "design/mockups/animated-menu-book-2026-09-13/assets-v2/octopus-pencil-atlas.png",
+      "sourceSha256": "0578a7a7c2d03e2fdb1438884bc48ada6f8565cc8f5b25a3d587e81648523f15"
+    },
+    {
+      "file": "octopus-pencil-atlas-1536.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 362124,
+      "source": "design/mockups/animated-menu-book-2026-09-13/assets-v2/octopus-pencil-atlas.png",
+      "sourceSha256": "0578a7a7c2d03e2fdb1438884bc48ada6f8565cc8f5b25a3d587e81648523f15"
+    },
+    {
+      "file": "lamb-photo-atlas-960.webp",
+      "width": 960,
+      "height": 640,
+      "bytes": 250282,
+      "source": "design/mockups/animated-menu-book-2026-09-13/assets-v2/lamb-photo-atlas.png",
+      "sourceSha256": "05f62c1c5d713a5a60e7ac8f87e906c2ca659ad9e3cd9a2907b2f2e35a66ad87"
+    },
+    {
+      "file": "lamb-photo-atlas-1536.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 478798,
+      "source": "design/mockups/animated-menu-book-2026-09-13/assets-v2/lamb-photo-atlas.png",
+      "sourceSha256": "05f62c1c5d713a5a60e7ac8f87e906c2ca659ad9e3cd9a2907b2f2e35a66ad87"
+    },
+    {
+      "file": "lamb-pencil-atlas-960.webp",
+      "width": 960,
+      "height": 640,
+      "bytes": 133980,
+      "source": "design/mockups/animated-menu-book-2026-09-13/assets-v2/lamb-pencil-atlas.png",
+      "sourceSha256": "7b662d5744d1812116f997fc71aaf8cc9c00b9f4ecc9ebc43173051ebac8da78"
+    },
+    {
+      "file": "lamb-pencil-atlas-1536.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 311868,
+      "source": "design/mockups/animated-menu-book-2026-09-13/assets-v2/lamb-pencil-atlas.png",
+      "sourceSha256": "7b662d5744d1812116f997fc71aaf8cc9c00b9f4ecc9ebc43173051ebac8da78"
+    }
+  ]
+}

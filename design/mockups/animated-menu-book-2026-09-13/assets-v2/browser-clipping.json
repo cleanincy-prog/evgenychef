@@ -1,0 +1,163 @@
+{
+  "method": "Original RGB PNG bytes unchanged. Browser clip paths derive from colored object boundaries. Whole plates retain their complete interior; separate ingredients retain large silhouette gaps. Pencil display boundaries include a 5px margin to preserve loose graphite strokes while hiding neighboring atlas subjects. Graphite is an original imagegen raster shown using multiply against the existing paper color.",
+  "assets": [
+    {
+      "name": "duck-photo-atlas.png",
+      "mode": "RGB",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sha256": "8567942d435ad46492361dfc5854d00942c7b30a3de9c68604c8a20cc8268d45",
+      "bytes": 2535319
+    },
+    {
+      "name": "duck-pencil-atlas.png",
+      "mode": "RGB",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sha256": "c9f484268a2063b158414e4261515544414689a5309600c26c3f5ecc1bfb0b45",
+      "bytes": 2242381
+    },
+    {
+      "name": "octopus-photo-atlas.png",
+      "mode": "RGB",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sha256": "7957315226812cb1755ad3994eb9df85d81e9c071fa880d53db372b6636bd2fc",
+      "bytes": 2825239
+    },
+    {
+      "name": "octopus-pencil-atlas.png",
+      "mode": "RGB",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sha256": "0578a7a7c2d03e2fdb1438884bc48ada6f8565cc8f5b25a3d587e81648523f15",
+      "bytes": 2502097
+    },
+    {
+      "name": "lamb-photo-atlas.png",
+      "mode": "RGB",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sha256": "05f62c1c5d713a5a60e7ac8f87e906c2ca659ad9e3cd9a2907b2f2e35a66ad87",
+      "bytes": 2721381
+    },
+    {
+      "name": "lamb-pencil-atlas.png",
+      "mode": "RGB",
+      "dimensions": [
+        1536,
+        1024
+      ],
+      "sha256": "7b662d5744d1812116f997fc71aaf8cc9c00b9f4ecc9ebc43173051ebac8da78",
+      "bytes": 2307734
+    }
+  ],
+  "rects": {
+    "duck": [
+      [
+        22,
+        130,
+        436,
+        338
+      ],
+      [
+        468,
+        160,
+        265,
+        289
+      ],
+      [
+        50,
+        557,
+        332,
+        344
+      ],
+      [
+        450,
+        544,
+        273,
+        329
+      ],
+      [
+        735,
+        144,
+        794,
+        745
+      ]
+    ],
+    "octopus": [
+      [
+        26,
+        128,
+        390,
+        368
+      ],
+      [
+        403,
+        150,
+        319,
+        334
+      ],
+      [
+        17,
+        525,
+        349,
+        336
+      ],
+      [
+        380,
+        550,
+        359,
+        292
+      ],
+      [
+        707,
+        118,
+        817,
+        781
+      ]
+    ],
+    "lamb": [
+      [
+        39,
+        105,
+        428,
+        391
+      ],
+      [
+        417,
+        167,
+        339,
+        309
+      ],
+      [
+        24,
+        544,
+        375,
+        350
+      ],
+      [
+        403,
+        621,
+        397,
+        209
+      ],
+      [
+        734,
+        188,
+        780,
+        700
+      ]
+    ]
+  }
+}

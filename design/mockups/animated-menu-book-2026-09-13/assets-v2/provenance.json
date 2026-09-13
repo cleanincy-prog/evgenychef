@@ -1,0 +1,904 @@
+{
+  "date": "2026-09-13",
+  "method": "Built-in image_gen only:3initial photo reference-generation calls,3authorized failed background-extraction edits, and3authorized pencil style-transfer edits from the FIRST photo atlases onto white. No CLI or manual PNG edits.",
+  "referenceImages": [
+    "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/web/duck-plate-960.webp",
+    "/Users/dmitro/Documents/ChatGPT/Шеф4/design/mockups/animated-menu-book-2026-09-13/assets/duck-atlas.png",
+    "/Users/dmitro/Documents/ChatGPT/Шеф4/design/mockups/animated-menu-book-2026-09-13/assets/octopus-atlas.png",
+    "/Users/dmitro/Documents/ChatGPT/Шеф4/design/mockups/animated-menu-book-2026-09-13/assets/lamb-atlas.png"
+  ],
+  "photoTransparencyStatus": "FAILED: all phase1 outputs are RGB without alpha; checkerboard is baked into actual pixels.",
+  "photoAssets": [
+    {
+      "name": "duck",
+      "referenced_image_paths": [
+        "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/web/duck-plate-960.webp",
+        "/Users/dmitro/Documents/ChatGPT/Шеф4/design/mockups/animated-menu-book-2026-09-13/assets/duck-atlas.png"
+      ],
+      "prompt": "Use case: product-mockup.\nAsset type: original photographic food atlas for an animated restaurant menu book.\nCreate ONE high resolution 1536x1024 landscape PNG with genuinely transparent alpha outside all food and plate objects. All empty pixels should be alpha zero, not a painted white, black, cream, gray, colored or checkerboard background. No glowing halos, no surface, no photo panel. No text, numbers, labels, grid, borders, lines, UI or watermark.\n\nExactly FIVE independent photographic groups. Strict geometric atlas arrangement, invisible zones:\nA ingredient group centered at (160,250), maximum width270 height270.\nB ingredient group centered at (470,250), maximum width270 height270.\nC ingredient group centered at (160,735), maximum width270 height270.\nD ingredient group centered at (470,735), maximum width270 height270.\nAll four small ingredient cutouts form a 2x2 block on the LEFT of canvas, entirely left of x620. They have no plate, bowl or support. Keep at least40px clear transparent gaps between every group.\nE a single larger FINISHED plated dish on the RIGHT, centered at (1090,520). Its entire cream ceramic plate and food stay within x680–1500 and y90–950, maximum footprint790 wide by800 high. The complete ceramic rim must be visible, uncut, with generous unused rim and no pattern. No part of group E may overlap left ingredient groups. Nothing touches canvas edges. NO top-row/bottom-row atlas arrangement: four small groups LEFT, one large plate RIGHT.\n\nPhotographic quality: exceptional professional editorial restaurant food photograph, authentic delicate textures, appetizing realistic cooking, refined neutral daylight, camera55–65 degrees ABOVE table surface, consistent camera and light for all five groups. A chef's thoughtful fine dining composition: asymmetric balance, elegant layers and diagonals, considered sauce arcs and drops, clean ceramic breathing room. Intricate but restrained plating, not separate chunks simply laid beside each other. Natural warm cream glazed ceramic. No plastic CGI, no excessive gloss. The finished dish consists exactly of the same four component types in groups A–D. \nInput image1 is OUR real duck dish: use this as the primary plating and food quality reference. Extract its diagonal row/fan of juicy duck slices, beautiful golden deeply browned cross-scored skin, fine microgreens and deliberate sauce curves/drop placement. Do NOT reproduce its broad black stripe or mushrooms. Input image2 is an old trial atlas used only to identify component types; discard its layout, low camera and simple plating.\n\nA: juicy cooked duck breast slices arranged in a diagonal row/fan like OUR duck, distinct golden browned cross-scored skin, warm pink interiors, beautiful natural meat texture.\nB: velvety ivory celeriac puree, elegant thick quenelle or smooth swoosh, realistic subtle spoon texture.\nC: caramelized carrot MEDALLIONS with a few tiny fresh microgreen leaves. Carrot discs, not whole carrots.\nD: dark glossy sauce arranged as a small graceful fluid arc with a couple of deliberate drops.\nE: an ideal restaurant plate based on OUR duck reference, adapted to these four groups. A diagonal fan of the duck with its characteristic richly browned scored skin, elegantly supported by celeriac puree, beautifully placed carrot medallions, a few tiny microgreens and dark glossy sauce arcs and dots. Strong thoughtful composition and generous cream rim. All four groups represented.\nExclude broad black stripe, asparagus, berries, mushrooms, flowers or other components. No black inedible-looking decoration.",
+      "originalPath": "/Users/dmitro/.codex/generated_images/01a09abd-b39c-7ea2-b196-ac7238cc4f5f/exec-c21236b5-e426-4904-8660-ecc799588315.png",
+      "copiedPath": "/private/tmp/chef-menu-book-v2-assets-2026-09-13/duck-photo-atlas.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "hasAlpha": false,
+      "transparentPixels": 0,
+      "bytes": 2535319,
+      "sha256": "8567942d435ad46492361dfc5854d00942c7b30a3de9c68604c8a20cc8268d45",
+      "sourceRectsColorThreshold20": [
+        [
+          30,
+          137,
+          451,
+          461
+        ],
+        [
+          475,
+          168,
+          725,
+          442
+        ],
+        [
+          57,
+          564,
+          374,
+          894
+        ],
+        [
+          457,
+          551,
+          716,
+          865
+        ],
+        [
+          742,
+          151,
+          1522,
+          882
+        ]
+      ],
+      "sourceRectsMethod": "Read-only RGB chroma threshold max(channel)-min(channel)>20 in manually observed component regions; approximate visible bounds, NOT alpha bounds. Lamb A/B bounding rectangles overlap because long bones and rosemary occupy distinct silhouettes in the same rectangular area.",
+      "sourceRectsConnectedComponents": [
+        [
+          30,
+          137,
+          451,
+          461
+        ],
+        [
+          475,
+          168,
+          725,
+          442
+        ],
+        [
+          57,
+          564,
+          374,
+          894
+        ],
+        [
+          457,
+          551,
+          716,
+          865
+        ],
+        [
+          742,
+          151,
+          1522,
+          882
+        ]
+      ],
+      "sourceRectsConnectedComponentsMethod": "Corrected bounds obtained with read-only connected-component chroma>20 analysis. More accurate than prior manually bounded-region color-threshold diagnostics."
+    },
+    {
+      "name": "octopus",
+      "referenced_image_paths": [
+        "/Users/dmitro/Documents/ChatGPT/Шеф4/design/mockups/animated-menu-book-2026-09-13/assets/octopus-atlas.png",
+        "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/web/duck-plate-960.webp"
+      ],
+      "prompt": "Use case: product-mockup.\nAsset type: original photographic food atlas for an animated restaurant menu book.\nCreate ONE high resolution 1536x1024 landscape PNG with genuinely transparent alpha outside all food and plate objects. All empty pixels should be alpha zero, not a painted white, black, cream, gray, colored or checkerboard background. No glowing halos, no surface, no photo panel. No text, numbers, labels, grid, borders, lines, UI or watermark.\n\nExactly FIVE independent photographic groups. Strict geometric atlas arrangement, invisible zones:\nA ingredient group centered at (160,250), maximum width270 height270.\nB ingredient group centered at (470,250), maximum width270 height270.\nC ingredient group centered at (160,735), maximum width270 height270.\nD ingredient group centered at (470,735), maximum width270 height270.\nAll four small ingredient cutouts form a 2x2 block on the LEFT of canvas, entirely left of x620. They have no plate, bowl or support. Keep at least40px clear transparent gaps between every group.\nE a single larger FINISHED plated dish on the RIGHT, centered at (1090,520). Its entire cream ceramic plate and food stay within x680–1500 and y90–950, maximum footprint790 wide by800 high. The complete ceramic rim must be visible, uncut, with generous unused rim and no pattern. No part of group E may overlap left ingredient groups. Nothing touches canvas edges. NO top-row/bottom-row atlas arrangement: four small groups LEFT, one large plate RIGHT.\n\nPhotographic quality: exceptional professional editorial restaurant food photograph, authentic delicate textures, appetizing realistic cooking, refined neutral daylight, camera55–65 degrees ABOVE table surface, consistent camera and light for all five groups. A chef's thoughtful fine dining composition: asymmetric balance, elegant layers and diagonals, considered sauce arcs and drops, clean ceramic breathing room. Intricate but restrained plating, not separate chunks simply laid beside each other. Natural warm cream glazed ceramic. No plastic CGI, no excessive gloss. The finished dish consists exactly of the same four component types in groups A–D. \nInput image1 is a prior octopus atlas, use only for ingredient identity; discard its layout, low camera and simple plating. Input image2 is OUR restaurant duck plate, used only as a reference for confident food photography and deliberate fine dining composition, NOT its duck or ingredients.\n\nA: two or three vivid beautifully grilled curled octopus tentacles with natural suckers, charred edges and appetizing red-brown skin.\nB: a few rich red sun-dried tomato halves, soft wrinkled texture.\nC: dark purple-black olives with beautiful FRESH GREEN accents, several small young basil leaves and delicate microgreens, distinctly visible green but no salad heap.\nD: rich red tomato sauce, a refined thick curved brush-like swoosh with natural sauce texture.\nE: a stunning finished octopus restaurant dish using exactly A–D: considered architectural arc of the curved grilled tentacles, sun-dried tomatoes and dark olives integrated in the composition, deliberate red tomato sauce arcs/swoosh and clearly visible fresh small green basil and microgreen accents. Refined asymmetric layering, breathing room, a whole cream plate. Nothing else. Do not make a heap of green salad; no lemon, potatoes, flowers, puree, other vegetables or other ingredients.",
+      "originalPath": "/Users/dmitro/.codex/generated_images/01a09abd-b39c-7ea2-b196-ac7238cc4f5f/exec-1df1a19e-0c55-4849-9178-60e71b76f994.png",
+      "copiedPath": "/private/tmp/chef-menu-book-v2-assets-2026-09-13/octopus-photo-atlas.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "hasAlpha": false,
+      "transparentPixels": 0,
+      "bytes": 2825239,
+      "sha256": "7957315226812cb1755ad3994eb9df85d81e9c071fa880d53db372b6636bd2fc",
+      "sourceRectsColorThreshold20": [
+        [
+          33,
+          135,
+          408,
+          488
+        ],
+        [
+          410,
+          158,
+          715,
+          505
+        ],
+        [
+          25,
+          533,
+          359,
+          853
+        ],
+        [
+          388,
+          520,
+          735,
+          834
+        ],
+        [
+          713,
+          126,
+          1517,
+          892
+        ]
+      ],
+      "sourceRectsMethod": "Read-only RGB chroma threshold max(channel)-min(channel)>20 in manually observed component regions; approximate visible bounds, NOT alpha bounds. Lamb A/B bounding rectangles overlap because long bones and rosemary occupy distinct silhouettes in the same rectangular area.",
+      "sourceRectsConnectedComponents": [
+        [
+          33,
+          135,
+          408,
+          488
+        ],
+        [
+          410,
+          158,
+          715,
+          476
+        ],
+        [
+          25,
+          533,
+          359,
+          853
+        ],
+        [
+          388,
+          557,
+          732,
+          834
+        ],
+        [
+          714,
+          126,
+          1517,
+          892
+        ]
+      ],
+      "sourceRectsConnectedComponentsMethod": "Corrected bounds obtained with read-only connected-component chroma>20 analysis. More accurate than prior manually bounded-region color-threshold diagnostics."
+    },
+    {
+      "name": "lamb",
+      "referenced_image_paths": [
+        "/Users/dmitro/Documents/ChatGPT/Шеф4/design/mockups/animated-menu-book-2026-09-13/assets/lamb-atlas.png"
+      ],
+      "prompt": "Use case: product-mockup.\nAsset type: original photographic food atlas for an animated restaurant menu book.\nCreate ONE high resolution 1536x1024 landscape PNG with genuinely transparent alpha outside all food and plate objects. All empty pixels should be alpha zero, not a painted white, black, cream, gray, colored or checkerboard background. No glowing halos, no surface, no photo panel. No text, numbers, labels, grid, borders, lines, UI or watermark.\n\nExactly FIVE independent photographic groups. Strict geometric atlas arrangement, invisible zones:\nA ingredient group centered at (160,250), maximum width270 height270.\nB ingredient group centered at (470,250), maximum width270 height270.\nC ingredient group centered at (160,735), maximum width270 height270.\nD ingredient group centered at (470,735), maximum width270 height270.\nAll four small ingredient cutouts form a 2x2 block on the LEFT of canvas, entirely left of x620. They have no plate, bowl or support. Keep at least40px clear transparent gaps between every group.\nE a single larger FINISHED plated dish on the RIGHT, centered at (1090,520). Its entire cream ceramic plate and food stay within x680–1500 and y90–950, maximum footprint790 wide by800 high. The complete ceramic rim must be visible, uncut, with generous unused rim and no pattern. No part of group E may overlap left ingredient groups. Nothing touches canvas edges. NO top-row/bottom-row atlas arrangement: four small groups LEFT, one large plate RIGHT.\n\nPhotographic quality: exceptional professional editorial restaurant food photograph, authentic delicate textures, appetizing realistic cooking, refined neutral daylight, camera55–65 degrees ABOVE table surface, consistent camera and light for all five groups. A chef's thoughtful fine dining composition: asymmetric balance, elegant layers and diagonals, considered sauce arcs and drops, clean ceramic breathing room. Intricate but restrained plating, not separate chunks simply laid beside each other. Natural warm cream glazed ceramic. No plastic CGI, no excessive gloss. The finished dish consists exactly of the same four component types in groups A–D. \nInput image1 is a prior lamb atlas used only for ingredient identity and cooking texture. Discard its old layout, low camera and simple plating. Preserve the same recipe.\n\nA: an elegant cooked rack of lamb with three or four complete ribs, beautiful browned seared edge, one visible tender warm pink cut face, natural meat texture.\nB: a few fresh rosemary sprigs with fine needles, coherent small cluster.\nC: beautifully roasted root vegetables, golden parsnip and orange carrot pieces with caramelized edges.\nD: dark glossy lamb jus, a graceful small curved swoosh with one or two considered drops.\nE: a beautifully served premium fine dining lamb plate using exactly A–D: elegant rack angled deliberately in the composition, roasted root vegetables placed in thoughtful relation to the meat, a few rosemary sprigs, a beautiful dark jus arc with restrained drops. Generous cream rim, compelling asymmetric composition, coherent layers and natural real food details. No extra components. No puree, asparagus, peas, berries, greens, flowers or additional garnish.",
+      "originalPath": "/Users/dmitro/.codex/generated_images/01a09abd-b39c-7ea2-b196-ac7238cc4f5f/exec-3e17883b-7754-4d06-ba60-1bd7e7c51da2.png",
+      "copiedPath": "/private/tmp/chef-menu-book-v2-assets-2026-09-13/lamb-photo-atlas.png",
+      "size": [
+        1536,
+        1024
+      ],
+      "mode": "RGB",
+      "hasAlpha": false,
+      "transparentPixels": 0,
+      "bytes": 2721381,
+      "sha256": "05f62c1c5d713a5a60e7ac8f87e906c2ca659ad9e3cd9a2907b2f2e35a66ad87",
+      "sourceRectsColorThreshold20": [
+        [
+          46,
+          113,
+          462,
+          489
+        ],
+        [
+          422,
+          174,
+          755,
+          500
+        ],
+        [
+          31,
+          552,
+          392,
+          887
+        ],
+        [
+          410,
+          520,
+          800,
+          823
+        ],
+        [
+          740,
+          195,
+          1507,
+          881
+        ]
+      ],
+      "sourceRectsMethod": "Read-only RGB chroma threshold max(channel)-min(channel)>20 in manually observed component regions; approximate visible bounds, NOT alpha bounds. Lamb A/B bounding rectangles overlap because long bones and rosemary occupy distinct silhouettes in the same rectangular area.",
+      "sourceRectsConnectedComponents": [
+        [
+          46,
+          113,
+          460,
+          489
+        ],
+        [
+          424,
+          174,
+          748,
+          469
+        ],
+        [
+          31,
+          552,
+          392,
+          887
+        ],
+        [
+          410,
+          628,
+          793,
+          823
+        ],
+        [
+          742,
+          195,
+          1507,
+          881
+        ]
+      ],
+      "sourceRectsConnectedComponentsMethod": "Corrected bounds obtained with read-only connected-component chroma>20 analysis. More accurate than prior manually bounded-region color-threshold diagnostics."
+    }
+  ],
+  "extractionPhase": {
+    "method": "Built-in image_gen background-extraction; exactly3 dependent editing calls authorized after photo generation returned baked checkerboard.",
+    "status": "FAILED: all3 returned RGB with baked checkerboard. No genuine alpha.",
+    "pencilPhaseStatus": "NOT_STARTED: awaiting valid transparent photo sources; parent explicitly instructed no further retries if extraction again returned RGB.",
+    "assets": [
+      {
+        "name": "duck",
+        "referenced_image_paths": [
+          "/Users/dmitro/.codex/generated_images/01a09abd-b39c-7ea2-b196-ac7238cc4f5f/exec-c21236b5-e426-4904-8660-ecc799588315.png"
+        ],
+        "prompt": "Use case: background-extraction.\nInput image is the exact edit target.\nRemove the checkerboard completely. Output a genuinely transparent RGBA PNG with alpha zero outside the food and the ceramic plate.\nKeep every food object, every ingredient, every sauce drop and the entire ceramic plate EXACTLY unchanged from the input. Do not redraw or redesign anything. Preserve original full1536x1024 canvas, exact positions, sizes, silhouettes, colors, textures, camera, lighting and all five separate groups. Only delete the checkerboard background between and around the existing objects, including gaps between leaves and bones.\nNo white or gray fill. No checkerboard pixels. No replacement background, no paper, no lines, no labels. This is precise background removal only. Real alpha transparency is mandatory; do not paint a visual representation of transparency.",
+        "originalPath": "/Users/dmitro/.codex/generated_images/01a09abd-b39c-7ea2-b196-ac7238cc4f5f/exec-d88937d8-ea77-4e6a-9f12-e62f134c01e6.png",
+        "copiedPath": "/private/tmp/chef-menu-book-v2-assets-2026-09-13/duck-extraction-failed.png",
+        "size": [
+          1536,
+          1024
+        ],
+        "mode": "RGB",
+        "hasAlpha": false,
+        "transparentPixels": 0,
+        "bytes": 2316562,
+        "sha256": "617beaf6543dee3a04b70ff305d10fc14b0197ab2108e773a82a82f10060fe7f"
+      },
+      {
+        "name": "octopus",
+        "referenced_image_paths": [
+          "/Users/dmitro/.codex/generated_images/01a09abd-b39c-7ea2-b196-ac7238cc4f5f/exec-1df1a19e-0c55-4849-9178-60e71b76f994.png"
+        ],
+        "prompt": "Use case: background-extraction.\nInput image is the exact edit target.\nRemove the checkerboard completely. Output a genuinely transparent RGBA PNG with alpha zero outside the food and the ceramic plate.\nKeep every food object, every ingredient, every sauce drop and the entire ceramic plate EXACTLY unchanged from the input. Do not redraw or redesign anything. Preserve original full1536x1024 canvas, exact positions, sizes, silhouettes, colors, textures, camera, lighting and all five separate groups. Only delete the checkerboard background between and around the existing objects, including gaps between leaves and bones.\nNo white or gray fill. No checkerboard pixels. No replacement background, no paper, no lines, no labels. This is precise background removal only. Real alpha transparency is mandatory; do not paint a visual representation of transparency.",
+        "originalPath": "/Users/dmitro/.codex/generated_images/01a09abd-b39c-7ea2-b196-ac7238cc4f5f/exec-1b0b8bbc-cb19-4864-af4c-22a9db59db0d.png",
+        "copiedPath": "/private/tmp/chef-menu-book-v2-assets-2026-09-13/octopus-extraction-failed.png",
+        "size": [
+          1536,
+          1024
+        ],
+        "mode": "RGB",
+        "hasAlpha": false,
+        "transparentPixels": 0,
+        "bytes": 2647791,
+        "sha256": "12cd0dc3f74776fde77a5403278b78b8b8c88bbe85302611801c07bbfc300009"
+      },
+      {
+        "name": "lamb",
+        "referenced_image_paths": [
+          "/Users/dmitro/.codex/generated_images/01a09abd-b39c-7ea2-b196-ac7238cc4f5f/exec-3e17883b-7754-4d06-ba60-1bd7e7c51da2.png"
+        ],
+        "prompt": "Use case: background-extraction.\nInput image is the exact edit target.\nRemove the checkerboard completely. Output a genuinely transparent RGBA PNG with alpha zero outside the food and the ceramic plate.\nKeep every food object, every ingredient, every sauce drop and the entire ceramic plate EXACTLY unchanged from the input. Do not redraw or redesign anything. Preserve original full1536x1024 canvas, exact positions, sizes, silhouettes, colors, textures, camera, lighting and all five separate groups. Only delete the checkerboard background between and around the existing objects, including gaps between leaves and bones.\nNo white or gray fill. No checkerboard pixels. No replacement background, no paper, no lines, no labels. This is precise background removal only. Real alpha transparency is mandatory; do not paint a visual representation of transparency.",
+        "originalPath": "/Users/dmitro/.codex/generated_images/01a09abd-b39c-7ea2-b196-ac7238cc4f5f/exec-53bf7fca-d062-416c-9a56-7f30b141f984.png",
+        "copiedPath": "/private/tmp/chef-menu-book-v2-assets-2026-09-13/lamb-extraction-failed.png",
+        "size": [
+          1536,
+          1024
+        ],
+        "mode": "RGB",
+        "hasAlpha": false,
+        "transparentPixels": 0,
+        "bytes": 2707372,
+        "sha256": "ba8b668076fac5f69fd9882f8d5a2cc645649f19a7b60ac1a96c5f8a3e64adc9"
+      }
+    ]
+  },
+  "pencilPhaseStatus": "COMPLETED with visually white background per latest parent instruction; minor near-white noise/RGB channel drift documented. Original photo alpha failure remains unchanged and is handled by parent via browser masks.",
+  "validationNotes": [
+    "All6generated originals inspected with view_image and read-only Pillow. All6are1536x1024 RGB, no alpha channel. Checkerboard is actually baked into pixels.",
+    "No source PNGs were edited manually; external copies preserve original bytes, validated by SHA256.",
+    "New duck finished plate follows diagonal scored-skin presentation and adds celeriac puree, carrot medallions and microgreens. Its isolated duck group remains closer to previous five-slice fan than the finished scored-skin row.",
+    "Octopus photo includes prominent fresh basil/microgreens and dark olives, with no salad heap. Lamb recipe remains rack, rosemary, root vegetables and jus.",
+    "Generated ingredient groups exceed requested270px dimensions. Actual objects lie in a left2x2 block but extend to aroundx790; actual plate starts aroundx713–742. Some axis-aligned ingredient and plate source rectangles overlap although object silhouettes are disjoint.",
+    "Background-extraction attempts retained layout closely but did not remove checkerboard and increased glossy texture. They are labeled extraction-failed and are not accepted final assets.",
+    "Visible directional graphite strokes and restrained cross-hatching, especially on ceramic rims and food surfaces. No remaining checkerboard, grid, text or frames.",
+    "All5groups retain original placement, scale and camera closely. Maximum measured outer-bound drift is4source pixels per image. This is a bounding-box diagnostic, not proof of pixel-identical geometry.",
+    "Fine interior texture is redrawn and varies slightly, as expected for pencil style transfer; no new food groups or plating redesign.",
+    "White field has subtle near-white output noise and strokes retain minor RGB channel differences. Browser filter grayscale(1) contrast(1.03) is suitable for making the approved multiply treatment strictly neutral with a white background, without editing PNG files.",
+    "Use the SAME sharedUnionSourceRect and transform for both photo and pencil to preserve alignment. Some source rectangles overlap neighboring objects because silhouettes are close; supplied rectangles alone are not isolation masks."
+  ],
+  "pencilPhase": {
+    "method": "Built-in image_gen style-transfer/edit; exactly3 parallel calls from FIRST raw photo atlases, with an explicitly requested opaque white background, not transparency.",
+    "status": "Completed3requested pencil edits; visible checkerboard removed. Background is visually white but numeric RGB around254 with standard deviation0.53; not pixel-exact uniform255.",
+    "assets": [
+      {
+        "name": "duck",
+        "referenced_image_paths": [
+          "/private/tmp/chef-menu-book-v2-assets-2026-09-13/duck-photo-atlas.png"
+        ],
+        "prompt": "Use case: style-transfer.\nThe input image is the exact edit target. Convert the photographed food and plate into a genuine, delicate hand-drawn GRAPHITE PENCIL study.\nReplace the entire checkerboard background COMPLETELY with a perfectly uniform, solid pure WHITE #FFFFFF background. This is an ordinary opaque white PNG. All spaces between objects must be uninterrupted pure white. No checkerboard, no grid, no fabric, no paper texture, no gray field.\n\nPreserve the original full1536x1024 canvas and EXACT original arrangement, scale, camera, positions, silhouettes and internal arrangement of ALL FIVE groups: four small ingredient groups at left and the whole large plated dish at right. Every existing sauce drop, leaf, meat slice, rib and plate edge stays in its source position. Do not move, enlarge, shrink, crop, reinterpret or add objects. Keep the completed plate's full rim and food placement exactly aligned with the original photograph. This drawing must overlay the original photograph precisely for a pencil-to-photo reveal.\n\nDrawing material: real fine H/HB graphite pencil mark-making from a skilled observational illustrator. Visible short directional strokes following the surfaces, delicate curved contour strokes, restrained cross-hatching to describe rounded forms and shadows, natural variations of pressure, small broken and rejoined pencil lines, lightly suggested construction arcs close to existing forms. Light-to-medium graphite tone with open white highlights and convincing volume. Crisp enough to see the individual hand-made strokes. Draw the food, sauce, foliage and ceramic plate fully as graphite marks.\nFully monochrome neutral graphite gray; no color and no sepia. White interiors and highlights should remain pure white where there is no stroke.\nDo NOT produce a grayscale photograph, photo filter, edge-detection image, sterile vector outlines, wireframe, bold black ink illustration, charcoal smudging or thick engraving. Do not copy the checkerboard or any former background feature into the drawing. No words, labels, numbers, borders, rectangular panels, surrounding decoration or new shading in the empty spaces.\nOnly the visual material changes from photograph to genuine pencil drawing; the geometry remains exactly the same.",
+        "originalPath": "/Users/dmitro/.codex/generated_images/01a09abd-b39c-7ea2-b196-ac7238cc4f5f/exec-dc7d215c-36e5-4809-8038-416dd5d77e19.png",
+        "copiedPath": "/private/tmp/chef-menu-book-v2-assets-2026-09-13/duck-pencil-atlas.png",
+        "size": [
+          1536,
+          1024
+        ],
+        "mode": "RGB",
+        "hasAlpha": false,
+        "pureWhitePixels": 108870,
+        "nearWhitePixels250": 976637,
+        "chromaticPixelsDifferenceOver3": 179453,
+        "totalPixels": 1572864,
+        "backgroundSamples": [
+          [
+            254,
+            255,
+            255
+          ],
+          [
+            253,
+            253,
+            254
+          ],
+          [
+            254,
+            254,
+            254
+          ],
+          [
+            253,
+            253,
+            254
+          ]
+        ],
+        "top90pxBackgroundMean": [
+          254.01697048611112,
+          253.98100405092592,
+          254.12126012731483
+        ],
+        "top90pxBackgroundStddev": [
+          0.5340150485137645,
+          0.5306581441559931,
+          0.5349497835118082
+        ],
+        "bytes": 2242381,
+        "sha256": "c9f484268a2063b158414e4261515544414689a5309600c26c3f5ecc1bfb0b45",
+        "photoSourceRects": [
+          [
+            30,
+            137,
+            451,
+            461
+          ],
+          [
+            475,
+            168,
+            725,
+            442
+          ],
+          [
+            57,
+            564,
+            374,
+            894
+          ],
+          [
+            457,
+            551,
+            716,
+            865
+          ],
+          [
+            742,
+            151,
+            1522,
+            882
+          ]
+        ],
+        "pencilSourceRects": [
+          [
+            30,
+            137,
+            453,
+            463
+          ],
+          [
+            475,
+            169,
+            728,
+            445
+          ],
+          [
+            57,
+            564,
+            375,
+            895
+          ],
+          [
+            457,
+            551,
+            715,
+            866
+          ],
+          [
+            740,
+            147,
+            1521,
+            885
+          ]
+        ],
+        "sharedUnionSourceRects": [
+          [
+            30,
+            137,
+            453,
+            463
+          ],
+          [
+            475,
+            168,
+            728,
+            445
+          ],
+          [
+            57,
+            564,
+            375,
+            895
+          ],
+          [
+            457,
+            551,
+            716,
+            866
+          ],
+          [
+            740,
+            147,
+            1522,
+            885
+          ]
+        ],
+        "edgeDeltasPencilMinusPhoto": [
+          [
+            0,
+            0,
+            2,
+            2
+          ],
+          [
+            0,
+            1,
+            3,
+            3
+          ],
+          [
+            0,
+            0,
+            1,
+            1
+          ],
+          [
+            0,
+            0,
+            -1,
+            1
+          ],
+          [
+            -2,
+            -4,
+            -1,
+            3
+          ]
+        ],
+        "maxMeasuredEdgeDriftPx": 4,
+        "sourceRectsMethod": "Read-only connected-component analysis: original photo foreground chroma>20; pencil foreground meanRGB<240. Selected major component bounds; separate sauce drops united with ingredientD; full drawn rim united with plate. Bounds are [left,top,right,bottom], exclusive right/bottom, in A/B/C/D/E order. No image pixels were changed."
+      },
+      {
+        "name": "octopus",
+        "referenced_image_paths": [
+          "/private/tmp/chef-menu-book-v2-assets-2026-09-13/octopus-photo-atlas.png"
+        ],
+        "prompt": "Use case: style-transfer.\nThe input image is the exact edit target. Convert the photographed food and plate into a genuine, delicate hand-drawn GRAPHITE PENCIL study.\nReplace the entire checkerboard background COMPLETELY with a perfectly uniform, solid pure WHITE #FFFFFF background. This is an ordinary opaque white PNG. All spaces between objects must be uninterrupted pure white. No checkerboard, no grid, no fabric, no paper texture, no gray field.\n\nPreserve the original full1536x1024 canvas and EXACT original arrangement, scale, camera, positions, silhouettes and internal arrangement of ALL FIVE groups: four small ingredient groups at left and the whole large plated dish at right. Every existing sauce drop, leaf, meat slice, rib and plate edge stays in its source position. Do not move, enlarge, shrink, crop, reinterpret or add objects. Keep the completed plate's full rim and food placement exactly aligned with the original photograph. This drawing must overlay the original photograph precisely for a pencil-to-photo reveal.\n\nDrawing material: real fine H/HB graphite pencil mark-making from a skilled observational illustrator. Visible short directional strokes following the surfaces, delicate curved contour strokes, restrained cross-hatching to describe rounded forms and shadows, natural variations of pressure, small broken and rejoined pencil lines, lightly suggested construction arcs close to existing forms. Light-to-medium graphite tone with open white highlights and convincing volume. Crisp enough to see the individual hand-made strokes. Draw the food, sauce, foliage and ceramic plate fully as graphite marks.\nFully monochrome neutral graphite gray; no color and no sepia. White interiors and highlights should remain pure white where there is no stroke.\nDo NOT produce a grayscale photograph, photo filter, edge-detection image, sterile vector outlines, wireframe, bold black ink illustration, charcoal smudging or thick engraving. Do not copy the checkerboard or any former background feature into the drawing. No words, labels, numbers, borders, rectangular panels, surrounding decoration or new shading in the empty spaces.\nOnly the visual material changes from photograph to genuine pencil drawing; the geometry remains exactly the same.",
+        "originalPath": "/Users/dmitro/.codex/generated_images/01a09abd-b39c-7ea2-b196-ac7238cc4f5f/exec-f31aebf0-350e-4db9-9cfc-ae71f05703a5.png",
+        "copiedPath": "/private/tmp/chef-menu-book-v2-assets-2026-09-13/octopus-pencil-atlas.png",
+        "size": [
+          1536,
+          1024
+        ],
+        "mode": "RGB",
+        "hasAlpha": false,
+        "pureWhitePixels": 91863,
+        "nearWhitePixels250": 866110,
+        "chromaticPixelsDifferenceOver3": 328296,
+        "totalPixels": 1572864,
+        "backgroundSamples": [
+          [
+            254,
+            254,
+            255
+          ],
+          [
+            253,
+            253,
+            254
+          ],
+          [
+            254,
+            254,
+            255
+          ],
+          [
+            253,
+            253,
+            253
+          ]
+        ],
+        "top90pxBackgroundMean": [
+          253.99704137731482,
+          253.94850260416666,
+          254.12293836805554
+        ],
+        "top90pxBackgroundStddev": [
+          0.5331854037651,
+          0.5303736647342729,
+          0.5356075537610699
+        ],
+        "bytes": 2502097,
+        "sha256": "0578a7a7c2d03e2fdb1438884bc48ada6f8565cc8f5b25a3d587e81648523f15",
+        "photoSourceRects": [
+          [
+            33,
+            135,
+            408,
+            488
+          ],
+          [
+            410,
+            158,
+            715,
+            476
+          ],
+          [
+            25,
+            533,
+            359,
+            853
+          ],
+          [
+            388,
+            557,
+            732,
+            834
+          ],
+          [
+            714,
+            126,
+            1517,
+            892
+          ]
+        ],
+        "pencilSourceRects": [
+          [
+            33,
+            132,
+            408,
+            489
+          ],
+          [
+            409,
+            155,
+            715,
+            477
+          ],
+          [
+            25,
+            530,
+            360,
+            854
+          ],
+          [
+            389,
+            557,
+            734,
+            833
+          ],
+          [
+            713,
+            122,
+            1517,
+            894
+          ]
+        ],
+        "sharedUnionSourceRects": [
+          [
+            33,
+            132,
+            408,
+            489
+          ],
+          [
+            409,
+            155,
+            715,
+            477
+          ],
+          [
+            25,
+            530,
+            360,
+            854
+          ],
+          [
+            388,
+            557,
+            734,
+            834
+          ],
+          [
+            713,
+            122,
+            1517,
+            894
+          ]
+        ],
+        "edgeDeltasPencilMinusPhoto": [
+          [
+            0,
+            -3,
+            0,
+            1
+          ],
+          [
+            -1,
+            -3,
+            0,
+            1
+          ],
+          [
+            0,
+            -3,
+            1,
+            1
+          ],
+          [
+            1,
+            0,
+            2,
+            -1
+          ],
+          [
+            -1,
+            -4,
+            0,
+            2
+          ]
+        ],
+        "maxMeasuredEdgeDriftPx": 4,
+        "sourceRectsMethod": "Read-only connected-component analysis: original photo foreground chroma>20; pencil foreground meanRGB<240. Selected major component bounds; separate sauce drops united with ingredientD; full drawn rim united with plate. Bounds are [left,top,right,bottom], exclusive right/bottom, in A/B/C/D/E order. No image pixels were changed."
+      },
+      {
+        "name": "lamb",
+        "referenced_image_paths": [
+          "/private/tmp/chef-menu-book-v2-assets-2026-09-13/lamb-photo-atlas.png"
+        ],
+        "prompt": "Use case: style-transfer.\nThe input image is the exact edit target. Convert the photographed food and plate into a genuine, delicate hand-drawn GRAPHITE PENCIL study.\nReplace the entire checkerboard background COMPLETELY with a perfectly uniform, solid pure WHITE #FFFFFF background. This is an ordinary opaque white PNG. All spaces between objects must be uninterrupted pure white. No checkerboard, no grid, no fabric, no paper texture, no gray field.\n\nPreserve the original full1536x1024 canvas and EXACT original arrangement, scale, camera, positions, silhouettes and internal arrangement of ALL FIVE groups: four small ingredient groups at left and the whole large plated dish at right. Every existing sauce drop, leaf, meat slice, rib and plate edge stays in its source position. Do not move, enlarge, shrink, crop, reinterpret or add objects. Keep the completed plate's full rim and food placement exactly aligned with the original photograph. This drawing must overlay the original photograph precisely for a pencil-to-photo reveal.\n\nDrawing material: real fine H/HB graphite pencil mark-making from a skilled observational illustrator. Visible short directional strokes following the surfaces, delicate curved contour strokes, restrained cross-hatching to describe rounded forms and shadows, natural variations of pressure, small broken and rejoined pencil lines, lightly suggested construction arcs close to existing forms. Light-to-medium graphite tone with open white highlights and convincing volume. Crisp enough to see the individual hand-made strokes. Draw the food, sauce, foliage and ceramic plate fully as graphite marks.\nFully monochrome neutral graphite gray; no color and no sepia. White interiors and highlights should remain pure white where there is no stroke.\nDo NOT produce a grayscale photograph, photo filter, edge-detection image, sterile vector outlines, wireframe, bold black ink illustration, charcoal smudging or thick engraving. Do not copy the checkerboard or any former background feature into the drawing. No words, labels, numbers, borders, rectangular panels, surrounding decoration or new shading in the empty spaces.\nOnly the visual material changes from photograph to genuine pencil drawing; the geometry remains exactly the same.",
+        "originalPath": "/Users/dmitro/.codex/generated_images/01a09abd-b39c-7ea2-b196-ac7238cc4f5f/exec-a6ef71bd-9c9d-441e-9d91-a5d8882e6707.png",
+        "copiedPath": "/private/tmp/chef-menu-book-v2-assets-2026-09-13/lamb-pencil-atlas.png",
+        "size": [
+          1536,
+          1024
+        ],
+        "mode": "RGB",
+        "hasAlpha": false,
+        "pureWhitePixels": 120952,
+        "nearWhitePixels250": 978964,
+        "chromaticPixelsDifferenceOver3": 88006,
+        "totalPixels": 1572864,
+        "backgroundSamples": [
+          [
+            254,
+            255,
+            254
+          ],
+          [
+            253,
+            253,
+            253
+          ],
+          [
+            254,
+            254,
+            255
+          ],
+          [
+            254,
+            253,
+            254
+          ]
+        ],
+        "top90pxBackgroundMean": [
+          254.04447337962964,
+          253.96294849537037,
+          254.1545355902778
+        ],
+        "top90pxBackgroundStddev": [
+          0.5348027829477755,
+          0.536973675022869,
+          0.538207814698283
+        ],
+        "bytes": 2307734,
+        "sha256": "7b662d5744d1812116f997fc71aaf8cc9c00b9f4ecc9ebc43173051ebac8da78",
+        "photoSourceRects": [
+          [
+            46,
+            113,
+            460,
+            489
+          ],
+          [
+            424,
+            174,
+            748,
+            469
+          ],
+          [
+            31,
+            552,
+            392,
+            887
+          ],
+          [
+            410,
+            628,
+            793,
+            823
+          ],
+          [
+            742,
+            195,
+            1507,
+            881
+          ]
+        ],
+        "pencilSourceRects": [
+          [
+            44,
+            111,
+            463,
+            490
+          ],
+          [
+            422,
+            173,
+            750,
+            468
+          ],
+          [
+            31,
+            551,
+            393,
+            890
+          ],
+          [
+            410,
+            626,
+            792,
+            824
+          ],
+          [
+            741,
+            192,
+            1508,
+            882
+          ]
+        ],
+        "sharedUnionSourceRects": [
+          [
+            44,
+            111,
+            463,
+            490
+          ],
+          [
+            422,
+            173,
+            750,
+            469
+          ],
+          [
+            31,
+            551,
+            393,
+            890
+          ],
+          [
+            410,
+            626,
+            793,
+            824
+          ],
+          [
+            741,
+            192,
+            1508,
+            882
+          ]
+        ],
+        "edgeDeltasPencilMinusPhoto": [
+          [
+            -2,
+            -2,
+            3,
+            1
+          ],
+          [
+            -2,
+            -1,
+            2,
+            -1
+          ],
+          [
+            0,
+            -1,
+            1,
+            3
+          ],
+          [
+            0,
+            -2,
+            -1,
+            1
+          ],
+          [
+            -1,
+            -3,
+            1,
+            1
+          ]
+        ],
+        "maxMeasuredEdgeDriftPx": 3,
+        "sourceRectsMethod": "Read-only connected-component analysis: original photo foreground chroma>20; pencil foreground meanRGB<240. Selected major component bounds; separate sauce drops united with ingredientD; full drawn rim united with plate. Bounds are [left,top,right,bottom], exclusive right/bottom, in A/B/C/D/E order. No image pixels were changed."
+      }
+    ],
+    "visualValidation": [
+      "Visible directional graphite strokes and restrained cross-hatching, especially on ceramic rims and food surfaces. No remaining checkerboard, grid, text or frames.",
+      "All5groups retain original placement, scale and camera closely. Maximum measured outer-bound drift is4source pixels per image. This is a bounding-box diagnostic, not proof of pixel-identical geometry.",
+      "Fine interior texture is redrawn and varies slightly, as expected for pencil style transfer; no new food groups or plating redesign.",
+      "White field has subtle near-white output noise and strokes retain minor RGB channel differences. Browser filter grayscale(1) contrast(1.03) is suitable for making the approved multiply treatment strictly neutral with a white background, without editing PNG files.",
+      "Use the SAME sharedUnionSourceRect and transform for both photo and pencil to preserve alignment. Some source rectangles overlap neighboring objects because silhouettes are close; supplied rectangles alone are not isolation masks."
+    ]
+  }
+}

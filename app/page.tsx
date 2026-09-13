@@ -1,6 +1,6 @@
 import ChefStoryVideo from "./chef-story-video";
 import EveningPlanRoute from "./evening-plan-route";
-import MenuExplodedDish from "./menu-exploded-dish";
+import MenuBook from "./menu-book";
 import { heroImages, siteImages } from "./site-images";
 
 /* eslint-disable @next/next/no-img-element -- original local media with source-specific editorial framing */
@@ -103,7 +103,7 @@ export default function Home() {
       </section>
       <section className="evening-plan" aria-labelledby="plan-title">
         <h2 id="plan-title">От разговора — <span>к вашему столу</span></h2>
-        <div className="process-board">
+        <div className="process-board process-board-with-menu">
           <EveningPlanRoute />
           <ol className="process-list">
             <li className="process-station station-conversation" data-step="01">
@@ -113,12 +113,12 @@ export default function Home() {
               </StationHeading>
               <figure className="process-illustration conversation-illustration"><img {...siteImages.conversation} sizes="(max-width: 620px) calc(100vw - 70px), (max-width: 900px) min(63.35vw, 450px), min(36.64vw, 450px)" alt="Карандашный рисунок: Евгений с лёгкой улыбкой записывает пожелания гостьи в блокнот; на столе небольшая ваза с цветами и два стакана воды" loading="lazy" decoding="async" /></figure>
             </li>
-            <li className="process-station station-menu" data-step="02">
+            <li className="process-station station-menu" data-step="02" id="menu">
               <StationHeading number="02" title="Продумываю меню">
                 <p>Из нашего разговора складывается меню. Я выбираю продукты и продумываю, какие блюда приготовить и как они будут сочетаться между собой.</p>
                 <p>Внутри каждого блюда тоже есть свой замысел.</p>
               </StationHeading>
-              <MenuExplodedDish />
+              <MenuBook />
             </li>
             <li className="process-station station-preparation" data-step="03">
               <StationHeading number="03" title="Готовлю к встрече">
