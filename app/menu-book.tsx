@@ -2,6 +2,7 @@
 
 import { useEffect, useId, useRef, type CSSProperties } from "react";
 import artwork from "./menu-book-photos.json";
+import extraArtwork from "./menu-book-ingredients.json";
 import { attachMenuMedia } from "./menu-book-media";
 import "./menu-book.css";
 
@@ -10,12 +11,10 @@ const ingredients = [
   { name: "Вяленые томаты", grams: 25, action: "Вялим, чтобы вкус стал насыщеннее." },
   { name: "Оливки", grams: 25, action: "Маринуем с травами, чесноком и лимоном." },
   { name: "Томатный соус", grams: 60, action: "Увариваем до бархатистой текстуры." },
-] as const;
-const extras = [
   { name: "Зелень", grams: 5, action: "Добавляем свежей перед подачей." },
   { name: "Чеснок", grams: 3, action: "Измельчаем для маринада и соуса." },
   { name: "Оливковое масло", grams: 10, action: "Добавляем в маринад и при обжарке." },
-  { name: "Лимонный сок", grams: 5, action: "Добавляем в маринад для свежести." },
+  { name: "Лимонный сок", grams: 5, action: "Выжимаем и добавляем в маринад для свежести." },
   { name: "Соль", grams: 1, action: "Приправляем соус и осьминога." },
   { name: "Чёрный перец", grams: .2, action: "Свежемолотый, добавляем перед подачей." },
 ] as const;
@@ -26,17 +25,19 @@ function Amount({ grams }: { grams: number }) {
 
 function FoodArt({ partIndex }: { partIndex: number }) {
   const id = `menu-${useId().replace(/[^a-zA-Z0-9_-]/g, "")}`;
-  const part = artwork.parts[partIndex];
+  const extra = partIndex > 4 ? extraArtwork[partIndex - 5] : undefined;
+  const source = extra ?? artwork;
+  const part = extra ?? artwork.parts[partIndex];
   const [x, y, w, h] = part.photoRect;
   return <div className="mb-art" data-part={partIndex} style={{ "--art-ratio": `${w} / ${h}` } as CSSProperties}>
     <svg width="0" height="0" className="mb-defs" aria-hidden="true"><defs>
-      <clipPath id={`${id}-clip`} clipPathUnits="objectBoundingBox"><path d={part.clipPath} clipRule="evenodd" /></clipPath>
+      <clipPath id={`${id}-clip`} clipPathUnits="objectBoundingBox"><path d={part.clipPath} transform={extra?.clipTransform} clipRule="evenodd" /></clipPath>
     </defs></svg>
     <div className="mb-photo" style={{ clipPath: `url(#${id}-clip)` }}>
-      <img src={artwork.photoSrc} srcSet={`${artwork.photoSrc} 960w, ${artwork.photoLargeSrc} ${artwork.photoSize[0]}w`}
-        sizes={partIndex === 4 ? "(max-width: 620px) 660px, 820px" : "360px"}
-        width={artwork.photoSize[0]} height={artwork.photoSize[1]} alt="" loading="lazy" decoding="async" draggable="false"
-        style={{ width: `${artwork.photoSize[0] / w * 100}%`, height: `${artwork.photoSize[1] / h * 100}%`, left: `${-x / w * 100}%`, top: `${-y / h * 100}%` }} />
+      <img src={source.photoSrc} srcSet={source.photoSrc === source.photoLargeSrc ? `${source.photoSrc} ${source.photoSize[0]}w` : `${source.photoSrc} ${extra?.photoWidths[0] ?? 960}w, ${source.photoLargeSrc} ${extra?.photoWidths[1] ?? source.photoSize[0]}w`}
+        sizes={partIndex === 4 ? "(max-width: 620px) 660px, 820px" : "480px"}
+        width={source.photoSize[0]} height={source.photoSize[1]} alt="" loading="lazy" decoding="async" draggable="false"
+        style={{ width: `${source.photoSize[0] / w * 100}%`, height: `${source.photoSize[1] / h * 100}%`, left: `${-x / w * 100}%`, top: `${-y / h * 100}%` }} />
     </div>
   </div>;
 }
@@ -57,23 +58,15 @@ export default function MenuBook() {
           <h4 id={titleId} className="mb-dish-title">Осьминог</h4>
           <p className="mb-portions">На <span className="mb-quantity">1</span> порцию · вес подготовленных продуктов</p>
         </header>
-        <ol className="mb-ingredients" aria-label="Основные ингредиенты и приготовление">
-          {ingredients.map(({ name, grams, action }, partIndex) => <li className="mb-ingredient" key={name}>
+        <ol className="mb-ingredients" aria-label="Ингредиенты и приготовление">
+          {ingredients.map(({ name, grams, action }, index) => <li className="mb-ingredient" data-ingredient={name} key={name}>
             <div className="mb-operation">
               <div className="mb-operation-heading"><h5>{name}</h5><Amount grams={grams} /></div>
               <p>{action}</p><svg className="mb-leader" viewBox="0 0 160 12" preserveAspectRatio="none" aria-hidden="true"><path d="M0 7Q83 9 157 4" /></svg>
             </div>
-            <div className="mb-ingredient-art" aria-hidden="true"><FoodArt partIndex={partIndex} /></div>
+            <div className="mb-ingredient-art" aria-hidden="true"><FoodArt partIndex={index < 4 ? index : index + 1} /></div>
           </li>)}
         </ol>
-        <div className="mb-details">
-          <p className="mb-eyebrow">Также в составе</p>
-          <ol className="mb-extra-ingredients" aria-label="Дополнительные ингредиенты и приготовление">
-            {extras.map(({ name, grams, action }) => <li className="mb-extra-ingredient" key={name}>
-              <div className="mb-operation-heading"><h5>{name}</h5><Amount grams={grams} /></div><p>{action}</p>
-            </li>)}
-          </ol>
-        </div>
         <div className="mb-assembly-cue" aria-hidden="true"><span>Готовая подача</span><svg viewBox="0 0 48 25"><path d="M2 3C27 0 37 9 38 23M38 23L30 16M38 23L44 14" /></svg></div>
         <figure className="mb-serving">
           <div className="mb-plate" role="img" aria-label="Осьминог: готовая подача на тарелке"><FoodArt partIndex={4} /></div>

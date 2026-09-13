@@ -29,13 +29,17 @@ try {
       let throughBook=0,throughCopy=0;
       const blocked=[...document.querySelectorAll('.station-copy,.conversation-illustration,.preparation-film')].map(rect);
       for(const line of route.querySelectorAll('path')){const length=line.getTotalLength();for(let p=0;p<=length;p+=4){const v=line.getPointAtLength(p);const x=v.x+rbox.left,y=v.y+rbox.top;if(x>paper.left+1&&x<paper.right-1&&y>paper.top+1&&y<paper.bottom-1)throughBook++;if(blocked.some(b=>x>b.left+3&&x<b.right-3&&y>b.top+3&&y<b.bottom-3))throughCopy++;}}
-      return {width:innerWidth,overflow:document.documentElement.scrollWidth>innerWidth,book:full,pages:[...scene.querySelectorAll('.mb-page')].map(el=>({recipe:el.dataset.recipe,rect:rect(el),plate:rect(el.querySelector('.mb-plate')),ingredients:rect(el.querySelector('.mb-details')),actions:[...el.querySelectorAll('.mb-operation p,.mb-extra-ingredient > p')].map(el=>el.textContent),photoLoaded:[...el.querySelectorAll('.mb-photo img')].every(img=>img.complete&&img.naturalWidth>0)})),
+      return {width:innerWidth,overflow:document.documentElement.scrollWidth>innerWidth,book:full,pages:[...scene.querySelectorAll('.mb-page')].map(el=>({recipe:el.dataset.recipe,rect:rect(el),plate:rect(el.querySelector('.mb-plate')),ingredients:rect(el.querySelector('.mb-ingredients')),actions:[...el.querySelectorAll('.mb-operation p')].map(el=>el.textContent),photoLoaded:[...el.querySelectorAll('.mb-photo img')].every(img=>img.complete&&img.naturalWidth>0)})),
         heading,conversation,stations:stations.map(el=>({step:el.dataset.step,heading:rect(el.querySelector('.station-heading')),rect:rect(el)})),throughBook,throughCopy,
         smallControls:[...book.querySelectorAll('button')].filter(el=>el.getBoundingClientRect().height>0).filter(el=>el.getBoundingClientRect().height<43.9||el.getBoundingClientRect().width<43.9).map(el=>el.textContent),
         fonts:{title:getComputedStyle(book.querySelector('h4')).fontFamily,copy:getComputedStyle(book.querySelector('.mb-operation p')).fontFamily,number:getComputedStyle(book.querySelector('.mb-page-number')).fontFamily},
         headingSizes:[...book.querySelectorAll('h4,h5')].map(el=>parseFloat(getComputedStyle(el).fontSize)),collage:document.querySelectorAll('.collage-tile img').length,
         video:{source:document.querySelector('video source').getAttribute('src'),controls:document.querySelector('video').controls}};
     });
+    const illustrated=await page.locator('.mb-ingredient').evaluateAll(rows=>rows.map(row=>({name:row.dataset.ingredient,images:row.querySelectorAll('.mb-photo img').length,loaded:[...row.querySelectorAll('.mb-photo img')].every(img=>img.complete&&img.naturalWidth>0),width:row.querySelector('.mb-art').getBoundingClientRect().width,height:row.querySelector('.mb-art').getBoundingClientRect().height})));
+    assert.equal(illustrated.length,10);
+    assert.ok(illustrated.every(row=>row.images===1&&row.loaded&&row.width>30&&row.height>50),JSON.stringify(illustrated));
+    measure.illustratedIngredients=illustrated;
     widths.push(measure);
     assert.equal(measure.overflow,false);assert.deepEqual(measure.smallControls,[]);assert.equal(measure.throughBook,0);assert.equal(measure.throughCopy,0);
     assert.ok(measure.pages.every(p=>p.plate.top>=p.ingredients.bottom&&p.actions.length===10&&p.recipe==='octopus'&&p.photoLoaded));
@@ -49,7 +53,7 @@ try {
   assert.deepEqual(await page.locator('.mb-amount').evaluateAll(es=>es.map(e=>Number(e.dataset.grams))),[160,25,25,60,5,3,10,5,1,.2]);
   assert.ok((await page.locator('.mb-portions').innerText()).includes('1 порцию'));
   const colorState=()=>page.locator('.mb-photo').evaluateAll(es=>es.map(e=>({opacity:getComputedStyle(e).opacity,transform:getComputedStyle(e).transform})));
-  const expected=Array.from({length:5},()=>({opacity:'1',transform:'none'}));
+  const expected=Array.from({length:11},()=>({opacity:'1',transform:'none'}));
   for(const motion of ['no-preference','reduce']){
     await page.emulateMedia({reducedMotion:motion});
     for(const fraction of [0,.3,.7,1]){
@@ -64,7 +68,7 @@ try {
     await page.evaluate(()=>document.documentElement.style.fontSize='200%');
     await page.evaluate(()=>new Promise(resolve=>requestAnimationFrame(()=>requestAnimationFrame(resolve))));
     assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth),false);
-    const clipped=await page.locator('.mb-operation-heading,.mb-extra-ingredient,.mb-portions').evaluateAll(es=>es.filter(e=>e.scrollWidth>e.clientWidth+1).map(e=>e.textContent));
+    const clipped=await page.locator('.mb-operation-heading,.mb-portions').evaluateAll(es=>es.filter(e=>e.scrollWidth>e.clientWidth+1).map(e=>e.textContent));
     assert.deepEqual(clipped,[]);
     await page.locator('.menu-book').screenshot({path:path.join(out,'text-200-'+width+'.png')});
     await page.evaluate(()=>document.documentElement.style.fontSize='');
@@ -94,7 +98,7 @@ try {
   assert.equal(await bad.locator('.mb-error').isVisible(),false);await failContext.close();
   assert.deepEqual(errors,[]);
   await writeFile(path.join(out,'report.json'),JSON.stringify({passed:true,noindex:response.headers()['x-robots-tag'],widths,errors,
-    tests:['Only octopus; 10 ingredients with weights for one portion, including salt and pepper','Seven widths, 200% text, current fonts, route clearance, collage and video','Always colored through scrolling and both motion preferences; no pencil, animation or navigation','Color and complete recipe without JavaScript','Image error/retry by keyboard, visible focus and 44px target']},null,2));
+    tests:['Only octopus; each of 10 ingredients has a loaded photograph, weight for one portion and preparation, including salt and pepper','Seven widths, 200% text, current fonts, route clearance, collage and video','Always colored through scrolling and both motion preferences; no pencil, animation or navigation','Color and complete recipe without JavaScript','Image error/retry by keyboard, visible focus and 44px target']},null,2));
   console.log('All color-only octopus checks passed');
 } catch(error){await writeFile(path.join(out,'report.json'),JSON.stringify({passed:false,widths,errors,error:error.stack},null,2));throw error;}
 finally{await browser.close();}

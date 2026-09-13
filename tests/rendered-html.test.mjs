@@ -126,6 +126,9 @@ test("renders 63 documentary collage photos and the selected menu-book assets", 
       assert.match(response.headers.get("content-type") || "", path.endsWith(".svg") ? /^image\/svg\+xml/ : /^image\/webp/);
     }));
   }
+  const ingredientRows = [...html.matchAll(/<li\b[^>]*data-ingredient="[^"]+"[^>]*>[\s\S]*?<\/li>/g)].map(match => match[0]);
+  assert.equal(ingredientRows.length, 10, "All ten ingredients must be present");
+  for (const row of ingredientRows) assert.equal(tags(row, "img").length, 1, "Every ingredient requires its own photograph");
   assert.deepEqual([...html.matchAll(/\bdata-recipe="([^"]+)"/g)].map(m=>m[1]), ['octopus']);
   assert.deepEqual([...html.matchAll(/\bdata-grams="([^"]+)"/g)].map(m=>Number(m[1])), [160,25,25,60,5,3,10,5,1,.2]);
   assert.doesNotMatch(html, /class="mb-(?:pencil|stroke|navigation)"|data-menu-(?:scroll|sketch|color|next)/);

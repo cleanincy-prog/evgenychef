@@ -1,0 +1,128 @@
+[
+  {
+    "name": "basil",
+    "photoSrc": "/media/menu/exploded/basil.webp",
+    "photoLargeSrc": "/media/menu/exploded/basil.webp",
+    "photoWidths": [
+      179,
+      179
+    ],
+    "photoSize": [
+      179,
+      391
+    ],
+    "photoRect": [
+      0,
+      0,
+      179,
+      391
+    ],
+    "clipPath": "M0 0H179V391H0Z",
+    "clipTransform": "scale(0.00558659217877095 0.0025575447570332483) translate(0 0)"
+  },
+  {
+    "name": "garlic",
+    "photoSrc": "/media/menu/book/ingredient-garlic-640.webp",
+    "photoLargeSrc": "/media/menu/book/ingredient-garlic-960.webp",
+    "photoWidths": [
+      640,
+      960
+    ],
+    "photoSize": [
+      1280,
+      960
+    ],
+    "photoRect": [
+      554,
+      515,
+      216,
+      236
+    ],
+    "clipPath": "M554 650C568 616 603 578 640 550C667 530 704 515 724 519C741 533 756 560 765 590C773 621 760 656 745 680C722 715 681 747 651 748C620 742 586 719 568 687Z",
+    "clipTransform": "scale(0.004629629629629629 0.00423728813559322) translate(-554 -515)"
+  },
+  {
+    "name": "olive-oil",
+    "photoSrc": "/media/menu/book/ingredient-olive-oil-640.webp",
+    "photoLargeSrc": "/media/menu/book/ingredient-olive-oil-960.webp",
+    "photoWidths": [
+      640,
+      960
+    ],
+    "photoSize": [
+      1260,
+      840
+    ],
+    "photoRect": [
+      109,
+      224,
+      819,
+      552
+    ],
+    "clipPath": "M245 350C245 279 404 228 565 225C743 224 904 278 925 344C933 393 903 454 876 479C861 542 816 622 754 654C696 679 615 683 556 678C568 716 544 751 508 767C471 783 431 778 407 759C370 773 332 770 304 752C266 774 220 779 187 760C155 741 145 707 161 678C139 676 118 655 111 627C100 590 117 559 145 544C170 526 205 522 228 532C236 510 257 492 285 484C270 444 245 391 245 350Z",
+    "clipTransform": "scale(0.001221001221001221 0.0018115942028985507) translate(-109 -224)"
+  },
+  {
+    "name": "lemon",
+    "photoSrc": "/media/menu/book/ingredient-lemon-640.webp",
+    "photoLargeSrc": "/media/menu/book/ingredient-lemon-960.webp",
+    "photoWidths": [
+      640,
+      960
+    ],
+    "photoSize": [
+      1200,
+      848
+    ],
+    "photoRect": [
+      599,
+      354,
+      459,
+      450
+    ],
+    "clipPath": "M807 355C913 344 1017 415 1046 514C1075 614 1042 715 949 773C877 818 758 810 685 756C605 697 583 596 610 514C639 426 717 369 807 355Z",
+    "clipTransform": "scale(0.002178649237472767 0.0022222222222222222) translate(-599 -354)"
+  },
+  {
+    "name": "salt",
+    "photoSrc": "/media/menu/book/ingredient-salt-640.webp",
+    "photoLargeSrc": "/media/menu/book/ingredient-salt-960.webp",
+    "photoWidths": [
+      640,
+      960
+    ],
+    "photoSize": [
+      960,
+      794
+    ],
+    "photoRect": [
+      165,
+      130,
+      588,
+      593
+    ],
+    "clipPath": "M465 133C515 132 547 149 572 177C613 184 643 218 669 250C705 279 719 313 725 348C748 384 750 424 745 460C759 503 736 545 711 572C698 615 656 663 613 688C575 722 533 721 499 705C448 705 403 684 367 657C329 639 293 608 279 574C242 550 220 507 211 475C181 450 166 414 177 380C169 342 182 306 210 284C222 245 252 217 286 204C317 175 357 171 391 164C417 144 442 142 465 133Z",
+    "clipTransform": "scale(0.0017006802721088435 0.0016863406408094434) translate(-165 -130)"
+  },
+  {
+    "name": "spices",
+    "photoSrc": "/media/menu/book/ingredient-spices-640.webp",
+    "photoLargeSrc": "/media/menu/book/ingredient-spices-960.webp",
+    "photoWidths": [
+      640,
+      960
+    ],
+    "photoSize": [
+      1024,
+      768
+    ],
+    "photoRect": [
+      264,
+      115,
+      423,
+      333
+    ],
+    "clipPath": "M435 143C456 127 482 112 511 116L547 121L563 132L584 133C609 151 624 180 629 215L627 258C654 280 677 310 684 341C689 363 671 389 655 411C632 437 604 449 582 444L549 440C522 451 495 441 476 423L462 396C439 407 420 412 399 411C364 410 333 394 305 373C286 350 271 320 265 291L270 259C290 224 315 205 333 184L352 158L379 139L410 137Z",
+    "clipTransform": "scale(0.002364066193853428 0.003003003003003003) translate(-264 -115)"
+  }
+]

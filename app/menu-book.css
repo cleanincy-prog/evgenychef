@@ -19,7 +19,7 @@
 .mb-ingredient:first-child { min-height: 119px; }
 .mb-operation-heading { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 5px 10px; margin-bottom: 5px; }
 .mb-operation-heading h5 { font: 400 1.25rem/1.25 var(--font-display); color: var(--ink); }
-.mb-operation p, .mb-extra-ingredient > p { font: 400 1rem/1.4 var(--font-sans); color: var(--muted); }
+.mb-operation p { font: 400 1rem/1.4 var(--font-sans); color: var(--muted); }
 .mb-operation p { max-width: 240px; }
 .mb-amount { color: var(--muted); font: 400 .875rem/1.4 var(--font-sans); white-space: nowrap; }
 .mb-quantity { font-family: var(--font-mono); font-variant-numeric: tabular-nums lining-nums; }
@@ -27,13 +27,14 @@
 .mb-leader path { fill: none; stroke: #ada394; stroke-width: .75; vector-effect: non-scaling-stroke; }
 .mb-ingredient-art { height: 84px; display: flex; justify-content: center; align-items: center; min-width: 0; }
 .mb-ingredient:first-child .mb-ingredient-art { height: 112px; }
+.mb-ingredient-art .mb-art[data-part="6"] { height: 68px; }
+.mb-ingredient-art .mb-art[data-part="9"] { height: 58px; }
+.mb-ingredient-art .mb-art[data-part="10"] { height: 58px; }
 .mb-art { position: relative; aspect-ratio: var(--art-ratio); overflow: hidden; flex: none; isolation: isolate; background: var(--leaf); }
 .mb-ingredient-art .mb-art { width: auto; height: 100%; max-width: 100%; max-height: 100%; }
 .mb-defs { position: absolute; }
 .mb-photo { position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; }
 .mb-photo img { position: absolute; max-width: none; object-fit: fill; pointer-events: none; user-select: none; }
-.mb-details { margin-top: 22px; padding-top: 20px; border-top: 1px solid var(--rule); }
-.mb-extra-ingredients { list-style: none; margin: 14px 0 0; padding: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px 28px; }
 .mb-assembly-cue { display: flex; align-items: center; justify-content: center; gap: 14px; margin: 26px 0 2px; color: var(--muted); font: italic 400 1.0625rem/1.4 var(--font-sans); }
 .mb-assembly-cue svg { width: 48px; height: 25px; overflow: visible; flex: none; }
 .mb-assembly-cue path { fill: none; stroke: var(--muted); stroke-width: .9; stroke-linecap: round; stroke-linejoin: round; vector-effect: non-scaling-stroke; }
@@ -77,7 +78,6 @@
   .mb-ingredient-art { height: 79px; }
   .mb-ingredient:first-child .mb-ingredient-art { height: 100px; }
   .mb-leader { width: calc(100% + 8px); }
-  .mb-extra-ingredients { grid-template-columns: minmax(0, 1fr); gap: 17px; }
   .mb-assembly-cue { margin-top: 24px; gap: 10px; font-size: 1rem; }
   .mb-serving figcaption { margin-top: 9px; }
   .mb-page-footer { font-size: .8125rem; }
@@ -89,5 +89,4 @@
   .mb-ingredient:first-child .mb-ingredient-art { height: 115px; }
   .mb-operation p { max-width: none; }
   .mb-leader { width: 100%; }
-  .mb-extra-ingredients { grid-template-columns: minmax(0, 1fr); }
 }

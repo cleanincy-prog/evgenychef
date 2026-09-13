@@ -9,9 +9,9 @@
         "left": 399.984375,
         "top": 3259.8125,
         "right": 1039.984375,
-        "bottom": 4789.8125,
+        "bottom": 5117.75,
         "width": 640,
-        "height": 1530
+        "height": 1857.9375
       },
       "pages": [
         {
@@ -20,25 +20,25 @@
             "left": 403.984375,
             "top": 3308.5,
             "right": 1038.984375,
-            "bottom": 4788.8125,
+            "bottom": 5116.75,
             "width": 635,
-            "height": 1480.3125
+            "height": 1808.25
           },
           "plate": {
             "left": 438.984375,
-            "top": 4249.359375,
+            "top": 4577.296875,
             "right": 1003.984375,
-            "bottom": 4650.84375,
+            "bottom": 4978.78125,
             "width": 565,
             "height": 401.484375
           },
           "ingredients": {
             "left": 438.984375,
-            "top": 3914.296875,
+            "top": 3461.296875,
             "right": 1003.984375,
-            "bottom": 4188.359375,
+            "bottom": 4516.296875,
             "width": 565,
-            "height": 274.0625
+            "height": 1055
           },
           "actions": [
             "Обжариваем подготовленные щупальца до золотистых краёв.",
@@ -48,7 +48,7 @@
             "Добавляем свежей перед подачей.",
             "Измельчаем для маринада и соуса.",
             "Добавляем в маринад и при обжарке.",
-            "Добавляем в маринад для свежести.",
+            "Выжимаем и добавляем в маринад для свежести.",
             "Приправляем соус и осьминога.",
             "Свежемолотый, добавляем перед подачей."
           ],
@@ -105,26 +105,26 @@
             "left": 68.40625,
             "top": 2705.5,
             "right": 1371.578125,
-            "bottom": 4789.8125,
+            "bottom": 5117.75,
             "width": 1303.171875,
-            "height": 2084.3125
+            "height": 2412.25
           }
         },
         {
           "step": "03",
           "heading": {
             "left": 98.375,
-            "top": 4844.8125,
+            "top": 5172.75,
             "right": 559.96875,
-            "bottom": 4957.96875,
+            "bottom": 5285.90625,
             "width": 461.59375,
             "height": 113.15625
           },
           "rect": {
             "left": 68.40625,
-            "top": 4844.8125,
+            "top": 5172.75,
             "right": 667.859375,
-            "bottom": 5588.734375,
+            "bottom": 5916.671875,
             "width": 599.453125,
             "height": 743.921875
           }
@@ -133,17 +133,17 @@
           "step": "04",
           "heading": {
             "left": 703.03125,
-            "top": 5107.8125,
+            "top": 5435.75,
             "right": 1371.578125,
-            "bottom": 5281.40625,
+            "bottom": 5609.34375,
             "width": 668.546875,
             "height": 173.59375
           },
           "rect": {
             "left": 667.859375,
-            "top": 4844.8125,
+            "top": 5172.75,
             "right": 1371.578125,
-            "bottom": 5588.734375,
+            "bottom": 5916.671875,
             "width": 703.71875,
             "height": 743.921875
           }
@@ -174,7 +174,79 @@
       "video": {
         "source": "/media/chef-story-short-prep-2026-09-12.mp4",
         "controls": true
-      }
+      },
+      "illustratedIngredients": [
+        {
+          "name": "Осьминог",
+          "images": 1,
+          "loaded": true,
+          "width": 118.6875,
+          "height": 112
+        },
+        {
+          "name": "Вяленые томаты",
+          "images": 1,
+          "loaded": true,
+          "width": 80.21875,
+          "height": 84
+        },
+        {
+          "name": "Оливки",
+          "images": 1,
+          "loaded": true,
+          "width": 87.25,
+          "height": 84
+        },
+        {
+          "name": "Томатный соус",
+          "images": 1,
+          "loaded": true,
+          "width": 103.265625,
+          "height": 84
+        },
+        {
+          "name": "Зелень",
+          "images": 1,
+          "loaded": true,
+          "width": 38.453125,
+          "height": 84
+        },
+        {
+          "name": "Чеснок",
+          "images": 1,
+          "loaded": true,
+          "width": 62.234375,
+          "height": 68
+        },
+        {
+          "name": "Оливковое масло",
+          "images": 1,
+          "loaded": true,
+          "width": 124.625,
+          "height": 84
+        },
+        {
+          "name": "Лимонный сок",
+          "images": 1,
+          "loaded": true,
+          "width": 85.671875,
+          "height": 84
+        },
+        {
+          "name": "Соль",
+          "images": 1,
+          "loaded": true,
+          "width": 57.5,
+          "height": 58
+        },
+        {
+          "name": "Чёрный перец",
+          "images": 1,
+          "loaded": true,
+          "width": 73.671875,
+          "height": 58
+        }
+      ]
     },
     {
       "width": 1280,
@@ -183,9 +255,9 @@
         "left": 319.984375,
         "top": 3129.953125,
         "right": 959.984375,
-        "bottom": 4659.953125,
+        "bottom": 4987.890625,
         "width": 640,
-        "height": 1530
+        "height": 1857.9375
       },
       "pages": [
         {
@@ -194,25 +266,25 @@
             "left": 323.984375,
             "top": 3178.640625,
             "right": 958.984375,
-            "bottom": 4658.953125,
+            "bottom": 4986.890625,
             "width": 635,
-            "height": 1480.3125
+            "height": 1808.25
           },
           "plate": {
             "left": 358.984375,
-            "top": 4119.5,
+            "top": 4447.4375,
             "right": 923.984375,
-            "bottom": 4520.984375,
+            "bottom": 4848.921875,
             "width": 565,
             "height": 401.484375
           },
           "ingredients": {
             "left": 358.984375,
-            "top": 3784.4375,
+            "top": 3331.4375,
             "right": 923.984375,
-            "bottom": 4058.5,
+            "bottom": 4386.4375,
             "width": 565,
-            "height": 274.0625
+            "height": 1055
           },
           "actions": [
             "Обжариваем подготовленные щупальца до золотистых краёв.",
@@ -222,7 +294,7 @@
             "Добавляем свежей перед подачей.",
             "Измельчаем для маринада и соуса.",
             "Добавляем в маринад и при обжарке.",
-            "Добавляем в маринад для свежести.",
+            "Выжимаем и добавляем в маринад для свежести.",
             "Приправляем соус и осьминога.",
             "Свежемолотый, добавляем перед подачей."
           ],
@@ -279,26 +351,26 @@
             "left": 60.796875,
             "top": 2576.6875,
             "right": 1219.171875,
-            "bottom": 4659.953125,
+            "bottom": 4987.890625,
             "width": 1158.375,
-            "height": 2083.265625
+            "height": 2411.203125
           }
         },
         {
           "step": "03",
           "heading": {
             "left": 87.4375,
-            "top": 4714.953125,
+            "top": 5042.890625,
             "right": 497.75,
-            "bottom": 4853.78125,
+            "bottom": 5181.71875,
             "width": 410.3125,
             "height": 138.828125
           },
           "rect": {
             "left": 60.796875,
-            "top": 4714.953125,
+            "top": 5042.890625,
             "right": 593.65625,
-            "bottom": 5467.828125,
+            "bottom": 5795.765625,
             "width": 532.859375,
             "height": 752.875
           }
@@ -307,17 +379,17 @@
           "step": "04",
           "heading": {
             "left": 624.921875,
-            "top": 4987.953125,
+            "top": 5315.890625,
             "right": 1219.171875,
-            "bottom": 5160.5,
+            "bottom": 5488.4375,
             "width": 594.25,
             "height": 172.546875
           },
           "rect": {
             "left": 593.65625,
-            "top": 4714.953125,
+            "top": 5042.890625,
             "right": 1219.171875,
-            "bottom": 5467.828125,
+            "bottom": 5795.765625,
             "width": 625.515625,
             "height": 752.875
           }
@@ -348,7 +420,79 @@
       "video": {
         "source": "/media/chef-story-short-prep-2026-09-12.mp4",
         "controls": true
-      }
+      },
+      "illustratedIngredients": [
+        {
+          "name": "Осьминог",
+          "images": 1,
+          "loaded": true,
+          "width": 118.6875,
+          "height": 112
+        },
+        {
+          "name": "Вяленые томаты",
+          "images": 1,
+          "loaded": true,
+          "width": 80.21875,
+          "height": 84
+        },
+        {
+          "name": "Оливки",
+          "images": 1,
+          "loaded": true,
+          "width": 87.25,
+          "height": 84
+        },
+        {
+          "name": "Томатный соус",
+          "images": 1,
+          "loaded": true,
+          "width": 103.265625,
+          "height": 84
+        },
+        {
+          "name": "Зелень",
+          "images": 1,
+          "loaded": true,
+          "width": 38.453125,
+          "height": 84
+        },
+        {
+          "name": "Чеснок",
+          "images": 1,
+          "loaded": true,
+          "width": 62.234375,
+          "height": 68
+        },
+        {
+          "name": "Оливковое масло",
+          "images": 1,
+          "loaded": true,
+          "width": 124.625,
+          "height": 84
+        },
+        {
+          "name": "Лимонный сок",
+          "images": 1,
+          "loaded": true,
+          "width": 85.671875,
+          "height": 84
+        },
+        {
+          "name": "Соль",
+          "images": 1,
+          "loaded": true,
+          "width": 57.5,
+          "height": 58
+        },
+        {
+          "name": "Чёрный перец",
+          "images": 1,
+          "loaded": true,
+          "width": 73.671875,
+          "height": 58
+        }
+      ]
     },
     {
       "width": 1024,
@@ -357,9 +501,9 @@
         "left": 191.984375,
         "top": 3188.5,
         "right": 831.984375,
-        "bottom": 4729.296875,
+        "bottom": 5102.984375,
         "width": 640,
-        "height": 1540.796875
+        "height": 1914.484375
       },
       "pages": [
         {
@@ -368,25 +512,25 @@
             "left": 195.984375,
             "top": 3237.1875,
             "right": 830.984375,
-            "bottom": 4728.296875,
+            "bottom": 5101.984375,
             "width": 635,
-            "height": 1491.109375
+            "height": 1864.796875
           },
           "plate": {
             "left": 221.984375,
-            "top": 4188.84375,
+            "top": 4562.53125,
             "right": 804.984375,
-            "bottom": 4590.328125,
+            "bottom": 4964.015625,
             "width": 583,
             "height": 401.484375
           },
           "ingredients": {
             "left": 221.984375,
-            "top": 3857.53125,
+            "top": 3383.53125,
             "right": 804.984375,
-            "bottom": 4127.84375,
+            "bottom": 4501.53125,
             "width": 583,
-            "height": 270.3125
+            "height": 1118
           },
           "actions": [
             "Обжариваем подготовленные щупальца до золотистых краёв.",
@@ -396,7 +540,7 @@
             "Добавляем свежей перед подачей.",
             "Измельчаем для маринада и соуса.",
             "Добавляем в маринад и при обжарке.",
-            "Добавляем в маринад для свежести.",
+            "Выжимаем и добавляем в маринад для свежести.",
             "Приправляем соус и осьминога.",
             "Свежемолотый, добавляем перед подачей."
           ],
@@ -453,26 +597,26 @@
             "left": 48.640625,
             "top": 2658.5,
             "right": 975.34375,
-            "bottom": 4729.296875,
+            "bottom": 5102.984375,
             "width": 926.703125,
-            "height": 2070.796875
+            "height": 2444.484375
           }
         },
         {
           "step": "03",
           "heading": {
             "left": 69.953125,
-            "top": 4784.296875,
+            "top": 5157.984375,
             "right": 423.78125,
-            "bottom": 4922.859375,
+            "bottom": 5296.546875,
             "width": 353.828125,
             "height": 138.5625
           },
           "rect": {
             "left": 48.640625,
-            "top": 4784.296875,
+            "top": 5157.984375,
             "right": 474.921875,
-            "bottom": 5517.453125,
+            "bottom": 5891.140625,
             "width": 426.28125,
             "height": 733.15625
           }
@@ -481,17 +625,17 @@
           "step": "04",
           "heading": {
             "left": 499.9375,
-            "top": 5071.296875,
+            "top": 5444.984375,
             "right": 975.34375,
-            "bottom": 5243.578125,
+            "bottom": 5617.265625,
             "width": 475.40625,
             "height": 172.28125
           },
           "rect": {
             "left": 474.921875,
-            "top": 4784.296875,
+            "top": 5157.984375,
             "right": 975.34375,
-            "bottom": 5517.453125,
+            "bottom": 5891.140625,
             "width": 500.421875,
             "height": 733.15625
           }
@@ -522,7 +666,79 @@
       "video": {
         "source": "/media/chef-story-short-prep-2026-09-12.mp4",
         "controls": true
-      }
+      },
+      "illustratedIngredients": [
+        {
+          "name": "Осьминог",
+          "images": 1,
+          "loaded": true,
+          "width": 111.265625,
+          "height": 105
+        },
+        {
+          "name": "Вяленые томаты",
+          "images": 1,
+          "loaded": true,
+          "width": 74.484375,
+          "height": 78
+        },
+        {
+          "name": "Оливки",
+          "images": 1,
+          "loaded": true,
+          "width": 81.015625,
+          "height": 78
+        },
+        {
+          "name": "Томатный соус",
+          "images": 1,
+          "loaded": true,
+          "width": 95.890625,
+          "height": 78
+        },
+        {
+          "name": "Зелень",
+          "images": 1,
+          "loaded": true,
+          "width": 35.703125,
+          "height": 78
+        },
+        {
+          "name": "Чеснок",
+          "images": 1,
+          "loaded": true,
+          "width": 62.234375,
+          "height": 68
+        },
+        {
+          "name": "Оливковое масло",
+          "images": 1,
+          "loaded": true,
+          "width": 115.71875,
+          "height": 78
+        },
+        {
+          "name": "Лимонный сок",
+          "images": 1,
+          "loaded": true,
+          "width": 79.546875,
+          "height": 78
+        },
+        {
+          "name": "Соль",
+          "images": 1,
+          "loaded": true,
+          "width": 57.5,
+          "height": 58
+        },
+        {
+          "name": "Чёрный перец",
+          "images": 1,
+          "loaded": true,
+          "width": 73.671875,
+          "height": 58
+        }
+      ]
     },
     {
       "width": 768,
@@ -531,9 +747,9 @@
         "left": 74.484375,
         "top": 3966.53125,
         "right": 714.484375,
-        "bottom": 5493.78125,
+        "bottom": 5831.46875,
         "width": 640,
-        "height": 1527.25
+        "height": 1864.9375
       },
       "pages": [
         {
@@ -542,25 +758,25 @@
             "left": 78.484375,
             "top": 4015.21875,
             "right": 713.484375,
-            "bottom": 5492.78125,
+            "bottom": 5830.46875,
             "width": 635,
-            "height": 1477.5625
+            "height": 1815.25
           },
           "plate": {
             "left": 112.484375,
-            "top": 4952.328125,
+            "top": 5290.015625,
             "right": 679.484375,
-            "bottom": 5353.8125,
+            "bottom": 5691.5,
             "width": 567,
             "height": 401.484375
           },
           "ingredients": {
             "left": 112.484375,
-            "top": 4621.015625,
+            "top": 4165.015625,
             "right": 679.484375,
-            "bottom": 4891.328125,
+            "bottom": 5229.015625,
             "width": 567,
-            "height": 270.3125
+            "height": 1064
           },
           "actions": [
             "Обжариваем подготовленные щупальца до золотистых краёв.",
@@ -570,7 +786,7 @@
             "Добавляем свежей перед подачей.",
             "Измельчаем для маринада и соуса.",
             "Добавляем в маринад и при обжарке.",
-            "Добавляем в маринад для свежести.",
+            "Выжимаем и добавляем в маринад для свежести.",
             "Приправляем соус и осьминога.",
             "Свежемолотый, добавляем перед подачей."
           ],
@@ -627,26 +843,26 @@
             "left": 36.484375,
             "top": 3796.96875,
             "right": 731.515625,
-            "bottom": 5529.78125,
+            "bottom": 5867.46875,
             "width": 695.03125,
-            "height": 1732.8125
+            "height": 2070.5
           }
         },
         {
           "step": "03",
           "heading": {
             "left": 36.484375,
-            "top": 5529.78125,
+            "top": 5867.46875,
             "right": 731.515625,
-            "bottom": 5641.625,
+            "bottom": 5979.3125,
             "width": 695.03125,
             "height": 111.84375
           },
           "rect": {
             "left": 36.484375,
-            "top": 5529.78125,
+            "top": 5867.46875,
             "right": 731.515625,
-            "bottom": 6363.171875,
+            "bottom": 6700.859375,
             "width": 695.03125,
             "height": 833.390625
           }
@@ -655,17 +871,17 @@
           "step": "04",
           "heading": {
             "left": 36.484375,
-            "top": 6363.171875,
+            "top": 6700.859375,
             "right": 731.515625,
-            "bottom": 6508.734375,
+            "bottom": 6846.421875,
             "width": 695.03125,
             "height": 145.5625
           },
           "rect": {
             "left": 36.484375,
-            "top": 6363.171875,
+            "top": 6700.859375,
             "right": 731.515625,
-            "bottom": 6817.0625,
+            "bottom": 7154.75,
             "width": 695.03125,
             "height": 453.890625
           }
@@ -696,7 +912,79 @@
       "video": {
         "source": "/media/chef-story-short-prep-2026-09-12.mp4",
         "controls": true
-      }
+      },
+      "illustratedIngredients": [
+        {
+          "name": "Осьминог",
+          "images": 1,
+          "loaded": true,
+          "width": 121.875,
+          "height": 115
+        },
+        {
+          "name": "Вяленые томаты",
+          "images": 1,
+          "loaded": true,
+          "width": 85.953125,
+          "height": 90
+        },
+        {
+          "name": "Оливки",
+          "images": 1,
+          "loaded": true,
+          "width": 93.46875,
+          "height": 90
+        },
+        {
+          "name": "Томатный соус",
+          "images": 1,
+          "loaded": true,
+          "width": 110.640625,
+          "height": 90
+        },
+        {
+          "name": "Зелень",
+          "images": 1,
+          "loaded": true,
+          "width": 41.1875,
+          "height": 90
+        },
+        {
+          "name": "Чеснок",
+          "images": 1,
+          "loaded": true,
+          "width": 62.234375,
+          "height": 68
+        },
+        {
+          "name": "Оливковое масло",
+          "images": 1,
+          "loaded": true,
+          "width": 133.53125,
+          "height": 90
+        },
+        {
+          "name": "Лимонный сок",
+          "images": 1,
+          "loaded": true,
+          "width": 91.796875,
+          "height": 90
+        },
+        {
+          "name": "Соль",
+          "images": 1,
+          "loaded": true,
+          "width": 57.5,
+          "height": 58
+        },
+        {
+          "name": "Чёрный перец",
+          "images": 1,
+          "loaded": true,
+          "width": 73.671875,
+          "height": 58
+        }
+      ]
     },
     {
       "width": 430,
@@ -705,9 +993,9 @@
         "left": 51,
         "top": 3883.3125,
         "right": 412,
-        "bottom": 5549.046875,
+        "bottom": 5793.125,
         "width": 361,
-        "height": 1665.734375
+        "height": 1909.8125
       },
       "pages": [
         {
@@ -716,25 +1004,25 @@
             "left": 55,
             "top": 3928.90625,
             "right": 411,
-            "bottom": 5548.046875,
+            "bottom": 5792.125,
             "width": 356,
-            "height": 1619.140625
+            "height": 1863.21875
           },
           "plate": {
             "left": 73,
-            "top": 5081.40625,
+            "top": 5325.484375,
             "right": 393,
-            "bottom": 5387.296875,
+            "bottom": 5631.375,
             "width": 320,
             "height": 305.890625
           },
           "ingredients": {
             "left": 73,
-            "top": 4577.5625,
+            "top": 4066.25,
             "right": 393,
-            "bottom": 5022.40625,
+            "bottom": 5266.484375,
             "width": 320,
-            "height": 444.84375
+            "height": 1200.234375
           },
           "actions": [
             "Обжариваем подготовленные щупальца до золотистых краёв.",
@@ -744,7 +1032,7 @@
             "Добавляем свежей перед подачей.",
             "Измельчаем для маринада и соуса.",
             "Добавляем в маринад и при обжарке.",
-            "Добавляем в маринад для свежести.",
+            "Выжимаем и добавляем в маринад для свежести.",
             "Приправляем соус и осьминога.",
             "Свежемолотый, добавляем перед подачей."
           ],
@@ -801,26 +1089,26 @@
             "left": 18,
             "top": 3660.3125,
             "right": 412,
-            "bottom": 5580.046875,
+            "bottom": 5824.125,
             "width": 394,
-            "height": 1919.734375
+            "height": 2163.8125
           }
         },
         {
           "step": "03",
           "heading": {
             "left": 18,
-            "top": 5580.046875,
+            "top": 5824.125,
             "right": 412,
-            "bottom": 5718.609375,
+            "bottom": 5962.6875,
             "width": 394,
             "height": 138.5625
           },
           "rect": {
             "left": 18,
-            "top": 5580.046875,
+            "top": 5824.125,
             "right": 412,
-            "bottom": 6325.484375,
+            "bottom": 6569.5625,
             "width": 394,
             "height": 745.4375
           }
@@ -829,17 +1117,17 @@
           "step": "04",
           "heading": {
             "left": 18,
-            "top": 6325.484375,
+            "top": 6569.5625,
             "right": 412,
-            "bottom": 6497.765625,
+            "bottom": 6741.84375,
             "width": 394,
             "height": 172.28125
           },
           "rect": {
             "left": 18,
-            "top": 6325.484375,
+            "top": 6569.5625,
             "right": 412,
-            "bottom": 6750.765625,
+            "bottom": 6994.84375,
             "width": 394,
             "height": 425.28125
           }
@@ -870,7 +1158,79 @@
       "video": {
         "source": "/media/chef-story-short-prep-2026-09-12.mp4",
         "controls": true
-      }
+      },
+      "illustratedIngredients": [
+        {
+          "name": "Осьминог",
+          "images": 1,
+          "loaded": true,
+          "width": 105.96875,
+          "height": 100
+        },
+        {
+          "name": "Вяленые томаты",
+          "images": 1,
+          "loaded": true,
+          "width": 75.4375,
+          "height": 79
+        },
+        {
+          "name": "Оливки",
+          "images": 1,
+          "loaded": true,
+          "width": 82.046875,
+          "height": 79
+        },
+        {
+          "name": "Томатный соус",
+          "images": 1,
+          "loaded": true,
+          "width": 97.125,
+          "height": 79
+        },
+        {
+          "name": "Зелень",
+          "images": 1,
+          "loaded": true,
+          "width": 36.15625,
+          "height": 79
+        },
+        {
+          "name": "Чеснок",
+          "images": 1,
+          "loaded": true,
+          "width": 62.234375,
+          "height": 68
+        },
+        {
+          "name": "Оливковое масло",
+          "images": 1,
+          "loaded": true,
+          "width": 117.203125,
+          "height": 79
+        },
+        {
+          "name": "Лимонный сок",
+          "images": 1,
+          "loaded": true,
+          "width": 80.578125,
+          "height": 79
+        },
+        {
+          "name": "Соль",
+          "images": 1,
+          "loaded": true,
+          "width": 57.5,
+          "height": 58
+        },
+        {
+          "name": "Чёрный перец",
+          "images": 1,
+          "loaded": true,
+          "width": 73.671875,
+          "height": 58
+        }
+      ]
     },
     {
       "width": 390,
@@ -879,9 +1239,9 @@
         "left": 51,
         "top": 3870.453125,
         "right": 372,
-        "bottom": 5557.90625,
+        "bottom": 5836.625,
         "width": 321,
-        "height": 1687.453125
+        "height": 1966.171875
       },
       "pages": [
         {
@@ -890,25 +1250,25 @@
             "left": 55,
             "top": 3916.046875,
             "right": 371,
-            "bottom": 5556.90625,
+            "bottom": 5835.625,
             "width": 316,
-            "height": 1640.859375
+            "height": 1919.578125
           },
           "plate": {
             "left": 73,
-            "top": 5128.5,
+            "top": 5407.21875,
             "right": 353,
-            "bottom": 5396.15625,
+            "bottom": 5674.875,
             "width": 280,
             "height": 267.65625
           },
           "ingredients": {
             "left": 73,
-            "top": 4602.265625,
+            "top": 4053.390625,
             "right": 353,
-            "bottom": 5069.5,
+            "bottom": 5348.21875,
             "width": 280,
-            "height": 467.234375
+            "height": 1294.828125
           },
           "actions": [
             "Обжариваем подготовленные щупальца до золотистых краёв.",
@@ -918,7 +1278,7 @@
             "Добавляем свежей перед подачей.",
             "Измельчаем для маринада и соуса.",
             "Добавляем в маринад и при обжарке.",
-            "Добавляем в маринад для свежести.",
+            "Выжимаем и добавляем в маринад для свежести.",
             "Приправляем соус и осьминога.",
             "Свежемолотый, добавляем перед подачей."
           ],
@@ -975,26 +1335,26 @@
             "left": 18,
             "top": 3620.734375,
             "right": 372,
-            "bottom": 5588.90625,
+            "bottom": 5867.625,
             "width": 354,
-            "height": 1968.171875
+            "height": 2246.890625
           }
         },
         {
           "step": "03",
           "heading": {
             "left": 18,
-            "top": 5588.90625,
+            "top": 5867.625,
             "right": 372,
-            "bottom": 5727.46875,
+            "bottom": 6006.1875,
             "width": 354,
             "height": 138.5625
           },
           "rect": {
             "left": 18,
-            "top": 5588.90625,
+            "top": 5867.625,
             "right": 372,
-            "bottom": 6334.34375,
+            "bottom": 6613.0625,
             "width": 354,
             "height": 745.4375
           }
@@ -1003,17 +1363,17 @@
           "step": "04",
           "heading": {
             "left": 18,
-            "top": 6334.34375,
+            "top": 6613.0625,
             "right": 372,
-            "bottom": 6560.0625,
+            "bottom": 6838.78125,
             "width": 354,
             "height": 225.71875
           },
           "rect": {
             "left": 18,
-            "top": 6334.34375,
+            "top": 6613.0625,
             "right": 372,
-            "bottom": 6786.390625,
+            "bottom": 7065.109375,
             "width": 354,
             "height": 452.046875
           }
@@ -1044,7 +1404,79 @@
       "video": {
         "source": "/media/chef-story-short-prep-2026-09-12.mp4",
         "controls": true
-      }
+      },
+      "illustratedIngredients": [
+        {
+          "name": "Осьминог",
+          "images": 1,
+          "loaded": true,
+          "width": 105.96875,
+          "height": 100
+        },
+        {
+          "name": "Вяленые томаты",
+          "images": 1,
+          "loaded": true,
+          "width": 75.4375,
+          "height": 79
+        },
+        {
+          "name": "Оливки",
+          "images": 1,
+          "loaded": true,
+          "width": 82.046875,
+          "height": 79
+        },
+        {
+          "name": "Томатный соус",
+          "images": 1,
+          "loaded": true,
+          "width": 97.125,
+          "height": 79
+        },
+        {
+          "name": "Зелень",
+          "images": 1,
+          "loaded": true,
+          "width": 36.15625,
+          "height": 79
+        },
+        {
+          "name": "Чеснок",
+          "images": 1,
+          "loaded": true,
+          "width": 62.234375,
+          "height": 68
+        },
+        {
+          "name": "Оливковое масло",
+          "images": 1,
+          "loaded": true,
+          "width": 117.203125,
+          "height": 79
+        },
+        {
+          "name": "Лимонный сок",
+          "images": 1,
+          "loaded": true,
+          "width": 80.578125,
+          "height": 79
+        },
+        {
+          "name": "Соль",
+          "images": 1,
+          "loaded": true,
+          "width": 57.5,
+          "height": 58
+        },
+        {
+          "name": "Чёрный перец",
+          "images": 1,
+          "loaded": true,
+          "width": 73.671875,
+          "height": 58
+        }
+      ]
     },
     {
       "width": 375,
@@ -1053,9 +1485,9 @@
         "left": 51,
         "top": 3905.703125,
         "right": 357,
-        "bottom": 5617.8125,
+        "bottom": 5944.515625,
         "width": 306,
-        "height": 1712.109375
+        "height": 2038.8125
       },
       "pages": [
         {
@@ -1064,25 +1496,25 @@
             "left": 55,
             "top": 3951.296875,
             "right": 356,
-            "bottom": 5616.8125,
+            "bottom": 5943.515625,
             "width": 301,
-            "height": 1665.515625
+            "height": 1992.21875
           },
           "plate": {
             "left": 73,
-            "top": 5202.75,
+            "top": 5529.453125,
             "right": 338,
-            "bottom": 5456.0625,
+            "bottom": 5782.765625,
             "width": 265,
             "height": 253.3125
           },
           "ingredients": {
             "left": 73,
-            "top": 4676.515625,
+            "top": 4127.640625,
             "right": 338,
-            "bottom": 5143.75,
+            "bottom": 5470.453125,
             "width": 265,
-            "height": 467.234375
+            "height": 1342.8125
           },
           "actions": [
             "Обжариваем подготовленные щупальца до золотистых краёв.",
@@ -1092,7 +1524,7 @@
             "Добавляем свежей перед подачей.",
             "Измельчаем для маринада и соуса.",
             "Добавляем в маринад и при обжарке.",
-            "Добавляем в маринад для свежести.",
+            "Выжимаем и добавляем в маринад для свежести.",
             "Приправляем соус и осьминога.",
             "Свежемолотый, добавляем перед подачей."
           ],
@@ -1149,26 +1581,26 @@
             "left": 18,
             "top": 3655.984375,
             "right": 357,
-            "bottom": 5648.8125,
+            "bottom": 5975.515625,
             "width": 339,
-            "height": 1992.828125
+            "height": 2319.53125
           }
         },
         {
           "step": "03",
           "heading": {
             "left": 18,
-            "top": 5648.8125,
+            "top": 5975.515625,
             "right": 357,
-            "bottom": 5814.09375,
+            "bottom": 6140.796875,
             "width": 339,
             "height": 165.28125
           },
           "rect": {
             "left": 18,
-            "top": 5648.8125,
+            "top": 5975.515625,
             "right": 357,
-            "bottom": 6420.96875,
+            "bottom": 6747.671875,
             "width": 339,
             "height": 772.15625
           }
@@ -1177,17 +1609,17 @@
           "step": "04",
           "heading": {
             "left": 18,
-            "top": 6420.96875,
+            "top": 6747.671875,
             "right": 357,
-            "bottom": 6646.6875,
+            "bottom": 6973.390625,
             "width": 339,
             "height": 225.71875
           },
           "rect": {
             "left": 18,
-            "top": 6420.96875,
+            "top": 6747.671875,
             "right": 357,
-            "bottom": 6863.015625,
+            "bottom": 7189.71875,
             "width": 339,
             "height": 442.046875
           }
@@ -1218,12 +1650,84 @@
       "video": {
         "source": "/media/chef-story-short-prep-2026-09-12.mp4",
         "controls": true
-      }
+      },
+      "illustratedIngredients": [
+        {
+          "name": "Осьминог",
+          "images": 1,
+          "loaded": true,
+          "width": 105.96875,
+          "height": 100
+        },
+        {
+          "name": "Вяленые томаты",
+          "images": 1,
+          "loaded": true,
+          "width": 75.4375,
+          "height": 79
+        },
+        {
+          "name": "Оливки",
+          "images": 1,
+          "loaded": true,
+          "width": 82.046875,
+          "height": 79
+        },
+        {
+          "name": "Томатный соус",
+          "images": 1,
+          "loaded": true,
+          "width": 97.125,
+          "height": 79
+        },
+        {
+          "name": "Зелень",
+          "images": 1,
+          "loaded": true,
+          "width": 36.15625,
+          "height": 79
+        },
+        {
+          "name": "Чеснок",
+          "images": 1,
+          "loaded": true,
+          "width": 62.234375,
+          "height": 68
+        },
+        {
+          "name": "Оливковое масло",
+          "images": 1,
+          "loaded": true,
+          "width": 115,
+          "height": 79
+        },
+        {
+          "name": "Лимонный сок",
+          "images": 1,
+          "loaded": true,
+          "width": 80.578125,
+          "height": 79
+        },
+        {
+          "name": "Соль",
+          "images": 1,
+          "loaded": true,
+          "width": 57.5,
+          "height": 58
+        },
+        {
+          "name": "Чёрный перец",
+          "images": 1,
+          "loaded": true,
+          "width": 73.671875,
+          "height": 58
+        }
+      ]
     }
   ],
   "errors": [],
   "tests": [
-    "Only octopus; 10 ingredients with weights for one portion, including salt and pepper",
+    "Only octopus; each of 10 ingredients has a loaded photograph, weight for one portion and preparation, including salt and pepper",
     "Seven widths, 200% text, current fonts, route clearance, collage and video",
     "Always colored through scrolling and both motion preferences; no pencil, animation or navigation",
     "Color and complete recipe without JavaScript",

@@ -1,9 +1,51 @@
 {
   "sourceConfiguration": "app/menu-book-art.json",
   "sourceSHA256": "b9cbc557f408885a33681bf834b7c2b3a4add33611fbc76f3d9f8db8f32509f7",
-  "method": "Only existing octopus photo sources, sizes, crop rectangles and clipping paths retained; no raster modification.",
+  "method": "Existing octopus atlas and crop geometry preserved. Six ingredient images added from genuine source photographs, responsive WebP encoding only; SVG subject display crops remain editable.",
   "activePhotos": [
     "/media/menu/book/octopus-photo-atlas-960.webp",
     "/media/menu/book/octopus-photo-atlas-1536.webp"
+  ],
+  "newIngredientConfiguration": "app/menu-book-ingredients.json",
+  "sources": [
+    {
+      "name": "garlic",
+      "path": "design/references/menu-ingredients-2026-09-13/garlic.jpg",
+      "sha256": "29c5e0d152f4c1e08db4163ab2a60b9b28776a05271e565390f68664363d2b96"
+    },
+    {
+      "name": "olive-oil",
+      "path": "design/references/menu-ingredients-2026-09-13/olive-oil.jpg",
+      "sha256": "5fc791d8bbdae2a075b7606e2ae83eb676d0ed1d691f6ad858988b06673246af"
+    },
+    {
+      "name": "lemon",
+      "path": "design/references/menu-ingredients-2026-09-13/lemon.jpg",
+      "sha256": "d5b75e1b752da396e887b6ccb9e323d4225a7d06d8463252be1157bd52e06c53"
+    },
+    {
+      "name": "salt",
+      "path": "design/references/menu-ingredients-2026-09-13/salt.jpg",
+      "sha256": "a1399878e2f586aa976fc9ba197f45db78dce7a210950d75c6e89deaa03de6f0"
+    },
+    {
+      "name": "spices",
+      "path": "design/references/menu-ingredients-2026-09-13/spices.jpg",
+      "sha256": "72669c12f140d83c110673f525d6c8ede3af23fcf89bf75284e8326cf43a963f"
+    }
+  ],
+  "credits": "public/media/menu/exploded/credits.html",
+  "newActivePhotos": [
+    "/media/menu/book/ingredient-garlic-640.webp",
+    "/media/menu/book/ingredient-garlic-960.webp",
+    "/media/menu/book/ingredient-lemon-640.webp",
+    "/media/menu/book/ingredient-lemon-960.webp",
+    "/media/menu/book/ingredient-olive-oil-640.webp",
+    "/media/menu/book/ingredient-olive-oil-960.webp",
+    "/media/menu/book/ingredient-salt-640.webp",
+    "/media/menu/book/ingredient-salt-960.webp",
+    "/media/menu/book/ingredient-spices-640.webp",
+    "/media/menu/book/ingredient-spices-960.webp",
+    "/media/menu/exploded/basil.webp"
   ]
 }
