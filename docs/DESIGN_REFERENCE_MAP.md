@@ -1,3 +1,14 @@
+## Шрифтовые роли — 2026-09-13
+
+| Project element | Reference | Principle used | What is not copied | Project implementation |
+|---|---|---|---|---|
+| Логотип, Hero, h2/h3, подписи блюда | [Задание по типографике](../design/references/typography-role-brief-2026-09-13.md), существующий «План вечера» | Spectral400/500, настоящий400italic в Hero; заданная шкала | Новый стиль, структура, текст или кадрирование | globals.css, прежние элементы и унаследованный шрифт внутренних span |
+| Абзацы, интерфейс, подпись видео/тарелки | То же прямое задание | Golos Text400/500 по copy/label;600 зарезервирован для вопросов | FAQ, новые кнопки и рукописный декор | Общие токены ролей, body16.5px |
+|01–04 и25 | Прямое правило о цифрах | IBM Plex Mono400 и tabular/lining; крупный вариант22px для узлов | Цены, вместимость, даты, новые лейблы | station-number и минимальный numeric span для25 |
+| Загрузка гарнитур | Технические требования пользователя | Два subsets каждого начертания, self-hosted swap, два preload | Внешние Google Fonts запросы и прежний Bellota base64 | public/fonts и layout head |
+
+Решений без источника нет. Caveat и смена имени опциональны и не включены. [Аудит и проверка](TYPOGRAPHY_ROLES_2026-09-13.md). Более ранние шрифтовые записи ниже — история.
+
 ## Этап03 ниже — 2026-09-13
 
 | Project element | Reference | Principle used | What is not copied | Project implementation |

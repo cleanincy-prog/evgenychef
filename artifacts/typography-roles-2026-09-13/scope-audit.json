@@ -1,0 +1,9 @@
+{
+  "nonTypographicDeclarationsUnchanged": true,
+  "copyAndSectionMarkupUnchanged": true,
+  "onlyNumeric25WrapperAdded": true,
+  "route40PercentUnchanged": true,
+  "heroWrappingAt200PercentCorrected": true,
+  "baseCommit": "15bafad06ac86facc392ce3eda8106bf3b50cf2a",
+  "independentlyAuthorizedStep03DropPx": 55
+}
