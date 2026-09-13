@@ -198,15 +198,15 @@ img { display: block; max-width: 100%; }
 .process-board-with-menu .station-conversation { align-self: start; }
 .process-board-with-menu .station-menu { grid-column: 1 / -1; }
 .process-board-with-menu .station-menu > .station-heading { width: 54%; margin-left: 46%; }
-.process-board-with-menu .menu-book { margin: var(--menu-book-clearance, 150px) auto 0; container: menu-book-space / inline-size; }
+.process-board-with-menu [data-menu-visual] { margin: var(--menu-visual-clearance, 150px) auto 0; }
 .station-conversation { grid-column: 1; grid-row: 1; padding-right: 12%; }
 .station-menu { grid-column: 2; grid-row: 1; padding-top: var(--menu-step-drop, 220px); }
 .station-preparation { grid-column: 1; grid-row: 2; padding: 0 18% 0 5%; }
 .station-evening { grid-column: 2; grid-row: 2; padding: var(--evening-step-drop, 430px) 0 0 5%; }
-.station-heading { display: grid; grid-template-columns: 34px 51px minmax(0, 1fr); align-items: start; position: relative; z-index: 1; }
+.station-heading { display: grid; grid-template-columns: 34px minmax(51px, max-content) minmax(0, 1fr); align-items: start; position: relative; z-index: 1; }
 .route-node { width: 22px; height: 22px; border: 1px solid var(--gold-text); border-radius: 50%; background: var(--paper); margin-top: 8px; position: relative; }
 .route-node::after { content: ""; position: absolute; inset: 6px; background: var(--ink); border-radius: 50%; }
-.station-number { color: var(--gold-text); }
+.station-number { color: var(--gold-text); white-space: nowrap; }
 .station-copy { padding-left: 18px; border-left: 1px solid var(--rule); }
 .station-copy p { color: var(--muted); max-width: 330px; margin-top: 7px; }
 .station-menu .station-copy p { max-width: 315px; }
@@ -281,7 +281,7 @@ img { display: block; max-width: 100%; }
   .collage-tile--wide-desktop { grid-column: auto; }
   .collage-tile--wide-compact { grid-column: span 2; }
   .hero-copy { padding-inline: 20px; }
-  .station-heading { grid-template-columns: 29px 43px minmax(0, 1fr); }
+  .station-heading { grid-template-columns: 29px minmax(43px, max-content) minmax(0, 1fr); }
   .station-copy { padding-left: 12px; }
   .station-preparation { padding-right: 12%; }
   .preparation-film { margin-left: 29px; width: min(100% - 29px, 300px); }
@@ -289,7 +289,7 @@ img { display: block; max-width: 100%; }
 }
 @media (max-width: 900px) {
   .process-board-with-menu .station-menu > .station-heading { width: auto; margin-left: 0; }
-  .process-board-with-menu .menu-book { margin: 24px 0 0 38px; }
+  .process-board-with-menu [data-menu-visual] { margin: 24px 0 0 38px; }
   .site-header { min-height: 72px; }
   .hero-frame { min-height: calc(100svh - 72px); }
   .format-list { display: flex; flex-direction: column; gap: 38px; padding: 18px 20px 32px; }
@@ -299,7 +299,7 @@ img { display: block; max-width: 100%; }
   .process-list { display: block; }
   .process-station { padding: 0 0 36px; }
   .process-station:last-child { padding-bottom: 0; }
-  .station-heading { grid-template-columns: 38px 56px minmax(0, 1fr); }
+  .station-heading { grid-template-columns: 38px minmax(56px, max-content) minmax(0, 1fr); }
   .station-copy p, .station-menu .station-copy p { max-width: 490px; }
   .station-copy { padding-left: 19px; }
   .evening-plan h2 { margin-bottom: 35px; }
@@ -331,7 +331,7 @@ img { display: block; max-width: 100%; }
   .contact-action { border-left: 0; padding: 0; max-width: 510px; width: 100%; margin-inline: auto; }
 }
 @media (max-width: 620px) {
-  .process-board-with-menu .menu-book { margin: 24px 0 0 33px; }
+  .process-board-with-menu [data-menu-visual] { margin: 24px 0 0 33px; }
   .sheet { width: calc(100% - 36px); }
   .site-header { min-height: 74px; gap: 12px; }
   .header-action-desktop, .header-action small { display: none; }
@@ -358,7 +358,7 @@ img { display: block; max-width: 100%; }
   .evening-plan { margin-top: 32px; }
   .evening-plan h2 { margin-bottom: 28px; }
   .evening-plan h2 span { white-space: normal; }
-  .station-heading { grid-template-columns: 33px 47px minmax(0, 1fr); }
+  .station-heading { grid-template-columns: 33px minmax(47px, max-content) minmax(0, 1fr); }
   .station-copy { padding-left: 14px; }
   .station-copy p { margin-top: 7px; }
   .route-node { width: 20px; height: 20px; margin-top: 7px; }

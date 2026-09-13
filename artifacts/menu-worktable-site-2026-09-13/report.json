@@ -1,0 +1,868 @@
+{
+  "passed": true,
+  "results": [
+    {
+      "width": 1440,
+      "overflow": false,
+      "scene": {
+        "left": 239.984375,
+        "top": 3260.375,
+        "right": 1199.984375,
+        "bottom": 3975.03125,
+        "width": 960,
+        "height": 714.65625
+      },
+      "conversation": {
+        "left": 68.40625,
+        "top": 2919.8125,
+        "right": 518.40625,
+        "bottom": 3219.8125,
+        "width": 450,
+        "height": 300
+      },
+      "stations": [
+        {
+          "step": "01",
+          "heading": {
+            "left": 68.40625,
+            "top": 2705.5,
+            "right": 595.9375,
+            "bottom": 2905.8125,
+            "width": 527.53125,
+            "height": 200.3125
+          },
+          "rect": {
+            "left": 68.40625,
+            "top": 2705.5,
+            "right": 667.859375,
+            "bottom": 3219.8125,
+            "width": 599.453125,
+            "height": 514.3125
+          }
+        },
+        {
+          "step": "02",
+          "heading": {
+            "left": 667.859375,
+            "top": 2911.5,
+            "right": 1371.5625,
+            "bottom": 3051.375,
+            "width": 703.703125,
+            "height": 139.875
+          },
+          "rect": {
+            "left": 68.40625,
+            "top": 2705.5,
+            "right": 1371.578125,
+            "bottom": 3975.03125,
+            "width": 1303.171875,
+            "height": 1269.53125
+          }
+        },
+        {
+          "step": "03",
+          "heading": {
+            "left": 98.375,
+            "top": 4030.03125,
+            "right": 559.96875,
+            "bottom": 4143.1875,
+            "width": 461.59375,
+            "height": 113.15625
+          },
+          "rect": {
+            "left": 68.40625,
+            "top": 4030.03125,
+            "right": 667.859375,
+            "bottom": 4773.953125,
+            "width": 599.453125,
+            "height": 743.921875
+          }
+        },
+        {
+          "step": "04",
+          "heading": {
+            "left": 703.03125,
+            "top": 4293.03125,
+            "right": 1371.578125,
+            "bottom": 4466.625,
+            "width": 668.546875,
+            "height": 173.59375
+          },
+          "rect": {
+            "left": 667.859375,
+            "top": 4030.03125,
+            "right": 1371.578125,
+            "bottom": 4773.953125,
+            "width": 703.71875,
+            "height": 743.921875
+          }
+        }
+      ],
+      "intersections": 0,
+      "image": {
+        "source": "http://127.0.0.1:3004/media/menu/worktable/menu-worktable-duck-960.webp",
+        "loaded": true,
+        "rect": {
+          "left": 239.984375,
+          "top": 3260.375,
+          "right": 1199.984375,
+          "bottom": 3900.375,
+          "width": 960,
+          "height": 640
+        },
+        "filter": "none",
+        "blend": "normal"
+      },
+      "caption": {
+        "text": "Пример меню\nГребешки · грибной велюте · утиная грудка · панна-котта с ягодами.\n\nИсточник фото",
+        "size": 16.5
+      },
+      "fonts": {
+        "title": "Oranienbaum, Georgia, \"Times New Roman\", serif",
+        "copy": "\"Ysabeau Office\", system-ui, -apple-system, sans-serif",
+        "number": "\"PT Mono\", ui-monospace, Menlo, monospace"
+      }
+    },
+    {
+      "width": 1280,
+      "overflow": false,
+      "scene": {
+        "left": 159.984375,
+        "top": 3130.515625,
+        "right": 1119.984375,
+        "bottom": 3845.171875,
+        "width": 960,
+        "height": 714.65625
+      },
+      "conversation": {
+        "left": 60.796875,
+        "top": 2789.953125,
+        "right": 510.796875,
+        "bottom": 3089.953125,
+        "width": 450,
+        "height": 300
+      },
+      "stations": [
+        {
+          "step": "01",
+          "heading": {
+            "left": 60.796875,
+            "top": 2576.6875,
+            "right": 529.71875,
+            "bottom": 2775.953125,
+            "width": 468.921875,
+            "height": 199.265625
+          },
+          "rect": {
+            "left": 60.796875,
+            "top": 2576.6875,
+            "right": 593.65625,
+            "bottom": 3089.953125,
+            "width": 532.859375,
+            "height": 513.265625
+          }
+        },
+        {
+          "step": "02",
+          "heading": {
+            "left": 593.640625,
+            "top": 2782.6875,
+            "right": 1219.15625,
+            "bottom": 2921.515625,
+            "width": 625.515625,
+            "height": 138.828125
+          },
+          "rect": {
+            "left": 60.796875,
+            "top": 2576.6875,
+            "right": 1219.171875,
+            "bottom": 3845.171875,
+            "width": 1158.375,
+            "height": 1268.484375
+          }
+        },
+        {
+          "step": "03",
+          "heading": {
+            "left": 87.4375,
+            "top": 3900.171875,
+            "right": 497.75,
+            "bottom": 4039,
+            "width": 410.3125,
+            "height": 138.828125
+          },
+          "rect": {
+            "left": 60.796875,
+            "top": 3900.171875,
+            "right": 593.65625,
+            "bottom": 4653.046875,
+            "width": 532.859375,
+            "height": 752.875
+          }
+        },
+        {
+          "step": "04",
+          "heading": {
+            "left": 624.921875,
+            "top": 4173.171875,
+            "right": 1219.171875,
+            "bottom": 4345.71875,
+            "width": 594.25,
+            "height": 172.546875
+          },
+          "rect": {
+            "left": 593.65625,
+            "top": 3900.171875,
+            "right": 1219.171875,
+            "bottom": 4653.046875,
+            "width": 625.515625,
+            "height": 752.875
+          }
+        }
+      ],
+      "intersections": 0,
+      "image": {
+        "source": "http://127.0.0.1:3004/media/menu/worktable/menu-worktable-duck-960.webp",
+        "loaded": true,
+        "rect": {
+          "left": 159.984375,
+          "top": 3130.515625,
+          "right": 1119.984375,
+          "bottom": 3770.515625,
+          "width": 960,
+          "height": 640
+        },
+        "filter": "none",
+        "blend": "normal"
+      },
+      "caption": {
+        "text": "Пример меню\nГребешки · грибной велюте · утиная грудка · панна-котта с ягодами.\n\nИсточник фото",
+        "size": 16.5
+      },
+      "fonts": {
+        "title": "Oranienbaum, Georgia, \"Times New Roman\", serif",
+        "copy": "\"Ysabeau Office\", system-ui, -apple-system, sans-serif",
+        "number": "\"PT Mono\", ui-monospace, Menlo, monospace"
+      }
+    },
+    {
+      "width": 1024,
+      "overflow": false,
+      "scene": {
+        "left": 72.640625,
+        "top": 3189.0625,
+        "right": 951.34375,
+        "bottom": 3849.515625,
+        "width": 878.703125,
+        "height": 660.453125
+      },
+      "conversation": {
+        "left": 48.640625,
+        "top": 2898.21875,
+        "right": 423.78125,
+        "bottom": 3148.3125,
+        "width": 375.140625,
+        "height": 250.09375
+      },
+      "stations": [
+        {
+          "step": "01",
+          "heading": {
+            "left": 48.640625,
+            "top": 2658.5,
+            "right": 423.78125,
+            "bottom": 2884.21875,
+            "width": 375.140625,
+            "height": 225.71875
+          },
+          "rect": {
+            "left": 48.640625,
+            "top": 2658.5,
+            "right": 474.921875,
+            "bottom": 3148.3125,
+            "width": 426.28125,
+            "height": 489.8125
+          }
+        },
+        {
+          "step": "02",
+          "heading": {
+            "left": 474.921875,
+            "top": 2854.5,
+            "right": 975.328125,
+            "bottom": 2993.0625,
+            "width": 500.40625,
+            "height": 138.5625
+          },
+          "rect": {
+            "left": 48.640625,
+            "top": 2658.5,
+            "right": 975.34375,
+            "bottom": 3849.515625,
+            "width": 926.703125,
+            "height": 1191.015625
+          }
+        },
+        {
+          "step": "03",
+          "heading": {
+            "left": 69.953125,
+            "top": 3904.515625,
+            "right": 423.78125,
+            "bottom": 4043.078125,
+            "width": 353.828125,
+            "height": 138.5625
+          },
+          "rect": {
+            "left": 48.640625,
+            "top": 3904.515625,
+            "right": 474.921875,
+            "bottom": 4637.671875,
+            "width": 426.28125,
+            "height": 733.15625
+          }
+        },
+        {
+          "step": "04",
+          "heading": {
+            "left": 499.9375,
+            "top": 4191.515625,
+            "right": 975.34375,
+            "bottom": 4363.796875,
+            "width": 475.40625,
+            "height": 172.28125
+          },
+          "rect": {
+            "left": 474.921875,
+            "top": 3904.515625,
+            "right": 975.34375,
+            "bottom": 4637.671875,
+            "width": 500.421875,
+            "height": 733.15625
+          }
+        }
+      ],
+      "intersections": 0,
+      "image": {
+        "source": "http://127.0.0.1:3004/media/menu/worktable/menu-worktable-duck-960.webp",
+        "loaded": true,
+        "rect": {
+          "left": 72.640625,
+          "top": 3189.0625,
+          "right": 951.34375,
+          "bottom": 3774.859375,
+          "width": 878.703125,
+          "height": 585.796875
+        },
+        "filter": "none",
+        "blend": "normal"
+      },
+      "caption": {
+        "text": "Пример меню\nГребешки · грибной велюте · утиная грудка · панна-котта с ягодами.\n\nИсточник фото",
+        "size": 16.5
+      },
+      "fonts": {
+        "title": "Oranienbaum, Georgia, \"Times New Roman\", serif",
+        "copy": "\"Ysabeau Office\", system-ui, -apple-system, sans-serif",
+        "number": "\"PT Mono\", ui-monospace, Menlo, monospace"
+      }
+    },
+    {
+      "width": 768,
+      "overflow": false,
+      "scene": {
+        "left": 74.484375,
+        "top": 3932.8125,
+        "right": 731.515625,
+        "bottom": 4445.484375,
+        "width": 657.03125,
+        "height": 512.671875
+      },
+      "conversation": {
+        "left": 130.484375,
+        "top": 3460.96875,
+        "right": 580.484375,
+        "bottom": 3760.96875,
+        "width": 450,
+        "height": 300
+      },
+      "stations": [
+        {
+          "step": "01",
+          "heading": {
+            "left": 36.484375,
+            "top": 3305.40625,
+            "right": 731.515625,
+            "bottom": 3450.96875,
+            "width": 695.03125,
+            "height": 145.5625
+          },
+          "rect": {
+            "left": 36.484375,
+            "top": 3305.40625,
+            "right": 731.515625,
+            "bottom": 3796.96875,
+            "width": 695.03125,
+            "height": 491.5625
+          }
+        },
+        {
+          "step": "02",
+          "heading": {
+            "left": 36.484375,
+            "top": 3796.96875,
+            "right": 731.515625,
+            "bottom": 3908.8125,
+            "width": 695.03125,
+            "height": 111.84375
+          },
+          "rect": {
+            "left": 36.484375,
+            "top": 3796.96875,
+            "right": 731.515625,
+            "bottom": 4481.484375,
+            "width": 695.03125,
+            "height": 684.515625
+          }
+        },
+        {
+          "step": "03",
+          "heading": {
+            "left": 36.484375,
+            "top": 4481.484375,
+            "right": 731.515625,
+            "bottom": 4593.328125,
+            "width": 695.03125,
+            "height": 111.84375
+          },
+          "rect": {
+            "left": 36.484375,
+            "top": 4481.484375,
+            "right": 731.515625,
+            "bottom": 5314.875,
+            "width": 695.03125,
+            "height": 833.390625
+          }
+        },
+        {
+          "step": "04",
+          "heading": {
+            "left": 36.484375,
+            "top": 5314.875,
+            "right": 731.515625,
+            "bottom": 5460.4375,
+            "width": 695.03125,
+            "height": 145.5625
+          },
+          "rect": {
+            "left": 36.484375,
+            "top": 5314.875,
+            "right": 731.515625,
+            "bottom": 5768.765625,
+            "width": 695.03125,
+            "height": 453.890625
+          }
+        }
+      ],
+      "intersections": 0,
+      "image": {
+        "source": "http://127.0.0.1:3004/media/menu/worktable/menu-worktable-duck-960.webp",
+        "loaded": true,
+        "rect": {
+          "left": 74.484375,
+          "top": 3932.8125,
+          "right": 731.515625,
+          "bottom": 4370.828125,
+          "width": 657.03125,
+          "height": 438.015625
+        },
+        "filter": "none",
+        "blend": "normal"
+      },
+      "caption": {
+        "text": "Пример меню\nГребешки · грибной велюте · утиная грудка · панна-котта с ягодами.\n\nИсточник фото",
+        "size": 16.5
+      },
+      "fonts": {
+        "title": "Oranienbaum, Georgia, \"Times New Roman\", serif",
+        "copy": "\"Ysabeau Office\", system-ui, -apple-system, sans-serif",
+        "number": "\"PT Mono\", ui-monospace, Menlo, monospace"
+      }
+    },
+    {
+      "width": 430,
+      "overflow": false,
+      "scene": {
+        "left": 51,
+        "top": 3822.875,
+        "right": 412,
+        "bottom": 4203.6875,
+        "width": 361,
+        "height": 380.8125
+      },
+      "conversation": {
+        "left": 52,
+        "top": 3389.3125,
+        "right": 412,
+        "bottom": 3629.3125,
+        "width": 360,
+        "height": 240
+      },
+      "stations": [
+        {
+          "step": "01",
+          "heading": {
+            "left": 18,
+            "top": 3151.59375,
+            "right": 412,
+            "bottom": 3377.3125,
+            "width": 394,
+            "height": 225.71875
+          },
+          "rect": {
+            "left": 18,
+            "top": 3151.59375,
+            "right": 412,
+            "bottom": 3660.3125,
+            "width": 394,
+            "height": 508.71875
+          }
+        },
+        {
+          "step": "02",
+          "heading": {
+            "left": 18,
+            "top": 3660.3125,
+            "right": 412,
+            "bottom": 3798.875,
+            "width": 394,
+            "height": 138.5625
+          },
+          "rect": {
+            "left": 18,
+            "top": 3660.3125,
+            "right": 412,
+            "bottom": 4234.6875,
+            "width": 394,
+            "height": 574.375
+          }
+        },
+        {
+          "step": "03",
+          "heading": {
+            "left": 18,
+            "top": 4234.6875,
+            "right": 412,
+            "bottom": 4373.25,
+            "width": 394,
+            "height": 138.5625
+          },
+          "rect": {
+            "left": 18,
+            "top": 4234.6875,
+            "right": 412,
+            "bottom": 4980.125,
+            "width": 394,
+            "height": 745.4375
+          }
+        },
+        {
+          "step": "04",
+          "heading": {
+            "left": 18,
+            "top": 4980.125,
+            "right": 412,
+            "bottom": 5152.40625,
+            "width": 394,
+            "height": 172.28125
+          },
+          "rect": {
+            "left": 18,
+            "top": 4980.125,
+            "right": 412,
+            "bottom": 5405.40625,
+            "width": 394,
+            "height": 425.28125
+          }
+        }
+      ],
+      "intersections": 0,
+      "image": {
+        "source": "http://127.0.0.1:3004/media/menu/worktable/menu-worktable-duck-960.webp",
+        "loaded": true,
+        "rect": {
+          "left": 51,
+          "top": 3822.875,
+          "right": 412,
+          "bottom": 4063.53125,
+          "width": 361,
+          "height": 240.65625
+        },
+        "filter": "none",
+        "blend": "normal"
+      },
+      "caption": {
+        "text": "Пример меню\nГребешки · грибной велюте · утиная грудка · панна-котта с ягодами.\n\nИсточник фото",
+        "size": 16.5
+      },
+      "fonts": {
+        "title": "Oranienbaum, Georgia, \"Times New Roman\", serif",
+        "copy": "\"Ysabeau Office\", system-ui, -apple-system, sans-serif",
+        "number": "\"PT Mono\", ui-monospace, Menlo, monospace"
+      }
+    },
+    {
+      "width": 390,
+      "overflow": false,
+      "scene": {
+        "left": 51,
+        "top": 3810.015625,
+        "right": 372,
+        "bottom": 4164.171875,
+        "width": 321,
+        "height": 354.15625
+      },
+      "conversation": {
+        "left": 52,
+        "top": 3376.40625,
+        "right": 372,
+        "bottom": 3589.734375,
+        "width": 320,
+        "height": 213.328125
+      },
+      "stations": [
+        {
+          "step": "01",
+          "heading": {
+            "left": 18,
+            "top": 3138.6875,
+            "right": 372,
+            "bottom": 3364.40625,
+            "width": 354,
+            "height": 225.71875
+          },
+          "rect": {
+            "left": 18,
+            "top": 3138.6875,
+            "right": 372,
+            "bottom": 3620.734375,
+            "width": 354,
+            "height": 482.046875
+          }
+        },
+        {
+          "step": "02",
+          "heading": {
+            "left": 18,
+            "top": 3620.734375,
+            "right": 372,
+            "bottom": 3786.015625,
+            "width": 354,
+            "height": 165.28125
+          },
+          "rect": {
+            "left": 18,
+            "top": 3620.734375,
+            "right": 372,
+            "bottom": 4195.171875,
+            "width": 354,
+            "height": 574.4375
+          }
+        },
+        {
+          "step": "03",
+          "heading": {
+            "left": 18,
+            "top": 4195.171875,
+            "right": 372,
+            "bottom": 4333.734375,
+            "width": 354,
+            "height": 138.5625
+          },
+          "rect": {
+            "left": 18,
+            "top": 4195.171875,
+            "right": 372,
+            "bottom": 4940.609375,
+            "width": 354,
+            "height": 745.4375
+          }
+        },
+        {
+          "step": "04",
+          "heading": {
+            "left": 18,
+            "top": 4940.609375,
+            "right": 372,
+            "bottom": 5166.328125,
+            "width": 354,
+            "height": 225.71875
+          },
+          "rect": {
+            "left": 18,
+            "top": 4940.609375,
+            "right": 372,
+            "bottom": 5392.65625,
+            "width": 354,
+            "height": 452.046875
+          }
+        }
+      ],
+      "intersections": 0,
+      "image": {
+        "source": "http://127.0.0.1:3004/media/menu/worktable/menu-worktable-duck-960.webp",
+        "loaded": true,
+        "rect": {
+          "left": 51,
+          "top": 3810.015625,
+          "right": 372,
+          "bottom": 4024.015625,
+          "width": 321,
+          "height": 214
+        },
+        "filter": "none",
+        "blend": "normal"
+      },
+      "caption": {
+        "text": "Пример меню\nГребешки · грибной велюте · утиная грудка · панна-котта с ягодами.\n\nИсточник фото",
+        "size": 16.5
+      },
+      "fonts": {
+        "title": "Oranienbaum, Georgia, \"Times New Roman\", serif",
+        "copy": "\"Ysabeau Office\", system-ui, -apple-system, sans-serif",
+        "number": "\"PT Mono\", ui-monospace, Menlo, monospace"
+      }
+    },
+    {
+      "width": 375,
+      "overflow": false,
+      "scene": {
+        "left": 51,
+        "top": 3845.265625,
+        "right": 357,
+        "bottom": 4189.421875,
+        "width": 306,
+        "height": 344.15625
+      },
+      "conversation": {
+        "left": 52,
+        "top": 3421.65625,
+        "right": 357,
+        "bottom": 3624.984375,
+        "width": 305,
+        "height": 203.328125
+      },
+      "stations": [
+        {
+          "step": "01",
+          "heading": {
+            "left": 18,
+            "top": 3130.5,
+            "right": 357,
+            "bottom": 3409.65625,
+            "width": 339,
+            "height": 279.15625
+          },
+          "rect": {
+            "left": 18,
+            "top": 3130.5,
+            "right": 357,
+            "bottom": 3655.984375,
+            "width": 339,
+            "height": 525.484375
+          }
+        },
+        {
+          "step": "02",
+          "heading": {
+            "left": 18,
+            "top": 3655.984375,
+            "right": 357,
+            "bottom": 3821.265625,
+            "width": 339,
+            "height": 165.28125
+          },
+          "rect": {
+            "left": 18,
+            "top": 3655.984375,
+            "right": 357,
+            "bottom": 4220.421875,
+            "width": 339,
+            "height": 564.4375
+          }
+        },
+        {
+          "step": "03",
+          "heading": {
+            "left": 18,
+            "top": 4220.421875,
+            "right": 357,
+            "bottom": 4385.703125,
+            "width": 339,
+            "height": 165.28125
+          },
+          "rect": {
+            "left": 18,
+            "top": 4220.421875,
+            "right": 357,
+            "bottom": 4992.578125,
+            "width": 339,
+            "height": 772.15625
+          }
+        },
+        {
+          "step": "04",
+          "heading": {
+            "left": 18,
+            "top": 4992.578125,
+            "right": 357,
+            "bottom": 5218.296875,
+            "width": 339,
+            "height": 225.71875
+          },
+          "rect": {
+            "left": 18,
+            "top": 4992.578125,
+            "right": 357,
+            "bottom": 5434.625,
+            "width": 339,
+            "height": 442.046875
+          }
+        }
+      ],
+      "intersections": 0,
+      "image": {
+        "source": "http://127.0.0.1:3004/media/menu/worktable/menu-worktable-duck-960.webp",
+        "loaded": true,
+        "rect": {
+          "left": 51,
+          "top": 3845.265625,
+          "right": 357,
+          "bottom": 4049.265625,
+          "width": 306,
+          "height": 204
+        },
+        "filter": "none",
+        "blend": "normal"
+      },
+      "caption": {
+        "text": "Пример меню\nГребешки · грибной велюте · утиная грудка · панна-котта с ягодами.\n\nИсточник фото",
+        "size": 16.5
+      },
+      "fonts": {
+        "title": "Oranienbaum, Georgia, \"Times New Roman\", serif",
+        "copy": "\"Ysabeau Office\", system-ui, -apple-system, sans-serif",
+        "number": "\"PT Mono\", ui-monospace, Menlo, monospace"
+      }
+    }
+  ],
+  "errors": [],
+  "checks": [
+    "Seven widths and route clearance",
+    "200% text on desktop and phone",
+    "Original photograph without CSS filters or cropping",
+    "No-JavaScript content and image",
+    "Image failure, keyboard retry, 44px target and focus",
+    "63 collage photos and inline video preserved"
+  ]
+}

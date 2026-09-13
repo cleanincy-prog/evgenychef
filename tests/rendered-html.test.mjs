@@ -6,6 +6,7 @@ assert.equal(base.protocol, "http:", "QA is restricted to local HTTP");
 assert.ok(["127.0.0.1", "localhost"].includes(base.hostname), "QA must never target a public site");
 assert.equal(base.username + base.password, "");
 const instagram = "https://www.instagram.com/evg.chef/";
+const menuPhotoSource = "https://www.deuxave.com/menu/";
 let html;
 let homeResponse;
 
@@ -51,7 +52,7 @@ test("serves the approved evening page as accessible Russian HTML", () => {
   assert.equal(tags(html, "html")[0]?.lang, "ru");
   assert.equal(tags(html, "h1").length, 1, "A single page identity is required");
   const text = visibleText(html);
-  for (const expected of ["Евгений", "Гребеник", "Mise en place", "Знакомимся", "Продумываю меню", "Готовлю к встрече", "Ваш вечер", "Начнём с вашего вечера", "Осьминог", "Соль", "Чёрный перец", "Чеснок", "Оливковое масло", "Лимонный сок", "Томатный соус", "Маринуем с травами", "Готовая подача"]) {
+  for (const expected of ["Евгений", "Гребеник", "Mise en place", "Знакомимся", "Продумываю меню", "Готовлю к встрече", "Ваш вечер", "Начнём с вашего вечера", "Пример меню", "Гребешки", "Грибной велюте", "Утиная грудка", "Панна-котта с ягодами"]) {
     assert.ok(text.toLocaleLowerCase("ru").includes(expected.toLocaleLowerCase("ru")), `Missing rendered content: ${expected}`);
   }
   assert.ok(text.includes("В первом сообщении укажите дату, число гостей и формат"));
@@ -84,19 +85,19 @@ test("provides functional page anchors, photo attribution and the exact Instagra
   assert.ok(anchors.length > 0);
   const ids = new Set([...html.matchAll(/\bid="([^"]+)"/g)].map(match => decode(match[1])));
   for (const anchor of anchors) {
-    assert.ok(anchor.href?.startsWith("#") || anchor.href === instagram || anchor.href === "/media/menu/exploded/credits.html", `Unexpected link: ${anchor.href}`);
+    assert.ok(anchor.href?.startsWith("#") || anchor.href === instagram || anchor.href === menuPhotoSource, `Unexpected link: ${anchor.href}`);
     if (anchor.href?.startsWith("#") && anchor.href.length > 1) assert.ok(ids.has(decodeURIComponent(anchor.href.slice(1))), `Missing anchor target: ${anchor.href}`);
     if (anchor.target === "_blank") assert.match(anchor.rel || "", /noopener|noreferrer/);
   }
   assert.ok(anchors.some(anchor => anchor.href === instagram));
-  assert.ok(anchors.some(anchor => anchor.href === "/media/menu/exploded/credits.html"), "Ingredient photo attribution must be reachable from the page");
+  assert.ok(anchors.some(anchor => anchor.href === menuPhotoSource), "The original duck photograph must have source attribution");
   const credit = await localFetch("/media/menu/exploded/credits.html");
   assert.equal(credit.status, 200, "Photographic source and license information must be available");
   assert.match(await credit.text(), /creativecommons.org\/licenses\/by-sa\/4.0/);
   assert.equal(tags(html, "form").length, 0, "This page must not send an automatic inquiry");
 });
 
-test("renders 63 documentary collage photos and the selected menu-book assets", async () => {
+test("renders 63 documentary collage photos and the selected worktable with the original duck photograph", async () => {
   const imageTags = tags(html, "img");
   const collage = [...html.matchAll(/<[^>]+\bclass="[^"]*\bcollage-tile\b[^"]*"[^>]*>[\s\S]*?<img\b([^>]*)>/g)]
     .map(match => tags(`<img ${match[1]}>`, "img")[0]);
@@ -108,7 +109,7 @@ test("renders 63 documentary collage photos and the selected menu-book assets", 
   const required = [
     "/media/web/chef-hero-apron-576.webp",
     "/media/web/masterchef-640.webp",
-    "/media/menu/book/octopus-photo-atlas-960.webp",
+    "/media/menu/worktable/menu-worktable-duck-960.webp",
   ];
   for (const path of required) assert.ok(imageTags.some(img => img.src === path), `Missing real asset: ${path}`);
   for (const img of imageTags) assert.ok(Object.hasOwn(img, "alt"), `Image requires alt, including decorative empty alt: ${img.src}`);
@@ -121,18 +122,17 @@ test("renders 63 documentary collage photos and the selected menu-book assets", 
   // Keep local HTTP concurrency bounded while checking every responsive variant.
   for (let start = 0; start < uniqueImagePaths.length; start += 8) {
     await Promise.all(uniqueImagePaths.slice(start, start + 8).map(async path => {
-      assert.match(path, /^\/media\/(?:web\/.+\.webp|menu\/personal-menu-duck-plate-cream-v2\.webp|menu\/(?:book|exploded)\/[a-z0-9-]+\.(?:webp|svg))$/, `Page images must use optimized local media: ${path}`);
+      assert.match(path, /^\/media\/(?:web\/.+\.webp|menu\/personal-menu-duck-plate-cream-v2\.webp|menu\/(?:book|exploded|worktable)\/[a-z0-9-]+\.(?:webp|svg))$/, `Page images must use optimized local media: ${path}`);
       const response = await localFetch(path, { method: "HEAD" });
       assert.equal(response.status, 200, `Image must be available: ${path}`);
       assert.match(response.headers.get("content-type") || "", path.endsWith(".svg") ? /^image\/svg\+xml/ : /^image\/webp/);
     }));
   }
-  const ingredientRows = [...html.matchAll(/<li\b[^>]*data-ingredient="[^"]+"[^>]*>[\s\S]*?<\/li>/g)].map(match => match[0]);
-  assert.equal(ingredientRows.length, 10, "All ten ingredients must be present");
-  for (const row of ingredientRows) assert.equal(tags(row, "img").length, 1, "Every ingredient requires its own photograph");
-  assert.deepEqual([...html.matchAll(/\bdata-recipe="([^"]+)"/g)].map(m=>m[1]), ['octopus']);
-  assert.deepEqual([...html.matchAll(/\bdata-grams="([^"]+)"/g)].map(m=>Number(m[1])), [160,25,25,60,5,3,10,5,1,.2]);
-  assert.doesNotMatch(html, /class="mb-(?:pencil|stroke|navigation)"|data-menu-(?:scroll|sketch|color|next)/);
+  const worktable = imageTags.filter(img => img.src.includes("/menu/worktable/"));
+  assert.equal(worktable.length, 1, "The menu scene must appear once");
+  assert.match(worktable[0].alt, /фотография утиной грудки/);
+  assert.ok(visibleText(html).includes("Пример меню"), "The example menu must remain readable outside the raster image");
+  assert.doesNotMatch(html, /data-recipe="octopus"|data-grams=|class="mb-(?:pencil|stroke|navigation)"|data-menu-(?:scroll|sketch|color|next)/);
 
 });
 

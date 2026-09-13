@@ -1,0 +1,36 @@
+{
+  "purpose": "Use the exact real duck photograph from the former site, as explicitly required by the user.",
+  "photograph": "public/media/web/duck-plate-960.webp",
+  "photographLargeSource": "public/media/menu/personal-menu-duck-plate-cream-v2.webp",
+  "attribution": "public/media/menu/CREDITS.md",
+  "foodProcessing": "Deterministic proportional resize and composition only. No generation or food retouching.",
+  "backgroundProcessing": "Built-in image_gen removes the previous generated plate and updates only the small graphite drawing on the page.",
+  "backgroundPrompt": "Use case: precise-object-edit. This request prepares an EMPTY BACKGROUND PLATE for deterministic insertion of a REAL photograph afterwards.\n\nImage 1 is the approved chef worktable scene and the edit target. Preserve its exact 1536x1024 framing, notebook angle and size, all left-page Russian handwriting, the two upper pencil studies with notes, the lemon, herb sprig, graphite pencil, ivory table color, lighting and paper texture.\n\nMake ONLY these edits:\nA. Completely REMOVE the entire large photorealistic foreground ceramic plate at the lower right, including ALL food and ALL of that plate's contact shadow. Restore the clean warm ivory table surface behind it. Reconstruct only the small lower-right notebook corner that was occluded, following the notebook's existing perspective and paper texture. The final image must have NO large real plate and NO realistic cooked meal anywhere. This foreground area must remain empty, because the actual source photograph will be inserted as an unchanged image layer in a separate operation.\nB. Replace ONLY the lowest graphite plating study on the right notebook page with a delicate pencil sketch matching the original duck serving in Image 2: an irregular row of sliced duck breast placed diagonally from lower-left toward upper-right, seared uneven skin, bed of fine vegetables and greens, broad dark sauce brush beneath, curved brown-sauce placement and several small smooth sauce circles. Keep the small sketch's original location and scale. Use ONLY monochrome graphite on the paper, light fine contours, restrained shading. Do not draw the previous neat invented row of identical pink slices with carrot coins and celeriac puree.\nKeep its small note \"хруст\" and arrow. Do not change the two upper pencil studies or their notes \"свежесть\" and \"нежность\".\n\nImage 2 is reference ONLY for this SMALL PENCIL DRAWING. Do not paste, generate or recreate a colored duck meal anywhere in this output.\nAll left-page lines MUST remain unchanged, exactly:\n\"Меню вашего вечера\"\n\"Гребешки\"\n\"Грибной велюте\"\n\"Утиная грудка\"\n\"Панна-котта с ягодами\"\n\nDo not move the notebook or other objects, zoom, rotate, add props, add any dishes, add people, change any typography, add captions, watermarks, logos, interface or black margins. Deliver one 1536x1024 edited background with the LOWER-RIGHT LARGE PLATE REMOVED and a small correct graphite study on the page.",
+  "backgroundGeneratedFile": "/Users/dmitro/.codex/generated_images/01a09bcd-a970-72d3-a531-358b2baf469a/exec-74719889-3421-4365-a7ef-3110acc293a6.png",
+  "backgroundSavedFile": "design/mockups/menu-worktable-2026-09-13/real-duck/worktable-background.png",
+  "finalFile": "design/mockups/menu-worktable-2026-09-13/real-duck/menu-worktable-real-duck-v1.png",
+  "verification": {
+    "source": "public/media/web/duck-plate-960.webp",
+    "sourceSha256": "3f3a3d32e57e93c5c6f15df54df2a29b472b26a964cf955deb118c61a671897e",
+    "sourceCopySha256": "3f3a3d32e57e93c5c6f15df54df2a29b472b26a964cf955deb118c61a671897e",
+    "output": "design/mockups/menu-worktable-2026-09-13/real-duck/menu-worktable-real-duck-v1.png",
+    "width": 1536,
+    "height": 1024,
+    "placement": {
+      "width": 650,
+      "left": 944,
+      "top": 398,
+      "height": 601
+    },
+    "operationsOnPhoto": [
+      "proportional Lanczos resize",
+      "RGBA placement",
+      "canvas-edge crop"
+    ],
+    "foodGenerated": false,
+    "foodRetouched": false,
+    "checkedOpaquePixels": 280415,
+    "differingOpaquePixels": 0,
+    "largestChannelDifference": 0
+  }
+}

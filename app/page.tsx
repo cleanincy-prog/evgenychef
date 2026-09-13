@@ -1,6 +1,6 @@
 import ChefStoryVideo from "./chef-story-video";
 import EveningPlanRoute from "./evening-plan-route";
-import MenuBook from "./menu-book";
+import MenuWorktable from "./menu-worktable";
 import { heroImages, siteImages } from "./site-images";
 
 /* eslint-disable @next/next/no-img-element -- original local media with source-specific editorial framing */
@@ -116,9 +116,8 @@ export default function Home() {
             <li className="process-station station-menu" data-step="02" id="menu">
               <StationHeading number="02" title="Продумываю меню">
                 <p>Из нашего разговора складывается меню. Я выбираю продукты и продумываю, какие блюда приготовить и как они будут сочетаться между собой.</p>
-                <p>Внутри каждого блюда тоже есть свой замысел.</p>
               </StationHeading>
-              <MenuBook />
+              <MenuWorktable />
             </li>
             <li className="process-station station-preparation" data-step="03">
               <StationHeading number="03" title="Готовлю к встрече">

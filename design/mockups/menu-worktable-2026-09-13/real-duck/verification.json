@@ -1,0 +1,24 @@
+{
+  "source": "public/media/web/duck-plate-960.webp",
+  "sourceSha256": "3f3a3d32e57e93c5c6f15df54df2a29b472b26a964cf955deb118c61a671897e",
+  "sourceCopySha256": "3f3a3d32e57e93c5c6f15df54df2a29b472b26a964cf955deb118c61a671897e",
+  "output": "design/mockups/menu-worktable-2026-09-13/real-duck/menu-worktable-real-duck-v1.png",
+  "width": 1536,
+  "height": 1024,
+  "placement": {
+    "width": 650,
+    "left": 944,
+    "top": 398,
+    "height": 601
+  },
+  "operationsOnPhoto": [
+    "proportional Lanczos resize",
+    "RGBA placement",
+    "canvas-edge crop"
+  ],
+  "foodGenerated": false,
+  "foodRetouched": false,
+  "checkedOpaquePixels": 280415,
+  "differingOpaquePixels": 0,
+  "largestChannelDifference": 0
+}
