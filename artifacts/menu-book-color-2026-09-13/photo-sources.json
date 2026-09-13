@@ -1,0 +1,9 @@
+{
+  "sourceConfiguration": "app/menu-book-art.json",
+  "sourceSHA256": "b9cbc557f408885a33681bf834b7c2b3a4add33611fbc76f3d9f8db8f32509f7",
+  "method": "Only existing octopus photo sources, sizes, crop rectangles and clipping paths retained; no raster modification.",
+  "activePhotos": [
+    "/media/menu/book/octopus-photo-atlas-960.webp",
+    "/media/menu/book/octopus-photo-atlas-1536.webp"
+  ]
+}

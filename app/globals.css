@@ -198,7 +198,7 @@ img { display: block; max-width: 100%; }
 .process-board-with-menu .station-conversation { align-self: start; }
 .process-board-with-menu .station-menu { grid-column: 1 / -1; }
 .process-board-with-menu .station-menu > .station-heading { width: 54%; margin-left: 46%; }
-.process-board-with-menu .menu-book { margin: var(--menu-book-clearance, 150px) 0 0 34px; container: menu-book-space / inline-size; }
+.process-board-with-menu .menu-book { margin: var(--menu-book-clearance, 150px) auto 0; container: menu-book-space / inline-size; }
 .station-conversation { grid-column: 1; grid-row: 1; padding-right: 12%; }
 .station-menu { grid-column: 2; grid-row: 1; padding-top: var(--menu-step-drop, 220px); }
 .station-preparation { grid-column: 1; grid-row: 2; padding: 0 18% 0 5%; }

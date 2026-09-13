@@ -51,7 +51,7 @@ test("serves the approved evening page as accessible Russian HTML", () => {
   assert.equal(tags(html, "html")[0]?.lang, "ru");
   assert.equal(tags(html, "h1").length, 1, "A single page identity is required");
   const text = visibleText(html);
-  for (const expected of ["Евгений", "Гребеник", "Mise en place", "Знакомимся", "Продумываю меню", "Готовлю к встрече", "Ваш вечер", "Начнём с вашего вечера", "Утиная грудка", "Осьминог", "Сельдерей", "Томатный соус", "Оливки маринуем с травами", "Готовая подача"]) {
+  for (const expected of ["Евгений", "Гребеник", "Mise en place", "Знакомимся", "Продумываю меню", "Готовлю к встрече", "Ваш вечер", "Начнём с вашего вечера", "Осьминог", "Соль", "Чёрный перец", "Чеснок", "Оливковое масло", "Лимонный сок", "Томатный соус", "Маринуем с травами", "Готовая подача"]) {
     assert.ok(text.toLocaleLowerCase("ru").includes(expected.toLocaleLowerCase("ru")), `Missing rendered content: ${expected}`);
   }
   assert.ok(text.includes("В первом сообщении укажите дату, число гостей и формат"));
@@ -107,7 +107,6 @@ test("renders 63 documentary collage photos and the selected menu-book assets", 
   const required = [
     "/media/web/chef-hero-apron-576.webp",
     "/media/web/masterchef-640.webp",
-    "/media/menu/book/duck-photo-atlas-960.webp",
     "/media/menu/book/octopus-photo-atlas-960.webp",
   ];
   for (const path of required) assert.ok(imageTags.some(img => img.src === path), `Missing real asset: ${path}`);
@@ -127,10 +126,10 @@ test("renders 63 documentary collage photos and the selected menu-book assets", 
       assert.match(response.headers.get("content-type") || "", path.endsWith(".svg") ? /^image\/svg\+xml/ : /^image\/webp/);
     }));
   }
-  const pencilPaths = [...html.matchAll(/<image\b[^>]*href="([^"]+)"/g)].map(match => match[1]);
-  assert.ok(!pencilPaths.some(path => path.includes('pencil-atlas')), "Menu sketches must use individual lines, not shaded bitmap studies");
-  const pencilStrokes = tags(html, "path").filter(path => path.class?.includes("mb-stroke"));
-  assert.ok(pencilStrokes.length > 0 && pencilStrokes.every(path => path.d), "Pencil gestures must be present in the rendered page");
+  assert.deepEqual([...html.matchAll(/\bdata-recipe="([^"]+)"/g)].map(m=>m[1]), ['octopus']);
+  assert.deepEqual([...html.matchAll(/\bdata-grams="([^"]+)"/g)].map(m=>Number(m[1])), [160,25,25,60,5,3,10,5,1,.2]);
+  assert.doesNotMatch(html, /class="mb-(?:pencil|stroke|navigation)"|data-menu-(?:scroll|sketch|color|next)/);
+
 });
 
 test("serves the shortened inline film with immediate controls and usable byte ranges", async () => {

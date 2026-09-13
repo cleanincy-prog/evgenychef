@@ -1,0 +1,1232 @@
+{
+  "passed": true,
+  "noindex": "noindex, nofollow, noarchive",
+  "widths": [
+    {
+      "width": 1440,
+      "overflow": false,
+      "book": {
+        "left": 399.984375,
+        "top": 3259.8125,
+        "right": 1039.984375,
+        "bottom": 4789.8125,
+        "width": 640,
+        "height": 1530
+      },
+      "pages": [
+        {
+          "recipe": "octopus",
+          "rect": {
+            "left": 403.984375,
+            "top": 3308.5,
+            "right": 1038.984375,
+            "bottom": 4788.8125,
+            "width": 635,
+            "height": 1480.3125
+          },
+          "plate": {
+            "left": 438.984375,
+            "top": 4249.359375,
+            "right": 1003.984375,
+            "bottom": 4650.84375,
+            "width": 565,
+            "height": 401.484375
+          },
+          "ingredients": {
+            "left": 438.984375,
+            "top": 3914.296875,
+            "right": 1003.984375,
+            "bottom": 4188.359375,
+            "width": 565,
+            "height": 274.0625
+          },
+          "actions": [
+            "Обжариваем подготовленные щупальца до золотистых краёв.",
+            "Вялим, чтобы вкус стал насыщеннее.",
+            "Маринуем с травами, чесноком и лимоном.",
+            "Увариваем до бархатистой текстуры.",
+            "Добавляем свежей перед подачей.",
+            "Измельчаем для маринада и соуса.",
+            "Добавляем в маринад и при обжарке.",
+            "Добавляем в маринад для свежести.",
+            "Приправляем соус и осьминога.",
+            "Свежемолотый, добавляем перед подачей."
+          ],
+          "photoLoaded": true
+        }
+      ],
+      "heading": {
+        "left": 667.859375,
+        "top": 2911.5,
+        "right": 1371.5625,
+        "bottom": 3111.8125,
+        "width": 703.703125,
+        "height": 200.3125
+      },
+      "conversation": {
+        "left": 68.40625,
+        "top": 2919.8125,
+        "right": 518.40625,
+        "bottom": 3219.8125,
+        "width": 450,
+        "height": 300
+      },
+      "stations": [
+        {
+          "step": "01",
+          "heading": {
+            "left": 68.40625,
+            "top": 2705.5,
+            "right": 595.9375,
+            "bottom": 2905.8125,
+            "width": 527.53125,
+            "height": 200.3125
+          },
+          "rect": {
+            "left": 68.40625,
+            "top": 2705.5,
+            "right": 667.859375,
+            "bottom": 3219.8125,
+            "width": 599.453125,
+            "height": 514.3125
+          }
+        },
+        {
+          "step": "02",
+          "heading": {
+            "left": 667.859375,
+            "top": 2911.5,
+            "right": 1371.5625,
+            "bottom": 3111.8125,
+            "width": 703.703125,
+            "height": 200.3125
+          },
+          "rect": {
+            "left": 68.40625,
+            "top": 2705.5,
+            "right": 1371.578125,
+            "bottom": 4789.8125,
+            "width": 1303.171875,
+            "height": 2084.3125
+          }
+        },
+        {
+          "step": "03",
+          "heading": {
+            "left": 98.375,
+            "top": 4844.8125,
+            "right": 559.96875,
+            "bottom": 4957.96875,
+            "width": 461.59375,
+            "height": 113.15625
+          },
+          "rect": {
+            "left": 68.40625,
+            "top": 4844.8125,
+            "right": 667.859375,
+            "bottom": 5588.734375,
+            "width": 599.453125,
+            "height": 743.921875
+          }
+        },
+        {
+          "step": "04",
+          "heading": {
+            "left": 703.03125,
+            "top": 5107.8125,
+            "right": 1371.578125,
+            "bottom": 5281.40625,
+            "width": 668.546875,
+            "height": 173.59375
+          },
+          "rect": {
+            "left": 667.859375,
+            "top": 4844.8125,
+            "right": 1371.578125,
+            "bottom": 5588.734375,
+            "width": 703.71875,
+            "height": 743.921875
+          }
+        }
+      ],
+      "throughBook": 0,
+      "throughCopy": 0,
+      "smallControls": [],
+      "fonts": {
+        "title": "Oranienbaum, Georgia, \"Times New Roman\", serif",
+        "copy": "\"Ysabeau Office\", system-ui, -apple-system, sans-serif",
+        "number": "\"PT Mono\", ui-monospace, Menlo, monospace"
+      },
+      "headingSizes": [
+        32,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20
+      ],
+      "collage": 63,
+      "video": {
+        "source": "/media/chef-story-short-prep-2026-09-12.mp4",
+        "controls": true
+      }
+    },
+    {
+      "width": 1280,
+      "overflow": false,
+      "book": {
+        "left": 319.984375,
+        "top": 3129.953125,
+        "right": 959.984375,
+        "bottom": 4659.953125,
+        "width": 640,
+        "height": 1530
+      },
+      "pages": [
+        {
+          "recipe": "octopus",
+          "rect": {
+            "left": 323.984375,
+            "top": 3178.640625,
+            "right": 958.984375,
+            "bottom": 4658.953125,
+            "width": 635,
+            "height": 1480.3125
+          },
+          "plate": {
+            "left": 358.984375,
+            "top": 4119.5,
+            "right": 923.984375,
+            "bottom": 4520.984375,
+            "width": 565,
+            "height": 401.484375
+          },
+          "ingredients": {
+            "left": 358.984375,
+            "top": 3784.4375,
+            "right": 923.984375,
+            "bottom": 4058.5,
+            "width": 565,
+            "height": 274.0625
+          },
+          "actions": [
+            "Обжариваем подготовленные щупальца до золотистых краёв.",
+            "Вялим, чтобы вкус стал насыщеннее.",
+            "Маринуем с травами, чесноком и лимоном.",
+            "Увариваем до бархатистой текстуры.",
+            "Добавляем свежей перед подачей.",
+            "Измельчаем для маринада и соуса.",
+            "Добавляем в маринад и при обжарке.",
+            "Добавляем в маринад для свежести.",
+            "Приправляем соус и осьминога.",
+            "Свежемолотый, добавляем перед подачей."
+          ],
+          "photoLoaded": true
+        }
+      ],
+      "heading": {
+        "left": 593.640625,
+        "top": 2782.6875,
+        "right": 1219.15625,
+        "bottom": 2981.953125,
+        "width": 625.515625,
+        "height": 199.265625
+      },
+      "conversation": {
+        "left": 60.796875,
+        "top": 2789.953125,
+        "right": 510.796875,
+        "bottom": 3089.953125,
+        "width": 450,
+        "height": 300
+      },
+      "stations": [
+        {
+          "step": "01",
+          "heading": {
+            "left": 60.796875,
+            "top": 2576.6875,
+            "right": 529.71875,
+            "bottom": 2775.953125,
+            "width": 468.921875,
+            "height": 199.265625
+          },
+          "rect": {
+            "left": 60.796875,
+            "top": 2576.6875,
+            "right": 593.65625,
+            "bottom": 3089.953125,
+            "width": 532.859375,
+            "height": 513.265625
+          }
+        },
+        {
+          "step": "02",
+          "heading": {
+            "left": 593.640625,
+            "top": 2782.6875,
+            "right": 1219.15625,
+            "bottom": 2981.953125,
+            "width": 625.515625,
+            "height": 199.265625
+          },
+          "rect": {
+            "left": 60.796875,
+            "top": 2576.6875,
+            "right": 1219.171875,
+            "bottom": 4659.953125,
+            "width": 1158.375,
+            "height": 2083.265625
+          }
+        },
+        {
+          "step": "03",
+          "heading": {
+            "left": 87.4375,
+            "top": 4714.953125,
+            "right": 497.75,
+            "bottom": 4853.78125,
+            "width": 410.3125,
+            "height": 138.828125
+          },
+          "rect": {
+            "left": 60.796875,
+            "top": 4714.953125,
+            "right": 593.65625,
+            "bottom": 5467.828125,
+            "width": 532.859375,
+            "height": 752.875
+          }
+        },
+        {
+          "step": "04",
+          "heading": {
+            "left": 624.921875,
+            "top": 4987.953125,
+            "right": 1219.171875,
+            "bottom": 5160.5,
+            "width": 594.25,
+            "height": 172.546875
+          },
+          "rect": {
+            "left": 593.65625,
+            "top": 4714.953125,
+            "right": 1219.171875,
+            "bottom": 5467.828125,
+            "width": 625.515625,
+            "height": 752.875
+          }
+        }
+      ],
+      "throughBook": 0,
+      "throughCopy": 0,
+      "smallControls": [],
+      "fonts": {
+        "title": "Oranienbaum, Georgia, \"Times New Roman\", serif",
+        "copy": "\"Ysabeau Office\", system-ui, -apple-system, sans-serif",
+        "number": "\"PT Mono\", ui-monospace, Menlo, monospace"
+      },
+      "headingSizes": [
+        32,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20,
+        20
+      ],
+      "collage": 63,
+      "video": {
+        "source": "/media/chef-story-short-prep-2026-09-12.mp4",
+        "controls": true
+      }
+    },
+    {
+      "width": 1024,
+      "overflow": false,
+      "book": {
+        "left": 191.984375,
+        "top": 3188.5,
+        "right": 831.984375,
+        "bottom": 4729.296875,
+        "width": 640,
+        "height": 1540.796875
+      },
+      "pages": [
+        {
+          "recipe": "octopus",
+          "rect": {
+            "left": 195.984375,
+            "top": 3237.1875,
+            "right": 830.984375,
+            "bottom": 4728.296875,
+            "width": 635,
+            "height": 1491.109375
+          },
+          "plate": {
+            "left": 221.984375,
+            "top": 4188.84375,
+            "right": 804.984375,
+            "bottom": 4590.328125,
+            "width": 583,
+            "height": 401.484375
+          },
+          "ingredients": {
+            "left": 221.984375,
+            "top": 3857.53125,
+            "right": 804.984375,
+            "bottom": 4127.84375,
+            "width": 583,
+            "height": 270.3125
+          },
+          "actions": [
+            "Обжариваем подготовленные щупальца до золотистых краёв.",
+            "Вялим, чтобы вкус стал насыщеннее.",
+            "Маринуем с травами, чесноком и лимоном.",
+            "Увариваем до бархатистой текстуры.",
+            "Добавляем свежей перед подачей.",
+            "Измельчаем для маринада и соуса.",
+            "Добавляем в маринад и при обжарке.",
+            "Добавляем в маринад для свежести.",
+            "Приправляем соус и осьминога.",
+            "Свежемолотый, добавляем перед подачей."
+          ],
+          "photoLoaded": true
+        }
+      ],
+      "heading": {
+        "left": 474.921875,
+        "top": 2854.5,
+        "right": 975.328125,
+        "bottom": 3053.5,
+        "width": 500.40625,
+        "height": 199
+      },
+      "conversation": {
+        "left": 48.640625,
+        "top": 2898.21875,
+        "right": 423.78125,
+        "bottom": 3148.3125,
+        "width": 375.140625,
+        "height": 250.09375
+      },
+      "stations": [
+        {
+          "step": "01",
+          "heading": {
+            "left": 48.640625,
+            "top": 2658.5,
+            "right": 423.78125,
+            "bottom": 2884.21875,
+            "width": 375.140625,
+            "height": 225.71875
+          },
+          "rect": {
+            "left": 48.640625,
+            "top": 2658.5,
+            "right": 474.921875,
+            "bottom": 3148.3125,
+            "width": 426.28125,
+            "height": 489.8125
+          }
+        },
+        {
+          "step": "02",
+          "heading": {
+            "left": 474.921875,
+            "top": 2854.5,
+            "right": 975.328125,
+            "bottom": 3053.5,
+            "width": 500.40625,
+            "height": 199
+          },
+          "rect": {
+            "left": 48.640625,
+            "top": 2658.5,
+            "right": 975.34375,
+            "bottom": 4729.296875,
+            "width": 926.703125,
+            "height": 2070.796875
+          }
+        },
+        {
+          "step": "03",
+          "heading": {
+            "left": 69.953125,
+            "top": 4784.296875,
+            "right": 423.78125,
+            "bottom": 4922.859375,
+            "width": 353.828125,
+            "height": 138.5625
+          },
+          "rect": {
+            "left": 48.640625,
+            "top": 4784.296875,
+            "right": 474.921875,
+            "bottom": 5517.453125,
+            "width": 426.28125,
+            "height": 733.15625
+          }
+        },
+        {
+          "step": "04",
+          "heading": {
+            "left": 499.9375,
+            "top": 5071.296875,
+            "right": 975.34375,
+            "bottom": 5243.578125,
+            "width": 475.40625,
+            "height": 172.28125
+          },
+          "rect": {
+            "left": 474.921875,
+            "top": 4784.296875,
+            "right": 975.34375,
+            "bottom": 5517.453125,
+            "width": 500.421875,
+            "height": 733.15625
+          }
+        }
+      ],
+      "throughBook": 0,
+      "throughCopy": 0,
+      "smallControls": [],
+      "fonts": {
+        "title": "Oranienbaum, Georgia, \"Times New Roman\", serif",
+        "copy": "\"Ysabeau Office\", system-ui, -apple-system, sans-serif",
+        "number": "\"PT Mono\", ui-monospace, Menlo, monospace"
+      },
+      "headingSizes": [
+        29,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19
+      ],
+      "collage": 63,
+      "video": {
+        "source": "/media/chef-story-short-prep-2026-09-12.mp4",
+        "controls": true
+      }
+    },
+    {
+      "width": 768,
+      "overflow": false,
+      "book": {
+        "left": 74.484375,
+        "top": 3966.53125,
+        "right": 714.484375,
+        "bottom": 5493.78125,
+        "width": 640,
+        "height": 1527.25
+      },
+      "pages": [
+        {
+          "recipe": "octopus",
+          "rect": {
+            "left": 78.484375,
+            "top": 4015.21875,
+            "right": 713.484375,
+            "bottom": 5492.78125,
+            "width": 635,
+            "height": 1477.5625
+          },
+          "plate": {
+            "left": 112.484375,
+            "top": 4952.328125,
+            "right": 679.484375,
+            "bottom": 5353.8125,
+            "width": 567,
+            "height": 401.484375
+          },
+          "ingredients": {
+            "left": 112.484375,
+            "top": 4621.015625,
+            "right": 679.484375,
+            "bottom": 4891.328125,
+            "width": 567,
+            "height": 270.3125
+          },
+          "actions": [
+            "Обжариваем подготовленные щупальца до золотистых краёв.",
+            "Вялим, чтобы вкус стал насыщеннее.",
+            "Маринуем с травами, чесноком и лимоном.",
+            "Увариваем до бархатистой текстуры.",
+            "Добавляем свежей перед подачей.",
+            "Измельчаем для маринада и соуса.",
+            "Добавляем в маринад и при обжарке.",
+            "Добавляем в маринад для свежести.",
+            "Приправляем соус и осьминога.",
+            "Свежемолотый, добавляем перед подачей."
+          ],
+          "photoLoaded": true
+        }
+      ],
+      "heading": {
+        "left": 36.484375,
+        "top": 3796.96875,
+        "right": 731.515625,
+        "bottom": 3942.53125,
+        "width": 695.03125,
+        "height": 145.5625
+      },
+      "conversation": {
+        "left": 130.484375,
+        "top": 3460.96875,
+        "right": 580.484375,
+        "bottom": 3760.96875,
+        "width": 450,
+        "height": 300
+      },
+      "stations": [
+        {
+          "step": "01",
+          "heading": {
+            "left": 36.484375,
+            "top": 3305.40625,
+            "right": 731.515625,
+            "bottom": 3450.96875,
+            "width": 695.03125,
+            "height": 145.5625
+          },
+          "rect": {
+            "left": 36.484375,
+            "top": 3305.40625,
+            "right": 731.515625,
+            "bottom": 3796.96875,
+            "width": 695.03125,
+            "height": 491.5625
+          }
+        },
+        {
+          "step": "02",
+          "heading": {
+            "left": 36.484375,
+            "top": 3796.96875,
+            "right": 731.515625,
+            "bottom": 3942.53125,
+            "width": 695.03125,
+            "height": 145.5625
+          },
+          "rect": {
+            "left": 36.484375,
+            "top": 3796.96875,
+            "right": 731.515625,
+            "bottom": 5529.78125,
+            "width": 695.03125,
+            "height": 1732.8125
+          }
+        },
+        {
+          "step": "03",
+          "heading": {
+            "left": 36.484375,
+            "top": 5529.78125,
+            "right": 731.515625,
+            "bottom": 5641.625,
+            "width": 695.03125,
+            "height": 111.84375
+          },
+          "rect": {
+            "left": 36.484375,
+            "top": 5529.78125,
+            "right": 731.515625,
+            "bottom": 6363.171875,
+            "width": 695.03125,
+            "height": 833.390625
+          }
+        },
+        {
+          "step": "04",
+          "heading": {
+            "left": 36.484375,
+            "top": 6363.171875,
+            "right": 731.515625,
+            "bottom": 6508.734375,
+            "width": 695.03125,
+            "height": 145.5625
+          },
+          "rect": {
+            "left": 36.484375,
+            "top": 6363.171875,
+            "right": 731.515625,
+            "bottom": 6817.0625,
+            "width": 695.03125,
+            "height": 453.890625
+          }
+        }
+      ],
+      "throughBook": 0,
+      "throughCopy": 0,
+      "smallControls": [],
+      "fonts": {
+        "title": "Oranienbaum, Georgia, \"Times New Roman\", serif",
+        "copy": "\"Ysabeau Office\", system-ui, -apple-system, sans-serif",
+        "number": "\"PT Mono\", ui-monospace, Menlo, monospace"
+      },
+      "headingSizes": [
+        32,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19
+      ],
+      "collage": 63,
+      "video": {
+        "source": "/media/chef-story-short-prep-2026-09-12.mp4",
+        "controls": true
+      }
+    },
+    {
+      "width": 430,
+      "overflow": false,
+      "book": {
+        "left": 51,
+        "top": 3883.3125,
+        "right": 412,
+        "bottom": 5549.046875,
+        "width": 361,
+        "height": 1665.734375
+      },
+      "pages": [
+        {
+          "recipe": "octopus",
+          "rect": {
+            "left": 55,
+            "top": 3928.90625,
+            "right": 411,
+            "bottom": 5548.046875,
+            "width": 356,
+            "height": 1619.140625
+          },
+          "plate": {
+            "left": 73,
+            "top": 5081.40625,
+            "right": 393,
+            "bottom": 5387.296875,
+            "width": 320,
+            "height": 305.890625
+          },
+          "ingredients": {
+            "left": 73,
+            "top": 4577.5625,
+            "right": 393,
+            "bottom": 5022.40625,
+            "width": 320,
+            "height": 444.84375
+          },
+          "actions": [
+            "Обжариваем подготовленные щупальца до золотистых краёв.",
+            "Вялим, чтобы вкус стал насыщеннее.",
+            "Маринуем с травами, чесноком и лимоном.",
+            "Увариваем до бархатистой текстуры.",
+            "Добавляем свежей перед подачей.",
+            "Измельчаем для маринада и соуса.",
+            "Добавляем в маринад и при обжарке.",
+            "Добавляем в маринад для свежести.",
+            "Приправляем соус и осьминога.",
+            "Свежемолотый, добавляем перед подачей."
+          ],
+          "photoLoaded": true
+        }
+      ],
+      "heading": {
+        "left": 18,
+        "top": 3660.3125,
+        "right": 412,
+        "bottom": 3859.3125,
+        "width": 394,
+        "height": 199
+      },
+      "conversation": {
+        "left": 52,
+        "top": 3389.3125,
+        "right": 412,
+        "bottom": 3629.3125,
+        "width": 360,
+        "height": 240
+      },
+      "stations": [
+        {
+          "step": "01",
+          "heading": {
+            "left": 18,
+            "top": 3151.59375,
+            "right": 412,
+            "bottom": 3377.3125,
+            "width": 394,
+            "height": 225.71875
+          },
+          "rect": {
+            "left": 18,
+            "top": 3151.59375,
+            "right": 412,
+            "bottom": 3660.3125,
+            "width": 394,
+            "height": 508.71875
+          }
+        },
+        {
+          "step": "02",
+          "heading": {
+            "left": 18,
+            "top": 3660.3125,
+            "right": 412,
+            "bottom": 3859.3125,
+            "width": 394,
+            "height": 199
+          },
+          "rect": {
+            "left": 18,
+            "top": 3660.3125,
+            "right": 412,
+            "bottom": 5580.046875,
+            "width": 394,
+            "height": 1919.734375
+          }
+        },
+        {
+          "step": "03",
+          "heading": {
+            "left": 18,
+            "top": 5580.046875,
+            "right": 412,
+            "bottom": 5718.609375,
+            "width": 394,
+            "height": 138.5625
+          },
+          "rect": {
+            "left": 18,
+            "top": 5580.046875,
+            "right": 412,
+            "bottom": 6325.484375,
+            "width": 394,
+            "height": 745.4375
+          }
+        },
+        {
+          "step": "04",
+          "heading": {
+            "left": 18,
+            "top": 6325.484375,
+            "right": 412,
+            "bottom": 6497.765625,
+            "width": 394,
+            "height": 172.28125
+          },
+          "rect": {
+            "left": 18,
+            "top": 6325.484375,
+            "right": 412,
+            "bottom": 6750.765625,
+            "width": 394,
+            "height": 425.28125
+          }
+        }
+      ],
+      "throughBook": 0,
+      "throughCopy": 0,
+      "smallControls": [],
+      "fonts": {
+        "title": "Oranienbaum, Georgia, \"Times New Roman\", serif",
+        "copy": "\"Ysabeau Office\", system-ui, -apple-system, sans-serif",
+        "number": "\"PT Mono\", ui-monospace, Menlo, monospace"
+      },
+      "headingSizes": [
+        29,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19
+      ],
+      "collage": 63,
+      "video": {
+        "source": "/media/chef-story-short-prep-2026-09-12.mp4",
+        "controls": true
+      }
+    },
+    {
+      "width": 390,
+      "overflow": false,
+      "book": {
+        "left": 51,
+        "top": 3870.453125,
+        "right": 372,
+        "bottom": 5557.90625,
+        "width": 321,
+        "height": 1687.453125
+      },
+      "pages": [
+        {
+          "recipe": "octopus",
+          "rect": {
+            "left": 55,
+            "top": 3916.046875,
+            "right": 371,
+            "bottom": 5556.90625,
+            "width": 316,
+            "height": 1640.859375
+          },
+          "plate": {
+            "left": 73,
+            "top": 5128.5,
+            "right": 353,
+            "bottom": 5396.15625,
+            "width": 280,
+            "height": 267.65625
+          },
+          "ingredients": {
+            "left": 73,
+            "top": 4602.265625,
+            "right": 353,
+            "bottom": 5069.5,
+            "width": 280,
+            "height": 467.234375
+          },
+          "actions": [
+            "Обжариваем подготовленные щупальца до золотистых краёв.",
+            "Вялим, чтобы вкус стал насыщеннее.",
+            "Маринуем с травами, чесноком и лимоном.",
+            "Увариваем до бархатистой текстуры.",
+            "Добавляем свежей перед подачей.",
+            "Измельчаем для маринада и соуса.",
+            "Добавляем в маринад и при обжарке.",
+            "Добавляем в маринад для свежести.",
+            "Приправляем соус и осьминога.",
+            "Свежемолотый, добавляем перед подачей."
+          ],
+          "photoLoaded": true
+        }
+      ],
+      "heading": {
+        "left": 18,
+        "top": 3620.734375,
+        "right": 372,
+        "bottom": 3846.453125,
+        "width": 354,
+        "height": 225.71875
+      },
+      "conversation": {
+        "left": 52,
+        "top": 3376.40625,
+        "right": 372,
+        "bottom": 3589.734375,
+        "width": 320,
+        "height": 213.328125
+      },
+      "stations": [
+        {
+          "step": "01",
+          "heading": {
+            "left": 18,
+            "top": 3138.6875,
+            "right": 372,
+            "bottom": 3364.40625,
+            "width": 354,
+            "height": 225.71875
+          },
+          "rect": {
+            "left": 18,
+            "top": 3138.6875,
+            "right": 372,
+            "bottom": 3620.734375,
+            "width": 354,
+            "height": 482.046875
+          }
+        },
+        {
+          "step": "02",
+          "heading": {
+            "left": 18,
+            "top": 3620.734375,
+            "right": 372,
+            "bottom": 3846.453125,
+            "width": 354,
+            "height": 225.71875
+          },
+          "rect": {
+            "left": 18,
+            "top": 3620.734375,
+            "right": 372,
+            "bottom": 5588.90625,
+            "width": 354,
+            "height": 1968.171875
+          }
+        },
+        {
+          "step": "03",
+          "heading": {
+            "left": 18,
+            "top": 5588.90625,
+            "right": 372,
+            "bottom": 5727.46875,
+            "width": 354,
+            "height": 138.5625
+          },
+          "rect": {
+            "left": 18,
+            "top": 5588.90625,
+            "right": 372,
+            "bottom": 6334.34375,
+            "width": 354,
+            "height": 745.4375
+          }
+        },
+        {
+          "step": "04",
+          "heading": {
+            "left": 18,
+            "top": 6334.34375,
+            "right": 372,
+            "bottom": 6560.0625,
+            "width": 354,
+            "height": 225.71875
+          },
+          "rect": {
+            "left": 18,
+            "top": 6334.34375,
+            "right": 372,
+            "bottom": 6786.390625,
+            "width": 354,
+            "height": 452.046875
+          }
+        }
+      ],
+      "throughBook": 0,
+      "throughCopy": 0,
+      "smallControls": [],
+      "fonts": {
+        "title": "Oranienbaum, Georgia, \"Times New Roman\", serif",
+        "copy": "\"Ysabeau Office\", system-ui, -apple-system, sans-serif",
+        "number": "\"PT Mono\", ui-monospace, Menlo, monospace"
+      },
+      "headingSizes": [
+        29,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19
+      ],
+      "collage": 63,
+      "video": {
+        "source": "/media/chef-story-short-prep-2026-09-12.mp4",
+        "controls": true
+      }
+    },
+    {
+      "width": 375,
+      "overflow": false,
+      "book": {
+        "left": 51,
+        "top": 3905.703125,
+        "right": 357,
+        "bottom": 5617.8125,
+        "width": 306,
+        "height": 1712.109375
+      },
+      "pages": [
+        {
+          "recipe": "octopus",
+          "rect": {
+            "left": 55,
+            "top": 3951.296875,
+            "right": 356,
+            "bottom": 5616.8125,
+            "width": 301,
+            "height": 1665.515625
+          },
+          "plate": {
+            "left": 73,
+            "top": 5202.75,
+            "right": 338,
+            "bottom": 5456.0625,
+            "width": 265,
+            "height": 253.3125
+          },
+          "ingredients": {
+            "left": 73,
+            "top": 4676.515625,
+            "right": 338,
+            "bottom": 5143.75,
+            "width": 265,
+            "height": 467.234375
+          },
+          "actions": [
+            "Обжариваем подготовленные щупальца до золотистых краёв.",
+            "Вялим, чтобы вкус стал насыщеннее.",
+            "Маринуем с травами, чесноком и лимоном.",
+            "Увариваем до бархатистой текстуры.",
+            "Добавляем свежей перед подачей.",
+            "Измельчаем для маринада и соуса.",
+            "Добавляем в маринад и при обжарке.",
+            "Добавляем в маринад для свежести.",
+            "Приправляем соус и осьминога.",
+            "Свежемолотый, добавляем перед подачей."
+          ],
+          "photoLoaded": true
+        }
+      ],
+      "heading": {
+        "left": 18,
+        "top": 3655.984375,
+        "right": 357,
+        "bottom": 3881.703125,
+        "width": 339,
+        "height": 225.71875
+      },
+      "conversation": {
+        "left": 52,
+        "top": 3421.65625,
+        "right": 357,
+        "bottom": 3624.984375,
+        "width": 305,
+        "height": 203.328125
+      },
+      "stations": [
+        {
+          "step": "01",
+          "heading": {
+            "left": 18,
+            "top": 3130.5,
+            "right": 357,
+            "bottom": 3409.65625,
+            "width": 339,
+            "height": 279.15625
+          },
+          "rect": {
+            "left": 18,
+            "top": 3130.5,
+            "right": 357,
+            "bottom": 3655.984375,
+            "width": 339,
+            "height": 525.484375
+          }
+        },
+        {
+          "step": "02",
+          "heading": {
+            "left": 18,
+            "top": 3655.984375,
+            "right": 357,
+            "bottom": 3881.703125,
+            "width": 339,
+            "height": 225.71875
+          },
+          "rect": {
+            "left": 18,
+            "top": 3655.984375,
+            "right": 357,
+            "bottom": 5648.8125,
+            "width": 339,
+            "height": 1992.828125
+          }
+        },
+        {
+          "step": "03",
+          "heading": {
+            "left": 18,
+            "top": 5648.8125,
+            "right": 357,
+            "bottom": 5814.09375,
+            "width": 339,
+            "height": 165.28125
+          },
+          "rect": {
+            "left": 18,
+            "top": 5648.8125,
+            "right": 357,
+            "bottom": 6420.96875,
+            "width": 339,
+            "height": 772.15625
+          }
+        },
+        {
+          "step": "04",
+          "heading": {
+            "left": 18,
+            "top": 6420.96875,
+            "right": 357,
+            "bottom": 6646.6875,
+            "width": 339,
+            "height": 225.71875
+          },
+          "rect": {
+            "left": 18,
+            "top": 6420.96875,
+            "right": 357,
+            "bottom": 6863.015625,
+            "width": 339,
+            "height": 442.046875
+          }
+        }
+      ],
+      "throughBook": 0,
+      "throughCopy": 0,
+      "smallControls": [],
+      "fonts": {
+        "title": "Oranienbaum, Georgia, \"Times New Roman\", serif",
+        "copy": "\"Ysabeau Office\", system-ui, -apple-system, sans-serif",
+        "number": "\"PT Mono\", ui-monospace, Menlo, monospace"
+      },
+      "headingSizes": [
+        29,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19,
+        19
+      ],
+      "collage": 63,
+      "video": {
+        "source": "/media/chef-story-short-prep-2026-09-12.mp4",
+        "controls": true
+      }
+    }
+  ],
+  "errors": [],
+  "tests": [
+    "Only octopus; 10 ingredients with weights for one portion, including salt and pepper",
+    "Seven widths, 200% text, current fonts, route clearance, collage and video",
+    "Always colored through scrolling and both motion preferences; no pencil, animation or navigation",
+    "Color and complete recipe without JavaScript",
+    "Image error/retry by keyboard, visible focus and 44px target"
+  ]
+}
