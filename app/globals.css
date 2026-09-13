@@ -94,7 +94,7 @@ img { display: block; max-width: 100%; }
 .evening-plan h2 { margin-bottom: 66px; }
 .evening-plan h2 span { white-space: nowrap; }
 .process-board { position: relative; }
-.process-list { display: grid; grid-template-columns: 46% 54%; grid-template-rows: max(clamp(365px, 31vw, 440px), var(--conversation-row-height, 0px)) auto; }
+.process-list { display: grid; grid-template-columns: 46% 54%; grid-template-rows: calc(max(clamp(365px, 31vw, 440px), var(--conversation-row-height, 0px)) + 55px) auto; }
 .process-station { min-width: 0; position: relative; }
 .station-conversation { grid-column: 1; grid-row: 1; padding-right: 12%; }
 .station-menu { grid-column: 2; grid-row: 1; padding-top: var(--menu-step-drop, 220px); }

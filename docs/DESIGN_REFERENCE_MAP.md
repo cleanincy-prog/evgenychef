@@ -1,3 +1,11 @@
+## Этап03 ниже — 2026-09-13
+
+| Project element | Reference | Principle used | What is not copied | Project implementation |
+|---|---|---|---|---|
+| «Готовлю к встрече», этап03 | Прямое «03 тоже нужно сделать ниже»; одобренная лесенка40% | Ещё55px вертикального места перед03 в прежней сетке | Новое оформление, порядок и мобильная раскладка | +55px к первой desktop-строке, прежний измеряемый пунктир |
+
+[Аудит и проверка](PROCESS_STEP03_2026-09-13.md). Решений без источника нет.
+
 ## Этапы ещё немного ниже — 2026-09-13
 
 | Project element | Reference | Principle used | What is not copied | Project implementation |
