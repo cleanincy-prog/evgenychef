@@ -2,6 +2,18 @@
 
 import { useEffect, useRef, useState } from "react";
 
+type RoutePoint = { x: number; y: number };
+
+// Keep the open tip in the same path so it repaints with the measured curve.
+function arrowTo(curve: string, tip: RoutePoint, control: RoutePoint) {
+  const length = Math.hypot(tip.x - control.x, tip.y - control.y);
+  const ux = (tip.x - control.x) / length;
+  const uy = (tip.y - control.y) / length;
+  const point = (back: number, side: number) =>
+    `${tip.x - ux * back - uy * side},${tip.y - uy * back + ux * side}`;
+  return `${curve} M${point(9, -5)} Q${point(4, -1)} ${tip.x},${tip.y} Q${point(4, 1)} ${point(9, 5)}`;
+}
+
 // The path follows real heading positions, including after the local fonts load.
 export default function EveningPlanRoute() {
   const svgRef = useRef<SVGSVGElement>(null);
@@ -41,6 +53,16 @@ export default function EveningPlanRoute() {
       });
       if (nodes.length !== 4) return;
       svg.setAttribute("viewBox", `0 0 ${rect.width} ${rect.height}`);
+      if (window.matchMedia("(max-width: 900px)").matches) {
+        setPaths(nodes.slice(0, -1).map((start, index) => {
+          const end = nodes[index + 1];
+          const top = start.y + 18;
+          const bottom = end.y - 18;
+          const length = bottom - top;
+          return arrowTo(`M${start.x},${top} C${start.x + 3},${top + length / 3} ${end.x - 3},${bottom - length / 3} ${end.x},${bottom}`, { x: end.x, y: bottom }, { x: end.x - 3, y: bottom - length / 3 });
+        }));
+        return;
+      }
       const [a, b, c, d] = nodes;
       const mid = b.x - rect.width * .08;
       const leftLabels = [...board.querySelectorAll(".plate-label-main, .plate-label-sauce")]
@@ -58,9 +80,9 @@ export default function EveningPlanRoute() {
       const leaveY = sauce ? Math.max(c.y + 35, sauce.bottom - rect.top + 22) : d.y - 30;
       const departureX = Math.min(departure, aisle - 20);
       setPaths([
-        `M${a.x},${a.y} C${a.x},-38 ${b.x},-38 ${b.x},${a.y} V${b.y}`,
-        `M${b.x},${b.y} C${b.x},${b.y + 26} ${conversationRail},${b.y + 26} ${conversationRail},${turnY} V${returnY - 38} Q${conversationRail},${returnY} ${conversationRail - 44},${returnY} H${c.x + 44} Q${c.x},${returnY} ${c.x},${c.y}`,
-        `M${departureX},${c.y} Q${aisle},${c.y} ${aisle},${c.y + 35} V${leaveY} Q${aisle},${d.y + 15} ${d.x},${d.y}`,
+        arrowTo(`M${a.x + 5},${a.y - 17} C${a.x + 85},-48 ${b.x - 24},-54 ${b.x - 10},${a.y + 14} S${b.x + 2},${b.y - 85} ${b.x},${b.y - 18}`, { x: b.x, y: b.y - 18 }, { x: b.x + 2, y: b.y - 85 }),
+        arrowTo(`M${b.x - 4},${b.y + 17} C${b.x - 22},${b.y + 42} ${conversationRail + 3},${b.y + 30} ${conversationRail},${turnY} C${conversationRail - 5},${turnY + (returnY - turnY) / 3} ${conversationRail + 6},${returnY - 20} ${conversationRail - 44},${returnY} C${conversationRail - 94},${returnY + 20} ${c.x + 16},${returnY - 8} ${c.x},${c.y - 18}`, { x: c.x, y: c.y - 18 }, { x: c.x + 16, y: returnY - 8 }),
+        arrowTo(`M${departureX},${c.y} C${aisle + 3},${c.y - 3} ${aisle - 4},${leaveY - 28} ${aisle},${leaveY} C${aisle + 2},${d.y + 10} ${d.x - 58},${d.y + 9} ${d.x - 18},${d.y + 1}`, { x: d.x - 18, y: d.y + 1 }, { x: d.x - 58, y: d.y + 9 }),
       ]);
     }
     const observer = new ResizeObserver(() => { cancelAnimationFrame(frame); frame = requestAnimationFrame(measure); });
@@ -69,5 +91,7 @@ export default function EveningPlanRoute() {
     void document.fonts.ready.then(measure);
     return () => { observer.disconnect(); cancelAnimationFrame(frame); };
   }, []);
-  return <svg ref={svgRef} className="plan-route" aria-hidden="true" preserveAspectRatio="none">{paths.map((d, i) => <path key={i} d={d} />)}</svg>;
+  return <svg ref={svgRef} className="plan-route" aria-hidden="true" preserveAspectRatio="none">
+    {paths.map((d, i) => <path className="plan-route-line" key={i} d={d} />)}
+  </svg>;
 }
