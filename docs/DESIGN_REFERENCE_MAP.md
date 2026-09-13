@@ -1,3 +1,12 @@
+## Выбран третий макет: Bellota Text — 2026-09-13
+
+| Project element | Reference | Principle used | What is not copied | Project implementation |
+|---|---|---|---|---|
+| Hero, шапка и биография | Прямое «Третий вариант»; [desktop](../design/references/approved-bellota-text-desktop-2026-09-13.png) и [mobile](../design/references/approved-bellota-text-mobile-2026-09-13.png) Bellota Text | Настоящая гарнитура normal400 и прежняя пятистрочная композиция | Другие четыре шрифта и новая композиция | Два локальных WOFF2 Bellota Text400 сinline/block, прежняя шкала размеров |
+| Стикеры, этапы, подписи тарелки/видео, контакт, подвал | Выбранная общая гарнитура и существующий утверждённый «План вечера» | Единая типографика и прежние роли, контент, оформление, адаптивность | Новые блоки, эффекты, фото и тексты | Общие типографические токены используют Bellota Text; проверка всех семи ширин |
+
+Новых решений без источника нет. [Аудит и план](BELLOTA_TEXT_2026-09-13.md). Нижележащие записи сравнения и Shantell относятся к состоянию до выбора.
+
 ## Проба Shantell Sans — 2026-09-13
 
 | Project element | Reference | Principle used | What is not copied | Project implementation |

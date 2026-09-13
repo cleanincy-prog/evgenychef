@@ -1,20 +1,20 @@
-/* Keep the selected Shantell Sans in the render-blocking CSS to avoid a fallback-font flash.
+/* Keep the selected Bellota Text in the render-blocking CSS to avoid a fallback-font flash.
    Explicit Vite inlining works in development and production; no extra font requests.
-   Original local variable WOFF2, Google Fonts / SIL Open Font License. */
+   Original local static WOFF2, Google Fonts / SIL Open Font License. */
 @font-face {
-  font-family: "Shantell Sans";
+  font-family: "Bellota Text";
   font-style: normal;
-  font-weight: 300 800;
+  font-weight: 400;
   font-display: block;
-  src: url("./fonts/shantell-sans-cyrillic-variable.woff2?inline") format("woff2");
+  src: url("./fonts/bellota-text-cyrillic-400.woff2?inline") format("woff2");
   unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
 }
 @font-face {
-  font-family: "Shantell Sans";
+  font-family: "Bellota Text";
   font-style: normal;
-  font-weight: 300 800;
+  font-weight: 400;
   font-display: block;
-  src: url("./fonts/shantell-sans-latin-variable.woff2?inline") format("woff2");
+  src: url("./fonts/bellota-text-latin-400.woff2?inline") format("woff2");
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
@@ -26,7 +26,7 @@
   --gold-text: #72561f;
   --muted: #6e665a;
   --rule: #c8c0b3;
-  --font-pencil: "Shantell Sans", "Segoe Print", "Bradley Hand", cursive;
+  --font-pencil: "Bellota Text", "Trebuchet MS", sans-serif;
   --font-sans: var(--font-pencil);
   --font-display: var(--font-pencil);
 }
@@ -49,7 +49,7 @@ img { display: block; max-width: 100%; }
 #main-content:focus { outline: none; }
 .site-header { display: flex; align-items: center; justify-content: space-between; min-height: 80px; gap: 20px; }
 .wordmark { font: 400 25px/1.2 var(--font-display); letter-spacing: .03em; color: var(--gold-text); white-space: nowrap; display: inline-flex; align-items: center; min-height: 44px; }
-.header-action { min-height: 48px; display: flex; flex-direction: column; justify-content: center; text-align: right; color: var(--gold-text); font-size: 14px; font-weight: 600; letter-spacing: .04em; }
+.header-action { min-height: 48px; display: flex; flex-direction: column; justify-content: center; text-align: right; color: var(--gold-text); font-size: 14px; font-weight: 400; letter-spacing: .04em; }
 .header-action small { font-weight: 400; font-size: 11px; letter-spacing: 0; color: var(--muted); margin-top: 2px; }
 .header-action-mobile { display: none; }
 /* Full-field photo packing from the approved Mise en place collage. */
@@ -87,7 +87,7 @@ img { display: block; max-width: 100%; }
 .format-image { width: 100%; aspect-ratio: 3 / 2; background: var(--paper); border-radius: 3px; overflow: hidden; }
 .format-image img { display: block; width: 100%; height: 100%; object-fit: contain; object-position: center; }
 .format-caption { padding: 14px 12px 16px; }
-.format-caption h3 { font-size: clamp(26px, 2.2vw, 34px); font-weight: 500; line-height: 1.25; }
+.format-caption h3 { font-size: clamp(26px, 2.2vw, 34px); font-weight: 400; line-height: 1.25; }
 .format-caption h3 > span { text-decoration: underline; text-decoration-color: var(--gold); text-decoration-thickness: 2.2px; text-underline-offset: .18em; text-decoration-skip-ink: auto; }
 .format-caption p { margin-top: 14px; color: var(--muted); font-size: 1.125rem; line-height: 1.45; }
 .evening-plan { margin-top: 44px; }
@@ -137,7 +137,7 @@ img { display: block; max-width: 100%; }
 .contact { margin-top: 30px; padding: 24px 0; border-block: 1px solid var(--rule); display: grid; grid-template-columns: 47% 53%; align-items: center; }
 .contact h2 { font-size: clamp(30px, 3vw, 44px); padding-right: 28px; }
 .contact-action { padding: 0 9%; border-left: 1px solid var(--rule); text-align: center; }
-.instagram-button { min-height: 56px; display: flex; align-items: center; justify-content: center; gap: 10px; padding: 15px 20px; background: var(--gold-text); color: #fcfaf5; font-size: 14px; font-weight: 600; letter-spacing: .06em; transition: background-color 160ms ease; }
+.instagram-button { min-height: 56px; display: flex; align-items: center; justify-content: center; gap: 10px; padding: 15px 20px; background: var(--gold-text); color: #fcfaf5; font-size: 14px; font-weight: 400; letter-spacing: .06em; transition: background-color 160ms ease; }
 .instagram-button:hover { background: #5e451a; color: #fff; }
 .instagram-handle { font-size: 16px; margin-top: 5px; }
 .contact-help { font-size: 13px; line-height: 1.5; color: var(--muted); margin-top: 10px; }
@@ -258,14 +258,14 @@ img { display: block; max-width: 100%; }
 }
 @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } *, *::before, *::after { transition: none !important; animation: none !important; } }
 
-/* Selected Shantell Sans: preserve the paper composition with its wider letterforms. */
+/* Selected Bellota Text: preserve the typography scale and paper composition of the approved mockup. */
 .hero-copy h1 em { font-style: normal; }
-.header-action { font-size: 1rem; font-weight: 500; letter-spacing: 0; }
+.header-action { font-size: 1rem; font-weight: 400; letter-spacing: 0; }
 .header-action small { font-size: .875rem; }
 .wordmark { font-size: 1.5rem; letter-spacing: 0; }
 .award-note { font-size: 1.125rem; line-height: 1.45; }
 .station-copy p, .station-menu .station-copy p { font-size: 1.125rem; line-height: 1.45; }
-.film-retry, .instagram-button { font-size: 1rem; font-weight: 500; letter-spacing: 0; }
+.film-retry, .instagram-button { font-size: 1rem; font-weight: 400; letter-spacing: 0; }
 .preparation-film figcaption { font-size: 1rem; line-height: 1.4; }
 .instagram-handle { font-size: 1.125rem; }
 .contact-help { font-size: 1rem; line-height: 1.45; }
