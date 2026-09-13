@@ -1,418 +1,309 @@
 {
-  "google_fonts_commit": "809e4d8b8d7e9364a914909bb777679606c178b8",
-  "ibm_plex_license_commit": "bf260093582f04622aacc1e9f9ca604d7ccd0c42",
-  "tools": {
-    "fonttools": "4.61.1",
-    "brotli": "1.2.0",
-    "zopfli": "0.4.3"
-  },
-  "layout_features": "kern,liga,tnum,lnum,locl,ccmp,mark,mkmk",
-  "notes": [
-    "Spectral and Golos use exactly the user-requested Unicode ranges. Missing entries are absent in the official source, typically controls or unsupported symbols, not removed requested glyphs.",
-    "Shaping features ccmp/mark/mkmk preserve combining accents; lnum preserves requested lining figures in addition to kern/liga/tnum/locl.",
-    "Golos Text upstream is already variable wght 400-900, so no instancing or axis trimming is needed.",
-    "IBM Plex Mono WOFF2 files are unchanged official Google Fonts v20 subsets. Do not re-subset them under the reserved name Plex.",
-    "IBM's official WOFF2 cmap includes a few additional glyphs and combining marks; see each output's extra_codepoints. CSS ranges remain limited to the requested scheme."
-  ],
-  "sources": [
+  "source": "Official Google Fonts WOFF2, static responses for Chrome 60; files redistributed without changes.",
+  "css_source": "https://fonts.googleapis.com/css2?family=Oranienbaum&family=PT+Mono&family=Ysabeau+Office:ital,wght@0,400;0,500;0,600;1,400&display=swap",
+  "license_commit": "809e4d8b8d7e9364a914909bb777679606c178b8",
+  "files": [
     {
-      "file": "sources/Spectral-Regular.ttf",
-      "url": "https://raw.githubusercontent.com/google/fonts/809e4d8b8d7e9364a914909bb777679606c178b8/ofl/spectral/Spectral-Regular.ttf",
-      "sha256": "c89021dc20720c8d0dcf40b0b2f6e00c13665fa8041717f581396f51b8c78f5d"
+      "family": "Oranienbaum",
+      "weight": 400,
+      "style": "normal",
+      "subset": "cyrillic",
+      "file": "oranienbaum-cyrillic.woff2",
+      "url": "https://fonts.gstatic.com/s/oranienbaum/v16/OZpHg_txtzZKMuXLIVrx-0zk5E3VdYHdgXc.woff2",
+      "sha256": "076ad3ef04f90d2deb06dd1034d099c18946522663845802bb09534a717576e5",
+      "bytes": 6652,
+      "actual_family": "Oranienbaum",
+      "postscript_name": "Oranienbaum-Regular",
+      "actual_weight": 400,
+      "italic_angle": 0.0,
+      "variable": false,
+      "cmap_count": 97,
+      "russian_letters_complete": true,
+      "digit_advance_widths": null
     },
     {
-      "file": "sources/Spectral-Medium.ttf",
-      "url": "https://raw.githubusercontent.com/google/fonts/809e4d8b8d7e9364a914909bb777679606c178b8/ofl/spectral/Spectral-Medium.ttf",
-      "sha256": "f385bc588599c879112272711d4acecc126674009d747a27284f59e93a240e83"
+      "family": "Oranienbaum",
+      "weight": 400,
+      "style": "normal",
+      "subset": "latin",
+      "file": "oranienbaum-latin.woff2",
+      "url": "https://fonts.gstatic.com/s/oranienbaum/v16/OZpHg_txtzZKMuXLIVrx-0zg5E3VdYHd.woff2",
+      "sha256": "9e993f98e6f9e85892f61fe97b5a1d01adbd9a2d76b1b8cd14875653cbb4efa1",
+      "bytes": 11244,
+      "actual_family": "Oranienbaum",
+      "postscript_name": "Oranienbaum-Regular",
+      "actual_weight": 400,
+      "italic_angle": 0.0,
+      "variable": false,
+      "cmap_count": 214,
+      "russian_letters_complete": null,
+      "digit_advance_widths": [
+        520,
+        290,
+        475,
+        480,
+        525,
+        470,
+        495,
+        443,
+        510,
+        495
+      ]
     },
     {
-      "file": "sources/Spectral-Italic.ttf",
-      "url": "https://raw.githubusercontent.com/google/fonts/809e4d8b8d7e9364a914909bb777679606c178b8/ofl/spectral/Spectral-Italic.ttf",
-      "sha256": "7ec97244259db4008c4b1224c7914e5371c797c0044af9d85c2d761ba0e5f787"
+      "family": "PT Mono",
+      "weight": 400,
+      "style": "normal",
+      "subset": "cyrillic",
+      "file": "pt-mono-400-cyrillic.woff2",
+      "url": "https://fonts.gstatic.com/s/ptmono/v14/9oRONYoBnWILk-9AnCszM_HxEcn7Hg.woff2",
+      "sha256": "8d5cc2b1accc421d93a2f670b8c5b06e54a3a86005d3dae29a4512e3d2ea7dc0",
+      "bytes": 6224,
+      "actual_family": "PT Mono",
+      "postscript_name": "PTMono-Regular",
+      "actual_weight": 400,
+      "italic_angle": 0.0,
+      "variable": false,
+      "cmap_count": 100,
+      "russian_letters_complete": true,
+      "digit_advance_widths": null
     },
     {
-      "file": "sources/GolosText-wght.ttf",
-      "url": "https://raw.githubusercontent.com/google/fonts/809e4d8b8d7e9364a914909bb777679606c178b8/ofl/golostext/GolosText%5Bwght%5D.ttf",
-      "sha256": "17bb58fb69aec2dfb047a2ebf52534023e9b688c97a6b7ac795b0a72912c2063"
+      "family": "PT Mono",
+      "weight": 400,
+      "style": "normal",
+      "subset": "latin",
+      "file": "pt-mono-400-latin.woff2",
+      "url": "https://fonts.gstatic.com/s/ptmono/v14/9oRONYoBnWILk-9AnC8zM_HxEck.woff2",
+      "sha256": "d53294abf7900ccbfdf3bf9d259e5f062626604f616598912fccbd5ab8365492",
+      "bytes": 10028,
+      "actual_family": "PT Mono",
+      "postscript_name": "PTMono-Regular",
+      "actual_weight": 400,
+      "italic_angle": 0.0,
+      "variable": false,
+      "cmap_count": 218,
+      "russian_letters_complete": null,
+      "digit_advance_widths": [
+        600,
+        600,
+        600,
+        600,
+        600,
+        600,
+        600,
+        600,
+        600,
+        600
+      ]
     },
     {
-      "file": "licenses/SPECTRAL-OFL.txt",
-      "url": "https://raw.githubusercontent.com/google/fonts/809e4d8b8d7e9364a914909bb777679606c178b8/ofl/spectral/OFL.txt",
-      "sha256": "501d6ceca8e552630fe3aa9442b9a818565680a1a2f79f3fb8c13d6f309a9e98"
+      "family": "Ysabeau Office",
+      "weight": 400,
+      "style": "italic",
+      "subset": "cyrillic",
+      "file": "ysabeau-office-400-italic-cyrillic.woff2",
+      "url": "https://fonts.gstatic.com/s/ysabeauoffice/v4/LDIkapaZKhM9RuQIp8FmdYrPPPLMqbE5B_kXOvTOT-D3Ih3uajr6GqGgftQ.woff2",
+      "sha256": "2da0e82fa8540dc2171d048002b807747a33ea674ceed0a4f59dfd113097d42c",
+      "bytes": 10364,
+      "actual_family": "Ysabeau Office",
+      "postscript_name": "YsabeauOffice-Italic",
+      "actual_weight": 400,
+      "italic_angle": -12.0,
+      "variable": false,
+      "cmap_count": 107,
+      "russian_letters_complete": true,
+      "digit_advance_widths": null
     },
     {
-      "file": "licenses/GOLOS-TEXT-OFL.txt",
-      "url": "https://raw.githubusercontent.com/google/fonts/809e4d8b8d7e9364a914909bb777679606c178b8/ofl/golostext/OFL.txt",
-      "sha256": "ff532f9e8789f09a9fdffc3c0954eedfb0a48be77b2e2eb90f5f82e4f347f50c"
+      "family": "Ysabeau Office",
+      "weight": 400,
+      "style": "italic",
+      "subset": "latin",
+      "file": "ysabeau-office-400-italic-latin.woff2",
+      "url": "https://fonts.gstatic.com/s/ysabeauoffice/v4/LDIkapaZKhM9RuQIp8FmdYrPPPLMqbE5B_kXOvTOT-D3Ih3qajr6GqGg.woff2",
+      "sha256": "a2492e024c2d77fd06089c033f33a1de7c752ac2c8d365cb892fe05f2fab01b7",
+      "bytes": 16608,
+      "actual_family": "Ysabeau Office",
+      "postscript_name": "YsabeauOffice-Italic",
+      "actual_weight": 400,
+      "italic_angle": -12.0,
+      "variable": false,
+      "cmap_count": 229,
+      "russian_letters_complete": null,
+      "digit_advance_widths": [
+        517,
+        517,
+        517,
+        517,
+        517,
+        517,
+        517,
+        517,
+        517,
+        517
+      ]
     },
     {
-      "file": "licenses/IBM-PLEX-MONO-OFL.txt",
-      "url": "https://raw.githubusercontent.com/IBM/plex/bf260093582f04622aacc1e9f9ca604d7ccd0c42/LICENSE.txt",
-      "sha256": "7e6b2818edbd8f6a01ae80641cc8f16a51080d08fb4e532be3a0b6f74adb07da"
+      "family": "Ysabeau Office",
+      "weight": 400,
+      "style": "normal",
+      "subset": "cyrillic",
+      "file": "ysabeau-office-400-cyrillic.woff2",
+      "url": "https://fonts.gstatic.com/s/ysabeauoffice/v4/LDImapaZKhM9RuQIp8FmdYrPPNjFm07hbpKNlPPbh6MvYi3oYD3YGJGh.woff2",
+      "sha256": "c6b4aaa8299159678df821d8e550b8a4394ea72d307a2e17491ff6df3a30ea87",
+      "bytes": 9128,
+      "actual_family": "Ysabeau Office",
+      "postscript_name": "YsabeauOffice-Regular",
+      "actual_weight": 400,
+      "italic_angle": 0.0,
+      "variable": false,
+      "cmap_count": 107,
+      "russian_letters_complete": true,
+      "digit_advance_widths": null
     },
     {
-      "file": "fonts/ibm-plex-mono-400-cyrillic.woff2",
-      "url": "https://fonts.gstatic.com/s/ibmplexmono/v20/-F63fjptAgt5VM-kVkqdyU8n1isq131nj-otFQ.woff2",
-      "sha256": "7b59d6bf7f8b8408ac28f27d01dca9a890abeae77045d343b1d8ccb089a92e54"
+      "family": "Ysabeau Office",
+      "weight": 400,
+      "style": "normal",
+      "subset": "latin",
+      "file": "ysabeau-office-400-latin.woff2",
+      "url": "https://fonts.gstatic.com/s/ysabeauoffice/v4/LDImapaZKhM9RuQIp8FmdYrPPNjFm07hbpKNlPPbh6MvZi3oYD3YGA.woff2",
+      "sha256": "4f41dad4073a20983f1228eda9922560ad2c4e9438e01c915245a1f971640c83",
+      "bytes": 15552,
+      "actual_family": "Ysabeau Office",
+      "postscript_name": "YsabeauOffice-Regular",
+      "actual_weight": 400,
+      "italic_angle": 0.0,
+      "variable": false,
+      "cmap_count": 229,
+      "russian_letters_complete": null,
+      "digit_advance_widths": [
+        517,
+        517,
+        517,
+        517,
+        517,
+        517,
+        517,
+        517,
+        517,
+        517
+      ]
     },
     {
-      "file": "fonts/ibm-plex-mono-400-latin.woff2",
-      "url": "https://fonts.gstatic.com/s/ibmplexmono/v20/-F63fjptAgt5VM-kVkqdyU8n1i8q131nj-o.woff2",
-      "sha256": "c36f509c0a8f9f85f29cb44bc8701d8a9e0b14c499e77a884f789ead7093a7ac"
+      "family": "Ysabeau Office",
+      "weight": 500,
+      "style": "normal",
+      "subset": "cyrillic",
+      "file": "ysabeau-office-500-cyrillic.woff2",
+      "url": "https://fonts.gstatic.com/s/ysabeauoffice/v4/LDImapaZKhM9RuQIp8FmdYrPPNjFm07hbpKNlPPbtaMvYi3oYD3YGJGh.woff2",
+      "sha256": "767bdadbacb1193f33ac8892f374a6cab62ecc55b4840ead5c4608cd3afc85bb",
+      "bytes": 9244,
+      "actual_family": "Ysabeau Office Medium",
+      "postscript_name": "YsabeauOffice-Medium",
+      "actual_weight": 500,
+      "italic_angle": 0.0,
+      "variable": false,
+      "cmap_count": 107,
+      "russian_letters_complete": true,
+      "digit_advance_widths": null
+    },
+    {
+      "family": "Ysabeau Office",
+      "weight": 500,
+      "style": "normal",
+      "subset": "latin",
+      "file": "ysabeau-office-500-latin.woff2",
+      "url": "https://fonts.gstatic.com/s/ysabeauoffice/v4/LDImapaZKhM9RuQIp8FmdYrPPNjFm07hbpKNlPPbtaMvZi3oYD3YGA.woff2",
+      "sha256": "988bdd3777e56e9c52c200d8570076d27264d60505c70d1531bf11cdbff9b3b2",
+      "bytes": 15720,
+      "actual_family": "Ysabeau Office Medium",
+      "postscript_name": "YsabeauOffice-Medium",
+      "actual_weight": 500,
+      "italic_angle": 0.0,
+      "variable": false,
+      "cmap_count": 229,
+      "russian_letters_complete": null,
+      "digit_advance_widths": [
+        517,
+        517,
+        517,
+        517,
+        517,
+        517,
+        517,
+        517,
+        517,
+        517
+      ]
+    },
+    {
+      "family": "Ysabeau Office",
+      "weight": 600,
+      "style": "normal",
+      "subset": "cyrillic",
+      "file": "ysabeau-office-600-cyrillic.woff2",
+      "url": "https://fonts.gstatic.com/s/ysabeauoffice/v4/LDImapaZKhM9RuQIp8FmdYrPPNjFm07hbpKNlPPbWaQvYi3oYD3YGJGh.woff2",
+      "sha256": "e50cdf257e806e24e3f17205503da577a4c3903e33f8ee6fb4727325889f82e2",
+      "bytes": 9228,
+      "actual_family": "Ysabeau Office SemiBold",
+      "postscript_name": "YsabeauOffice-SemiBold",
+      "actual_weight": 600,
+      "italic_angle": 0.0,
+      "variable": false,
+      "cmap_count": 107,
+      "russian_letters_complete": true,
+      "digit_advance_widths": null
+    },
+    {
+      "family": "Ysabeau Office",
+      "weight": 600,
+      "style": "normal",
+      "subset": "latin",
+      "file": "ysabeau-office-600-latin.woff2",
+      "url": "https://fonts.gstatic.com/s/ysabeauoffice/v4/LDImapaZKhM9RuQIp8FmdYrPPNjFm07hbpKNlPPbWaQvZi3oYD3YGA.woff2",
+      "sha256": "906dd5b9ce9a898eb7da1302ba231951c9b1361a23da21a0a418107f34222ea9",
+      "bytes": 15768,
+      "actual_family": "Ysabeau Office SemiBold",
+      "postscript_name": "YsabeauOffice-SemiBold",
+      "actual_weight": 600,
+      "italic_angle": 0.0,
+      "variable": false,
+      "cmap_count": 229,
+      "russian_letters_complete": null,
+      "digit_advance_widths": [
+        517,
+        517,
+        517,
+        517,
+        517,
+        517,
+        517,
+        517,
+        517,
+        517
+      ]
     }
   ],
-  "outputs": [
+  "licenses": [
     {
-      "file": "fonts/golos-text-400-900-cyrillic.woff2",
-      "bytes": 21556,
-      "sha256": "6bce3646e823397cf60e28c352253921156c93a4a93b37992d84fb5ca2f26f4c",
-      "family": "Golos Text",
-      "subfamily": "Regular",
-      "postscript_name": "GolosText-Regular",
-      "weight": 400,
-      "italic_angle": 0.0,
-      "axes": [
-        {
-          "tag": "wght",
-          "min": 400.0,
-          "default": 400.0,
-          "max": 900.0
-        }
-      ],
-      "cmap_count": 98,
-      "cmap_unicode_ranges": "U+0301,U+0401-040C,U+040E-044F,U+0451-045C,U+045E-045F,U+0490-0491,U+04B0-04B1,U+2116",
-      "css_unicode_range": "U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116",
-      "requested_codepoints_absent": "U+0400,U+040D,U+0450,U+045D",
-      "extra_codepoints": "",
-      "russian_letters_complete": true,
-      "numero_sign": true,
-      "digit_advance_widths": {},
-      "layout_features": {
-        "GSUB": [
-          "ccmp"
-        ],
-        "GPOS": [
-          "kern",
-          "mark",
-          "mkmk"
-        ]
-      }
+      "file": "ORANIENBAUM-OFL.txt",
+      "url": "https://raw.githubusercontent.com/google/fonts/809e4d8b8d7e9364a914909bb777679606c178b8/ofl/oranienbaum/OFL.txt",
+      "sha256": "d941c5b788d47aa469ee54e30f4c12d6a43c45a295f10c568bdf9772f2893b7b",
+      "bytes": 4434
     },
     {
-      "file": "fonts/golos-text-400-900-latin.woff2",
-      "bytes": 35732,
-      "sha256": "fd7f9e29335be61f3e3e9108626eb5ae3ed46ab0fb452f0de44eeccb73c102dd",
-      "family": "Golos Text",
-      "subfamily": "Regular",
-      "postscript_name": "GolosText-Regular",
-      "weight": 400,
-      "italic_angle": 0.0,
-      "axes": [
-        {
-          "tag": "wght",
-          "min": 400.0,
-          "default": 400.0,
-          "max": 900.0
-        }
-      ],
-      "cmap_count": 228,
-      "cmap_unicode_ranges": "U+0000,U+000D,U+0020-007E,U+00A0-00FF,U+0131,U+0152-0153,U+02BC,U+02C6,U+02DA,U+02DC,U+2009,U+2010-2014,U+2018-201A,U+201C-201E,U+2020-2022,U+2026,U+202F-2030,U+2039-203A,U+2044,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF",
-      "css_unicode_range": "U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD",
-      "requested_codepoints_absent": "U+0001-000C,U+000E-001F,U+007F-009F,U+02BB,U+2000-2008,U+200A-200F,U+2015-2017,U+201B,U+201F,U+2023-2025,U+2027-202E,U+2031-2038,U+203B-2043,U+2045-206F,U+FFFD",
-      "extra_codepoints": "",
-      "russian_letters_complete": null,
-      "numero_sign": false,
-      "digit_advance_widths": {
-        "0": 620,
-        "1": 485,
-        "2": 580,
-        "3": 585,
-        "4": 610,
-        "5": 580,
-        "6": 605,
-        "7": 530,
-        "8": 610,
-        "9": 605
-      },
-      "layout_features": {
-        "GSUB": [
-          "locl",
-          "tnum"
-        ],
-        "GPOS": [
-          "kern"
-        ]
-      }
+      "file": "YSABEAU-OFFICE-OFL.txt",
+      "url": "https://raw.githubusercontent.com/google/fonts/809e4d8b8d7e9364a914909bb777679606c178b8/ofl/ysabeauoffice/OFL.txt",
+      "sha256": "1343b9162a2d24f685767766ea23a75a80b88ba13ba421244e65b72210578b78",
+      "bytes": 4391
     },
     {
-      "file": "fonts/ibm-plex-mono-400-cyrillic.woff2",
-      "bytes": 5476,
-      "sha256": "7b59d6bf7f8b8408ac28f27d01dca9a890abeae77045d343b1d8ccb089a92e54",
-      "family": "IBM Plex Mono",
-      "subfamily": "Regular",
-      "postscript_name": "IBMPlexMono-Regular",
-      "weight": 400,
-      "italic_angle": 0.0,
-      "axes": [],
-      "cmap_count": 108,
-      "cmap_unicode_ranges": "U+0000,U+000D,U+0020,U+0061-0062,U+00A0,U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116",
-      "css_unicode_range": "U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116",
-      "requested_codepoints_absent": "",
-      "extra_codepoints": "U+0000,U+000D,U+0020,U+0061-0062,U+00A0",
-      "russian_letters_complete": true,
-      "numero_sign": true,
-      "digit_advance_widths": {},
-      "layout_features": {
-        "GSUB": [],
-        "GPOS": [
-          "mark"
-        ]
-      }
-    },
-    {
-      "file": "fonts/ibm-plex-mono-400-latin.woff2",
-      "bytes": 10052,
-      "sha256": "c36f509c0a8f9f85f29cb44bc8701d8a9e0b14c499e77a884f789ead7093a7ac",
-      "family": "IBM Plex Mono",
-      "subfamily": "Regular",
-      "postscript_name": "IBMPlexMono-Regular",
-      "weight": 400,
-      "italic_angle": 0.0,
-      "axes": [],
-      "cmap_count": 229,
-      "cmap_unicode_ranges": "U+0000,U+000D,U+0020-007E,U+00A0-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0300-0301,U+0303-0304,U+0308-0309,U+0323,U+2013-2014,U+2018-201A,U+201C-201E,U+2022,U+2026,U+2032-2033,U+2039-203A,U+2044,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215",
-      "css_unicode_range": "U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD",
-      "requested_codepoints_absent": "U+0001-000C,U+000E-001F,U+007F-009F,U+2000-2012,U+2015-2017,U+201B,U+201F-2021,U+2023-2025,U+2027-2031,U+2034-2038,U+203B-2043,U+2045-206F,U+FEFF,U+FFFD",
-      "extra_codepoints": "U+0300-0301,U+0303-0304,U+0308-0309,U+0323",
-      "russian_letters_complete": null,
-      "numero_sign": false,
-      "digit_advance_widths": {
-        "0": 600,
-        "1": 600,
-        "2": 600,
-        "3": 600,
-        "4": 600,
-        "5": 600,
-        "6": 600,
-        "7": 600,
-        "8": 600,
-        "9": 600
-      },
-      "layout_features": {
-        "GSUB": [
-          "ccmp",
-          "dnom",
-          "frac",
-          "numr"
-        ],
-        "GPOS": [
-          "mark"
-        ]
-      }
-    },
-    {
-      "file": "fonts/spectral-400-cyrillic.woff2",
-      "bytes": 14804,
-      "sha256": "218854ebaf0195e95da37dfdfee1a8585641e8c79f41482760addd4b72fad803",
-      "family": "Spectral",
-      "subfamily": "Regular",
-      "postscript_name": "Spectral-Regular",
-      "weight": 400,
-      "italic_angle": 0.0,
-      "axes": [],
-      "cmap_count": 98,
-      "cmap_unicode_ranges": "U+0301,U+0401-040C,U+040E-044F,U+0451-045C,U+045E-045F,U+0490-0491,U+04B0-04B1,U+2116",
-      "css_unicode_range": "U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116",
-      "requested_codepoints_absent": "U+0400,U+040D,U+0450,U+045D",
-      "extra_codepoints": "",
-      "russian_letters_complete": true,
-      "numero_sign": true,
-      "digit_advance_widths": {},
-      "layout_features": {
-        "GSUB": [
-          "ccmp",
-          "locl"
-        ],
-        "GPOS": [
-          "kern",
-          "mark"
-        ]
-      }
-    },
-    {
-      "file": "fonts/spectral-400-italic-cyrillic.woff2",
-      "bytes": 15692,
-      "sha256": "3d5d4e4c0f7438985867178dbed453dc4dc1bab868236d7a28b6bc2e7faf0f8d",
-      "family": "Spectral",
-      "subfamily": "Italic",
-      "postscript_name": "Spectral-Italic",
-      "weight": 400,
-      "italic_angle": -10.0,
-      "axes": [],
-      "cmap_count": 98,
-      "cmap_unicode_ranges": "U+0301,U+0401-040C,U+040E-044F,U+0451-045C,U+045E-045F,U+0490-0491,U+04B0-04B1,U+2116",
-      "css_unicode_range": "U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116",
-      "requested_codepoints_absent": "U+0400,U+040D,U+0450,U+045D",
-      "extra_codepoints": "",
-      "russian_letters_complete": true,
-      "numero_sign": true,
-      "digit_advance_widths": {},
-      "layout_features": {
-        "GSUB": [
-          "ccmp",
-          "locl"
-        ],
-        "GPOS": [
-          "kern",
-          "mark"
-        ]
-      }
-    },
-    {
-      "file": "fonts/spectral-400-italic-latin.woff2",
-      "bytes": 20136,
-      "sha256": "f73c1b39425523d0e1fa14be054c4ee795ed2d12c587dbbe45cd33c4a27b5dfb",
-      "family": "Spectral",
-      "subfamily": "Italic",
-      "postscript_name": "Spectral-Italic",
-      "weight": 400,
-      "italic_angle": -10.0,
-      "axes": [],
-      "cmap_count": 232,
-      "cmap_unicode_ranges": "U+0000,U+000D,U+0020-007E,U+00A0-00AC,U+00AE-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2007-200B,U+2010,U+2012-2015,U+2018-201A,U+201C-201E,U+2020-2022,U+2026,U+2030,U+2032-2033,U+2039-203A,U+2044,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215",
-      "css_unicode_range": "U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD",
-      "requested_codepoints_absent": "U+0001-000C,U+000E-001F,U+007F-009F,U+00AD,U+2000-2006,U+200C-200F,U+2011,U+2016-2017,U+201B,U+201F,U+2023-2025,U+2027-202F,U+2031,U+2034-2038,U+203B-2043,U+2045-206F,U+FEFF,U+FFFD",
-      "extra_codepoints": "",
-      "russian_letters_complete": null,
-      "numero_sign": false,
-      "digit_advance_widths": {
-        "0": 500,
-        "1": 500,
-        "2": 500,
-        "3": 500,
-        "4": 500,
-        "5": 500,
-        "6": 500,
-        "7": 500,
-        "8": 500,
-        "9": 500
-      },
-      "layout_features": {
-        "GSUB": [
-          "liga",
-          "locl"
-        ],
-        "GPOS": [
-          "kern"
-        ]
-      }
-    },
-    {
-      "file": "fonts/spectral-400-latin.woff2",
-      "bytes": 19264,
-      "sha256": "aaf421c01fd15bb30963da49441d42d474659079e70701a43c5414039c8b4e6f",
-      "family": "Spectral",
-      "subfamily": "Regular",
-      "postscript_name": "Spectral-Regular",
-      "weight": 400,
-      "italic_angle": 0.0,
-      "axes": [],
-      "cmap_count": 232,
-      "cmap_unicode_ranges": "U+0000,U+000D,U+0020-007E,U+00A0-00AC,U+00AE-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2007-200B,U+2010,U+2012-2015,U+2018-201A,U+201C-201E,U+2020-2022,U+2026,U+2030,U+2032-2033,U+2039-203A,U+2044,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215",
-      "css_unicode_range": "U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD",
-      "requested_codepoints_absent": "U+0001-000C,U+000E-001F,U+007F-009F,U+00AD,U+2000-2006,U+200C-200F,U+2011,U+2016-2017,U+201B,U+201F,U+2023-2025,U+2027-202F,U+2031,U+2034-2038,U+203B-2043,U+2045-206F,U+FEFF,U+FFFD",
-      "extra_codepoints": "",
-      "russian_letters_complete": null,
-      "numero_sign": false,
-      "digit_advance_widths": {
-        "0": 500,
-        "1": 500,
-        "2": 500,
-        "3": 500,
-        "4": 500,
-        "5": 500,
-        "6": 500,
-        "7": 500,
-        "8": 500,
-        "9": 500
-      },
-      "layout_features": {
-        "GSUB": [
-          "liga",
-          "locl"
-        ],
-        "GPOS": [
-          "kern"
-        ]
-      }
-    },
-    {
-      "file": "fonts/spectral-500-cyrillic.woff2",
-      "bytes": 16120,
-      "sha256": "f4d0a8dd5cfb09d5bf020fcc452c1fda0f5a8321680e788746b581a087f206d4",
-      "family": "Spectral Medium",
-      "subfamily": "Regular",
-      "postscript_name": "Spectral-Medium",
-      "weight": 500,
-      "italic_angle": 0.0,
-      "axes": [],
-      "cmap_count": 98,
-      "cmap_unicode_ranges": "U+0301,U+0401-040C,U+040E-044F,U+0451-045C,U+045E-045F,U+0490-0491,U+04B0-04B1,U+2116",
-      "css_unicode_range": "U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116",
-      "requested_codepoints_absent": "U+0400,U+040D,U+0450,U+045D",
-      "extra_codepoints": "",
-      "russian_letters_complete": true,
-      "numero_sign": true,
-      "digit_advance_widths": {},
-      "layout_features": {
-        "GSUB": [
-          "ccmp",
-          "locl"
-        ],
-        "GPOS": [
-          "kern",
-          "mark"
-        ]
-      }
-    },
-    {
-      "file": "fonts/spectral-500-latin.woff2",
-      "bytes": 20308,
-      "sha256": "701d98aac88df83e9b84bd3dd9feee494e15370860e45d136311e88b8cd53165",
-      "family": "Spectral Medium",
-      "subfamily": "Regular",
-      "postscript_name": "Spectral-Medium",
-      "weight": 500,
-      "italic_angle": 0.0,
-      "axes": [],
-      "cmap_count": 232,
-      "cmap_unicode_ranges": "U+0000,U+000D,U+0020-007E,U+00A0-00AC,U+00AE-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2007-200B,U+2010,U+2012-2015,U+2018-201A,U+201C-201E,U+2020-2022,U+2026,U+2030,U+2032-2033,U+2039-203A,U+2044,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215",
-      "css_unicode_range": "U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD",
-      "requested_codepoints_absent": "U+0001-000C,U+000E-001F,U+007F-009F,U+00AD,U+2000-2006,U+200C-200F,U+2011,U+2016-2017,U+201B,U+201F,U+2023-2025,U+2027-202F,U+2031,U+2034-2038,U+203B-2043,U+2045-206F,U+FEFF,U+FFFD",
-      "extra_codepoints": "",
-      "russian_letters_complete": null,
-      "numero_sign": false,
-      "digit_advance_widths": {
-        "0": 514,
-        "1": 514,
-        "2": 514,
-        "3": 514,
-        "4": 514,
-        "5": 514,
-        "6": 514,
-        "7": 514,
-        "8": 514,
-        "9": 514
-      },
-      "layout_features": {
-        "GSUB": [
-          "liga",
-          "locl"
-        ],
-        "GPOS": [
-          "kern"
-        ]
-      }
+      "file": "PT-MONO-OFL.txt",
+      "url": "https://raw.githubusercontent.com/google/fonts/809e4d8b8d7e9364a914909bb777679606c178b8/ofl/ptmono/OFL.txt",
+      "sha256": "511125dc85198375795fdbc109d088654d3b7f9dbd3ccb7bf93d844aef0b153c",
+      "bytes": 4448
     }
   ]
 }

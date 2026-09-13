@@ -1,0 +1,20 @@
+{
+  "passed": true,
+  "error": {
+    "text": "Повторить",
+    "family": "\"Ysabeau Office\", system-ui, -apple-system, sans-serif",
+    "weight": "500",
+    "width": 98.21875,
+    "height": 44
+  },
+  "retry": {
+    "playing": true,
+    "controls": true,
+    "muted": true,
+    "inline": true,
+    "error": false
+  },
+  "offscreenPaused": true,
+  "scrollResumed": true,
+  "reducedMotionPaused": true
+}

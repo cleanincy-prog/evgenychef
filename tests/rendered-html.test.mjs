@@ -79,16 +79,19 @@ test("keeps the loopback preview private while advertising the public canonical 
   assert.match(await sitemap.text(), /<loc>https:\/\/evgenychef\.com\/<\/loc>/i);
 });
 
-test("provides only functional page anchors and the exact Instagram destination", () => {
+test("provides functional page anchors, photo attribution and the exact Instagram destination", async () => {
   const anchors = tags(html, "a");
   assert.ok(anchors.length > 0);
   const ids = new Set([...html.matchAll(/\bid="([^"]+)"/g)].map(match => decode(match[1])));
   for (const anchor of anchors) {
-    assert.ok(anchor.href?.startsWith("#") || anchor.href === instagram, `Unexpected link: ${anchor.href}`);
+    assert.ok(anchor.href?.startsWith("#") || anchor.href === instagram || anchor.href === "/media/menu/exploded/credits.html", `Unexpected link: ${anchor.href}`);
     if (anchor.href?.startsWith("#") && anchor.href.length > 1) assert.ok(ids.has(decodeURIComponent(anchor.href.slice(1))), `Missing anchor target: ${anchor.href}`);
     if (anchor.target === "_blank") assert.match(anchor.rel || "", /noopener|noreferrer/);
   }
   assert.ok(anchors.some(anchor => anchor.href === instagram));
+  const credit = await localFetch("/media/menu/exploded/credits.html");
+  assert.equal(credit.status, 200, "Photographic source and license information must be available");
+  assert.match(await credit.text(), /creativecommons.org\/licenses\/by-sa\/4.0/);
   assert.equal(tags(html, "form").length, 0, "This page must not send an automatic inquiry");
 });
 
@@ -104,23 +107,24 @@ test("renders 63 independent documentary collage photos and the real project ass
   const required = [
     "/media/web/chef-hero-apron-576.webp",
     "/media/web/masterchef-640.webp",
-    "/media/web/duck-plate-960.webp",
+    "/media/menu/exploded/scallop-plate-600.webp",
+    "/media/menu/exploded/scallop-360.webp",
   ];
   for (const path of required) assert.ok(imageTags.some(img => img.src === path), `Missing real asset: ${path}`);
   for (const img of imageTags) assert.ok(Object.hasOwn(img, "alt"), `Image requires alt, including decorative empty alt: ${img.src}`);
   const imagePaths = imageTags.flatMap(img => {
     assert.ok(Number(img.width) > 0 && Number(img.height) > 0, `Image requires intrinsic dimensions: ${img.src}`);
-    assert.ok(img.srcset && img.sizes, `Responsive image requires source choices and display sizes: ${img.src}`);
-    return [img.src, ...img.srcset.split(",").map(source => source.trim().split(/\s+/)[0])];
+    if (!img.src.endsWith(".svg") && Number(img.width) > 320) assert.ok(img.srcset && img.sizes, `Large photographic image requires responsive source choices: ${img.src}`);
+    return [img.src, ...(img.srcset || "").split(",").filter(Boolean).map(source => source.trim().split(/\s+/)[0])];
   });
   const uniqueImagePaths = [...new Set(imagePaths)];
   // Keep local HTTP concurrency bounded while checking every responsive variant.
   for (let start = 0; start < uniqueImagePaths.length; start += 8) {
     await Promise.all(uniqueImagePaths.slice(start, start + 8).map(async path => {
-      assert.match(path, /^\/media\/web\/.+\.webp$/, `Page images must use optimized WebP: ${path}`);
+      assert.match(path, /^\/media\/(?:web\/.+\.webp|menu\/exploded\/[a-z0-9-]+\.(?:webp|svg))$/, `Page images must use local optimized photographs or the scene SVG: ${path}`);
       const response = await localFetch(path, { method: "HEAD" });
       assert.equal(response.status, 200, `Image must be available: ${path}`);
-      assert.match(response.headers.get("content-type") || "", /^image\/webp/);
+      assert.match(response.headers.get("content-type") || "", path.endsWith(".svg") ? /^image\/svg\+xml/ : /^image\/webp/);
     }));
   }
 });

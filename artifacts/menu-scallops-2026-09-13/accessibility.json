@@ -1,0 +1,35 @@
+[
+  {
+    "width": 1440,
+    "fontSize": "32px",
+    "overflow": false,
+    "menuOverflow": false,
+    "oversized": [],
+    "annotationOverlaps": [],
+    "creditFocus": true,
+    "focusOutline": "solid",
+    "animation": "none"
+  },
+  {
+    "width": 1280,
+    "fontSize": "32px",
+    "overflow": false,
+    "menuOverflow": false,
+    "oversized": [],
+    "annotationOverlaps": [],
+    "creditFocus": true,
+    "focusOutline": "solid",
+    "animation": "none"
+  },
+  {
+    "width": 375,
+    "fontSize": "32px",
+    "overflow": false,
+    "menuOverflow": false,
+    "oversized": [],
+    "annotationOverlaps": [],
+    "creditFocus": true,
+    "focusOutline": "solid",
+    "animation": "none"
+  }
+]

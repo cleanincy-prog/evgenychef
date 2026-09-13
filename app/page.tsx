@@ -1,6 +1,6 @@
 import ChefStoryVideo from "./chef-story-video";
 import EveningPlanRoute from "./evening-plan-route";
-import PlateLeaders from "./plate-leaders";
+import MenuExplodedDish from "./menu-exploded-dish";
 import { heroImages, siteImages } from "./site-images";
 
 /* eslint-disable @next/next/no-img-element -- original local media with source-specific editorial framing */
@@ -45,21 +45,6 @@ function StationHeading({ number, title, children }: { number: string; title: st
     <span className="station-number" aria-hidden="true">{number}</span>
     <div className="station-copy"><h3>{title}</h3>{children}</div>
   </div>;
-}
-
-function MenuPlate() {
-  return <figure className="menu-plate" aria-label="Композиция блюда: основной продукт, гарнир, текстуры и соус">
-    <div className="plate-visual">
-    <img className="menu-plate-photo" {...siteImages["duck-plate"]} sizes="(max-width: 620px) calc(100vw - 69px), (max-width: 900px) min(calc(90.5vw - 38px), 600px), min(29.29vw, 428px)" alt="Кремовая тарелка с уткой, гарниром и соусами" loading="lazy" decoding="async" />
-    </div>
-    <PlateLeaders />
-    <figcaption className="plate-notes"><dl className="plate-note-list">
-      <div className="plate-label plate-label-main"><dt>Основной продукт</dt><dd>Задаёт вкус и характер блюда.</dd></div>
-      <div className="plate-label plate-label-side"><dt>Гарнир</dt><dd>Дополняет основной продукт и раскрывает его вкус.</dd></div>
-      <div className="plate-label plate-label-texture"><dt>Текстуры</dt><dd>От нежного до хрустящего — разные ощущения в одном блюде.</dd></div>
-      <div className="plate-label plate-label-sauce"><dt>Соус</dt><dd>Собирает вкусы вместе.</dd></div>
-    </dl></figcaption>
-  </figure>;
 }
 
 export default function Home() {
@@ -133,7 +118,7 @@ export default function Home() {
                 <p>Из нашего разговора складывается меню. Я выбираю продукты и продумываю, какие блюда приготовить и как они будут сочетаться между собой.</p>
                 <p>Внутри каждого блюда тоже есть свой замысел.</p>
               </StationHeading>
-              <MenuPlate />
+              <MenuExplodedDish />
             </li>
             <li className="process-station station-preparation" data-step="03">
               <StationHeading number="03" title="Готовлю к встрече">

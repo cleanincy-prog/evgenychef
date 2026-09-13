@@ -1,0 +1,160 @@
+{
+  "workingBaseline": "/private/tmp/chef-oranienbaum-before-20260913-root",
+  "cssOtherDeclarations": [
+    {
+      "key": ".wordmark|color",
+      "before": "var(--gold-text)",
+      "after": "var(--ink)"
+    },
+    {
+      "key": "@media (max-width: 900px)|.menu-dish-stage|aspect-ratio",
+      "before": "700 / 1250",
+      "after": "700 / 1400"
+    },
+    {
+      "key": "@media (max-width: 900px)|.dish-mobile-notes dt|color",
+      "before": "var(--gold-text)",
+      "after": "var(--ink)"
+    },
+    {
+      "key": "@media (max-width: 620px)|.menu-dish-stage|aspect-ratio",
+      "before": "700 / 1320",
+      "after": "700 / 1400"
+    },
+    {
+      "key": ".menu-plate.menu-exploded|container",
+      "before": null,
+      "after": "menu-scene / inline-size"
+    },
+    {
+      "key": ".menu-dish-stage|min-height",
+      "before": null,
+      "after": "37rem"
+    },
+    {
+      "key": ".dish-note dt|color",
+      "before": null,
+      "after": "var(--ink)"
+    },
+    {
+      "key": ".dish-photo-credit|flex-wrap",
+      "before": null,
+      "after": "wrap"
+    },
+    {
+      "key": ".dish-photo-credit|max-width",
+      "before": null,
+      "after": "100%"
+    },
+    {
+      "key": "@media (max-width: 620px)|.menu-dish-stage|min-height",
+      "before": null,
+      "after": "32rem"
+    },
+    {
+      "key": "h3|color",
+      "before": null,
+      "after": "var(--ink)"
+    },
+    {
+      "key": ".dish|color",
+      "before": null,
+      "after": "var(--ink)"
+    },
+    {
+      "key": ".plate-label dt|color",
+      "before": null,
+      "after": "var(--ink)"
+    },
+    {
+      "key": "h1|color",
+      "before": null,
+      "after": "var(--ink)"
+    },
+    {
+      "key": "h2|color",
+      "before": null,
+      "after": "var(--ink)"
+    },
+    {
+      "key": "h4|color",
+      "before": null,
+      "after": "var(--ink)"
+    },
+    {
+      "key": ".wordmark:hover|color",
+      "before": null,
+      "after": "var(--ink)"
+    },
+    {
+      "key": ".pencil|color",
+      "before": null,
+      "after": "var(--gold-text)"
+    },
+    {
+      "key": "@container menu-scene (max-width: 18rem)|.dish-annotations|display",
+      "before": null,
+      "after": "none"
+    },
+    {
+      "key": "@container menu-scene (max-width: 18rem)|.dish-arrows|display",
+      "before": null,
+      "after": "none"
+    },
+    {
+      "key": "@container menu-scene (max-width: 18rem)|.menu-dish-stage|min-height",
+      "before": null,
+      "after": "0"
+    },
+    {
+      "key": "@container menu-scene (max-width: 18rem)|.dish-mobile-notes|display",
+      "before": null,
+      "after": "grid"
+    },
+    {
+      "key": "@container menu-scene (max-width: 18rem)|.dish-mobile-notes|grid-template-columns",
+      "before": null,
+      "after": "1fr"
+    },
+    {
+      "key": "@container menu-scene (max-width: 18rem)|.dish-mobile-notes|gap",
+      "before": null,
+      "after": "18px"
+    },
+    {
+      "key": "@container menu-scene (max-width: 18rem)|.dish-mobile-notes|margin",
+      "before": null,
+      "after": "0 0 6px"
+    },
+    {
+      "key": "@container menu-scene (max-width: 18rem)|.dish-mobile-notes dt|color",
+      "before": null,
+      "after": "var(--ink)"
+    },
+    {
+      "key": "@container menu-scene (max-width: 18rem)|.dish-mobile-notes dd|margin",
+      "before": null,
+      "after": "7px 0 0"
+    },
+    {
+      "key": "@container menu-scene (max-width: 18rem)|.dish-mobile-notes dd|color",
+      "before": null,
+      "after": "var(--muted)"
+    }
+  ],
+  "changedExistingAppOrMedia": [
+    "app/menu-exploded-dish.tsx",
+    "app/layout.tsx",
+    "app/globals.css"
+  ],
+  "appPageUnchanged": true,
+  "fontFaces": 12,
+  "allSwap": true,
+  "noOldActiveFamilies": true,
+  "unchangedFontFiles": [],
+  "scopeNotes": [
+    "Only typography, required ink display colors and font preload/resources were authored by this task.",
+    "Concurrent menu stage/container/credit-wrap changes and menu image srcsets belong to the active task «Обновить блок Продумываю меню» and are preserved.",
+    "app/page.tsx and all existing media hashes remain unchanged from this task baseline."
+  ]
+}

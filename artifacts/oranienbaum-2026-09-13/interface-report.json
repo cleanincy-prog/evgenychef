@@ -1,0 +1,608 @@
+{
+  "viewports": [
+    {
+      "width": 1440,
+      "document": 1440,
+      "hero": [
+        {
+          "text": "Евгений",
+          "height": 53,
+          "lineHeight": 53.04
+        },
+        {
+          "text": "Гребеник —",
+          "height": 53,
+          "lineHeight": 53.04
+        },
+        {
+          "text": "ваш личный",
+          "height": 49,
+          "lineHeight": 48.7968
+        },
+        {
+          "text": "Мастер-Шеф",
+          "height": 53,
+          "lineHeight": 53.04
+        },
+        {
+          "text": "на Кипре",
+          "height": 53,
+          "lineHeight": 53.04
+        }
+      ],
+      "images": true,
+      "targets": [
+        {
+          "text": "Evgen Grebenik",
+          "width": 188.578125,
+          "height": 44
+        },
+        {
+          "text": "Обсудить вечер ↗Instagram ↗Instagram @evg.chef",
+          "width": 118.359375,
+          "height": 48
+        },
+        {
+          "text": "Источники фотографий ↗",
+          "width": 144.015625,
+          "height": 44
+        },
+        {
+          "text": "Написать в Instagram ↗",
+          "width": 565.375,
+          "height": 56
+        },
+        {
+          "text": "Evgen Grebenik",
+          "width": 188.578125,
+          "height": 44
+        },
+        {
+          "text": "Instagram @evg.chef",
+          "width": 118.359375,
+          "height": 44
+        }
+      ],
+      "palette": {
+        "paper": "#f4efe5",
+        "ink": "#0a0a0a",
+        "muted": "#6e665a",
+        "gold": "#a0792e",
+        "gold-text": "#72561f",
+        "rule": "#c8c0b3"
+      },
+      "passed": true
+    },
+    {
+      "width": 1280,
+      "document": 1280,
+      "hero": [
+        {
+          "text": "Евгений",
+          "height": 53,
+          "lineHeight": 53.04
+        },
+        {
+          "text": "Гребеник —",
+          "height": 53,
+          "lineHeight": 53.04
+        },
+        {
+          "text": "ваш личный",
+          "height": 49,
+          "lineHeight": 48.7968
+        },
+        {
+          "text": "Мастер-Шеф",
+          "height": 53,
+          "lineHeight": 53.04
+        },
+        {
+          "text": "на Кипре",
+          "height": 53,
+          "lineHeight": 53.04
+        }
+      ],
+      "images": true,
+      "targets": [
+        {
+          "text": "Evgen Grebenik",
+          "width": 188.578125,
+          "height": 44
+        },
+        {
+          "text": "Обсудить вечер ↗Instagram ↗Instagram @evg.chef",
+          "width": 118.359375,
+          "height": 48
+        },
+        {
+          "text": "Источники фотографий ↗",
+          "width": 144.015625,
+          "height": 44
+        },
+        {
+          "text": "Написать в Instagram ↗",
+          "width": 502.4375,
+          "height": 56
+        },
+        {
+          "text": "Evgen Grebenik",
+          "width": 188.578125,
+          "height": 44
+        },
+        {
+          "text": "Instagram @evg.chef",
+          "width": 118.359375,
+          "height": 44
+        }
+      ],
+      "palette": {
+        "paper": "#f4efe5",
+        "ink": "#0a0a0a",
+        "muted": "#6e665a",
+        "gold": "#a0792e",
+        "gold-text": "#72561f",
+        "rule": "#c8c0b3"
+      },
+      "passed": true
+    },
+    {
+      "width": 1024,
+      "document": 1024,
+      "hero": [
+        {
+          "text": "Евгений",
+          "height": 52,
+          "lineHeight": 52.224
+        },
+        {
+          "text": "Гребеник —",
+          "height": 52,
+          "lineHeight": 52.224
+        },
+        {
+          "text": "ваш личный",
+          "height": 48,
+          "lineHeight": 48.0461
+        },
+        {
+          "text": "Мастер-Шеф",
+          "height": 52,
+          "lineHeight": 52.224
+        },
+        {
+          "text": "на Кипре",
+          "height": 52,
+          "lineHeight": 52.224
+        }
+      ],
+      "images": true,
+      "targets": [
+        {
+          "text": "Evgen Grebenik",
+          "width": 188.578125,
+          "height": 44
+        },
+        {
+          "text": "Обсудить вечер ↗Instagram ↗Instagram @evg.chef",
+          "width": 118.359375,
+          "height": 48
+        },
+        {
+          "text": "Источники фотографий ↗",
+          "width": 144.015625,
+          "height": 44
+        },
+        {
+          "text": "Написать в Instagram ↗",
+          "width": 431.21875,
+          "height": 56
+        },
+        {
+          "text": "Evgen Grebenik",
+          "width": 188.578125,
+          "height": 44
+        },
+        {
+          "text": "Instagram @evg.chef",
+          "width": 118.359375,
+          "height": 44
+        }
+      ],
+      "palette": {
+        "paper": "#f4efe5",
+        "ink": "#0a0a0a",
+        "muted": "#6e665a",
+        "gold": "#a0792e",
+        "gold-text": "#72561f",
+        "rule": "#c8c0b3"
+      },
+      "passed": true
+    },
+    {
+      "width": 768,
+      "document": 768,
+      "hero": [
+        {
+          "text": "Евгений",
+          "height": 39,
+          "lineHeight": 39.168
+        },
+        {
+          "text": "Гребеник —",
+          "height": 39,
+          "lineHeight": 39.168
+        },
+        {
+          "text": "ваш личный",
+          "height": 36,
+          "lineHeight": 36.0346
+        },
+        {
+          "text": "Мастер-Шеф",
+          "height": 39,
+          "lineHeight": 39.168
+        },
+        {
+          "text": "на Кипре",
+          "height": 39,
+          "lineHeight": 39.168
+        }
+      ],
+      "images": true,
+      "targets": [
+        {
+          "text": "Evgen Grebenik",
+          "width": 188.578125,
+          "height": 44
+        },
+        {
+          "text": "Обсудить вечер ↗Instagram ↗Instagram @evg.chef",
+          "width": 118.359375,
+          "height": 48
+        },
+        {
+          "text": "Источники фотографий ↗",
+          "width": 144.015625,
+          "height": 44
+        },
+        {
+          "text": "Написать в Instagram ↗",
+          "width": 510,
+          "height": 56
+        },
+        {
+          "text": "Evgen Grebenik",
+          "width": 188.578125,
+          "height": 44
+        },
+        {
+          "text": "Instagram @evg.chef",
+          "width": 118.359375,
+          "height": 44
+        }
+      ],
+      "palette": {
+        "paper": "#f4efe5",
+        "ink": "#0a0a0a",
+        "muted": "#6e665a",
+        "gold": "#a0792e",
+        "gold-text": "#72561f",
+        "rule": "#c8c0b3"
+      },
+      "passed": true
+    },
+    {
+      "width": 430,
+      "document": 430,
+      "hero": [
+        {
+          "text": "Евгений",
+          "height": 35,
+          "lineHeight": 34.68
+        },
+        {
+          "text": "Гребеник —",
+          "height": 35,
+          "lineHeight": 34.68
+        },
+        {
+          "text": "ваш личный",
+          "height": 32,
+          "lineHeight": 31.9056
+        },
+        {
+          "text": "Мастер-Шеф",
+          "height": 35,
+          "lineHeight": 34.68
+        },
+        {
+          "text": "на Кипре",
+          "height": 35,
+          "lineHeight": 34.68
+        }
+      ],
+      "images": true,
+      "targets": [
+        {
+          "text": "Evgen Grebenik",
+          "width": 188.578125,
+          "height": 44
+        },
+        {
+          "text": "Обсудить вечер ↗Instagram ↗Instagram @evg.chef",
+          "width": 74.21875,
+          "height": 48
+        },
+        {
+          "text": "Источники фотографий ↗",
+          "width": 144.015625,
+          "height": 44
+        },
+        {
+          "text": "Написать в Instagram ↗",
+          "width": 394,
+          "height": 54
+        },
+        {
+          "text": "Evgen Grebenik",
+          "width": 188.578125,
+          "height": 44
+        },
+        {
+          "text": "Instagram @evg.chef",
+          "width": 118.359375,
+          "height": 44
+        }
+      ],
+      "palette": {
+        "paper": "#f4efe5",
+        "ink": "#0a0a0a",
+        "muted": "#6e665a",
+        "gold": "#a0792e",
+        "gold-text": "#72561f",
+        "rule": "#c8c0b3"
+      },
+      "passed": true
+    },
+    {
+      "width": 390,
+      "document": 390,
+      "hero": [
+        {
+          "text": "Евгений",
+          "height": 35,
+          "lineHeight": 34.68
+        },
+        {
+          "text": "Гребеник —",
+          "height": 35,
+          "lineHeight": 34.68
+        },
+        {
+          "text": "ваш личный",
+          "height": 32,
+          "lineHeight": 31.9056
+        },
+        {
+          "text": "Мастер-Шеф",
+          "height": 35,
+          "lineHeight": 34.68
+        },
+        {
+          "text": "на Кипре",
+          "height": 35,
+          "lineHeight": 34.68
+        }
+      ],
+      "images": true,
+      "targets": [
+        {
+          "text": "Evgen Grebenik",
+          "width": 188.578125,
+          "height": 44
+        },
+        {
+          "text": "Обсудить вечер ↗Instagram ↗Instagram @evg.chef",
+          "width": 74.21875,
+          "height": 48
+        },
+        {
+          "text": "Источники фотографий ↗",
+          "width": 144.015625,
+          "height": 44
+        },
+        {
+          "text": "Написать в Instagram ↗",
+          "width": 354,
+          "height": 54
+        },
+        {
+          "text": "Evgen Grebenik",
+          "width": 188.578125,
+          "height": 44
+        },
+        {
+          "text": "Instagram @evg.chef",
+          "width": 118.359375,
+          "height": 44
+        }
+      ],
+      "palette": {
+        "paper": "#f4efe5",
+        "ink": "#0a0a0a",
+        "muted": "#6e665a",
+        "gold": "#a0792e",
+        "gold-text": "#72561f",
+        "rule": "#c8c0b3"
+      },
+      "passed": true
+    },
+    {
+      "width": 375,
+      "document": 375,
+      "hero": [
+        {
+          "text": "Евгений",
+          "height": 35,
+          "lineHeight": 34.68
+        },
+        {
+          "text": "Гребеник —",
+          "height": 35,
+          "lineHeight": 34.68
+        },
+        {
+          "text": "ваш личный",
+          "height": 32,
+          "lineHeight": 31.9056
+        },
+        {
+          "text": "Мастер-Шеф",
+          "height": 35,
+          "lineHeight": 34.68
+        },
+        {
+          "text": "на Кипре",
+          "height": 35,
+          "lineHeight": 34.68
+        }
+      ],
+      "images": true,
+      "targets": [
+        {
+          "text": "Evgen Grebenik",
+          "width": 188.578125,
+          "height": 44
+        },
+        {
+          "text": "Обсудить вечер ↗Instagram ↗Instagram @evg.chef",
+          "width": 74.21875,
+          "height": 48
+        },
+        {
+          "text": "Источники фотографий ↗",
+          "width": 144.015625,
+          "height": 44
+        },
+        {
+          "text": "Написать в Instagram ↗",
+          "width": 339,
+          "height": 54
+        },
+        {
+          "text": "Evgen Grebenik",
+          "width": 188.578125,
+          "height": 44
+        },
+        {
+          "text": "Instagram @evg.chef",
+          "width": 118.359375,
+          "height": 44
+        }
+      ],
+      "palette": {
+        "paper": "#f4efe5",
+        "ink": "#0a0a0a",
+        "muted": "#6e665a",
+        "gold": "#a0792e",
+        "gold-text": "#72561f",
+        "rule": "#c8c0b3"
+      },
+      "passed": true
+    }
+  ],
+  "zoom": [
+    {
+      "width": 1440,
+      "document": 1440,
+      "undersized": 0
+    },
+    {
+      "width": 375,
+      "document": 375,
+      "undersized": 0
+    }
+  ],
+  "probes": [
+    {
+      "family": "Oranienbaum",
+      "weight": 400,
+      "style": "normal",
+      "fonts": [
+        {
+          "familyName": "Oranienbaum",
+          "postScriptName": "Oranienbaum-Regular",
+          "isCustomFont": true,
+          "glyphCount": 31
+        }
+      ]
+    },
+    {
+      "family": "Ysabeau Office",
+      "weight": 400,
+      "style": "normal",
+      "fonts": [
+        {
+          "familyName": "Ysabeau Office",
+          "postScriptName": "YsabeauOffice-Regular",
+          "isCustomFont": true,
+          "glyphCount": 31
+        }
+      ]
+    },
+    {
+      "family": "Ysabeau Office",
+      "weight": 500,
+      "style": "normal",
+      "fonts": [
+        {
+          "familyName": "Ysabeau Office Medium",
+          "postScriptName": "YsabeauOffice-Medium",
+          "isCustomFont": true,
+          "glyphCount": 31
+        }
+      ]
+    },
+    {
+      "family": "Ysabeau Office",
+      "weight": 600,
+      "style": "normal",
+      "fonts": [
+        {
+          "familyName": "Ysabeau Office SemiBold",
+          "postScriptName": "YsabeauOffice-SemiBold",
+          "isCustomFont": true,
+          "glyphCount": 31
+        }
+      ]
+    },
+    {
+      "family": "Ysabeau Office",
+      "weight": 400,
+      "style": "italic",
+      "fonts": [
+        {
+          "familyName": "Ysabeau Office",
+          "postScriptName": "YsabeauOffice-Italic",
+          "isCustomFont": true,
+          "glyphCount": 31
+        }
+      ]
+    },
+    {
+      "family": "PT Mono",
+      "weight": 400,
+      "style": "normal",
+      "fonts": [
+        {
+          "familyName": "PT Mono",
+          "postScriptName": "PTMono-Regular",
+          "isCustomFont": true,
+          "glyphCount": 31
+        }
+      ]
+    }
+  ],
+  "failures": []
+}

@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="700" height="950" viewBox="0 0 700 950" fill="none">
+  <defs>
+    <linearGradient id="wall" x1="70" y1="180" x2="700" y2="350" gradientUnits="userSpaceOnUse"><stop stop-color="#f4efe5"/><stop offset=".5" stop-color="#e9e1d3"/><stop offset="1" stop-color="#ddd3c2"/></linearGradient>
+    <linearGradient id="corner" x1="138" x2="198" y1="400" y2="400" gradientUnits="userSpaceOnUse"><stop stop-color="#b5a78e" stop-opacity="0"/><stop offset=".62" stop-color="#a79983" stop-opacity=".23"/><stop offset="1" stop-color="#f4efe5" stop-opacity="0"/></linearGradient>
+    <linearGradient id="table" x1="420" y1="602" x2="375" y2="950" gradientUnits="userSpaceOnUse"><stop stop-color="#eae1d2"/><stop offset=".42" stop-color="#f4efe5"/><stop offset="1" stop-color="#d9cbb4"/></linearGradient>
+    <linearGradient id="fadeY" x1="0" y1="0" x2="0" y2="950" gradientUnits="userSpaceOnUse"><stop stop-color="white" stop-opacity="0"/><stop offset=".15" stop-color="white"/><stop offset=".88" stop-color="white"/><stop offset="1" stop-color="white" stop-opacity="0"/></linearGradient>
+    <linearGradient id="fadeX"><stop stop-color="white" stop-opacity="0"/><stop offset=".12" stop-color="white"/><stop offset=".87" stop-color="white"/><stop offset="1" stop-color="white" stop-opacity="0"/></linearGradient>
+    <mask id="edgeY"><rect width="700" height="950" fill="url(#fadeY)"/></mask><mask id="edgeX"><rect width="700" height="950" fill="url(#fadeX)"/></mask>
+    <filter id="light"><feGaussianBlur stdDeviation="17"/></filter>
+    <filter id="contact"><feGaussianBlur stdDeviation="18"/></filter>
+  </defs>
+  <g mask="url(#edgeX)"><g mask="url(#edgeY)">
+    <path fill="url(#wall)" d="M0 0H700V730L175 602L0 636Z"/>
+    <path fill="#f4efe5" d="M0 0H175V602L0 636Z"/>
+    <path fill="url(#corner)" d="M132 0H203V641H132Z"/>
+    <g filter="url(#light)" fill="#6e665a" opacity=".13"><path d="M245 -70L281 -70L650 372L700 372V424L644 425Z"/><path d="M635 -15L691 -15L314 529L284 493Z"/></g>
+    <path fill="url(#table)" d="M0 636L175 602L700 706V950H0Z"/>
+    <path stroke="#c8c0b3" stroke-width="1.4" d="M0 636L175 602L700 706"/>
+    <path fill="#c8c0b3" opacity=".36" d="M0 858L174 806L700 887V905L174 824L0 878Z"/>
+    <path stroke="#a0792e" stroke-opacity=".21" d="M0 858L174 806L700 887"/>
+    <ellipse cx="301" cy="875" rx="263" ry="37" fill="#6e665a" opacity=".28" filter="url(#contact)"/>
+  </g></g>
+</svg>
