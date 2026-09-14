@@ -1,0 +1,37 @@
+{
+  "source": "design/references/menu-fish-2026-09-14/user-photo-original.jpg",
+  "sourceSha256": "5707f7f4d69fe8b1038ff8eedfb0772d27c13c870f60b060a861bac111b24738",
+  "crop": {
+    "left": 0,
+    "top": 318,
+    "width": 576,
+    "height": 576
+  },
+  "placement": {
+    "width": 620,
+    "left": 940,
+    "top": 399
+  },
+  "maskedSourcePixels": 237419,
+  "checkedOpaquePixels": 273468,
+  "differingOpaquePixels": 0,
+  "foodGenerated": false,
+  "colorRetouched": false,
+  "exports": [
+    {
+      "file": "public/media/menu/worktable/menu-worktable-fish-640.webp",
+      "bytes": 225896,
+      "sha256": "f5f360708bd3db0d9b921f2b52f654ba926c37da9ca5f21af4a9d0c19e1967e3"
+    },
+    {
+      "file": "public/media/menu/worktable/menu-worktable-fish-960.webp",
+      "bytes": 479388,
+      "sha256": "0ed648f2acf2fdb338542ed25ebdacf87e5703dcde47bf84bb205d36b75f2ecc"
+    },
+    {
+      "file": "public/media/menu/worktable/menu-worktable-fish-1536.webp",
+      "bytes": 1092556,
+      "sha256": "38a15219dca75cd3905b64f900387f595e9562aa43bcd1908fd229bc7353df3d"
+    }
+  ]
+}

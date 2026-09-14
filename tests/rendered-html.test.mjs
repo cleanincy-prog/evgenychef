@@ -6,7 +6,7 @@ assert.equal(base.protocol, "http:", "QA is restricted to local HTTP");
 assert.ok(["127.0.0.1", "localhost"].includes(base.hostname), "QA must never target a public site");
 assert.equal(base.username + base.password, "");
 const instagram = "https://www.instagram.com/evg.chef/";
-const menuPhotoSource = "https://www.deuxave.com/menu/";
+const menuPhotoSource = "/media/menu/worktable/fish-photo-provided-2026-09-14.png";
 let html;
 let homeResponse;
 
@@ -52,7 +52,7 @@ test("serves the approved evening page as accessible Russian HTML", () => {
   assert.equal(tags(html, "html")[0]?.lang, "ru");
   assert.equal(tags(html, "h1").length, 1, "A single page identity is required");
   const text = visibleText(html);
-  for (const expected of ["Евгений", "Гребеник", "Mise en place", "Знакомимся", "Продумываю меню", "Готовлю к встрече", "Ваш вечер", "Начнём с вашего вечера", "Пример меню", "Гребешки", "Грибной велюте", "Утиная грудка", "Панна-котта с ягодами"]) {
+  for (const expected of ["Евгений", "Гребеник", "Mise en place", "Знакомимся", "Продумываю меню", "Готовлю к встрече", "Ваш вечер", "Начнём с вашего вечера", "Пример меню", "Гребешки", "Грибной велюте", "Рыба с овощами", "Панна-котта с ягодами"]) {
     assert.ok(text.toLocaleLowerCase("ru").includes(expected.toLocaleLowerCase("ru")), `Missing rendered content: ${expected}`);
   }
   assert.ok(text.includes("В первом сообщении укажите дату, число гостей и формат"));
@@ -90,14 +90,14 @@ test("provides functional page anchors, photo attribution and the exact Instagra
     if (anchor.target === "_blank") assert.match(anchor.rel || "", /noopener|noreferrer/);
   }
   assert.ok(anchors.some(anchor => anchor.href === instagram));
-  assert.ok(anchors.some(anchor => anchor.href === menuPhotoSource), "The original duck photograph must have source attribution");
-  const credit = await localFetch("/media/menu/exploded/credits.html");
-  assert.equal(credit.status, 200, "Photographic source and license information must be available");
-  assert.match(await credit.text(), /creativecommons.org\/licenses\/by-sa\/4.0/);
+  assert.ok(anchors.some(anchor => anchor.href === menuPhotoSource), "The supplied photograph must remain available");
+  const credit = await localFetch(menuPhotoSource);
+  assert.equal(credit.status, 200, "The chosen source photograph must be available");
+  assert.match(credit.headers.get("content-type") || "", /^image\/png/);
   assert.equal(tags(html, "form").length, 0, "This page must not send an automatic inquiry");
 });
 
-test("renders 63 documentary collage photos and the selected worktable with the original duck photograph", async () => {
+test("renders 63 documentary collage photos and the selected worktable with the supplied fish photograph", async () => {
   const imageTags = tags(html, "img");
   const collage = [...html.matchAll(/<[^>]+\bclass="[^"]*\bcollage-tile\b[^"]*"[^>]*>[\s\S]*?<img\b([^>]*)>/g)]
     .map(match => tags(`<img ${match[1]}>`, "img")[0]);
@@ -109,7 +109,7 @@ test("renders 63 documentary collage photos and the selected worktable with the 
   const required = [
     "/media/web/chef-hero-apron-576.webp",
     "/media/web/masterchef-640.webp",
-    "/media/menu/worktable/menu-worktable-duck-960.webp",
+    "/media/menu/worktable/menu-worktable-fish-960.webp",
   ];
   for (const path of required) assert.ok(imageTags.some(img => img.src === path), `Missing real asset: ${path}`);
   for (const img of imageTags) assert.ok(Object.hasOwn(img, "alt"), `Image requires alt, including decorative empty alt: ${img.src}`);
@@ -130,7 +130,7 @@ test("renders 63 documentary collage photos and the selected worktable with the 
   }
   const worktable = imageTags.filter(img => img.src.includes("/menu/worktable/"));
   assert.equal(worktable.length, 1, "The menu scene must appear once");
-  assert.match(worktable[0].alt, /фотография утиной грудки/);
+  assert.match(worktable[0].alt, /фотография рыбы/);
   assert.ok(visibleText(html).includes("Пример меню"), "The example menu must remain readable outside the raster image");
   assert.doesNotMatch(html, /data-recipe="octopus"|data-grams=|class="mb-(?:pencil|stroke|navigation)"|data-menu-(?:scroll|sketch|color|next)/);
 

@@ -10,7 +10,7 @@ export default function MenuWorktable() {
   const [state, setState] = useState<"loading" | "ready" | "error">("loading");
   const [attempt, setAttempt] = useState(0);
   const suffix = attempt ? `?retry=${attempt}` : "";
-  const source = (width: number) => `/media/menu/worktable/menu-worktable-duck-${width}.webp${suffix}`;
+  const source = (width: number) => `/media/menu/worktable/menu-worktable-fish-${width}.webp${suffix}`;
 
   useEffect(() => {
     const image = imageRef.current;
@@ -23,12 +23,12 @@ export default function MenuWorktable() {
         srcSet={`${source(640)} 640w, ${source(960)} 960w, ${source(1536)} 1536w`}
         sizes="(max-width: 620px) calc(100vw - 69px), (max-width: 900px) calc(90.5vw - 38px), min(960px, calc(90.5vw - 48px))"
         width={1536} height={1024} loading="lazy" decoding="async"
-        alt="Раскрытый блокнот с меню и карандашными набросками подач. На краю блокнота — фотография утиной грудки на тёмном мазке соуса, с зеленью и оранжевыми акцентами. Рядом лимон, веточка и карандаш."
+        alt="Раскрытый блокнот с меню и карандашными набросками подач. На краю блокнота — фотография рыбы с обжаренной кожей, зелёным пюре, горошком и овощами на белой тарелке. Рядом лимон, веточка и карандаш."
         onLoad={() => setState("ready")} onError={() => setState("error")} />
     </div>
     <figcaption className="menu-worktable-caption">
-      <p><span className="menu-worktable-label">Пример меню</span>Гребешки · грибной велюте · утиная грудка · панна-котта с ягодами.</p>
-      <a href="https://www.deuxave.com/menu/" target="_blank" rel="noopener noreferrer">Источник фото</a>
+      <p><span className="menu-worktable-label">Пример меню</span>Гребешки · грибной велюте · рыба с овощами · панна-котта с ягодами.</p>
+      <a href="/media/menu/worktable/fish-photo-provided-2026-09-14.png" target="_blank" rel="noopener noreferrer">Фото блюда</a>
     </figcaption>
     {state === "error" && <div className="menu-worktable-error" role="alert">
       <p>Не удалось загрузить изображение.</p>

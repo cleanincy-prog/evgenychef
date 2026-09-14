@@ -3,7 +3,7 @@ import { mkdir, writeFile } from 'node:fs/promises';
 import { chromium } from 'playwright';
 import path from 'node:path';
 
-const out=path.resolve('artifacts/menu-worktable-site-2026-09-13');
+const out=path.resolve('artifacts/menu-worktable-fish-2026-09-14');
 await mkdir(out,{recursive:true});
 const url='http://127.0.0.1:3004/';
 const browser=await chromium.launch({executablePath:'/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',headless:true,args:['--disable-background-networking','--disable-component-update','--no-first-run']});
@@ -43,7 +43,7 @@ try {
     assert.equal(geometry.image.loaded,true);
     assert.equal(geometry.image.filter,'none');assert.equal(geometry.image.blend,'normal');
     assert.ok(Math.abs(geometry.image.rect.width/geometry.image.rect.height-1.5)<.001);
-    assert.ok(geometry.caption.size>=16);assert.match(geometry.caption.text,/Пример меню[\s\S]*утиная грудка/);
+    assert.ok(geometry.caption.size>=16);assert.match(geometry.caption.text,/Пример меню[\s\S]*рыба с овощами/);
     assert.match(geometry.fonts.title,/Oranienbaum/);assert.match(geometry.fonts.copy,/Ysabeau/);assert.match(geometry.fonts.number,/PT Mono/);
     if(width>900){assert.ok(geometry.scene.top>=geometry.conversation.bottom+20);assert.ok(geometry.stations[2].heading.top>=geometry.scene.bottom+45);}
     else assert.ok(geometry.stations.every((s,i,all)=>!i||s.rect.top>=all[i-1].rect.bottom-1));
@@ -70,10 +70,10 @@ try {
   const staticPage=await nojs.newPage();await staticPage.goto(url);await staticPage.locator('.menu-worktable').scrollIntoViewIfNeeded();
   await staticPage.locator('.menu-worktable').screenshot({path:path.join(out,'no-js-390.png')});
   assert.equal(await staticPage.locator('.menu-worktable img').evaluate(e=>e.complete&&e.naturalWidth>0),true);
-  assert.match(await staticPage.locator('.menu-worktable-caption').innerText(),/утиная грудка/);
+  assert.match(await staticPage.locator('.menu-worktable-caption').innerText(),/рыба с овощами/);
   await nojs.close();
   const failed=await browser.newContext({viewport:{width:390,height:844}});let abort=true;
-  await failed.route('**/menu-worktable-duck-*.webp*',route=>abort?route.abort():route.continue());
+  await failed.route('**/menu-worktable-fish-*.webp*',route=>abort?route.abort():route.continue());
   const errorPage=await failed.newPage();await errorPage.goto(url);await errorPage.locator('.menu-worktable').scrollIntoViewIfNeeded();
   await errorPage.locator('.menu-worktable-error').waitFor({state:'visible'});
   const retry=errorPage.getByRole('button',{name:'Попробовать ещё раз'});await retry.focus();
