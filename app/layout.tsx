@@ -1,6 +1,20 @@
 import type { Metadata } from "next";
+import { preload } from "react-dom";
 import "./globals.css";
 import { SITE_DESCRIPTION, SITE_TITLE, SITE_URL } from "./site-config";
+import oranienbaumCyrillic from "./fonts/oranienbaum-cyrillic.woff2?inline";
+import oranienbaumLatin from "./fonts/oranienbaum-latin.woff2?inline";
+import ysabeauCyrillic from "./fonts/ysabeau-office-400-cyrillic.woff2?inline";
+import ysabeauLatin from "./fonts/ysabeau-office-400-latin.woff2?inline";
+import ysabeauItalicCyrillic from "./fonts/ysabeau-office-400-italic-cyrillic.woff2?inline";
+import ysabeauItalicLatin from "./fonts/ysabeau-office-400-italic-latin.woff2?inline";
+import ptMonoCyrillic from "./fonts/pt-mono-400-cyrillic.woff2?inline";
+import ptMonoLatin from "./fonts/pt-mono-400-latin.woff2?inline";
+
+// Decode the same data URLs used by CSS before laying out the Hero.
+// Inline CSS alone can still resolve font metrics after its first layout.
+const initialFonts = [oranienbaumCyrillic, oranienbaumLatin, ysabeauCyrillic, ysabeauLatin,
+  ysabeauItalicCyrillic, ysabeauItalicLatin, ptMonoCyrillic, ptMonoLatin];
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
@@ -25,12 +39,9 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+  initialFonts.forEach(href => preload(href, { as: "font", type: "font/woff2", crossOrigin: "anonymous" }));
   return (
     <html lang="ru">
-      <head>
-        <link rel="preload" href="/fonts/oranienbaum-cyrillic.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
-        <link rel="preload" href="/fonts/ysabeau-office-400-cyrillic.woff2" as="font" type="font/woff2" crossOrigin="anonymous" />
-      </head>
       <body>{children}</body>
     </html>
   );
