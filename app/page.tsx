@@ -22,29 +22,21 @@ const formats = [
   {
     id: "private-dinner", name: "Частный ужин",
     description: "Собрать близких за одним столом и спокойно поужинать. Меню составлю по вашим вкусам, приготовление и подачу возьму на себя. Вы сможете провести это время с теми, кого пригласили.",
-    duration: "3–4 часа", location: "дом или вилла",
     ...siteImages["private-dinner-wide-v2"],
     alt: "Евгений готовит блюдо на сковороде: видны лицо, руки и подача",
   },
   {
     id: "private-events", name: "Приватные мероприятия",
     description: "Для встреч, где главное — общение. Подберём угощение под такой ритм: закуски и блюда, которые удобно есть за разговором.",
-    duration: "время согласуем", location: "место выберем вместе",
     ...siteImages["private-events"],
     alt: "Евгений готовит блины на открытом воздухе перед гостями",
   },
   {
     id: "masterclasses", name: "Мастер-классы",
     description: "Для тех, кому интересно самим встать у плиты. Готовим вместе: я показываю приёмы, объясняю детали и помогаю разобраться в процессе. Затем пробуем приготовленное за общим столом.",
-    duration: "время согласуем", location: "место выберем вместе",
     ...siteImages.masterclasses,
     alt: "Участники мастер-класса наблюдают за работой Евгения",
   },
-];
-
-const sampleDishes = [
-  { name: "Приветственная подача", accompaniment: "гребешок · огурец · укроп", accent: "на один укус" },
-  { name: "Утка сухого вызревания", accompaniment: "пюре из печёного сельдерея", accent: "основная подача" },
 ];
 
 function StationHeading({ number, title, children }: { number: string; title: string; children: React.ReactNode }) {
@@ -105,9 +97,6 @@ export default function Home() {
             <div className="format-caption">
               <h3 className="fmt-name"><span>{format.name}</span></h3>
               <p>{format.description}</p>
-              <div className="fmt-spec">
-                <span>{format.duration}</span><span>{format.location}</span>
-              </div>
             </div>
           </li>)}
         </ul>
@@ -146,23 +135,7 @@ export default function Home() {
           </ol>
         </div>
       </section>
-      <section className="sample-menu" id="sample-menu" aria-labelledby="sample-menu-title">
-        <h2 className="menu-title" id="sample-menu-title">Меню вашего вечера</h2>
-        <div className="menu-content">
-          <p className="menu-intro">Каждое меню я составляю под ваши вкусы. Вот пример сочетания подач.</p>
-          <ol className="dish-list">
-            {sampleDishes.map((dish, index) => <li className="dish" key={dish.name}>
-              <span className="dish-num" aria-hidden="true">{String(index + 1).padStart(2, "0")}</span>
-              <span className="dish-body">
-                <span className="dish-name">{dish.name}</span>{" "}
-                <span className="dish-sub"><span className="sep" aria-hidden="true">· </span>{dish.accompaniment} · <em>{dish.accent}</em></span>
-              </span>
-            </li>)}
-          </ol>
-        </div>
-      </section>
-      <section className="contact" aria-labelledby="contact-title">
-        <h2 id="contact-title">Начнём с вашего вечера.</h2>
+      <section className="contact" aria-label="Связаться с Евгением">
         <div className="contact-action">
           <a className="instagram-button" href={instagramUrl} target="_blank" rel="noopener noreferrer">Написать в Instagram <span aria-hidden="true">↗</span></a>
           <p className="instagram-handle">@evg.chef</p>

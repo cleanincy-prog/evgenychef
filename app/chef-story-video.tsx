@@ -36,6 +36,6 @@ export default function ChefStoryVideo() {
       </video>
       {failed && <button className="film-retry" type="button" onClick={() => void playFilm()}>Повторить</button>}
     </div>
-    <figcaption>{failed ? <span role="status">Видео не удалось загрузить. Попробуйте ещё раз.</span> : "До того, как гости сядут за стол"}</figcaption>
+    {failed && <figcaption role="status">Видео не удалось загрузить. Попробуйте ещё раз.</figcaption>}
   </figure>;
 }
