@@ -1,4 +1,4 @@
-// Rebuild requested WebP derivatives with the locally installed cwebp encoder.
+// Rebuild responsive derivatives; JPEG is available for compatible photo delivery.
 // Originals remain unchanged; the manifest records each original source/hash.
 import { readFile, writeFile, mkdir, stat } from "node:fs/promises";
 import { execFile } from "node:child_process";
@@ -6,9 +6,14 @@ import { promisify } from "node:util";
 import { createHash } from "node:crypto";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
+import sharp from "sharp";
 
 const root = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const manifest = JSON.parse(await readFile(path.join(root, "scripts/site-image-manifest.json"), "utf8"));
+const selectedNames = new Set(process.argv.slice(2));
+for (const name of selectedNames) {
+  if (!manifest.images.some(item => item.name === name)) throw new Error(`Unknown image: ${name}`);
+}
 const run = promisify(execFile);
 const output = path.join(root, manifest.outputDirectory);
 await mkdir(output, { recursive: true });
@@ -20,13 +25,19 @@ for (const item of manifest.images) {
   const variants = [];
   for (const requestedWidth of item.widths) {
     const width = Math.min(requestedWidth, item.sourceWidth);
-    const name = `${item.name}-${requestedWidth}.webp`;
+    const name = `${item.name}-${requestedWidth}.${item.format === "jpeg" ? "jpg" : "webp"}`;
     const target = path.join(output, name);
     const args = ["-quiet", "-mt", "-m", "6", "-q", String(item.quality)];
     if (item.lossless) args.push("-lossless");
     else args.push("-sharp_yuv");
     args.push("-resize", String(width), "0", source, "-o", target);
-    await run(process.env.CWEBP_BINARY || "cwebp", args);
+    if (!selectedNames.size || selectedNames.has(item.name)) {
+      if (item.format === "jpeg") {
+        await sharp(source).resize({ width }).jpeg({ quality: item.quality, progressive: true }).toFile(target);
+      } else {
+        await run(process.env.CWEBP_BINARY || "cwebp", args);
+      }
+    }
     variants.push({ url: `/media/web/${name}`, requestedWidth, width, bytes: (await stat(target)).size });
   }
   records.push({ name: item.name, role: item.role, source: item.source, sourceBytes: item.sourceBytes, variants });

@@ -2,8 +2,8 @@
   "totals": {
     "sourceUniqueCount": 69,
     "sourceBytes": 15937160,
-    "smallestVariantBytes": 655248,
-    "largestVariantBytes": 1951956,
+    "smallestVariantBytes": 669132,
+    "largestVariantBytes": 1997540,
     "collageSourceBytes": 8389641,
     "collageSmallestBytes": 311156,
     "collageLargestBytes": 776776
@@ -1356,16 +1356,16 @@
       "sourceBytes": 241049,
       "variants": [
         {
-          "url": "/media/web/masterclasses-384.webp",
+          "url": "/media/web/masterclasses-384.jpg",
           "requestedWidth": 384,
           "width": 384,
-          "bytes": 12712
+          "bytes": 26596
         },
         {
-          "url": "/media/web/masterclasses-768.webp",
+          "url": "/media/web/masterclasses-768.jpg",
           "requestedWidth": 768,
           "width": 768,
-          "bytes": 28400
+          "bytes": 73984
         }
       ]
     },

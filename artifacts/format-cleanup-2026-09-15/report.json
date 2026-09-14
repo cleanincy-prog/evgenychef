@@ -1,0 +1,359 @@
+{
+  "cases": [
+    {
+      "width": 1440,
+      "dpr": 1,
+      "result": {
+        "faq": false,
+        "image": {
+          "src": "http://127.0.0.1:3004/media/web/masterclasses-384.jpg",
+          "loaded": true,
+          "width": 288,
+          "height": 193,
+          "x": 84.96697235107422,
+          "right": 338.5330123901367,
+          "fit": "contain"
+        },
+        "specFields": [
+          2,
+          2,
+          2
+        ],
+        "documentWidth": 1440,
+        "smallDisplay": 0
+      },
+      "imageContentType": "image/jpeg",
+      "passed": true
+    },
+    {
+      "width": 1280,
+      "dpr": 1,
+      "result": {
+        "faq": false,
+        "image": {
+          "src": "http://127.0.0.1:3004/media/web/masterclasses-384.jpg",
+          "loaded": true,
+          "width": 256,
+          "height": 172,
+          "x": 77.54046630859375,
+          "right": 298.89703369140625,
+          "fit": "contain"
+        },
+        "specFields": [
+          2,
+          2,
+          2
+        ],
+        "documentWidth": 1280,
+        "smallDisplay": 0
+      },
+      "imageContentType": "image/jpeg",
+      "passed": true
+    },
+    {
+      "width": 1024,
+      "dpr": 1,
+      "result": {
+        "faq": false,
+        "image": {
+          "src": "http://127.0.0.1:3004/media/web/masterclasses-384.jpg",
+          "loaded": true,
+          "width": 204,
+          "height": 137,
+          "x": 65.67689514160156,
+          "right": 235.47935485839844,
+          "fit": "contain"
+        },
+        "specFields": [
+          2,
+          2,
+          2
+        ],
+        "documentWidth": 1024,
+        "smallDisplay": 0
+      },
+      "imageContentType": "image/jpeg",
+      "passed": true
+    },
+    {
+      "width": 768,
+      "dpr": 1,
+      "result": {
+        "faq": false,
+        "image": {
+          "src": "http://127.0.0.1:3004/media/web/masterclasses-384.jpg",
+          "loaded": true,
+          "width": 153,
+          "height": 103,
+          "x": 53.81317901611328,
+          "right": 172.0618133544922,
+          "fit": "contain"
+        },
+        "specFields": [
+          2,
+          2,
+          2
+        ],
+        "documentWidth": 768,
+        "smallDisplay": 0
+      },
+      "imageContentType": "image/jpeg",
+      "passed": true
+    },
+    {
+      "width": 430,
+      "dpr": 1,
+      "result": {
+        "faq": false,
+        "image": {
+          "src": "http://127.0.0.1:3004/media/web/masterclasses-384.jpg",
+          "loaded": true,
+          "width": 362,
+          "height": 243,
+          "x": 31.921688079833984,
+          "right": 398.0783042907715,
+          "fit": "contain"
+        },
+        "specFields": [
+          2,
+          2,
+          2
+        ],
+        "documentWidth": 430,
+        "smallDisplay": 0
+      },
+      "imageContentType": "image/jpeg",
+      "passed": true
+    },
+    {
+      "width": 390,
+      "dpr": 1,
+      "result": {
+        "faq": false,
+        "image": {
+          "src": "http://127.0.0.1:3004/media/web/masterclasses-384.jpg",
+          "loaded": true,
+          "width": 322,
+          "height": 216,
+          "x": 32.15138626098633,
+          "right": 357.8485908508301,
+          "fit": "contain"
+        },
+        "specFields": [
+          2,
+          2,
+          2
+        ],
+        "documentWidth": 390,
+        "smallDisplay": 0
+      },
+      "imageContentType": "image/jpeg",
+      "passed": true
+    },
+    {
+      "width": 375,
+      "dpr": 1,
+      "result": {
+        "faq": false,
+        "image": {
+          "src": "http://127.0.0.1:3004/media/web/masterclasses-384.jpg",
+          "loaded": true,
+          "width": 307,
+          "height": 206,
+          "x": 32.23750686645508,
+          "right": 342.7624702453613,
+          "fit": "contain"
+        },
+        "specFields": [
+          2,
+          2,
+          2
+        ],
+        "documentWidth": 375,
+        "smallDisplay": 0
+      },
+      "imageContentType": "image/jpeg",
+      "passed": true
+    },
+    {
+      "width": 430,
+      "dpr": 3,
+      "result": {
+        "faq": false,
+        "image": {
+          "src": "http://127.0.0.1:3004/media/web/masterclasses-768.jpg",
+          "loaded": true,
+          "width": 362,
+          "height": 243,
+          "x": 31.921688079833984,
+          "right": 398.0783042907715,
+          "fit": "contain"
+        },
+        "specFields": [
+          2,
+          2,
+          2
+        ],
+        "documentWidth": 430,
+        "smallDisplay": 0
+      },
+      "imageContentType": "image/jpeg",
+      "passed": true
+    },
+    {
+      "width": 390,
+      "dpr": 3,
+      "result": {
+        "faq": false,
+        "image": {
+          "src": "http://127.0.0.1:3004/media/web/masterclasses-768.jpg",
+          "loaded": true,
+          "width": 322,
+          "height": 216,
+          "x": 32.15138626098633,
+          "right": 357.8485908508301,
+          "fit": "contain"
+        },
+        "specFields": [
+          2,
+          2,
+          2
+        ],
+        "documentWidth": 390,
+        "smallDisplay": 0
+      },
+      "imageContentType": "image/jpeg",
+      "passed": true
+    },
+    {
+      "width": 375,
+      "dpr": 3,
+      "result": {
+        "faq": false,
+        "image": {
+          "src": "http://127.0.0.1:3004/media/web/masterclasses-768.jpg",
+          "loaded": true,
+          "width": 307,
+          "height": 206,
+          "x": 32.23750686645508,
+          "right": 342.7624702453613,
+          "fit": "contain"
+        },
+        "specFields": [
+          2,
+          2,
+          2
+        ],
+        "documentWidth": 375,
+        "smallDisplay": 0
+      },
+      "imageContentType": "image/jpeg",
+      "passed": true
+    },
+    {
+      "width": 375,
+      "dpr": 2,
+      "result": {
+        "faq": false,
+        "image": {
+          "src": "http://127.0.0.1:3004/media/web/masterclasses-768.jpg",
+          "loaded": true,
+          "width": 307,
+          "height": 206,
+          "x": 32.23750686645508,
+          "right": 342.7624702453613,
+          "fit": "contain"
+        },
+        "specFields": [
+          2,
+          2,
+          2
+        ],
+        "documentWidth": 375,
+        "smallDisplay": 0
+      },
+      "imageContentType": "image/jpeg",
+      "passed": true
+    },
+    {
+      "width": 375,
+      "dpr": 1,
+      "noJs": true,
+      "result": {
+        "faq": false,
+        "image": {
+          "src": "http://127.0.0.1:3004/media/web/masterclasses-384.jpg",
+          "loaded": true,
+          "width": 307,
+          "height": 206,
+          "x": 32.23750686645508,
+          "right": 342.7624702453613,
+          "fit": "contain"
+        },
+        "specFields": [
+          2,
+          2,
+          2
+        ],
+        "documentWidth": 375,
+        "smallDisplay": 0
+      },
+      "imageContentType": "image/jpeg",
+      "passed": true
+    },
+    {
+      "width": 375,
+      "dpr": 1,
+      "enlarged": true,
+      "result": {
+        "faq": false,
+        "image": {
+          "src": "http://127.0.0.1:3004/media/web/masterclasses-384.jpg",
+          "loaded": true,
+          "width": 307,
+          "height": 206,
+          "x": 32.23750686645508,
+          "right": 342.7624702453613,
+          "fit": "contain"
+        },
+        "specFields": [
+          2,
+          2,
+          2
+        ],
+        "documentWidth": 375,
+        "smallDisplay": 0
+      },
+      "imageContentType": "image/jpeg",
+      "passed": true
+    },
+    {
+      "width": 1440,
+      "dpr": 1,
+      "enlarged": true,
+      "result": {
+        "faq": false,
+        "image": {
+          "src": "http://127.0.0.1:3004/media/web/masterclasses-384.jpg",
+          "loaded": true,
+          "width": 288,
+          "height": 193,
+          "x": 84.96697235107422,
+          "right": 338.5330123901367,
+          "fit": "contain"
+        },
+        "specFields": [
+          2,
+          2,
+          2
+        ],
+        "documentWidth": 1440,
+        "smallDisplay": 0
+      },
+      "imageContentType": "image/jpeg",
+      "passed": true
+    }
+  ],
+  "failures": [],
+  "passed": true
+}

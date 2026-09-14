@@ -1015,12 +1015,13 @@
         384,
         768
       ],
-      "quality": 70,
+      "quality": 85,
       "sourceWidth": 1144,
       "sourceHeight": 770,
       "sourceBytes": 241049,
       "sourceSha256": "c6d6374d55bf2acf47afe872bed27b5210343b1a04ef194faa96fcd830b6ca13",
-      "hasAlpha": false
+      "hasAlpha": false,
+      "format": "jpeg"
     },
     {
       "name": "conversation",

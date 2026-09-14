@@ -54,8 +54,9 @@ test("serves the approved evening page as accessible Russian HTML", () => {
   for (const expected of ["Евгений", "Гребеник", "Mise en place", "Знакомимся", "Продумываю меню", "Готовлю к встрече", "Ваш вечер", "Начнём с вашего вечера", "Из нашего разговора складывается меню. Я выбираю продукты и продумываю, какие блюда приготовить и как они будут сочетаться между собой."]) {
     assert.ok(text.toLocaleLowerCase("ru").includes(expected.toLocaleLowerCase("ru")), `Missing rendered content: ${expected}`);
   }
-  assert.ok(text.includes("В первом сообщении укажите дату, число гостей и формат"));
-  assert.ok(!text.includes("до 20 гостей"), "The prototype must not invent guest capacity");
+  assert.ok(text.includes("В первом сообщении укажите дату и формат"));
+  assert.doesNotMatch(text, /Частые вопросы|стоимость|€|число гостей|количество гостей|состав группы|сколько будет гостей|\d+[–-]\d+ гостей/i, "Removed FAQ, prices and guest counts must not return");
+  assert.doesNotMatch(html, /id="faq"|class="faq-q"/);
   const steps = [...html.matchAll(/\bdata-step="([^"]+)"/g)].map(match => match[1]);
   assert.deepEqual(steps, ["01", "02", "03", "04"]);
 });
@@ -105,6 +106,7 @@ test("renders 63 documentary collage photos and the selected chef illustration w
     "/media/web/chef-hero-apron-576.webp",
     "/media/web/masterchef-640.webp",
     "/media/menu/chef-planning/scene-960.webp",
+    "/media/web/masterclasses-768.jpg",
   ];
   for (const path of required) assert.ok(imageTags.some(img => img.src === path), `Missing real asset: ${path}`);
   for (const img of imageTags) assert.ok(Object.hasOwn(img, "alt"), `Image requires alt, including decorative empty alt: ${img.src}`);
@@ -117,10 +119,10 @@ test("renders 63 documentary collage photos and the selected chef illustration w
   // Keep local HTTP concurrency bounded while checking every responsive variant.
   for (let start = 0; start < uniqueImagePaths.length; start += 8) {
     await Promise.all(uniqueImagePaths.slice(start, start + 8).map(async path => {
-      assert.match(path, /^\/media\/(?:web\/.+\.webp|menu\/personal-menu-duck-plate-cream-v2\.webp|menu\/(?:book|exploded|worktable|chef-planning)\/[a-z0-9-]+\.(?:webp|svg))$/, `Page images must use optimized local media: ${path}`);
+      assert.match(path, /^\/media\/(?:web\/.+\.(?:webp|jpg)|menu\/personal-menu-duck-plate-cream-v2\.webp|menu\/(?:book|exploded|worktable|chef-planning)\/[a-z0-9-]+\.(?:webp|svg))$/, `Page images must use optimized local media: ${path}`);
       const response = await localFetch(path, { method: "HEAD" });
       assert.equal(response.status, 200, `Image must be available: ${path}`);
-      assert.match(response.headers.get("content-type") || "", path.endsWith(".svg") ? /^image\/svg\+xml/ : /^image\/webp/);
+      assert.match(response.headers.get("content-type") || "", path.endsWith(".svg") ? /^image\/svg\+xml/ : path.endsWith(".jpg") ? /^image\/jpeg/ : /^image\/webp/);
     }));
   }
   const chefScene = imageTags.filter(img => img.src.includes("/menu/chef-planning/"));

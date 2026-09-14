@@ -406,8 +406,8 @@ export const siteImages = {
     "height": 1510
   },
   "masterclasses": {
-    "src": "/media/web/masterclasses-768.webp",
-    "srcSet": "/media/web/masterclasses-384.webp 384w, /media/web/masterclasses-768.webp 768w",
+    "src": "/media/web/masterclasses-768.jpg",
+    "srcSet": "/media/web/masterclasses-384.jpg 384w, /media/web/masterclasses-768.jpg 768w",
     "width": 1144,
     "height": 770
   },
