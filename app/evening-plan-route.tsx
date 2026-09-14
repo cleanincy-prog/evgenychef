@@ -26,6 +26,7 @@ export default function EveningPlanRoute() {
     function measure() {
       if (!svg || !board) return;
       let rect = board.getBoundingClientRect();
+      const menuSpansColumns = board.classList.contains("process-board-with-menu");
       const conversation = board.querySelector(".conversation-illustration")?.getBoundingClientRect();
       if (conversation) {
         board.style.setProperty("--conversation-row-height", `${Math.ceil(conversation.bottom - rect.top + 56)}px`);
@@ -40,7 +41,7 @@ export default function EveningPlanRoute() {
         const menuDrop = Math.ceil(contentHeight(".station-conversation") * .4);
         board.style.setProperty("--menu-step-drop", `${menuDrop}px`);
         const menuHeading = board.querySelector(".station-menu > .station-heading")?.getBoundingClientRect();
-        if (conversation && menuHeading && board.querySelector("[data-menu-visual]")) {
+        if (menuSpansColumns && conversation && menuHeading && board.querySelector("[data-menu-visual]")) {
           board.style.setProperty("--menu-visual-clearance", `${Math.ceil(Math.max(24, conversation.bottom - menuHeading.bottom + 40))}px`);
         }
         const preparation = board.querySelector(".station-preparation .station-heading")?.getBoundingClientRect();
@@ -86,14 +87,14 @@ export default function EveningPlanRoute() {
       const departureX = menuVisual ? departure : Math.min(departure, aisle - 20);
       const visualTop = menuVisual ? menuVisual.top - rect.top : 0;
       const outerRail = menuVisual ? menuVisual.left - rect.left - 22 : 0;
-      // The selected worktable spans both columns. Return around its left edge,
-      // with the horizontal passage below the conversation drawing.
-      const menuReturn = menuVisual
+      // Wide worktables use their outer edge; the chef illustration uses the
+      // existing aisle between the columns and below the conversation.
+      const menuReturn = menuVisual && menuSpansColumns
         ? `M${b.x - 4},${b.y + 17} C${b.x - 22},${b.y + 42} ${conversationRail},${b.y + 32} ${conversationRail},${b.y + 72} L${conversationRail},${visualTop - 34} Q${conversationRail},${visualTop - 20} ${conversationRail - 14},${visualTop - 20} L${outerRail + 14},${visualTop - 20} Q${outerRail},${visualTop - 20} ${outerRail},${visualTop - 6} L${outerRail},${c.y - 50} Q${outerRail},${c.y - 29} ${c.x},${c.y - 18}`
         : `M${b.x - 4},${b.y + 17} C${b.x - 22},${b.y + 42} ${conversationRail + 3},${b.y + 30} ${conversationRail},${turnY} C${conversationRail - 5},${turnY + (returnY - turnY) / 3} ${conversationRail + 6},${returnY - 20} ${conversationRail - 44},${returnY} C${conversationRail - 94},${returnY + 20} ${c.x + 16},${returnY - 8} ${c.x},${c.y - 18}`;
       setPaths([
         arrowTo(`M${a.x + 5},${a.y - 17} C${a.x + 85},-48 ${b.x - 24},-54 ${b.x - 10},${a.y + 14} S${b.x + 2},${b.y - 85} ${b.x},${b.y - 18}`, { x: b.x, y: b.y - 18 }, { x: b.x + 2, y: b.y - 85 }),
-        arrowTo(menuReturn, { x: c.x, y: c.y - 18 }, menuVisual ? { x: outerRail, y: c.y - 29 } : { x: c.x + 16, y: returnY - 8 }),
+        arrowTo(menuReturn, { x: c.x, y: c.y - 18 }, menuVisual && menuSpansColumns ? { x: outerRail, y: c.y - 29 } : { x: c.x + 16, y: returnY - 8 }),
         arrowTo(`M${departureX},${c.y} C${aisle + 3},${c.y - 3} ${aisle - 4},${leaveY - 28} ${aisle},${leaveY} C${aisle + 2},${d.y + 10} ${d.x - 58},${d.y + 9} ${d.x - 18},${d.y + 1}`, { x: d.x - 18, y: d.y + 1 }, { x: d.x - 58, y: d.y + 9 }),
       ]);
     }

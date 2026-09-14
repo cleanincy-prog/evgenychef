@@ -6,8 +6,6 @@ assert.equal(base.protocol, "http:", "QA is restricted to local HTTP");
 assert.ok(["127.0.0.1", "localhost"].includes(base.hostname), "QA must never target a public site");
 assert.equal(base.username + base.password, "");
 const instagram = "https://www.instagram.com/evg.chef/";
-const menuPhotoSource = "/media/menu/worktable/fish-photo-provided-2026-09-14.png";
-const menuPhotoCredits = "/media/menu/worktable/fish-notebook-credits.html";
 let html;
 let homeResponse;
 
@@ -53,7 +51,7 @@ test("serves the approved evening page as accessible Russian HTML", () => {
   assert.equal(tags(html, "html")[0]?.lang, "ru");
   assert.equal(tags(html, "h1").length, 1, "A single page identity is required");
   const text = visibleText(html);
-  for (const expected of ["Евгений", "Гребеник", "Mise en place", "Знакомимся", "Продумываю меню", "Готовлю к встрече", "Ваш вечер", "Начнём с вашего вечера", "Пример подачи", "Рыба с овощами", "Ингредиенты", "Филе рыбы", "Зелёный горошек", "Морковь", "Томаты", "Мидии", "Зелень", "Пюре и соус"]) {
+  for (const expected of ["Евгений", "Гребеник", "Mise en place", "Знакомимся", "Продумываю меню", "Готовлю к встрече", "Ваш вечер", "Начнём с вашего вечера", "Из нашего разговора складывается меню. Я выбираю продукты и продумываю, какие блюда приготовить и как они будут сочетаться между собой."]) {
     assert.ok(text.toLocaleLowerCase("ru").includes(expected.toLocaleLowerCase("ru")), `Missing rendered content: ${expected}`);
   }
   assert.ok(text.includes("В первом сообщении укажите дату, число гостей и формат"));
@@ -81,27 +79,20 @@ test("keeps the loopback preview private while advertising the public canonical 
   assert.match(await sitemap.text(), /<loc>https:\/\/evgenychef\.com\/<\/loc>/i);
 });
 
-test("provides functional page anchors, photo attribution and the exact Instagram destination", async () => {
+test("provides functional page anchors and the exact Instagram destination", () => {
   const anchors = tags(html, "a");
   assert.ok(anchors.length > 0);
   const ids = new Set([...html.matchAll(/\bid="([^"]+)"/g)].map(match => decode(match[1])));
   for (const anchor of anchors) {
-    assert.ok(anchor.href?.startsWith("#") || anchor.href === instagram || anchor.href === menuPhotoSource || anchor.href === menuPhotoCredits, `Unexpected link: ${anchor.href}`);
+    assert.ok(anchor.href?.startsWith("#") || anchor.href === instagram, `Unexpected link: ${anchor.href}`);
     if (anchor.href?.startsWith("#") && anchor.href.length > 1) assert.ok(ids.has(decodeURIComponent(anchor.href.slice(1))), `Missing anchor target: ${anchor.href}`);
     if (anchor.target === "_blank") assert.match(anchor.rel || "", /noopener|noreferrer/);
   }
   assert.ok(anchors.some(anchor => anchor.href === instagram));
-  assert.ok(anchors.some(anchor => anchor.href === menuPhotoSource), "The supplied photograph must remain available");
-  const credit = await localFetch(menuPhotoSource);
-  assert.equal(credit.status, 200, "The chosen source photograph must be available");
-  assert.match(credit.headers.get("content-type") || "", /^image\/png/);
-  const attribution = await localFetch(menuPhotoCredits);
-  assert.equal(attribution.status, 200);
-  assert.match(await attribution.text(), /Luc Viatour[\s\S]*CC BY-SA 3.0[\s\S]*Electra Studio[\s\S]*Markus Spiske[\s\S]*Alorin[\s\S]*CC BY 4.0/);
   assert.equal(tags(html, "form").length, 0, "This page must not send an automatic inquiry");
 });
 
-test("renders 63 documentary collage photos and the selected worktable with the supplied fish photograph", async () => {
+test("renders 63 documentary collage photos and the selected chef illustration without a food photograph", async () => {
   const imageTags = tags(html, "img");
   const collage = [...html.matchAll(/<[^>]+\bclass="[^"]*\bcollage-tile\b[^"]*"[^>]*>[\s\S]*?<img\b([^>]*)>/g)]
     .map(match => tags(`<img ${match[1]}>`, "img")[0]);
@@ -113,7 +104,7 @@ test("renders 63 documentary collage photos and the selected worktable with the 
   const required = [
     "/media/web/chef-hero-apron-576.webp",
     "/media/web/masterchef-640.webp",
-    "/media/menu/worktable/photo-notebook-scene-960.webp",
+    "/media/menu/chef-planning/scene-960.webp",
   ];
   for (const path of required) assert.ok(imageTags.some(img => img.src === path), `Missing real asset: ${path}`);
   for (const img of imageTags) assert.ok(Object.hasOwn(img, "alt"), `Image requires alt, including decorative empty alt: ${img.src}`);
@@ -126,17 +117,17 @@ test("renders 63 documentary collage photos and the selected worktable with the 
   // Keep local HTTP concurrency bounded while checking every responsive variant.
   for (let start = 0; start < uniqueImagePaths.length; start += 8) {
     await Promise.all(uniqueImagePaths.slice(start, start + 8).map(async path => {
-      assert.match(path, /^\/media\/(?:web\/.+\.webp|menu\/personal-menu-duck-plate-cream-v2\.webp|menu\/(?:book|exploded|worktable)\/[a-z0-9-]+\.(?:webp|svg))$/, `Page images must use optimized local media: ${path}`);
+      assert.match(path, /^\/media\/(?:web\/.+\.webp|menu\/personal-menu-duck-plate-cream-v2\.webp|menu\/(?:book|exploded|worktable|chef-planning)\/[a-z0-9-]+\.(?:webp|svg))$/, `Page images must use optimized local media: ${path}`);
       const response = await localFetch(path, { method: "HEAD" });
       assert.equal(response.status, 200, `Image must be available: ${path}`);
       assert.match(response.headers.get("content-type") || "", path.endsWith(".svg") ? /^image\/svg\+xml/ : /^image\/webp/);
     }));
   }
-  const worktable = imageTags.filter(img => img.src.includes("/menu/worktable/"));
-  assert.equal(worktable.filter(img => img.src.includes("photo-notebook-scene-")).length, 1, "The full notebook scene must appear once");
-  assert.equal(worktable.filter(img => /photo-notebook-(?:fish|peas|carrot|tomatoes|mussels|greens)\.webp/.test(img.src)).length, 6, "Every listed ingredient has its own real photograph");
-  assert.ok(worktable.some(img => /глубокой кремовой тарелке/.test(img.alt)));
-  assert.ok(visibleText(html).includes("Пример подачи"), "The example description must remain readable outside the raster image");
+  const chefScene = imageTags.filter(img => img.src.includes("/menu/chef-planning/"));
+  assert.equal(chefScene.length, 1, "The selected chef illustration must appear once");
+  assert.match(chefScene[0].alt, /Евгений составляет меню в тетради/);
+  assert.equal(imageTags.filter(img => img.src.includes("/menu/worktable/")).length, 0, "The rejected food photograph and ingredient montage must not return");
+  assert.ok(!visibleText(html).includes("Фото блюда"), "The removed dish must not retain a photo action");
   assert.doesNotMatch(html, /data-recipe="octopus"|data-grams=|class="mb-(?:pencil|stroke|navigation)"|data-menu-(?:scroll|sketch|color|next)/);
 
 });

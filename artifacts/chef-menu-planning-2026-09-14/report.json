@@ -1,0 +1,840 @@
+{
+  "passed": true,
+  "results": [
+    {
+      "width": 1440,
+      "overflow": false,
+      "scene": {
+        "left": 701.859375,
+        "top": 3068.375,
+        "right": 1321.859375,
+        "bottom": 3481.703125,
+        "width": 620,
+        "height": 413.328125
+      },
+      "conversation": {
+        "left": 68.40625,
+        "top": 2919.8125,
+        "right": 518.40625,
+        "bottom": 3219.8125,
+        "width": 450,
+        "height": 300
+      },
+      "stations": [
+        {
+          "step": "01",
+          "heading": {
+            "left": 68.40625,
+            "top": 2705.5,
+            "right": 595.9375,
+            "bottom": 2905.8125,
+            "width": 527.53125,
+            "height": 200.3125
+          },
+          "rect": {
+            "left": 68.40625,
+            "top": 2705.5,
+            "right": 667.859375,
+            "bottom": 3331.5,
+            "width": 599.453125,
+            "height": 626
+          }
+        },
+        {
+          "step": "02",
+          "heading": {
+            "left": 667.859375,
+            "top": 2911.5,
+            "right": 1371.578125,
+            "bottom": 3051.375,
+            "width": 703.71875,
+            "height": 139.875
+          },
+          "rect": {
+            "left": 667.859375,
+            "top": 2705.5,
+            "right": 1371.578125,
+            "bottom": 3331.5,
+            "width": 703.71875,
+            "height": 626
+          }
+        },
+        {
+          "step": "03",
+          "heading": {
+            "left": 98.375,
+            "top": 3331.5,
+            "right": 559.96875,
+            "bottom": 3444.65625,
+            "width": 461.59375,
+            "height": 113.15625
+          },
+          "rect": {
+            "left": 68.40625,
+            "top": 3331.5,
+            "right": 667.859375,
+            "bottom": 4075.421875,
+            "width": 599.453125,
+            "height": 743.921875
+          }
+        },
+        {
+          "step": "04",
+          "heading": {
+            "left": 703.03125,
+            "top": 3594.5,
+            "right": 1371.578125,
+            "bottom": 3768.09375,
+            "width": 668.546875,
+            "height": 173.59375
+          },
+          "rect": {
+            "left": 667.859375,
+            "top": 3331.5,
+            "right": 1371.578125,
+            "bottom": 4075.421875,
+            "width": 703.71875,
+            "height": 743.921875
+          }
+        }
+      ],
+      "intersections": 0,
+      "image": {
+        "source": "http://127.0.0.1:3004/media/menu/chef-planning/scene-640.webp",
+        "loaded": true,
+        "rect": {
+          "left": 701.859375,
+          "top": 3068.375,
+          "right": 1321.859375,
+          "bottom": 3481.703125,
+          "width": 620,
+          "height": 413.328125
+        },
+        "filter": "grayscale(1) contrast(1.25)",
+        "blend": "multiply"
+      },
+      "fonts": {
+        "title": "Oranienbaum, Georgia, \"Times New Roman\", serif",
+        "copy": "\"Ysabeau Office\", system-ui, -apple-system, sans-serif",
+        "number": "\"PT Mono\", ui-monospace, Menlo, monospace"
+      }
+    },
+    {
+      "width": 1280,
+      "overflow": false,
+      "scene": {
+        "left": 627.65625,
+        "top": 2938.515625,
+        "right": 1219.171875,
+        "bottom": 3332.859375,
+        "width": 591.515625,
+        "height": 394.34375
+      },
+      "conversation": {
+        "left": 60.796875,
+        "top": 2789.953125,
+        "right": 510.796875,
+        "bottom": 3089.953125,
+        "width": 450,
+        "height": 300
+      },
+      "stations": [
+        {
+          "step": "01",
+          "heading": {
+            "left": 60.796875,
+            "top": 2576.6875,
+            "right": 529.71875,
+            "bottom": 2775.953125,
+            "width": 468.921875,
+            "height": 199.265625
+          },
+          "rect": {
+            "left": 60.796875,
+            "top": 2576.6875,
+            "right": 593.65625,
+            "bottom": 3201.6875,
+            "width": 532.859375,
+            "height": 625
+          }
+        },
+        {
+          "step": "02",
+          "heading": {
+            "left": 593.65625,
+            "top": 2782.6875,
+            "right": 1219.171875,
+            "bottom": 2921.515625,
+            "width": 625.515625,
+            "height": 138.828125
+          },
+          "rect": {
+            "left": 593.65625,
+            "top": 2576.6875,
+            "right": 1219.171875,
+            "bottom": 3201.6875,
+            "width": 625.515625,
+            "height": 625
+          }
+        },
+        {
+          "step": "03",
+          "heading": {
+            "left": 87.4375,
+            "top": 3201.6875,
+            "right": 497.75,
+            "bottom": 3340.515625,
+            "width": 410.3125,
+            "height": 138.828125
+          },
+          "rect": {
+            "left": 60.796875,
+            "top": 3201.6875,
+            "right": 593.65625,
+            "bottom": 3954.5625,
+            "width": 532.859375,
+            "height": 752.875
+          }
+        },
+        {
+          "step": "04",
+          "heading": {
+            "left": 624.921875,
+            "top": 3474.6875,
+            "right": 1219.171875,
+            "bottom": 3647.234375,
+            "width": 594.25,
+            "height": 172.546875
+          },
+          "rect": {
+            "left": 593.65625,
+            "top": 3201.6875,
+            "right": 1219.171875,
+            "bottom": 3954.5625,
+            "width": 625.515625,
+            "height": 752.875
+          }
+        }
+      ],
+      "intersections": 0,
+      "image": {
+        "source": "http://127.0.0.1:3004/media/menu/chef-planning/scene-640.webp",
+        "loaded": true,
+        "rect": {
+          "left": 627.65625,
+          "top": 2938.515625,
+          "right": 1219.171875,
+          "bottom": 3332.859375,
+          "width": 591.515625,
+          "height": 394.34375
+        },
+        "filter": "grayscale(1) contrast(1.25)",
+        "blend": "multiply"
+      },
+      "fonts": {
+        "title": "Oranienbaum, Georgia, \"Times New Roman\", serif",
+        "copy": "\"Ysabeau Office\", system-ui, -apple-system, sans-serif",
+        "number": "\"PT Mono\", ui-monospace, Menlo, monospace"
+      }
+    },
+    {
+      "width": 1024,
+      "overflow": false,
+      "scene": {
+        "left": 508.921875,
+        "top": 3010.0625,
+        "right": 975.34375,
+        "bottom": 3321,
+        "width": 466.421875,
+        "height": 310.9375
+      },
+      "conversation": {
+        "left": 48.640625,
+        "top": 2898.21875,
+        "right": 423.78125,
+        "bottom": 3148.3125,
+        "width": 375.140625,
+        "height": 250.09375
+      },
+      "stations": [
+        {
+          "step": "01",
+          "heading": {
+            "left": 48.640625,
+            "top": 2658.5,
+            "right": 423.78125,
+            "bottom": 2884.21875,
+            "width": 375.140625,
+            "height": 225.71875
+          },
+          "rect": {
+            "left": 48.640625,
+            "top": 2658.5,
+            "right": 474.921875,
+            "bottom": 3259.5,
+            "width": 426.28125,
+            "height": 601
+          }
+        },
+        {
+          "step": "02",
+          "heading": {
+            "left": 474.921875,
+            "top": 2854.5,
+            "right": 975.34375,
+            "bottom": 2993.0625,
+            "width": 500.421875,
+            "height": 138.5625
+          },
+          "rect": {
+            "left": 474.921875,
+            "top": 2658.5,
+            "right": 975.34375,
+            "bottom": 3259.5,
+            "width": 500.421875,
+            "height": 601
+          }
+        },
+        {
+          "step": "03",
+          "heading": {
+            "left": 69.953125,
+            "top": 3259.5,
+            "right": 423.78125,
+            "bottom": 3398.0625,
+            "width": 353.828125,
+            "height": 138.5625
+          },
+          "rect": {
+            "left": 48.640625,
+            "top": 3259.5,
+            "right": 474.921875,
+            "bottom": 3992.65625,
+            "width": 426.28125,
+            "height": 733.15625
+          }
+        },
+        {
+          "step": "04",
+          "heading": {
+            "left": 499.9375,
+            "top": 3546.5,
+            "right": 975.34375,
+            "bottom": 3718.78125,
+            "width": 475.40625,
+            "height": 172.28125
+          },
+          "rect": {
+            "left": 474.921875,
+            "top": 3259.5,
+            "right": 975.34375,
+            "bottom": 3992.65625,
+            "width": 500.421875,
+            "height": 733.15625
+          }
+        }
+      ],
+      "intersections": 0,
+      "image": {
+        "source": "http://127.0.0.1:3004/media/menu/chef-planning/scene-640.webp",
+        "loaded": true,
+        "rect": {
+          "left": 508.921875,
+          "top": 3010.0625,
+          "right": 975.34375,
+          "bottom": 3321,
+          "width": 466.421875,
+          "height": 310.9375
+        },
+        "filter": "grayscale(1) contrast(1.25)",
+        "blend": "multiply"
+      },
+      "fonts": {
+        "title": "Oranienbaum, Georgia, \"Times New Roman\", serif",
+        "copy": "\"Ysabeau Office\", system-ui, -apple-system, sans-serif",
+        "number": "\"PT Mono\", ui-monospace, Menlo, monospace"
+      }
+    },
+    {
+      "width": 768,
+      "overflow": false,
+      "scene": {
+        "left": 70.484375,
+        "top": 3925.8125,
+        "right": 690.484375,
+        "bottom": 4339.140625,
+        "width": 620,
+        "height": 413.328125
+      },
+      "conversation": {
+        "left": 130.484375,
+        "top": 3460.96875,
+        "right": 580.484375,
+        "bottom": 3760.96875,
+        "width": 450,
+        "height": 300
+      },
+      "stations": [
+        {
+          "step": "01",
+          "heading": {
+            "left": 36.484375,
+            "top": 3305.40625,
+            "right": 731.515625,
+            "bottom": 3450.96875,
+            "width": 695.03125,
+            "height": 145.5625
+          },
+          "rect": {
+            "left": 36.484375,
+            "top": 3305.40625,
+            "right": 731.515625,
+            "bottom": 3796.96875,
+            "width": 695.03125,
+            "height": 491.5625
+          }
+        },
+        {
+          "step": "02",
+          "heading": {
+            "left": 36.484375,
+            "top": 3796.96875,
+            "right": 731.515625,
+            "bottom": 3908.8125,
+            "width": 695.03125,
+            "height": 111.84375
+          },
+          "rect": {
+            "left": 36.484375,
+            "top": 3796.96875,
+            "right": 731.515625,
+            "bottom": 4375.140625,
+            "width": 695.03125,
+            "height": 578.171875
+          }
+        },
+        {
+          "step": "03",
+          "heading": {
+            "left": 36.484375,
+            "top": 4375.140625,
+            "right": 731.515625,
+            "bottom": 4486.984375,
+            "width": 695.03125,
+            "height": 111.84375
+          },
+          "rect": {
+            "left": 36.484375,
+            "top": 4375.140625,
+            "right": 731.515625,
+            "bottom": 5208.53125,
+            "width": 695.03125,
+            "height": 833.390625
+          }
+        },
+        {
+          "step": "04",
+          "heading": {
+            "left": 36.484375,
+            "top": 5208.53125,
+            "right": 731.515625,
+            "bottom": 5354.09375,
+            "width": 695.03125,
+            "height": 145.5625
+          },
+          "rect": {
+            "left": 36.484375,
+            "top": 5208.53125,
+            "right": 731.515625,
+            "bottom": 5662.421875,
+            "width": 695.03125,
+            "height": 453.890625
+          }
+        }
+      ],
+      "intersections": 0,
+      "image": {
+        "source": "http://127.0.0.1:3004/media/menu/chef-planning/scene-640.webp",
+        "loaded": true,
+        "rect": {
+          "left": 70.484375,
+          "top": 3925.8125,
+          "right": 690.484375,
+          "bottom": 4339.140625,
+          "width": 620,
+          "height": 413.328125
+        },
+        "filter": "grayscale(1) contrast(1.25)",
+        "blend": "multiply"
+      },
+      "fonts": {
+        "title": "Oranienbaum, Georgia, \"Times New Roman\", serif",
+        "copy": "\"Ysabeau Office\", system-ui, -apple-system, sans-serif",
+        "number": "\"PT Mono\", ui-monospace, Menlo, monospace"
+      }
+    },
+    {
+      "width": 430,
+      "overflow": false,
+      "scene": {
+        "left": 52,
+        "top": 3815.875,
+        "right": 412,
+        "bottom": 4055.875,
+        "width": 360,
+        "height": 240
+      },
+      "conversation": {
+        "left": 52,
+        "top": 3389.3125,
+        "right": 412,
+        "bottom": 3629.3125,
+        "width": 360,
+        "height": 240
+      },
+      "stations": [
+        {
+          "step": "01",
+          "heading": {
+            "left": 18,
+            "top": 3151.59375,
+            "right": 412,
+            "bottom": 3377.3125,
+            "width": 394,
+            "height": 225.71875
+          },
+          "rect": {
+            "left": 18,
+            "top": 3151.59375,
+            "right": 412,
+            "bottom": 3660.3125,
+            "width": 394,
+            "height": 508.71875
+          }
+        },
+        {
+          "step": "02",
+          "heading": {
+            "left": 18,
+            "top": 3660.3125,
+            "right": 412,
+            "bottom": 3798.875,
+            "width": 394,
+            "height": 138.5625
+          },
+          "rect": {
+            "left": 18,
+            "top": 3660.3125,
+            "right": 412,
+            "bottom": 4086.875,
+            "width": 394,
+            "height": 426.5625
+          }
+        },
+        {
+          "step": "03",
+          "heading": {
+            "left": 18,
+            "top": 4086.875,
+            "right": 412,
+            "bottom": 4225.4375,
+            "width": 394,
+            "height": 138.5625
+          },
+          "rect": {
+            "left": 18,
+            "top": 4086.875,
+            "right": 412,
+            "bottom": 4832.3125,
+            "width": 394,
+            "height": 745.4375
+          }
+        },
+        {
+          "step": "04",
+          "heading": {
+            "left": 18,
+            "top": 4832.3125,
+            "right": 412,
+            "bottom": 5004.59375,
+            "width": 394,
+            "height": 172.28125
+          },
+          "rect": {
+            "left": 18,
+            "top": 4832.3125,
+            "right": 412,
+            "bottom": 5257.59375,
+            "width": 394,
+            "height": 425.28125
+          }
+        }
+      ],
+      "intersections": 0,
+      "image": {
+        "source": "http://127.0.0.1:3004/media/menu/chef-planning/scene-640.webp",
+        "loaded": true,
+        "rect": {
+          "left": 52,
+          "top": 3815.875,
+          "right": 412,
+          "bottom": 4055.875,
+          "width": 360,
+          "height": 240
+        },
+        "filter": "grayscale(1) contrast(1.25)",
+        "blend": "multiply"
+      },
+      "fonts": {
+        "title": "Oranienbaum, Georgia, \"Times New Roman\", serif",
+        "copy": "\"Ysabeau Office\", system-ui, -apple-system, sans-serif",
+        "number": "\"PT Mono\", ui-monospace, Menlo, monospace"
+      }
+    },
+    {
+      "width": 390,
+      "overflow": false,
+      "scene": {
+        "left": 52,
+        "top": 3803.015625,
+        "right": 372,
+        "bottom": 4016.34375,
+        "width": 320,
+        "height": 213.328125
+      },
+      "conversation": {
+        "left": 52,
+        "top": 3376.40625,
+        "right": 372,
+        "bottom": 3589.734375,
+        "width": 320,
+        "height": 213.328125
+      },
+      "stations": [
+        {
+          "step": "01",
+          "heading": {
+            "left": 18,
+            "top": 3138.6875,
+            "right": 372,
+            "bottom": 3364.40625,
+            "width": 354,
+            "height": 225.71875
+          },
+          "rect": {
+            "left": 18,
+            "top": 3138.6875,
+            "right": 372,
+            "bottom": 3620.734375,
+            "width": 354,
+            "height": 482.046875
+          }
+        },
+        {
+          "step": "02",
+          "heading": {
+            "left": 18,
+            "top": 3620.734375,
+            "right": 372,
+            "bottom": 3786.015625,
+            "width": 354,
+            "height": 165.28125
+          },
+          "rect": {
+            "left": 18,
+            "top": 3620.734375,
+            "right": 372,
+            "bottom": 4047.34375,
+            "width": 354,
+            "height": 426.609375
+          }
+        },
+        {
+          "step": "03",
+          "heading": {
+            "left": 18,
+            "top": 4047.34375,
+            "right": 372,
+            "bottom": 4185.90625,
+            "width": 354,
+            "height": 138.5625
+          },
+          "rect": {
+            "left": 18,
+            "top": 4047.34375,
+            "right": 372,
+            "bottom": 4792.78125,
+            "width": 354,
+            "height": 745.4375
+          }
+        },
+        {
+          "step": "04",
+          "heading": {
+            "left": 18,
+            "top": 4792.78125,
+            "right": 372,
+            "bottom": 5018.5,
+            "width": 354,
+            "height": 225.71875
+          },
+          "rect": {
+            "left": 18,
+            "top": 4792.78125,
+            "right": 372,
+            "bottom": 5244.828125,
+            "width": 354,
+            "height": 452.046875
+          }
+        }
+      ],
+      "intersections": 0,
+      "image": {
+        "source": "http://127.0.0.1:3004/media/menu/chef-planning/scene-640.webp",
+        "loaded": true,
+        "rect": {
+          "left": 52,
+          "top": 3803.015625,
+          "right": 372,
+          "bottom": 4016.34375,
+          "width": 320,
+          "height": 213.328125
+        },
+        "filter": "grayscale(1) contrast(1.25)",
+        "blend": "multiply"
+      },
+      "fonts": {
+        "title": "Oranienbaum, Georgia, \"Times New Roman\", serif",
+        "copy": "\"Ysabeau Office\", system-ui, -apple-system, sans-serif",
+        "number": "\"PT Mono\", ui-monospace, Menlo, monospace"
+      }
+    },
+    {
+      "width": 375,
+      "overflow": false,
+      "scene": {
+        "left": 52,
+        "top": 3838.265625,
+        "right": 357,
+        "bottom": 4041.59375,
+        "width": 305,
+        "height": 203.328125
+      },
+      "conversation": {
+        "left": 52,
+        "top": 3421.65625,
+        "right": 357,
+        "bottom": 3624.984375,
+        "width": 305,
+        "height": 203.328125
+      },
+      "stations": [
+        {
+          "step": "01",
+          "heading": {
+            "left": 18,
+            "top": 3130.5,
+            "right": 357,
+            "bottom": 3409.65625,
+            "width": 339,
+            "height": 279.15625
+          },
+          "rect": {
+            "left": 18,
+            "top": 3130.5,
+            "right": 357,
+            "bottom": 3655.984375,
+            "width": 339,
+            "height": 525.484375
+          }
+        },
+        {
+          "step": "02",
+          "heading": {
+            "left": 18,
+            "top": 3655.984375,
+            "right": 357,
+            "bottom": 3821.265625,
+            "width": 339,
+            "height": 165.28125
+          },
+          "rect": {
+            "left": 18,
+            "top": 3655.984375,
+            "right": 357,
+            "bottom": 4072.59375,
+            "width": 339,
+            "height": 416.609375
+          }
+        },
+        {
+          "step": "03",
+          "heading": {
+            "left": 18,
+            "top": 4072.59375,
+            "right": 357,
+            "bottom": 4237.875,
+            "width": 339,
+            "height": 165.28125
+          },
+          "rect": {
+            "left": 18,
+            "top": 4072.59375,
+            "right": 357,
+            "bottom": 4844.75,
+            "width": 339,
+            "height": 772.15625
+          }
+        },
+        {
+          "step": "04",
+          "heading": {
+            "left": 18,
+            "top": 4844.75,
+            "right": 357,
+            "bottom": 5070.46875,
+            "width": 339,
+            "height": 225.71875
+          },
+          "rect": {
+            "left": 18,
+            "top": 4844.75,
+            "right": 357,
+            "bottom": 5286.796875,
+            "width": 339,
+            "height": 442.046875
+          }
+        }
+      ],
+      "intersections": 0,
+      "image": {
+        "source": "http://127.0.0.1:3004/media/menu/chef-planning/scene-640.webp",
+        "loaded": true,
+        "rect": {
+          "left": 52,
+          "top": 3838.265625,
+          "right": 357,
+          "bottom": 4041.59375,
+          "width": 305,
+          "height": 203.328125
+        },
+        "filter": "grayscale(1) contrast(1.25)",
+        "blend": "multiply"
+      },
+      "fonts": {
+        "title": "Oranienbaum, Georgia, \"Times New Roman\", serif",
+        "copy": "\"Ysabeau Office\", system-ui, -apple-system, sans-serif",
+        "number": "\"PT Mono\", ui-monospace, Menlo, monospace"
+      }
+    }
+  ],
+  "errors": [],
+  "checks": [
+    "Seven widths and route clearance",
+    "200% text on desktop and phone",
+    "Approved single graphite illustration, no food photograph or ingredient layers",
+    "No-JavaScript content and image",
+    "Image failure, keyboard retry, 44px target and focus",
+    "63 collage photos and inline video preserved"
+  ]
+}

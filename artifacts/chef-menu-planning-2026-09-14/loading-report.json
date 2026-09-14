@@ -1,0 +1,17 @@
+{
+  "passed": true,
+  "before": {
+    "x": 52,
+    "y": 315.015625,
+    "width": 320,
+    "height": 213.328125
+  },
+  "after": {
+    "x": 52,
+    "y": 315.015625,
+    "width": 320,
+    "height": 213.328125
+  },
+  "reservedHeight": 213.328125,
+  "layoutShift": 0
+}

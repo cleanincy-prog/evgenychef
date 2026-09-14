@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="robots" content="noindex,nofollow">
+  <title>Макет — новая редакция текста меню</title>
+  <link rel="stylesheet" href="../chef-purchasing-2026-09-14/site-styles.css">
+  <style>
+    .mockup-main { padding-top: 46px; padding-bottom: 76px; }
+    .mockup-main .evening-plan { margin-top: 0; }
+    .mockup-main .process-list { grid-template-rows: auto; }
+    .mockup-main .station-conversation { align-self: start; }
+    .menu-planning-scene { width: calc(100% - 34px); max-width: 620px; margin: 17px 0 0 34px; }
+    .menu-planning-scene { position: relative; }
+    .menu-planning-sketch { display: block; width: 100%; height: auto; mix-blend-mode: multiply; filter: grayscale(1) contrast(1.25); }
+    .mockup-main .station-menu { padding-top: var(--menu-step-drop, 210px); }
+    @media (max-width: 900px) {
+      .mockup-main { padding-top: 30px; padding-bottom: 40px; }
+      .mockup-main .station-menu { padding-top: 0; }
+      .menu-planning-scene { margin-left: 34px; width: calc(100% - 34px); }
+      .mockup-main .plan-route { display: none; }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header sheet">
+    <a class="wordmark" href="#menu">Evgen Grebenik</a>
+    <a class="header-action" href="https://www.instagram.com/evg.chef/">
+      <span class="header-action-desktop">Обсудить вечер ↗</span>
+      <span class="header-action-mobile">Instagram ↗</span>
+      <small>Instagram @evg.chef</small>
+    </a>
+  </header>
+  <main class="sheet mockup-main">
+    <section class="evening-plan" aria-labelledby="plan-title">
+      <h2 id="plan-title">От разговора — <span>к вашему столу</span></h2>
+      <div class="process-board">
+        <svg class="plan-route" aria-hidden="true"><path id="connection"/><path id="arrowhead"/></svg>
+        <ol class="process-list">
+          <li class="process-station station-conversation" data-step="01">
+            <div class="station-heading">
+              <span class="route-node" aria-hidden="true"></span>
+              <span class="station-number" aria-hidden="true">01</span>
+              <div class="station-copy">
+                <h3>Знакомимся</h3>
+                <p>Расскажите, по какому поводу собираетесь и сколько будет гостей. Вспомним любимые блюда, обсудим, что хочется попробовать и чего точно не должно быть в меню.</p>
+                <p>Можно прийти с готовой идеей. Можно начать с одного пожелания.</p>
+              </div>
+            </div>
+            <figure class="process-illustration conversation-illustration"><img src="../../../public/media/web/conversation-960.webp" width="1536" height="1024" alt="Евгений записывает пожелания гостьи в блокнот"></figure>
+          </li>
+          <li class="process-station station-menu" data-step="02" id="menu">
+            <div class="station-heading">
+              <span class="route-node" aria-hidden="true"></span>
+              <span class="station-number" aria-hidden="true">02</span>
+              <div class="station-copy">
+                <h3>Продумываю меню</h3>
+                <p>Из нашего разговора складывается меню. Я выбираю продукты и продумываю, какие блюда приготовить и как они будут сочетаться между собой.</p>
+              </div>
+            </div>
+            <figure class="menu-planning-scene"><img class="menu-planning-sketch" src="chef-menu-copy.png" width="1536" height="1024" alt="Вид через плечо Евгения: меню вечера, пример расчёта на четыре порции, продукты к ужину, подготовка и вопросы гостям"></figure>
+          </li>
+        </ol>
+      </div>
+    </section>
+  </main>
+  <script>
+    async function arrange() {
+      await document.fonts.ready;
+      await Promise.all([...document.images].map(img => img.decode()));
+      const conversation = document.querySelector('.station-conversation');
+      const menu = document.querySelector('.station-menu');
+      menu.style.setProperty('--menu-step-drop', `${conversation.getBoundingClientRect().height * .4}px`);
+      const board = document.querySelector('.process-board').getBoundingClientRect();
+      const center = selector => { const r = document.querySelector(selector).getBoundingClientRect(); return { x: r.x - board.x + r.width / 2, y: r.y - board.y + r.height / 2 }; };
+      const a = center('.station-conversation .route-node');
+      const b = center('.station-menu .route-node');
+      const endY = b.y - 18;
+      document.querySelector('#connection').setAttribute('d', `M ${a.x + 5} ${a.y - 20} C ${a.x + 155} ${a.y - 72}, ${b.x - 28} ${a.y - 65}, ${b.x - 9} ${a.y + 6} C ${b.x + 5} ${a.y + 54}, ${b.x + 8} ${endY - 45}, ${b.x} ${endY}`);
+      document.querySelector('#arrowhead').setAttribute('d', `M ${b.x - 5} ${endY - 7} L ${b.x} ${endY} L ${b.x + 6} ${endY - 6}`);
+      document.documentElement.dataset.ready = 'true';
+    }
+    arrange();
+    window.addEventListener('resize', arrange);
+  </script>
+</body>
+</html>

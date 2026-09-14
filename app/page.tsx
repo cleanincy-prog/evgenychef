@@ -103,7 +103,7 @@ export default function Home() {
       </section>
       <section className="evening-plan" aria-labelledby="plan-title">
         <h2 id="plan-title">От разговора — <span>к вашему столу</span></h2>
-        <div className="process-board process-board-with-menu">
+        <div className="process-board">
           <EveningPlanRoute />
           <ol className="process-list">
             <li className="process-station station-conversation" data-step="01">

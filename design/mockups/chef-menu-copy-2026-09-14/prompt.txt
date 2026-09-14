@@ -1,0 +1,59 @@
+Use case: text-localization.
+Asset: existing approved chef website illustration, 1536×1024.
+The single reference image is the EDIT TARGET. Change ONLY the words written on the notebook and sheets. This is a precise lettering revision of an approved composition, not a redesign.
+
+PRESERVE: every paper position, size, rotation, overlap and ruling; the chef's head, identity, shoulders, striped apron, hands, pencil, glass and vase; graphite tones, natural thin pencil strokes, cream paper, frame, empty lower-right area, and small plating sketch. Preserve the existing handwriting's size and character, adjusting line breaks only to fit the new phrases. No new objects. No standalone plate or color food. No newly invented numbers, stock levels, prices, weights or supplier names.
+
+Remove all former prominent wording including “Сверить закупку”, “Заготовки”, “Проверить”, “Меню — проработка”, “Фрагмент рецептуры”, “Пример: Steve Groves” and “Great British Chefs”. Replace the text as follows. Exact readable Russian Cyrillic and exact units matter. Keep the words contained on their original papers and leave the chef's fingers in front of the page where they already are.
+
+LEFT NOTEBOOK PAGE, top-to-bottom:
+“Меню вечера”
+“Основное блюдо”
+“Треска · мидии · морковь”
+“Подача: овощи и соус,”
+“сверху — филе.”
+“Порция филе — 150 г”
+“до приготовления”
+Retain the small rough plating sketch below, at its existing scale.
+
+RIGHT NOTEBOOK PAGE:
+“Расчёт на 4 порции”
+“Треска, филе — 600 г”
+“Мидии в раковинах — 300 г”
+“Морковь для соуса — 200 г”
+“Сливочное масло — 50 г”
+“Вино белое — 150 мл”
+“Густые сливки — 250 мл”
+Small note below:
+“Пример расчёта”
+The ingredient amounts come from a verified published recipe example; do not change them. Source attribution is kept in the accompanying mockup documentation. These are not the chef's actual purchase records.
+
+UPPER MIDDLE PROCUREMENT TABLE:
+Heading “Продукты к ужину”
+Four column headings:
+“Продукт” | “По рецепту” | “Остаток” | “Купить”
+Three rows:
+“Филе трески” | “600 г” | empty | empty
+“Мидии” | “300 г” | empty | empty
+“Морковь” | “200 г” | empty | empty
+The last two columns must be blank cells, not the written word “empty”.
+Footnote below the table:
+“Сверить остатки перед заказом.”
+
+UPPER RIGHT CHECKLIST:
+Heading “До начала готовки”
+Four short lines with empty square checkboxes:
+“Разделить филе на порции”
+“Нарезать морковь”
+“Очистить мидии”
+“Подготовить основу соуса”
+
+MIDDLE RIGHT SHEET:
+Heading “Уточнить с гостями”
+Four short bullet lines:
+“Количество человек”
+“Аллергии и ограничения”
+“Предпочтения по меню”
+“Время подачи”
+
+Use normal compact working handwriting matching the existing drawn medium. Keep all paper positions, chef anatomy, pencil placement and the approved empty tabletop unchanged. Do not add any lettering outside the sheets. No typographic poster treatment, no new artwork, no food plate, no extra text beyond the requested phrases except indistinct writing already partly concealed on background pages.

@@ -1,0 +1,168 @@
+{
+  "results": [
+    {
+      "option": 3,
+      "width": 1440,
+      "horizontalOverflow": false,
+      "foodPhotoPresent": false,
+      "menuHeading": "Продумываю меню",
+      "menuCopy": "Из нашего разговора складывается меню. Я выбираю продукты и продумываю, какие блюда приготовить и как они будут сочетаться между собой.",
+      "paper": "rgb(244, 239, 229)",
+      "titleFont": "Oranienbaum, Georgia, \"Times New Roman\", serif",
+      "copyFont": "\"Ysabeau Office\", system-ui, -apple-system, sans-serif",
+      "numberFont": "\"PT Mono\", ui-monospace, Menlo, monospace",
+      "images": [
+        {
+          "src": "../../../public/media/web/conversation-960.webp",
+          "loaded": true
+        },
+        {
+          "src": "chef-menu-copy.png",
+          "loaded": true
+        }
+      ],
+      "errors": []
+    },
+    {
+      "option": 3,
+      "width": 1280,
+      "horizontalOverflow": false,
+      "foodPhotoPresent": false,
+      "menuHeading": "Продумываю меню",
+      "menuCopy": "Из нашего разговора складывается меню. Я выбираю продукты и продумываю, какие блюда приготовить и как они будут сочетаться между собой.",
+      "paper": "rgb(244, 239, 229)",
+      "titleFont": "Oranienbaum, Georgia, \"Times New Roman\", serif",
+      "copyFont": "\"Ysabeau Office\", system-ui, -apple-system, sans-serif",
+      "numberFont": "\"PT Mono\", ui-monospace, Menlo, monospace",
+      "images": [
+        {
+          "src": "../../../public/media/web/conversation-960.webp",
+          "loaded": true
+        },
+        {
+          "src": "chef-menu-copy.png",
+          "loaded": true
+        }
+      ],
+      "errors": []
+    },
+    {
+      "option": 3,
+      "width": 1024,
+      "horizontalOverflow": false,
+      "foodPhotoPresent": false,
+      "menuHeading": "Продумываю меню",
+      "menuCopy": "Из нашего разговора складывается меню. Я выбираю продукты и продумываю, какие блюда приготовить и как они будут сочетаться между собой.",
+      "paper": "rgb(244, 239, 229)",
+      "titleFont": "Oranienbaum, Georgia, \"Times New Roman\", serif",
+      "copyFont": "\"Ysabeau Office\", system-ui, -apple-system, sans-serif",
+      "numberFont": "\"PT Mono\", ui-monospace, Menlo, monospace",
+      "images": [
+        {
+          "src": "../../../public/media/web/conversation-960.webp",
+          "loaded": true
+        },
+        {
+          "src": "chef-menu-copy.png",
+          "loaded": true
+        }
+      ],
+      "errors": []
+    },
+    {
+      "option": 3,
+      "width": 768,
+      "horizontalOverflow": false,
+      "foodPhotoPresent": false,
+      "menuHeading": "Продумываю меню",
+      "menuCopy": "Из нашего разговора складывается меню. Я выбираю продукты и продумываю, какие блюда приготовить и как они будут сочетаться между собой.",
+      "paper": "rgb(244, 239, 229)",
+      "titleFont": "Oranienbaum, Georgia, \"Times New Roman\", serif",
+      "copyFont": "\"Ysabeau Office\", system-ui, -apple-system, sans-serif",
+      "numberFont": "\"PT Mono\", ui-monospace, Menlo, monospace",
+      "images": [
+        {
+          "src": "../../../public/media/web/conversation-960.webp",
+          "loaded": true
+        },
+        {
+          "src": "chef-menu-copy.png",
+          "loaded": true
+        }
+      ],
+      "errors": []
+    },
+    {
+      "option": 3,
+      "width": 430,
+      "horizontalOverflow": false,
+      "foodPhotoPresent": false,
+      "menuHeading": "Продумываю меню",
+      "menuCopy": "Из нашего разговора складывается меню. Я выбираю продукты и продумываю, какие блюда приготовить и как они будут сочетаться между собой.",
+      "paper": "rgb(244, 239, 229)",
+      "titleFont": "Oranienbaum, Georgia, \"Times New Roman\", serif",
+      "copyFont": "\"Ysabeau Office\", system-ui, -apple-system, sans-serif",
+      "numberFont": "\"PT Mono\", ui-monospace, Menlo, monospace",
+      "images": [
+        {
+          "src": "../../../public/media/web/conversation-960.webp",
+          "loaded": true
+        },
+        {
+          "src": "chef-menu-copy.png",
+          "loaded": true
+        }
+      ],
+      "errors": []
+    },
+    {
+      "option": 3,
+      "width": 390,
+      "horizontalOverflow": false,
+      "foodPhotoPresent": false,
+      "menuHeading": "Продумываю меню",
+      "menuCopy": "Из нашего разговора складывается меню. Я выбираю продукты и продумываю, какие блюда приготовить и как они будут сочетаться между собой.",
+      "paper": "rgb(244, 239, 229)",
+      "titleFont": "Oranienbaum, Georgia, \"Times New Roman\", serif",
+      "copyFont": "\"Ysabeau Office\", system-ui, -apple-system, sans-serif",
+      "numberFont": "\"PT Mono\", ui-monospace, Menlo, monospace",
+      "images": [
+        {
+          "src": "../../../public/media/web/conversation-960.webp",
+          "loaded": true
+        },
+        {
+          "src": "chef-menu-copy.png",
+          "loaded": true
+        }
+      ],
+      "errors": []
+    },
+    {
+      "option": 3,
+      "width": 375,
+      "horizontalOverflow": false,
+      "foodPhotoPresent": false,
+      "menuHeading": "Продумываю меню",
+      "menuCopy": "Из нашего разговора складывается меню. Я выбираю продукты и продумываю, какие блюда приготовить и как они будут сочетаться между собой.",
+      "paper": "rgb(244, 239, 229)",
+      "titleFont": "Oranienbaum, Georgia, \"Times New Roman\", serif",
+      "copyFont": "\"Ysabeau Office\", system-ui, -apple-system, sans-serif",
+      "numberFont": "\"PT Mono\", ui-monospace, Menlo, monospace",
+      "images": [
+        {
+          "src": "../../../public/media/web/conversation-960.webp",
+          "loaded": true
+        },
+        {
+          "src": "chef-menu-copy.png",
+          "loaded": true
+        }
+      ],
+      "errors": []
+    }
+  ],
+  "generatedWith": "previous ImageGen lettering edit reused; original external block copy restored; no new generation for scope correction",
+  "productionSiteModified": false,
+  "screenshotType": "separate HTML mockups using the existing site CSS; additional notebook close-up rendered through an HTML viewport"
+}

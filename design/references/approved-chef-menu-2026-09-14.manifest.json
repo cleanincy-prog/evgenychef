@@ -1,0 +1,31 @@
+{
+  "source": "design/references/approved-chef-menu-2026-09-14.png",
+  "selectedFrom": "design/mockups/chef-menu-copy-2026-09-14/chef-menu-copy.png",
+  "sourceSha256": "c769f065791f498a6330249f32e34ed283a4acf9a930c632561b4968eb6d5a38",
+  "width": 1536,
+  "height": 1024,
+  "operation": "Proportional responsive WebP encoding only; no regeneration or content edits",
+  "variants": [
+    {
+      "filename": "scene-640.webp",
+      "width": 640,
+      "height": 427,
+      "bytes": 63634,
+      "sha256": "56476e32c97f61b507118bf841396c99001c44c0ad04d7dd48d6e2e8e1204e42"
+    },
+    {
+      "filename": "scene-960.webp",
+      "width": 960,
+      "height": 640,
+      "bytes": 131806,
+      "sha256": "69008c01a3d664b64ec90da742de4fbf8acfa7fd80af2fa5bcd5e227b516fdf4"
+    },
+    {
+      "filename": "scene-1536.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 291128,
+      "sha256": "cead9811766036e65be8a3d78e59f8ab8c32ddec33ad23a0d652d25c17fbd8c9"
+    }
+  ]
+}
