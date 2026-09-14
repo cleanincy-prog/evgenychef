@@ -22,20 +22,47 @@ const formats = [
   {
     id: "private-dinner", name: "Частный ужин",
     description: "Собрать близких за одним столом и спокойно поужинать. Меню составлю по вашим вкусам, приготовление и подачу возьму на себя. Вы сможете провести это время с теми, кого пригласили.",
+    guests: "2–12 гостей", duration: "3–4 часа", location: "дом или вилла", price: "от €180 с гостя",
     ...siteImages["private-dinner-wide-v2"],
     alt: "Евгений готовит блюдо на сковороде: видны лицо, руки и подача",
   },
   {
     id: "private-events", name: "Приватные мероприятия",
     description: "Для встреч, где главное — общение. Подберём угощение под такой ритм: закуски и блюда, которые удобно есть за разговором.",
+    guests: "число гостей обсудим", duration: "время согласуем", location: "место выберем вместе", price: "стоимость по запросу",
     ...siteImages["private-events"],
     alt: "Евгений готовит блины на открытом воздухе перед гостями",
   },
   {
     id: "masterclasses", name: "Мастер-классы",
     description: "Для тех, кому интересно самим встать у плиты. Готовим вместе: я показываю приёмы, объясняю детали и помогаю разобраться в процессе. Затем пробуем приготовленное за общим столом.",
+    guests: "состав группы обсудим", duration: "время согласуем", location: "место выберем вместе", price: "стоимость по запросу",
     ...siteImages.masterclasses,
     alt: "Участники мастер-класса наблюдают за работой Евгения",
+  },
+];
+
+const sampleDishes = [
+  { name: "Приветственная подача", accompaniment: "гребешок · огурец · укроп", accent: "на один укус" },
+  { name: "Утка сухого вызревания", accompaniment: "пюре из печёного сельдерея", accent: "основная подача" },
+];
+
+const questions = [
+  {
+    question: "Можно прийти без готовой идеи меню?",
+    answer: "Да. Можно начать с одного пожелания: вспомнить любимое блюдо или рассказать, что хочется попробовать. Из нашего разговора я составлю меню и продумаю сочетания блюд.",
+  },
+  {
+    question: "Когда рассказать о продуктах, которые не едим?",
+    answer: "При первом обсуждении меню. Расскажите о вкусах гостей и о том, чего точно не должно быть в блюдах, чтобы я мог учесть это при выборе продуктов.",
+  },
+  {
+    question: "Как проходит мастер-класс?",
+    answer: "Готовим вместе: я показываю приёмы, объясняю детали и помогаю в процессе. Затем садимся за общий стол и пробуем приготовленное.",
+  },
+  {
+    question: "Что написать в первом сообщении?",
+    answer: "Укажите дату, число гостей и формат встречи. Если уже есть пожелания по блюдам или идея вечера, расскажите и о них.",
   },
 ];
 
@@ -89,14 +116,18 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="formats" aria-labelledby="formats-title">
+      <section className="formats" id="formats" aria-labelledby="formats-title">
         <h2 id="formats-title"><span>Какой будет ваш вечер?</span></h2>
         <ul className="format-list">
-          {formats.map(format => <li className={`format-row format-${format.id}`} key={format.id}>
-            <figure className="format-image"><img src={format.src} srcSet={format.srcSet} sizes="(max-width: 620px) calc(100vw - 64px), (max-width: 900px) 540px, (max-width: 1460px) calc(45.25vw - 66px), 594px" alt={format.alt} width={format.width} height={format.height} loading="lazy" decoding="async" /></figure>
+          {formats.map(format => <li className={`fmt format-${format.id}`} key={format.id}>
+            <figure className="format-photo"><div className="format-image"><img src={format.src} srcSet={format.srcSet} sizes="(max-width: 760px) calc(100vw - 68px), (max-width: 1460px) 20vw, 290px" alt={format.alt} width={format.width} height={format.height} loading="lazy" decoding="async" /></div></figure>
             <div className="format-caption">
-              <h3><span>{format.name}</span></h3>
+              <h3 className="fmt-name"><span>{format.name}</span></h3>
               <p>{format.description}</p>
+              <div className="fmt-spec">
+                <span>{format.guests}</span><span>{format.duration}</span><span>{format.location}</span>
+                <b>{format.price}</b>
+              </div>
             </div>
           </li>)}
         </ul>
@@ -133,6 +164,30 @@ export default function Home() {
               <figure className="process-illustration toast-illustration"><img {...siteImages.toast} sizes="(max-width: 620px) calc(100vw - 70px), (max-width: 900px) min(67.88vw, 440px), min(38.07vw, 440px)" alt="Карандашная иллюстрация: гости поднимают бокалы за общим столом" loading="lazy" decoding="async" /></figure>
             </li>
           </ol>
+        </div>
+      </section>
+      <section className="sample-menu" id="sample-menu" aria-labelledby="sample-menu-title">
+        <h2 className="menu-title" id="sample-menu-title">Меню вашего вечера</h2>
+        <div className="menu-content">
+          <p className="menu-intro">Каждое меню я составляю под ваши вкусы. Вот пример сочетания подач.</p>
+          <ol className="dish-list">
+            {sampleDishes.map((dish, index) => <li className="dish" key={dish.name}>
+              <span className="dish-num" aria-hidden="true">{String(index + 1).padStart(2, "0")}</span>
+              <span className="dish-body">
+                <span className="dish-name">{dish.name}</span>{" "}
+                <span className="dish-sub"><span className="sep" aria-hidden="true">· </span>{dish.accompaniment} · <em>{dish.accent}</em></span>
+              </span>
+            </li>)}
+          </ol>
+        </div>
+      </section>
+      <section className="faq" id="faq" aria-labelledby="faq-title">
+        <h2 id="faq-title">Частые вопросы</h2>
+        <div className="faq-list">
+          {questions.map(item => <div className="faq-item" key={item.question}>
+            <h3 className="faq-q">{item.question}</h3>
+            <p className="faq-a">{item.answer}</p>
+          </div>)}
         </div>
       </section>
       <section className="contact" aria-labelledby="contact-title">
