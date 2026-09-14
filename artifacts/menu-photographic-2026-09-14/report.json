@@ -1,0 +1,562 @@
+{
+  "passed": true,
+  "results": [
+    {
+      "width": 1440,
+      "overflow": false,
+      "scene": {
+        "left": 159.984375,
+        "top": 3215.375,
+        "right": 1279.984375,
+        "bottom": 4185.609375,
+        "width": 1120,
+        "height": 970.234375
+      },
+      "description": {
+        "left": 265.79620361328125,
+        "top": 3372.2759857177734,
+        "right": 592.7959594726562,
+        "bottom": 3885.242660522461,
+        "width": 326.999755859375,
+        "height": 512.9666748046875
+      },
+      "photos": {
+        "left": 635.3387451171875,
+        "top": 3330.0203552246094,
+        "right": 981.7833251953125,
+        "bottom": 3722.2578125,
+        "width": 346.444580078125,
+        "height": 392.2374572753906
+      },
+      "background": {
+        "left": 159.984375,
+        "top": 3215.375,
+        "right": 1279.984375,
+        "bottom": 4086.484375,
+        "width": 1120,
+        "height": 871.109375
+      },
+      "intersections": 0,
+      "paper": "rgb(244, 239, 229)",
+      "bodyFont": "\"Notebook Caveat\", cursive",
+      "captionTextSize": 16.5,
+      "pageLetteringSize": 22.4,
+      "detachedDish": 0,
+      "expandableViews": 0,
+      "labels": [
+        "Филе рыбы",
+        "Зелёный горошек",
+        "Морковь",
+        "Томаты",
+        "Мидии",
+        "Зелень"
+      ],
+      "images": [
+        {
+          "alt": "Филе рыбы",
+          "loaded": true
+        },
+        {
+          "alt": "Зелёный горошек",
+          "loaded": true
+        },
+        {
+          "alt": "Морковь",
+          "loaded": true
+        },
+        {
+          "alt": "Томаты",
+          "loaded": true
+        },
+        {
+          "alt": "Мидии",
+          "loaded": true
+        },
+        {
+          "alt": "Зелень",
+          "loaded": true
+        }
+      ],
+      "textOverflow": false
+    },
+    {
+      "width": 1280,
+      "overflow": false,
+      "scene": {
+        "left": 84.796875,
+        "top": 3130.515625,
+        "right": 1195.171875,
+        "bottom": 4093.265625,
+        "width": 1110.375,
+        "height": 962.75
+      },
+      "description": {
+        "left": 189.70455932617188,
+        "top": 3286.0682373046875,
+        "right": 513.8776245117188,
+        "bottom": 3794.5116577148438,
+        "width": 324.1730651855469,
+        "height": 508.44342041015625
+      },
+      "photos": {
+        "left": 556.0770874023438,
+        "top": 3244.1752014160156,
+        "right": 899.5426635742188,
+        "bottom": 3633.0721435546875,
+        "width": 343.465576171875,
+        "height": 388.8969421386719
+      },
+      "background": {
+        "left": 84.796875,
+        "top": 3130.515625,
+        "right": 1195.171875,
+        "bottom": 3994.140625,
+        "width": 1110.375,
+        "height": 863.625
+      },
+      "intersections": 0,
+      "paper": "rgb(244, 239, 229)",
+      "bodyFont": "\"Notebook Caveat\", cursive",
+      "captionTextSize": 16.5,
+      "pageLetteringSize": 22.2075,
+      "detachedDish": 0,
+      "expandableViews": 0,
+      "labels": [
+        "Филе рыбы",
+        "Зелёный горошек",
+        "Морковь",
+        "Томаты",
+        "Мидии",
+        "Зелень"
+      ],
+      "images": [
+        {
+          "alt": "Филе рыбы",
+          "loaded": true
+        },
+        {
+          "alt": "Зелёный горошек",
+          "loaded": true
+        },
+        {
+          "alt": "Морковь",
+          "loaded": true
+        },
+        {
+          "alt": "Томаты",
+          "loaded": true
+        },
+        {
+          "alt": "Мидии",
+          "loaded": true
+        },
+        {
+          "alt": "Зелень",
+          "loaded": true
+        }
+      ],
+      "textOverflow": false
+    },
+    {
+      "width": 1024,
+      "overflow": false,
+      "scene": {
+        "left": 72.640625,
+        "top": 3189.0625,
+        "right": 951.34375,
+        "bottom": 3971.609375,
+        "width": 878.703125,
+        "height": 782.546875
+      },
+      "description": {
+        "left": 155.65528869628906,
+        "top": 3312.1615447998047,
+        "right": 412.21266174316406,
+        "bottom": 3714.6222381591797,
+        "width": 256.557373046875,
+        "height": 402.460693359375
+      },
+      "photos": {
+        "left": 445.5895080566406,
+        "top": 3279.0096893310547,
+        "right": 717.3876953125,
+        "bottom": 3586.685775756836,
+        "width": 271.7981872558594,
+        "height": 307.67608642578125
+      },
+      "background": {
+        "left": 72.640625,
+        "top": 3189.0625,
+        "right": 951.34375,
+        "bottom": 3872.484375,
+        "width": 878.703125,
+        "height": 683.421875
+      },
+      "intersections": 0,
+      "paper": "rgb(244, 239, 229)",
+      "bodyFont": "\"Notebook Caveat\", cursive",
+      "captionTextSize": 16.5,
+      "pageLetteringSize": 17.5741,
+      "detachedDish": 0,
+      "expandableViews": 0,
+      "labels": [
+        "Филе рыбы",
+        "Зелёный горошек",
+        "Морковь",
+        "Томаты",
+        "Мидии",
+        "Зелень"
+      ],
+      "images": [
+        {
+          "alt": "Филе рыбы",
+          "loaded": true
+        },
+        {
+          "alt": "Зелёный горошек",
+          "loaded": true
+        },
+        {
+          "alt": "Морковь",
+          "loaded": true
+        },
+        {
+          "alt": "Томаты",
+          "loaded": true
+        },
+        {
+          "alt": "Мидии",
+          "loaded": true
+        },
+        {
+          "alt": "Зелень",
+          "loaded": true
+        }
+      ],
+      "textOverflow": false
+    },
+    {
+      "width": 768,
+      "overflow": false,
+      "scene": {
+        "left": 74.484375,
+        "top": 3932.8125,
+        "right": 731.515625,
+        "bottom": 4542.953125,
+        "width": 657.03125,
+        "height": 610.140625
+      },
+      "description": {
+        "left": 136.56015014648438,
+        "top": 4024.8580017089844,
+        "right": 328.3808898925781,
+        "bottom": 4325.7724609375,
+        "width": 191.82073974609375,
+        "height": 300.9144592285156
+      },
+      "photos": {
+        "left": 353.3348388671875,
+        "top": 4000.070053100586,
+        "right": 556.5657348632812,
+        "bottom": 4230.139801025391,
+        "width": 203.23089599609375,
+        "height": 230.0697479248047
+      },
+      "background": {
+        "left": 74.484375,
+        "top": 3932.8125,
+        "right": 731.515625,
+        "bottom": 4443.828125,
+        "width": 657.03125,
+        "height": 511.015625
+      },
+      "intersections": 0,
+      "paper": "rgb(244, 239, 229)",
+      "bodyFont": "\"Notebook Caveat\", cursive",
+      "captionTextSize": 16.5,
+      "pageLetteringSize": 13.1406,
+      "detachedDish": 0,
+      "expandableViews": 0,
+      "labels": [
+        "Филе рыбы",
+        "Зелёный горошек",
+        "Морковь",
+        "Томаты",
+        "Мидии",
+        "Зелень"
+      ],
+      "images": [
+        {
+          "alt": "Филе рыбы",
+          "loaded": true
+        },
+        {
+          "alt": "Зелёный горошек",
+          "loaded": true
+        },
+        {
+          "alt": "Морковь",
+          "loaded": true
+        },
+        {
+          "alt": "Томаты",
+          "loaded": true
+        },
+        {
+          "alt": "Мидии",
+          "loaded": true
+        },
+        {
+          "alt": "Зелень",
+          "loaded": true
+        }
+      ],
+      "textOverflow": false
+    },
+    {
+      "width": 430,
+      "overflow": false,
+      "scene": {
+        "left": 51,
+        "top": 3822.875,
+        "right": 412,
+        "bottom": 4240.546875,
+        "width": 361,
+        "height": 417.671875
+      },
+      "description": {
+        "left": 85.08551025390625,
+        "top": 3873.4241333007812,
+        "right": 190.4612579345703,
+        "bottom": 4038.6380310058594,
+        "width": 105.37574768066406,
+        "height": 165.21389770507812
+      },
+      "photos": {
+        "left": 204.19505310058594,
+        "top": 3859.804397583008,
+        "right": 315.8436279296875,
+        "bottom": 3986.1517639160156,
+        "width": 111.64857482910156,
+        "height": 126.34736633300781
+      },
+      "background": {
+        "left": 51,
+        "top": 3822.875,
+        "right": 412,
+        "bottom": 4103.640625,
+        "width": 361,
+        "height": 280.765625
+      },
+      "intersections": 0,
+      "paper": "rgb(244, 239, 229)",
+      "bodyFont": "\"Notebook Caveat\", cursive",
+      "captionTextSize": 16.5,
+      "pageLetteringSize": 7.22,
+      "detachedDish": 0,
+      "expandableViews": 0,
+      "labels": [
+        "Филе рыбы",
+        "Зелёный горошек",
+        "Морковь",
+        "Томаты",
+        "Мидии",
+        "Зелень"
+      ],
+      "images": [
+        {
+          "alt": "Филе рыбы",
+          "loaded": true
+        },
+        {
+          "alt": "Зелёный горошек",
+          "loaded": true
+        },
+        {
+          "alt": "Морковь",
+          "loaded": true
+        },
+        {
+          "alt": "Томаты",
+          "loaded": true
+        },
+        {
+          "alt": "Мидии",
+          "loaded": true
+        },
+        {
+          "alt": "Зелень",
+          "loaded": true
+        }
+      ],
+      "textOverflow": false
+    },
+    {
+      "width": 390,
+      "overflow": false,
+      "scene": {
+        "left": 51,
+        "top": 3810.015625,
+        "right": 372,
+        "bottom": 4196.578125,
+        "width": 321,
+        "height": 386.5625
+      },
+      "description": {
+        "left": 81.32061767578125,
+        "top": 3854.9701385498047,
+        "right": 175.02001953125,
+        "bottom": 4001.791015625,
+        "width": 93.69940185546875,
+        "height": 146.8208770751953
+      },
+      "photos": {
+        "left": 187.23719787597656,
+        "top": 3842.859535217285,
+        "right": 286.51763916015625,
+        "bottom": 3955.1978302001953,
+        "width": 99.28044128417969,
+        "height": 112.33829498291016
+      },
+      "background": {
+        "left": 51,
+        "top": 3810.015625,
+        "right": 372,
+        "bottom": 4059.671875,
+        "width": 321,
+        "height": 249.65625
+      },
+      "intersections": 0,
+      "paper": "rgb(244, 239, 229)",
+      "bodyFont": "\"Notebook Caveat\", cursive",
+      "captionTextSize": 16.5,
+      "pageLetteringSize": 6.42,
+      "detachedDish": 0,
+      "expandableViews": 0,
+      "labels": [
+        "Филе рыбы",
+        "Зелёный горошек",
+        "Морковь",
+        "Томаты",
+        "Мидии",
+        "Зелень"
+      ],
+      "images": [
+        {
+          "alt": "Филе рыбы",
+          "loaded": true
+        },
+        {
+          "alt": "Зелёный горошек",
+          "loaded": true
+        },
+        {
+          "alt": "Морковь",
+          "loaded": true
+        },
+        {
+          "alt": "Томаты",
+          "loaded": true
+        },
+        {
+          "alt": "Мидии",
+          "loaded": true
+        },
+        {
+          "alt": "Зелень",
+          "loaded": true
+        }
+      ],
+      "textOverflow": false
+    },
+    {
+      "width": 375,
+      "overflow": false,
+      "scene": {
+        "left": 51,
+        "top": 3845.265625,
+        "right": 357,
+        "bottom": 4239.671875,
+        "width": 306,
+        "height": 394.40625
+      },
+      "description": {
+        "left": 79.90010070800781,
+        "top": 3888.1314392089844,
+        "right": 169.22824096679688,
+        "bottom": 4028.161376953125,
+        "width": 89.32814025878906,
+        "height": 140.02993774414062
+      },
+      "photos": {
+        "left": 180.87515258789062,
+        "top": 3876.585952758789,
+        "right": 275.51739501953125,
+        "bottom": 3983.6881256103516,
+        "width": 94.64224243164062,
+        "height": 107.1021728515625
+      },
+      "background": {
+        "left": 51,
+        "top": 3845.265625,
+        "right": 357,
+        "bottom": 4083.265625,
+        "width": 306,
+        "height": 238
+      },
+      "intersections": 0,
+      "paper": "rgb(244, 239, 229)",
+      "bodyFont": "\"Notebook Caveat\", cursive",
+      "captionTextSize": 16.5,
+      "pageLetteringSize": 6.12,
+      "detachedDish": 0,
+      "expandableViews": 0,
+      "labels": [
+        "Филе рыбы",
+        "Зелёный горошек",
+        "Морковь",
+        "Томаты",
+        "Мидии",
+        "Зелень"
+      ],
+      "images": [
+        {
+          "alt": "Филе рыбы",
+          "loaded": true
+        },
+        {
+          "alt": "Зелёный горошек",
+          "loaded": true
+        },
+        {
+          "alt": "Морковь",
+          "loaded": true
+        },
+        {
+          "alt": "Томаты",
+          "loaded": true
+        },
+        {
+          "alt": "Мидии",
+          "loaded": true
+        },
+        {
+          "alt": "Зелень",
+          "loaded": true
+        }
+      ],
+      "textOverflow": false
+    }
+  ],
+  "errors": [],
+  "checks": [
+    "one complete frame on seven widths",
+    "both pages and bowl in the same scene",
+    "no expansion or horizontal scrolling",
+    "route clearance",
+    "full-size caption at 200% text",
+    "no JavaScript",
+    "failed assets and keyboard retry",
+    "no animation"
+  ]
+}

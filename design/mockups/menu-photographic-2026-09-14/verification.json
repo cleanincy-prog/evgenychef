@@ -1,0 +1,102 @@
+{
+  "frame": {
+    "width": 1440,
+    "height": 1120
+  },
+  "book": {
+    "left": 80,
+    "top": 90,
+    "width": 1050,
+    "height": 884,
+    "angle": -6
+  },
+  "bookOrigin": {
+    "left": 37,
+    "top": 38
+  },
+  "bowl": {
+    "left": 858,
+    "top": 580,
+    "width": 535
+  },
+  "food": {
+    "left": 946,
+    "top": 680,
+    "width": 360
+  },
+  "checkedOpaqueCompositePixels": 72816,
+  "differingOpaquePixels": 0,
+  "foodGenerated": false,
+  "foodRetouched": false,
+  "environmentGenerated": false,
+  "foodSource": "design/mockups/menu-worktable-ingredients-2026-09-14/food-only.png",
+  "foodSourceSha256": "e4295a7da66f5a3b0df7c219e02243bbabf858c5255da2572543306f6b27ae24",
+  "exports": [
+    {
+      "file": "public/media/menu/worktable/photo-notebook-scene-640.webp",
+      "width": 640,
+      "bytes": 206354
+    },
+    {
+      "file": "public/media/menu/worktable/photo-notebook-scene-960.webp",
+      "width": 960,
+      "bytes": 440616
+    },
+    {
+      "file": "public/media/menu/worktable/photo-notebook-scene-1440.webp",
+      "width": 1440,
+      "bytes": 819036
+    }
+  ],
+  "ingredients": [
+    {
+      "id": "fish",
+      "name": "Филе рыбы",
+      "src": "/media/menu/worktable/photo-notebook-fish.webp",
+      "width": 300,
+      "height": 229,
+      "bytes": 45178
+    },
+    {
+      "id": "peas",
+      "name": "Зелёный горошек",
+      "src": "/media/menu/worktable/photo-notebook-peas.webp",
+      "width": 254,
+      "height": 300,
+      "bytes": 61378
+    },
+    {
+      "id": "carrot",
+      "name": "Морковь",
+      "src": "/media/menu/worktable/photo-notebook-carrot.webp",
+      "width": 320,
+      "height": 289,
+      "bytes": 70986
+    },
+    {
+      "id": "tomatoes",
+      "name": "Томаты",
+      "src": "/media/menu/worktable/photo-notebook-tomatoes.webp",
+      "width": 260,
+      "height": 300,
+      "bytes": 69868
+    },
+    {
+      "id": "mussels",
+      "name": "Мидии",
+      "src": "/media/menu/worktable/photo-notebook-mussels.webp",
+      "width": 320,
+      "height": 280,
+      "bytes": 92206
+    },
+    {
+      "id": "greens",
+      "name": "Зелень",
+      "src": "/media/menu/worktable/photo-notebook-greens.webp",
+      "width": 179,
+      "height": 391,
+      "bytes": 22006
+    }
+  ],
+  "losslessMasterMatchesPng": true
+}

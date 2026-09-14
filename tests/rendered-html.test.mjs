@@ -97,7 +97,7 @@ test("provides functional page anchors, photo attribution and the exact Instagra
   assert.match(credit.headers.get("content-type") || "", /^image\/png/);
   const attribution = await localFetch(menuPhotoCredits);
   assert.equal(attribution.status, 200);
-  assert.match(await attribution.text(), /Luc Viatour[\s\S]*CC BY-SA 3.0[\s\S]*Valenzuela400[\s\S]*CC BY-SA 4.0/);
+  assert.match(await attribution.text(), /Luc Viatour[\s\S]*CC BY-SA 3.0[\s\S]*Electra Studio[\s\S]*Markus Spiske[\s\S]*Alorin[\s\S]*CC BY 4.0/);
   assert.equal(tags(html, "form").length, 0, "This page must not send an automatic inquiry");
 });
 
@@ -113,7 +113,7 @@ test("renders 63 documentary collage photos and the selected worktable with the 
   const required = [
     "/media/web/chef-hero-apron-576.webp",
     "/media/web/masterchef-640.webp",
-    "/media/menu/worktable/fish-notebook-scene-960.webp",
+    "/media/menu/worktable/photo-notebook-scene-960.webp",
   ];
   for (const path of required) assert.ok(imageTags.some(img => img.src === path), `Missing real asset: ${path}`);
   for (const img of imageTags) assert.ok(Object.hasOwn(img, "alt"), `Image requires alt, including decorative empty alt: ${img.src}`);
@@ -133,8 +133,8 @@ test("renders 63 documentary collage photos and the selected worktable with the 
     }));
   }
   const worktable = imageTags.filter(img => img.src.includes("/menu/worktable/"));
-  assert.equal(worktable.filter(img => img.src.includes("fish-notebook-scene-")).length, 1, "The full notebook scene must appear once");
-  assert.equal(worktable.filter(img => /fish-notebook-(?:fish|peas|carrot|tomatoes|mussels|greens)\.webp/.test(img.src)).length, 6, "Every listed ingredient has its own real photograph");
+  assert.equal(worktable.filter(img => img.src.includes("photo-notebook-scene-")).length, 1, "The full notebook scene must appear once");
+  assert.equal(worktable.filter(img => /photo-notebook-(?:fish|peas|carrot|tomatoes|mussels|greens)\.webp/.test(img.src)).length, 6, "Every listed ingredient has its own real photograph");
   assert.ok(worktable.some(img => /глубокой кремовой тарелке/.test(img.alt)));
   assert.ok(visibleText(html).includes("Пример подачи"), "The example description must remain readable outside the raster image");
   assert.doesNotMatch(html, /data-recipe="octopus"|data-grams=|class="mb-(?:pencil|stroke|navigation)"|data-menu-(?:scroll|sketch|color|next)/);
