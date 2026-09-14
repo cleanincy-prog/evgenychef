@@ -1,0 +1,21 @@
+{
+  "project_id": "appgprj_6a981b9ab8708191b17ebf66cc5f818f",
+  "version_id": "appgprj_6a981b9ab8708191b17ebf66cc5f818f~appgver_8e181205f3b08191a4dc407863d7e03e",
+  "version_number": 85,
+  "commit_sha": "90d147cd757ce2d6ea2d5505d6f18a8dae559d8a",
+  "deployment": {
+    "id": "appgdep_6aa885d85fb08191945cdd05ac6a0b1c",
+    "project_id": "appgprj_6a981b9ab8708191b17ebf66cc5f818f",
+    "title": "Евгений Гребеник — Чертёж Mise en place",
+    "version_id": "appgprj_6a981b9ab8708191b17ebf66cc5f818f~appgver_8e181205f3b08191a4dc407863d7e03e",
+    "type": "publish",
+    "status": "succeeded",
+    "url": "https://evgen-grybenyk-mise-en-place-review.nepochatovcyprus.chatgpt.site",
+    "screenshot_asset_pointer": null,
+    "provider_deployment_id": "site---6a981b9ab8708191b17ebf66cc5f818f",
+    "failure_message": null,
+    "env_set_revision": 0,
+    "updated_at": "2026-09-14T23:41:05.141045+00:00"
+  },
+  "public_url": "https://evgenychef.com"
+}

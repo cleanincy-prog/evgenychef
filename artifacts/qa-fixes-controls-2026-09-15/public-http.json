@@ -1,0 +1,28 @@
+[
+  {
+    "range": "bytes=0-1023",
+    "status": 206,
+    "bytes": 1024,
+    "contentRange": "bytes 0-1023/8265696",
+    "exactBytes": true
+  },
+  {
+    "range": "bytes=1048576-1049599",
+    "status": 206,
+    "bytes": 1024,
+    "contentRange": "bytes 1048576-1049599/8265696",
+    "exactBytes": true
+  },
+  {
+    "range": "bytes=-1024",
+    "status": 206,
+    "bytes": 1024,
+    "contentRange": "bytes 8264672-8265695/8265696",
+    "exactBytes": true
+  },
+  {
+    "imageType": "image/webp",
+    "status": 200,
+    "cache": "public, max-age=86400, stale-while-revalidate=604800"
+  }
+]

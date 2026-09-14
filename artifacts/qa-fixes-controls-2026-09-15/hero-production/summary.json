@@ -1,0 +1,22 @@
+{
+  "base": "https://evgenychef.com",
+  "failures": [],
+  "cases": [
+    {
+      "name": "slow-css-mobile",
+      "navigation": "cold",
+      "width": 375,
+      "fallbackFrames": 0,
+      "maxGeometryChange": 0,
+      "layoutShiftSum": 0
+    },
+    {
+      "name": "slow-css-desktop",
+      "navigation": "cold",
+      "width": 1440,
+      "fallbackFrames": 0,
+      "maxGeometryChange": 0,
+      "layoutShiftSum": 0
+    }
+  ]
+}

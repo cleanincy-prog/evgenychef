@@ -1,0 +1,17 @@
+[
+  {
+    "status": 304,
+    "type": "image/webp",
+    "cache": "public, max-age=86400, stale-while-revalidate=604800"
+  },
+  {
+    "url": "https://evgenychef.com/media/chef-story-short-prep-2026-09-12.mp4",
+    "status": 416,
+    "cache": "no-store"
+  },
+  {
+    "url": "https://evgenychef.com/media/qa-nonexistent-image.webp",
+    "status": 404,
+    "cache": "no-store"
+  }
+]

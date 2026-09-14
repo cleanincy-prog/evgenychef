@@ -1,0 +1,1163 @@
+{
+  "base": "https://evgenychef.com",
+  "checkedAt": "2026-09-14T23:42:03.931Z",
+  "layouts": [
+    {
+      "width": 1440,
+      "initial": {
+        "controls": false,
+        "muted": true,
+        "loop": true,
+        "inline": true,
+        "pipDisabled": true,
+        "remoteDisabled": true,
+        "tabIndex": -1,
+        "paused": false,
+        "time": 0.518877,
+        "duration": 34.608005,
+        "error": null,
+        "pointerEvents": "none",
+        "seekable": [
+          [
+            0,
+            34.608005
+          ]
+        ]
+      },
+      "afterTap": {
+        "controls": false,
+        "muted": true,
+        "loop": true,
+        "inline": true,
+        "pipDisabled": true,
+        "remoteDisabled": true,
+        "tabIndex": -1,
+        "paused": false,
+        "time": 1.341159,
+        "duration": 34.608005,
+        "error": null,
+        "pointerEvents": "none",
+        "seekable": [
+          [
+            0,
+            34.608005
+          ]
+        ]
+      },
+      "errors": []
+    },
+    {
+      "width": 1280,
+      "initial": {
+        "controls": false,
+        "muted": true,
+        "loop": true,
+        "inline": true,
+        "pipDisabled": true,
+        "remoteDisabled": true,
+        "tabIndex": -1,
+        "paused": false,
+        "time": 0.50871,
+        "duration": 34.608005,
+        "error": null,
+        "pointerEvents": "none",
+        "seekable": [
+          [
+            0,
+            34.608005
+          ]
+        ]
+      },
+      "afterTap": {
+        "controls": false,
+        "muted": true,
+        "loop": true,
+        "inline": true,
+        "pipDisabled": true,
+        "remoteDisabled": true,
+        "tabIndex": -1,
+        "paused": false,
+        "time": 1.329668,
+        "duration": 34.608005,
+        "error": null,
+        "pointerEvents": "none",
+        "seekable": [
+          [
+            0,
+            34.608005
+          ]
+        ]
+      },
+      "errors": []
+    },
+    {
+      "width": 1024,
+      "initial": {
+        "controls": false,
+        "muted": true,
+        "loop": true,
+        "inline": true,
+        "pipDisabled": true,
+        "remoteDisabled": true,
+        "tabIndex": -1,
+        "paused": false,
+        "time": 0.507104,
+        "duration": 34.608005,
+        "error": null,
+        "pointerEvents": "none",
+        "seekable": [
+          [
+            0,
+            34.608005
+          ]
+        ]
+      },
+      "afterTap": {
+        "controls": false,
+        "muted": true,
+        "loop": true,
+        "inline": true,
+        "pipDisabled": true,
+        "remoteDisabled": true,
+        "tabIndex": -1,
+        "paused": false,
+        "time": 1.32702,
+        "duration": 34.608005,
+        "error": null,
+        "pointerEvents": "none",
+        "seekable": [
+          [
+            0,
+            34.608005
+          ]
+        ]
+      },
+      "errors": []
+    },
+    {
+      "width": 768,
+      "initial": {
+        "controls": false,
+        "muted": true,
+        "loop": true,
+        "inline": true,
+        "pipDisabled": true,
+        "remoteDisabled": true,
+        "tabIndex": -1,
+        "paused": false,
+        "time": 0.60029,
+        "duration": 34.608005,
+        "error": null,
+        "pointerEvents": "none",
+        "seekable": [
+          [
+            0,
+            34.608005
+          ]
+        ]
+      },
+      "afterTap": {
+        "controls": false,
+        "muted": true,
+        "loop": true,
+        "inline": true,
+        "pipDisabled": true,
+        "remoteDisabled": true,
+        "tabIndex": -1,
+        "paused": false,
+        "time": 0.768224,
+        "duration": 34.608005,
+        "error": null,
+        "pointerEvents": "none",
+        "seekable": [
+          [
+            0,
+            34.608005
+          ]
+        ]
+      },
+      "errors": []
+    },
+    {
+      "width": 430,
+      "initial": {
+        "controls": false,
+        "muted": true,
+        "loop": true,
+        "inline": true,
+        "pipDisabled": true,
+        "remoteDisabled": true,
+        "tabIndex": -1,
+        "paused": false,
+        "time": 0.641947,
+        "duration": 34.608005,
+        "error": null,
+        "pointerEvents": "none",
+        "seekable": [
+          [
+            0,
+            34.608005
+          ]
+        ]
+      },
+      "afterTap": {
+        "controls": false,
+        "muted": true,
+        "loop": true,
+        "inline": true,
+        "pipDisabled": true,
+        "remoteDisabled": true,
+        "tabIndex": -1,
+        "paused": false,
+        "time": 1.45847,
+        "duration": 34.608005,
+        "error": null,
+        "pointerEvents": "none",
+        "seekable": [
+          [
+            0,
+            34.608005
+          ]
+        ]
+      },
+      "errors": []
+    },
+    {
+      "width": 390,
+      "initial": {
+        "controls": false,
+        "muted": true,
+        "loop": true,
+        "inline": true,
+        "pipDisabled": true,
+        "remoteDisabled": true,
+        "tabIndex": -1,
+        "paused": false,
+        "time": 0.577226,
+        "duration": 34.608005,
+        "error": null,
+        "pointerEvents": "none",
+        "seekable": [
+          [
+            0,
+            34.608005
+          ]
+        ]
+      },
+      "afterTap": {
+        "controls": false,
+        "muted": true,
+        "loop": true,
+        "inline": true,
+        "pipDisabled": true,
+        "remoteDisabled": true,
+        "tabIndex": -1,
+        "paused": false,
+        "time": 1.394669,
+        "duration": 34.608005,
+        "error": null,
+        "pointerEvents": "none",
+        "seekable": [
+          [
+            0,
+            34.608005
+          ]
+        ]
+      },
+      "errors": []
+    },
+    {
+      "width": 375,
+      "initial": {
+        "controls": false,
+        "muted": true,
+        "loop": true,
+        "inline": true,
+        "pipDisabled": true,
+        "remoteDisabled": true,
+        "tabIndex": -1,
+        "paused": false,
+        "time": 0.627527,
+        "duration": 34.608005,
+        "error": null,
+        "pointerEvents": "none",
+        "seekable": [
+          [
+            0,
+            34.608005
+          ]
+        ]
+      },
+      "afterTap": {
+        "controls": false,
+        "muted": true,
+        "loop": true,
+        "inline": true,
+        "pipDisabled": true,
+        "remoteDisabled": true,
+        "tabIndex": -1,
+        "paused": false,
+        "time": 1.441582,
+        "duration": 34.608005,
+        "error": null,
+        "pointerEvents": "none",
+        "seekable": [
+          [
+            0,
+            34.608005
+          ]
+        ]
+      },
+      "errors": []
+    },
+    {
+      "browser": "firefox",
+      "width": 1440,
+      "playback": {
+        "controls": false,
+        "muted": true,
+        "loop": true,
+        "pipDisabled": true,
+        "tabIndex": -1,
+        "paused": false,
+        "time": 0.516005,
+        "duration": 34.607981,
+        "error": null,
+        "pointerEvents": "none",
+        "seekable": [
+          [
+            0,
+            34.607981
+          ]
+        ]
+      }
+    },
+    {
+      "browser": "firefox",
+      "width": 375,
+      "playback": {
+        "controls": false,
+        "muted": true,
+        "loop": true,
+        "pipDisabled": true,
+        "tabIndex": -1,
+        "paused": false,
+        "time": 0.533345,
+        "duration": 34.607981,
+        "error": null,
+        "pointerEvents": "none",
+        "seekable": [
+          [
+            0,
+            34.607981
+          ]
+        ]
+      }
+    }
+  ],
+  "video": {
+    "offscreen": {
+      "controls": false,
+      "muted": true,
+      "loop": true,
+      "inline": true,
+      "pipDisabled": true,
+      "remoteDisabled": true,
+      "tabIndex": -1,
+      "paused": true,
+      "time": 2.416734,
+      "duration": 34.608005,
+      "error": null,
+      "pointerEvents": "none",
+      "seekable": [
+        [
+          0,
+          34.608005
+        ]
+      ]
+    },
+    "afterLoop": {
+      "controls": false,
+      "muted": true,
+      "loop": true,
+      "inline": true,
+      "pipDisabled": true,
+      "remoteDisabled": true,
+      "tabIndex": -1,
+      "paused": false,
+      "time": 0.065034,
+      "duration": 34.608005,
+      "error": null,
+      "pointerEvents": "none",
+      "seekable": [
+        [
+          0,
+          34.608005
+        ]
+      ]
+    },
+    "reducedMotion": {
+      "controls": false,
+      "muted": true,
+      "loop": true,
+      "inline": true,
+      "pipDisabled": true,
+      "remoteDisabled": true,
+      "tabIndex": -1,
+      "paused": true,
+      "time": 0,
+      "duration": 34.608005,
+      "error": null,
+      "pointerEvents": "none",
+      "seekable": [
+        [
+          0,
+          34.608005
+        ]
+      ]
+    }
+  },
+  "http": [
+    {
+      "path": "/media/web/hero-02-192.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "path": "/media/web/hero-02-384.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "path": "/media/web/hero-03-192.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "path": "/media/web/hero-01-192.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "path": "/media/web/hero-03-384.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "path": "/media/web/hero-01-384.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "path": "/media/web/hero-06-384.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "path": "/media/web/hero-06-192.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "path": "/media/web/hero-05-192.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "path": "/media/web/hero-04-192.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "path": "/media/web/hero-05-384.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "path": "/media/web/hero-04-384.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "path": "/media/web/hero-08-384.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "path": "/media/web/hero-07-192.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "path": "/media/web/hero-09-192.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "path": "/media/web/hero-09-384.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "path": "/media/web/hero-08-192.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "path": "/media/web/hero-07-384.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "path": "/media/web/hero-11-384.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "path": "/media/web/hero-10-192.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "path": "/media/web/hero-11-192.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "path": "/media/web/hero-12-192.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "path": "/media/web/hero-12-384.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "path": "/media/web/hero-10-384.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "path": "/media/web/hero-14-384.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "path": "/media/web/hero-13-192.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "path": "/media/web/hero-13-384.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "path": "/media/web/hero-15-192.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "path": "/media/web/hero-14-192.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "path": "/media/web/hero-15-384.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "path": "/media/web/hero-16-192.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "path": "/media/web/hero-16-384.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "path": "/media/web/hero-18-384.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "path": "/media/web/hero-17-192.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "path": "/media/web/hero-18-192.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "path": "/media/web/hero-17-384.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "path": "/media/web/hero-19-384.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "path": "/media/web/hero-19-192.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "path": "/media/web/hero-21-384.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "path": "/media/web/hero-21-192.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "path": "/media/web/hero-20-192.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "path": "/media/web/hero-20-384.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "path": "/media/web/hero-23-384.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "path": "/media/web/hero-24-384.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "path": "/media/web/hero-22-192.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "path": "/media/web/hero-23-192.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "path": "/media/web/hero-24-192.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "path": "/media/web/hero-22-384.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "path": "/media/web/hero-26-192.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "path": "/media/web/hero-26-384.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "path": "/media/web/hero-27-192.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "path": "/media/web/hero-27-384.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "path": "/media/web/hero-25-192.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "path": "/media/web/hero-25-384.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "path": "/media/web/hero-29-192.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "path": "/media/web/hero-28-192.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "path": "/media/web/hero-30-384.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "path": "/media/web/hero-30-192.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "path": "/media/web/hero-28-384.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "path": "/media/web/hero-29-384.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "path": "/media/web/hero-31-192.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "path": "/media/web/hero-33-384.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "path": "/media/web/hero-33-192.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "path": "/media/web/hero-32-192.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "path": "/media/web/hero-32-384.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "path": "/media/web/hero-31-384.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "path": "/media/web/hero-36-192.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "path": "/media/web/hero-34-384.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "path": "/media/web/hero-34-192.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "path": "/media/web/hero-35-192.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "path": "/media/web/hero-36-384.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "path": "/media/web/hero-35-384.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "path": "/media/web/hero-37-384.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "path": "/media/web/hero-37-192.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "path": "/media/web/hero-39-384.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "path": "/media/web/hero-38-192.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "path": "/media/web/hero-39-192.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "path": "/media/web/hero-38-384.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "path": "/media/web/hero-41-192.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "path": "/media/web/hero-40-192.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "path": "/media/web/hero-40-384.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "path": "/media/web/hero-42-192.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "path": "/media/web/hero-41-384.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "path": "/media/web/hero-42-384.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "path": "/media/web/hero-43-192.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "path": "/media/web/hero-44-192.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "path": "/media/web/hero-45-192.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "path": "/media/web/hero-43-384.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "path": "/media/web/hero-44-384.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "path": "/media/web/hero-45-384.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "path": "/media/web/hero-47-384.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "path": "/media/web/hero-47-192.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "path": "/media/web/hero-46-192.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "path": "/media/web/hero-46-384.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "path": "/media/web/hero-48-192.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "path": "/media/web/hero-48-384.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "path": "/media/web/hero-49-384.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "path": "/media/web/hero-50-384.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "path": "/media/web/hero-51-192.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "path": "/media/web/hero-49-192.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "path": "/media/web/hero-50-192.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "path": "/media/web/hero-51-384.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "path": "/media/web/hero-54-192.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "path": "/media/web/hero-53-384.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "path": "/media/web/hero-53-192.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "path": "/media/web/hero-52-192.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "path": "/media/web/hero-52-384.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "path": "/media/web/hero-54-384.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "path": "/media/web/hero-55-192.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "path": "/media/web/hero-56-192.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "path": "/media/web/hero-57-192.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "path": "/media/web/hero-55-384.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "path": "/media/web/hero-57-384.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "path": "/media/web/hero-56-384.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "path": "/media/web/hero-59-192.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "path": "/media/web/hero-60-192.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "path": "/media/web/hero-58-192.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "path": "/media/web/hero-58-384.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "path": "/media/web/hero-60-384.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "path": "/media/web/hero-59-384.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "path": "/media/web/hero-62-192.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "path": "/media/web/hero-63-192.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "path": "/media/web/hero-61-192.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "path": "/media/web/hero-61-384.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "path": "/media/web/hero-63-384.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "path": "/media/web/hero-62-384.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "path": "/media/web/chef-hero-apron-576.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "path": "/media/web/private-dinner-wide-v2-384.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "path": "/media/web/masterchef-320.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "path": "/media/web/chef-hero-apron-320.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "path": "/media/web/masterchef-640.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "path": "/media/web/private-dinner-wide-v2-768.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "path": "/media/web/private-events-384.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "path": "/media/web/masterclasses-384.jpg",
+      "status": 200,
+      "type": "image/jpeg"
+    },
+    {
+      "path": "/media/web/conversation-480.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "path": "/media/web/conversation-960.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "path": "/media/web/private-events-768.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "path": "/media/web/masterclasses-768.jpg",
+      "status": 200,
+      "type": "image/jpeg"
+    },
+    {
+      "path": "/media/web/toast-480.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "path": "/media/web/film-poster-540.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "path": "/media/menu/chef-planning/scene-640.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "path": "/media/menu/chef-planning/scene-1536.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "path": "/media/menu/chef-planning/scene-960.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "path": "/media/web/toast-960.webp",
+      "status": 200,
+      "type": "image/webp"
+    },
+    {
+      "path": "/media/chef-story-short-prep-2026-09-12.mp4",
+      "range": "bytes=0-1023",
+      "status": 206,
+      "bytes": 1024,
+      "contentRange": "bytes 0-1023/8265696"
+    },
+    {
+      "path": "/media/chef-story-short-prep-2026-09-12.mp4",
+      "range": "bytes=1048576-1049599",
+      "status": 206,
+      "bytes": 1024,
+      "contentRange": "bytes 1048576-1049599/8265696"
+    },
+    {
+      "path": "/media/chef-story-short-prep-2026-09-12.mp4",
+      "range": "bytes=-1024",
+      "status": 206,
+      "bytes": 1024,
+      "contentRange": "bytes 8264672-8265695/8265696"
+    }
+  ]
+}
