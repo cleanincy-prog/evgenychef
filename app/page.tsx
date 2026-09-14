@@ -139,7 +139,6 @@ export default function Home() {
         <div className="contact-action">
           <a className="instagram-button" href={instagramUrl} target="_blank" rel="noopener noreferrer">Написать в Instagram <span aria-hidden="true">↗</span></a>
           <p className="instagram-handle">@evg.chef</p>
-          <p className="contact-help">В первом сообщении укажите дату и формат.</p>
         </div>
       </section>
     </main>

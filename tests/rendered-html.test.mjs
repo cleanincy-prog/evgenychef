@@ -54,7 +54,7 @@ test("serves the approved evening page as accessible Russian HTML", () => {
   for (const expected of ["Евгений", "Гребеник", "Mise en place", "Знакомимся", "Продумываю меню", "Готовлю к встрече", "Ваш вечер", "Из нашего разговора складывается меню. Я выбираю продукты и продумываю, какие блюда приготовить и как они будут сочетаться между собой."]) {
     assert.ok(text.toLocaleLowerCase("ru").includes(expected.toLocaleLowerCase("ru")), `Missing rendered content: ${expected}`);
   }
-  assert.ok(text.includes("В первом сообщении укажите дату и формат"));
+  assert.doesNotMatch(text, /В первом сообщении укажите дату и формат/i);
   assert.doesNotMatch(text, /Частые вопросы|стоимость|€|число гостей|количество гостей|состав группы|сколько будет гостей|\d+[–-]\d+ гостей/i, "Removed FAQ, prices and guest counts must not return");
   assert.doesNotMatch(html, /id="faq"|class="faq-q"/);
   const steps = [...html.matchAll(/\bdata-step="([^"]+)"/g)].map(match => match[1]);
