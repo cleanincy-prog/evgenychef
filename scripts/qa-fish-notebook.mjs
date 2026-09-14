@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import { mkdir, writeFile } from 'node:fs/promises';
 import { chromium } from 'playwright';
 
-const out = 'artifacts/menu-worktable-ingredients-2026-09-14';
+const out = 'artifacts/menu-notebook-one-block-2026-09-14';
 await mkdir(out, { recursive: true });
 const browser = await chromium.launch({ executablePath: '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome', headless: true });
 const results = [];
@@ -38,7 +38,10 @@ try {
       return { width:innerWidth, overflow:document.documentElement.scrollWidth>innerWidth, scene, description, photos, background, intersections,
         paper:getComputedStyle(document.querySelector('.menu-worktable')).backgroundColor,
         bodyFont:getComputedStyle(document.querySelector('.notebook-introduction')).fontFamily,
-        textSize:parseFloat(getComputedStyle(document.querySelector('.notebook-introduction')).fontSize),
+        captionTextSize:parseFloat(getComputedStyle(document.querySelector('.menu-worktable-caption p')).fontSize),
+        pageLetteringSize:parseFloat(getComputedStyle(document.querySelector('.notebook-introduction')).fontSize),
+        detachedDish:document.querySelectorAll('.notebook-mobile-dish').length,
+        expandableViews:document.querySelectorAll('.menu-worktable dialog,.menu-worktable details,.menu-worktable [aria-expanded]').length,
         labels:[...document.querySelectorAll('.notebook-ingredient-list li')].map(e=>e.textContent),
         images:[...document.querySelectorAll('.notebook-ingredient img')].map(e=>({alt:e.alt,loaded:e.complete&&e.naturalWidth>0})),
         textOverflow:[...document.querySelectorAll('.notebook-description p,.notebook-ingredient-list li,.notebook-ingredient figcaption')].some(e=>e.scrollWidth>e.clientWidth+1)
@@ -51,12 +54,15 @@ try {
     assert.ok(value.images.every(img => img.loaded));
     assert.deepEqual(value.images.map(img => img.alt), value.labels);
     assert.equal(value.paper, 'rgb(244, 239, 229)');
-    assert.ok(value.textSize >= 16);
-    if (value.background.height) {
-      assert.ok(value.description.bottom < value.background.top + value.background.height * .71, `${width}: text must stay on paper`);
-      assert.ok(value.photos.left > value.description.right, `${width}: photographs belong to right page`);
-      assert.ok(value.photos.bottom < value.background.top + value.background.height * .57, `${width}: photos clear the bowl`);
-    } else if (value.scene.width <= 640) assert.ok(value.photos.top >= value.description.bottom);
+    assert.ok(value.captionTextSize >= 16);
+    assert.equal(value.detachedDish, 0, `${width}: the bowl must remain in the same frame`);
+    assert.equal(value.expandableViews, 0, `${width}: the user excluded expanding the notebook`);
+    assert.ok(value.background.height > 0, `${width}: the full scene must always be visible`);
+    assert.ok(Math.abs(value.background.width / value.background.height - 1419 / 1108) < .005, `${width}: preserve the complete composition`);
+    assert.ok(value.scene.left >= 0 && value.scene.right <= width, `${width}: the entire block must fit the screen`);
+    assert.ok(value.description.bottom < value.background.top + value.background.height * .71, `${width}: text must stay on the left page`);
+    assert.ok(value.photos.left > value.description.right, `${width}: photographs must remain on the right page, never below`);
+    assert.ok(value.photos.bottom < value.background.top + value.background.height * .57, `${width}: photos clear the bowl`);
     results.push(value);
     await page.locator('.menu-worktable').screenshot({ path:`${out}/menu-${width}.png` });
     await page.locator('.evening-plan').screenshot({ path:`${out}/process-${width}.png` });
@@ -68,12 +74,13 @@ try {
     await settle(page);
     assert.equal(await page.evaluate(() => document.documentElement.scrollWidth>innerWidth), false);
     assert.equal(await page.locator('.notebook-description').evaluate(e=>e.scrollWidth>e.clientWidth+1), false);
+    assert.ok(await page.locator('.menu-worktable-caption p').evaluate(e=>parseFloat(getComputedStyle(e).fontSize)>=32));
     await page.locator('.menu-worktable').screenshot({ path:`${out}/text-200-${width}.png` });
     await page.evaluate(() => document.documentElement.style.fontSize='');
   }
   const nojs = await browser.newPage({ viewport:{width:390,height:844}, javaScriptEnabled:false });
   await nojs.goto('http://127.0.0.1:3004/');
-  await nojs.locator('.notebook-mobile-dish').scrollIntoViewIfNeeded();
+  await nojs.locator('.menu-worktable').scrollIntoViewIfNeeded();
   assert.equal(await nojs.locator('.notebook-ingredient img').count(),6);
   await nojs.locator('.menu-worktable').screenshot({path:`${out}/no-js-390.png`});
   assert.ok(await nojs.locator('.notebook-ingredient img').evaluateAll(images=>images.every(img=>img.complete&&img.naturalWidth>0)));
@@ -92,7 +99,7 @@ try {
   assert.equal(await failed.locator('.menu-worktable-error').count(),0);
   assert.equal(await page.locator('.menu-worktable').evaluate(e=>e.getAnimations({subtree:true}).length),0);
   assert.deepEqual(errors,[]);
-  await writeFile(`${out}/report.json`, JSON.stringify({passed:true,results,errors,checks:['seven widths','route clearance','left description and matching right photos','200% text','no JavaScript','failed assets and keyboard retry','no animation']},null,2));
+  await writeFile(`${out}/report.json`, JSON.stringify({passed:true,results,errors,checks:['one complete frame on seven widths','both pages and bowl in the same scene','no expansion or horizontal scrolling','route clearance','full-size caption at 200% text','no JavaScript','failed assets and keyboard retry','no animation']},null,2));
 } catch(error) {
   await writeFile(`${out}/report.json`,JSON.stringify({passed:false,results,errors,error:error.stack},null,2));
   throw error;

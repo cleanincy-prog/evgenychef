@@ -50,16 +50,9 @@ export default function MenuWorktable() {
           </div>
         </div>
       </div>
-      <div className="notebook-mobile-dish">
-        <img src={`/media/menu/worktable/fish-notebook-bowl-576.webp${suffix}`}
-          srcSet={`/media/menu/worktable/fish-notebook-bowl-320.webp${suffix} 320w, /media/menu/worktable/fish-notebook-bowl-576.webp${suffix} 576w`}
-          sizes="(max-width: 620px) calc(100vw - 69px), 440px" width={576} height={613} loading="lazy" decoding="async"
-          alt="Рыба с овощами, зелёным пюре и мидиями в глубокой тарелке цвета тёплой бумаги."
-          onLoad={loaded} onError={failed} />
-      </div>
     </div>
     <figcaption className="menu-worktable-caption">
-      <p><span className="menu-worktable-label">Пример подачи</span>Состав меню обсуждаем для вашего вечера.</p>
+      <p><span className="menu-worktable-label">Рыба с овощами</span>Пример подачи для вашего вечера.</p>
       <div className="notebook-photo-links">
         <a href="/media/menu/worktable/fish-photo-provided-2026-09-14.png" target="_blank" rel="noopener noreferrer">Фото блюда</a>
         <a href="/media/menu/worktable/fish-notebook-credits.html">Источники фотографий</a>

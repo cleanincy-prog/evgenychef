@@ -14,55 +14,29 @@
 .notebook-pages { position: absolute; inset: 0; }
 .notebook-page { position: absolute; color: var(--ink); }
 .notebook-description { left: 10.6%; top: 22%; width: 28.2%; }
-.notebook-description h4 { font: 400 clamp(1.1875rem, 2.15cqi, 1.625rem)/1.25 var(--font-display); letter-spacing: 0; }
-.notebook-introduction { margin: 14px 0 18px; font: var(--type-copy); color: var(--muted); }
-.notebook-section-label { font: var(--type-label); color: var(--muted); margin-bottom: 10px; }
+/* Page lettering belongs to the complete illustration and scales with its photographs. */
+.notebook-description h4 { font: 400 2.15cqi/1.25 var(--font-display); letter-spacing: 0; }
+.notebook-introduction { margin: 1.25cqi 0 1.607143cqi; font: 400 1.473214cqi/1.62 var(--font-sans); color: var(--muted); }
+.notebook-section-label { font: 500 1.160714cqi/1.35 var(--font-sans); color: var(--muted); margin-bottom: .892857cqi; }
 .notebook-ingredient-list { list-style: none; padding: 0; margin: 0; }
-.notebook-ingredient-list li { font: 400 1rem/1.5 var(--font-sans); margin: 3px 0; }
+.notebook-ingredient-list li { font: 400 1.428571cqi/1.5 var(--font-sans); margin: .267857cqi 0; }
 .notebook-photographs { top: 21%; left: 45.8%; width: 27.5%; }
-.notebook-ingredient-photos { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 9px 16px; }
+.notebook-ingredient-photos { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .803571cqi 1.428571cqi; }
 .notebook-ingredient { margin: 0; min-width: 0; text-align: center; }
 .notebook-ingredient img { width: 100%; height: 5.1cqi; object-fit: contain; display: block; }
 .notebook-ingredient-fish img, .notebook-ingredient-peas img { height: 5.8cqi; }
-.notebook-ingredient figcaption { margin-top: 3px; font: 400 .875rem/1.35 var(--font-sans); color: var(--muted); }
+.notebook-ingredient figcaption { margin-top: .267857cqi; font: 400 1.25cqi/1.35 var(--font-sans); color: var(--muted); }
 .notebook-ingredient-greens img { transform: rotate(27deg); }
-.notebook-ingredient-puree-sauce { grid-column: 1; }
-.notebook-mobile-dish { display: none; }
 .menu-worktable-caption { display: flex; align-items: baseline; gap: 12px 28px; margin-top: 14px; color: var(--muted); }
 .menu-worktable-caption p { flex: 1; font: var(--type-copy); }
-.menu-worktable-label { display: block; color: var(--ink); font-weight: 500; }
+.menu-worktable-label { display: block; color: var(--ink); font: 400 1.1875rem/1.3 var(--font-display); margin-bottom: 4px; }
 .notebook-photo-links { display: flex; flex-wrap: wrap; gap: 0 22px; }
 .menu-worktable-caption a { display: inline-flex; align-items: center; min-height: 44px; font: var(--type-label); text-decoration: underline; text-underline-offset: 3px; }
 .notebook-photo-attribution { font: 400 .8125rem/1.5 var(--font-sans); color: var(--muted); margin-top: 2px; }
 .menu-worktable-error { color: var(--muted); margin-top: 14px; }
 .menu-worktable-error button { min-height: 44px; margin-top: 8px; padding: 8px 12px; border: 1px solid var(--rule); background: transparent; color: var(--ink); font: var(--type-copy); }
 .menu-worktable-error button:hover { color: var(--gold-text); border-color: var(--gold-text); }
-/* Preserve full-sized text when the spread is narrower than its content. */
-@container chef-notebook (max-width: 62rem) {
-  .menu-worktable-picture { display: none; }
-  .notebook-pages { position: relative; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: stretch; gap: 0; }
-  .notebook-page { position: relative; inset: auto; width: auto; padding: 32px 25px 38px; background: url('/media/menu/worktable/fish-notebook-page.webp') center / 100% 100% no-repeat; }
-  .notebook-description h4 { font-size: 1.4375rem; }
-  .notebook-introduction { margin-bottom: 22px; }
-  .notebook-ingredient-list li { margin: 7px 0; }
-  .notebook-ingredient-photos { gap: 20px 12px; }
-  .notebook-ingredient img, .notebook-ingredient-fish img, .notebook-ingredient-peas img { height: 80px; }
-  .notebook-mobile-dish { display: block; width: min(440px, 78%); margin: -10px 0 0 auto; }
-  .notebook-mobile-dish img { display: block; width: 100%; height: auto; mask-image: linear-gradient(to right, transparent, #000 8%, #000 96%, transparent), linear-gradient(to bottom, transparent, #000 8%, #000 88%, transparent); mask-composite: intersect; }
-}
-@container chef-notebook (max-width: 40rem) {
-  .notebook-pages { grid-template-columns: minmax(0, 1fr); gap: 18px; }
-  .notebook-page { padding: 30px 25px 40px; }
-  .notebook-ingredient img, .notebook-ingredient-fish img, .notebook-ingredient-peas img { height: 96px; }
-  .notebook-ingredient-photos { gap: 24px 18px; }
-  .notebook-mobile-dish { width: min(440px, 100%); margin-top: 8px; }
-  .menu-worktable-caption { display: block; }
-}
-@container chef-notebook (max-width: 18rem) {
-  .notebook-page { padding-inline: 22px; }
-  .notebook-ingredient-photos { grid-template-columns: minmax(0, 1fr); }
-  .notebook-ingredient img { height: 130px; }
-}
+.menu-worktable[data-state="error"] .notebook-scene { display: none; }
 @media (max-width: 900px) {
   .menu-worktable { width: calc(100% - 38px); }
 }
