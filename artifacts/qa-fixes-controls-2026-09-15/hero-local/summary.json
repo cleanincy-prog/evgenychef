@@ -1,0 +1,22 @@
+{
+  "base": "http://127.0.0.1:3004",
+  "failures": [],
+  "cases": [
+    {
+      "name": "slow-css-mobile",
+      "width": 375,
+      "navigation": "cold",
+      "fallbackFrames": 0,
+      "movement": 0,
+      "layoutShifts": 0
+    },
+    {
+      "name": "slow-css-desktop",
+      "width": 1440,
+      "navigation": "cold",
+      "fallbackFrames": 0,
+      "movement": 0,
+      "layoutShifts": 0
+    }
+  ]
+}

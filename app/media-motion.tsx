@@ -16,15 +16,12 @@ export function usePageMediaPlayback(
     const viewport = window.visualViewport;
     let isVisible = false;
     let reachedStartPosition = false;
-    let manuallyPaused = false;
-    let automaticPause = false;
     let disposed = false;
     let playPending = false;
     let frame = 0;
 
     const pause = () => {
       if (!video.paused) {
-        automaticPause = true;
         video.pause();
       }
     };
@@ -35,7 +32,7 @@ export function usePageMediaPlayback(
         pause();
         return;
       }
-      if (!reachedStartPosition || reducedMotion.matches || manuallyPaused ||
+      if (!reachedStartPosition || reducedMotion.matches ||
         video.ended || video.error || !video.paused || playPending) return;
 
       playPending = true;
@@ -43,7 +40,8 @@ export function usePageMediaPlayback(
         await video.play();
         if (disposed || document.hidden || !isVisible) pause();
       } catch {
-        // Autoplay may be blocked: the poster and native controls stay usable.
+        // If the browser blocks autoplay, retain the poster and retry on the
+        // next scroll or user gesture, without adding playback controls.
       } finally {
         playPending = false;
       }
@@ -82,11 +80,6 @@ export function usePageMediaPlayback(
 
     const handleMotionChange = () => reducedMotion.matches ? pause() : measurePlayback();
     const handleVisibility = () => { measurePlayback(); };
-    const handlePause = () => {
-      if (!automaticPause && !video.ended) manuallyPaused = true;
-      automaticPause = false;
-    };
-    const handlePlay = () => { manuallyPaused = false; };
 
     preloadObserver.observe(video);
     const resizeObserver = new ResizeObserver(scheduleMeasurement);
@@ -97,8 +90,8 @@ export function usePageMediaPlayback(
     viewport?.addEventListener("resize", scheduleMeasurement);
     reducedMotion.addEventListener("change", handleMotionChange);
     document.addEventListener("visibilitychange", handleVisibility);
-    video.addEventListener("pause", handlePause);
-    video.addEventListener("play", handlePlay);
+    document.addEventListener("pointerup", scheduleMeasurement, { passive: true });
+    document.addEventListener("keydown", scheduleMeasurement);
     video.addEventListener("canplay", scheduleMeasurement);
     measurePlayback();
 
@@ -113,8 +106,8 @@ export function usePageMediaPlayback(
       viewport?.removeEventListener("resize", scheduleMeasurement);
       reducedMotion.removeEventListener("change", handleMotionChange);
       document.removeEventListener("visibilitychange", handleVisibility);
-      video.removeEventListener("pause", handlePause);
-      video.removeEventListener("play", handlePlay);
+      document.removeEventListener("pointerup", scheduleMeasurement);
+      document.removeEventListener("keydown", scheduleMeasurement);
       video.removeEventListener("canplay", scheduleMeasurement);
       pause();
     };

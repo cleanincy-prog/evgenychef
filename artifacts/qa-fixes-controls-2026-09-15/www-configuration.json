@@ -1,0 +1,55 @@
+{
+  "zone": "evgenychef.com",
+  "zone_id": "88e79022efc46f7b54261c625d163481",
+  "rule": {
+    "description": "",
+    "id": "e69e7e4aa28246118a9f9452fd34c19c",
+    "kind": "zone",
+    "last_updated": "2026-09-14T23:18:59.403425Z",
+    "name": "Canonical www redirect",
+    "phase": "http_request_dynamic_redirect",
+    "rules": [
+      {
+        "action": "redirect",
+        "action_parameters": {
+          "from_value": {
+            "preserve_query_string": true,
+            "status_code": 301,
+            "target_url": {
+              "expression": "concat(\"https://evgenychef.com\", http.request.uri.path)"
+            }
+          }
+        },
+        "description": "Redirect www.evgenychef.com to its existing canonical site",
+        "enabled": true,
+        "expression": "(http.host eq \"www.evgenychef.com\")",
+        "id": "7bc0df7cff81482ab866c5670c77cded",
+        "last_updated": "2026-09-14T23:18:59.403425Z",
+        "ref": "evgenychef_www_to_apex",
+        "version": "1"
+      }
+    ],
+    "version": "1"
+  },
+  "dns": {
+    "id": "83a1d41287d282ed26c1e59c05b673b8",
+    "name": "www.evgenychef.com",
+    "type": "A",
+    "content": "192.0.2.1",
+    "proxiable": true,
+    "proxied": true,
+    "ttl": 1,
+    "settings": {},
+    "meta": {},
+    "comment": "Redirect-only hostname: Cloudflare returns 301 to https://evgenychef.com before origin.",
+    "tags": [],
+    "created_on": "2026-09-14T23:19:14.854512Z",
+    "modified_on": "2026-09-14T23:19:14.854512Z",
+    "comment_modified_on": "2026-09-14T23:19:14.854512Z"
+  },
+  "verified": {
+    "url": "https://www.evgenychef.com/robots.txt?qa=redirect&value=a%20b",
+    "status": 301,
+    "location": "https://evgenychef.com/robots.txt?qa=redirect&value=a%20b"
+  }
+}

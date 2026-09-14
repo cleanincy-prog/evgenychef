@@ -18,7 +18,6 @@ export default function ChefStoryVideo() {
     try {
       if (failed || video.error) video.load();
       await video.play();
-      video.focus();
     } catch {
       if (attempt !== playAttempt.current) return;
       setFailed(Boolean(video.error));
@@ -27,10 +26,11 @@ export default function ChefStoryVideo() {
 
   return <figure data-video-error={failed ? true : undefined} className="preparation-film">
     <div className="film-stage">
-      <video id="story-documentary-video" ref={videoRef} controls muted playsInline preload="metadata"
+      <video id="story-documentary-video" ref={videoRef} muted loop playsInline preload="metadata"
+        src="/media/chef-story-short-prep-2026-09-12.mp4"
+        disablePictureInPicture disableRemotePlayback tabIndex={-1}
         poster={siteImages["film-poster"].src} aria-label="Домашний фильм: от подготовки ножей до подачи ужина"
         onError={() => setFailed(true)} onPlaying={() => setFailed(false)}>
-        <source src="/media/chef-story-short-prep-2026-09-12.mp4" type="video/mp4" onError={() => setFailed(true)} />
         <track kind="captions" src="/media/chef-story-short-prep-2026-09-12.ru.vtt" srcLang="ru" label="Русские субтитры" />
         Ваш браузер не поддерживает видео.
       </video>

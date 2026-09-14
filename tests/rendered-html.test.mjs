@@ -134,17 +134,22 @@ test("renders 63 documentary collage photos and the selected chef illustration w
 
 });
 
-test("serves the shortened inline film with immediate controls and usable byte ranges", async () => {
+test("serves the shortened looping inline film without playback controls and with usable byte ranges", async () => {
   const videos = tags(html, "video");
   assert.equal(videos.length, 1);
   assert.equal(videos[0].poster, "/media/web/film-poster-540.webp");
   assert.ok(!Object.hasOwn(videos[0], "autoplay"), "Viewport playback must not begin offscreen through the autoplay attribute");
   assert.ok(Object.hasOwn(videos[0], "playsinline"));
-  assert.ok(Object.hasOwn(videos[0], "controls"), "Controls must be available without a start overlay");
+  assert.ok(!Object.hasOwn(videos[0], "controls"), "The film must not expose pause, seeking or other player controls");
+  assert.ok(Object.hasOwn(videos[0], "muted"));
+  assert.ok(Object.hasOwn(videos[0], "loop"));
+  assert.ok(Object.hasOwn(videos[0], "disablepictureinpicture"));
+  assert.ok(Object.hasOwn(videos[0], "disableremoteplayback"));
+  assert.equal(videos[0].tabindex, "-1");
   assert.equal(videos[0].preload, "metadata");
   assert.doesNotMatch(visibleText(html), /Смотреть фильм/i);
   const videoPath = "/media/chef-story-short-prep-2026-09-12.mp4";
-  assert.ok(tags(html, "source").some(source => source.src === videoPath && source.type === "video/mp4"));
+  assert.equal(videos[0].src, videoPath);
   const poster = await localFetch(videos[0].poster, { method: "HEAD" });
   assert.equal(poster.status, 200);
   const video = await localFetch(videoPath, { headers: { Range: "bytes=0-1023" } });

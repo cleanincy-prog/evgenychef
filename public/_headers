@@ -1,0 +1,7 @@
+# Preserve vinext's default immutable caching when supplying custom headers.
+/_next/static/*
+  Cache-Control: public, max-age=31536000, immutable
+
+# Keep the uploaded media type explicit on asset-first hosts as well.
+/media/*.webp
+  Content-Type: image/webp

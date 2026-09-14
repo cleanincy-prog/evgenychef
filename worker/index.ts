@@ -73,7 +73,8 @@ function parseByteRange(rangeHeader: string, length: number): { start: number; e
 async function serveStaticAsset(request: Request, env: Env, pathname: string): Promise<Response> {
   const response = await env.ASSETS.fetch(request);
   const headers = new Headers(response.headers);
-  headers.set("cache-control", cacheControlFor(pathname));
+  headers.set("cache-control", response.ok ? cacheControlFor(pathname) : "no-store");
+  if (response.ok && pathname.endsWith(".webp")) headers.set("content-type", "image/webp");
 
   if (!pathname.endsWith(".mp4")) {
     return withHeaders(response, headers, request.method === "HEAD" ? null : response.body);
