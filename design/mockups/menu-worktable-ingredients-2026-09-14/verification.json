@@ -1,0 +1,31 @@
+{
+  "source": "design/references/menu-fish-2026-09-14/fish-photo.png",
+  "sha256": "dae9f8fa9ec89704adad0b463b15533cc93ada1623c7a634374cff5a8b4a894d",
+  "checkedOpaqueSourcePixels": 76132,
+  "checkedOpaqueCompositePixels": 38941,
+  "differingOpaquePixels": 0,
+  "foodGenerated": false,
+  "foodRetouched": false,
+  "placement": {
+    "left": 1007,
+    "top": 687,
+    "width": 265
+  },
+  "exports": [
+    {
+      "file": "public/media/menu/worktable/fish-notebook-scene-640.webp",
+      "width": 640,
+      "bytes": 271766
+    },
+    {
+      "file": "public/media/menu/worktable/fish-notebook-scene-960.webp",
+      "width": 960,
+      "bytes": 622084
+    },
+    {
+      "file": "public/media/menu/worktable/fish-notebook-scene-1419.webp",
+      "width": 1419,
+      "bytes": 1302766
+    }
+  ]
+}

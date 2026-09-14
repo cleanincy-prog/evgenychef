@@ -1,0 +1,50 @@
+[
+  {
+    "id": "fish",
+    "name": "Филе рыбы",
+    "src": "/media/menu/worktable/fish-notebook-fish.webp",
+    "width": 300,
+    "height": 229,
+    "bytes": 45178
+  },
+  {
+    "id": "peas",
+    "name": "Зелёный горошек",
+    "src": "/media/menu/worktable/fish-notebook-peas.webp",
+    "width": 267,
+    "height": 300,
+    "bytes": 35820
+  },
+  {
+    "id": "carrot",
+    "name": "Морковь",
+    "src": "/media/menu/worktable/fish-notebook-carrot.webp",
+    "width": 300,
+    "height": 165,
+    "bytes": 15342
+  },
+  {
+    "id": "tomatoes",
+    "name": "Томаты",
+    "src": "/media/menu/worktable/fish-notebook-tomatoes.webp",
+    "width": 260,
+    "height": 300,
+    "bytes": 69868
+  },
+  {
+    "id": "mussels",
+    "name": "Мидии",
+    "src": "/media/menu/worktable/fish-notebook-mussels.webp",
+    "width": 300,
+    "height": 157,
+    "bytes": 44234
+  },
+  {
+    "id": "greens",
+    "name": "Зелень",
+    "src": "/media/menu/worktable/fish-notebook-greens.webp",
+    "width": 179,
+    "height": 391,
+    "bytes": 22006
+  }
+]
