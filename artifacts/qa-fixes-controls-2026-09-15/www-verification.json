@@ -1,0 +1,17 @@
+[
+  {
+    "url": "http://www.evgenychef.com/",
+    "status": 301,
+    "location": "https://evgenychef.com/"
+  },
+  {
+    "url": "https://www.evgenychef.com/",
+    "status": 301,
+    "location": "https://evgenychef.com/"
+  },
+  {
+    "url": "https://www.evgenychef.com/robots.txt?qa=redirect&value=a%20b",
+    "status": 301,
+    "location": "https://evgenychef.com/robots.txt?qa=redirect&value=a%20b"
+  }
+]

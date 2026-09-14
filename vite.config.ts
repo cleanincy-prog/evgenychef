@@ -1,6 +1,27 @@
 import vinext from "vinext";
 import { sites } from "@openai/sites-vite-plugin";
-import { defineConfig } from "vite";
+import { defineConfig, type Plugin } from "vite";
+import { renameSync } from "node:fs";
+import { resolve } from "node:path";
+
+function routeMediaThroughWorker(): Plugin {
+  return {
+    name: "route-media-through-worker",
+    apply: "build",
+    closeBundle: {
+      order: "post",
+      sequential: true,
+      handler() {
+        if (this.environment.name !== "client") return;
+        const output = resolve(this.environment.config.root, this.environment.config.build.outDir);
+        // Sites serves matching assets before the application, including when
+        // run_worker_first/_headers are supplied. Keep public /media URLs in
+        // the Worker by storing the unchanged files under a different prefix.
+        renameSync(resolve(output, "media"), resolve(output, "_site-media"));
+      },
+    },
+  };
+}
 
 // Local preview stays on loopback; Sites publishes the same source to evgenychef.com.
 const isCodexSeatbeltSandbox = process.env.CODEX_SANDBOX === "seatbelt";
@@ -49,6 +70,7 @@ export default defineConfig(async () => {
         viteEnvironment: { name: "rsc", childEnvironments: ["ssr"] },
         config: localBindingConfig,
       }),
+      routeMediaThroughWorker(),
     ],
   };
 });

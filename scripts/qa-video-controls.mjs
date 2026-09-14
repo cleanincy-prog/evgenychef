@@ -150,10 +150,7 @@ for (let i = 0; i < assets.length; i += 6) {
     assert.match(type, src.endsWith('.webp') ? /^image\/webp/ : src.endsWith('.jpg') ? /^image\/jpeg/ : /^image\//, src);
   }));
 }
-// Vite's development file server has its own suffix-range implementation.
-// Exercise suffix semantics against the deployed Worker, which owns them.
-const ranges = ['bytes=0-1023', 'bytes=1048576-1049599'];
-if (!['127.0.0.1', 'localhost'].includes(new URL(base).hostname)) ranges.push('bytes=-1024');
+const ranges = ['bytes=0-1023', 'bytes=1048576-1049599', 'bytes=-1024'];
 for (const range of ranges) {
   const r = await fetch(new URL(filmPath, base), { headers: { Range: range }, signal: AbortSignal.timeout(20000) });
   const bytes = (await r.arrayBuffer()).byteLength;

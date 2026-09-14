@@ -1,5 +1,6 @@
 import assert from "node:assert/strict";
 import test, { before } from "node:test";
+import { readFile } from "node:fs/promises";
 
 const base = new URL(process.env.LOCAL_URL || "http://127.0.0.1:3004");
 assert.equal(base.protocol, "http:", "QA is restricted to local HTTP");
@@ -152,9 +153,18 @@ test("serves the shortened looping inline film without playback controls and wit
   assert.equal(videos[0].src, videoPath);
   const poster = await localFetch(videos[0].poster, { method: "HEAD" });
   assert.equal(poster.status, 200);
-  const video = await localFetch(videoPath, { headers: { Range: "bytes=0-1023" } });
-  assert.equal(video.status, 206, "Video range requests must support seeking");
-  assert.match(video.headers.get("content-type") || "", /^video\/mp4/);
-  assert.match(video.headers.get("content-range") || "", /^bytes 0-1023\/\d+$/);
-  assert.equal((await video.arrayBuffer()).byteLength, 1024);
+  const original = await readFile(new URL(`../public${videoPath}`, import.meta.url));
+  for (const [range, start, end] of [
+    ["bytes=0-1023", 0, 1023],
+    ["bytes=1048576-1049599", 1048576, 1049599],
+    ["bytes=-1024", original.length - 1024, original.length - 1],
+  ]) {
+    const video = await localFetch(videoPath, { headers: { Range: range } });
+    assert.equal(video.status, 206, range);
+    assert.match(video.headers.get("content-type") || "", /^video\/mp4/);
+    assert.equal(video.headers.get("content-range"), `bytes ${start}-${end}/${original.length}`);
+    assert.deepEqual(Buffer.from(await video.arrayBuffer()), original.subarray(start, end + 1), `Wrong video fragment for ${range}`);
+  }
+  const invalid = await localFetch(videoPath, { headers: { Range: `bytes=${original.length}-` } });
+  assert.equal(invalid.status, 416);
 });

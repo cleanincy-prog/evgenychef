@@ -1,3 +1,4 @@
+/// <reference types="vite/client" />
 /** Shared Worker for the evening-plan site and its loopback preview. */
 import { handleImageOptimization, DEFAULT_DEVICE_SIZES, DEFAULT_IMAGE_SIZES } from "vinext/server/image-optimization";
 import handler from "vinext/server/app-router-entry";
@@ -70,11 +71,27 @@ function parseByteRange(rangeHeader: string, length: number): { start: number; e
   return { start, end: Math.min(end, length - 1) };
 }
 
+function assetUrlFor(path: string, base: string): URL {
+  const assetUrl = new URL(path, base);
+  if (import.meta.env.PROD && assetUrl.pathname.startsWith("/media/")) {
+    assetUrl.pathname = `/_site-media/${assetUrl.pathname.slice("/media/".length)}`;
+  }
+  return assetUrl;
+}
+
 async function serveStaticAsset(request: Request, env: Env, pathname: string): Promise<Response> {
-  const response = await env.ASSETS.fetch(request);
+  const assetRequest = new Request(assetUrlFor(request.url, request.url), request);
+  // Some asset servers interpret a suffix as 0-N. Handle suffixes here using
+  // the complete file length so the response contains the actual last bytes.
+  if (pathname.endsWith(".mp4") && request.method === "GET" &&
+    request.headers.get("range")?.trim().startsWith("bytes=-")) {
+    assetRequest.headers.delete("range");
+  }
+  const response = await env.ASSETS.fetch(assetRequest);
   const headers = new Headers(response.headers);
-  headers.set("cache-control", response.ok ? cacheControlFor(pathname) : "no-store");
-  if (response.ok && pathname.endsWith(".webp")) headers.set("content-type", "image/webp");
+  const cacheable = response.ok || response.status === 304;
+  headers.set("cache-control", cacheable ? cacheControlFor(pathname) : "no-store");
+  if (cacheable && pathname.endsWith(".webp")) headers.set("content-type", "image/webp");
 
   if (!pathname.endsWith(".mp4")) {
     return withHeaders(response, headers, request.method === "HEAD" ? null : response.body);
@@ -89,6 +106,7 @@ async function serveStaticAsset(request: Request, env: Env, pathname: string): P
   const source = await response.arrayBuffer();
   const range = parseByteRange(rangeHeader, source.byteLength);
   if (!range) {
+    headers.set("cache-control", "no-store");
     headers.set("content-range", `bytes */${source.byteLength}`);
     headers.set("content-length", "0");
     return new Response(null, { status: 416, headers });
@@ -113,7 +131,7 @@ const worker = {
     if (url.pathname === "/_vinext/image" && env?.ASSETS && env?.IMAGES) {
       const allowedWidths = [...DEFAULT_DEVICE_SIZES, ...DEFAULT_IMAGE_SIZES];
       const response = await handleImageOptimization(request, {
-        fetchAsset: (path) => env.ASSETS.fetch(new Request(new URL(path, request.url))),
+        fetchAsset: (path) => env.ASSETS.fetch(new Request(assetUrlFor(path, request.url))),
         transformImage: async (body, { width, format, quality }) => {
           const result = await env.IMAGES.input(body).transform(width > 0 ? { width } : {}).output({ format, quality });
           return result.response();
