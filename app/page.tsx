@@ -83,7 +83,8 @@ export default function Home() {
             <figure className="hero-portrait"><img {...siteImages["chef-hero-apron"]} sizes="(max-width: 620px) 56vw, 34vw" alt="Евгений Гребеник улыбается, стоя в полосатом поварском фартуке" fetchPriority="high" decoding="async" /></figure>
           </div>
         </div>
-        <div className="award-proof">
+      </section>
+      <section className="award-proof" aria-label="Опыт шефа">
           <img {...siteImages.masterchef} sizes="(max-width: 620px) 36vw, 23vw" alt="Евгений в белом кителе с конвертом на фоне эмблемы «МастерШеф»" loading="lazy" decoding="async" />
           <div className="award-copy">
             <p className="award-title">Больше <span className="numeric-spec">20</span> лет работы Шеф-поваром</p>
@@ -92,13 +93,12 @@ export default function Home() {
             <p className="award-note">Для частных ужинов и приватных событий составляю и готовлю персональные меню: кому-то хочется любимых, знакомых вкусов, кому-то — попробовать новое.</p>
             <p className="award-note">На мастер-классах делюсь приёмами, раскрываю секреты, которыми пользуюсь сам, и объясняю, что они меняют в блюде.</p>
           </div>
-        </div>
       </section>
       <section className="formats" id="formats" aria-labelledby="formats-title">
         <h2 id="formats-title"><span>Какой будет ваш вечер?</span></h2>
         <ul className="format-list">
           {formats.map(format => <li className={`fmt format-${format.id}`} key={format.id}>
-            <figure className="format-photo"><div className="format-image"><img src={format.src} srcSet={format.srcSet} sizes="(max-width: 760px) calc(95vw - 70px), (max-width: 1140px) 54vw, 565px" alt={format.alt} width={format.width} height={format.height} loading="lazy" decoding="async" /></div></figure>
+            <figure className="format-photo"><div className="format-image"><img src={format.src} srcSet={format.srcSet} sizes="(max-width: 760px) min(calc(95vw - 54px), 436px), (max-width: 1459px) calc(52.8vw - 20px), 750px" alt={format.alt} width={format.width} height={format.height} loading="lazy" decoding="async" /></div></figure>
             <div className="format-caption">
               <h3 className="fmt-name">{format.name}</h3>
               <p className="format-lead">{format.lead}</p>

@@ -105,6 +105,8 @@
   --gold-text: #72561f;
   --muted: #6e665a;
   --rule: #c8c0b3;
+  --section-space: clamp(48px, 6vw, 88px);
+  --section-heading-space: clamp(32px, 4vw, 56px);
   --font-display: "Oranienbaum", Georgia, "Times New Roman", serif;
   --font-sans: "Ysabeau Office", system-ui, -apple-system, sans-serif;
   --font-mono: "PT Mono", ui-monospace, Menlo, monospace;
@@ -154,14 +156,14 @@ img { display: block; max-width: 100%; }
 .header-action small { color: var(--muted); margin-top: 2px; }
 .header-action-mobile { display: none; }
 /* Full-field photo packing from the approved Mise en place collage. */
-.hero-frame { position: relative; isolation: isolate; display: grid; grid-template-columns: 11.7% minmax(0, 1fr) 11.7%; align-items: center; min-height: clamp(700px, calc(100svh - 80px), 824px); padding-block: clamp(68px, 6.65vw, 96px); column-gap: 2px; background: var(--paper); }
+.hero-frame { position: relative; isolation: isolate; display: grid; grid-template-columns: 11.7% minmax(0, 1fr) 11.7%; align-items: center; min-height: calc(100svh - 80px); padding-block: clamp(68px, 6.65vw, 96px); column-gap: 2px; background: var(--paper); }
 .hero-collage { position: absolute; z-index: -1; top: 0; bottom: 0; left: calc((100% - 100vw) / 2); width: 100vw; overflow: hidden; background: var(--paper); }
 .hero-collage::after { content: ""; position: absolute; inset: 0; z-index: 1; background: rgb(246 224 196 / 24%); pointer-events: none; }
 .hero-collage-grid { position: absolute; inset: 0; display: grid; grid-template-columns: repeat(10, minmax(0, 1fr)); grid-template-rows: repeat(8, minmax(0, 1fr)); grid-auto-flow: dense; gap: 2px; filter: blur(2px); }
 .collage-tile { position: relative; overflow: hidden; min-width: 0; min-height: 0; }
 .collage-tile--wide-desktop { grid-column: span 2; }
 .collage-tile img { width: 100%; height: 100%; position: absolute; object-fit: cover; }
-.hero-identity { grid-column: 2; grid-row: 1; position: relative; background: var(--paper); display: grid; grid-template-columns: 52% minmax(0, 1fr); height: clamp(285px, 31vw, 435px); min-width: 0; gap: 2px; }
+.hero-identity { grid-column: 2; grid-row: 1; position: relative; background: var(--paper); display: grid; grid-template-columns: 52% minmax(0, 1fr); min-height: clamp(285px, 31vw, 435px); min-width: 0; gap: 2px; }
 .hero-copy { display: flex; align-items: center; justify-content: center; padding: 24px 30px; }
 .hero-copy h1 { width: max-content; max-width: 100%; }
 .hero-copy h1 span { display: block; }
@@ -169,15 +171,15 @@ img { display: block; max-width: 100%; }
 .hero-portrait { position: relative; overflow: hidden; }
 /* Match the source ratio before decode; the 320px variant rounds its height by 1px. */
 .hero-portrait img { position: absolute; top: 0; width: 100%; height: auto; aspect-ratio: 576 / 1280; object-fit: cover; max-width: none; transform: translateY(-21%); }
-.award-proof { display: flex; align-items: center; gap: clamp(20px, 3vw, 44px); border: 1px solid var(--rule); padding: 12px 28px; }
+.award-proof { display: flex; align-items: center; gap: clamp(24px, 5vw, 72px); margin-top: var(--section-space); border-block: 1px solid var(--rule); padding-block: clamp(24px, 3vw, 40px); }
 .award-proof > img { width: 23%; height: auto; flex-shrink: 0; object-fit: contain; object-position: center; }
-.award-copy { min-width: 0; }
+.award-copy { min-width: 0; max-width: 44rem; }
 .award-note { color: var(--muted); margin-top: 6px; }
-.formats { --album-sheet: #faf7f0; --album-copy: #514b41; container: format-album / inline-size; margin-top: 48px; }
-.formats h2 { margin-bottom: 38px; }
+.formats { --album-sheet: #faf7f0; --album-copy: #514b41; container: format-album / inline-size; margin-top: var(--section-space); }
+.formats h2 { margin-bottom: var(--section-heading-space); }
 .formats h2::after { content: ""; display: block; width: 76px; height: 2px; margin-top: 18px; background: var(--gold); }
 .format-list, .process-list { padding: 0; margin: 0; list-style: none; }
-.format-list { display: grid; gap: 40px; max-width: 62.5rem; margin-inline: auto; padding: 0 0 24px; }
+.format-list { display: grid; gap: 56px; margin-inline: auto; padding: 0 0 24px; }
 .fmt { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); align-items: start; min-width: 0; }
 /* Approved photo-and-note album: the paper overlap stays at the image's edge. */
 .format-photo { --sticker-tilt: -2deg; position: relative; grid-column: 1 / 8; grid-row: 1; min-width: 0; padding: 10px 10px 20px; margin: 8px 0 0; background: var(--album-sheet); box-shadow: 0 4px 9px rgb(72 53 29 / 11%), 0 1px 2px rgb(72 53 29 / 13%); transform: rotate(var(--sticker-tilt)); }
@@ -190,8 +192,8 @@ img { display: block; max-width: 100%; }
 .format-caption::after { content: ""; display: block; width: 35px; height: 1px; margin-top: 18px; background: var(--gold); }
 .formats .format-caption p { margin: 0; font: 400 1.0625rem/1.49 var(--font-sans); color: var(--album-copy); letter-spacing: 0; overflow-wrap: break-word; }
 .formats .format-caption .format-lead { margin-bottom: 13px; font-size: 1.1875rem; line-height: 1.35; color: var(--ink); }
-.evening-plan { margin-top: 44px; }
-.evening-plan h2 { margin-bottom: 66px; }
+.evening-plan { margin-top: var(--section-space); }
+.evening-plan h2 { margin-bottom: var(--section-heading-space); }
 .evening-plan h2 span { white-space: nowrap; }
 .process-board { position: relative; }
 .process-list { display: grid; grid-template-columns: 46% 54%; grid-template-rows: calc(max(clamp(365px, 31vw, 440px), var(--conversation-row-height, 0px)) + 55px) auto; }
@@ -267,7 +269,7 @@ img { display: block; max-width: 100%; }
 .film-retry { position: absolute; left: 12px; top: 12px; min-height: 44px; padding: 10px 17px; background: var(--paper); color: var(--ink); border: 1px solid var(--rule); }
 .film-retry:hover { background: #fcfaf5; border-color: var(--gold-text); }
 .preparation-film figcaption { color: var(--muted); margin-top: 8px; }
-.contact { margin-top: 30px; padding: 24px 0; border-block: 1px solid var(--rule); }
+.contact { margin-top: var(--section-space); padding: 24px 0; border-block: 1px solid var(--rule); }
 .contact-action { max-width: 510px; width: 100%; margin-inline: auto; text-align: center; }
 .instagram-button { min-height: 56px; display: flex; align-items: center; justify-content: center; gap: 10px; padding: 15px 20px; background: var(--gold-text); color: #fcfaf5; transition: background-color 160ms ease; }
 .instagram-button:hover { background: #5e451a; color: #fff; }
@@ -297,7 +299,6 @@ img { display: block; max-width: 100%; }
   .station-heading { grid-template-columns: 38px minmax(56px, max-content) minmax(0, 1fr); }
   .station-copy p, .station-menu .station-copy p { max-width: 490px; }
   .station-copy { padding-left: 19px; }
-  .evening-plan h2 { margin-bottom: 35px; }
   .conversation-illustration { width: min(70%, 470px); margin: 10px 0 0 94px; }
   .toast-illustration { width: min(75%, 490px); margin: 15px 0 0 94px; }
   .menu-plate { width: min(100% - 38px, 600px); margin: 25px 0 0 38px; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); column-gap: 28px; aspect-ratio: auto; }
@@ -332,19 +333,15 @@ img { display: block; max-width: 100%; }
   .header-action-mobile > span { color: var(--gold-text); padding-left: 4px; }
   .hero-frame { --hero-bottom-cell: calc((100vw - 14px) / 8); grid-template-columns: 19% minmax(0, 1fr) 19%; min-height: calc(100svh - 74px); align-items: start; padding-block: clamp(72px, 20vw, 84px) calc(var(--hero-bottom-cell) + 2px); }
   .hero-collage-grid { grid-template-columns: repeat(8, minmax(0, 1fr)); grid-template-rows: repeat(9, minmax(0, 1fr)) var(--hero-bottom-cell); }
-  .hero-identity { display: flex; flex-direction: column; height: auto; gap: 2px; }
+  .hero-identity { display: flex; flex-direction: column; min-height: 0; gap: 2px; }
   .hero-copy { padding: 19px 8px 20px; flex: 0 0 auto; }
   .hero-copy h1 em { padding-left: 5%; margin-block: 9px; }
   .hero-portrait { aspect-ratio: 4 / 5; flex: 0 0 auto; width: 100%; }
   .hero-portrait img { transform: translateY(-21%); }
-  .award-proof { display: grid; grid-template-columns: 36% minmax(0, 1fr); padding: 17px 0; border-inline: 0; gap: 16px; margin-top: 3px; }
+  .award-proof { display: grid; grid-template-columns: 36% minmax(0, 1fr); padding-block: 24px; gap: 16px; }
   .award-proof > img { width: 100%; height: auto; }
   .award-copy { display: contents; }
   .award-note { grid-column: 1 / -1; }
-  .formats { margin-top: 31px; }
-  .formats h2 { margin-bottom: 28px; }
-  .evening-plan { margin-top: 32px; }
-  .evening-plan h2 { margin-bottom: 28px; }
   .evening-plan h2 span { white-space: normal; }
   .station-heading { grid-template-columns: 33px minmax(47px, max-content) minmax(0, 1fr); }
   .station-copy { padding-left: 14px; }
@@ -369,7 +366,7 @@ img { display: block; max-width: 100%; }
   .dish-sauce { width: 23%; left: 42%; }
   .menu-exploded .dish-finished { top: auto; width: 100%; }
   .preparation-film { width: min(100% - 33px, 300px); margin: 17px 0 0 33px; }
-  .contact { margin-top: 23px; padding: 23px 0; }
+  .contact { padding-block: 23px; }
   .instagram-button { padding-inline: 12px; min-height: 54px; }
   .instagram-handle { margin-top: 10px; }
   .site-footer { gap: 8px; padding-block: 10px 20px; }
@@ -416,6 +413,7 @@ h1, h2, h3, h4, .wordmark { font-weight: 400; font-style: normal; color: var(--i
 .fmt-name { margin-bottom: 17px; font: 400 2rem/1.09 var(--font-display); color: var(--ink); letter-spacing: 0; text-wrap: balance; hyphens: auto; overflow-wrap: normal; }
 
 @media (max-width: 760px) {
+  .formats h2 { max-width: 30rem; margin-inline: auto; }
   .format-list { max-width: 30rem; gap: 42px; }
   .fmt { grid-template-columns: minmax(0, 1fr); }
   .format-photo, .format-private-events .format-photo { grid-column: 1; grid-row: 1; width: 95%; margin-top: 0; }
@@ -425,6 +423,7 @@ h1, h2, h3, h4, .wordmark { font-weight: 400; font-style: normal; color: var(--i
 
 /* Enlarged text needs the same generous note width as the phone album. */
 @container format-album (max-width: 42rem) {
+  .formats h2 { max-width: 30rem; margin-inline: auto; }
   .format-list { max-width: 30rem; gap: 42px; }
   .fmt { grid-template-columns: minmax(0, 1fr); }
   .format-photo, .format-private-events .format-photo { grid-column: 1; grid-row: 1; width: 95%; margin-top: 0; }
