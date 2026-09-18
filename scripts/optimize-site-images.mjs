@@ -25,7 +25,7 @@ for (const item of manifest.images) {
   const variants = [];
   for (const requestedWidth of item.widths) {
     const width = Math.min(requestedWidth, item.sourceWidth);
-    const name = `${item.name}-${requestedWidth}.${item.format === "jpeg" ? "jpg" : "webp"}`;
+    const name = `${item.outputName || item.name}-${requestedWidth}.${item.format === "jpeg" ? "jpg" : "webp"}`;
     const target = path.join(output, name);
     const args = ["-quiet", "-mt", "-m", "6", "-q", String(item.quality)];
     if (item.lossless) args.push("-lossless");

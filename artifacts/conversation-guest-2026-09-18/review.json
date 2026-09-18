@@ -1,0 +1,84 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "width": 1440,
+      "overflow": false,
+      "source": "http://127.0.0.1:3004/media/web/conversation-guest-2026-09-18-480.webp",
+      "imageWidth": 450,
+      "imageHeight": 300,
+      "aspect": 1.5,
+      "inBounds": true,
+      "intersections": 0,
+      "heading": "Знакомимся"
+    },
+    {
+      "width": 1280,
+      "overflow": false,
+      "source": "http://127.0.0.1:3004/media/web/conversation-guest-2026-09-18-480.webp",
+      "imageWidth": 450,
+      "imageHeight": 300,
+      "aspect": 1.5,
+      "inBounds": true,
+      "intersections": 0,
+      "heading": "Знакомимся"
+    },
+    {
+      "width": 1024,
+      "overflow": false,
+      "source": "http://127.0.0.1:3004/media/web/conversation-guest-2026-09-18-480.webp",
+      "imageWidth": 375.140625,
+      "imageHeight": 250.09375,
+      "aspect": 1.5,
+      "inBounds": true,
+      "intersections": 0,
+      "heading": "Знакомимся"
+    },
+    {
+      "width": 768,
+      "overflow": false,
+      "source": "http://127.0.0.1:3004/media/web/conversation-guest-2026-09-18-480.webp",
+      "imageWidth": 450,
+      "imageHeight": 300,
+      "aspect": 1.5,
+      "inBounds": true,
+      "intersections": 0,
+      "heading": "Знакомимся"
+    },
+    {
+      "width": 430,
+      "overflow": false,
+      "source": "http://127.0.0.1:3004/media/web/conversation-guest-2026-09-18-480.webp",
+      "imageWidth": 360,
+      "imageHeight": 240,
+      "aspect": 1.5,
+      "inBounds": true,
+      "intersections": 0,
+      "heading": "Знакомимся"
+    },
+    {
+      "width": 390,
+      "overflow": false,
+      "source": "http://127.0.0.1:3004/media/web/conversation-guest-2026-09-18-480.webp",
+      "imageWidth": 320,
+      "imageHeight": 213.328125,
+      "aspect": 1.5000366219878416,
+      "inBounds": true,
+      "intersections": 0,
+      "heading": "Знакомимся"
+    },
+    {
+      "width": 375,
+      "overflow": false,
+      "source": "http://127.0.0.1:3004/media/web/conversation-guest-2026-09-18-480.webp",
+      "imageWidth": 305,
+      "imageHeight": 203.328125,
+      "aspect": 1.5000384231153463,
+      "inBounds": true,
+      "intersections": 0,
+      "heading": "Знакомимся"
+    }
+  ],
+  "errors": [],
+  "noJavaScriptImage": true
+}

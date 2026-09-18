@@ -412,8 +412,8 @@ export const siteImages = {
     "height": 770
   },
   "conversation": {
-    "src": "/media/web/conversation-960.webp",
-    "srcSet": "/media/web/conversation-480.webp 480w, /media/web/conversation-960.webp 960w",
+    "src": "/media/web/conversation-guest-2026-09-18-960.webp",
+    "srcSet": "/media/web/conversation-guest-2026-09-18-480.webp 480w, /media/web/conversation-guest-2026-09-18-960.webp 960w",
     "width": 1536,
     "height": 1024
   },

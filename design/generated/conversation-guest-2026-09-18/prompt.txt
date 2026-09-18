@@ -1,0 +1,12 @@
+Use case: identity-preserve
+Asset type: existing website illustration, a precise local edit of the first input image.
+Input images:
+1. EDIT TARGET: conversation-evgen-paper-flowers-v8.png, 1536 x 1024. This exact warm-paper graphite drawing is the canvas to preserve.
+2. PRIMARY IDENTITY REFERENCE: the clear indoor photograph of the smiling woman with shoulder-length dark hair and wispy curved bangs. Use her real facial proportions and recognizable likeness.
+3. SECONDARY IDENTITY REFERENCE: the outdoor photograph of the same woman. Use only as supporting identity and hair reference; do not copy its pose, outfit, scenery, or photographic appearance.
+
+Primary request: Change only the woman’s head, facial features, and hair on the RIGHT of image 1 so she recognizably resembles the woman in images 2 and 3. Preserve her mature, natural face: the rounded oval face, cheek shape, distinctive brows, eyes, nose, warm genuine smile, and dark shoulder-length hair with bangs. Do not replace her with a generic idealized younger face. Translate her likeness into the exact delicate light graphite pencil linework and crosshatching of image 1. A gentle three-quarter head turn toward the viewer, while she remains engaged with and looks toward the chef on the LEFT, is acceptable to show her likeness. Keep her head in the same location and at the same scale; keep her existing blouse, torso, sleeves, arms, hands, and chin-supporting hand pose exactly as in image 1.
+
+Immutable content: The entire male chef on the LEFT must remain EXACTLY the same as image 1: bald head, face, beard, facial expression, downward gaze, shoulders, shirt, striped apron, arms, hands, pencil, notebook, linework, shading, scale, and position. Do not redraw, reinterpret, beautify, age, or otherwise alter any part of the chef. Preserve all existing pixels outside the minimal woman-head-and-hair edit region as closely as possible. Preserve the vase, every flower and stem, both water glasses, oval table, notebook, every object position, paper background, warm paper color and texture, line weights, pale tonal balance, spacious framing, original composition, and exact 1536 x 1024 canvas dimensions. Keep the woman’s original clothing and body unchanged; only her identity-bearing head and hair are replaced.
+
+Avoid: no color, no photographic face patch, no added people or objects, no text, no watermark, no altered chef, no new accessories, no background elements from either reference photograph, no crop, no zoom, no different art style. Return one edited version of image 1.

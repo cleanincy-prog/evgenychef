@@ -1,9 +1,9 @@
 {
   "totals": {
     "sourceUniqueCount": 69,
-    "sourceBytes": 15937160,
-    "smallestVariantBytes": 669132,
-    "largestVariantBytes": 1997540,
+    "sourceBytes": 15824857,
+    "smallestVariantBytes": 669866,
+    "largestVariantBytes": 1997156,
     "collageSourceBytes": 8389641,
     "collageSmallestBytes": 311156,
     "collageLargestBytes": 776776
@@ -1372,20 +1372,20 @@
     {
       "name": "conversation",
       "role": "illustration",
-      "source": "/media/evening-plan/conversation-evgen-paper-flowers-v8.png",
-      "sourceBytes": 1939296,
+      "source": "/media/evening-plan/conversation-guest-2026-09-18.png",
+      "sourceBytes": 1826993,
       "variants": [
         {
-          "url": "/media/web/conversation-480.webp",
+          "url": "/media/web/conversation-guest-2026-09-18-480.webp",
           "requestedWidth": 480,
           "width": 480,
-          "bytes": 106706
+          "bytes": 107440
         },
         {
-          "url": "/media/web/conversation-960.webp",
+          "url": "/media/web/conversation-guest-2026-09-18-960.webp",
           "requestedWidth": 960,
           "width": 960,
-          "bytes": 442590
+          "bytes": 442206
         }
       ]
     },

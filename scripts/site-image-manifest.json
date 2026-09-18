@@ -1026,7 +1026,7 @@
     {
       "name": "conversation",
       "role": "illustration",
-      "source": "/media/evening-plan/conversation-evgen-paper-flowers-v8.png",
+      "source": "/media/evening-plan/conversation-guest-2026-09-18.png",
       "widths": [
         480,
         960
@@ -1035,9 +1035,10 @@
       "lossless": true,
       "sourceWidth": 1536,
       "sourceHeight": 1024,
-      "sourceBytes": 1939296,
-      "sourceSha256": "696655d3eaa69b0de21bdd60522083488b2d7ba9608dfe783cdf28d0abe5b862",
-      "hasAlpha": false
+      "sourceBytes": 1826993,
+      "sourceSha256": "8fd80c773cf3181c5a1f6d2b8dc98547fe8d96ad6e28400f49d8f80135df747e",
+      "hasAlpha": false,
+      "outputName": "conversation-guest-2026-09-18"
     },
     {
       "name": "toast",

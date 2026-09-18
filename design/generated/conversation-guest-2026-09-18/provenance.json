@@ -1,0 +1,25 @@
+{
+  "original": "public/media/evening-plan/conversation-evgen-paper-flowers-v8.png",
+  "originalSha256": "696655d3eaa69b0de21bdd60522083488b2d7ba9608dfe783cdf28d0abe5b862",
+  "generated": "design/generated/conversation-guest-2026-09-18/generated-edit.png",
+  "generatedSha256": "58bbf328eb8938f78308ef625a668a6504cb9a9e22f843ff61a2cc4a27fae33a",
+  "output": "public/media/evening-plan/conversation-guest-2026-09-18.png",
+  "outputSha256": "8fd80c773cf3181c5a1f6d2b8dc98547fe8d96ad6e28400f49d8f80135df747e",
+  "width": 1536,
+  "height": 1024,
+  "mode": "built-in imagegen edit; only generated portrait composited into original scene",
+  "maskPath": "M 982 146 L 1325 146 Q 1364 146 1374 214 L 1400 437 Q 1400 468 1360 480 L 1280 500 L 1242 553 L 1125 555 L 1085 509 L 1086 464 L 1098 442 L 1095 425 L 1023 421 L 987 392 L 973 303 Z",
+  "maskFeatherPx": 5,
+  "editedPixels": 146949,
+  "protectedRegion": {
+    "left": 0,
+    "top": 0,
+    "width": 900,
+    "height": 1024
+  },
+  "protectedPixelDifferences": 0,
+  "referencePhotos": [
+    "Снимок экрана 2026-09-18 в 12.34.30.png",
+    "Снимок экрана 2026-09-18 в 12.34.36.png"
+  ]
+}
