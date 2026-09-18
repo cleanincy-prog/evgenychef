@@ -1,0 +1,27 @@
+{
+  "url": "https://evgenychef.com",
+  "version": 87,
+  "versionId": "appgprj_6a981b9ab8708191b17ebf66cc5f818f~appgver_37d13b415f18819185d7d4bd3b534624",
+  "deploymentId": "appgdep_6aad092c9c4481918f1fc9bc2d9c05e0",
+  "status": "succeeded",
+  "deployedCommit": "b49ac5b8790e9cfa25769cb62b33fce63ef599e3",
+  "htmlUsesNewImages": true,
+  "checks": [
+    {
+      "path": "/media/web/conversation-guest-2026-09-18-480.webp",
+      "status": 200,
+      "contentType": "image/webp",
+      "bytes": 107440,
+      "sha256": "64e504976ee167c97c5a62e48d58c61cbeb25bc1d9555e934d06fdc61258a595",
+      "matchesLocal": true
+    },
+    {
+      "path": "/media/web/conversation-guest-2026-09-18-960.webp",
+      "status": 200,
+      "contentType": "image/webp",
+      "bytes": 442206,
+      "sha256": "8cdffefc3743dc61a9aa4231eb0b541cc2db4d1e111ed2e8666384a0d0d491b8",
+      "matchesLocal": true
+    }
+  ]
+}
