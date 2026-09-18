@@ -1,8 +1,8 @@
 .menu-worktable {
   position: relative;
-  width: calc(100% - 34px);
-  max-width: 620px;
-  margin: 17px 0 0 34px;
+  width: calc(100% - 2.125rem);
+  max-width: 38.75rem;
+  margin: 1.0625rem 0 0 2.125rem;
 }
 
 .menu-worktable-picture { aspect-ratio: 3 / 2; }

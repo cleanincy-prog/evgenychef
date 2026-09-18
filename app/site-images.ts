@@ -394,20 +394,20 @@ export const siteImages = {
     "height": 1160
   },
   "private-dinner-wide-v2": {
-    "src": "/media/web/private-dinner-wide-v2-768.webp",
-    "srcSet": "/media/web/private-dinner-wide-v2-384.webp 384w, /media/web/private-dinner-wide-v2-768.webp 768w",
+    "src": "/media/web/private-dinner-wide-v2-1536.webp",
+    "srcSet": "/media/web/private-dinner-wide-v2-384.webp 384w, /media/web/private-dinner-wide-v2-768.webp 768w, /media/web/private-dinner-wide-v2-1536.webp 1536w",
     "width": 1536,
     "height": 1024
   },
   "private-events": {
-    "src": "/media/web/private-events-768.webp",
-    "srcSet": "/media/web/private-events-384.webp 384w, /media/web/private-events-768.webp 768w",
+    "src": "/media/web/private-events-1536.webp",
+    "srcSet": "/media/web/private-events-384.webp 384w, /media/web/private-events-768.webp 768w, /media/web/private-events-1536.webp 1536w",
     "width": 2278,
     "height": 1510
   },
   "masterclasses": {
-    "src": "/media/web/masterclasses-768.jpg",
-    "srcSet": "/media/web/masterclasses-384.jpg 384w, /media/web/masterclasses-768.jpg 768w",
+    "src": "/media/web/masterclasses-1144.jpg",
+    "srcSet": "/media/web/masterclasses-384.jpg 384w, /media/web/masterclasses-768.jpg 768w, /media/web/masterclasses-1144.jpg 1144w",
     "width": 1144,
     "height": 770
   },

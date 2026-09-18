@@ -3,7 +3,7 @@
     "sourceUniqueCount": 69,
     "sourceBytes": 15824857,
     "smallestVariantBytes": 669866,
-    "largestVariantBytes": 1997156,
+    "largestVariantBytes": 2122076,
     "collageSourceBytes": 8389641,
     "collageSmallestBytes": 311156,
     "collageLargestBytes": 776776
@@ -1326,6 +1326,12 @@
           "requestedWidth": 768,
           "width": 768,
           "bytes": 20518
+        },
+        {
+          "url": "/media/web/private-dinner-wide-v2-1536.webp",
+          "requestedWidth": 1536,
+          "width": 1536,
+          "bytes": 45642
         }
       ]
     },
@@ -1346,6 +1352,12 @@
           "requestedWidth": 768,
           "width": 768,
           "bytes": 30920
+        },
+        {
+          "url": "/media/web/private-events-1536.webp",
+          "requestedWidth": 1536,
+          "width": 1536,
+          "bytes": 72502
         }
       ]
     },
@@ -1366,6 +1378,12 @@
           "requestedWidth": 768,
           "width": 768,
           "bytes": 73984
+        },
+        {
+          "url": "/media/web/masterclasses-1144.jpg",
+          "requestedWidth": 1144,
+          "width": 1144,
+          "bytes": 132198
         }
       ]
     },

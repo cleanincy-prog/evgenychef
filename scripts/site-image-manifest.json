@@ -983,7 +983,8 @@
       "source": "/media/event-formats/private-dinner-wide-v2.png",
       "widths": [
         384,
-        768
+        768,
+        1536
       ],
       "quality": 70,
       "sourceWidth": 1536,
@@ -998,7 +999,8 @@
       "source": "/media/event-formats/private-event-outdoor-crepes.png",
       "widths": [
         384,
-        768
+        768,
+        1536
       ],
       "quality": 70,
       "sourceWidth": 2278,
@@ -1013,7 +1015,8 @@
       "source": "/media/event-formats/masterclass.jpg",
       "widths": [
         384,
-        768
+        768,
+        1144
       ],
       "quality": 85,
       "sourceWidth": 1144,

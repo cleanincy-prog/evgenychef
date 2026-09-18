@@ -87,7 +87,7 @@ export default function Home() {
       <section className="award-proof" aria-label="Опыт шефа">
           <img {...siteImages.masterchef} sizes="(max-width: 620px) 36vw, 23vw" alt="Евгений в белом кителе с конвертом на фоне эмблемы «МастерШеф»" loading="lazy" decoding="async" />
           <div className="award-copy">
-            <p className="award-title">Больше <span className="numeric-spec">20</span> лет работы Шеф-поваром</p>
+            <h2 className="award-title">Больше <span className="numeric-spec">20</span> лет работы Шеф-поваром</h2>
             <p className="award-note">Победа в «МастерШеф. Профессионалы» открыла мне путь к лучшим школам Франции, Швейцарии и Германии. Этот опыт стал основой моего стиля — современной европейской кухни с авторским характером.</p>
             <p className="award-note">Сегодня я готовлю на Кипре.</p>
             <p className="award-note">Для частных ужинов и приватных событий составляю и готовлю персональные меню: кому-то хочется любимых, знакомых вкусов, кому-то — попробовать новое.</p>
@@ -98,7 +98,7 @@ export default function Home() {
         <h2 id="formats-title"><span>Какой будет ваш вечер?</span></h2>
         <ul className="format-list">
           {formats.map(format => <li className={`fmt format-${format.id}`} key={format.id}>
-            <figure className="format-photo"><div className="format-image"><img src={format.src} srcSet={format.srcSet} sizes="(max-width: 760px) min(calc(95vw - 54px), 436px), (max-width: 1459px) calc(52.8vw - 20px), 750px" alt={format.alt} width={format.width} height={format.height} loading="lazy" decoding="async" /></div></figure>
+            <figure className="format-photo"><div className="format-image"><img src={format.src} srcSet={format.srcSet} sizes="(max-width: 760px) min(calc(95vw - 54px), 436px), min(calc(52.8vw - 20px), 1125px)" alt={format.alt} width={format.width} height={format.height} loading="lazy" decoding="async" /></div></figure>
             <div className="format-caption">
               <h3 className="fmt-name">{format.name}</h3>
               <p className="format-lead">{format.lead}</p>
@@ -117,7 +117,7 @@ export default function Home() {
                 <p>Расскажите, по какому поводу собираетесь. Вспомним любимые блюда, обсудим, что хочется попробовать и чего точно не должно быть в меню.</p>
                 <p>Можно прийти с готовой идеей. Можно начать с одного пожелания.</p>
               </StationHeading>
-              <figure className="process-illustration conversation-illustration"><img {...siteImages.conversation} sizes="(max-width: 620px) calc(100vw - 70px), (max-width: 900px) min(63.35vw, 450px), min(36.64vw, 450px)" alt="Карандашный рисунок: Евгений с лёгкой улыбкой записывает пожелания гостьи в блокнот; на столе небольшая ваза с цветами и два стакана воды" loading="lazy" decoding="async" /></figure>
+              <figure className="process-illustration conversation-illustration"><img {...siteImages.conversation} sizes="(max-width: 620px) calc(100vw - 70px), (max-width: 900px) min(63.35vw, 450px), (max-width: 1440px) min(36.64vw, 450px), min(31.25vw, 675px)" alt="Карандашный рисунок: Евгений с лёгкой улыбкой записывает пожелания гостьи в блокнот; на столе небольшая ваза с цветами и два стакана воды" loading="lazy" decoding="async" /></figure>
             </li>
             <li className="process-station station-menu" data-step="02" id="menu">
               <StationHeading number="02" title="Продумываю меню">
@@ -136,7 +136,7 @@ export default function Home() {
                 <p>Вы проводите время с гостями.</p>
                 <p>Я готовлю и подаю блюда.</p>
               </StationHeading>
-              <figure className="process-illustration toast-illustration"><img {...siteImages.toast} sizes="(max-width: 620px) calc(100vw - 70px), (max-width: 900px) min(67.88vw, 440px), min(38.07vw, 440px)" alt="Карандашная иллюстрация: гости поднимают бокалы за общим столом" loading="lazy" decoding="async" /></figure>
+              <figure className="process-illustration toast-illustration"><img {...siteImages.toast} sizes="(max-width: 620px) calc(100vw - 70px), (max-width: 900px) min(67.88vw, 440px), (max-width: 1440px) min(38.07vw, 440px), min(30.56vw, 660px)" alt="Карандашная иллюстрация: гости поднимают бокалы за общим столом" loading="lazy" decoding="async" /></figure>
             </li>
           </ol>
         </div>

@@ -141,7 +141,7 @@ test("renders 63 documentary collage photos and the selected chef illustration w
     "/media/web/chef-hero-apron-576.webp",
     "/media/web/masterchef-640.webp",
     "/media/menu/chef-planning/scene-960.webp",
-    "/media/web/masterclasses-768.jpg",
+    "/media/web/masterclasses-1144.jpg",
   ];
   for (const path of required) assert.ok(imageTags.some(img => img.src === path), `Missing real asset: ${path}`);
   for (const img of imageTags) assert.ok(Object.hasOwn(img, "alt"), `Image requires alt, including decorative empty alt: ${img.src}`);
