@@ -1,0 +1,13 @@
+Use case: compositing.
+Asset type: ONE finished landscape Open Graph / messaging link-preview cover for a private chef website. Aim for 1200×630 pixels, 1.905:1 ratio; use the closest supported landscape ratio if required.
+Input image 1 is the authentic photographic portrait to insert, NOT a style prompt. It is a phone screenshot: remove the black bars, time/status icons and navigation chrome completely, use ONLY the real photograph between them.
+Primary request: a refined minimal cover, with left approximately 56% as a flat solid warm-paper color #F4EFE5 and right approximately 44% as one full-height rectangular crop of the authentic supplied photo. Clear vertical boundary. No inset card, borders or shadow. Preserve the photo's original warm real surroundings. Crop/reposition within the right rectangle to show the entire head with comfortable breathing room and the striped apron, with hands on hips if practical. Preserve the exact real man's facial likeness, pose, age, proportions, dark chef clothing, apron and photographic texture; do not reconstruct or invent a chef scene, replace the person, beautify, retouch or stylize him.
+Design: generous readable left-side margins and large clear lettering that remains legible in a messaging thumbnail. Black ink #0A0A0A. Name as the dominant element in elegant slim upright serif resembling Oranienbaum regular 400, NORMAL weight, not bold, exact Russian on TWO lines:
+«Евгений»
+«Гребеник»
+Use these Cyrillic letters correctly, no quotation marks in the image. Name can sit around upper-middle of the left pane. Below it, modest but readable supporting typography resembling Ysabeau Office regular 400, exact text:
+«Частный шеф на Кипре»
+At bottom left, readable modest line(s), exact text:
+«Ужины · Мероприятия · Мастер-классы»
+It may wrap after «Мероприятия», with no extra words. Comfortable safe margins at every edge, sophisticated sparse typesetting. Background is flat warm paper, no texture effect needed.
+Constraints: one coherent image, no collage variations, no phone UI bars, no logo or address. No old green/rust colors or diagonal poster styling. No «План вечера», no «Mise en place», no price, guest counts, numbers, buttons, icons, border, stock cards, shadows, glow or extra copy. Preserve authentic portrait exactly. Render only the three text elements specified.

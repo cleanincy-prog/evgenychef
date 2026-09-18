@@ -52,7 +52,7 @@ test("serves the approved evening page as accessible Russian HTML", () => {
   assert.equal(tags(html, "html")[0]?.lang, "ru");
   assert.equal(tags(html, "h1").length, 1, "A single page identity is required");
   const text = visibleText(html);
-  for (const expected of ["Евгений", "Гребеник", "Mise en place", "Знакомимся", "Продумываю меню", "Готовлю к встрече", "Ваш вечер", "Из нашего разговора складывается меню. Я выбираю продукты и продумываю, какие блюда приготовить и как они будут сочетаться между собой."]) {
+  for (const expected of ["Евгений", "Гребеник", "Знакомимся", "Продумываю меню", "Готовлю к встрече", "Ваш вечер", "Из нашего разговора складывается меню. Я выбираю продукты и продумываю, какие блюда приготовить и как они будут сочетаться между собой."]) {
     assert.ok(text.toLocaleLowerCase("ru").includes(expected.toLocaleLowerCase("ru")), `Missing rendered content: ${expected}`);
   }
   assert.doesNotMatch(text, /В первом сообщении укажите дату и формат/i);
@@ -60,6 +60,40 @@ test("serves the approved evening page as accessible Russian HTML", () => {
   assert.doesNotMatch(html, /id="faq"|class="faq-q"/);
   const steps = [...html.matchAll(/\bdata-step="([^"]+)"/g)].map(match => match[1]);
   assert.deepEqual(steps, ["01", "02", "03", "04"]);
+});
+
+test("shares a consistent chef identity, service description and readable new preview asset", async () => {
+  const meta = new Map(tags(html, "meta").map(tag => [tag.property || tag.name, tag.content]));
+  const title = decode(html.match(/<title>([^<]+)<\/title>/)?.[1]);
+  assert.match(title, /Евгений Гребеник.*частный шеф на Кипре/);
+  assert.doesNotMatch(title, /План вечера|Mise en place/);
+  assert.equal(meta.get("og:title"), title);
+  assert.equal(meta.get("twitter:title"), title);
+  assert.match(meta.get("description"), /Частные ужины, приватные мероприятия и мастер-классы на Кипре/);
+  assert.equal(meta.get("og:description"), meta.get("description"));
+  assert.equal(meta.get("twitter:description"), meta.get("description"));
+  assert.equal(meta.get("og:locale"), "ru_RU");
+  assert.equal(meta.get("og:site_name"), "Евгений Гребеник");
+  assert.equal(meta.get("twitter:card"), "summary_large_image");
+  const image = new URL(meta.get("og:image"));
+  assert.equal(image.origin, "https://evgenychef.com");
+  assert.equal(meta.get("twitter:image"), image.href);
+  assert.doesNotMatch(image.pathname, /og-grebenik\.png$/);
+  assert.match(meta.get("og:image:alt"), /Гребеник/);
+  assert.equal(meta.get("twitter:image:alt"), meta.get("og:image:alt"));
+  const response = await localFetch(image.pathname);
+  assert.equal(response.status, 200);
+  assert.match(response.headers.get("content-type"), /^image\/png/);
+  const png = Buffer.from(await response.arrayBuffer());
+  assert.equal(png.subarray(1, 4).toString(), "PNG");
+  assert.equal(png.readUInt32BE(16), Number(meta.get("og:image:width")));
+  assert.equal(png.readUInt32BE(20), Number(meta.get("og:image:height")));
+  assert.ok(png.length < 5_000_000, "Preview should stay within a modest download size");
+  const icon = tags(html, "link").find(tag => tag.rel === "icon");
+  const iconResponse = await localFetch(new URL(icon.href, base).pathname);
+  assert.equal(iconResponse.status, 200);
+  assert.match(iconResponse.headers.get("content-type"), /^image\/svg\+xml/);
+  assert.match(await iconResponse.text(), /aria-label="Евгений Гребеник"/);
 });
 
 test("keeps the loopback preview private while advertising the public canonical site", async () => {

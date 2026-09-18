@@ -22,19 +22,30 @@ export const metadata: Metadata = {
   description: SITE_DESCRIPTION,
   robots: { index: true, follow: true },
   alternates: { canonical: "/" },
-  icons: { icon: [{ url: "/favicon.svg", type: "image/svg+xml" }] },
+  icons: { icon: [{ url: "/favicon-grebenik-2026-09-18.svg", type: "image/svg+xml", sizes: "any" }] },
   openGraph: {
     title: SITE_TITLE,
     description: SITE_DESCRIPTION,
     type: "website",
     url: "/",
-    images: [{ url: "/og-grebenik.png", width: 1731, height: 909, alt: SITE_TITLE }],
+    siteName: "Евгений Гребеник",
+    locale: "ru_RU",
+    images: [{
+      url: "/og-chef-cyprus-2026-09-18.png",
+      width: 1730,
+      height: 909,
+      type: "image/png",
+      alt: "Евгений Гребеник — частный шеф на Кипре. Ужины, мероприятия и мастер-классы.",
+    }],
   },
   twitter: {
     card: "summary_large_image",
     title: SITE_TITLE,
     description: SITE_DESCRIPTION,
-    images: ["/og-grebenik.png"],
+    images: [{
+      url: "/og-chef-cyprus-2026-09-18.png",
+      alt: "Евгений Гребеник — частный шеф на Кипре. Ужины, мероприятия и мастер-классы.",
+    }],
   },
 };
 
