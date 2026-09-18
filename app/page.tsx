@@ -21,19 +21,22 @@ const heroCollageWideCompact = new Set([
 const formats = [
   {
     id: "private-dinner", name: "Частный ужин",
-    description: "Собрать близких за одним столом и спокойно поужинать. Меню составлю по вашим вкусам, приготовление и подачу возьму на себя, а вы сможете насладиться авторским ужином в 7 подач",
+    lead: "Собрать близких за одним столом и спокойно поужинать.",
+    description: "Меню составлю по вашим вкусам, приготовление и подачу возьму на себя, а вы сможете насладиться авторским ужином в 7 подач",
     ...siteImages["private-dinner-wide-v2"],
     alt: "Евгений готовит блюдо на сковороде: видны лицо, руки и подача",
   },
   {
     id: "private-events", name: "Приватные мероприятия",
-    description: "Для встреч, где главное — общение. Подберём угощение под такой ритм: закуски и блюда, которые удобно есть за разговором.",
+    lead: "Для встреч, где главное — общение.",
+    description: "Подберём угощение под такой ритм: закуски и блюда, которые удобно есть за разговором.",
     ...siteImages["private-events"],
     alt: "Евгений готовит блины на открытом воздухе перед гостями",
   },
   {
     id: "masterclasses", name: "Мастер-классы",
-    description: "Для тех, кому интересно самим поучаствовать. Готовим вместе: я показываю техники, приёмы, объясняю детали и помогаю разобраться в процессе. Затем проведем дегустацию за общим столом.",
+    lead: "Для тех, кому интересно самим поучаствовать.",
+    description: "Готовим вместе: я показываю техники, приёмы, объясняю детали и помогаю разобраться в процессе. Затем проведем дегустацию за общим столом.",
     ...siteImages.masterclasses,
     alt: "Участники мастер-класса наблюдают за работой Евгения",
   },
@@ -95,9 +98,10 @@ export default function Home() {
         <h2 id="formats-title"><span>Какой будет ваш вечер?</span></h2>
         <ul className="format-list">
           {formats.map(format => <li className={`fmt format-${format.id}`} key={format.id}>
-            <figure className="format-photo"><div className="format-image"><img src={format.src} srcSet={format.srcSet} sizes="(max-width: 760px) calc(100vw - 68px), (max-width: 1460px) 20vw, 290px" alt={format.alt} width={format.width} height={format.height} loading="lazy" decoding="async" /></div></figure>
+            <figure className="format-photo"><div className="format-image"><img src={format.src} srcSet={format.srcSet} sizes="(max-width: 760px) calc(95vw - 70px), (max-width: 1140px) 54vw, 565px" alt={format.alt} width={format.width} height={format.height} loading="lazy" decoding="async" /></div></figure>
             <div className="format-caption">
-              <h3 className="fmt-name"><span>{format.name}</span></h3>
+              <h3 className="fmt-name">{format.name}</h3>
+              <p className="format-lead">{format.lead}</p>
               <p>{format.description}</p>
             </div>
           </li>)}

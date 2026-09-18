@@ -173,24 +173,23 @@ img { display: block; max-width: 100%; }
 .award-proof > img { width: 23%; height: auto; flex-shrink: 0; object-fit: contain; object-position: center; }
 .award-copy { min-width: 0; }
 .award-note { color: var(--muted); margin-top: 6px; }
-.formats { margin-top: 48px; }
-.formats h2 { margin-bottom: 32px; }
-.formats h2 > span { text-decoration: underline; text-decoration-color: var(--gold); text-decoration-thickness: 2px; text-underline-offset: .18em; text-decoration-skip-ink: auto; }
+.formats { --album-sheet: #faf7f0; --album-copy: #514b41; container: format-album / inline-size; margin-top: 48px; }
+.formats h2 { margin-bottom: 38px; }
+.formats h2::after { content: ""; display: block; width: 76px; height: 2px; margin-top: 18px; background: var(--gold); }
 .format-list, .process-list { padding: 0; margin: 0; list-style: none; }
-.format-list { padding: 0 0 24px; }
-.fmt { display: grid; grid-template-columns: minmax(0, 22%) minmax(0, 1fr); align-items: center; gap: 28px; border-top: 1px solid var(--rule); padding-top: 11px; margin-top: 14px; }
-/* The selected paper-edge sticker uses the page color; only its cut edge and local shadow separate it. */
-.format-photo { --sticker-tilt: -1.4deg; position: relative; isolation: isolate; min-width: 0; padding: 10px; margin: 8px; border-radius: 6px 8px 5px 7px; transform: rotate(var(--sticker-tilt)); }
-.format-photo::before, .format-photo::after { content: ""; position: absolute; pointer-events: none; }
-.format-photo::before { z-index: -1; inset: 0; border-radius: inherit; background: var(--paper) url("/media/sticker-paper-edge-raised.svg") center / 100% 100% no-repeat; box-shadow: -1px 1px 1px rgb(92 70 35 / 16%); }
-.format-photo::after { z-index: -2; inset: 6px 8px 2px 2px; border-radius: inherit; box-shadow: -4px 6px 8px rgb(92 70 35 / 32%); transform: rotate(-.25deg); }
-.format-private-events .format-photo { --sticker-tilt: 1.2deg; }
+.format-list { display: grid; gap: 40px; max-width: 62.5rem; margin-inline: auto; padding: 0 0 24px; }
+.fmt { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); align-items: start; min-width: 0; }
+/* Approved photo-and-note album: the paper overlap stays at the image's edge. */
+.format-photo { --sticker-tilt: -2deg; position: relative; grid-column: 1 / 8; grid-row: 1; min-width: 0; padding: 10px 10px 20px; margin: 8px 0 0; background: var(--album-sheet); box-shadow: 0 4px 9px rgb(72 53 29 / 11%), 0 1px 2px rgb(72 53 29 / 13%); transform: rotate(var(--sticker-tilt)); }
+.format-private-events .format-photo { --sticker-tilt: 1.8deg; grid-column: 6 / 13; }
 .format-masterclasses .format-photo { --sticker-tilt: -1deg; }
-.format-image { width: 100%; aspect-ratio: 3 / 2; background: var(--paper); border-radius: 3px; overflow: hidden; }
+.format-image { width: 100%; aspect-ratio: 3 / 2; background: var(--album-sheet); overflow: hidden; }
 .format-image img { display: block; width: 100%; height: 100%; object-fit: contain; object-position: center; }
-.format-caption { min-width: 0; padding: 8px 0; }
-.format-caption h3 > span { text-decoration: underline; text-decoration-color: var(--gold); text-decoration-thickness: 2.2px; text-underline-offset: .18em; text-decoration-skip-ink: auto; }
-.format-caption p { margin-top: 10px; max-width: 65ch; color: var(--muted); }
+.format-caption { --note-tilt: .65deg; position: relative; grid-column: 8 / 13; grid-row: 1; z-index: 1; min-width: 0; margin: 50px 0 0 -24px; padding: 25px 26px 27px; background: var(--album-sheet); box-shadow: 0 5px 14px rgb(72 53 29 / 9%), 0 0 1px rgb(72 53 29 / 20%); transform: rotate(var(--note-tilt)); }
+.format-private-events .format-caption { --note-tilt: -.65deg; grid-column: 1 / 6; margin-left: 0; margin-right: -24px; }
+.format-caption::after { content: ""; display: block; width: 35px; height: 1px; margin-top: 18px; background: var(--gold); }
+.formats .format-caption p { margin: 0; font: 400 1.0625rem/1.49 var(--font-sans); color: var(--album-copy); letter-spacing: 0; overflow-wrap: break-word; }
+.formats .format-caption .format-lead { margin-bottom: 13px; font-size: 1.1875rem; line-height: 1.35; color: var(--ink); }
 .evening-plan { margin-top: 44px; }
 .evening-plan h2 { margin-bottom: 66px; }
 .evening-plan h2 span { white-space: nowrap; }
@@ -398,7 +397,7 @@ em, i, .accent { font-family: var(--font-sans); font-weight: 400; font-style: it
 .hero-copy h1 em { font-family: var(--font-sans); font-weight: 400; font-style: italic; font-size: .92em; white-space: normal; }
 h1, h2, h3, h4, .wordmark { font-weight: 400; font-style: normal; color: var(--ink); }
 .wordmark:hover { color: var(--ink); }
-.award-note, .format-caption p, .station-copy p, .station-menu .station-copy p {
+.award-note, .station-copy p, .station-menu .station-copy p {
   font: var(--type-copy); letter-spacing: var(--tracking-copy);
 }
 .header-action, .header-action small, .film-retry, .instagram-button,
@@ -414,12 +413,23 @@ h1, h2, h3, h4, .wordmark { font-weight: 400; font-style: normal; color: var(--i
 .station-number { font-size: 1.375rem; letter-spacing: .04em; }
 .pencil { font: var(--type-pencil); color: var(--gold-text); }
 
-.fmt-name { font: 400 1.25rem/1.3 var(--font-display); color: var(--ink); letter-spacing: 0; }
+.fmt-name { margin-bottom: 17px; font: 400 2rem/1.09 var(--font-display); color: var(--ink); letter-spacing: 0; text-wrap: balance; hyphens: auto; overflow-wrap: normal; }
 
 @media (max-width: 760px) {
-  .fmt { grid-template-columns: minmax(0, 1fr); gap: 14px; }
-  .format-photo { width: calc(100% - 16px); max-width: 420px; padding: 8px; }
-  .format-caption { padding: 0 0 10px; }
+  .format-list { max-width: 30rem; gap: 42px; }
+  .fmt { grid-template-columns: minmax(0, 1fr); }
+  .format-photo, .format-private-events .format-photo { grid-column: 1; grid-row: 1; width: 95%; margin-top: 0; }
+  .format-caption, .format-private-events .format-caption { grid-column: 1; grid-row: 2; margin: -10px 0 0 6%; padding: 24px; }
+  .fmt-name { font-size: 1.9375rem; }
+}
+
+/* Enlarged text needs the same generous note width as the phone album. */
+@container format-album (max-width: 42rem) {
+  .format-list { max-width: 30rem; gap: 42px; }
+  .fmt { grid-template-columns: minmax(0, 1fr); }
+  .format-photo, .format-private-events .format-photo { grid-column: 1; grid-row: 1; width: 95%; margin-top: 0; }
+  .format-caption, .format-private-events .format-caption { grid-column: 1; grid-row: 2; margin: -10px 0 0 6%; padding: 24px; }
+  .fmt-name { font-size: 1.9375rem; }
 }
 
 /* Text enlargement turns narrow diagram labels into a readable flowing legend. */
