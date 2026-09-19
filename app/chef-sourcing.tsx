@@ -26,7 +26,7 @@ export default function ChefSourcing() {
     <div className="sourcing-layout">
       <figure className="sourcing-art">
         <img {...siteImages["chef-landscape"]}
-          sizes="(max-width: 560px) min(90.5vw, 330px), (max-width: 780px) min(90.5vw, 400px), (max-width: 1440px) min(47vw, 490px), min(34vw, 735px)"
+          sizes="(max-width: 780px) min(40vw, 272px), (max-width: 1440px) 368px, 552px"
           alt="Карандашный портрет Евгения: в силуэте плеч соединены горная деревня, рыбацкая гавань и клубничные грядки"
           loading="lazy" decoding="async" />
       </figure>

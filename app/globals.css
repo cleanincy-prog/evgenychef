@@ -443,40 +443,46 @@ h1, h2, h3, h4, .wordmark { font-weight: 400; font-style: normal; color: var(--i
 }
 
 /* Selected portrait composition: the product leads, its origin stays in the description. */
-.sourcing-signature { container: chef-sourcing / inline-size; margin-top: var(--section-space); padding-block: 2.375rem; border-block: 1px solid var(--rule); }
+.sourcing-signature { container: chef-sourcing / inline-size; margin-top: var(--section-space); padding-block: 2rem; border-block: 1px solid var(--rule); }
 .sourcing-heading { text-align: center; }
 .sourcing-kicker { font: 400 .8125rem/1.6 var(--font-mono); letter-spacing: .07em; text-transform: uppercase; color: var(--gold-text); }
-.sourcing-heading h2 { margin-top: 1.25rem; font: 400 clamp(3rem, 5.5vw, 4.875rem)/1.08 var(--font-display); letter-spacing: 0; text-wrap: balance; overflow-wrap: break-word; }
+.sourcing-heading h2 { margin-top: .75rem; font: 400 clamp(2.5rem, 4vw, 3.5rem)/1.08 var(--font-display); letter-spacing: 0; text-wrap: balance; overflow-wrap: break-word; }
 .sourcing-heading h2 span { display: block; }
-.sourcing-layout { display: grid; grid-template-columns: minmax(0, 1.08fr) minmax(0, .92fr); gap: 4.25rem; align-items: center; margin-top: 2rem; }
-.sourcing-art { width: 100%; max-width: 30.625rem; justify-self: center; }
+.sourcing-layout { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.12fr); gap: 3rem; align-items: center; max-width: 63rem; margin: 1.5rem auto 0; }
+.sourcing-art { width: 100%; max-width: 23rem; justify-self: center; }
 .sourcing-art img { width: 100%; height: auto; aspect-ratio: 2 / 3; object-fit: contain; mix-blend-mode: multiply; filter: grayscale(1) brightness(1.05) contrast(1.07); mask-image: linear-gradient(to bottom, transparent, #000 3%, #000 96%, transparent); }
 .sourcing-copy { min-width: 0; max-width: 30.625rem; }
-.sourcing-intro { font: 400 1.375rem/1.55 var(--font-sans); color: var(--muted); }
-.sourcing-products { padding: 0; margin: 2.1875rem 0 0; list-style: none; border-top: 1px solid var(--rule); }
-.sourcing-product { display: grid; grid-template-columns: 2rem minmax(0, 1fr); gap: 1.25rem; padding-block: 1.125rem; border-bottom: 1px solid var(--rule); }
+.sourcing-intro { font: 400 1.25rem/1.5 var(--font-sans); color: var(--muted); }
+.sourcing-products { padding: 0; margin: 1.25rem 0 0; list-style: none; border-top: 1px solid var(--rule); }
+.sourcing-product { display: grid; grid-template-columns: 1.625rem minmax(0, 1fr); gap: .75rem; padding-block: .8125rem; border-bottom: 1px solid var(--rule); }
 .sourcing-product > div { min-width: 0; }
 .sourcing-number { font: 400 .8125rem/1.5 var(--font-mono); color: var(--gold-text); padding-top: .25rem; }
-.sourcing-product h3 { font: 400 1.9375rem/1.12 var(--font-display); color: var(--ink); letter-spacing: 0; text-wrap: balance; hyphens: auto; overflow-wrap: break-word; }
+.sourcing-product h3 { font: 400 1.75rem/1.12 var(--font-display); color: var(--ink); letter-spacing: 0; text-wrap: balance; hyphens: auto; overflow-wrap: break-word; }
 .sourcing-product p { margin-top: .375rem; font: 400 1.125rem/1.5 var(--font-sans); color: var(--muted); overflow-wrap: break-word; }
-.sourcing-ending { margin-top: 1.8125rem; font: 400 italic 1.4375rem/1.4 var(--font-sans); color: var(--gold-text); }
+.sourcing-ending { margin-top: 1.125rem; font: 400 italic 1.3125rem/1.4 var(--font-sans); color: var(--gold-text); }
 @media (max-width: 1100px) {
-  .sourcing-layout { gap: 2.25rem; }
-  .sourcing-intro { font-size: 1.25rem; }
+  .sourcing-layout { gap: 2rem; }
 }
 @container chef-sourcing (max-width: 44rem) {
-  .sourcing-layout { grid-template-columns: minmax(0, 1fr); gap: 1.625rem; margin-top: 1.375rem; }
-  .sourcing-art { max-width: 25rem; }
-  .sourcing-copy { max-width: 36rem; width: 100%; justify-self: center; }
-  .sourcing-products { margin-top: 1.5rem; }
+  .sourcing-layout { grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr); gap: .875rem 1rem; margin-top: .875rem; max-width: 36rem; }
+  .sourcing-art { grid-column: 1; grid-row: 1; max-width: 17rem; }
+  .sourcing-copy { display: contents; }
+  .sourcing-intro { grid-column: 2; grid-row: 1; font-size: 1.125rem; }
+  .sourcing-products { grid-column: 1 / -1; margin-top: 0; }
+  .sourcing-ending { grid-column: 1 / -1; margin-top: 0; }
 }
 @media (max-width: 560px) {
-  .sourcing-signature { padding-block: 1.8125rem 2rem; }
-  .sourcing-heading h2 { margin-top: 1.0625rem; font-size: 2.75rem; }
-  .sourcing-heading h2 span { display: inline; }
-  .sourcing-art { max-width: 20.625rem; }
-  .sourcing-intro { font-size: 1.25rem; }
-  .sourcing-product { grid-template-columns: 1.625rem minmax(0, 1fr); gap: .6875rem; }
-  .sourcing-product h3 { font-size: 1.8125rem; }
-  .sourcing-ending { font-size: 1.375rem; }
+  .sourcing-signature { padding-block: 1.25rem; }
+  .sourcing-kicker { font-size: .6875rem; }
+  .sourcing-heading h2 { margin-top: .625rem; font-size: 2.125rem; }
+  .sourcing-intro { font-size: 1.0625rem; line-height: 1.45; }
+  .sourcing-product { grid-template-columns: 1.375rem minmax(0, 1fr); gap: .5rem; padding-block: .75rem; }
+  .sourcing-product h3 { font-size: 1.625rem; }
+  .sourcing-product p { font-size: 1.0625rem; line-height: 1.45; }
+  .sourcing-ending { font-size: 1.25rem; }
+}
+@container chef-sourcing (max-width: 20rem) {
+  .sourcing-layout { grid-template-columns: minmax(0, 1fr); }
+  .sourcing-art { grid-column: 1; grid-row: auto; max-width: 10rem; }
+  .sourcing-intro { grid-column: 1; grid-row: auto; }
 }

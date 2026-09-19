@@ -1,0 +1,85 @@
+{
+  "method": "CUA browser screenshots and read-only DOM geometry",
+  "widths": [
+    {
+      "width": 375,
+      "height": 797.375,
+      "portraitWidth": 137.265625,
+      "bodyFontSize": 17
+    },
+    {
+      "width": 390,
+      "height": 806.9375,
+      "portraitWidth": 143.640625,
+      "bodyFontSize": 17
+    },
+    {
+      "width": 430,
+      "height": 832.4375,
+      "portraitWidth": 160.640625,
+      "bodyFontSize": 17
+    },
+    {
+      "width": 768,
+      "height": 969.640625,
+      "portraitWidth": 238,
+      "bodyFontSize": 18
+    },
+    {
+      "width": 1024,
+      "height": 763.234375,
+      "portraitWidth": 368,
+      "bodyFontSize": 18
+    },
+    {
+      "width": 1280,
+      "height": 785.390625,
+      "portraitWidth": 368,
+      "bodyFontSize": 18
+    },
+    {
+      "width": 1440,
+      "height": 795.734375,
+      "portraitWidth": 368,
+      "bodyFontSize": 18
+    },
+    {
+      "width": 3125,
+      "height": 1192.625,
+      "portraitWidth": 552,
+      "bodyFontSize": 27
+    }
+  ],
+  "text200percent": [
+    {
+      "width": 375,
+      "rootFontSize": 32,
+      "height": 3048.65625,
+      "portraitBesideIntro": false
+    },
+    {
+      "width": 1440,
+      "rootFontSize": 32,
+      "height": 1933.328125,
+      "portraitBesideIntro": true
+    }
+  ],
+  "allChecks": {
+    "horizontalOverflow": false,
+    "textOverflow": false,
+    "fontsLoaded": true,
+    "portraitLoaded": true
+  },
+  "comparison390": {
+    "before": 1468.546875,
+    "after": 806.9375,
+    "reductionPercent": 45.052
+  },
+  "sourceChecks": {
+    "typescript": "passed",
+    "eslint": "passed",
+    "gitDiffCheck": "passed",
+    "productionBuild": "passed"
+  },
+  "temporary200percentCssRemoved": true
+}

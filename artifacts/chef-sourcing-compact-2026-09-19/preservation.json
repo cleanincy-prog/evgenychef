@@ -1,0 +1,11 @@
+{
+  "allWordsAndMarkupPreserved": true,
+  "previousSiteStylesPreserved": true,
+  "unchanged": {
+    "app/page.tsx": true,
+    "app/site-images.ts": true,
+    "app/layout.tsx": true,
+    "app/chef-story-video.tsx": true,
+    "public/media/sourcing/chef-landscape-2026-09-19.png": true
+  }
+}
