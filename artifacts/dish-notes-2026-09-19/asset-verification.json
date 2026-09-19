@@ -1,0 +1,12 @@
+{
+  "source": "design/mockups/atlas-dish-cream-2026-09-19/atlas-plate-transparent.png",
+  "crop": {
+    "left": 248,
+    "top": 70,
+    "width": 820,
+    "height": 844
+  },
+  "visiblePixelDifferences": 0,
+  "sourceCropSha256": "1ca18c9dc29079704410da2a44e9424d45ab9be82271c09147bbdfa0d87ce569",
+  "encoding": "lossless WebP; 410px is a responsive downsample only"
+}

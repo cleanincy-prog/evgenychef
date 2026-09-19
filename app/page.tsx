@@ -1,5 +1,6 @@
 import ChefStoryVideo from "./chef-story-video";
 import ChefSourcing from "./chef-sourcing";
+import DishNotes from "./dish-notes";
 import EveningPlanRoute from "./evening-plan-route";
 import MenuWorktable from "./menu-worktable";
 import { heroImages, siteImages } from "./site-images";
@@ -111,7 +112,7 @@ export default function Home() {
       <ChefSourcing />
       <section className="evening-plan" aria-labelledby="plan-title">
         <h2 id="plan-title">От разговора — <span>к вашему столу</span></h2>
-        <div className="process-board">
+        <div className="process-board process-board-with-dish">
           <EveningPlanRoute />
           <ol className="process-list">
             <li className="process-station station-conversation" data-step="01">
@@ -126,6 +127,7 @@ export default function Home() {
                 <p>Из нашего разговора складывается меню. Я выбираю продукты и продумываю, какие блюда приготовить и как они будут сочетаться между собой.</p>
               </StationHeading>
               <MenuWorktable />
+              <DishNotes />
             </li>
             <li className="process-station station-preparation" data-step="03">
               <StationHeading number="03" title="Готовлю к встрече">

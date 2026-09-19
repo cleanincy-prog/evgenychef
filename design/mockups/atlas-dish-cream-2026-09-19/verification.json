@@ -1,0 +1,27 @@
+{
+  "source": "source-atlas.jpg",
+  "width": 1200,
+  "height": 960,
+  "background": "#f4efe5",
+  "method": "ImageGen plate/background colour edit followed by source-preserving ceramic masking. Final food RGB copied from source; no generated food retained.",
+  "protectedFoodPixels": 254092,
+  "protectedFoodRgbDifferences": 0,
+  "protectedFoodAlphaDifferences": 0,
+  "changedPlatePixels": 234802,
+  "outputEncoding": "lossless PNG and WebP",
+  "sourceGeometryPreserved": true,
+  "creamPngProtectedFoodRgbDifferences": 0,
+  "backgroundCornerRGB": [
+    244,
+    239,
+    229
+  ],
+  "poster": {
+    "width": 1840,
+    "height": 1320,
+    "labels": 8,
+    "fonts": "Original Oranienbaum, Ysabeau Office and PT Mono outlines",
+    "visualReview": "passed: all text visible, no label overlaps, all leader endpoints checked",
+    "lotusIdentification": "Visual inference, explicitly footnoted"
+  }
+}

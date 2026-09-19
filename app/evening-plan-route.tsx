@@ -81,6 +81,7 @@ export default function EveningPlanRoute() {
       const preparationHeading = board.querySelector(".station-preparation .station-heading")?.getBoundingClientRect();
       const departure = preparationHeading ? preparationHeading.right - rect.left + 10 : mid;
       const menuVisual = board.querySelector("[data-menu-visual]")?.getBoundingClientRect();
+      const dishVisual = board.querySelector("[data-dish-visual]")?.getBoundingClientRect();
       const sauce = board.querySelector(".plate-label-sauce")?.getBoundingClientRect();
       const aisle = sauce ? sauce.left - rect.left - 24 : menuVisual ? Math.max(mid, departure + 18) : mid;
       const leaveY = sauce ? Math.max(c.y + 35, sauce.bottom - rect.top + 22) : d.y - 30;
@@ -89,18 +90,22 @@ export default function EveningPlanRoute() {
       const outerRail = menuVisual ? menuVisual.left - rect.left - 22 : 0;
       // Wide worktables use their outer edge; the chef illustration uses the
       // existing aisle between the columns and below the conversation.
-      const menuReturn = menuVisual && menuSpansColumns
+      const dishTop = dishVisual ? dishVisual.top - rect.top : 0;
+      const dishRail = dishVisual ? Math.max(8, dishVisual.left - rect.left - 20) : 0;
+      const menuReturn = dishVisual
+        ? `M${b.x - 4},${b.y + 17} C${b.x - 22},${b.y + 42} ${conversationRail},${b.y + 32} ${conversationRail},${b.y + 72} L${conversationRail},${dishTop - 34} Q${conversationRail},${dishTop - 20} ${conversationRail - 14},${dishTop - 20} L${dishRail + 14},${dishTop - 20} Q${dishRail},${dishTop - 20} ${dishRail},${dishTop - 6} L${dishRail},${c.y - 50} Q${dishRail},${c.y - 29} ${c.x},${c.y - 18}`
+        : menuVisual && menuSpansColumns
         ? `M${b.x - 4},${b.y + 17} C${b.x - 22},${b.y + 42} ${conversationRail},${b.y + 32} ${conversationRail},${b.y + 72} L${conversationRail},${visualTop - 34} Q${conversationRail},${visualTop - 20} ${conversationRail - 14},${visualTop - 20} L${outerRail + 14},${visualTop - 20} Q${outerRail},${visualTop - 20} ${outerRail},${visualTop - 6} L${outerRail},${c.y - 50} Q${outerRail},${c.y - 29} ${c.x},${c.y - 18}`
         : `M${b.x - 4},${b.y + 17} C${b.x - 22},${b.y + 42} ${conversationRail + 3},${b.y + 30} ${conversationRail},${turnY} C${conversationRail - 5},${turnY + (returnY - turnY) / 3} ${conversationRail + 6},${returnY - 20} ${conversationRail - 44},${returnY} C${conversationRail - 94},${returnY + 20} ${c.x + 16},${returnY - 8} ${c.x},${c.y - 18}`;
       setPaths([
         arrowTo(`M${a.x + 5},${a.y - 17} C${a.x + 85},-48 ${b.x - 24},-54 ${b.x - 10},${a.y + 14} S${b.x + 2},${b.y - 85} ${b.x},${b.y - 18}`, { x: b.x, y: b.y - 18 }, { x: b.x + 2, y: b.y - 85 }),
-        arrowTo(menuReturn, { x: c.x, y: c.y - 18 }, menuVisual && menuSpansColumns ? { x: outerRail, y: c.y - 29 } : { x: c.x + 16, y: returnY - 8 }),
+        arrowTo(menuReturn, { x: c.x, y: c.y - 18 }, dishVisual ? { x: dishRail, y: c.y - 29 } : menuVisual && menuSpansColumns ? { x: outerRail, y: c.y - 29 } : { x: c.x + 16, y: returnY - 8 }),
         arrowTo(`M${departureX},${c.y} C${aisle + 3},${c.y - 3} ${aisle - 4},${leaveY - 28} ${aisle},${leaveY} C${aisle + 2},${d.y + 10} ${d.x - 58},${d.y + 9} ${d.x - 18},${d.y + 1}`, { x: d.x - 18, y: d.y + 1 }, { x: d.x - 58, y: d.y + 9 }),
       ]);
     }
     const observer = new ResizeObserver(() => { cancelAnimationFrame(frame); frame = requestAnimationFrame(measure); });
     observer.observe(board);
-    for (const element of board.querySelectorAll(".station-heading, .menu-plate, [data-menu-visual], .plate-label, .conversation-illustration, .preparation-film")) observer.observe(element);
+    for (const element of board.querySelectorAll(".station-heading, .menu-plate, [data-menu-visual], [data-dish-visual], .plate-label, .conversation-illustration, .preparation-film")) observer.observe(element);
     void document.fonts.ready.then(measure);
     return () => { observer.disconnect(); cancelAnimationFrame(frame); };
   }, []);

@@ -1,0 +1,44 @@
+{
+  "widths": [
+    1440,
+    1280,
+    1024,
+    768,
+    430,
+    390,
+    375,
+    3125
+  ],
+  "horizontalOverflow": false,
+  "overlappingLabels": false,
+  "labels": 4,
+  "leaders": 3,
+  "mobileFontPx": 17,
+  "mobileHeightsPx": {
+    "430": 707.59375,
+    "390": 666.421875,
+    "375": 675.625
+  },
+  "largeText": {
+    "rootPx": 32,
+    "widths": [
+      1440,
+      375
+    ],
+    "overflow": false,
+    "mobileLeadersHidden": true
+  },
+  "consoleErrors": 0,
+  "httpTestsPassed": 6,
+  "typecheck": "passed",
+  "targetedEslint": "passed",
+  "productionBuild": "passed",
+  "unchangedFiles": {
+    "app/globals.css": true,
+    "app/menu-worktable.tsx": true,
+    "app/chef-sourcing.tsx": true,
+    "app/layout.tsx": true,
+    "app/chef-story-video.tsx": true,
+    "app/site-images.ts": true
+  }
+}

@@ -1,0 +1,84 @@
+/* The approved Atlas diagram: four short notes and three fine leaders. */
+.dish-notes {
+  container: dish-notes / inline-size;
+  position: relative;
+  margin: 3rem 0 0 2.125rem;
+  scroll-margin-top: 2rem;
+}
+.dish-notes h3 {
+  margin: 0 0 1rem;
+  font: 400 clamp(2rem, 3.4vw, 3.25rem)/1.08 var(--font-display);
+  letter-spacing: 0;
+  text-wrap: balance;
+  overflow-wrap: break-word;
+  hyphens: auto;
+}
+.dish-notes-layout {
+  --dish-stacked: 0;
+  position: relative;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 2fr) minmax(0, 1fr);
+  grid-template-rows: 1fr 1fr auto;
+  column-gap: 1rem;
+  margin: 0;
+}
+.dish-notes-photo {
+  grid-column: 2;
+  grid-row: 1 / 3;
+  align-self: center;
+  width: 100%;
+  height: auto;
+}
+.dish-notes .atlas-note {
+  position: relative;
+  z-index: 1;
+  align-self: center;
+  justify-self: start;
+  margin: 0;
+  min-width: 0;
+  font: 400 clamp(1.0625rem, 1.5vw, 1.375rem)/1.45 var(--font-sans);
+  color: var(--ink);
+  overflow-wrap: break-word;
+}
+.atlas-note--duck { grid-column: 1; grid-row: 1; }
+.atlas-note--puree { grid-column: 1; grid-row: 2; }
+.atlas-note--vegetables { grid-column: 3; grid-row: 1; }
+.atlas-note--sauce { grid-column: 3; grid-row: 2; }
+.dish-notes .atlas-note--puree, .dish-notes .atlas-note--sauce { align-self: end; margin-bottom: 2.75rem; }
+.dish-notes-leaders { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; pointer-events: none; }
+.dish-notes-leaders path { fill: none; stroke: var(--muted); stroke-opacity: .65; stroke-width: 1; }
+.dish-notes-leaders circle { fill: var(--paper); stroke: var(--muted); stroke-width: 1; }
+.dish-notes-credit { grid-column: 1 / -1; grid-row: 3; margin-top: 1.25rem; color: var(--muted); font: 400 .875rem/1.5 var(--font-sans); }
+.dish-notes-credit a { display: inline-block; padding-block: .375rem; color: inherit; text-decoration: none; text-underline-offset: .2em; }
+.dish-notes-credit a:hover { color: var(--ink); text-decoration: underline; }
+.dish-notes-credit a:focus-visible { outline: 1px solid var(--ink); outline-offset: 4px; }
+
+@media (min-width: 901px) {
+  .process-board-with-dish .process-list { grid-template-rows: auto auto; row-gap: 3.4375rem; }
+  .process-board-with-dish .station-conversation { align-self: start; }
+  .process-board-with-dish .station-menu { grid-column: 1 / -1; }
+  .process-board-with-dish .station-menu > .station-heading { width: 54%; margin-left: 46%; }
+  .process-board-with-dish .station-menu > .menu-worktable { width: calc(54% - 2.125rem); margin-left: calc(46% + 2.125rem); }
+}
+@container dish-notes (max-width: 48rem) {
+  .dish-notes-layout { --dish-stacked: 1; grid-template-columns: repeat(2, minmax(0, 1fr)); grid-template-rows: auto auto auto auto; gap: 1.5rem 1.25rem; }
+  .dish-notes-photo { grid-column: 1 / -1; grid-row: 2; width: min(100%, 31rem); justify-self: center; }
+  .dish-notes .atlas-note { align-self: end; margin: 0; font-size: 1.0625rem; }
+  .atlas-note--duck { grid-column: 1; grid-row: 1; }
+  .atlas-note--vegetables { grid-column: 2; grid-row: 1; }
+  .atlas-note--puree { grid-column: 1; grid-row: 3; }
+  .atlas-note--sauce { grid-column: 2; grid-row: 3; }
+  .dish-notes .atlas-note--puree, .dish-notes .atlas-note--sauce { align-self: start; }
+  .dish-notes-credit { grid-row: 4; margin-top: 0; }
+}
+@container dish-notes (max-width: 15rem) {
+  .dish-notes-layout { display: flex; flex-direction: column; gap: 1rem; }
+  .dish-notes .atlas-note { align-self: stretch; }
+  .dish-notes-photo { order: -1; }
+  .dish-notes-leaders { display: none; }
+}
+@media (max-width: 620px) {
+  .dish-notes { margin-left: 33px; margin-top: 2rem; }
+  .dish-notes h3 { margin-bottom: 1.5rem; }
+  .dish-notes .atlas-note br { display: none; }
+}

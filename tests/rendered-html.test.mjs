@@ -120,7 +120,7 @@ test("provides functional page anchors and the exact Instagram destination", () 
   assert.ok(anchors.length > 0);
   const ids = new Set([...html.matchAll(/\bid="([^"]+)"/g)].map(match => decode(match[1])));
   for (const anchor of anchors) {
-    assert.ok(anchor.href?.startsWith("#") || anchor.href === instagram, `Unexpected link: ${anchor.href}`);
+    assert.ok(anchor.href?.startsWith("#") || anchor.href === instagram || anchor.href === "https://www.instagram.com/p/DKR7q48OzOD/?img_index=2", `Unexpected link: ${anchor.href}`);
     if (anchor.href?.startsWith("#") && anchor.href.length > 1) assert.ok(ids.has(decodeURIComponent(anchor.href.slice(1))), `Missing anchor target: ${anchor.href}`);
     if (anchor.target === "_blank") assert.match(anchor.rel || "", /noopener|noreferrer/);
   }
@@ -128,7 +128,7 @@ test("provides functional page anchors and the exact Instagram destination", () 
   assert.equal(tags(html, "form").length, 0, "This page must not send an automatic inquiry");
 });
 
-test("renders 63 documentary collage photos and the selected chef illustration without a food photograph", async () => {
+test("renders 63 documentary collage photos, the selected chef illustration and the approved Atlas dish", async () => {
   const imageTags = tags(html, "img");
   const collage = [...html.matchAll(/<[^>]+\bclass="[^"]*\bcollage-tile\b[^"]*"[^>]*>[\s\S]*?<img\b([^>]*)>/g)]
     .map(match => tags(`<img ${match[1]}>`, "img")[0]);
@@ -141,6 +141,7 @@ test("renders 63 documentary collage photos and the selected chef illustration w
     "/media/web/chef-hero-apron-576.webp",
     "/media/web/masterchef-640.webp",
     "/media/menu/chef-planning/scene-960.webp",
+    "/media/menu/atlas-dish/plate-820.webp",
     "/media/web/masterclasses-1144.jpg",
   ];
   for (const path of required) assert.ok(imageTags.some(img => img.src === path), `Missing real asset: ${path}`);
@@ -154,7 +155,7 @@ test("renders 63 documentary collage photos and the selected chef illustration w
   // Keep local HTTP concurrency bounded while checking every responsive variant.
   for (let start = 0; start < uniqueImagePaths.length; start += 8) {
     await Promise.all(uniqueImagePaths.slice(start, start + 8).map(async path => {
-      assert.match(path, /^\/media\/(?:web\/.+\.(?:webp|jpg)|menu\/personal-menu-duck-plate-cream-v2\.webp|menu\/(?:book|exploded|worktable|chef-planning)\/[a-z0-9-]+\.(?:webp|svg))$/, `Page images must use optimized local media: ${path}`);
+      assert.match(path, /^\/media\/(?:web\/.+\.(?:webp|jpg)|menu\/personal-menu-duck-plate-cream-v2\.webp|menu\/(?:book|exploded|worktable|chef-planning|atlas-dish)\/[a-z0-9-]+\.(?:webp|svg))$/, `Page images must use optimized local media: ${path}`);
       const response = await localFetch(path, { method: "HEAD" });
       assert.equal(response.status, 200, `Image must be available: ${path}`);
       assert.match(response.headers.get("content-type") || "", path.endsWith(".svg") ? /^image\/svg\+xml/ : path.endsWith(".jpg") ? /^image\/jpeg/ : /^image\/webp/);
@@ -164,6 +165,10 @@ test("renders 63 documentary collage photos and the selected chef illustration w
   assert.equal(chefScene.length, 1, "The selected chef illustration must appear once");
   assert.match(chefScene[0].alt, /Евгений составляет меню в тетради/);
   assert.equal(imageTags.filter(img => img.src.includes("/menu/worktable/")).length, 0, "The rejected food photograph and ingredient montage must not return");
+  assert.equal(imageTags.filter(img => img.src.includes("/menu/atlas-dish/")).length, 1, "The approved Atlas dish must appear once");
+  assert.equal((html.match(/class="atlas-note atlas-note--/g) || []).length, 4, "Keep the four approved short notes");
+  assert.match(visibleText(html), /Как складывается вкус/);
+  assert.match(html, /DKR7q48OzOD/);
   assert.ok(!visibleText(html).includes("Фото блюда"), "The removed dish must not retain a photo action");
   assert.doesNotMatch(html, /data-recipe="octopus"|data-grams=|class="mb-(?:pencil|stroke|navigation)"|data-menu-(?:scroll|sketch|color|next)/);
 
