@@ -120,7 +120,7 @@ test("provides functional page anchors and the exact Instagram destination", () 
   assert.ok(anchors.length > 0);
   const ids = new Set([...html.matchAll(/\bid="([^"]+)"/g)].map(match => decode(match[1])));
   for (const anchor of anchors) {
-    assert.ok(anchor.href?.startsWith("#") || anchor.href === instagram || anchor.href === "https://www.instagram.com/p/DKR7q48OzOD/?img_index=2", `Unexpected link: ${anchor.href}`);
+    assert.ok(anchor.href?.startsWith("#") || anchor.href === instagram, `Unexpected link: ${anchor.href}`);
     if (anchor.href?.startsWith("#") && anchor.href.length > 1) assert.ok(ids.has(decodeURIComponent(anchor.href.slice(1))), `Missing anchor target: ${anchor.href}`);
     if (anchor.target === "_blank") assert.match(anchor.rel || "", /noopener|noreferrer/);
   }
@@ -168,7 +168,6 @@ test("renders 63 documentary collage photos, the selected chef illustration and 
   assert.equal(imageTags.filter(img => img.src.includes("/menu/atlas-dish/")).length, 1, "The approved Atlas dish must appear once");
   assert.equal((html.match(/class="atlas-note atlas-note--/g) || []).length, 4, "Keep the four approved short notes");
   assert.match(visibleText(html), /Как складывается вкус/);
-  assert.match(html, /DKR7q48OzOD/);
   assert.ok(!visibleText(html).includes("Фото блюда"), "The removed dish must not retain a photo action");
   assert.doesNotMatch(html, /data-recipe="octopus"|data-grams=|class="mb-(?:pencil|stroke|navigation)"|data-menu-(?:scroll|sketch|color|next)/);
 

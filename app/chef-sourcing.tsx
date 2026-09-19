@@ -38,7 +38,6 @@ export default function ChefSourcing() {
             <div><h3>{product.name}</h3><p>{product.description}</p></div>
           </li>)}
         </ol>
-        <p className="sourcing-ending">Знать продукт. Выбирать самому.</p>
       </div>
     </div>
   </section>;

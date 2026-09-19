@@ -70,9 +70,6 @@ export default function DishNotes() {
           <path d={leader.path} /><circle cx={leader.x} cy={leader.y} r="2.5" />
         </g>)}
       </svg>
-      <figcaption className="dish-notes-credit">
-        <a href="https://www.instagram.com/p/DKR7q48OzOD/?img_index=2" target="_blank" rel="noopener noreferrer">Фото: Atlas / @mashburnphoto</a>
-      </figcaption>
     </figure>
   </section>;
 }
