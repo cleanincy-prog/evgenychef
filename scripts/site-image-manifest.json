@@ -1087,6 +1087,23 @@
       "sourceBytes": 170095,
       "sourceSha256": "f112fdc6e744041ddf59749db2a6b028a09851a5af0d23c1a3a639ef9bdd5bc4",
       "hasAlpha": false
+    },
+    {
+      "name": "chef-landscape",
+      "role": "illustration",
+      "source": "media/sourcing/chef-landscape-2026-09-19.png",
+      "sourceSha256": "5df669853cf61722b2ec6010d9eee296b5716c3d78f7661a22cf3c7e1fd945f1",
+      "sourceWidth": 1024,
+      "sourceHeight": 1536,
+      "sourceBytes": 2795759,
+      "outputName": "chef-landscape-2026-09-19",
+      "widths": [
+        480,
+        768,
+        1024
+      ],
+      "quality": 100,
+      "lossless": true
     }
   ]
 }

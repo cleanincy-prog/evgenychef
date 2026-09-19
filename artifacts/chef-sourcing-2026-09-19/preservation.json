@@ -1,0 +1,18 @@
+{
+  "unchanged": {
+    "app/layout.tsx": true,
+    "app/site-config.ts": true,
+    "app/chef-story-video.tsx": true,
+    "app/evening-plan-route.tsx": true,
+    "app/menu-worktable.tsx": true,
+    "app/menu-worktable.css": true,
+    "public/og-chef-cyprus-2026-09-18.png": true,
+    "public/favicon-grebenik-2026-09-18.svg": true
+  },
+  "pagePreserved": true,
+  "cssPreserved": true,
+  "originalPortraitPreserved": true,
+  "portraitSha256": "5df669853cf61722b2ec6010d9eee296b5716c3d78f7661a22cf3c7e1fd945f1",
+  "oldImageEntriesPreserved": true,
+  "onlyOneImageAdded": true
+}

@@ -1,9 +1,9 @@
 {
   "totals": {
-    "sourceUniqueCount": 69,
-    "sourceBytes": 15824857,
-    "smallestVariantBytes": 669866,
-    "largestVariantBytes": 2122076,
+    "sourceUniqueCount": 70,
+    "sourceBytes": 18620616,
+    "smallestVariantBytes": 1033624,
+    "largestVariantBytes": 3772448,
     "collageSourceBytes": 8389641,
     "collageSmallestBytes": 311156,
     "collageLargestBytes": 776776
@@ -1458,6 +1458,32 @@
           "requestedWidth": 540,
           "width": 540,
           "bytes": 27994
+        }
+      ]
+    },
+    {
+      "name": "chef-landscape",
+      "role": "illustration",
+      "source": "media/sourcing/chef-landscape-2026-09-19.png",
+      "sourceBytes": 2795759,
+      "variants": [
+        {
+          "url": "/media/web/chef-landscape-2026-09-19-480.webp",
+          "requestedWidth": 480,
+          "width": 480,
+          "bytes": 363758
+        },
+        {
+          "url": "/media/web/chef-landscape-2026-09-19-768.webp",
+          "requestedWidth": 768,
+          "width": 768,
+          "bytes": 914698
+        },
+        {
+          "url": "/media/web/chef-landscape-2026-09-19-1024.webp",
+          "requestedWidth": 1024,
+          "width": 1024,
+          "bytes": 1650372
         }
       ]
     }

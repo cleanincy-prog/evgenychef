@@ -1,0 +1,22 @@
+{
+  "method": "CUA browser screenshots and read-only DOM geometry; font-size:200% temporary local CSS removed after checking",
+  "viewports": [
+    {"width":1440,"root":16,"sectionWidth":1303.1875,"imageWidth":490,"imageHeight":735},
+    {"width":1280,"root":16,"sectionWidth":1158.390625,"imageWidth":490,"imageHeight":735},
+    {"width":1024,"root":16,"sectionWidth":926.71875,"imageWidth":480.984375,"imageHeight":721.46875},
+    {"width":768,"root":16,"sectionWidth":695.03125,"imageWidth":400,"imageHeight":600},
+    {"width":430,"root":16,"sectionWidth":394,"imageWidth":330,"imageHeight":495},
+    {"width":390,"root":16,"sectionWidth":354,"imageWidth":330,"imageHeight":495},
+    {"width":375,"root":16,"sectionWidth":339,"imageWidth":330,"imageHeight":495},
+    {"width":3125,"root":24,"sectionWidth":1980,"imageWidth":735,"imageHeight":1102.5},
+    {"width":1440,"root":32,"textScale":"200%","sectionWidth":1303.1875,"imageWidth":800,"imageHeight":1200},
+    {"width":375,"root":32,"textScale":"200%","sectionWidth":339,"imageWidth":339,"imageHeight":508.5}
+  ],
+  "allViewports": {
+    "horizontalOverflow":false,"textOverflow":false,"imageCopyOverlap":false,
+    "portraitLoaded":true,"portraitAspectRatio":"2:3","fontsLoaded":true,
+    "collageCount":63,"videoControls":false
+  },
+  "sourceChecks": {"typescript":"passed","eslint":"passed","diffCheck":"passed","existingHttpTests":"6 passed","productionBuild":"passed"},
+  "antiTemplateAudit":"Exact selected portrait layout and existing type/color system; open product rows, no new cards, buttons, libraries or generated art"
+}

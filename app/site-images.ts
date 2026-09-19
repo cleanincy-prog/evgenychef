@@ -434,5 +434,11 @@ export const siteImages = {
     "srcSet": "/media/web/film-poster-540.webp 540w",
     "width": 1080,
     "height": 1920
+  },
+  "chef-landscape": {
+    "src": "/media/web/chef-landscape-2026-09-19-1024.webp",
+    "srcSet": "/media/web/chef-landscape-2026-09-19-480.webp 480w, /media/web/chef-landscape-2026-09-19-768.webp 768w, /media/web/chef-landscape-2026-09-19-1024.webp 1024w",
+    "width": 1024,
+    "height": 1536
   }
 } as const;

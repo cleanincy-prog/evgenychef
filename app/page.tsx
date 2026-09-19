@@ -1,4 +1,5 @@
 import ChefStoryVideo from "./chef-story-video";
+import ChefSourcing from "./chef-sourcing";
 import EveningPlanRoute from "./evening-plan-route";
 import MenuWorktable from "./menu-worktable";
 import { heroImages, siteImages } from "./site-images";
@@ -107,6 +108,7 @@ export default function Home() {
           </li>)}
         </ul>
       </section>
+      <ChefSourcing />
       <section className="evening-plan" aria-labelledby="plan-title">
         <h2 id="plan-title">От разговора — <span>к вашему столу</span></h2>
         <div className="process-board">
