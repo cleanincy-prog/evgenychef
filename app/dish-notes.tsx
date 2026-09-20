@@ -54,7 +54,7 @@ export default function DishNotes() {
   }, []);
 
   return <section className="dish-notes" id="dish-notes" data-dish-visual aria-labelledby="dish-notes-title">
-    <h3 id="dish-notes-title">Как складывается вкус</h3>
+    <h3 id="dish-notes-title">Как формируется вкус</h3>
     <figure className="dish-notes-layout" ref={figureRef}>
       <img className="dish-notes-photo" src="/media/menu/atlas-dish/plate-820.webp"
         srcSet="/media/menu/atlas-dish/plate-410.webp 410w, /media/menu/atlas-dish/plate-820.webp 820w"
