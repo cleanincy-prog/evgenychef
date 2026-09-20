@@ -1,0 +1,16 @@
+{
+  "unchanged": [
+    "app/page.tsx",
+    "app/layout.tsx",
+    "app/globals.css",
+    "app/menu-worktable.css",
+    "app/dish-notes.tsx",
+    "app/dish-notes.css",
+    "app/site-images.ts",
+    "app/chef-sourcing.tsx",
+    "app/chef-story-video.tsx",
+    "public/media/menu/atlas-dish/plate-820.webp"
+  ],
+  "allQuantitiesMultiplyBy12": true,
+  "imageEdit": "Built-in ImageGen; inspected original, all specified Russian headings and quantities present; composition visually preserved, not pixel-identical guaranteed"
+}

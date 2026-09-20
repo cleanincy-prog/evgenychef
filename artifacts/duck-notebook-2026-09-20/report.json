@@ -1,0 +1,840 @@
+{
+  "passed": true,
+  "results": [
+    {
+      "width": 1440,
+      "overflow": false,
+      "scene": {
+        "left": 701.859375,
+        "top": 5001.671875,
+        "right": 1321.859375,
+        "bottom": 5415,
+        "width": 620,
+        "height": 413.328125
+      },
+      "conversation": {
+        "left": 68.40625,
+        "top": 4853.109375,
+        "right": 518.40625,
+        "bottom": 5153.109375,
+        "width": 450,
+        "height": 300
+      },
+      "stations": [
+        {
+          "step": "01",
+          "heading": {
+            "left": 68.40625,
+            "top": 4638.796875,
+            "right": 595.9375,
+            "bottom": 4839.109375,
+            "width": 527.53125,
+            "height": 200.3125
+          },
+          "rect": {
+            "left": 68.40625,
+            "top": 4638.796875,
+            "right": 667.859375,
+            "bottom": 5153.109375,
+            "width": 599.453125,
+            "height": 514.3125
+          }
+        },
+        {
+          "step": "02",
+          "heading": {
+            "left": 667.859375,
+            "top": 4844.796875,
+            "right": 1371.5625,
+            "bottom": 4984.671875,
+            "width": 703.703125,
+            "height": 139.875
+          },
+          "rect": {
+            "left": 68.40625,
+            "top": 4638.796875,
+            "right": 1371.578125,
+            "bottom": 6168.546875,
+            "width": 1303.171875,
+            "height": 1529.75
+          }
+        },
+        {
+          "step": "03",
+          "heading": {
+            "left": 98.375,
+            "top": 6223.546875,
+            "right": 559.96875,
+            "bottom": 6336.703125,
+            "width": 461.59375,
+            "height": 113.15625
+          },
+          "rect": {
+            "left": 68.40625,
+            "top": 6223.546875,
+            "right": 667.859375,
+            "bottom": 6877.3125,
+            "width": 599.453125,
+            "height": 653.765625
+          }
+        },
+        {
+          "step": "04",
+          "heading": {
+            "left": 703.03125,
+            "top": 6476.546875,
+            "right": 1371.578125,
+            "bottom": 6569.984375,
+            "width": 668.546875,
+            "height": 93.4375
+          },
+          "rect": {
+            "left": 667.859375,
+            "top": 6223.546875,
+            "right": 1371.578125,
+            "bottom": 6877.3125,
+            "width": 703.71875,
+            "height": 653.765625
+          }
+        }
+      ],
+      "intersections": 0,
+      "image": {
+        "source": "http://127.0.0.1:3004/media/menu/chef-planning/duck-12-2026-09-20-640.webp",
+        "loaded": true,
+        "rect": {
+          "left": 701.859375,
+          "top": 5001.671875,
+          "right": 1321.859375,
+          "bottom": 5415,
+          "width": 620,
+          "height": 413.328125
+        },
+        "filter": "grayscale(1) contrast(1.25)",
+        "blend": "multiply"
+      },
+      "fonts": {
+        "title": "Oranienbaum, Georgia, \"Times New Roman\", serif",
+        "copy": "\"Ysabeau Office\", system-ui, -apple-system, sans-serif",
+        "number": "\"PT Mono\", ui-monospace, Menlo, monospace"
+      }
+    },
+    {
+      "width": 1280,
+      "overflow": false,
+      "scene": {
+        "left": 627.640625,
+        "top": 4698.328125,
+        "right": 1219.15625,
+        "bottom": 5092.671875,
+        "width": 591.515625,
+        "height": 394.34375
+      },
+      "conversation": {
+        "left": 60.796875,
+        "top": 4549.765625,
+        "right": 510.796875,
+        "bottom": 4849.765625,
+        "width": 450,
+        "height": 300
+      },
+      "stations": [
+        {
+          "step": "01",
+          "heading": {
+            "left": 60.796875,
+            "top": 4336.5,
+            "right": 529.71875,
+            "bottom": 4535.765625,
+            "width": 468.921875,
+            "height": 199.265625
+          },
+          "rect": {
+            "left": 60.796875,
+            "top": 4336.5,
+            "right": 593.65625,
+            "bottom": 4849.765625,
+            "width": 532.859375,
+            "height": 513.265625
+          }
+        },
+        {
+          "step": "02",
+          "heading": {
+            "left": 593.640625,
+            "top": 4542.5,
+            "right": 1219.15625,
+            "bottom": 4681.328125,
+            "width": 625.515625,
+            "height": 138.828125
+          },
+          "rect": {
+            "left": 60.796875,
+            "top": 4336.5,
+            "right": 1219.171875,
+            "bottom": 5765.828125,
+            "width": 1158.375,
+            "height": 1429.328125
+          }
+        },
+        {
+          "step": "03",
+          "heading": {
+            "left": 87.4375,
+            "top": 5820.828125,
+            "right": 497.75,
+            "bottom": 5959.65625,
+            "width": 410.3125,
+            "height": 138.828125
+          },
+          "rect": {
+            "left": 60.796875,
+            "top": 5820.828125,
+            "right": 593.65625,
+            "bottom": 6483.546875,
+            "width": 532.859375,
+            "height": 662.71875
+          }
+        },
+        {
+          "step": "04",
+          "heading": {
+            "left": 624.921875,
+            "top": 6083.828125,
+            "right": 1219.171875,
+            "bottom": 6176.21875,
+            "width": 594.25,
+            "height": 92.390625
+          },
+          "rect": {
+            "left": 593.65625,
+            "top": 5820.828125,
+            "right": 1219.171875,
+            "bottom": 6483.546875,
+            "width": 625.515625,
+            "height": 662.71875
+          }
+        }
+      ],
+      "intersections": 0,
+      "image": {
+        "source": "http://127.0.0.1:3004/media/menu/chef-planning/duck-12-2026-09-20-640.webp",
+        "loaded": true,
+        "rect": {
+          "left": 627.640625,
+          "top": 4698.328125,
+          "right": 1219.15625,
+          "bottom": 5092.671875,
+          "width": 591.515625,
+          "height": 394.34375
+        },
+        "filter": "grayscale(1) contrast(1.25)",
+        "blend": "multiply"
+      },
+      "fonts": {
+        "title": "Oranienbaum, Georgia, \"Times New Roman\", serif",
+        "copy": "\"Ysabeau Office\", system-ui, -apple-system, sans-serif",
+        "number": "\"PT Mono\", ui-monospace, Menlo, monospace"
+      }
+    },
+    {
+      "width": 1024,
+      "overflow": false,
+      "scene": {
+        "left": 508.921875,
+        "top": 4259.640625,
+        "right": 975.328125,
+        "bottom": 4570.578125,
+        "width": 466.40625,
+        "height": 310.9375
+      },
+      "conversation": {
+        "left": 48.640625,
+        "top": 4131.078125,
+        "right": 423.78125,
+        "bottom": 4381.171875,
+        "width": 375.140625,
+        "height": 250.09375
+      },
+      "stations": [
+        {
+          "step": "01",
+          "heading": {
+            "left": 48.640625,
+            "top": 3918.078125,
+            "right": 423.78125,
+            "bottom": 4117.078125,
+            "width": 375.140625,
+            "height": 199
+          },
+          "rect": {
+            "left": 48.640625,
+            "top": 3918.078125,
+            "right": 474.921875,
+            "bottom": 4381.171875,
+            "width": 426.28125,
+            "height": 463.09375
+          }
+        },
+        {
+          "step": "02",
+          "heading": {
+            "left": 474.921875,
+            "top": 4104.078125,
+            "right": 975.328125,
+            "bottom": 4242.640625,
+            "width": 500.40625,
+            "height": 138.5625
+          },
+          "rect": {
+            "left": 48.640625,
+            "top": 3918.078125,
+            "right": 975.34375,
+            "bottom": 5115.109375,
+            "width": 926.703125,
+            "height": 1197.03125
+          }
+        },
+        {
+          "step": "03",
+          "heading": {
+            "left": 69.953125,
+            "top": 5170.109375,
+            "right": 423.78125,
+            "bottom": 5308.671875,
+            "width": 353.828125,
+            "height": 138.5625
+          },
+          "rect": {
+            "left": 48.640625,
+            "top": 5170.109375,
+            "right": 474.921875,
+            "bottom": 5862,
+            "width": 426.28125,
+            "height": 691.890625
+          }
+        },
+        {
+          "step": "04",
+          "heading": {
+            "left": 499.9375,
+            "top": 5447.109375,
+            "right": 975.34375,
+            "bottom": 5539.234375,
+            "width": 475.40625,
+            "height": 92.125
+          },
+          "rect": {
+            "left": 474.921875,
+            "top": 5170.109375,
+            "right": 975.34375,
+            "bottom": 5862,
+            "width": 500.421875,
+            "height": 691.890625
+          }
+        }
+      ],
+      "intersections": 0,
+      "image": {
+        "source": "http://127.0.0.1:3004/media/menu/chef-planning/duck-12-2026-09-20-640.webp",
+        "loaded": true,
+        "rect": {
+          "left": 508.921875,
+          "top": 4259.640625,
+          "right": 975.328125,
+          "bottom": 4570.578125,
+          "width": 466.40625,
+          "height": 310.9375
+        },
+        "filter": "grayscale(1) contrast(1.25)",
+        "blend": "multiply"
+      },
+      "fonts": {
+        "title": "Oranienbaum, Georgia, \"Times New Roman\", serif",
+        "copy": "\"Ysabeau Office\", system-ui, -apple-system, sans-serif",
+        "number": "\"PT Mono\", ui-monospace, Menlo, monospace"
+      }
+    },
+    {
+      "width": 768,
+      "overflow": false,
+      "scene": {
+        "left": 70.484375,
+        "top": 4428.28125,
+        "right": 690.484375,
+        "bottom": 4841.609375,
+        "width": 620,
+        "height": 413.328125
+      },
+      "conversation": {
+        "left": 130.484375,
+        "top": 3963.4375,
+        "right": 580.484375,
+        "bottom": 4263.4375,
+        "width": 450,
+        "height": 300
+      },
+      "stations": [
+        {
+          "step": "01",
+          "heading": {
+            "left": 36.484375,
+            "top": 3807.875,
+            "right": 731.515625,
+            "bottom": 3953.4375,
+            "width": 695.03125,
+            "height": 145.5625
+          },
+          "rect": {
+            "left": 36.484375,
+            "top": 3807.875,
+            "right": 731.515625,
+            "bottom": 4299.4375,
+            "width": 695.03125,
+            "height": 491.5625
+          }
+        },
+        {
+          "step": "02",
+          "heading": {
+            "left": 36.484375,
+            "top": 4299.4375,
+            "right": 731.515625,
+            "bottom": 4411.28125,
+            "width": 695.03125,
+            "height": 111.84375
+          },
+          "rect": {
+            "left": 36.484375,
+            "top": 4299.4375,
+            "right": 731.515625,
+            "bottom": 5657.875,
+            "width": 695.03125,
+            "height": 1358.4375
+          }
+        },
+        {
+          "step": "03",
+          "heading": {
+            "left": 36.484375,
+            "top": 5657.875,
+            "right": 731.515625,
+            "bottom": 5769.71875,
+            "width": 695.03125,
+            "height": 111.84375
+          },
+          "rect": {
+            "left": 36.484375,
+            "top": 5657.875,
+            "right": 731.515625,
+            "bottom": 6465.71875,
+            "width": 695.03125,
+            "height": 807.84375
+          }
+        },
+        {
+          "step": "04",
+          "heading": {
+            "left": 36.484375,
+            "top": 6465.71875,
+            "right": 731.515625,
+            "bottom": 6557.84375,
+            "width": 695.03125,
+            "height": 92.125
+          },
+          "rect": {
+            "left": 36.484375,
+            "top": 6465.71875,
+            "right": 731.515625,
+            "bottom": 6866.171875,
+            "width": 695.03125,
+            "height": 400.453125
+          }
+        }
+      ],
+      "intersections": 0,
+      "image": {
+        "source": "http://127.0.0.1:3004/media/menu/chef-planning/duck-12-2026-09-20-640.webp",
+        "loaded": true,
+        "rect": {
+          "left": 70.484375,
+          "top": 4428.28125,
+          "right": 690.484375,
+          "bottom": 4841.609375,
+          "width": 620,
+          "height": 413.328125
+        },
+        "filter": "grayscale(1) contrast(1.25)",
+        "blend": "multiply"
+      },
+      "fonts": {
+        "title": "Oranienbaum, Georgia, \"Times New Roman\", serif",
+        "copy": "\"Ysabeau Office\", system-ui, -apple-system, sans-serif",
+        "number": "\"PT Mono\", ui-monospace, Menlo, monospace"
+      }
+    },
+    {
+      "width": 430,
+      "overflow": false,
+      "scene": {
+        "left": 52,
+        "top": 5174.78125,
+        "right": 412,
+        "bottom": 5414.78125,
+        "width": 360,
+        "height": 240
+      },
+      "conversation": {
+        "left": 52,
+        "top": 4748.21875,
+        "right": 412,
+        "bottom": 4988.21875,
+        "width": 360,
+        "height": 240
+      },
+      "stations": [
+        {
+          "step": "01",
+          "heading": {
+            "left": 18,
+            "top": 4537.21875,
+            "right": 412,
+            "bottom": 4736.21875,
+            "width": 394,
+            "height": 199
+          },
+          "rect": {
+            "left": 18,
+            "top": 4537.21875,
+            "right": 412,
+            "bottom": 5019.21875,
+            "width": 394,
+            "height": 482
+          }
+        },
+        {
+          "step": "02",
+          "heading": {
+            "left": 18,
+            "top": 5019.21875,
+            "right": 412,
+            "bottom": 5157.78125,
+            "width": 394,
+            "height": 138.5625
+          },
+          "rect": {
+            "left": 18,
+            "top": 5019.21875,
+            "right": 412,
+            "bottom": 6128.375,
+            "width": 394,
+            "height": 1109.15625
+          }
+        },
+        {
+          "step": "03",
+          "heading": {
+            "left": 18,
+            "top": 6128.375,
+            "right": 412,
+            "bottom": 6266.9375,
+            "width": 394,
+            "height": 138.5625
+          },
+          "rect": {
+            "left": 18,
+            "top": 6128.375,
+            "right": 412,
+            "bottom": 6848.265625,
+            "width": 394,
+            "height": 719.890625
+          }
+        },
+        {
+          "step": "04",
+          "heading": {
+            "left": 18,
+            "top": 6848.265625,
+            "right": 412,
+            "bottom": 6940.390625,
+            "width": 394,
+            "height": 92.125
+          },
+          "rect": {
+            "left": 18,
+            "top": 6848.265625,
+            "right": 412,
+            "bottom": 7193.390625,
+            "width": 394,
+            "height": 345.125
+          }
+        }
+      ],
+      "intersections": 0,
+      "image": {
+        "source": "http://127.0.0.1:3004/media/menu/chef-planning/duck-12-2026-09-20-640.webp",
+        "loaded": true,
+        "rect": {
+          "left": 52,
+          "top": 5174.78125,
+          "right": 412,
+          "bottom": 5414.78125,
+          "width": 360,
+          "height": 240
+        },
+        "filter": "grayscale(1) contrast(1.25)",
+        "blend": "multiply"
+      },
+      "fonts": {
+        "title": "Oranienbaum, Georgia, \"Times New Roman\", serif",
+        "copy": "\"Ysabeau Office\", system-ui, -apple-system, sans-serif",
+        "number": "\"PT Mono\", ui-monospace, Menlo, monospace"
+      }
+    },
+    {
+      "width": 390,
+      "overflow": false,
+      "scene": {
+        "left": 52,
+        "top": 5171.765625,
+        "right": 372,
+        "bottom": 5385.09375,
+        "width": 320,
+        "height": 213.328125
+      },
+      "conversation": {
+        "left": 52,
+        "top": 4745.15625,
+        "right": 372,
+        "bottom": 4958.484375,
+        "width": 320,
+        "height": 213.328125
+      },
+      "stations": [
+        {
+          "step": "01",
+          "heading": {
+            "left": 18,
+            "top": 4507.4375,
+            "right": 372,
+            "bottom": 4733.15625,
+            "width": 354,
+            "height": 225.71875
+          },
+          "rect": {
+            "left": 18,
+            "top": 4507.4375,
+            "right": 372,
+            "bottom": 4989.484375,
+            "width": 354,
+            "height": 482.046875
+          }
+        },
+        {
+          "step": "02",
+          "heading": {
+            "left": 18,
+            "top": 4989.484375,
+            "right": 372,
+            "bottom": 5154.765625,
+            "width": 354,
+            "height": 165.28125
+          },
+          "rect": {
+            "left": 18,
+            "top": 4989.484375,
+            "right": 372,
+            "bottom": 6057.515625,
+            "width": 354,
+            "height": 1068.03125
+          }
+        },
+        {
+          "step": "03",
+          "heading": {
+            "left": 18,
+            "top": 6057.515625,
+            "right": 372,
+            "bottom": 6196.078125,
+            "width": 354,
+            "height": 138.5625
+          },
+          "rect": {
+            "left": 18,
+            "top": 6057.515625,
+            "right": 372,
+            "bottom": 6777.40625,
+            "width": 354,
+            "height": 719.890625
+          }
+        },
+        {
+          "step": "04",
+          "heading": {
+            "left": 18,
+            "top": 6777.40625,
+            "right": 372,
+            "bottom": 6869.53125,
+            "width": 354,
+            "height": 92.125
+          },
+          "rect": {
+            "left": 18,
+            "top": 6777.40625,
+            "right": 372,
+            "bottom": 7095.859375,
+            "width": 354,
+            "height": 318.453125
+          }
+        }
+      ],
+      "intersections": 0,
+      "image": {
+        "source": "http://127.0.0.1:3004/media/menu/chef-planning/duck-12-2026-09-20-640.webp",
+        "loaded": true,
+        "rect": {
+          "left": 52,
+          "top": 5171.765625,
+          "right": 372,
+          "bottom": 5385.09375,
+          "width": 320,
+          "height": 213.328125
+        },
+        "filter": "grayscale(1) contrast(1.25)",
+        "blend": "multiply"
+      },
+      "fonts": {
+        "title": "Oranienbaum, Georgia, \"Times New Roman\", serif",
+        "copy": "\"Ysabeau Office\", system-ui, -apple-system, sans-serif",
+        "number": "\"PT Mono\", ui-monospace, Menlo, monospace"
+      }
+    },
+    {
+      "width": 375,
+      "overflow": false,
+      "scene": {
+        "left": 52,
+        "top": 5145.515625,
+        "right": 357,
+        "bottom": 5348.84375,
+        "width": 305,
+        "height": 203.328125
+      },
+      "conversation": {
+        "left": 52,
+        "top": 4728.90625,
+        "right": 357,
+        "bottom": 4932.234375,
+        "width": 305,
+        "height": 203.328125
+      },
+      "stations": [
+        {
+          "step": "01",
+          "heading": {
+            "left": 18,
+            "top": 4464.46875,
+            "right": 357,
+            "bottom": 4716.90625,
+            "width": 339,
+            "height": 252.4375
+          },
+          "rect": {
+            "left": 18,
+            "top": 4464.46875,
+            "right": 357,
+            "bottom": 4963.234375,
+            "width": 339,
+            "height": 498.765625
+          }
+        },
+        {
+          "step": "02",
+          "heading": {
+            "left": 18,
+            "top": 4963.234375,
+            "right": 357,
+            "bottom": 5128.515625,
+            "width": 339,
+            "height": 165.28125
+          },
+          "rect": {
+            "left": 18,
+            "top": 4963.234375,
+            "right": 357,
+            "bottom": 6030.46875,
+            "width": 339,
+            "height": 1067.234375
+          }
+        },
+        {
+          "step": "03",
+          "heading": {
+            "left": 18,
+            "top": 6030.46875,
+            "right": 357,
+            "bottom": 6195.75,
+            "width": 339,
+            "height": 165.28125
+          },
+          "rect": {
+            "left": 18,
+            "top": 6030.46875,
+            "right": 357,
+            "bottom": 6777.078125,
+            "width": 339,
+            "height": 746.609375
+          }
+        },
+        {
+          "step": "04",
+          "heading": {
+            "left": 18,
+            "top": 6777.078125,
+            "right": 357,
+            "bottom": 6869.203125,
+            "width": 339,
+            "height": 92.125
+          },
+          "rect": {
+            "left": 18,
+            "top": 6777.078125,
+            "right": 357,
+            "bottom": 7085.53125,
+            "width": 339,
+            "height": 308.453125
+          }
+        }
+      ],
+      "intersections": 0,
+      "image": {
+        "source": "http://127.0.0.1:3004/media/menu/chef-planning/duck-12-2026-09-20-640.webp",
+        "loaded": true,
+        "rect": {
+          "left": 52,
+          "top": 5145.515625,
+          "right": 357,
+          "bottom": 5348.84375,
+          "width": 305,
+          "height": 203.328125
+        },
+        "filter": "grayscale(1) contrast(1.25)",
+        "blend": "multiply"
+      },
+      "fonts": {
+        "title": "Oranienbaum, Georgia, \"Times New Roman\", serif",
+        "copy": "\"Ysabeau Office\", system-ui, -apple-system, sans-serif",
+        "number": "\"PT Mono\", ui-monospace, Menlo, monospace"
+      }
+    }
+  ],
+  "errors": [],
+  "checks": [
+    "Seven widths and route clearance",
+    "200% text on desktop and phone",
+    "Approved single graphite illustration, no food photograph or ingredient layers",
+    "No-JavaScript content and image",
+    "Image failure, keyboard retry, 44px target and focus",
+    "63 collage photos and inline video preserved"
+  ]
+}

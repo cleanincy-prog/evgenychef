@@ -1,0 +1,13 @@
+{
+  "app/page.tsx": "94de3667a57d55bd09abae8f173d5078d1286889b33e3af820fb903fb2e5a12a",
+  "app/layout.tsx": "20e60f978e9689a3a03d93312d91359d4c45ccd625f0d1c634d2539924101022",
+  "app/globals.css": "d57cbcb711dfec2c3a5b2a87d6cc72400b8b63225ea1cffec0692c4826f5ff28",
+  "app/menu-worktable.tsx": "e6d2f073bb3cf1c7f6b20a44225fa8bda083079ba1219377063e095adc44b1ca",
+  "app/menu-worktable.css": "eef1c143d1f2c1f6b3db90e88e3840c45d8d348df1e86e86bc3499fc23ccb873",
+  "app/dish-notes.tsx": "4bea92bf051acd5a9b43fe5a41e741c8da4cae1d2dc2266f938e754497e5038a",
+  "app/dish-notes.css": "f79cdc98f0dcb7f745dc035a5abd2e7560ca199fc73e7a6d4743f568ad0418b3",
+  "app/site-images.ts": "a37d6df492c8f5b18fb0e9a621db43236edf815a3ebd5c8fa58240b2a8b4619c",
+  "app/chef-sourcing.tsx": "666789e9a38c67422546862f4e17ff48589059c0750a4c2ff921da22743d1f8c",
+  "app/chef-story-video.tsx": "8df34ebe536da701bdc3d44474d5e9c3c12a00cc4c28c0819d48f21bd0038cd0",
+  "public/media/menu/atlas-dish/plate-820.webp": "d0733df5f69ce6828e3924d07d65cbfe4435c75de6e648be0ed6ab1c37db7c49"
+}

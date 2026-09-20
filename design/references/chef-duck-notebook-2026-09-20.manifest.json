@@ -1,0 +1,32 @@
+{
+  "source": "design/references/chef-duck-notebook-2026-09-20.png",
+  "editedFrom": "design/references/approved-chef-menu-2026-09-14.png",
+  "prompt": "design/references/chef-duck-notebook-2026-09-20.prompt.txt",
+  "sourceSha256": "f78a8fee2888997ded2c3d2d1fb817cf6ce95c83c2874493d0d3d94e67c8e550",
+  "width": 1536,
+  "height": 1024,
+  "operation": "Built-in ImageGen edits in-paper notes to duck for 12; this script only encodes proportional responsive WebP copies",
+  "variants": [
+    {
+      "filename": "duck-12-2026-09-20-640.webp",
+      "width": 640,
+      "height": 427,
+      "bytes": 66478,
+      "sha256": "0ff7469843e27eae71fbe76e6dfcc78e065dd09c92b7e651fe77fb6fe3e9ca8a"
+    },
+    {
+      "filename": "duck-12-2026-09-20-960.webp",
+      "width": 960,
+      "height": 640,
+      "bytes": 135442,
+      "sha256": "5a987fcd052534ca1c7d2019976c48f9b92e75a187d7deec9585d88ed48acf02"
+    },
+    {
+      "filename": "duck-12-2026-09-20-1536.webp",
+      "width": 1536,
+      "height": 1024,
+      "bytes": 285118,
+      "sha256": "47236b7e471e118ab3d92f105f44033aa07cb33e330bbb49da10e0d54f0ce540"
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+Use case: text-localization.
+Asset type: an existing graphite illustration for a chef website.
+Input image 1 is the EDIT TARGET, not a loose inspiration. Edit this exact image only.
+
+PRIMARY REQUEST
+Replace ONLY the handwritten contents inside the open notebook and the surrounding paper sheets, plus the tiny plate sketch inside the LEFT notebook page. The new writing describes a duck dish with quantities for twelve people. Preserve the original chef's identity, head, body, hands, pencil, pose, glass, vase, flowers, desk, all paper boundaries and their exact positions, notebook outline and binding, perspective, composition, warm off-white background, graphite pencil texture and subtle lines. Preserve the over-shoulder view exactly. Do not redraw or rearrange the scene. Outside the paper-writing areas preserve the input unchanged. No colored plate, no new objects or scene elements.
+
+OUTPUT
+One landscape image, 3:2 aspect ratio, target 1536 x 1024 or higher at the same 3:2 ratio. Keep the original framing and full image.
+
+HANDWRITING
+Natural, elegant, legible Russian pencil handwriting of the same graphite style as the existing image. Follow each page's perspective and line angles. Fit all requested writing within the existing unobscured paper area without changing paper sizes or moving the chef or hands. Use slightly smaller handwriting on the right notebook page if needed to fit every line. Transcribe the text below verbatim, including the exact numbers, decimal comma, units, dashes, ё, punctuation, and Russian spellings. Make amounts particularly clear. These are an illustrative proposed calculation, not a restaurant recipe; preserve the exact disclaimer «Пример расчёта» inside the notebook.
+
+LEFT NOTEBOOK PAGE — replace its entire existing writing with these seven lines:
+Меню вечера
+Утиная грудка
+Фенхель · батат
+Пак-чой · шиитаке
+Эдамаме · чипсы
+Соус с юдзу
+12 человек
+Beneath these lines, replace the existing little fish-fillet plate sketch with a small monochrome pencil sketch of sliced duck breast on a plate with vegetables, in the same existing sketch location and style.
+
+RIGHT NOTEBOOK PAGE — replace its entire existing writing with these exact eleven lines:
+На 12 человек
+Утка, сырая — 2,4 кг
+Пюре фенхеля — 960 г
+Пюре батата — 600 г
+Пак-чой — 720 г
+Шиитаке — 360 г
+Эдамаме — 240 г
+Соус с юдзу — 540 мл
+Чипсы — 24 шт.
+Пример расчёта
+(The list above has ten lines total: reproduce all ten and do not add an extra line.)
+
+TOP CENTER TABLE SHEET — keep the original sheet and position but replace the old table with a two-column handwritten table.
+Title: На одну порцию
+Column headers: Компонент | Количество
+Row 1: Утка, сырая | 200 г
+Row 2: Пюре фенхеля | 80 г
+Row 3: Пюре батата | 50 г
+Under the table, write: Гарнир и соус — в расчёте справа.
+
+TOP RIGHT SHEET — replace all existing writing with:
+Подготовка
+Then four hand-drawn empty checkboxes, one per line, followed by:
+Подготовить утку
+Сделать два пюре
+Подготовить овощи
+Довести соус с юдзу
+
+LOWER RIGHT SHEET — replace all existing writing with:
+Порядок подачи
+Пюре из фенхеля
+Утка и овощи
+Точки пюре батата
+Соус, затем чипсы
+
+SMALL BACKGROUND PAPERS visible above and behind the main sheets: replace old notes with faint culinary pencil notes about this same duck dish, with the visible headings «Подача», «Соус», «Гарнир». Do not invent any additional amounts.
+
+AVOID
+No remnants of old fish/cod/mussels/carrot/wine/cream wording anywhere. No old four-person headings, no «4 порции», no fish drawing, no extra quantities. No external website headline, no colored elements, no altered person or hands, no shifted or enlarged papers. Only in-paper writing and the existing tiny notebook plate sketch change.

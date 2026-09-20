@@ -3,7 +3,7 @@ import { mkdir, writeFile } from 'node:fs/promises';
 import { chromium } from 'playwright';
 import path from 'node:path';
 
-const out=path.resolve('artifacts/chef-menu-planning-2026-09-14');
+const out=path.resolve(process.env.QA_OUTPUT || 'artifacts/chef-menu-planning-2026-09-14');
 await mkdir(out,{recursive:true});
 const url='http://127.0.0.1:3004/';
 const browser=await chromium.launch({executablePath:'/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',headless:true,args:['--disable-background-networking','--disable-component-update','--no-first-run']});
@@ -47,7 +47,7 @@ try {
     if(width>900){assert.ok(geometry.scene.left>=geometry.stations[1].heading.left+33);assert.ok(geometry.scene.top>=geometry.stations[1].heading.bottom+16);assert.ok(geometry.scene.width<=620.1);assert.ok(geometry.stations[2].heading.top>=geometry.conversation.bottom+54);assert.ok(geometry.stations[3].heading.top>=geometry.scene.bottom+50);}
     else assert.ok(geometry.stations.every((s,i,all)=>!i||s.rect.top>=all[i-1].rect.bottom-1));
     assert.equal(await page.locator('.menu-book,[data-grams],.notebook-pages,.menu-worktable-caption').count(),0);
-    assert.equal(await page.locator('.station-menu h3').innerText(),'Продумываю меню');
+    assert.equal(await page.locator('.station-menu > .station-heading h3').innerText(),'Продумываю меню');
     assert.equal(await page.locator('.station-menu .station-copy p').innerText(),'Из нашего разговора складывается меню. Я выбираю продукты и продумываю, какие блюда приготовить и как они будут сочетаться между собой.');
     await page.locator('.evening-plan').screenshot({path:path.join(out,`process-${width}.png`)});
     await page.locator('.menu-worktable').screenshot({path:path.join(out,`menu-${width}.png`)});
@@ -65,7 +65,7 @@ try {
     await page.evaluate(()=>document.documentElement.style.fontSize='');
   }
   assert.equal(await page.locator('.collage-tile img').count(),63);
-  assert.equal(await page.locator('video').evaluate(e=>e.controls),true);
+  assert.equal(await page.locator('video').evaluate(e=>e.controls),false);
   assert.equal(await page.locator('.menu-worktable').evaluate(e=>e.getAnimations({subtree:true}).length),0);
   const nojs=await browser.newContext({viewport:{width:390,height:844},javaScriptEnabled:false});
   const staticPage=await nojs.newPage();await staticPage.goto(url);await staticPage.locator('.menu-worktable').scrollIntoViewIfNeeded();

@@ -10,7 +10,7 @@ export default function MenuWorktable() {
   const [state, setState] = useState<"loading" | "ready" | "error">("loading");
   const [attempt, setAttempt] = useState(0);
   const suffix = attempt ? `?retry=${attempt}` : "";
-  const source = (width: number) => `/media/menu/chef-planning/scene-${width}.webp${suffix}`;
+  const source = (width: number) => `/media/menu/chef-planning/duck-12-2026-09-20-${width}.webp${suffix}`;
   const loaded = () => setState("ready");
   const failed = () => setState("error");
 
@@ -25,7 +25,7 @@ export default function MenuWorktable() {
         srcSet={`${source(640)} 640w, ${source(960)} 960w, ${source(1536)} 1536w`}
         sizes="(max-width: 620px) calc(100vw - 70px), (max-width: 900px) min(620px, calc(90.5vw - 34px)), (max-width: 1440px) min(620px, calc(48.87vw - 34px)), min(43.06vw, 930px)"
         width={1536} height={1024} loading="lazy" decoding="async"
-        alt="Карандашный рисунок через плечо: Евгений составляет меню в тетради. На столе — пример расчёта на четыре порции, список продуктов, план подготовки и вопросы гостям."
+        alt="Карандашный рисунок через плечо: Евгений составляет меню в тетради. В записях — утка с пюре из фенхеля и батата, пак-чой, шиитаке, эдамаме, соус с юдзу и чипсы; пример расчёта на 12 человек, подготовка и порядок подачи."
         onLoad={loaded} onError={failed} />
     </div>
     {state === "error" && <div className="menu-worktable-error" role="alert">

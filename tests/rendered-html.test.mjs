@@ -140,7 +140,7 @@ test("renders 63 documentary collage photos, the selected chef illustration and 
   const required = [
     "/media/web/chef-hero-apron-576.webp",
     "/media/web/masterchef-640.webp",
-    "/media/menu/chef-planning/scene-960.webp",
+    "/media/menu/chef-planning/duck-12-2026-09-20-960.webp",
     "/media/menu/atlas-dish/plate-820.webp",
     "/media/web/masterclasses-1144.jpg",
   ];
