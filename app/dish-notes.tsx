@@ -54,17 +54,17 @@ export default function DishNotes() {
   }, []);
 
   return <section className="dish-notes" id="dish-notes" data-dish-visual aria-labelledby="dish-notes-title">
-    <h3 id="dish-notes-title">Как складывается вкус</h3>
+    <h3 id="dish-notes-title">Пример сочетания вкусов</h3>
     <figure className="dish-notes-layout" ref={figureRef}>
       <img className="dish-notes-photo" src="/media/menu/atlas-dish/plate-820.webp"
         srcSet="/media/menu/atlas-dish/plate-410.webp 410w, /media/menu/atlas-dish/plate-820.webp 820w"
         sizes="(max-width: 620px) calc(100vw - 69px), (max-width: 900px) min(496px, calc(90.5vw - 34px)), min(44vw, 930px)"
         width={820} height={844} loading="lazy" decoding="async"
         alt="Блюдо Atlas, вид сверху: ломтики утиной грудки, пюре из фенхеля и батата, бок-чой, эдамаме, грибы шиитаке, хрустящие чипсы и соус с юдзу на кремовой тарелке." />
-      <p className="atlas-note atlas-note--duck">Утка остаётся сочной,<br />{" "}а кожица — хрустящей.</p>
+      <p className="atlas-note atlas-note--duck">Утка — сочность<br />{" "}и хрустящая кожица.</p>
       <p className="atlas-note atlas-note--puree">Пюре из фенхеля — нежность,<br />{" "}батат — сладость.</p>
-      <p className="atlas-note atlas-note--vegetables">Овощи добавляют свежесть,<br />{" "}грибы — насыщенность,<br />{" "}чипсы — хруст.</p>
-      <p className="atlas-note atlas-note--sauce">Соус с юдзу объединяет вкусы<br />{" "}и добавляет кислинку.</p>
+      <p className="atlas-note atlas-note--vegetables">Овощи — свежесть,<br />{" "}шиитаке — насыщенность,<br />{" "}чипсы — хруст.</p>
+      <p className="atlas-note atlas-note--sauce">Соус с юдзу добавляет кислинку<br />{" "}и объединяет вкусы.</p>
       <svg className="dish-notes-leaders" aria-hidden="true">
         {leaders.map((leader, index) => <g key={index}>
           <path d={leader.path} /><circle cx={leader.x} cy={leader.y} r="2.5" />

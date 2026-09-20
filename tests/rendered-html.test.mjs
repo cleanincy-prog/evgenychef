@@ -52,7 +52,7 @@ test("serves the approved evening page as accessible Russian HTML", () => {
   assert.equal(tags(html, "html")[0]?.lang, "ru");
   assert.equal(tags(html, "h1").length, 1, "A single page identity is required");
   const text = visibleText(html);
-  for (const expected of ["Евгений", "Гребеник", "Знакомимся", "Продумываю меню", "Готовлю к встрече", "Ваш вечер", "Из нашего разговора складывается меню. Я выбираю продукты и продумываю, какие блюда приготовить и как они будут сочетаться между собой."]) {
+  for (const expected of ["Евгений", "Гребеник", "Знакомимся", "Продумываю меню", "Готовлю к встрече", "Ваш вечер", "Из ваших пожеланий складывается меню. Я выбираю продукты и продумываю, как они будут сочетаться между собой."]) {
     assert.ok(text.toLocaleLowerCase("ru").includes(expected.toLocaleLowerCase("ru")), `Missing rendered content: ${expected}`);
   }
   assert.doesNotMatch(text, /В первом сообщении укажите дату и формат/i);
@@ -167,7 +167,7 @@ test("renders 63 documentary collage photos, the selected chef illustration and 
   assert.equal(imageTags.filter(img => img.src.includes("/menu/worktable/")).length, 0, "The rejected food photograph and ingredient montage must not return");
   assert.equal(imageTags.filter(img => img.src.includes("/menu/atlas-dish/")).length, 1, "The approved Atlas dish must appear once");
   assert.equal((html.match(/class="atlas-note atlas-note--/g) || []).length, 4, "Keep the four approved short notes");
-  assert.match(visibleText(html), /Как складывается вкус/);
+  assert.match(visibleText(html), /Пример сочетания вкусов/);
   assert.ok(!visibleText(html).includes("Фото блюда"), "The removed dish must not retain a photo action");
   assert.doesNotMatch(html, /data-recipe="octopus"|data-grams=|class="mb-(?:pencil|stroke|navigation)"|data-menu-(?:scroll|sketch|color|next)/);
 

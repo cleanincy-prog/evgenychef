@@ -158,6 +158,7 @@ img { display: block; max-width: 100%; }
 .header-action small { color: var(--muted); margin-top: 2px; }
 .header-action-mobile { display: none; }
 /* Full-field photo packing from the approved Mise en place collage. */
+.hero { container: hero / inline-size; }
 .hero-frame { position: relative; isolation: isolate; display: grid; grid-template-columns: 11.7% minmax(0, 1fr) 11.7%; align-items: center; min-height: calc(100svh - var(--header-height)); padding-block: clamp(4.25rem, 6.65vw, 6rem); column-gap: 2px; background: var(--paper); }
 .hero-collage { position: absolute; z-index: -1; top: 0; bottom: 0; left: calc((100% - 100vw) / 2); width: 100vw; overflow: hidden; background: var(--paper); }
 .hero-collage::after { content: ""; position: absolute; inset: 0; z-index: 1; background: rgb(246 224 196 / 24%); pointer-events: none; }
@@ -166,13 +167,14 @@ img { display: block; max-width: 100%; }
 .collage-tile--wide-desktop { grid-column: span 2; }
 .collage-tile img { width: 100%; height: 100%; position: absolute; object-fit: cover; }
 .hero-identity { grid-column: 2; grid-row: 1; position: relative; background: var(--paper); display: grid; grid-template-columns: 52% minmax(0, 1fr); min-height: clamp(17.8125rem, 31vw, 27.1875rem); min-width: 0; gap: 2px; }
-.hero-copy { display: flex; align-items: center; justify-content: center; padding: 1.5rem 1.875rem; }
+.hero-copy { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1.125rem; padding: 1.5rem 1.875rem; }
 .hero-copy h1 { width: max-content; max-width: 100%; }
+.hero-intro { max-width: 24ch; font: var(--type-copy); color: var(--muted); text-wrap: balance; }
 .hero-copy h1 span { display: block; }
-.hero-copy h1 em { display: block; margin: 12px 0 10px; padding-left: 12%; white-space: nowrap; color: var(--gold-text); }
+.hero-copy h1 em { display: block; margin: 12px 0 10px; padding-left: 0; white-space: nowrap; color: var(--gold-text); }
 .hero-portrait { position: relative; overflow: hidden; }
 /* Match the source ratio before decode; the 320px variant rounds its height by 1px. */
-.hero-portrait img { position: absolute; top: 0; width: 100%; height: auto; aspect-ratio: 576 / 1280; object-fit: cover; max-width: none; transform: translateY(-21%); }
+.hero-portrait img { position: absolute; top: 0; width: 100%; height: auto; min-height: 170%; aspect-ratio: 576 / 1280; object-fit: cover; max-width: none; transform: translateY(-21%); }
 .award-proof { display: flex; align-items: center; gap: clamp(1.5rem, 5vw, 4.5rem); margin-top: var(--section-space); border-block: 1px solid var(--rule); padding-block: clamp(1.5rem, 3vw, 2.5rem); }
 .award-proof > img { width: 23%; height: auto; flex-shrink: 0; object-fit: contain; object-position: center; }
 .award-copy { min-width: 0; max-width: 44rem; }
@@ -336,7 +338,7 @@ img { display: block; max-width: 100%; }
   .hero-collage-grid { grid-template-columns: repeat(8, minmax(0, 1fr)); grid-template-rows: repeat(9, minmax(0, 1fr)) var(--hero-bottom-cell); }
   .hero-identity { display: flex; flex-direction: column; min-height: 0; gap: 2px; }
   .hero-copy { padding: 19px 8px 20px; flex: 0 0 auto; }
-  .hero-copy h1 em { padding-left: 5%; margin-block: 9px; }
+  .hero-copy h1 em { margin-block: 9px; }
   .hero-portrait { aspect-ratio: 4 / 5; flex: 0 0 auto; width: 100%; }
   .hero-portrait img { transform: translateY(-21%); }
   .award-proof { display: grid; grid-template-columns: 36% minmax(0, 1fr); padding-block: 24px; gap: 16px; }
@@ -394,6 +396,11 @@ h4 { font: var(--type-heading); letter-spacing: 0; }
 h1 *, h2 *, h3 *, h4 * { font-family: inherit; }
 em, i, .accent { font-family: var(--font-sans); font-weight: 400; font-style: italic; }
 .hero-copy h1 em { font-family: var(--font-sans); font-weight: 400; font-style: italic; font-size: .92em; white-space: normal; }
+/* Give enlarged text the available paper width while retaining the same collage. */
+@container hero (max-width: 20rem) {
+  .hero-frame { grid-template-columns: 2% minmax(0, 1fr) 2%; }
+  .hero-copy h1 { line-height: 1.2; }
+}
 h1, h2, h3, h4, .wordmark { font-weight: 400; font-style: normal; color: var(--ink); }
 .wordmark:hover { color: var(--ink); }
 .award-note, .station-copy p, .station-menu .station-copy p {
@@ -445,9 +452,7 @@ h1, h2, h3, h4, .wordmark { font-weight: 400; font-style: normal; color: var(--i
 /* Selected portrait composition: the product leads, its origin stays in the description. */
 .sourcing-signature { container: chef-sourcing / inline-size; margin-top: var(--section-space); padding-block: 2rem; border-block: 1px solid var(--rule); }
 .sourcing-heading { text-align: center; }
-.sourcing-kicker { font: 400 .8125rem/1.6 var(--font-mono); letter-spacing: .07em; text-transform: uppercase; color: var(--gold-text); }
-.sourcing-heading h2 { margin-top: .75rem; font: 400 clamp(2.5rem, 4vw, 3.5rem)/1.08 var(--font-display); letter-spacing: 0; text-wrap: balance; overflow-wrap: break-word; }
-.sourcing-heading h2 span { display: block; }
+.sourcing-heading h2 { font: 400 clamp(2.5rem, 4vw, 3.5rem)/1.08 var(--font-display); letter-spacing: 0; text-wrap: balance; overflow-wrap: break-word; }
 .sourcing-layout { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.12fr); gap: 3rem; align-items: center; max-width: 63rem; margin: 1.5rem auto 0; }
 .sourcing-art { width: 100%; max-width: 23rem; justify-self: center; }
 .sourcing-art img { width: 100%; height: auto; aspect-ratio: 2 / 3; object-fit: contain; mix-blend-mode: multiply; filter: grayscale(1) brightness(1.05) contrast(1.07); mask-image: linear-gradient(to bottom, transparent, #000 3%, #000 96%, transparent); }
@@ -471,8 +476,7 @@ h1, h2, h3, h4, .wordmark { font-weight: 400; font-style: normal; color: var(--i
 }
 @media (max-width: 560px) {
   .sourcing-signature { padding-block: 1.25rem; }
-  .sourcing-kicker { font-size: .6875rem; }
-  .sourcing-heading h2 { margin-top: .625rem; font-size: 2.125rem; }
+  .sourcing-heading h2 { font-size: 2.125rem; }
   .sourcing-intro { font-size: 1.0625rem; line-height: 1.45; }
   .sourcing-product { grid-template-columns: 1.375rem minmax(0, 1fr); gap: .5rem; padding-block: .75rem; }
   .sourcing-product h3 { font-size: 1.625rem; }

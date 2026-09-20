@@ -48,7 +48,7 @@ try {
     else assert.ok(geometry.stations.every((s,i,all)=>!i||s.rect.top>=all[i-1].rect.bottom-1));
     assert.equal(await page.locator('.menu-book,[data-grams],.notebook-pages,.menu-worktable-caption').count(),0);
     assert.equal(await page.locator('.station-menu > .station-heading h3').innerText(),'Продумываю меню');
-    assert.equal(await page.locator('.station-menu .station-copy p').innerText(),'Из нашего разговора складывается меню. Я выбираю продукты и продумываю, какие блюда приготовить и как они будут сочетаться между собой.');
+    assert.equal(await page.locator('.station-menu .station-copy p').innerText(),'Из ваших пожеланий складывается меню. Я выбираю продукты и продумываю, как они будут сочетаться между собой.');
     await page.locator('.evening-plan').screenshot({path:path.join(out,`process-${width}.png`)});
     await page.locator('.menu-worktable').screenshot({path:path.join(out,`menu-${width}.png`)});
     if(width===1440||width===390) await page.screenshot({path:path.join(out,`page-${width}.png`),fullPage:true});

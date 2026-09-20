@@ -5,23 +5,22 @@ import { siteImages } from "./site-images";
 const products = [
   {
     name: "Мясо",
-    description: "За ягнёнком еду в Лофу — выбираю мясо под блюдо, которое задумал.",
+    description: "За ягнёнком еду в Лофу. Выбираю мясо под блюдо, которое задумал.",
   },
   {
     name: "Рыба и морепродукты",
-    description: "За свежей рыбой еду в Зиги. Рыбу и морепродукты выбираю с особым вниманием к свежести и качеству.",
+    description: "За рыбой еду в рыбацкую деревню Зиги. Рыбу и морепродукты выбираю по свежести и качеству.",
   },
   {
     name: "Овощи и фрукты",
-    description: "За сезонными овощами и фруктами — к фермерам, за спелой клубникой — на клубничную ферму.",
+    description: "За сезонными овощами и фруктами езжу к фермерам. За спелой клубникой — на клубничную ферму.",
   },
 ];
 
 export default function ChefSourcing() {
   return <section className="sourcing-signature" id="products" aria-labelledby="sourcing-title">
     <header className="sourcing-heading">
-      <p className="sourcing-kicker">Профессия в деталях</p>
-      <h2 id="sourcing-title"><span>Почерк шефа </span><span>начинается с выбора.</span></h2>
+      <h2 id="sourcing-title">Магия начинается с выбора.</h2>
     </header>
     <div className="sourcing-layout">
       <figure className="sourcing-art">

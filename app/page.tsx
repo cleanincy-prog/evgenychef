@@ -24,21 +24,21 @@ const formats = [
   {
     id: "private-dinner", name: "Частный ужин",
     lead: "Собрать близких за одним столом и спокойно поужинать.",
-    description: "Меню составлю по вашим вкусам, приготовление и подачу возьму на себя, а вы сможете насладиться авторским ужином в 7 подач",
+    description: "Меню составлю по вашим вкусам, приготовление и подачу возьму на себя, а вы сможете насладиться авторским ужином в 7 подач.",
     ...siteImages["private-dinner-wide-v2"],
     alt: "Евгений готовит блюдо на сковороде: видны лицо, руки и подача",
   },
   {
     id: "private-events", name: "Приватные мероприятия",
     lead: "Для встреч, где главное — общение.",
-    description: "Подберём угощение под такой ритм: закуски и блюда, которые удобно есть за разговором.",
+    description: "Подберу и приготовлю закуски и блюда, которые удобно есть за разговором.",
     ...siteImages["private-events"],
     alt: "Евгений готовит блины на открытом воздухе перед гостями",
   },
   {
     id: "masterclasses", name: "Мастер-классы",
-    lead: "Для тех, кому интересно самим поучаствовать.",
-    description: "Готовим вместе: я показываю техники, приёмы, объясняю детали и помогаю разобраться в процессе. Затем проведем дегустацию за общим столом.",
+    lead: "Для тех, кому интересно готовить самим.",
+    description: "Готовим вместе: я показываю техники и приёмы, объясняю, что они меняют в блюде, и помогаю разобраться в процессах. Затем пробуем приготовленное за общим столом.",
     ...siteImages.masterclasses,
     alt: "Участники мастер-класса наблюдают за работой Евгения",
   },
@@ -64,7 +64,7 @@ export default function Home() {
       </a>
     </header>
     <main className="sheet" id="main-content" tabIndex={-1}>
-      <section className="hero" aria-label="Евгений Гребеник — ваш личный Мастер-Шеф на Кипре">
+      <section className="hero" aria-label="Евгений Гребеник — ваш частный Мастер-Шеф на Кипре">
         <div className="hero-frame">
           <div className="hero-collage" aria-hidden="true">
             <div className="hero-collage-grid">
@@ -81,7 +81,10 @@ export default function Home() {
             </div>
           </div>
           <div className="hero-identity">
-            <div className="hero-copy"><h1><span>Евгений</span><span>Гребеник —</span><em>ваш личный</em><span>Мастер-Шеф</span><span>на Кипре</span></h1></div>
+            <div className="hero-copy">
+              <h1><span>Евгений</span><span>Гребеник —</span><em>ваш частный</em><span>Мастер-Шеф</span><span>на Кипре</span></h1>
+              <p className="hero-intro">для частных ужинов, приватных встреч и мастер-классов.</p>
+            </div>
             <figure className="hero-portrait"><img {...siteImages["chef-hero-apron"]} sizes="(max-width: 620px) 56vw, 34vw" alt="Евгений Гребеник улыбается, стоя в полосатом поварском фартуке" fetchPriority="high" decoding="async" /></figure>
           </div>
         </div>
@@ -89,11 +92,8 @@ export default function Home() {
       <section className="award-proof" aria-label="Опыт шефа">
           <img {...siteImages.masterchef} sizes="(max-width: 620px) 36vw, 23vw" alt="Евгений в белом кителе с конвертом на фоне эмблемы «МастерШеф»" loading="lazy" decoding="async" />
           <div className="award-copy">
-            <h2 className="award-title">Больше <span className="numeric-spec">20</span> лет работы Шеф-поваром</h2>
-            <p className="award-note">Победа в «МастерШеф. Профессионалы» открыла мне путь к лучшим школам Франции, Швейцарии и Германии. Этот опыт стал основой моего стиля — современной европейской кухни с авторским характером.</p>
-            <p className="award-note">Сегодня я готовлю на Кипре.</p>
-            <p className="award-note">Для частных ужинов и приватных событий составляю и готовлю персональные меню: кому-то хочется любимых, знакомых вкусов, кому-то — попробовать новое.</p>
-            <p className="award-note">На мастер-классах делюсь приёмами, раскрываю секреты, которыми пользуюсь сам, и объясняю, что они меняют в блюде.</p>
+            <h2 className="award-title">Больше <span className="numeric-spec">25</span> лет в гастрономии и больше <span className="numeric-spec">20</span> лет работаю шеф-поваром</h2>
+            <p className="award-note">Победа в «МастерШеф. Профессионалы» открыла мне путь к лучшим кулинарным школам Франции, Швейцарии и Германии. Этот опыт стал основой моего стиля — современной авторской европейской кухни.</p>
           </div>
       </section>
       <section className="formats" id="formats" aria-labelledby="formats-title">
@@ -124,14 +124,14 @@ export default function Home() {
             </li>
             <li className="process-station station-menu" data-step="02" id="menu">
               <StationHeading number="02" title="Продумываю меню">
-                <p>Из нашего разговора складывается меню. Я выбираю продукты и продумываю, какие блюда приготовить и как они будут сочетаться между собой.</p>
+                <p>Из ваших пожеланий складывается меню. Я выбираю продукты и продумываю, как они будут сочетаться между собой.</p>
               </StationHeading>
               <MenuWorktable />
               <DishNotes />
             </li>
             <li className="process-station station-preparation" data-step="03">
               <StationHeading number="03" title="Готовлю к встрече">
-                <p>Закупаю продукты и начинаю работу на кухне: делаю заготовки, готовлю соусы и маринады. То, что требует времени, готовлю заранее.</p>
+                <p>Закупаю продукты и начинаю работу на вашей кухне: делаю заготовки, готовлю соусы и маринады. То, что требует времени, готовлю заранее.</p>
               </StationHeading>
               <ChefStoryVideo />
             </li>
