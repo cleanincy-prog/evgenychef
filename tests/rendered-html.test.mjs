@@ -167,7 +167,7 @@ test("renders 63 documentary collage photos, the selected chef illustration and 
   assert.equal(imageTags.filter(img => img.src.includes("/menu/worktable/")).length, 0, "The rejected food photograph and ingredient montage must not return");
   assert.equal(imageTags.filter(img => img.src.includes("/menu/atlas-dish/")).length, 1, "The approved Atlas dish must appear once");
   assert.equal((html.match(/class="atlas-note atlas-note--/g) || []).length, 4, "Keep the four approved short notes");
-  assert.match(visibleText(html), /Пример сочетания вкусов/);
+  assert.match(visibleText(html), /Как складывается вкус/);
   assert.ok(!visibleText(html).includes("Фото блюда"), "The removed dish must not retain a photo action");
   assert.doesNotMatch(html, /data-recipe="octopus"|data-grams=|class="mb-(?:pencil|stroke|navigation)"|data-menu-(?:scroll|sketch|color|next)/);
 
