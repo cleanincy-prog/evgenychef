@@ -619,5 +619,290 @@
       "longTaskMs": 0,
       "cls": 0
     }
-  ]
+  ],
+  "final_predecoded_mobile_cases": [
+    {
+      "name": "iphone-cold",
+      "states": [
+        {
+          "state": "pending",
+          "t": 261.9,
+          "opacity": "0",
+          "loaded": 9
+        },
+        {
+          "state": "running",
+          "t": 695.2,
+          "opacity": "0",
+          "loaded": 68
+        },
+        {
+          "state": "complete",
+          "t": 3728.4,
+          "opacity": "1",
+          "loaded": 68
+        }
+      ],
+      "played": true,
+      "duration": 3033.2,
+      "keyPhotos": [
+        {
+          "name": "hero-story-arrive",
+          "ready": true
+        },
+        {
+          "name": "hero-story-arrive",
+          "ready": true
+        },
+        {
+          "name": "hero-story-arrive",
+          "ready": true
+        },
+        {
+          "name": "hero-story-arrive",
+          "ready": true
+        }
+      ],
+      "maxFrameGap": 16.800000000000182,
+      "cls": 0,
+      "final": {
+        "opacity": "1",
+        "overflow": false,
+        "running": 0
+      },
+      "errors": []
+    },
+    {
+      "name": "iphone-cold-slow",
+      "states": [
+        {
+          "state": "pending",
+          "t": 1842.9,
+          "opacity": "0",
+          "loaded": 11
+        },
+        {
+          "state": "running",
+          "t": 3542.8,
+          "opacity": "0",
+          "loaded": 68
+        },
+        {
+          "state": "complete",
+          "t": 6609.3,
+          "opacity": "1",
+          "loaded": 68
+        }
+      ],
+      "played": true,
+      "duration": 3066.5,
+      "keyPhotos": [
+        {
+          "name": "hero-story-arrive",
+          "ready": true
+        },
+        {
+          "name": "hero-story-arrive",
+          "ready": true
+        },
+        {
+          "name": "hero-story-arrive",
+          "ready": true
+        },
+        {
+          "name": "hero-story-arrive",
+          "ready": true
+        }
+      ],
+      "maxFrameGap": 49.90000000000009,
+      "cls": 0,
+      "final": {
+        "opacity": "1",
+        "overflow": false,
+        "running": 0
+      },
+      "errors": []
+    },
+    {
+      "name": "late-background",
+      "states": [
+        {
+          "state": "pending",
+          "t": 136.7,
+          "opacity": "0",
+          "loaded": 8
+        },
+        {
+          "state": "running",
+          "t": 1186.6,
+          "opacity": "0",
+          "loaded": 67
+        },
+        {
+          "state": "complete",
+          "t": 4219.8,
+          "opacity": "1",
+          "loaded": 67
+        }
+      ],
+      "played": true,
+      "duration": 3033.2000000000003,
+      "keyPhotos": [
+        {
+          "name": "hero-story-arrive",
+          "ready": true
+        },
+        {
+          "name": "hero-story-arrive",
+          "ready": true
+        },
+        {
+          "name": "hero-story-arrive",
+          "ready": true
+        },
+        {
+          "name": "hero-story-arrive",
+          "ready": true
+        }
+      ],
+      "maxFrameGap": 16.800000000000182,
+      "cls": 0,
+      "final": {
+        "opacity": "1",
+        "overflow": false,
+        "running": 0
+      },
+      "errors": []
+    },
+    {
+      "name": "failed-background",
+      "states": [
+        {
+          "state": "pending",
+          "t": 142,
+          "opacity": "0",
+          "loaded": 8
+        },
+        {
+          "state": "running",
+          "t": 492,
+          "opacity": "0",
+          "loaded": 67
+        },
+        {
+          "state": "complete",
+          "t": 3525.2,
+          "opacity": "1",
+          "loaded": 67
+        }
+      ],
+      "played": true,
+      "duration": 3033.2,
+      "keyPhotos": [
+        {
+          "name": "hero-story-arrive",
+          "ready": true
+        },
+        {
+          "name": "hero-story-arrive",
+          "ready": true
+        },
+        {
+          "name": "hero-story-arrive",
+          "ready": true
+        },
+        {
+          "name": "hero-story-arrive",
+          "ready": true
+        }
+      ],
+      "maxFrameGap": 16.800000000000182,
+      "cls": 0,
+      "final": {
+        "opacity": "1",
+        "overflow": false,
+        "running": 0
+      },
+      "errors": []
+    },
+    {
+      "name": "failed-key-photo",
+      "states": [
+        {
+          "state": "pending",
+          "t": 171.5,
+          "opacity": "0",
+          "loaded": 6
+        },
+        {
+          "state": "complete",
+          "t": 354.9,
+          "opacity": "1",
+          "loaded": 23
+        }
+      ],
+      "played": false,
+      "duration": null,
+      "keyPhotos": [],
+      "maxFrameGap": 0,
+      "cls": 0,
+      "final": {
+        "opacity": "1",
+        "overflow": false,
+        "running": 0
+      },
+      "errors": []
+    }
+  ],
+  "final_performance": [
+    {
+      "width": 1440,
+      "height": 900,
+      "dpr": 2,
+      "run": 0,
+      "played": true,
+      "duration": 3047.0999999046326,
+      "frames": 183,
+      "maxGap": 16.800000000000182,
+      "p95Gap": 16.799999999999955,
+      "gapsOver34": 0,
+      "gapsOver50": 0,
+      "longTaskCount": 0,
+      "longTaskMs": 0,
+      "cls": 0
+    },
+    {
+      "width": 768,
+      "height": 900,
+      "dpr": 2,
+      "run": 0,
+      "played": true,
+      "duration": 3036.9000000953674,
+      "frames": 183,
+      "maxGap": 16.800000000000182,
+      "p95Gap": 16.700000000000273,
+      "gapsOver34": 0,
+      "gapsOver50": 0,
+      "longTaskCount": 0,
+      "longTaskMs": 0,
+      "cls": 0
+    },
+    {
+      "width": 390,
+      "height": 812,
+      "dpr": 3,
+      "run": 0,
+      "played": true,
+      "duration": 3035.2000000476837,
+      "frames": 183,
+      "maxGap": 16.800000000000182,
+      "p95Gap": 16.700000000000273,
+      "gapsOver34": 0,
+      "gapsOver50": 0,
+      "longTaskCount": 0,
+      "longTaskMs": 0,
+      "cls": 0
+    }
+  ],
+  "final_slow_images_sequence_passed": true
 }

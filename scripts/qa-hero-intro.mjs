@@ -224,9 +224,11 @@ try {
         assert.deepEqual(record.elements, original.elements, 'Exact original final geometry');
         // A cached larger copy from an opening shot may also be reused by the
         // collage. Both sizes are the same original photograph, unchanged.
-        const photoIdentity = source => source.replace(/-(192|384)\.webp$/, '-responsive.webp');
+        // Development and production previews can use different local ports.
+        const assetPath = source => new URL(source).pathname;
+        const photoIdentity = source => assetPath(source).replace(/-(192|384)\.webp$/, '-responsive.webp');
         assert.deepEqual(record.imageSources.map(photoIdentity), original.imageSources.map(photoIdentity), 'Original responsive photos');
-        record.largerCachedCopies = record.imageSources.flatMap((source, index) => source === original.imageSources[index] ? [] : [{ index, source }]);
+        record.largerCachedCopies = record.imageSources.flatMap((source, index) => assetPath(source) === assetPath(original.imageSources[index]) ? [] : [{ index, source }]);
         const screenshot = await page.screenshot({ path: `${output}/${test.name}.png` });
         const originalPng = await readFile(`${baselineDirectory}/before-${test.width}.png`);
         record.identicalScreenshot = screenshot.equals(originalPng);

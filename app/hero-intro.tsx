@@ -16,10 +16,12 @@ export default function HeroIntro({ children }: { children: ReactNode }) {
     const initialWidth = window.innerWidth;
     let disposed = false;
     let timeout = 0;
+    let collageTimeout = 0;
 
     const release = () => {
       disposed = true;
       window.clearTimeout(timeout);
+      window.clearTimeout(collageTimeout);
       motion.removeEventListener("change", stopIfUnavailable);
       document.removeEventListener("visibilitychange", stopIfUnavailable);
       window.removeEventListener("scroll", stopIfUnavailable);
@@ -70,16 +72,27 @@ export default function HeroIntro({ children }: { children: ReactNode }) {
     // A bounded wait still reveals the title if a key resource is unavailable.
     timeout = window.setTimeout(finish, 2500);
     const images = [...frame.querySelectorAll<HTMLImageElement>(".hero-story img, .hero-portrait img")];
+    // Decode the collage before its layers begin moving to avoid upload/decode
+    // stalls on a cold mobile connection. One stalled background request gets
+    // only a short grace period and must not cancel otherwise ready key shots.
+    const collageReady = Promise.allSettled([...grid.querySelectorAll<HTMLImageElement>("img")].map(image => image.decode()));
     void Promise.all([
       document.fonts.ready,
       ...images.map(image => image.decode()),
     ]).then(() => {
+      if (disposed) return;
+      return Promise.race([
+        collageReady,
+        new Promise<void>(resolve => { collageTimeout = window.setTimeout(resolve, 800); }),
+      ]);
+    }).then(() => {
       if (disposed) return;
       if (unavailable() || getComputedStyle(card).opacity !== "0") {
         finish();
         return;
       }
       window.clearTimeout(timeout);
+      window.clearTimeout(collageTimeout);
       // The field initially gathers on the left, then unfolds to its exact
       // original layout. The four leading photos all travel left into it.
       const field = grid.getBoundingClientRect();
