@@ -169,7 +169,6 @@ img { display: block; max-width: 100%; }
 .hero-identity { grid-column: 2; grid-row: 1; position: relative; background: var(--paper); display: grid; grid-template-columns: 52% minmax(0, 1fr); min-height: clamp(17.8125rem, 31vw, 27.1875rem); min-width: 0; gap: 2px; }
 .hero-copy { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1.125rem; padding: 1.5rem 1.875rem; }
 .hero-copy h1 { width: max-content; max-width: 100%; }
-.hero-intro { max-width: 24ch; font: var(--type-copy); color: var(--muted); text-wrap: balance; }
 .hero-copy h1 span { display: block; }
 .hero-copy h1 em { display: block; margin: 12px 0 10px; padding-left: 0; white-space: nowrap; color: var(--gold-text); }
 .hero-portrait { position: relative; overflow: hidden; }

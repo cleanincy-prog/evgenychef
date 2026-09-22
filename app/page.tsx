@@ -83,7 +83,6 @@ export default function Home() {
           <div className="hero-identity">
             <div className="hero-copy">
               <h1><span>Евгений</span><span>Гребеник —</span><em>ваш частный</em><span>Мастер-Шеф</span><span>на Кипре</span></h1>
-              <p className="hero-intro">для частных ужинов, приватных встреч и мастер-классов.</p>
             </div>
             <figure className="hero-portrait"><img {...siteImages["chef-hero-apron"]} sizes="(max-width: 620px) 56vw, 34vw" alt="Евгений Гребеник улыбается, стоя в полосатом поварском фартуке" fetchPriority="high" decoding="async" /></figure>
           </div>
