@@ -45,10 +45,9 @@ const formats = [
   },
 ];
 
-function StationHeading({ number, title, children }: { number: string; title: string; children: React.ReactNode }) {
+function StationHeading({ title, children }: { title: string; children: React.ReactNode }) {
   return <div className="station-heading">
     <span className="route-node" data-route-node aria-hidden="true" />
-    <span className="station-number" aria-hidden="true">{number}</span>
     <div className="station-copy"><h3>{title}</h3>{children}</div>
   </div>;
 }
@@ -93,7 +92,7 @@ export default function Home() {
           <img {...siteImages.masterchef} sizes="(max-width: 620px) 36vw, 23vw" alt="Евгений в белом кителе с конвертом на фоне эмблемы «МастерШеф»" loading="lazy" decoding="async" />
           <div className="award-copy">
             <h2 className="award-title">Больше <span className="numeric-spec">25</span> лет в гастрономии и больше <span className="numeric-spec">20</span> лет работаю шеф-поваром</h2>
-            <p className="award-note">Победа в «МастерШеф. Профессионалы» открыла мне путь к лучшим кулинарным школам Франции, Швейцарии и Германии. Этот опыт стал основой моего стиля — современной авторской европейской кухни.</p>
+            <p className="award-note">В основе моей кухни — опыт лучших кулинарных школ Франции, Швейцарии и Германии, путь к которым мне открыла победа в «МастерШеф. Профессионалы». Полученные знания я переосмыслил в своей кухне — современной, европейской, с авторским характером. Сегодня на Кипре я готовлю для частных ужинов и приватных мероприятий, а на мастер-классах делюсь своим опытом и подходом к приготовлению.</p>
           </div>
       </section>
       <section className="formats" id="formats" aria-labelledby="formats-title">
@@ -116,27 +115,27 @@ export default function Home() {
           <EveningPlanRoute />
           <ol className="process-list">
             <li className="process-station station-conversation" data-step="01">
-              <StationHeading number="01" title="Знакомимся">
+              <StationHeading title="Знакомимся">
                 <p>Расскажите, по какому поводу собираетесь. Вспомним любимые блюда, обсудим, что хочется попробовать и чего точно не должно быть в меню.</p>
                 <p>Можно прийти с готовой идеей. Можно начать с одного пожелания.</p>
               </StationHeading>
               <ConversationVideo />
             </li>
             <li className="process-station station-menu" data-step="02" id="menu">
-              <StationHeading number="02" title="Продумываю меню">
+              <StationHeading title="Продумываю меню">
                 <p>Из ваших пожеланий складывается меню. Я выбираю продукты и продумываю, как они будут сочетаться между собой.</p>
               </StationHeading>
               <MenuWorktable />
               <DishNotes />
             </li>
             <li className="process-station station-preparation" data-step="03">
-              <StationHeading number="03" title="Готовлю к встрече">
+              <StationHeading title="Готовлю к встрече">
                 <p>Закупаю продукты и начинаю работу на вашей кухне: делаю заготовки, готовлю соусы и маринады. То, что требует времени, готовлю заранее.</p>
               </StationHeading>
               <ChefStoryVideo />
             </li>
             <li className="process-station station-evening" data-step="04">
-              <StationHeading number="04" title="Ваш вечер">
+              <StationHeading title="Ваш вечер">
                 <p>Вы проводите время с гостями.</p>
                 <p>Я готовлю и подаю блюда.</p>
               </StationHeading>

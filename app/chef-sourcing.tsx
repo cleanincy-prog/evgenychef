@@ -32,8 +32,7 @@ export default function ChefSourcing() {
       <div className="sourcing-copy">
         <p className="sourcing-intro">Выбор продукта — такая же часть моей работы, как приготовление. Свежесть и качество мяса, рыбы и морепродуктов задают вкус задолго до того, как я начинаю готовить.</p>
         <ol className="sourcing-products">
-          {products.map((product, index) => <li className="sourcing-product" key={product.name}>
-            <span className="sourcing-number" aria-hidden="true">0{index + 1}</span>
+          {products.map(product => <li className="sourcing-product" key={product.name}>
             <div><h3>{product.name}</h3><p>{product.description}</p></div>
           </li>)}
         </ol>
