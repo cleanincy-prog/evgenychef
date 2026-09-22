@@ -5,7 +5,7 @@
       "width": 1440,
       "playing": {
         "paused": false,
-        "time": 0.115621,
+        "time": 0.124577,
         "duration": 10,
         "muted": true,
         "controls": false,
@@ -28,7 +28,7 @@
       "width": 1280,
       "playing": {
         "paused": false,
-        "time": 0.112052,
+        "time": 0.114499,
         "duration": 10,
         "muted": true,
         "controls": false,
@@ -51,7 +51,7 @@
       "width": 1024,
       "playing": {
         "paused": false,
-        "time": 0.114679,
+        "time": 0.118646,
         "duration": 10,
         "muted": true,
         "controls": false,
@@ -74,7 +74,7 @@
       "width": 768,
       "playing": {
         "paused": false,
-        "time": 0.122677,
+        "time": 0.119249,
         "duration": 10,
         "muted": true,
         "controls": false,
@@ -97,7 +97,7 @@
       "width": 430,
       "playing": {
         "paused": false,
-        "time": 0.119204,
+        "time": 0.118416,
         "duration": 10,
         "muted": true,
         "controls": false,
@@ -120,7 +120,7 @@
       "width": 390,
       "playing": {
         "paused": false,
-        "time": 0.119497,
+        "time": 0.119563,
         "duration": 10,
         "muted": true,
         "controls": false,
@@ -143,7 +143,7 @@
       "width": 375,
       "playing": {
         "paused": false,
-        "time": 0.141775,
+        "time": 0.10932,
         "duration": 10,
         "muted": true,
         "controls": false,
@@ -166,7 +166,7 @@
   "states": {
     "loop": {
       "paused": false,
-      "time": 0.00713,
+      "time": 0.053582,
       "duration": 10,
       "muted": true,
       "controls": false,
@@ -178,7 +178,7 @@
     },
     "offscreen": {
       "paused": true,
-      "time": 0.219534,
+      "time": 0.25687,
       "duration": 10,
       "muted": true,
       "controls": false,
@@ -190,7 +190,7 @@
     },
     "resumed": {
       "paused": false,
-      "time": 0.240361,
+      "time": 0.280774,
       "duration": 10,
       "muted": true,
       "controls": false,
@@ -203,7 +203,7 @@
     "preparationFilmPreserved": true,
     "startsAtPartialVisibility": {
       "paused": false,
-      "time": 0.023473,
+      "time": 0.002865,
       "duration": 10,
       "muted": true,
       "controls": false,
@@ -217,7 +217,7 @@
     "twoFullPlays": {
       "ended": 2,
       "waitingAfterStart": 0,
-      "firstPlayingAt": 1619.8999999761581,
+      "firstPlayingAt": 1362.7000000476837,
       "time": 10,
       "duration": 10,
       "quality": {
@@ -253,7 +253,7 @@
     "text200Percent": true,
     "errorAndKeyboardRetry": {
       "paused": false,
-      "time": 0.1167,
+      "time": 0.124221,
       "duration": 10,
       "muted": true,
       "controls": false,

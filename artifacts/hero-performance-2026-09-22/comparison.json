@@ -1,0 +1,254 @@
+{
+  "before": [
+    {
+      "width": 1440,
+      "runs": 3,
+      "played": 3,
+      "worstGapMs": 183.3,
+      "worstP95Ms": 100,
+      "gapsOver50": 33,
+      "minFrames": 108,
+      "maxFrames": 113,
+      "cls": 0
+    },
+    {
+      "width": 768,
+      "runs": 3,
+      "played": 2,
+      "worstGapMs": 183.4,
+      "worstP95Ms": 116.7,
+      "gapsOver50": 31,
+      "minFrames": 89,
+      "maxFrames": 113,
+      "cls": 0
+    },
+    {
+      "width": 390,
+      "runs": 3,
+      "played": 2,
+      "worstGapMs": 133.4,
+      "worstP95Ms": 66.6,
+      "gapsOver50": 21,
+      "minFrames": 125,
+      "maxFrames": 131,
+      "cls": 0
+    }
+  ],
+  "after": [
+    {
+      "width": 1440,
+      "runs": 3,
+      "played": 3,
+      "worstGapMs": 16.8,
+      "worstP95Ms": 16.8,
+      "gapsOver50": 0,
+      "minFrames": 183,
+      "maxFrames": 183,
+      "cls": 0
+    },
+    {
+      "width": 768,
+      "runs": 3,
+      "played": 3,
+      "worstGapMs": 16.8,
+      "worstP95Ms": 16.8,
+      "gapsOver50": 0,
+      "minFrames": 183,
+      "maxFrames": 183,
+      "cls": 0
+    },
+    {
+      "width": 390,
+      "runs": 3,
+      "played": 3,
+      "worstGapMs": 16.8,
+      "worstP95Ms": 16.8,
+      "gapsOver50": 0,
+      "minFrames": 183,
+      "maxFrames": 183,
+      "cls": 0
+    }
+  ],
+  "traces": {
+    "before-trace-1440-0.trace.json": {
+      "Layout": {
+        "count": 22,
+        "ms": 8.3
+      },
+      "Paint": {
+        "count": 164,
+        "ms": 19.8
+      },
+      "RasterTask": {
+        "count": 119,
+        "ms": 8.9
+      },
+      "UpdateLayoutTree": {
+        "count": 107,
+        "ms": 32.7
+      },
+      "FireAnimationFrame": {
+        "count": 228,
+        "ms": 11.1
+      },
+      "CALayerTreeCoordinator::ApplyBackpressure": {
+        "count": 104,
+        "ms": 1587.2
+      },
+      "RendererRasterWorker": {
+        "count": 273,
+        "ms": 688.4
+      }
+    },
+    "after-trace-1440-0.trace.json": {
+      "Layout": {
+        "count": 51,
+        "ms": 12.7
+      },
+      "Paint": {
+        "count": 195,
+        "ms": 21.8
+      },
+      "RasterTask": {
+        "count": 167,
+        "ms": 7.7
+      },
+      "UpdateLayoutTree": {
+        "count": 173,
+        "ms": 44.8
+      },
+      "FireAnimationFrame": {
+        "count": 366,
+        "ms": 16.5
+      },
+      "CALayerTreeCoordinator::ApplyBackpressure": {
+        "count": 173,
+        "ms": 47.2
+      },
+      "RendererRasterWorker": {
+        "count": 256,
+        "ms": 198.3
+      }
+    },
+    "after-trace-768-0.trace.json": {
+      "Layout": {
+        "count": 51,
+        "ms": 11.8
+      },
+      "Paint": {
+        "count": 195,
+        "ms": 19.2
+      },
+      "RasterTask": {
+        "count": 183,
+        "ms": 7.9
+      },
+      "UpdateLayoutTree": {
+        "count": 173,
+        "ms": 40.0
+      },
+      "FireAnimationFrame": {
+        "count": 364,
+        "ms": 14.6
+      },
+      "CALayerTreeCoordinator::ApplyBackpressure": {
+        "count": 175,
+        "ms": 63.0
+      },
+      "RendererRasterWorker": {
+        "count": 231,
+        "ms": 161.4
+      }
+    },
+    "before-trace-390-0.trace.json": {
+      "Layout": {
+        "count": 23,
+        "ms": 7.7
+      },
+      "Paint": {
+        "count": 160,
+        "ms": 15.8
+      },
+      "RasterTask": {
+        "count": 128,
+        "ms": 8.2
+      },
+      "UpdateLayoutTree": {
+        "count": 104,
+        "ms": 35.1
+      },
+      "FireAnimationFrame": {
+        "count": 224,
+        "ms": 11.7
+      },
+      "CALayerTreeCoordinator::ApplyBackpressure": {
+        "count": 102,
+        "ms": 1870.4
+      },
+      "RendererRasterWorker": {
+        "count": 150,
+        "ms": 364.9
+      }
+    },
+    "after-trace-390-0.trace.json": {
+      "Layout": {
+        "count": 51,
+        "ms": 13.0
+      },
+      "Paint": {
+        "count": 195,
+        "ms": 22.0
+      },
+      "RasterTask": {
+        "count": 168,
+        "ms": 7.9
+      },
+      "UpdateLayoutTree": {
+        "count": 173,
+        "ms": 45.1
+      },
+      "FireAnimationFrame": {
+        "count": 364,
+        "ms": 16.4
+      },
+      "CALayerTreeCoordinator::ApplyBackpressure": {
+        "count": 173,
+        "ms": 10.8
+      },
+      "RendererRasterWorker": {
+        "count": 217,
+        "ms": 113.4
+      }
+    },
+    "before-trace-768-0.trace.json": {
+      "Layout": {
+        "count": 20,
+        "ms": 9.6
+      },
+      "Paint": {
+        "count": 164,
+        "ms": 19.2
+      },
+      "RasterTask": {
+        "count": 127,
+        "ms": 8.8
+      },
+      "UpdateLayoutTree": {
+        "count": 84,
+        "ms": 32.5
+      },
+      "FireAnimationFrame": {
+        "count": 182,
+        "ms": 10.3
+      },
+      "CALayerTreeCoordinator::ApplyBackpressure": {
+        "count": 82,
+        "ms": 2044.0
+      },
+      "RendererRasterWorker": {
+        "count": 311,
+        "ms": 480.2
+      }
+    }
+  }
+}
