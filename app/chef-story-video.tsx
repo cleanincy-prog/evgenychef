@@ -3,6 +3,7 @@
 import { useRef, useState } from "react";
 import { usePageMediaPlayback } from "./media-motion";
 import { siteImages } from "./site-images";
+import "./preparation-film.css";
 
 export default function ChefStoryVideo() {
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -24,17 +25,19 @@ export default function ChefStoryVideo() {
     }
   }
 
-  return <figure data-video-error={failed ? true : undefined} className="preparation-film">
-    <div className="film-stage">
-      <video id="story-documentary-video" ref={videoRef} muted loop playsInline preload="metadata"
-        src="/media/chef-story-short-prep-2026-09-12.mp4"
-        disablePictureInPicture disableRemotePlayback tabIndex={-1}
-        poster={siteImages["film-poster"].src} aria-label="Домашний фильм: от подготовки ножей до подачи ужина"
-        onError={() => setFailed(true)} onPlaying={() => setFailed(false)}>
-        <track kind="captions" src="/media/chef-story-short-prep-2026-09-12.ru.vtt" srcLang="ru" label="Русские субтитры" />
-        Ваш браузер не поддерживает видео.
-      </video>
-      {failed && <button className="film-retry" type="button" onClick={() => void playFilm()}>Повторить</button>}
+  return <figure data-video-error={failed ? true : undefined} className="preparation-film preparation-film--album">
+    <div className="film-mount">
+      <div className="film-stage">
+        <video id="story-documentary-video" ref={videoRef} muted loop playsInline preload="metadata"
+          src="/media/chef-story-short-prep-2026-09-12.mp4"
+          disablePictureInPicture disableRemotePlayback tabIndex={-1}
+          poster={siteImages["film-poster"].src} aria-label="Домашний фильм: от подготовки ножей до подачи ужина"
+          onError={() => setFailed(true)} onPlaying={() => setFailed(false)}>
+          <track kind="captions" src="/media/chef-story-short-prep-2026-09-12.ru.vtt" srcLang="ru" label="Русские субтитры" />
+          Ваш браузер не поддерживает видео.
+        </video>
+        {failed && <button className="film-retry" type="button" onClick={() => void playFilm()}>Повторить</button>}
+      </div>
     </div>
     {failed && <figcaption role="status">Видео не удалось загрузить. Попробуйте ещё раз.</figcaption>}
   </figure>;

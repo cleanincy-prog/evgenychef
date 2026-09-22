@@ -1,0 +1,28 @@
+/* The preparation film shares the approved photo album's paper and contact shadow.
+   Keep the video itself unaltered, including its full 9:16 aperture and playback. */
+.preparation-film.preparation-film--album {
+  padding-block: .375rem .75rem;
+}
+
+.preparation-film--album .film-mount {
+  position: relative;
+  width: calc(100% + 1.25rem);
+  margin-left: -.625rem;
+  padding: .625rem .625rem 1.25rem;
+  background: #faf7f0;
+  box-shadow: 0 4px 9px rgb(72 53 29 / 11%), 0 1px 2px rgb(72 53 29 / 13%);
+  transform: rotate(-1.8deg);
+}
+
+.preparation-film--album figcaption {
+  margin-top: 1.25rem;
+}
+
+@media (max-width: 620px) {
+  .preparation-film--album .film-mount {
+    width: calc(100% + 1rem);
+    margin-left: -.5rem;
+    padding: .5rem .5rem 1rem;
+    transform: rotate(-1.2deg);
+  }
+}
