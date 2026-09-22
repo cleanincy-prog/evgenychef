@@ -1,0 +1,19 @@
+Built-in ImageGen edit. Selected by the user; upper animation preserved separately in integration.
+
+Use case: identity-preserve.
+Asset type: edited graphite illustration, a complete scene continuing the supplied drawing.
+Input image 1 is the EDIT TARGET, not a loose style reference.
+
+Primary request: finish the existing incomplete drawing downward so the chef and the woman are seated at a fully drawn table with complete chairs, natural seated lower bodies, visible human legs and shoes, table legs, and subtle floor/contact shadows. Make this feel like one finished, coherent pencil drawing.
+
+Preserve the existing upper illustration as closely as possible: the exact identities and facial features of both people, the chef's bald head and beard, his downward gaze, white short-sleeved shirt and dark vertically striped apron, his writing hands, the woman's face, hairstyle, expression, white blouse, hand under chin and conversational gesture. Preserve the notebook and pen, two glasses of water and the small vase of flowers in their current positions. Do not redraw the people into different people. Keep the current upper scene's scale and positions; continue the pale unfinished lower edges into new drawing.
+
+Complete the oval wooden tabletop following the existing perspective and objects, with a fine visible rim, a coherent underside and slender plausible wooden supports reaching the floor. Add two simple understated wooden chairs behind the seated people, with seats/backrests and appropriate visible legs. Continue the chef's apron below the table where visible, with simple trousers and understated closed shoes; continue the woman's blouse into simple trousers and understated shoes. Both people must be seated believably with anatomically correct thighs, knees, lower legs and feet, and with correct occlusion by the table. Draw all of the scene through the feet and chair/table legs without cropping, using the large blank lower portion of the image. Leave a small comfortable border beneath the feet. Expand the canvas downward only if necessary for natural human proportions; do not shrink or move the original upper illustration.
+
+Style and palette: precisely match the original delicate hand-drawn graphite lines, pale gray pencil shading, warm light cream paper background, restrained detail and gentle faded edges. The new lower drawing should have the same lightness and density as the existing upper drawing, not dark heavy outlines. Floor is suggested only by very faint grounding shadows and a few light perspective strokes fading into the original cream paper. Keep the background quiet.
+
+Text must remain EXACTLY as in the source, same top placement, gray italic serif, with the same emphasis on the beef tartare phrase. Verbatim:
+"Хочу паштет, тартар из говядины,
+утиную грудку"
+
+Constraints: exactly two people; preserve all existing facial likenesses, poses, tabletop objects and text. No other people, furniture, plants, room scenery, decorative frames, new captions or logos. No color added, no photorealism, no cartoon stylization, no cropped feet, no floating tabletop, no extra human limbs, no awkward or intersecting chair/table supports. The result should be the original illustration gracefully completed into a full scene.

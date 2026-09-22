@@ -1,0 +1,33 @@
+{
+  "source": "design/generated/conversation-complete-2026-09-22/approved-scene.png",
+  "sourceSha256": "bcc99c32659b88d17662b83ee412fc0c2994811c73d9cd8fed27cf85cc3d235c",
+  "width": 1280,
+  "height": 1080,
+  "alignment": {
+    "resizedWidth": 1330,
+    "resizedHeight": 1076,
+    "translateX": 39,
+    "translateY": -4
+  },
+  "transition": {
+    "startY": 596,
+    "endY": 618
+  },
+  "files": [
+    {
+      "path": "public/media/web/conversation-complete-2026-09-22-480.webp",
+      "bytes": 19560
+    },
+    {
+      "path": "public/media/web/conversation-complete-2026-09-22-960.webp",
+      "bytes": 67998
+    },
+    {
+      "path": "public/media/web/conversation-complete-2026-09-22-1280.webp",
+      "bytes": 99692
+    }
+  ],
+  "video": "public/media/conversation-playback-2026-09-22.mp4",
+  "videoSha256": "d419a573440a74f65a4f01dc46a522b49c3245d5ed66223cdfe55d0c16e3456c",
+  "mode": "Selected built-in ImageGen edit; transparent lower continuation over unchanged original video"
+}
