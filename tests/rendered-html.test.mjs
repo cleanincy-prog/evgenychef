@@ -173,36 +173,42 @@ test("renders 63 documentary collage photos, the selected chef illustration and 
 
 });
 
-test("serves the shortened looping inline film without playback controls and with usable byte ranges", async () => {
+test("serves both silent looping inline films without controls and with usable byte ranges", async () => {
   const videos = tags(html, "video");
-  assert.equal(videos.length, 1);
-  assert.equal(videos[0].poster, "/media/web/film-poster-540.webp");
-  assert.ok(!Object.hasOwn(videos[0], "autoplay"), "Viewport playback must not begin offscreen through the autoplay attribute");
-  assert.ok(Object.hasOwn(videos[0], "playsinline"));
-  assert.ok(!Object.hasOwn(videos[0], "controls"), "The film must not expose pause, seeking or other player controls");
-  assert.ok(Object.hasOwn(videos[0], "muted"));
-  assert.ok(Object.hasOwn(videos[0], "loop"));
-  assert.ok(Object.hasOwn(videos[0], "disablepictureinpicture"));
-  assert.ok(Object.hasOwn(videos[0], "disableremoteplayback"));
-  assert.equal(videos[0].tabindex, "-1");
-  assert.equal(videos[0].preload, "metadata");
+  assert.equal(videos.length, 2);
+  const expected = new Map([
+    ["conversation-video", ["/media/conversation-2026-09-22.mp4", "/media/web/conversation-video-2026-09-22-960.webp"]],
+    ["story-documentary-video", ["/media/chef-story-short-prep-2026-09-12.mp4", "/media/web/film-poster-540.webp"]],
+  ]);
+  assert.deepEqual(videos.map(video => video.id), [...expected.keys()]);
   assert.doesNotMatch(visibleText(html), /Смотреть фильм/i);
-  const videoPath = "/media/chef-story-short-prep-2026-09-12.mp4";
-  assert.equal(videos[0].src, videoPath);
-  const poster = await localFetch(videos[0].poster, { method: "HEAD" });
-  assert.equal(poster.status, 200);
-  const original = await readFile(new URL(`../public${videoPath}`, import.meta.url));
-  for (const [range, start, end] of [
-    ["bytes=0-1023", 0, 1023],
-    ["bytes=1048576-1049599", 1048576, 1049599],
-    ["bytes=-1024", original.length - 1024, original.length - 1],
-  ]) {
-    const video = await localFetch(videoPath, { headers: { Range: range } });
-    assert.equal(video.status, 206, range);
-    assert.match(video.headers.get("content-type") || "", /^video\/mp4/);
-    assert.equal(video.headers.get("content-range"), `bytes ${start}-${end}/${original.length}`);
-    assert.deepEqual(Buffer.from(await video.arrayBuffer()), original.subarray(start, end + 1), `Wrong video fragment for ${range}`);
+  for (const videoTag of videos) {
+    const [videoPath, posterPath] = expected.get(videoTag.id);
+    assert.equal(videoTag.src, videoPath);
+    assert.equal(videoTag.poster, posterPath);
+    assert.ok(!Object.hasOwn(videoTag, "autoplay"), "Viewport playback must not begin offscreen through autoplay");
+    assert.ok(!Object.hasOwn(videoTag, "controls"), "Neither film may expose playback controls");
+    for (const attribute of ["playsinline", "muted", "loop", "disablepictureinpicture", "disableremoteplayback"]) {
+      assert.ok(Object.hasOwn(videoTag, attribute), `${videoTag.id}: missing ${attribute}`);
+    }
+    assert.equal(videoTag.tabindex, "-1");
+    assert.equal(videoTag.preload, "metadata");
+    const poster = await localFetch(posterPath, { method: "HEAD" });
+    assert.equal(poster.status, 200);
+    assert.match(poster.headers.get("content-type") || "", /^image\/webp/);
+    const original = await readFile(new URL(`../public${videoPath}`, import.meta.url));
+    for (const [range, start, end] of [
+      ["bytes=0-1023", 0, 1023],
+      ["bytes=1048576-1049599", 1048576, 1049599],
+      ["bytes=-1024", original.length - 1024, original.length - 1],
+    ]) {
+      const video = await localFetch(videoPath, { headers: { Range: range } });
+      assert.equal(video.status, 206, `${videoPath}: ${range}`);
+      assert.match(video.headers.get("content-type") || "", /^video\/mp4/);
+      assert.equal(video.headers.get("content-range"), `bytes ${start}-${end}/${original.length}`);
+      assert.deepEqual(Buffer.from(await video.arrayBuffer()), original.subarray(start, end + 1));
+    }
+    const invalid = await localFetch(videoPath, { headers: { Range: `bytes=${original.length}-` } });
+    assert.equal(invalid.status, 416);
   }
-  const invalid = await localFetch(videoPath, { headers: { Range: `bytes=${original.length}-` } });
-  assert.equal(invalid.status, 416);
 });

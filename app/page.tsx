@@ -1,4 +1,5 @@
 import ChefStoryVideo from "./chef-story-video";
+import ConversationVideo from "./conversation-video";
 import ChefSourcing from "./chef-sourcing";
 import DishNotes from "./dish-notes";
 import EveningPlanRoute from "./evening-plan-route";
@@ -119,7 +120,7 @@ export default function Home() {
                 <p>Расскажите, по какому поводу собираетесь. Вспомним любимые блюда, обсудим, что хочется попробовать и чего точно не должно быть в меню.</p>
                 <p>Можно прийти с готовой идеей. Можно начать с одного пожелания.</p>
               </StationHeading>
-              <figure className="process-illustration conversation-illustration"><img {...siteImages.conversation} sizes="(max-width: 620px) calc(100vw - 70px), (max-width: 900px) min(63.35vw, 450px), (max-width: 1440px) min(36.64vw, 450px), min(31.25vw, 675px)" alt="Карандашный рисунок: Евгений с лёгкой улыбкой записывает пожелания гостьи в блокнот; на столе небольшая ваза с цветами и два стакана воды" loading="lazy" decoding="async" /></figure>
+              <ConversationVideo />
             </li>
             <li className="process-station station-menu" data-step="02" id="menu">
               <StationHeading number="02" title="Продумываю меню">

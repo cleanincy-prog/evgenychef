@@ -1,0 +1,27 @@
+{
+  "source": "/Users/dmitro/Downloads/Оживи_приложенную_карандашную.mp4",
+  "sourceSha256": "d7a8bb4e1402a50e0f3964792e8b789f0cf147c0a5b46d4d3cc0acd971984b80",
+  "output": "/media/conversation-2026-09-22.mp4",
+  "outputSha256": "63bd560bf74f409f683daa615425647aa52e526896252088ddb5cd4b64cc63c5",
+  "videoStreamUnchanged": true,
+  "videoStreamHash": "SHA256=17c107ab6017193ea2aa067b3bec1b2be8d5e557588b1ed7c9b156653404a7a0",
+  "audioStreams": 0,
+  "metadata": {
+    "programs": [],
+    "stream_groups": [],
+    "streams": [
+      {
+        "codec_name": "h264",
+        "codec_type": "video",
+        "width": 1280,
+        "height": 720,
+        "r_frame_rate": "24/1",
+        "duration": "10.000000"
+      }
+    ],
+    "format": {
+      "duration": "10.000000",
+      "size": "1925864"
+    }
+  }
+}
