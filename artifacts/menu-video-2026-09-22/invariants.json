@@ -1,0 +1,15 @@
+{
+  "app/page.tsx": true,
+  "app/globals.css": true,
+  "app/dish-notes.tsx": true,
+  "app/dish-notes.css": true,
+  "app/conversation-video.tsx": true,
+  "app/conversation-video.css": true,
+  "app/chef-story-video.tsx": true,
+  "app/media-motion.tsx": true,
+  "app/layout.tsx": true,
+  "app/site-images.ts": true,
+  "public/media/conversation-2026-09-22.mp4": true,
+  "releaseConversationIsCurrent": true,
+  "releaseMenuMatchesPreview": true
+}

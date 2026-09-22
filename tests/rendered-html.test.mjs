@@ -128,7 +128,7 @@ test("provides functional page anchors and the exact Instagram destination", () 
   assert.equal(tags(html, "form").length, 0, "This page must not send an automatic inquiry");
 });
 
-test("renders 63 documentary collage photos, the selected chef illustration and the approved Atlas dish", async () => {
+test("renders 63 documentary collage photos, the selected menu video and the approved Atlas dish", async () => {
   const imageTags = tags(html, "img");
   const collage = [...html.matchAll(/<[^>]+\bclass="[^"]*\bcollage-tile\b[^"]*"[^>]*>[\s\S]*?<img\b([^>]*)>/g)]
     .map(match => tags(`<img ${match[1]}>`, "img")[0]);
@@ -140,7 +140,6 @@ test("renders 63 documentary collage photos, the selected chef illustration and 
   const required = [
     "/media/web/chef-hero-apron-576.webp",
     "/media/web/masterchef-640.webp",
-    "/media/menu/chef-planning/duck-12-2026-09-20-960.webp",
     "/media/menu/atlas-dish/plate-820.webp",
     "/media/web/masterclasses-1144.jpg",
   ];
@@ -161,9 +160,9 @@ test("renders 63 documentary collage photos, the selected chef illustration and 
       assert.match(response.headers.get("content-type") || "", path.endsWith(".svg") ? /^image\/svg\+xml/ : path.endsWith(".jpg") ? /^image\/jpeg/ : /^image\/webp/);
     }));
   }
-  const chefScene = imageTags.filter(img => img.src.includes("/menu/chef-planning/"));
-  assert.equal(chefScene.length, 1, "The selected chef illustration must appear once");
-  assert.match(chefScene[0].alt, /Евгений составляет меню в тетради/);
+  const chefScene = tags(html, "video").filter(video => video.id === "menu-planning-video");
+  assert.equal(chefScene.length, 1, "The selected menu animation must appear once");
+  assert.match(chefScene[0]["aria-label"], /Евгений составляет меню в тетради/);
   assert.equal(imageTags.filter(img => img.src.includes("/menu/worktable/")).length, 0, "The rejected food photograph and ingredient montage must not return");
   assert.equal(imageTags.filter(img => img.src.includes("/menu/atlas-dish/")).length, 1, "The approved Atlas dish must appear once");
   assert.equal((html.match(/class="atlas-note atlas-note--/g) || []).length, 4, "Keep the four approved short notes");
@@ -173,11 +172,12 @@ test("renders 63 documentary collage photos, the selected chef illustration and 
 
 });
 
-test("serves both silent looping inline films without controls and with usable byte ranges", async () => {
+test("serves all three silent looping inline films without controls and with usable byte ranges", async () => {
   const videos = tags(html, "video");
-  assert.equal(videos.length, 2);
+  assert.equal(videos.length, 3);
   const expected = new Map([
     ["conversation-video", ["/media/conversation-2026-09-22.mp4", "/media/web/conversation-video-2026-09-22-960.webp"]],
+    ["menu-planning-video", ["/media/menu-planning-smooth-2026-09-22.mp4", "/media/web/menu-planning-video-2026-09-22-1280.webp"]],
     ["story-documentary-video", ["/media/chef-story-short-prep-2026-09-12.mp4", "/media/web/film-poster-540.webp"]],
   ]);
   assert.deepEqual(videos.map(video => video.id), [...expected.keys()]);
@@ -187,7 +187,7 @@ test("serves both silent looping inline films without controls and with usable b
     assert.equal(videoTag.src, videoPath);
     assert.equal(videoTag.poster, posterPath);
     assert.ok(!Object.hasOwn(videoTag, "autoplay"), "Viewport playback must not begin offscreen through autoplay");
-    assert.ok(!Object.hasOwn(videoTag, "controls"), "Neither film may expose playback controls");
+    assert.ok(!Object.hasOwn(videoTag, "controls"), "No film may expose playback controls");
     for (const attribute of ["playsinline", "muted", "loop", "disablepictureinpicture", "disableremoteplayback"]) {
       assert.ok(Object.hasOwn(videoTag, attribute), `${videoTag.id}: missing ${attribute}`);
     }

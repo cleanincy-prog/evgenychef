@@ -1,0 +1,68 @@
+{
+  "source": {
+    "path": "/Users/dmitro/Downloads/Сделай_что_бы_на_этом_видео_ше.mp4",
+    "sha256": "fce0623664d1295d53cf32cfcd22ca2a87ba00708e3a9128bcb47feb259f9915",
+    "probe": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "index": 0,
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 1280,
+          "height": 720,
+          "r_frame_rate": "24/1",
+          "duration": "10.000000",
+          "nb_frames": "240"
+        },
+        {
+          "index": 1,
+          "codec_name": "aac",
+          "codec_type": "audio",
+          "r_frame_rate": "0/0",
+          "duration": "10.005000",
+          "nb_frames": "470"
+        }
+      ],
+      "format": {
+        "duration": "10.005000",
+        "size": "2920139"
+      }
+    }
+  },
+  "output": {
+    "path": "public/media/menu-planning-smooth-2026-09-22.mp4",
+    "sha256": "2a836fcc7a71f5c9baeafdc9e99ac94b00000cb95415e43ba9cede4fb28bc33d",
+    "probe": {
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "index": 0,
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 1280,
+          "height": 720,
+          "r_frame_rate": "60/1",
+          "duration": "12.500000",
+          "nb_frames": "750"
+        }
+      ],
+      "format": {
+        "duration": "12.500000",
+        "size": "3310777"
+      }
+    },
+    "mp4Boxes": [
+      "ftyp",
+      "moov",
+      "free",
+      "mdat"
+    ]
+  },
+  "filter": "setpts=1.25*(PTS-STARTPTS),tpad=stop_mode=clone:stop_duration=0.15,minterpolate=fps=60:mi_mode=mci:mc_mode=aobmc:me_mode=bidir:me=epzs:vsbmc=1,trim=duration=12.5",
+  "encoding": "libx264, preset slow, CRF 19, yuv420p, faststart, audio removed",
+  "noCrop": true,
+  "speed": 0.8
+}

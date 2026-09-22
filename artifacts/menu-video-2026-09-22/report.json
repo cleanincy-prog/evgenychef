@@ -1,0 +1,235 @@
+{
+  "base": "http://127.0.0.1:3004",
+  "layouts": [
+    {
+      "width": 1440,
+      "playing": {
+        "paused": false,
+        "time": 0.117426,
+        "duration": 12.5,
+        "muted": true,
+        "controls": false,
+        "loop": true,
+        "inline": true,
+        "width": 1280,
+        "height": 720,
+        "error": null
+      },
+      "geometry": {
+        "left": 701.859375,
+        "right": 1321.859375,
+        "width": 620,
+        "height": 348.75,
+        "overflow": false,
+        "objectFit": "contain"
+      }
+    },
+    {
+      "width": 1280,
+      "playing": {
+        "paused": false,
+        "time": 0.119647,
+        "duration": 12.5,
+        "muted": true,
+        "controls": false,
+        "loop": true,
+        "inline": true,
+        "width": 1280,
+        "height": 720,
+        "error": null
+      },
+      "geometry": {
+        "left": 627.640625,
+        "right": 1219.15625,
+        "width": 591.515625,
+        "height": 332.71875,
+        "overflow": false,
+        "objectFit": "contain"
+      }
+    },
+    {
+      "width": 1024,
+      "playing": {
+        "paused": false,
+        "time": 0.107847,
+        "duration": 12.5,
+        "muted": true,
+        "controls": false,
+        "loop": true,
+        "inline": true,
+        "width": 1280,
+        "height": 720,
+        "error": null
+      },
+      "geometry": {
+        "left": 508.921875,
+        "right": 975.328125,
+        "width": 466.40625,
+        "height": 262.34375,
+        "overflow": false,
+        "objectFit": "contain"
+      }
+    },
+    {
+      "width": 768,
+      "playing": {
+        "paused": false,
+        "time": 0.113249,
+        "duration": 12.5,
+        "muted": true,
+        "controls": false,
+        "loop": true,
+        "inline": true,
+        "width": 1280,
+        "height": 720,
+        "error": null
+      },
+      "geometry": {
+        "left": 70.484375,
+        "right": 690.484375,
+        "width": 620,
+        "height": 348.75,
+        "overflow": false,
+        "objectFit": "contain"
+      }
+    },
+    {
+      "width": 430,
+      "playing": {
+        "paused": false,
+        "time": 0.115183,
+        "duration": 12.5,
+        "muted": true,
+        "controls": false,
+        "loop": true,
+        "inline": true,
+        "width": 1280,
+        "height": 720,
+        "error": null
+      },
+      "geometry": {
+        "left": 52,
+        "right": 412,
+        "width": 360,
+        "height": 202.5,
+        "overflow": false,
+        "objectFit": "contain"
+      }
+    },
+    {
+      "width": 390,
+      "playing": {
+        "paused": false,
+        "time": 0.115048,
+        "duration": 12.5,
+        "muted": true,
+        "controls": false,
+        "loop": true,
+        "inline": true,
+        "width": 1280,
+        "height": 720,
+        "error": null
+      },
+      "geometry": {
+        "left": 52,
+        "right": 372,
+        "width": 320,
+        "height": 180,
+        "overflow": false,
+        "objectFit": "contain"
+      }
+    },
+    {
+      "width": 375,
+      "playing": {
+        "paused": false,
+        "time": 0.119601,
+        "duration": 12.5,
+        "muted": true,
+        "controls": false,
+        "loop": true,
+        "inline": true,
+        "width": 1280,
+        "height": 720,
+        "error": null
+      },
+      "geometry": {
+        "left": 52,
+        "right": 357,
+        "width": 305,
+        "height": 171.5625,
+        "overflow": false,
+        "objectFit": "contain"
+      }
+    }
+  ],
+  "states": {
+    "loop": {
+      "paused": false,
+      "time": 0,
+      "duration": 12.5,
+      "muted": true,
+      "controls": false,
+      "loop": true,
+      "inline": true,
+      "width": 1280,
+      "height": 720,
+      "error": null
+    },
+    "offscreen": {
+      "paused": true,
+      "time": 0.227455,
+      "duration": 12.5,
+      "muted": true,
+      "controls": false,
+      "loop": true,
+      "inline": true,
+      "width": 1280,
+      "height": 720,
+      "error": null
+    },
+    "resumed": {
+      "paused": false,
+      "time": 0.24876,
+      "duration": 12.5,
+      "muted": true,
+      "controls": false,
+      "loop": true,
+      "inline": true,
+      "width": 1280,
+      "height": 720,
+      "error": null
+    },
+    "preparationFilmPreserved": true,
+    "conversationFilmPreserved": true,
+    "reducedMotion": {
+      "paused": true,
+      "time": 0,
+      "duration": 12.5,
+      "muted": true,
+      "controls": false,
+      "loop": true,
+      "inline": true,
+      "width": 1280,
+      "height": 720,
+      "error": null
+    },
+    "dynamicReducedMotion": true,
+    "noJavaScriptPoster": true,
+    "text200Percent": true,
+    "errorAndKeyboardRetry": {
+      "paused": false,
+      "time": 0.112058,
+      "duration": 12.5,
+      "muted": true,
+      "controls": false,
+      "loop": true,
+      "inline": true,
+      "width": 1280,
+      "height": 720,
+      "error": null
+    }
+  },
+  "pageErrors": [],
+  "passed": true
+}
