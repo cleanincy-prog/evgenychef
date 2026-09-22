@@ -207,9 +207,9 @@ img { display: block; max-width: 100%; }
 .process-board-with-menu .station-menu > .station-heading { width: 54%; margin-left: 46%; }
 .process-board-with-menu [data-menu-visual] { margin: var(--menu-visual-clearance, 150px) auto 0; }
 .station-conversation { grid-column: 1; grid-row: 1; padding-right: 12%; }
-.station-menu { grid-column: 2; grid-row: 1; padding-top: var(--menu-step-drop, 220px); }
+.station-menu { grid-column: 2; grid-row: 1; padding-top: var(--menu-step-drop, 17.5rem); }
 .station-preparation { grid-column: 1; grid-row: 2; padding: 0 18% 0 5%; }
-.station-evening { grid-column: 2; grid-row: 2; padding: var(--evening-step-drop, 430px) 0 0 5%; }
+.station-evening { grid-column: 2; grid-row: 2; padding: var(--evening-step-drop, 25rem) 0 0 5%; }
 .station-heading { display: grid; grid-template-columns: 2.125rem minmax(0, 1fr); align-items: start; position: relative; z-index: 1; }
 .route-node { width: 1.375rem; height: 1.375rem; border: 1px solid var(--gold-text); border-radius: 50%; background: var(--paper); margin-top: .5rem; position: relative; }
 .route-node::after { content: ""; position: absolute; inset: .375rem; background: var(--ink); border-radius: 50%; }

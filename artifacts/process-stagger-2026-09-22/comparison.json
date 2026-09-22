@@ -1,0 +1,84 @@
+{
+  "changes": [
+    {
+      "width": 1440,
+      "textScale": 1,
+      "menuExtra": 94,
+      "eveningExtra": 131
+    },
+    {
+      "width": 1280,
+      "textScale": 1,
+      "menuExtra": 93,
+      "eveningExtra": 131
+    },
+    {
+      "width": 1024,
+      "textScale": 1,
+      "menuExtra": 85,
+      "eveningExtra": 139
+    },
+    {
+      "width": 768,
+      "textScale": 1,
+      "menuExtra": 0,
+      "eveningExtra": 0
+    },
+    {
+      "width": 430,
+      "textScale": 1,
+      "menuExtra": 0,
+      "eveningExtra": 0
+    },
+    {
+      "width": 390,
+      "textScale": 1,
+      "menuExtra": 0,
+      "eveningExtra": 0
+    },
+    {
+      "width": 375,
+      "textScale": 1,
+      "menuExtra": 0,
+      "eveningExtra": 0
+    },
+    {
+      "width": 1440,
+      "textScale": 2,
+      "menuExtra": 176,
+      "eveningExtra": 259
+    },
+    {
+      "width": 390,
+      "textScale": 2,
+      "menuExtra": 0,
+      "eveningExtra": 0
+    }
+  ],
+  "noJs": [
+    {
+      "width": 1440,
+      "tops": [
+        4383.21875,
+        4663.21875,
+        5950.671875,
+        6350.671875
+      ],
+      "overflow": false
+    },
+    {
+      "width": 390,
+      "tops": [
+        4191.8125,
+        4613.8125,
+        5595.078125,
+        6314.96875
+      ],
+      "overflow": false
+    }
+  ],
+  "contentAndMediaUnchanged": true,
+  "mobileUnchanged": true,
+  "verifiedSource": "033ea71fd0a400e0cdb4692c9249e337cff8356d plus this layout patch",
+  "releaseRouteAvoidsTextAndMedia": true
+}

@@ -38,7 +38,7 @@ export default function EveningPlanRoute() {
           const last = station?.lastElementChild;
           return heading && last ? last.getBoundingClientRect().bottom - heading.getBoundingClientRect().top : 0;
         };
-        const menuDrop = Math.ceil(contentHeight(".station-conversation") * .4);
+        const menuDrop = Math.ceil(contentHeight(".station-conversation") * .6);
         board.style.setProperty("--menu-step-drop", `${menuDrop}px`);
         const menuHeading = board.querySelector(".station-menu > .station-heading")?.getBoundingClientRect();
         if (menuSpansColumns && conversation && menuHeading && board.querySelector("[data-menu-visual]")) {
@@ -47,7 +47,7 @@ export default function EveningPlanRoute() {
         const preparation = board.querySelector(".station-preparation .station-heading")?.getBoundingClientRect();
         const menuBottom = board.querySelector("[data-menu-visual], .menu-plate")?.getBoundingClientRect().bottom;
         const clearMenu = preparation && menuBottom ? menuBottom - preparation.top + 56 : 0;
-        const eveningDrop = Math.ceil(Math.max(contentHeight(".station-preparation") * .4, clearMenu));
+        const eveningDrop = Math.ceil(Math.max(contentHeight(".station-preparation") * .6, clearMenu));
         board.style.setProperty("--evening-step-drop", `${eveningDrop}px`);
         // Read the final board size after the flow offsets, so the SVG never scales stale coordinates.
         rect = board.getBoundingClientRect();
@@ -83,7 +83,9 @@ export default function EveningPlanRoute() {
       const menuVisual = board.querySelector("[data-menu-visual]")?.getBoundingClientRect();
       const dishVisual = board.querySelector("[data-dish-visual]")?.getBoundingClientRect();
       const sauce = board.querySelector(".plate-label-sauce")?.getBoundingClientRect();
-      const aisle = sauce ? sauce.left - rect.left - 24 : menuVisual ? Math.max(mid, departure + 18) : mid;
+      const preparationFilm = board.querySelector(".preparation-film")?.getBoundingClientRect();
+      const preparationRail = preparationFilm ? preparationFilm.right - rect.left + 18 : mid;
+      const aisle = sauce ? sauce.left - rect.left - 24 : menuVisual ? Math.max(mid, departure + 18, preparationRail) : mid;
       const leaveY = sauce ? Math.max(c.y + 35, sauce.bottom - rect.top + 22) : d.y - 30;
       const departureX = menuVisual ? departure : Math.min(departure, aisle - 20);
       const visualTop = menuVisual ? menuVisual.top - rect.top : 0;
