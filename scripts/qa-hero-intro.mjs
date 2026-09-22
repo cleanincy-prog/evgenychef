@@ -160,7 +160,7 @@ try {
       assert.equal(record.opacity, '1', 'Final card is visible');
       assert.equal(record.animations, 0, 'No running animations remain');
       assert.equal(record.persistentEffects, false, 'No transforms, per-tile filters or will-change remain');
-      assert.equal(record.gridFilter, 'blur(5px)', 'Approved background blur remains');
+      assert.equal(record.gridFilter, 'blur(8px)', 'Approved background blur remains');
       assert.equal(record.gridTransform, 'none', 'The field returns to its original size');
       assert.equal(record.loaded, test.failCollage ? 1 : 64);
       assert.match(record.text.replace(/\s+/g, ' '), /Евгений Гребеник — ваш частный Мастер-Шеф на Кипре/);
