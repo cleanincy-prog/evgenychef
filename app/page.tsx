@@ -91,7 +91,7 @@ export default function Home() {
       <section className="award-proof" aria-label="Опыт шефа">
           <img {...siteImages.masterchef} sizes="(max-width: 620px) 36vw, 23vw" alt="Евгений в белом кителе с конвертом на фоне эмблемы «МастерШеф»" loading="lazy" decoding="async" />
           <div className="award-copy">
-            <h2 className="award-title">Больше <span className="numeric-spec">25</span> лет в гастрономии и больше <span className="numeric-spec">20</span> лет работаю шеф-поваром</h2>
+            <h2 className="award-title">Больше <span className="numeric-spec">20</span> лет работы шеф-поваром</h2>
             <p className="award-note">В основе моей кухни — опыт лучших кулинарных школ Франции, Швейцарии и Германии, путь к которым мне открыла победа в «МастерШеф. Профессионалы». Полученные знания я переосмыслил в своей кухне — современной, европейской, с авторским характером. Сегодня на Кипре я готовлю для частных ужинов и приватных мероприятий, а на мастер-классах делюсь своим опытом и подходом к приготовлению.</p>
           </div>
       </section>
