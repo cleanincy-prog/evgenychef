@@ -162,7 +162,7 @@ img { display: block; max-width: 100%; }
 .hero-frame { position: relative; isolation: isolate; display: grid; grid-template-columns: 11.7% minmax(0, 1fr) 11.7%; align-items: center; min-height: calc(100svh - var(--header-height)); padding-block: clamp(4.25rem, 6.65vw, 6rem); column-gap: 2px; background: var(--paper); }
 .hero-collage { position: absolute; z-index: -1; top: 0; bottom: 0; left: calc((100% - 100vw) / 2); width: 100vw; overflow: hidden; background: var(--paper); }
 .hero-collage::after { content: ""; position: absolute; inset: 0; z-index: 1; background: rgb(246 224 196 / 24%); pointer-events: none; }
-.hero-collage-grid { position: absolute; inset: 0; display: grid; grid-template-columns: repeat(10, minmax(0, 1fr)); grid-template-rows: repeat(8, minmax(0, 1fr)); grid-auto-flow: dense; gap: 2px; filter: blur(3px); }
+.hero-collage-grid { position: absolute; inset: 0; display: grid; grid-template-columns: repeat(10, minmax(0, 1fr)); grid-template-rows: repeat(8, minmax(0, 1fr)); grid-auto-flow: dense; gap: 2px; filter: blur(5px); }
 .collage-tile { position: relative; overflow: hidden; min-width: 0; min-height: 0; }
 .collage-tile--wide-desktop { grid-column: span 2; }
 .collage-tile img { width: 100%; height: 100%; position: absolute; object-fit: cover; }
