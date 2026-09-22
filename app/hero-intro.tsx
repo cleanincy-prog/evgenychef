@@ -13,6 +13,7 @@ export default function HeroIntro({ children }: { children: ReactNode }) {
     if (!frame || !card || !grid || frame.dataset.heroIntro !== "pending") return;
 
     const motion = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const initialWidth = window.innerWidth;
     let disposed = false;
     let timeout = 0;
 
@@ -22,7 +23,7 @@ export default function HeroIntro({ children }: { children: ReactNode }) {
       motion.removeEventListener("change", stopIfUnavailable);
       document.removeEventListener("visibilitychange", stopIfUnavailable);
       window.removeEventListener("scroll", stopIfUnavailable);
-      window.removeEventListener("resize", finish);
+      window.removeEventListener("resize", onResize);
       window.removeEventListener("pagehide", finish);
       frame.removeEventListener("animationend", onAnimationEnd);
     };
@@ -41,12 +42,17 @@ export default function HeroIntro({ children }: { children: ReactNode }) {
       if (unavailable()) finish();
     }
 
+    function onResize() {
+      // Safari's address bar can resize the viewport without changing the
+      // stable svh layout. Only a new width invalidates the flight coordinates.
+      if (window.innerWidth !== initialWidth) finish();
+    }
+
     function onAnimationEnd(event: AnimationEvent) {
       if (event.target === card && event.animationName === "hero-card-reveal") finish();
     }
 
     // No late hide/replay after the CSS fail-safe has already revealed the Hero.
-    // Unsupported scripting queries also retain the original static page.
     if (unavailable() || getComputedStyle(card).opacity !== "0") {
       finish();
       return;
@@ -55,13 +61,15 @@ export default function HeroIntro({ children }: { children: ReactNode }) {
     motion.addEventListener("change", stopIfUnavailable);
     document.addEventListener("visibilitychange", stopIfUnavailable);
     window.addEventListener("scroll", stopIfUnavailable, { passive: true });
-    window.addEventListener("resize", finish);
+    window.addEventListener("resize", onResize);
     window.addEventListener("pagehide", finish);
     frame.addEventListener("animationend", onAnimationEnd);
 
-    // Intro is optional: a slow or broken image must never hold back the title.
-    timeout = window.setTimeout(finish, 700);
-    const images = [...frame.querySelectorAll<HTMLImageElement>("img")];
+    // Do not make the four opening shots wait for all 63 collage copies on a
+    // mobile connection. The background stream begins another 1.4s later.
+    // A bounded wait still reveals the title if a key resource is unavailable.
+    timeout = window.setTimeout(finish, 2500);
+    const images = [...frame.querySelectorAll<HTMLImageElement>(".hero-story img, .hero-portrait img")];
     void Promise.all([
       document.fonts.ready,
       ...images.map(image => image.decode()),
@@ -113,5 +121,8 @@ export default function HeroIntro({ children }: { children: ReactNode }) {
     return release;
   }, []);
 
-  return <div className="hero-frame" data-hero-intro="pending" ref={frameRef}>{children}</div>;
+  return <>
+    <noscript><style>{`.hero-frame[data-hero-intro="pending"] .hero-collage-grid, .hero-frame[data-hero-intro="pending"] .hero-identity { animation: none; }`}</style></noscript>
+    <div className="hero-frame" data-hero-intro="pending" ref={frameRef}>{children}</div>
+  </>;
 }

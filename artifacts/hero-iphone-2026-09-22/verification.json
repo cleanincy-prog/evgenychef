@@ -1,0 +1,623 @@
+{
+  "functional_cases": 25,
+  "passed": 25,
+  "widths": [
+    1440,
+    1280,
+    1024,
+    768,
+    430,
+    390,
+    375
+  ],
+  "production_mobile_cases": [
+    {
+      "name": "iphone-cold",
+      "states": [
+        {
+          "state": "pending",
+          "t": 184.3,
+          "opacity": "0",
+          "loaded": 8
+        },
+        {
+          "state": "running",
+          "t": 434.2,
+          "opacity": "0",
+          "loaded": 36
+        },
+        {
+          "state": "complete",
+          "t": 3467.5,
+          "opacity": "1",
+          "loaded": 68
+        }
+      ],
+      "played": true,
+      "duration": 3033.3,
+      "keyPhotos": [
+        {
+          "name": "hero-story-arrive",
+          "ready": true
+        },
+        {
+          "name": "hero-story-arrive",
+          "ready": true
+        },
+        {
+          "name": "hero-story-arrive",
+          "ready": true
+        },
+        {
+          "name": "hero-story-arrive",
+          "ready": true
+        }
+      ],
+      "maxFrameGap": 16.800000000000182,
+      "cls": 0,
+      "final": {
+        "opacity": "1",
+        "overflow": false,
+        "running": 0
+      },
+      "errors": []
+    },
+    {
+      "name": "iphone-cold-slow",
+      "states": [
+        {
+          "state": "pending",
+          "t": 1853.2,
+          "opacity": "0",
+          "loaded": 11
+        },
+        {
+          "state": "running",
+          "t": 2903.2,
+          "opacity": "0",
+          "loaded": 42
+        },
+        {
+          "state": "complete",
+          "t": 6019.7,
+          "opacity": "1",
+          "loaded": 68
+        }
+      ],
+      "played": true,
+      "duration": 3116.5,
+      "keyPhotos": [
+        {
+          "name": "hero-story-arrive",
+          "ready": true
+        },
+        {
+          "name": "hero-story-arrive",
+          "ready": true
+        },
+        {
+          "name": "hero-story-arrive",
+          "ready": true
+        },
+        {
+          "name": "hero-story-arrive",
+          "ready": true
+        }
+      ],
+      "maxFrameGap": 83.30000000000018,
+      "cls": 0,
+      "final": {
+        "opacity": "1",
+        "overflow": false,
+        "running": 0
+      },
+      "errors": []
+    },
+    {
+      "name": "late-background",
+      "states": [
+        {
+          "state": "pending",
+          "t": 187.1,
+          "opacity": "0",
+          "loaded": 9
+        },
+        {
+          "state": "running",
+          "t": 387.1,
+          "opacity": "0",
+          "loaded": 35
+        },
+        {
+          "state": "complete",
+          "t": 3420.3,
+          "opacity": "1",
+          "loaded": 67
+        }
+      ],
+      "played": true,
+      "duration": 3033.2000000000003,
+      "keyPhotos": [
+        {
+          "name": "hero-story-arrive",
+          "ready": true
+        },
+        {
+          "name": "hero-story-arrive",
+          "ready": true
+        },
+        {
+          "name": "hero-story-arrive",
+          "ready": true
+        },
+        {
+          "name": "hero-story-arrive",
+          "ready": true
+        }
+      ],
+      "maxFrameGap": 16.800000000000182,
+      "cls": 0,
+      "final": {
+        "opacity": "1",
+        "overflow": false,
+        "running": 0
+      },
+      "errors": []
+    },
+    {
+      "name": "failed-background",
+      "states": [
+        {
+          "state": "pending",
+          "t": 188.8,
+          "opacity": "0",
+          "loaded": 9
+        },
+        {
+          "state": "running",
+          "t": 388.8,
+          "opacity": "0",
+          "loaded": 36
+        },
+        {
+          "state": "complete",
+          "t": 3422,
+          "opacity": "1",
+          "loaded": 67
+        }
+      ],
+      "played": true,
+      "duration": 3033.2,
+      "keyPhotos": [
+        {
+          "name": "hero-story-arrive",
+          "ready": true
+        },
+        {
+          "name": "hero-story-arrive",
+          "ready": true
+        },
+        {
+          "name": "hero-story-arrive",
+          "ready": true
+        },
+        {
+          "name": "hero-story-arrive",
+          "ready": true
+        }
+      ],
+      "maxFrameGap": 16.800000000000182,
+      "cls": 0,
+      "final": {
+        "opacity": "1",
+        "overflow": false,
+        "running": 0
+      },
+      "errors": []
+    },
+    {
+      "name": "failed-key-photo",
+      "states": [
+        {
+          "state": "pending",
+          "t": 154.2,
+          "opacity": "0",
+          "loaded": 6
+        },
+        {
+          "state": "complete",
+          "t": 337.5,
+          "opacity": "1",
+          "loaded": 29
+        }
+      ],
+      "played": false,
+      "duration": null,
+      "keyPhotos": [],
+      "maxFrameGap": 0,
+      "cls": 0,
+      "final": {
+        "opacity": "1",
+        "overflow": false,
+        "running": 0
+      },
+      "errors": []
+    }
+  ],
+  "physical_iphone_tested": false,
+  "webkit_tested": false,
+  "harness_correction": "Late-controller delay was targeted to the Hero module. Delaying every development import multiplied the intended delay across the module graph; the targeted case passed.",
+  "functional": [
+    {
+      "name": "width-1440",
+      "errors": [],
+      "overflow": false,
+      "final_opacity": "1",
+      "grid_filter": "blur(2px)",
+      "loaded": 64,
+      "played": true
+    },
+    {
+      "name": "width-1280",
+      "errors": [],
+      "overflow": false,
+      "final_opacity": "1",
+      "grid_filter": "blur(2px)",
+      "loaded": 64,
+      "played": true
+    },
+    {
+      "name": "width-1024",
+      "errors": [],
+      "overflow": false,
+      "final_opacity": "1",
+      "grid_filter": "blur(2px)",
+      "loaded": 64,
+      "played": true
+    },
+    {
+      "name": "width-768",
+      "errors": [],
+      "overflow": false,
+      "final_opacity": "1",
+      "grid_filter": "blur(2px)",
+      "loaded": 64,
+      "played": true
+    },
+    {
+      "name": "width-430",
+      "errors": [],
+      "overflow": false,
+      "final_opacity": "1",
+      "grid_filter": "blur(2px)",
+      "loaded": 64,
+      "played": true
+    },
+    {
+      "name": "width-390",
+      "errors": [],
+      "overflow": false,
+      "final_opacity": "1",
+      "grid_filter": "blur(2px)",
+      "loaded": 64,
+      "played": true
+    },
+    {
+      "name": "width-375",
+      "errors": [],
+      "overflow": false,
+      "final_opacity": "1",
+      "grid_filter": "blur(2px)",
+      "loaded": 64,
+      "played": true
+    },
+    {
+      "name": "reduced-mobile",
+      "errors": [],
+      "overflow": false,
+      "final_opacity": "1",
+      "grid_filter": "blur(2px)",
+      "loaded": 64,
+      "played": false
+    },
+    {
+      "name": "reduced-desktop",
+      "errors": [],
+      "overflow": false,
+      "final_opacity": "1",
+      "grid_filter": "blur(2px)",
+      "loaded": 64,
+      "played": false
+    },
+    {
+      "name": "no-js-mobile",
+      "errors": [],
+      "overflow": false,
+      "final_opacity": "1",
+      "grid_filter": "blur(2px)",
+      "loaded": 64,
+      "played": false
+    },
+    {
+      "name": "no-js-desktop",
+      "errors": [],
+      "overflow": false,
+      "final_opacity": "1",
+      "grid_filter": "blur(2px)",
+      "loaded": 64,
+      "played": false
+    },
+    {
+      "name": "blocked-client-mobile",
+      "errors": [],
+      "overflow": false,
+      "final_opacity": "1",
+      "grid_filter": "blur(2px)",
+      "loaded": 64,
+      "played": false
+    },
+    {
+      "name": "slow-images-mobile",
+      "errors": [],
+      "overflow": false,
+      "final_opacity": "1",
+      "grid_filter": "blur(2px)",
+      "loaded": 64,
+      "played": true
+    },
+    {
+      "name": "stalled-images-mobile",
+      "errors": [],
+      "overflow": false,
+      "final_opacity": "1",
+      "grid_filter": "blur(2px)",
+      "loaded": 64,
+      "played": false
+    },
+    {
+      "name": "toolbar-height-mobile",
+      "errors": [],
+      "overflow": false,
+      "final_opacity": "1",
+      "grid_filter": "blur(2px)",
+      "loaded": 64,
+      "played": true
+    },
+    {
+      "name": "orientation-mobile",
+      "errors": [],
+      "overflow": false,
+      "final_opacity": "1",
+      "grid_filter": "blur(2px)",
+      "loaded": 64,
+      "played": true
+    },
+    {
+      "name": "failed-collage-mobile",
+      "errors": [],
+      "overflow": false,
+      "final_opacity": "1",
+      "grid_filter": "blur(2px)",
+      "loaded": 1,
+      "played": false
+    },
+    {
+      "name": "reduced-mid-intro",
+      "errors": [],
+      "overflow": false,
+      "final_opacity": "1",
+      "grid_filter": "blur(2px)",
+      "loaded": 64,
+      "played": true
+    },
+    {
+      "name": "scroll-mid-intro",
+      "errors": [],
+      "overflow": false,
+      "final_opacity": "1",
+      "grid_filter": "blur(2px)",
+      "loaded": 64,
+      "played": true
+    },
+    {
+      "name": "text-200-mobile",
+      "errors": [],
+      "overflow": false,
+      "final_opacity": "1",
+      "grid_filter": "blur(2px)",
+      "loaded": 64,
+      "played": false
+    },
+    {
+      "name": "text-200-desktop",
+      "errors": [],
+      "overflow": false,
+      "final_opacity": "1",
+      "grid_filter": "blur(2px)",
+      "loaded": 64,
+      "played": false
+    },
+    {
+      "name": "retina-mobile",
+      "errors": [],
+      "overflow": false,
+      "final_opacity": "1",
+      "grid_filter": "blur(2px)",
+      "loaded": 64,
+      "played": true
+    },
+    {
+      "name": "cpu-4x-mobile",
+      "errors": [],
+      "overflow": false,
+      "final_opacity": "1",
+      "grid_filter": "blur(2px)",
+      "loaded": 64,
+      "played": true
+    },
+    {
+      "name": "short-desktop",
+      "errors": [],
+      "overflow": false,
+      "final_opacity": "1",
+      "grid_filter": "blur(2px)",
+      "loaded": 64,
+      "played": true
+    },
+    {
+      "name": "late-client-mobile",
+      "errors": [],
+      "overflow": false,
+      "final_opacity": "1",
+      "grid_filter": "blur(2px)",
+      "loaded": 64,
+      "played": false
+    }
+  ],
+  "performance": [
+    {
+      "width": 1440,
+      "height": 900,
+      "dpr": 2,
+      "run": 0,
+      "played": true,
+      "duration": 3043.899999976158,
+      "frames": 183,
+      "maxGap": 16.800000000000182,
+      "p95Gap": 16.700000000000273,
+      "gapsOver34": 0,
+      "gapsOver50": 0,
+      "longTaskCount": 0,
+      "longTaskMs": 0,
+      "cls": 0
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "dpr": 2,
+      "run": 1,
+      "played": true,
+      "duration": 3051.600000023842,
+      "frames": 184,
+      "maxGap": 16.800000000000182,
+      "p95Gap": 16.700000000000273,
+      "gapsOver34": 0,
+      "gapsOver50": 0,
+      "longTaskCount": 0,
+      "longTaskMs": 0,
+      "cls": 0
+    },
+    {
+      "width": 1440,
+      "height": 900,
+      "dpr": 2,
+      "run": 2,
+      "played": true,
+      "duration": 3040.899999976158,
+      "frames": 183,
+      "maxGap": 16.800000000000182,
+      "p95Gap": 16.700000000000273,
+      "gapsOver34": 0,
+      "gapsOver50": 0,
+      "longTaskCount": 0,
+      "longTaskMs": 0,
+      "cls": 0
+    },
+    {
+      "width": 768,
+      "height": 900,
+      "dpr": 2,
+      "run": 0,
+      "played": true,
+      "duration": 3032.6999999284744,
+      "frames": 183,
+      "maxGap": 16.800000000000182,
+      "p95Gap": 16.700000000000273,
+      "gapsOver34": 0,
+      "gapsOver50": 0,
+      "longTaskCount": 0,
+      "longTaskMs": 0,
+      "cls": 0
+    },
+    {
+      "width": 768,
+      "height": 900,
+      "dpr": 2,
+      "run": 1,
+      "played": true,
+      "duration": 3044.6999999284744,
+      "frames": 183,
+      "maxGap": 16.800000000000182,
+      "p95Gap": 16.700000000000273,
+      "gapsOver34": 0,
+      "gapsOver50": 0,
+      "longTaskCount": 0,
+      "longTaskMs": 0,
+      "cls": 0
+    },
+    {
+      "width": 768,
+      "height": 900,
+      "dpr": 2,
+      "run": 2,
+      "played": true,
+      "duration": 3040.6999999284744,
+      "frames": 183,
+      "maxGap": 16.800000000000182,
+      "p95Gap": 16.700000000000273,
+      "gapsOver34": 0,
+      "gapsOver50": 0,
+      "longTaskCount": 0,
+      "longTaskMs": 0,
+      "cls": 0
+    },
+    {
+      "width": 390,
+      "height": 812,
+      "dpr": 3,
+      "run": 0,
+      "played": true,
+      "duration": 3041.4000000953674,
+      "frames": 183,
+      "maxGap": 16.800000000000182,
+      "p95Gap": 16.799999999999955,
+      "gapsOver34": 0,
+      "gapsOver50": 0,
+      "longTaskCount": 0,
+      "longTaskMs": 0,
+      "cls": 0
+    },
+    {
+      "width": 390,
+      "height": 812,
+      "dpr": 3,
+      "run": 1,
+      "played": true,
+      "duration": 3039,
+      "frames": 183,
+      "maxGap": 16.800000000000182,
+      "p95Gap": 16.799999999999727,
+      "gapsOver34": 0,
+      "gapsOver50": 0,
+      "longTaskCount": 0,
+      "longTaskMs": 0,
+      "cls": 0
+    },
+    {
+      "width": 390,
+      "height": 812,
+      "dpr": 3,
+      "run": 2,
+      "played": true,
+      "duration": 3037.100000023842,
+      "frames": 183,
+      "maxGap": 16.800000000000182,
+      "p95Gap": 16.799999999999955,
+      "gapsOver34": 0,
+      "gapsOver50": 0,
+      "longTaskCount": 0,
+      "longTaskMs": 0,
+      "cls": 0
+    }
+  ]
+}

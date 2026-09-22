@@ -185,11 +185,11 @@ img { display: block; max-width: 100%; }
 
 /* Progressive enhancement only: no-JS/reduced-motion keep the original first
    frame. Grid tracks and image boxes never change during the one-shot intro. */
-@media (prefers-reduced-motion: no-preference) and (scripting: enabled) {
+@media (prefers-reduced-motion: no-preference) {
   .hero-frame[data-hero-intro="pending"] .hero-collage-grid,
   .hero-frame[data-hero-intro="pending"] .hero-identity {
     /* Reveal even if hydration fails or the client bundle never arrives. */
-    animation: hero-intro-fallback 0s 1200ms backwards;
+    animation: hero-intro-fallback 0s 3000ms backwards;
   }
   .hero-frame[data-hero-intro="running"] .collage-tile {
     z-index: var(--intro-layer, 0);
