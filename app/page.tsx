@@ -3,8 +3,10 @@ import ConversationVideo from "./conversation-video";
 import ChefSourcing from "./chef-sourcing";
 import DishNotes from "./dish-notes";
 import EveningPlanRoute from "./evening-plan-route";
+import HeroIntro from "./hero-intro";
 import MenuWorktable from "./menu-worktable";
 import { heroImages, siteImages } from "./site-images";
+import type { CSSProperties } from "react";
 
 /* eslint-disable @next/next/no-img-element -- original local media with source-specific editorial framing */
 
@@ -20,6 +22,44 @@ const heroCollageWideCompact = new Set([
   1, 4, 7, 10, 13, 17, 20, 23, 26, 29, 33, 36,
   39, 42, 46, 49, 52,
 ]);
+
+// The key photographs enter on the right, then lead an accelerating photo stream.
+const heroStoryShots = [
+  { index: 62, name: "masterchef", delay: 30, depart: 330, flight: 430 },
+  { index: 3, name: "conference", delay: 400, depart: 660, flight: 410 },
+  { index: 34, name: "cooking", delay: 750, depart: 980, flight: 380 },
+  { index: 38, name: "school", delay: 1060, depart: 1280, flight: 350 },
+];
+const heroIntroOrder = Array.from({ length: heroImages.length }, (_, index) => index)
+  .filter(index => !heroStoryShots.some(shot => shot.index === index));
+let heroIntroSeed = 220926;
+for (let index = heroIntroOrder.length - 1; index > 0; index--) {
+  heroIntroSeed = (heroIntroSeed * 16807) % 2147483647;
+  const other = heroIntroSeed % (index + 1);
+  [heroIntroOrder[index], heroIntroOrder[other]] = [heroIntroOrder[other], heroIntroOrder[index]];
+}
+
+const heroIntroStyles: CSSProperties[] = [];
+heroIntroOrder.forEach((index, rank) => {
+  // Both the launch intervals and flight durations shorten without a final cut.
+  const progress = rank / (heroIntroOrder.length - 1);
+  const delay = 1400 + Math.round(1040 * Math.pow(progress, .6));
+  heroIntroStyles[index] = {
+    "--intro-delay": `${delay}ms`,
+    "--intro-duration": `${Math.round(380 - 160 * progress) + (index * 7) % 17}ms`,
+    "--intro-x": "60vw", "--intro-y": "0px",
+    "--intro-scale": 2.15 - .65 * progress,
+    "--intro-layer": rank + 1,
+  } as CSSProperties;
+});
+heroStoryShots.forEach(shot => {
+  heroIntroStyles[shot.index] = {
+    "--intro-delay": `${shot.depart + shot.flight - 80}ms`,
+    "--intro-duration": "80ms",
+    "--intro-x": "0px", "--intro-y": "0px",
+    "--intro-scale": 1,
+  } as CSSProperties;
+});
 
 const formats = [
   {
@@ -65,7 +105,17 @@ export default function Home() {
     </header>
     <main className="sheet" id="main-content" tabIndex={-1}>
       <section className="hero" aria-label="Евгений Гребеник — ваш частный Мастер-Шеф на Кипре">
-        <div className="hero-frame">
+        <HeroIntro>
+          <div className="hero-story" aria-hidden="true">
+            {heroStoryShots.map(shot => <figure
+              className={`hero-story-shot hero-story-shot--${shot.name}`}
+              data-story-photo={shot.index}
+              key={shot.name}
+              style={{ "--story-delay": `${shot.delay}ms`, "--story-depart": `${shot.depart}ms`, "--story-flight": `${shot.flight}ms` } as CSSProperties}
+            >
+              <img {...heroImages[shot.index]} sizes="(max-width: 620px) 60vw, 29vw" alt="" loading="eager" decoding="async" fetchPriority="high" />
+            </figure>)}
+          </div>
           <div className="hero-collage" aria-hidden="true">
             <div className="hero-collage-grid">
               {heroImages.map((image, index) => <div
@@ -75,8 +125,10 @@ export default function Home() {
                   heroCollageWideCompact.has(index) ? "collage-tile--wide-compact" : "",
                 ].filter(Boolean).join(" ")}
                 key={image.src}
+                data-photo-index={index}
+                style={heroIntroStyles[index]}
               >
-                <img {...image} sizes={`(max-width: 620px) ${heroCollageWideCompact.has(index) ? "25vw" : "12.5vw"}, (max-width: 1100px) ${heroCollageWideCompact.has(index) ? "20vw" : "10vw"}, ${heroCollageWideDesktop.has(index) ? "20vw" : "10vw"}`} alt="" loading="eager" decoding="async" fetchPriority="low" />
+                <img {...image} sizes={`(max-width: 620px) ${heroCollageWideCompact.has(index) ? "25vw" : "12.5vw"}, (max-width: 1100px) ${heroCollageWideCompact.has(index) ? "20vw" : "10vw"}, ${heroCollageWideDesktop.has(index) ? "20vw" : "10vw"}`} alt="" loading="eager" decoding="async" fetchPriority="auto" />
               </div>)}
             </div>
           </div>
@@ -86,7 +138,7 @@ export default function Home() {
             </div>
             <figure className="hero-portrait"><img {...siteImages["chef-hero-apron"]} sizes="(max-width: 620px) 56vw, 34vw" alt="Евгений Гребеник улыбается, стоя в полосатом поварском фартуке" fetchPriority="high" decoding="async" /></figure>
           </div>
-        </div>
+        </HeroIntro>
       </section>
       <section className="award-proof" aria-label="Опыт шефа">
           <img {...siteImages.masterchef} sizes="(max-width: 620px) 36vw, 23vw" alt="Евгений в белом кителе с конвертом на фоне эмблемы «МастерШеф»" loading="lazy" decoding="async" />

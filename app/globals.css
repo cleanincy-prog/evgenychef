@@ -174,6 +174,64 @@ img { display: block; max-width: 100%; }
 .hero-portrait { position: relative; overflow: hidden; }
 /* Match the source ratio before decode; the 320px variant rounds its height by 1px. */
 .hero-portrait img { position: absolute; top: 0; width: 100%; height: auto; min-height: 170%; aspect-ratio: 576 / 1280; object-fit: cover; max-width: none; transform: translateY(-21%); }
+.hero-frame { --intro-field-scale: .56; }
+.hero-story { display: none; position: absolute; z-index: 1; inset: 0; overflow: hidden; pointer-events: none; }
+.hero-story-shot { position: absolute; right: 6%; top: 50%; width: min(29%, 36svh); transform: translateY(-50%); transform-origin: center; }
+.hero-story-shot img { width: 100%; height: auto; }
+@media (max-width: 620px) {
+  .hero-frame { --intro-field-scale: .42; }
+  .hero-story-shot { right: 3%; width: min(63%, 38svh); }
+}
+
+/* Progressive enhancement only: no-JS/reduced-motion keep the original first
+   frame. Grid tracks and image boxes never change during the one-shot intro. */
+@media (prefers-reduced-motion: no-preference) and (scripting: enabled) {
+  .hero-frame[data-hero-intro="pending"] .hero-collage-grid,
+  .hero-frame[data-hero-intro="pending"] .hero-identity {
+    /* Reveal even if hydration fails or the client bundle never arrives. */
+    animation: hero-intro-fallback 0s 1200ms backwards;
+  }
+  .hero-frame[data-hero-intro="running"] .collage-tile {
+    z-index: var(--intro-layer, 0);
+    animation: hero-photo-in var(--intro-duration) cubic-bezier(.2, .6, .32, 1) var(--intro-delay) backwards;
+  }
+  .hero-frame[data-hero-intro="running"] .hero-collage-grid {
+    /* A filtered parent with dozens of moving children requires a new large
+       offscreen surface every frame. Keep motion on cached compositor layers;
+       the original static blur returns when the intro releases its layers. */
+    filter: none;
+    transform-origin: left center;
+    animation: hero-field-expand 1050ms cubic-bezier(.4, 0, .2, 1) 1650ms backwards;
+  }
+  .hero-frame[data-hero-intro="running"] .hero-identity {
+    animation: hero-card-reveal 500ms cubic-bezier(.22, .61, .36, 1) 2500ms backwards;
+  }
+  .hero-frame[data-hero-intro="pending"] .hero-story { display: block; visibility: hidden; }
+  .hero-frame[data-hero-intro="running"] .hero-story { display: block; }
+  .hero-frame[data-hero-intro="running"] .hero-story-shot {
+    animation: hero-story-fly var(--story-flight) cubic-bezier(.45, 0, .2, 1) var(--story-depart) forwards;
+  }
+  .hero-frame[data-hero-intro="running"] .hero-story-shot img {
+    animation: hero-story-arrive 160ms cubic-bezier(.22, .61, .36, 1) var(--story-delay) backwards;
+  }
+}
+@keyframes hero-intro-fallback { from { opacity: 0; } to { opacity: 1; } }
+@keyframes hero-field-expand { from { transform: scale(var(--intro-field-scale)); } to { transform: scale(1); } }
+@keyframes hero-card-reveal { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: none; } }
+@keyframes hero-photo-in {
+  from { opacity: 0; transform: translate(var(--intro-x), var(--intro-y)) scale(var(--intro-scale)); }
+  to { opacity: 1; transform: none; }
+}
+@keyframes hero-story-arrive {
+  from { opacity: 0; transform: translateX(28px); }
+  to { opacity: 1; transform: none; }
+}
+@keyframes hero-story-fly {
+  0% { opacity: 1; transform: translateY(-50%); }
+  80% { opacity: 1; }
+  100% { opacity: 0; transform: translate(var(--story-x), calc(-50% + var(--story-y))) scale(var(--story-scale)); }
+}
+
 .award-proof { display: flex; align-items: center; gap: clamp(1.5rem, 5vw, 4.5rem); margin-top: var(--section-space); border-block: 1px solid var(--rule); padding-block: clamp(1.5rem, 3vw, 2.5rem); }
 .award-proof > img { width: 23%; height: auto; flex-shrink: 0; object-fit: contain; object-position: center; }
 .award-copy { min-width: 0; max-width: 44rem; }
