@@ -1,0 +1,80 @@
+{
+  "viewports": [
+    {
+      "width": 1440,
+      "collageFilter": "blur(3px)",
+      "cardFilter": "none",
+      "portraitFilter": "none",
+      "overflow": false,
+      "geometry_preserved": true,
+      "text_preserved": true,
+      "photos_preserved": true
+    },
+    {
+      "width": 1280,
+      "collageFilter": "blur(3px)",
+      "cardFilter": "none",
+      "portraitFilter": "none",
+      "overflow": false,
+      "geometry_preserved": true,
+      "text_preserved": true,
+      "photos_preserved": true
+    },
+    {
+      "width": 1024,
+      "collageFilter": "blur(3px)",
+      "cardFilter": "none",
+      "portraitFilter": "none",
+      "overflow": false,
+      "geometry_preserved": true,
+      "text_preserved": true,
+      "photos_preserved": true
+    },
+    {
+      "width": 768,
+      "collageFilter": "blur(3px)",
+      "cardFilter": "none",
+      "portraitFilter": "none",
+      "overflow": false,
+      "geometry_preserved": true,
+      "text_preserved": true,
+      "photos_preserved": true
+    },
+    {
+      "width": 430,
+      "collageFilter": "blur(3px)",
+      "cardFilter": "none",
+      "portraitFilter": "none",
+      "overflow": false,
+      "geometry_preserved": true,
+      "text_preserved": true,
+      "photos_preserved": true
+    },
+    {
+      "width": 390,
+      "collageFilter": "blur(3px)",
+      "cardFilter": "none",
+      "portraitFilter": "none",
+      "overflow": false,
+      "geometry_preserved": true,
+      "text_preserved": true,
+      "photos_preserved": true
+    },
+    {
+      "width": 375,
+      "collageFilter": "blur(3px)",
+      "cardFilter": "none",
+      "portraitFilter": "none",
+      "overflow": false,
+      "geometry_preserved": true,
+      "text_preserved": true,
+      "photos_preserved": true
+    }
+  ],
+  "motion": {
+    "during": "none",
+    "after": "blur(3px)"
+  },
+  "build": "passed",
+  "physical_iphone_tested": false
+}
