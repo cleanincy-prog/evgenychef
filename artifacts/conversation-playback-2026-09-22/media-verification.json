@@ -1,0 +1,79 @@
+{
+  "files": [
+    {
+      "path": "public/media/conversation-2026-09-22.mp4",
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 1280,
+          "height": 720,
+          "r_frame_rate": "24/1",
+          "nb_read_frames": "240"
+        }
+      ],
+      "format": {
+        "duration": "10.000000",
+        "size": "1925864"
+      },
+      "atoms": [
+        {
+          "type": "ftyp",
+          "position": 0
+        },
+        {
+          "type": "moov",
+          "position": 32
+        },
+        {
+          "type": "free",
+          "position": 3730
+        },
+        {
+          "type": "mdat",
+          "position": 3738
+        }
+      ]
+    },
+    {
+      "path": "public/media/conversation-playback-2026-09-22.mp4",
+      "programs": [],
+      "stream_groups": [],
+      "streams": [
+        {
+          "codec_name": "h264",
+          "codec_type": "video",
+          "width": 1280,
+          "height": 720,
+          "r_frame_rate": "24/1",
+          "nb_read_frames": "240"
+        }
+      ],
+      "format": {
+        "duration": "10.000000",
+        "size": "1060758"
+      },
+      "atoms": [
+        {
+          "type": "ftyp",
+          "position": 0
+        },
+        {
+          "type": "moov",
+          "position": 32
+        },
+        {
+          "type": "free",
+          "position": 3714
+        },
+        {
+          "type": "mdat",
+          "position": 3722
+        }
+      ]
+    }
+  ],
+  "reductionPercent": 44.92
+}

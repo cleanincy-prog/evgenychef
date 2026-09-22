@@ -1,0 +1,269 @@
+{
+  "base": "http://127.0.0.1:3004",
+  "layouts": [
+    {
+      "width": 1440,
+      "playing": {
+        "paused": false,
+        "time": 0.126578,
+        "duration": 10,
+        "muted": true,
+        "controls": false,
+        "loop": false,
+        "inline": true,
+        "width": 1280,
+        "height": 720,
+        "error": null
+      },
+      "geometry": {
+        "left": 68.40625,
+        "right": 518.40625,
+        "width": 450,
+        "height": 253.125,
+        "overflow": false,
+        "objectFit": "contain"
+      }
+    },
+    {
+      "width": 1280,
+      "playing": {
+        "paused": false,
+        "time": 0.12088,
+        "duration": 10,
+        "muted": true,
+        "controls": false,
+        "loop": false,
+        "inline": true,
+        "width": 1280,
+        "height": 720,
+        "error": null
+      },
+      "geometry": {
+        "left": 60.796875,
+        "right": 510.796875,
+        "width": 450,
+        "height": 253.125,
+        "overflow": false,
+        "objectFit": "contain"
+      }
+    },
+    {
+      "width": 1024,
+      "playing": {
+        "paused": false,
+        "time": 0.160647,
+        "duration": 10,
+        "muted": true,
+        "controls": false,
+        "loop": false,
+        "inline": true,
+        "width": 1280,
+        "height": 720,
+        "error": null
+      },
+      "geometry": {
+        "left": 48.640625,
+        "right": 423.78125,
+        "width": 375.140625,
+        "height": 211.015625,
+        "overflow": false,
+        "objectFit": "contain"
+      }
+    },
+    {
+      "width": 768,
+      "playing": {
+        "paused": false,
+        "time": 0.114301,
+        "duration": 10,
+        "muted": true,
+        "controls": false,
+        "loop": false,
+        "inline": true,
+        "width": 1280,
+        "height": 720,
+        "error": null
+      },
+      "geometry": {
+        "left": 130.484375,
+        "right": 580.484375,
+        "width": 450,
+        "height": 253.125,
+        "overflow": false,
+        "objectFit": "contain"
+      }
+    },
+    {
+      "width": 430,
+      "playing": {
+        "paused": false,
+        "time": 0.120494,
+        "duration": 10,
+        "muted": true,
+        "controls": false,
+        "loop": false,
+        "inline": true,
+        "width": 1280,
+        "height": 720,
+        "error": null
+      },
+      "geometry": {
+        "left": 52,
+        "right": 412,
+        "width": 360,
+        "height": 202.5,
+        "overflow": false,
+        "objectFit": "contain"
+      }
+    },
+    {
+      "width": 390,
+      "playing": {
+        "paused": false,
+        "time": 0.109042,
+        "duration": 10,
+        "muted": true,
+        "controls": false,
+        "loop": false,
+        "inline": true,
+        "width": 1280,
+        "height": 720,
+        "error": null
+      },
+      "geometry": {
+        "left": 52,
+        "right": 372,
+        "width": 320,
+        "height": 180,
+        "overflow": false,
+        "objectFit": "contain"
+      }
+    },
+    {
+      "width": 375,
+      "playing": {
+        "paused": false,
+        "time": 0.120412,
+        "duration": 10,
+        "muted": true,
+        "controls": false,
+        "loop": false,
+        "inline": true,
+        "width": 1280,
+        "height": 720,
+        "error": null
+      },
+      "geometry": {
+        "left": 52,
+        "right": 357,
+        "width": 305,
+        "height": 171.5625,
+        "overflow": false,
+        "objectFit": "contain"
+      }
+    }
+  ],
+  "states": {
+    "loop": {
+      "paused": false,
+      "time": 0.017158,
+      "duration": 10,
+      "muted": true,
+      "controls": false,
+      "loop": false,
+      "inline": true,
+      "width": 1280,
+      "height": 720,
+      "error": null
+    },
+    "offscreen": {
+      "paused": true,
+      "time": 0.228738,
+      "duration": 10,
+      "muted": true,
+      "controls": false,
+      "loop": false,
+      "inline": true,
+      "width": 1280,
+      "height": 720,
+      "error": null
+    },
+    "resumed": {
+      "paused": false,
+      "time": 0.254352,
+      "duration": 10,
+      "muted": true,
+      "controls": false,
+      "loop": false,
+      "inline": true,
+      "width": 1280,
+      "height": 720,
+      "error": null
+    },
+    "preparationFilmPreserved": true,
+    "startsAtPartialVisibility": {
+      "paused": false,
+      "time": 0.004263,
+      "duration": 10,
+      "muted": true,
+      "controls": false,
+      "loop": false,
+      "inline": true,
+      "width": 1280,
+      "height": 720,
+      "error": null
+    },
+    "touchDoesNotPause": true,
+    "twoFullPlays": {
+      "ended": 2,
+      "waitingAfterStart": 0,
+      "firstPlayingAt": 1426.5999999046326,
+      "time": 10,
+      "duration": 10,
+      "quality": {
+        "total": 480,
+        "dropped": 0
+      }
+    },
+    "noThirdPlay": {
+      "paused": true,
+      "time": 10,
+      "duration": 10,
+      "muted": true,
+      "controls": false,
+      "loop": false,
+      "inline": true,
+      "width": 1280,
+      "height": 720,
+      "error": null
+    },
+    "reducedMotion": {
+      "paused": true,
+      "time": 0,
+      "duration": 10,
+      "muted": true,
+      "controls": false,
+      "loop": false,
+      "inline": true,
+      "width": 1280,
+      "height": 720,
+      "error": null
+    },
+    "noJavaScriptPoster": true,
+    "text200Percent": true,
+    "errorAndKeyboardRetry": {
+      "paused": false,
+      "time": 0.118995,
+      "duration": 10,
+      "muted": true,
+      "controls": false,
+      "loop": false,
+      "inline": true,
+      "width": 1280,
+      "height": 720,
+      "error": null
+    }
+  },
+  "pageErrors": [],
+  "passed": true
+}

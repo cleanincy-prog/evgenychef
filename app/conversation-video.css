@@ -1,6 +1,7 @@
 .conversation-film-stage { position: relative; aspect-ratio: 16 / 9; }
 .conversation-film-stage video { display: block; width: 100%; height: 100%; object-fit: contain; pointer-events: none; }
+.conversation-film-touch-shield { position: absolute; inset: 0; z-index: 1; pointer-events: auto; touch-action: pan-y pinch-zoom; -webkit-user-select: none; user-select: none; -webkit-touch-callout: none; }
 .conversation-film[data-video-error] video { visibility: hidden; }
 .conversation-film .conversation-film-poster { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; }
-.conversation-film .film-retry { pointer-events: auto; }
+.conversation-film .film-retry { z-index: 2; pointer-events: auto; }
 .conversation-film figcaption { margin-top: .5rem; color: var(--muted); }

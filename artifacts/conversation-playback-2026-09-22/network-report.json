@@ -1,0 +1,19 @@
+{
+  "starts": [
+    3582.7000000476837,
+    13597.900000095367
+  ],
+  "waiting": [],
+  "ended": 2,
+  "scrollAt": 3567.4000000953674,
+  "readyState": 4,
+  "paused": true,
+  "time": 10,
+  "totalFrames": 480,
+  "droppedFrames": 0,
+  "startDelayMs": 15.299999952316284,
+  "connection": {
+    "megabitsPerSecond": 1.5,
+    "latencyMs": 100
+  }
+}

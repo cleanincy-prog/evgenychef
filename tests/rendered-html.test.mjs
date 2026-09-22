@@ -172,11 +172,11 @@ test("renders 63 documentary collage photos, the selected menu video and the app
 
 });
 
-test("serves all three silent looping inline films without controls and with usable byte ranges", async () => {
+test("serves all three silent inline films without controls and with usable byte ranges", async () => {
   const videos = tags(html, "video");
   assert.equal(videos.length, 3);
   const expected = new Map([
-    ["conversation-video", ["/media/conversation-2026-09-22.mp4", "/media/web/conversation-video-2026-09-22-960.webp"]],
+    ["conversation-video", ["/media/conversation-playback-2026-09-22.mp4", "/media/web/conversation-video-2026-09-22-960.webp"]],
     ["menu-planning-video", ["/media/menu-planning-smooth-2026-09-22.mp4", "/media/web/menu-planning-video-2026-09-22-1280.webp"]],
     ["story-documentary-video", ["/media/chef-story-short-prep-2026-09-12.mp4", "/media/web/film-poster-540.webp"]],
   ]);
@@ -188,18 +188,20 @@ test("serves all three silent looping inline films without controls and with usa
     assert.equal(videoTag.poster, posterPath);
     assert.ok(!Object.hasOwn(videoTag, "autoplay"), "Viewport playback must not begin offscreen through autoplay");
     assert.ok(!Object.hasOwn(videoTag, "controls"), "No film may expose playback controls");
-    for (const attribute of ["playsinline", "muted", "loop", "disablepictureinpicture", "disableremoteplayback"]) {
+    for (const attribute of ["playsinline", "muted", "disablepictureinpicture", "disableremoteplayback"]) {
       assert.ok(Object.hasOwn(videoTag, attribute), `${videoTag.id}: missing ${attribute}`);
     }
+    assert.equal(Object.hasOwn(videoTag, "loop"), videoTag.id !== "conversation-video", "Conversation repeats are counted by the player");
     assert.equal(videoTag.tabindex, "-1");
     assert.equal(videoTag.preload, "metadata");
     const poster = await localFetch(posterPath, { method: "HEAD" });
     assert.equal(poster.status, 200);
     assert.match(poster.headers.get("content-type") || "", /^image\/webp/);
     const original = await readFile(new URL(`../public${videoPath}`, import.meta.url));
+    const middle = Math.floor(original.length / 2);
     for (const [range, start, end] of [
       ["bytes=0-1023", 0, 1023],
-      ["bytes=1048576-1049599", 1048576, 1049599],
+      [`bytes=${middle}-${middle + 1023}`, middle, middle + 1023],
       ["bytes=-1024", original.length - 1024, original.length - 1],
     ]) {
       const video = await localFetch(videoPath, { headers: { Range: range } });

@@ -4,10 +4,10 @@ import path from 'node:path';
 import { chromium } from 'playwright';
 
 const base = 'http://127.0.0.1:3004';
-const output = path.resolve(process.env.CONVERSATION_QA_OUTPUT || 'artifacts/conversation-video-2026-09-22');
+const output = path.resolve(process.env.CONVERSATION_QA_OUTPUT || 'artifacts/conversation-playback-2026-09-22');
 await mkdir(output, { recursive: true });
 const report = { base, layouts: [], states: {}, pageErrors: [] };
-const source = '/media/conversation-2026-09-22.mp4';
+const source = '/media/conversation-playback-2026-09-22.mp4';
 const browser = await chromium.launch({ executablePath: '/Applications/Google Chrome.app/Contents/MacOS/Google Chrome', headless: true });
 async function open(options = {}) {
   const page = await browser.newPage({ viewport: { width: 390, height: 844 }, ...options });
@@ -43,7 +43,7 @@ try {
     assert.equal(playing.controls, false);
     assert.equal(playing.muted, true);
     assert.equal(playing.inline, true);
-    assert.equal(playing.loop, true);
+    assert.equal(playing.loop, false);
     assert.equal(playing.error, null);
     const geometry = await page.locator('#conversation-video').evaluate(video => {
       const rect = video.getBoundingClientRect();
@@ -83,6 +83,70 @@ try {
     report.layouts.push({ width, playing, geometry });
     await page.close();
   }
+
+  // Use a real touch context and let both full ten-second passes finish.
+  const touch = await open({ isMobile: true, hasTouch: true });
+  await touch.locator('#conversation-video').evaluate(video => {
+    window.conversationEvents = { ended: 0, waitingAfterStart: 0, firstPlayingAt: 0 };
+    video.addEventListener('ended', () => window.conversationEvents.ended++);
+    video.addEventListener('playing', () => { window.conversationEvents.firstPlayingAt ||= performance.now(); });
+    video.addEventListener('waiting', () => {
+      if (window.conversationEvents.firstPlayingAt) window.conversationEvents.waitingAfterStart++;
+    });
+    const rect = video.getBoundingClientRect();
+    scrollTo(0, scrollY + rect.top - innerHeight - 1000);
+  });
+  await touch.waitForFunction(() => {
+    const v = document.querySelector('#conversation-video');
+    return v.preload === 'auto' && v.readyState === 4;
+  });
+  assert.equal((await state(touch)).paused, true, 'Preloading must not play offscreen');
+  await touch.locator('#conversation-video').evaluate(video => {
+    const rect = video.getBoundingClientRect();
+    scrollTo(0, scrollY + rect.top - innerHeight + rect.height * .1);
+  });
+  await touch.waitForTimeout(250);
+  assert.equal((await state(touch)).paused, true, 'Ten percent showing is below the start threshold');
+  await touch.locator('#conversation-video').evaluate(video => {
+    const rect = video.getBoundingClientRect();
+    scrollTo(0, scrollY + rect.top - innerHeight + rect.height * .25);
+  });
+  await touch.waitForFunction(() => !document.querySelector('#conversation-video').paused);
+  report.states.startsAtPartialVisibility = await state(touch);
+  await showVideo(touch);
+  const box = await touch.locator('#conversation-video').boundingBox();
+  const beforeTap = (await state(touch)).time;
+  await touch.touchscreen.tap(box.x + box.width / 2, box.y + box.height / 2);
+  await touch.waitForTimeout(350);
+  assert.equal((await state(touch)).paused, false, 'Tap must not pause');
+  assert.ok((await state(touch)).time > beforeTap, 'Playback continues after touch');
+  report.states.touchDoesNotPause = true;
+  await touch.evaluate(() => scrollTo(0, 0));
+  await touch.waitForFunction(() => document.querySelector('#conversation-video').paused);
+  const offscreenTime = (await state(touch)).time;
+  await touch.waitForTimeout(250);
+  assert.equal((await state(touch)).time, offscreenTime);
+  await showVideo(touch);
+  await touch.waitForFunction(() => {
+    const v = document.querySelector('#conversation-video');
+    return v.ended && v.paused && window.conversationEvents.ended === 2;
+  }, null, { timeout: 26000 });
+  report.states.twoFullPlays = await touch.locator('#conversation-video').evaluate(video => ({
+    ...window.conversationEvents, time: video.currentTime, duration: video.duration,
+    quality: { total: video.getVideoPlaybackQuality().totalVideoFrames, dropped: video.getVideoPlaybackQuality().droppedVideoFrames },
+  }));
+  await touch.locator('.station-conversation').screenshot({ path: path.join(output, 'final-frame-390.png') });
+  await touch.evaluate(() => scrollTo(0, 0));
+  await touch.locator('#conversation-video').scrollIntoViewIfNeeded();
+  await touch.touchscreen.tap(box.x + box.width / 2, box.y + box.height / 2);
+  await touch.keyboard.press('Space');
+  await touch.waitForTimeout(700);
+  const finalState = await state(touch);
+  assert.equal(finalState.paused, true, 'Returning and touching must not start a third pass');
+  assert.equal(finalState.time, 10);
+  assert.equal(await touch.evaluate(() => window.conversationEvents.ended), 2);
+  report.states.noThirdPlay = finalState;
+  await touch.close();
 
   const reduced = await open({ reducedMotion: 'reduce' });
   await reduced.locator('#conversation-video').scrollIntoViewIfNeeded();
