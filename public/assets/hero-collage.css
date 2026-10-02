@@ -1,0 +1,119 @@
+/* Scale every photo motion together so the collage assembles over two seconds. */
+.hero-frame { --intro-field-scale: .56; --collage-columns: 10; --collage-rows: 9; --hero-portrait-height: calc((30cqw - 1.4px) * 1102 / 936); --hero-photo-tempo: 2.1; --hero-reveal-delay: 2000ms; --hero-reveal-duration: 650ms; isolation: isolate; container-type: inline-size; min-height: 0; overflow-anchor: none; }
+/* Keep the approved portrait crop intact while the surrounding rows fill the hero. */
+.hero-collage-grid, .hero-frame .hero-content { display: grid; grid-template-columns: repeat(var(--collage-columns), minmax(0, 1fr)); grid-template-rows: repeat(2, minmax(0, 1fr)) repeat(4, minmax(0, calc((var(--hero-portrait-height) - 6px) / 4))) repeat(3, minmax(0, 1fr)); gap: 2px; }
+.hero-collage-grid { position: absolute; inset: 0; z-index: 0; grid-auto-flow: dense; }
+.hero-softened { position: absolute; inset: 0; z-index: 99; display: block; width: 100%; height: 100%; pointer-events: none; }
+.hero-softened[data-css-blur] { filter: blur(1.5px); }
+.hero-frame[data-hero-intro="complete"][data-hero-snapshot="ready"] .collage-tile:not(.collage-tile--video) { visibility: hidden; }
+.hero-frame[data-hero-intro="complete"]:not([data-hero-snapshot="ready"]) .collage-tile:not(.collage-tile--video) img { filter: blur(1.5px); }
+.hero-frame[data-hero-intro="revealing"]:not([data-hero-snapshot="ready"]) .collage-tile:not(.collage-tile--video) img { filter: blur(1.5px); }
+.hero-frame .hero-content { height: max(720px, 100svh, calc(var(--hero-portrait-height) + 300px)); min-height: 0; max-width: none; padding: 0; }
+.collage-tile { position: relative; overflow: hidden; min-width: 0; min-height: 0; }
+.collage-tile--wide-desktop { grid-column: span 2; }
+.collage-tile img { position: absolute; width: 100%; height: 100%; object-fit: cover; object-position: center; }
+/* Keep this live tile above the static snapshot and tint, like the main portrait. */
+.collage-tile--video { z-index: 101; background: #2c2622; }
+.hero-frame .collage-tile--video img,
+.collage-tile--video video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 40%; }
+.collage-tile--video video { opacity: 0; }
+.collage-tile--video[data-video-ready] video { opacity: 1; }
+.hero-frame .hero-content { pointer-events: none; }
+.hero-frame .hero-content a, .hero-frame .hero-content button { pointer-events: auto; }
+.hero-video-toggle { position: absolute; z-index: 1; right: 4px; bottom: 4px; display: grid; place-items: center; width: 28px; height: 28px; padding: 0; border: 1px solid #fafaf840; border-radius: 50%; background: #2c2622aa; color: #fafaf8; cursor: pointer; }
+.hero-video-toggle[hidden] { display: none; }
+.hero-video-toggle svg { grid-area: 1 / 1; width: 18px; height: 18px; }
+.hero-video-pause, .collage-tile--video[data-video-playing] .hero-video-play { display: none; }
+.collage-tile--video[data-video-playing] .hero-video-pause { display: block; }
+.hero-video-toggle:focus-visible { outline-offset: -3px; }
+@media (hover: hover) {
+  .collage-tile--video[data-video-playing] .hero-video-toggle { opacity: 0; }
+  .collage-tile--video:hover .hero-video-toggle, .collage-tile--video:focus-within .hero-video-toggle { opacity: 1; }
+}
+.hero-story { display: none; position: absolute; z-index: 2; inset: 0; overflow: hidden; pointer-events: none; }
+.hero-story-shot { position: absolute; right: 6%; top: 50%; width: min(29%, 36svh); transform: translateY(-50%); transform-origin: center; margin: 0; }
+.hero-story-shot img { display: block; width: 100%; height: auto; }
+/* Tint only the collage; the original portrait sits above both background effects. */
+.hero-frame .hero-shade { z-index: 100; pointer-events: none; background: #1d1a17a6; }
+/* Text and portrait use matching grid lines, with the copy kept close to the photo. */
+.hero-identity { grid-column: 2 / span 4; grid-row: 3 / span 4; align-self: center; justify-self: end; width: calc(100% - 32px); max-width: 360px; margin: 0 32px 0 0; color: var(--white); }
+.hero-frame .hero-center { display: flex; flex-direction: column; align-items: flex-start; justify-content: center; min-width: 0; text-align: left; }
+.hero-frame .hero-kicker { color: #f0e6dc; justify-content: flex-start; gap: 12px; margin-bottom: 22px; }
+.hero-frame .hero-kicker p { font-size: 10px; letter-spacing: .14em; text-transform: none; }
+.hero-frame .hero-kicker > span { width: 22px; background: #65c2cd; }
+.hero-frame h1 { font-size: clamp(3.5rem, 6.2vw, 5.5rem); line-height: 1; margin-bottom: 22px; text-shadow: 0 2px 18px #0004; }
+.hero-frame h1 em { color: var(--white); }
+.hero-description { color: #fafaf8ed; font-size: 15px; line-height: 1.7; max-width: 340px; margin: 0; text-shadow: 0 1px 9px #0006; }
+.hero-portrait { --intro-x: 100vw; --intro-y: 0px; --intro-scale: 1.08; --portrait-flight: 500ms; grid-column: 6 / span 3; grid-row: 3 / span 4; position: relative; z-index: 101; margin: 0; overflow: hidden; min-width: 0; min-height: 0; container-type: size; }
+/* User's 936 × 1102 reference maps to x=21.18, y=246.57, w=549.91 in the 576 × 1280 original. */
+.hero-portrait img { position: absolute; top: 0; left: 0; display: block; width: 104.7444%; height: auto; aspect-ratio: 576 / 1280; max-width: none; transform: translate(-3.6771%, -19.2633%); }
+.hero-frame .hero-actions { margin-top: 26px; flex-direction: column; align-items: flex-start; gap: 12px; }
+.hero-frame .hero-actions .button { padding: 16px 24px; }
+.hero-frame .hero-actions .button .voice-mono { font-size: 10px; letter-spacing: .13em; }
+.hero-frame .hero-bottom { color: #fafaf8bf; }
+/* The collage controller owns the entrance; do not also replay the legacy text animations. */
+.motion-ready .hero-frame .hero-enter,
+.motion-ready .hero-frame h1 .line-mask > span { animation: none; }
+
+@media (max-width: 767px) {
+  .hero-frame { --intro-field-scale: .42; --collage-columns: 8; --collage-rows: 12; --hero-portrait-height: calc((75cqw - .5px) * 1102 / 936); }
+  .hero-collage-grid, .hero-frame .hero-content { grid-template-rows: repeat(6, minmax(0, 1fr)) repeat(4, minmax(0, calc((var(--hero-portrait-height) - 6px) / 4))) repeat(2, minmax(0, 1fr)); }
+  .hero-frame .hero-content { height: max(840px, 100svh, calc(var(--hero-portrait-height) + 560px)); }
+  .hero-identity { grid-column: 1 / -1; grid-row: 2 / span 5; align-self: end; justify-self: center; width: calc(100% - 48px); max-width: 360px; margin: 0 0 24px; }
+  .hero-frame .hero-kicker { gap: 10px; margin-bottom: 18px; }
+  .hero-frame .hero-kicker p { font-size: 9px; letter-spacing: .12em; }
+  .hero-frame .hero-kicker > span { width: 18px; }
+  .hero-frame h1 { font-size: clamp(50px, 14.5vw, 60px); margin-bottom: 18px; }
+  .hero-description { font-size: 14px; line-height: 1.6; }
+  .hero-portrait { grid-column: 2 / span 6; grid-row: 7 / span 4; }
+  .hero-frame .hero-actions { margin-top: 22px; }
+  .hero-frame .hero-actions .button { padding: 15px 22px; }
+  .hero-frame .scroll-cue { bottom: 10px; }
+  .collage-tile--wide-desktop { grid-column: auto; }
+  .collage-tile--wide-compact { grid-column: span 2; }
+  .hero-story-shot { right: 3%; width: min(63%, 38svh); }
+}
+
+/* The collage settles first; one opacity curve then reveals the complete composition. */
+@media (prefers-reduced-motion: no-preference) {
+  .hero-frame[data-hero-intro="pending"] .hero-collage-grid,
+  .hero-frame[data-hero-intro="pending"] .hero-softened,
+  .hero-frame[data-hero-intro="pending"] .hero-identity,
+  .hero-frame[data-hero-intro="pending"] .hero-bottom,
+  .hero-frame[data-hero-intro="pending"] .scroll-cue,
+  .hero-frame[data-hero-intro="pending"] .hero-portrait,
+  .hero-frame[data-hero-intro="pending"] .hero-shade { animation: hero-intro-fallback 0s 2200ms backwards; }
+  .hero-frame[data-hero-intro="running"] .collage-tile { z-index: var(--intro-layer, 0); animation: hero-photo-in calc(var(--intro-duration) * var(--hero-photo-tempo)) cubic-bezier(.2, .6, .32, 1) calc(var(--intro-delay) * var(--hero-photo-tempo)) backwards; }
+  .hero-frame[data-hero-intro="running"] .hero-collage-grid { transform-origin: left center; animation: hero-field-expand calc(500ms * var(--hero-photo-tempo)) cubic-bezier(.4, 0, .2, 1) calc(420ms * var(--hero-photo-tempo)) backwards; }
+  /* The portrait lands last, exactly when the text reveal begins. */
+  .hero-frame[data-hero-intro="running"] .hero-portrait { animation: hero-photo-in var(--portrait-flight) cubic-bezier(.2, .6, .32, 1) calc(var(--hero-reveal-delay) - var(--portrait-flight)) backwards; }
+  .hero-frame[data-hero-intro="running"] .hero-shade,
+  .hero-frame[data-hero-intro="running"] .hero-softened,
+  .hero-frame[data-hero-intro="running"] .hero-identity,
+  .hero-frame[data-hero-intro="running"] .hero-bottom,
+  .hero-frame[data-hero-intro="running"] .scroll-cue { animation: hero-card-reveal var(--hero-reveal-duration) ease-in-out var(--hero-reveal-delay) both; }
+  .hero-frame[data-hero-intro="revealing"] .hero-collage-grid,
+  .hero-frame[data-hero-intro="revealing"] .hero-identity,
+  .hero-frame[data-hero-intro="revealing"] .hero-bottom,
+  .hero-frame[data-hero-intro="revealing"] .scroll-cue { animation: hero-card-reveal var(--hero-reveal-duration) ease-in-out both; }
+  .hero-frame[data-hero-intro="pending"] .hero-story { display: block; visibility: hidden; }
+  .hero-frame[data-hero-intro="running"] .hero-story { display: block; }
+  .hero-frame[data-hero-intro="running"] .hero-story-shot { animation: hero-story-fly calc(var(--story-flight) * var(--hero-photo-tempo)) cubic-bezier(.45, 0, .2, 1) calc(var(--story-depart) * var(--hero-photo-tempo)) forwards; }
+  .hero-frame[data-hero-intro="running"] .hero-story-shot img { animation: hero-story-arrive calc(120ms * var(--hero-photo-tempo)) cubic-bezier(.22, .61, .36, 1) calc(var(--story-delay) * var(--hero-photo-tempo)) backwards; }
+}
+@keyframes hero-intro-fallback { from { opacity: 0; } to { opacity: 1; } }
+@keyframes hero-field-expand { from { transform: scale(var(--intro-field-scale)); } to { transform: scale(1); } }
+@keyframes hero-card-reveal { from { opacity: 0; } to { opacity: 1; } }
+@keyframes hero-photo-in {
+  from { opacity: 0; transform: translate(var(--intro-x), var(--intro-y)) scale(var(--intro-scale)); }
+  to { opacity: 1; transform: none; }
+}
+@keyframes hero-story-arrive {
+  from { opacity: 0; transform: translateX(28px); }
+  to { opacity: 1; transform: none; }
+}
+@keyframes hero-story-fly {
+  0% { opacity: 1; transform: translateY(-50%); }
+  80% { opacity: 1; }
+  100% { opacity: 0; transform: translate(var(--story-x), calc(-50% + var(--story-y))) scale(var(--story-scale)); }
+}

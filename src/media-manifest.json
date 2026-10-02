@@ -1,0 +1,1809 @@
+[
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/hero-instagram/hero-10.webp",
+    "file": "/media/chef/hero.webp",
+    "role": "Изображение для карточки ссылки Open Graph: Евгений за рабочим столом",
+    "bytes": 52880,
+    "sha256": "52211c97a251db5487ae3a0bd65db1d067b3c60387888557a0f0c6207482ee78"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/event-formats/private-dinner-wide-v2.png",
+    "file": "/media/chef/dinner.webp",
+    "role": "Частный ужин: полный кадр из оригинала",
+    "processing": "WebP quality 94, method 6, sharp YUV; native resolution; no crop or upscaling",
+    "width": 1536,
+    "height": 1024,
+    "bytes": 132042,
+    "sha256": "9625622b89d2aaa593e5c72f82bd139a1790e8d773c7c0ce9f7c2f416d857e8d"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/event-formats/private-dinner-wide-v2.png",
+    "file": "/media/chef/dinner-768.webp",
+    "role": "Частный ужин: адаптивная версия высокого качества",
+    "processing": "WebP quality 94, method 6, sharp YUV; proportional downsize to 768px wide; no crop or upscaling",
+    "width": 768,
+    "height": 512,
+    "bytes": 59412,
+    "sha256": "e135babbdb25cbaf4ae25b4233d1858debf5ef5c29d85c66bc8df70071ff7bd2"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/event-formats/private-event-outdoor-crepes.png",
+    "file": "/media/chef/events.webp",
+    "role": "Мероприятия: полный кадр в исходном разрешении 2278 × 1510",
+    "processing": "WebP quality 94, method 6, sharp YUV; native resolution; no crop or upscaling",
+    "width": 2278,
+    "height": 1510,
+    "bytes": 327840,
+    "sha256": "bd61b22800a91cbcf5cff446d75310babe6314f6ed0cf4bbbc283f8fc4ea480f"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/event-formats/private-event-outdoor-crepes.png",
+    "file": "/media/chef/events-768.webp",
+    "role": "Мероприятия: адаптивная версия высокого качества 768 px",
+    "processing": "WebP quality 94, method 6, sharp YUV; proportional downsize to 768px wide; no crop or upscaling",
+    "width": 768,
+    "height": 510,
+    "bytes": 93540,
+    "sha256": "1afa266d6795fa299fa284194bd57c672cd7aca3a08e10f80357bc560941a2e3"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/event-formats/masterclass.jpg",
+    "file": "/media/chef/masterclass.jpg",
+    "role": "Мастер-класс: исходный JPEG без повторного сжатия",
+    "processing": "Original file copied byte-for-byte",
+    "width": 1144,
+    "height": 770,
+    "bytes": 241049,
+    "sha256": "c6d6374d55bf2acf47afe872bed27b5210343b1a04ef194faa96fcd830b6ca13"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/event-formats/masterclass.jpg",
+    "file": "/media/chef/masterclass-768.jpg",
+    "role": "Мастер-класс: адаптивная версия высокого качества",
+    "processing": "JPEG quality 95, chroma 4:4:4; proportional downsize to 768px wide; no crop",
+    "width": 768,
+    "height": 517,
+    "bytes": 155032,
+    "sha256": "44f909cb213b715e4c29c9e977ecd41af8770e12fa6daef148889a8b144d44af"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/hero-instagram/hero-23.webp",
+    "file": "/media/chef/portrait.webp",
+    "role": "Биография: спокойный портрет Евгения",
+    "bytes": 63556,
+    "sha256": "aee7ff172e10a519f689fe99ef20b43b42cd30c9d753821d5b020cdaa6bb6a60"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/web/masterchef-640.webp",
+    "file": "/media/chef/masterchef.webp",
+    "role": "История шефа: фото с сертификатом МастерШеф",
+    "bytes": 26134,
+    "sha256": "64d9310b7104ae6a76565849a0bece7f70bc24c285dc572d2f7d01a3c101dd96"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/hero-instagram/hero-12.webp",
+    "file": "/media/chef/produce.webp",
+    "role": "Продукты: Евгений с ящиком винограда",
+    "bytes": 143482,
+    "sha256": "e7f0280c164be700aab87fa51f324763c620502dfea5b4375561a16199d503c3"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/hero-instagram/hero-29.webp",
+    "file": "/media/chef/plating.webp",
+    "role": "Подача блюд и финальный призыв",
+    "bytes": 63240,
+    "sha256": "cfbe4e597f22e3a43a732046862098ca7a56c40d04b9a0c357f6cae4e78b559c"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/hero-instagram/hero-13.webp",
+    "file": "/media/chef/finished-dish.webp",
+    "role": "Результат: шеф с готовым блюдом",
+    "bytes": 51562,
+    "sha256": "7f8952920903f7443d83018d7da0cebc19e89c26dbfd07772976c45f4c417567"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/web/conversation-video-2026-09-22-960.webp",
+    "file": "/media/chef/conversation-poster.webp",
+    "role": "Постер иллюстрации разговора",
+    "bytes": 46980,
+    "sha256": "72fd5c16c79227e771765175eb4c379e221c81d54b61ef17df01ce526dea3f86"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/web/menu-planning-video-2026-09-22-960.webp",
+    "file": "/media/chef/menu-poster.webp",
+    "role": "Постер иллюстрации составления меню",
+    "bytes": 209988,
+    "sha256": "0a9bd3f52b5882752cfd772d07e60ed48a6f7b5c9f7818df17f87f4e451bab4f"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/web/film-poster-540.webp",
+    "file": "/media/chef/preparation-poster.webp",
+    "role": "Постер настоящего видео работы на кухне",
+    "bytes": 27994,
+    "sha256": "53012d459f52cf282bed2f23d9bc703249fe3798463fee2492f981fb546eea2e"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/conversation-playback-2026-09-22.mp4",
+    "file": "/media/chef/conversation.mp4",
+    "role": "Этап Знакомимся: иллюстрация, 10 секунд",
+    "bytes": 1060758,
+    "sha256": "d419a573440a74f65a4f01dc46a522b49c3245d5ed66223cdfe55d0c16e3456c"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/menu-planning-smooth-2026-09-22.mp4",
+    "file": "/media/chef/menu.mp4",
+    "role": "Этап Продумываю меню: иллюстрация, 12.5 секунд",
+    "bytes": 3310777,
+    "sha256": "2a836fcc7a71f5c9baeafdc9e99ac94b00000cb95415e43ba9cede4fb28bc33d"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/chef-story-short-prep-2026-09-12.mp4",
+    "file": "/media/chef/preparation.mp4",
+    "role": "Этап Готовлю к встрече: настоящее видео, вертикальный формат",
+    "bytes": 8265696,
+    "sha256": "a32920206c89507d68cc6ce84282d20e7eb3f45939af6959ac6ed3d5280b202a"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/menu/atlas-dish/plate-820.webp",
+    "file": "/media/chef/atlas-plate-820.webp",
+    "role": "Тарелка со второго скриншота пользователя, прозрачный фон; пример сочетания вкусов, 820px",
+    "bytes": 630414,
+    "sha256": "d0733df5f69ce6828e3924d07d65cbfe4435c75de6e648be0ed6ab1c37db7c49"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/menu/atlas-dish/plate-410.webp",
+    "file": "/media/chef/atlas-plate-410.webp",
+    "role": "Тарелка со второго скриншота пользователя, прозрачный фон; пример сочетания вкусов, 410px",
+    "bytes": 186950,
+    "sha256": "a75201bc5b2ceb86e49ce8affc6aa4a3536d7ca34abb89cba27f46e963ed3f9a"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/web/hero-01-384.webp",
+    "file": "/media/chef/collage/hero-01-384.webp",
+    "role": "Исходный анимированный коллаж Шеф4: адаптивная миниатюра",
+    "bytes": 23584,
+    "sha256": "51d0eef3d38da7e2f61f51b13e470212a2fb9bfadb83fb9bebf4594f43d25e4e"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/web/hero-01-192.webp",
+    "file": "/media/chef/collage/hero-01-192.webp",
+    "role": "Исходный анимированный коллаж Шеф4: адаптивная миниатюра",
+    "bytes": 9182,
+    "sha256": "0612087b818ec934688700998e14a445c2d618b29915c0bfcf6dcf993211c6c4"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/web/hero-02-384.webp",
+    "file": "/media/chef/collage/hero-02-384.webp",
+    "role": "Исходный анимированный коллаж Шеф4: адаптивная миниатюра",
+    "bytes": 14556,
+    "sha256": "733306c714b7ec328d411ae0e87399fe9b9282e816cb7effe78a3829fd71cd66"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/web/hero-02-192.webp",
+    "file": "/media/chef/collage/hero-02-192.webp",
+    "role": "Исходный анимированный коллаж Шеф4: адаптивная миниатюра",
+    "bytes": 5332,
+    "sha256": "3b67c5b8a8ba70654c915d3e1d3d6562cd7cbb898caf445dbcb5bca59c9d3968"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/web/hero-03-384.webp",
+    "file": "/media/chef/collage/hero-03-384.webp",
+    "role": "Исходный анимированный коллаж Шеф4: адаптивная миниатюра",
+    "bytes": 13498,
+    "sha256": "5303ae927e09f01f063cd6767ab171e3faed0041ebcb7e427a48e67dc36ec1da"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/web/hero-03-192.webp",
+    "file": "/media/chef/collage/hero-03-192.webp",
+    "role": "Исходный анимированный коллаж Шеф4: адаптивная миниатюра",
+    "bytes": 5102,
+    "sha256": "64f626ae3f987c678e9d127a3849d13214c60884d0f2f038e8db227f8ba81072"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/web/hero-04-384.webp",
+    "file": "/media/chef/collage/hero-04-384.webp",
+    "role": "Исходный анимированный коллаж Шеф4: адаптивная миниатюра",
+    "bytes": 19844,
+    "sha256": "c75246c1fe9e12e0f87883e98dc39645eb33a800471959adcb8b9b0a241a4a6a"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/web/hero-04-192.webp",
+    "file": "/media/chef/collage/hero-04-192.webp",
+    "role": "Исходный анимированный коллаж Шеф4: адаптивная миниатюра",
+    "bytes": 8246,
+    "sha256": "9ad3aa8ce5c0e362a099746d16787dcd9e0c0bd50fade8395994ffbdec31c325"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/web/hero-05-384.webp",
+    "file": "/media/chef/collage/hero-05-384.webp",
+    "role": "Исходный анимированный коллаж Шеф4: адаптивная миниатюра",
+    "bytes": 12114,
+    "sha256": "afa948f45d48b993331f06042a9c201bc5ef13a41d5f6216372576ad4c91bbb1"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/web/hero-05-192.webp",
+    "file": "/media/chef/collage/hero-05-192.webp",
+    "role": "Исходный анимированный коллаж Шеф4: адаптивная миниатюра",
+    "bytes": 5796,
+    "sha256": "b0deb2d063e9e7eee65e855d0fd329eb08a57cd6c2bae62609440425a2ab81a8"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/web/hero-06-384.webp",
+    "file": "/media/chef/collage/hero-06-384.webp",
+    "role": "Исходный анимированный коллаж Шеф4: адаптивная миниатюра",
+    "bytes": 12278,
+    "sha256": "8490e62721dd99b7e5f07339c04fa20e8d36e2bb9b511fa02bf6f007e1e8814a"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/web/hero-06-192.webp",
+    "file": "/media/chef/collage/hero-06-192.webp",
+    "role": "Исходный анимированный коллаж Шеф4: адаптивная миниатюра",
+    "bytes": 4682,
+    "sha256": "c5f11a78f9ed719c7f3e1b382dbef095f3f8e56922ae47dafd93deac7544fcf3"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/web/hero-07-384.webp",
+    "file": "/media/chef/collage/hero-07-384.webp",
+    "role": "Исходный анимированный коллаж Шеф4: адаптивная миниатюра",
+    "bytes": 11956,
+    "sha256": "009c4c1f52e76fbdc7772f044136bdac0dada822fd495cbd90e0f7497124f5fd"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/web/hero-07-192.webp",
+    "file": "/media/chef/collage/hero-07-192.webp",
+    "role": "Исходный анимированный коллаж Шеф4: адаптивная миниатюра",
+    "bytes": 4756,
+    "sha256": "92718e51730cccae53dd3007e2113ac5b8deb65c17bdfa32e1f3aafb12c6665e"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/web/hero-08-384.webp",
+    "file": "/media/chef/collage/hero-08-384.webp",
+    "role": "Исходный анимированный коллаж Шеф4: адаптивная миниатюра",
+    "bytes": 16554,
+    "sha256": "cfd23d480b2f6ff4ca7fe1dc69c564ee61853021a586a8065199264301c398a7"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/web/hero-08-192.webp",
+    "file": "/media/chef/collage/hero-08-192.webp",
+    "role": "Исходный анимированный коллаж Шеф4: адаптивная миниатюра",
+    "bytes": 6680,
+    "sha256": "5411cd49932c9df33675966c7a20a0587bfec7813ec7b619e2e8f976b1645b57"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/web/hero-09-384.webp",
+    "file": "/media/chef/collage/hero-09-384.webp",
+    "role": "Исходный анимированный коллаж Шеф4: адаптивная миниатюра",
+    "bytes": 11022,
+    "sha256": "ceb287f2d026236d1e77215d3dc4d1d053d835f7ca85cff7533ef6a939283fb8"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/web/hero-09-192.webp",
+    "file": "/media/chef/collage/hero-09-192.webp",
+    "role": "Исходный анимированный коллаж Шеф4: адаптивная миниатюра",
+    "bytes": 4136,
+    "sha256": "d44b7bebb10090b8cfa0da27b76997d2a82f48d9045c52035075b0eb9bd68118"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/web/hero-10-384.webp",
+    "file": "/media/chef/collage/hero-10-384.webp",
+    "role": "Исходный анимированный коллаж Шеф4: адаптивная миниатюра",
+    "bytes": 8460,
+    "sha256": "4713d665b28e6599448dba7e6b95ed869f109bf52a29cf682e7d04cae4da0697"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/web/hero-10-192.webp",
+    "file": "/media/chef/collage/hero-10-192.webp",
+    "role": "Исходный анимированный коллаж Шеф4: адаптивная миниатюра",
+    "bytes": 3272,
+    "sha256": "bf3d81d1e88f7d883c312ab1d9d07737feb300ceacc0a3e26f5aed339f707748"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/web/hero-11-384.webp",
+    "file": "/media/chef/collage/hero-11-384.webp",
+    "role": "Исходный анимированный коллаж Шеф4: адаптивная миниатюра",
+    "bytes": 14980,
+    "sha256": "9356a73b5d89e93b7b8bf1aa846b14702ee58cb8749fd45199df24443e642bae"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/web/hero-11-192.webp",
+    "file": "/media/chef/collage/hero-11-192.webp",
+    "role": "Исходный анимированный коллаж Шеф4: адаптивная миниатюра",
+    "bytes": 5474,
+    "sha256": "e4b9775d93c7b0d023eba218cda20a19288545d9e70d1421d87b384545b3234c"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/web/hero-12-384.webp",
+    "file": "/media/chef/collage/hero-12-384.webp",
+    "role": "Исходный анимированный коллаж Шеф4: адаптивная миниатюра",
+    "bytes": 20034,
+    "sha256": "01b98092eeb640490b0d4714f43f4f69916e05860a533d820374bb459c475346"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/web/hero-12-192.webp",
+    "file": "/media/chef/collage/hero-12-192.webp",
+    "role": "Исходный анимированный коллаж Шеф4: адаптивная миниатюра",
+    "bytes": 6312,
+    "sha256": "fbeed7dae85173d18d178ae08c330cf644de8b83a5d88e2d955c5f05100332e0"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/web/hero-13-384.webp",
+    "file": "/media/chef/collage/hero-13-384.webp",
+    "role": "Исходный анимированный коллаж Шеф4: адаптивная миниатюра",
+    "bytes": 9360,
+    "sha256": "75365da5f365528485a893b1e2214737b374080a3aba5e510311808e8b729ef6"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/web/hero-13-192.webp",
+    "file": "/media/chef/collage/hero-13-192.webp",
+    "role": "Исходный анимированный коллаж Шеф4: адаптивная миниатюра",
+    "bytes": 4238,
+    "sha256": "747addc2782f9ce57ebbd92688d6b8d52b56ced57087d088324cbe74beff7c8a"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/web/hero-14-384.webp",
+    "file": "/media/chef/collage/hero-14-384.webp",
+    "role": "Исходный анимированный коллаж Шеф4: адаптивная миниатюра",
+    "bytes": 19362,
+    "sha256": "8c892a603bd6b06c01cbe5a6f4ad3b0dc3df484b25ae5cf61ad74e7a33fb77ca"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/web/hero-14-192.webp",
+    "file": "/media/chef/collage/hero-14-192.webp",
+    "role": "Исходный анимированный коллаж Шеф4: адаптивная миниатюра",
+    "bytes": 7546,
+    "sha256": "339e8463b5468df5eec4dc3bd46337ed8207311e56cee9f6735622e771ccaeae"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/web/hero-15-384.webp",
+    "file": "/media/chef/collage/hero-15-384.webp",
+    "role": "Исходный анимированный коллаж Шеф4: адаптивная миниатюра",
+    "bytes": 10218,
+    "sha256": "2fdbc8e0b8fc29ff3c62ab4d651db5d5eaf63b41747509b3ac125ab709da4293"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/web/hero-15-192.webp",
+    "file": "/media/chef/collage/hero-15-192.webp",
+    "role": "Исходный анимированный коллаж Шеф4: адаптивная миниатюра",
+    "bytes": 4406,
+    "sha256": "1afa99311df7332c4dfa5e0ac79cadb326f2cb283f254552f28a438aecefdf64"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/web/hero-16-384.webp",
+    "file": "/media/chef/collage/hero-16-384.webp",
+    "role": "Исходный анимированный коллаж Шеф4: адаптивная миниатюра",
+    "bytes": 12674,
+    "sha256": "df72f6be4eb7039706384a3e469d544a37dbb854860b35532c5bc6c49c1ec3a6"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/web/hero-16-192.webp",
+    "file": "/media/chef/collage/hero-16-192.webp",
+    "role": "Исходный анимированный коллаж Шеф4: адаптивная миниатюра",
+    "bytes": 5428,
+    "sha256": "99d9fc5da59e27944fc032735baec4761f858a063b983f479cbc811f5d5da9f6"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/web/hero-17-384.webp",
+    "file": "/media/chef/collage/hero-17-384.webp",
+    "role": "Исходный анимированный коллаж Шеф4: адаптивная миниатюра",
+    "bytes": 9002,
+    "sha256": "294cc6569889499bef87795ad2224af953b036c6cb25e085408d5ac786ff049e"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/web/hero-17-192.webp",
+    "file": "/media/chef/collage/hero-17-192.webp",
+    "role": "Исходный анимированный коллаж Шеф4: адаптивная миниатюра",
+    "bytes": 3622,
+    "sha256": "f46cdfe258093efde077ffdf90e0b604215afe6f7ae3826d8f0e368d6421bd46"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/web/hero-18-384.webp",
+    "file": "/media/chef/collage/hero-18-384.webp",
+    "role": "Исходный анимированный коллаж Шеф4: адаптивная миниатюра",
+    "bytes": 12474,
+    "sha256": "d95ac543e67f7ddee024e2b68a17d8adff1aaf7aa08eacba550cea1d15e6308d"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/web/hero-18-192.webp",
+    "file": "/media/chef/collage/hero-18-192.webp",
+    "role": "Исходный анимированный коллаж Шеф4: адаптивная миниатюра",
+    "bytes": 4618,
+    "sha256": "5ced27041dc52b572a25bc278ae96d77ca2e383fd7a499a19c340cd78f9c8d3d"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/web/hero-19-384.webp",
+    "file": "/media/chef/collage/hero-19-384.webp",
+    "role": "Исходный анимированный коллаж Шеф4: адаптивная миниатюра",
+    "bytes": 14008,
+    "sha256": "00d77d923475961b85f933dc8c445e03b9ba31b18a187f16ef41a7049e04e1f2"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/web/hero-19-192.webp",
+    "file": "/media/chef/collage/hero-19-192.webp",
+    "role": "Исходный анимированный коллаж Шеф4: адаптивная миниатюра",
+    "bytes": 6118,
+    "sha256": "cc79e928133492ce3ed8c115b0c113fdac3abde5c5f15ed1d9b7852ca15ef553"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/web/hero-20-384.webp",
+    "file": "/media/chef/collage/hero-20-384.webp",
+    "role": "Исходный анимированный коллаж Шеф4: адаптивная миниатюра",
+    "bytes": 10364,
+    "sha256": "49859fcc4ccc964fcbb63112f85b5828c0f5db1c190bb88f6e273d425f4bcbf4"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/web/hero-20-192.webp",
+    "file": "/media/chef/collage/hero-20-192.webp",
+    "role": "Исходный анимированный коллаж Шеф4: адаптивная миниатюра",
+    "bytes": 4008,
+    "sha256": "7a16ddb3ef65ff7bba88edd73a2e6d5075bdc3b0a999741034878337845bd999"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/web/hero-21-384.webp",
+    "file": "/media/chef/collage/hero-21-384.webp",
+    "role": "Исходный анимированный коллаж Шеф4: адаптивная миниатюра",
+    "bytes": 12182,
+    "sha256": "280a914239611a6778d0d8e01b648729710ca7bf30dd1bdc2d8ce78afd2d04b3"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/web/hero-21-192.webp",
+    "file": "/media/chef/collage/hero-21-192.webp",
+    "role": "Исходный анимированный коллаж Шеф4: адаптивная миниатюра",
+    "bytes": 4762,
+    "sha256": "a5c904efa9c8fd9505e7ed6f7857f73d0463114bc8611f40a04f486c4f7513ae"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/web/hero-22-384.webp",
+    "file": "/media/chef/collage/hero-22-384.webp",
+    "role": "Исходный анимированный коллаж Шеф4: адаптивная миниатюра",
+    "bytes": 16718,
+    "sha256": "cbbaf715415c2bdd3b42a2566505bb60f3dc85e3b05e5e2e0e638ce192435877"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/web/hero-22-192.webp",
+    "file": "/media/chef/collage/hero-22-192.webp",
+    "role": "Исходный анимированный коллаж Шеф4: адаптивная миниатюра",
+    "bytes": 5978,
+    "sha256": "eb3daa7f6c17d2d557dae7ed6fbbc65e448ea7c0b36de95e0e9203dd5d62881a"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/web/hero-23-384.webp",
+    "file": "/media/chef/collage/hero-23-384.webp",
+    "role": "Исходный анимированный коллаж Шеф4: адаптивная миниатюра",
+    "bytes": 12000,
+    "sha256": "4d901c17e6c254970b791d029d0a8e05e0deadd7a1717524e3e36966c6eb0af0"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/web/hero-23-192.webp",
+    "file": "/media/chef/collage/hero-23-192.webp",
+    "role": "Исходный анимированный коллаж Шеф4: адаптивная миниатюра",
+    "bytes": 5164,
+    "sha256": "0dba81cebae8d57109c794e528e968b1c1b8674786684e9dba0272701620088a"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/web/hero-24-384.webp",
+    "file": "/media/chef/collage/hero-24-384.webp",
+    "role": "Исходный анимированный коллаж Шеф4: адаптивная миниатюра",
+    "bytes": 11506,
+    "sha256": "2fe48f323d3c99b050d32f66ca92b5c7e225b9616d30ab51baa315e708995cb0"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/web/hero-24-192.webp",
+    "file": "/media/chef/collage/hero-24-192.webp",
+    "role": "Исходный анимированный коллаж Шеф4: адаптивная миниатюра",
+    "bytes": 4550,
+    "sha256": "6c5fbeb0bea6d66e99aa0403b7b83fd43a4f8261d4af475904d97b9025031f62"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/web/hero-25-384.webp",
+    "file": "/media/chef/collage/hero-25-384.webp",
+    "role": "Исходный анимированный коллаж Шеф4: адаптивная миниатюра",
+    "bytes": 5432,
+    "sha256": "84a02fc308069b77806febdb57ec863f1a492be83a5ee7f0da8e72d403763dc7"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/web/hero-25-192.webp",
+    "file": "/media/chef/collage/hero-25-192.webp",
+    "role": "Исходный анимированный коллаж Шеф4: адаптивная миниатюра",
+    "bytes": 2370,
+    "sha256": "3237382400cf306b1b6cd61a07980a253c3c9f9c448d384d77c228113813ccaa"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/web/hero-26-384.webp",
+    "file": "/media/chef/collage/hero-26-384.webp",
+    "role": "Исходный анимированный коллаж Шеф4: адаптивная миниатюра",
+    "bytes": 15218,
+    "sha256": "45e3b329a0e6869ef8151a2b9a9dee2f2f9c551e2599bf1a277cea5813e54fd8"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/web/hero-26-192.webp",
+    "file": "/media/chef/collage/hero-26-192.webp",
+    "role": "Исходный анимированный коллаж Шеф4: адаптивная миниатюра",
+    "bytes": 6300,
+    "sha256": "cbfce320ac3251fbee9265b45ada505594e1f42d2e1b3617d59f3ea6cf30491b"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/web/hero-27-384.webp",
+    "file": "/media/chef/collage/hero-27-384.webp",
+    "role": "Исходный анимированный коллаж Шеф4: адаптивная миниатюра",
+    "bytes": 10518,
+    "sha256": "d3cf9ad57d70a1c90d1c2e905eca341ffc4165b9039bacb5183e92147c465edd"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/web/hero-27-192.webp",
+    "file": "/media/chef/collage/hero-27-192.webp",
+    "role": "Исходный анимированный коллаж Шеф4: адаптивная миниатюра",
+    "bytes": 4516,
+    "sha256": "89eff00935f24b6878f73031c2349825fd54ef6ac0bc8efdd676bd7d709d5b71"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/web/hero-28-384.webp",
+    "file": "/media/chef/collage/hero-28-384.webp",
+    "role": "Исходный анимированный коллаж Шеф4: адаптивная миниатюра",
+    "bytes": 10138,
+    "sha256": "1c1820170ba8dde9b5031db425f0c64fe5a81dc3f4b737f8c3b90e5a4deece01"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/web/hero-28-192.webp",
+    "file": "/media/chef/collage/hero-28-192.webp",
+    "role": "Исходный анимированный коллаж Шеф4: адаптивная миниатюра",
+    "bytes": 4040,
+    "sha256": "62b4d83305d53c37efb03fdfd73343fe23f233b542954e6330efec68dec7629d"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/web/hero-29-384.webp",
+    "file": "/media/chef/collage/hero-29-384.webp",
+    "role": "Исходный анимированный коллаж Шеф4: адаптивная миниатюра",
+    "bytes": 10444,
+    "sha256": "9959132d54b60a2c5d5c902c64e3f40d74661b2629156dad923f39812fcaf5bf"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/web/hero-29-192.webp",
+    "file": "/media/chef/collage/hero-29-192.webp",
+    "role": "Исходный анимированный коллаж Шеф4: адаптивная миниатюра",
+    "bytes": 4310,
+    "sha256": "214dbd639dc5e1da595232f30a9c0819537eff98cb5a1efca57566782dd38779"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/web/hero-30-384.webp",
+    "file": "/media/chef/collage/hero-30-384.webp",
+    "role": "Исходный анимированный коллаж Шеф4: адаптивная миниатюра",
+    "bytes": 7988,
+    "sha256": "fe38cbb7584b2d11d3b1697a4b538ede29f73abb735d406a12e89ef30725df15"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/web/hero-30-192.webp",
+    "file": "/media/chef/collage/hero-30-192.webp",
+    "role": "Исходный анимированный коллаж Шеф4: адаптивная миниатюра",
+    "bytes": 3370,
+    "sha256": "b6c19f67ae2b86674ac0d13e23e4ea2d45190973f41fa40d6f8140fb8900abde"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/web/hero-31-384.webp",
+    "file": "/media/chef/collage/hero-31-384.webp",
+    "role": "Исходный анимированный коллаж Шеф4: адаптивная миниатюра",
+    "bytes": 13860,
+    "sha256": "3f37f6f60eabce804843be661fe2894d44f3b4352d98c89ab08ff88d200ce71b"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/web/hero-31-192.webp",
+    "file": "/media/chef/collage/hero-31-192.webp",
+    "role": "Исходный анимированный коллаж Шеф4: адаптивная миниатюра",
+    "bytes": 4694,
+    "sha256": "117c67d522e760f39b8b9eaf00faf5440b53ffc10a5649912d5ae0be2a0d7d22"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/web/hero-32-384.webp",
+    "file": "/media/chef/collage/hero-32-384.webp",
+    "role": "Исходный анимированный коллаж Шеф4: адаптивная миниатюра",
+    "bytes": 11396,
+    "sha256": "4c4c4806fb9a64029a7c8e00a7e8c043f5f5f2d7cff6bcab3fd505bc0201c048"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/web/hero-32-192.webp",
+    "file": "/media/chef/collage/hero-32-192.webp",
+    "role": "Исходный анимированный коллаж Шеф4: адаптивная миниатюра",
+    "bytes": 4700,
+    "sha256": "df1740b69c4d356ab30a91c71e5cb4d1074d7bae11da8979457c42bb2e3ed1b3"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/web/hero-33-384.webp",
+    "file": "/media/chef/collage/hero-33-384.webp",
+    "role": "Исходный анимированный коллаж Шеф4: адаптивная миниатюра",
+    "bytes": 11470,
+    "sha256": "829462ea54bb39355e445c314dbdabd02f376504b8fc4432346cc8d7159ed83f"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/web/hero-33-192.webp",
+    "file": "/media/chef/collage/hero-33-192.webp",
+    "role": "Исходный анимированный коллаж Шеф4: адаптивная миниатюра",
+    "bytes": 3680,
+    "sha256": "fc8a1b5d5ebb856ad7a97b69feac049eae84f772e40240b2d6f7749d2920022c"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/web/hero-34-384.webp",
+    "file": "/media/chef/collage/hero-34-384.webp",
+    "role": "Исходный анимированный коллаж Шеф4: адаптивная миниатюра",
+    "bytes": 12758,
+    "sha256": "8db35392fcda3098933fb189f988788b5c3f66db8f7b90be9af3f95184a3f64c"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/web/hero-34-192.webp",
+    "file": "/media/chef/collage/hero-34-192.webp",
+    "role": "Исходный анимированный коллаж Шеф4: адаптивная миниатюра",
+    "bytes": 4836,
+    "sha256": "1de6931af0be8523cdcf02a21eeda95524373b248dd09b1045b87301e0621bc7"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/web/hero-35-384.webp",
+    "file": "/media/chef/collage/hero-35-384.webp",
+    "role": "Исходный анимированный коллаж Шеф4: адаптивная миниатюра",
+    "bytes": 8866,
+    "sha256": "4c9dafdb870b646d74527d852eca55148fd415c9b9e199f2ac26b0ba78ff889d"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/web/hero-35-192.webp",
+    "file": "/media/chef/collage/hero-35-192.webp",
+    "role": "Исходный анимированный коллаж Шеф4: адаптивная миниатюра",
+    "bytes": 3928,
+    "sha256": "ca1e05f48d12723ee66639b0b6ee7600abd9c1951d9838a53a23369b469209bc"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/web/hero-36-384.webp",
+    "file": "/media/chef/collage/hero-36-384.webp",
+    "role": "Исходный анимированный коллаж Шеф4: адаптивная миниатюра",
+    "bytes": 11446,
+    "sha256": "72156bed5cefe392dc5bd3f2f8d891dd12743d4d6d55f0ece80fa1c81ed5a25b"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/web/hero-36-192.webp",
+    "file": "/media/chef/collage/hero-36-192.webp",
+    "role": "Исходный анимированный коллаж Шеф4: адаптивная миниатюра",
+    "bytes": 5088,
+    "sha256": "328f1b1f1b07bc78646d16c852b11d0c4eab7801f41653577c42a22ab5684e8f"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/web/hero-37-384.webp",
+    "file": "/media/chef/collage/hero-37-384.webp",
+    "role": "Исходный анимированный коллаж Шеф4: адаптивная миниатюра",
+    "bytes": 22790,
+    "sha256": "9837668e2e9f4794f756afef194890b164fd223240fd0a4c869c78c4d88e8673"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/web/hero-37-192.webp",
+    "file": "/media/chef/collage/hero-37-192.webp",
+    "role": "Исходный анимированный коллаж Шеф4: адаптивная миниатюра",
+    "bytes": 7784,
+    "sha256": "753f6247c2ea878a6aac8cd01c337081359cd04a3932d863f98ef6194c071b08"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/web/hero-38-384.webp",
+    "file": "/media/chef/collage/hero-38-384.webp",
+    "role": "Исходный анимированный коллаж Шеф4: адаптивная миниатюра",
+    "bytes": 11722,
+    "sha256": "4d646ec20e2bed35b47503833a6e00986e3ae07cb16c63157cec9373858bc473"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/web/hero-38-192.webp",
+    "file": "/media/chef/collage/hero-38-192.webp",
+    "role": "Исходный анимированный коллаж Шеф4: адаптивная миниатюра",
+    "bytes": 4806,
+    "sha256": "2410de849013a871e81d57db8ebd463deef26144ffb04975cb133d160f0b8493"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/web/hero-39-384.webp",
+    "file": "/media/chef/collage/hero-39-384.webp",
+    "role": "Исходный анимированный коллаж Шеф4: адаптивная миниатюра",
+    "bytes": 12140,
+    "sha256": "604d3429938c19edb202131ebc21c444f07ca8981e57151679df7eac2c85c2f8"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/web/hero-39-192.webp",
+    "file": "/media/chef/collage/hero-39-192.webp",
+    "role": "Исходный анимированный коллаж Шеф4: адаптивная миниатюра",
+    "bytes": 4872,
+    "sha256": "2cdd398837a97e4928e5f4c6023b17bbbf73ff15c94eced96098122aadc4696b"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/web/hero-40-384.webp",
+    "file": "/media/chef/collage/hero-40-384.webp",
+    "role": "Исходный анимированный коллаж Шеф4: адаптивная миниатюра",
+    "bytes": 15962,
+    "sha256": "284a0ceaca5f361a6c37d1b2988d156ac6e0fdddb28d0ae13dd81e3b3af1977e"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/web/hero-40-192.webp",
+    "file": "/media/chef/collage/hero-40-192.webp",
+    "role": "Исходный анимированный коллаж Шеф4: адаптивная миниатюра",
+    "bytes": 6612,
+    "sha256": "c505b260236ca042ea9d44b5c2a2b48b51478a4fbfc0ee69dcd44e0795479b97"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/web/hero-41-384.webp",
+    "file": "/media/chef/collage/hero-41-384.webp",
+    "role": "Исходный анимированный коллаж Шеф4: адаптивная миниатюра",
+    "bytes": 15448,
+    "sha256": "9c02bc2dc8d143ec1638b7b7fcabe27a5fb389defa81da0858b561cf501b9450"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/web/hero-41-192.webp",
+    "file": "/media/chef/collage/hero-41-192.webp",
+    "role": "Исходный анимированный коллаж Шеф4: адаптивная миниатюра",
+    "bytes": 6960,
+    "sha256": "da6956567f822d4a1776cae4f851aa51c7dbc3fe976d3b2362e7f0cf4eb68389"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/web/hero-42-384.webp",
+    "file": "/media/chef/collage/hero-42-384.webp",
+    "role": "Исходный анимированный коллаж Шеф4: адаптивная миниатюра",
+    "bytes": 8628,
+    "sha256": "f1a8339d104a2572687364f6e08c323032757f90f8b043677be480c6643575a6"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/web/hero-42-192.webp",
+    "file": "/media/chef/collage/hero-42-192.webp",
+    "role": "Исходный анимированный коллаж Шеф4: адаптивная миниатюра",
+    "bytes": 4202,
+    "sha256": "9272924550ac606b881e898ce55a903c48255d3ccf9ae8d50161468638fbb4d4"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/web/hero-43-384.webp",
+    "file": "/media/chef/collage/hero-43-384.webp",
+    "role": "Исходный анимированный коллаж Шеф4: адаптивная миниатюра",
+    "bytes": 17154,
+    "sha256": "b2c2c0feeda46fefc72ad832c91ca4495236f8375791d52b43135b554f389b00"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/web/hero-43-192.webp",
+    "file": "/media/chef/collage/hero-43-192.webp",
+    "role": "Исходный анимированный коллаж Шеф4: адаптивная миниатюра",
+    "bytes": 6690,
+    "sha256": "ce90a3667d54a6d85e874127960994e67cec0056e7bb7bd2b5609d6dcc355711"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/web/hero-44-384.webp",
+    "file": "/media/chef/collage/hero-44-384.webp",
+    "role": "Исходный анимированный коллаж Шеф4: адаптивная миниатюра",
+    "bytes": 9312,
+    "sha256": "9b4bda39e3aa4ad29ce4972e523b7d595a1384ae180b0541b96bd7471203bf91"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/web/hero-44-192.webp",
+    "file": "/media/chef/collage/hero-44-192.webp",
+    "role": "Исходный анимированный коллаж Шеф4: адаптивная миниатюра",
+    "bytes": 3840,
+    "sha256": "e5c3c50a215f4bbae60da825a70626ecf9da9d984315ea652a6de7037a0e7e67"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/web/hero-45-384.webp",
+    "file": "/media/chef/collage/hero-45-384.webp",
+    "role": "Исходный анимированный коллаж Шеф4: адаптивная миниатюра",
+    "bytes": 12234,
+    "sha256": "540761bf5861b6bd9503a2a5921d184e6d8bde87a85ad0a7fcdfd27e559717cc"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/web/hero-45-192.webp",
+    "file": "/media/chef/collage/hero-45-192.webp",
+    "role": "Исходный анимированный коллаж Шеф4: адаптивная миниатюра",
+    "bytes": 3852,
+    "sha256": "553b15b338b0b30dcbadd3aaf1835a50757e27d9dd85c0e0abfa96126e53bf80"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/web/hero-46-384.webp",
+    "file": "/media/chef/collage/hero-46-384.webp",
+    "role": "Исходный анимированный коллаж Шеф4: адаптивная миниатюра",
+    "bytes": 9194,
+    "sha256": "9cfbca4524aecd88028216ed9a404e1c0054ace3f3e12e06d54aa4cbffb359ba"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/web/hero-46-192.webp",
+    "file": "/media/chef/collage/hero-46-192.webp",
+    "role": "Исходный анимированный коллаж Шеф4: адаптивная миниатюра",
+    "bytes": 4014,
+    "sha256": "5cc5bb4f3d38cbb281e3bd1558b22ec39d868cc9bab62794d6ec2c1f4ffd53f6"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/web/hero-47-384.webp",
+    "file": "/media/chef/collage/hero-47-384.webp",
+    "role": "Исходный анимированный коллаж Шеф4: адаптивная миниатюра",
+    "bytes": 10292,
+    "sha256": "98065a3a5c623f181c50fc56f8a89c4bac980dc497311d501aed10375c8a5a4b"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/web/hero-47-192.webp",
+    "file": "/media/chef/collage/hero-47-192.webp",
+    "role": "Исходный анимированный коллаж Шеф4: адаптивная миниатюра",
+    "bytes": 4232,
+    "sha256": "c1748276136f05d731b1815ae67dcd039964d4fade0887dc07f8f4f2058e2fdf"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/web/hero-48-384.webp",
+    "file": "/media/chef/collage/hero-48-384.webp",
+    "role": "Исходный анимированный коллаж Шеф4: адаптивная миниатюра",
+    "bytes": 13698,
+    "sha256": "be1015b1175d2a91b6d578d3ee4e098a271b9928e399e5bd8c5d9666018ba0bc"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/web/hero-48-192.webp",
+    "file": "/media/chef/collage/hero-48-192.webp",
+    "role": "Исходный анимированный коллаж Шеф4: адаптивная миниатюра",
+    "bytes": 5460,
+    "sha256": "a55b7306abc5e034e00493cd78f632755c6662f0e5009a2fbae7fe9e790b9e6e"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/web/hero-49-384.webp",
+    "file": "/media/chef/collage/hero-49-384.webp",
+    "role": "Исходный анимированный коллаж Шеф4: адаптивная миниатюра",
+    "bytes": 12670,
+    "sha256": "f584a74733ad52c9c9e346c3273f3d31c93912fb2fafe1cf66747be6fc43fb53"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/web/hero-49-192.webp",
+    "file": "/media/chef/collage/hero-49-192.webp",
+    "role": "Исходный анимированный коллаж Шеф4: адаптивная миниатюра",
+    "bytes": 5560,
+    "sha256": "16c3ba7f69338bbe440c7770cac2b199db943f54af55b8a6e63f549dd2c63ea3"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/web/hero-50-384.webp",
+    "file": "/media/chef/collage/hero-50-384.webp",
+    "role": "Исходный анимированный коллаж Шеф4: адаптивная миниатюра",
+    "bytes": 8008,
+    "sha256": "329e771f8642f047d95d502aaff09d3f9c3fdb9892619c3b9f5e7c70e6345261"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/web/hero-50-192.webp",
+    "file": "/media/chef/collage/hero-50-192.webp",
+    "role": "Исходный анимированный коллаж Шеф4: адаптивная миниатюра",
+    "bytes": 3320,
+    "sha256": "e84e5b69060ba2420dd9f9a3b3ab7bd2eee1e7eab993ba03bdb17bb8a90020ea"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/web/hero-51-384.webp",
+    "file": "/media/chef/collage/hero-51-384.webp",
+    "role": "Исходный анимированный коллаж Шеф4: адаптивная миниатюра",
+    "bytes": 26204,
+    "sha256": "0eb1ee6b6ca26c9bf4f0abd0b22f42f280f6905ec3743b63ecfc8afc8ca0f10b"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/web/hero-51-192.webp",
+    "file": "/media/chef/collage/hero-51-192.webp",
+    "role": "Исходный анимированный коллаж Шеф4: адаптивная миниатюра",
+    "bytes": 11986,
+    "sha256": "caf3405c1414f50e2d590ff6f21b6cff4c2eacdfd9fa0fe11c612201263ce55e"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/web/hero-52-384.webp",
+    "file": "/media/chef/collage/hero-52-384.webp",
+    "role": "Исходный анимированный коллаж Шеф4: адаптивная миниатюра",
+    "bytes": 5424,
+    "sha256": "cdf779507d3d60de6ea218b61f0768d47c300c302441638440d9727bd745c427"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/web/hero-52-192.webp",
+    "file": "/media/chef/collage/hero-52-192.webp",
+    "role": "Исходный анимированный коллаж Шеф4: адаптивная миниатюра",
+    "bytes": 2928,
+    "sha256": "97412555d4cfce11dc593ed4e00233f36acc2977f0256bb052f4e30c6d8b25ca"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/web/hero-53-384.webp",
+    "file": "/media/chef/collage/hero-53-384.webp",
+    "role": "Исходный анимированный коллаж Шеф4: адаптивная миниатюра",
+    "bytes": 8680,
+    "sha256": "ffd1461995c86672c407d226697021bc255ee298807427e04a7e38fffa186381"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/web/hero-53-192.webp",
+    "file": "/media/chef/collage/hero-53-192.webp",
+    "role": "Исходный анимированный коллаж Шеф4: адаптивная миниатюра",
+    "bytes": 3730,
+    "sha256": "98b1d90de885fc2d896daf4af8ab8aadc4a7c00e2cd8517b5cf5e770d1828946"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/web/hero-54-384.webp",
+    "file": "/media/chef/collage/hero-54-384.webp",
+    "role": "Исходный анимированный коллаж Шеф4: адаптивная миниатюра",
+    "bytes": 7148,
+    "sha256": "aa08cc9a30b6cd66b3abdcb4f63beb9a9614736aa735acf1ab1ce0801a460001"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/web/hero-54-192.webp",
+    "file": "/media/chef/collage/hero-54-192.webp",
+    "role": "Исходный анимированный коллаж Шеф4: адаптивная миниатюра",
+    "bytes": 3014,
+    "sha256": "141d63c4406d6ea8ea9d7acd20044ed524ee3b9c509b48eb140402734e48f416"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/web/hero-55-384.webp",
+    "file": "/media/chef/collage/hero-55-384.webp",
+    "role": "Исходный анимированный коллаж Шеф4: адаптивная миниатюра",
+    "bytes": 7970,
+    "sha256": "6652d24d1a6591357db9f112afb1c0a42420738529ee0f3a3d901889476c1cfc"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/web/hero-55-192.webp",
+    "file": "/media/chef/collage/hero-55-192.webp",
+    "role": "Исходный анимированный коллаж Шеф4: адаптивная миниатюра",
+    "bytes": 3416,
+    "sha256": "09752f6111eb5303dbfcc14e037de0f9d10aab7cf997ec4209793c51325e07f9"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/web/hero-56-384.webp",
+    "file": "/media/chef/collage/hero-56-384.webp",
+    "role": "Исходный анимированный коллаж Шеф4: адаптивная миниатюра",
+    "bytes": 7410,
+    "sha256": "c792a2451da433f550de177f20fd8850e97ae84a252285d49f3f1bbd3acebac9"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/web/hero-56-192.webp",
+    "file": "/media/chef/collage/hero-56-192.webp",
+    "role": "Исходный анимированный коллаж Шеф4: адаптивная миниатюра",
+    "bytes": 2448,
+    "sha256": "8ca44852e96ec12cb1dd6710c11a41a66ba8c28ee5c42598f45303c6caf14352"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/web/hero-57-384.webp",
+    "file": "/media/chef/collage/hero-57-384.webp",
+    "role": "Исходный анимированный коллаж Шеф4: адаптивная миниатюра",
+    "bytes": 10486,
+    "sha256": "2d8ec1b577c74be5009656c289c0f0a91311ba0e268b8cbd00745a89ff850109"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/web/hero-57-192.webp",
+    "file": "/media/chef/collage/hero-57-192.webp",
+    "role": "Исходный анимированный коллаж Шеф4: адаптивная миниатюра",
+    "bytes": 4044,
+    "sha256": "9de0cde3b1d83c936fb7f765f7058b853ccaab16b43a58b6913c91c5141e6ed3"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/web/hero-58-384.webp",
+    "file": "/media/chef/collage/hero-58-384.webp",
+    "role": "Исходный анимированный коллаж Шеф4: адаптивная миниатюра",
+    "bytes": 7038,
+    "sha256": "fbdbe6560a70bb5627a478fe162b4aa1546128b070868e6c12a6cf3880c73106"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/web/hero-58-192.webp",
+    "file": "/media/chef/collage/hero-58-192.webp",
+    "role": "Исходный анимированный коллаж Шеф4: адаптивная миниатюра",
+    "bytes": 3168,
+    "sha256": "8d1b2c72ecbc94f41405ed6ab33906e174c0f9b60ec88dead53af52897d38f3e"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/web/hero-59-384.webp",
+    "file": "/media/chef/collage/hero-59-384.webp",
+    "role": "Исходный анимированный коллаж Шеф4: адаптивная миниатюра",
+    "bytes": 10248,
+    "sha256": "773b5acbc25b50ebaaeb9582c1022f113def8cb509b0b8df6b3fa9234a1f1001"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/web/hero-59-192.webp",
+    "file": "/media/chef/collage/hero-59-192.webp",
+    "role": "Исходный анимированный коллаж Шеф4: адаптивная миниатюра",
+    "bytes": 3764,
+    "sha256": "59d621b89e403dd3fb46bf9ecd36e8ecc432b6bc4d0e881035e4c7c4928bef24"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/web/hero-60-384.webp",
+    "file": "/media/chef/collage/hero-60-384.webp",
+    "role": "Исходный анимированный коллаж Шеф4: адаптивная миниатюра",
+    "bytes": 8848,
+    "sha256": "01408cd601e35b5f70c778358e186d0a3f693945950deceebf670922cdcffefc"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/web/hero-60-192.webp",
+    "file": "/media/chef/collage/hero-60-192.webp",
+    "role": "Исходный анимированный коллаж Шеф4: адаптивная миниатюра",
+    "bytes": 3480,
+    "sha256": "8eb0496420cea7dc3dc7b1b345b4960a7a136f30f914c86afbb7ba4194f8e735"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/web/hero-61-384.webp",
+    "file": "/media/chef/collage/hero-61-384.webp",
+    "role": "Исходный анимированный коллаж Шеф4: адаптивная миниатюра",
+    "bytes": 10678,
+    "sha256": "c651eb2065b1e8998942e8bebe771bcd1a1bb9989b9e7f23a2bb71aaa2ffa193"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/web/hero-61-192.webp",
+    "file": "/media/chef/collage/hero-61-192.webp",
+    "role": "Исходный анимированный коллаж Шеф4: адаптивная миниатюра",
+    "bytes": 4328,
+    "sha256": "76b69ffd9c93a337f77e0eb86139514a8d0bce332587d7e158afc154641e49d8"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/web/hero-62-384.webp",
+    "file": "/media/chef/collage/hero-62-384.webp",
+    "role": "Исходный анимированный коллаж Шеф4: адаптивная миниатюра",
+    "bytes": 17906,
+    "sha256": "bf8db352d1141f91e03ebfbcd54c68760f00f752a6f95357eb5a73e7d3d3f020"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/web/hero-62-192.webp",
+    "file": "/media/chef/collage/hero-62-192.webp",
+    "role": "Исходный анимированный коллаж Шеф4: адаптивная миниатюра",
+    "bytes": 6640,
+    "sha256": "775d8d7c1bae4d05a950862de8e9c62abea83514311cd2c64c7279e0212c24e2"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/web/hero-63-384.webp",
+    "file": "/media/chef/collage/hero-63-384.webp",
+    "role": "Исходный анимированный коллаж Шеф4: адаптивная миниатюра",
+    "bytes": 11202,
+    "sha256": "96b7b8d687eeee49def133b29a1c0d63d92c80d494af3adfa2750baa9dc2ce6f"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/web/hero-63-192.webp",
+    "file": "/media/chef/collage/hero-63-192.webp",
+    "role": "Исходный анимированный коллаж Шеф4: адаптивная миниатюра",
+    "bytes": 4766,
+    "sha256": "95f3f933ce0d290573431b3fef40361c19278343282c1ac7377e34ecf7bd0706"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/event-formats/private-event-outdoor-crepes.png",
+    "file": "/media/chef/events-1536.webp",
+    "role": "Мероприятия: адаптивная версия высокого качества 1536 px",
+    "processing": "WebP quality 94, method 6, sharp YUV; proportional downsize to 1536px wide; no crop or upscaling",
+    "width": 1536,
+    "height": 1019,
+    "bytes": 204274,
+    "sha256": "1bccf9db14e792d291124a23627922845f35ab58d144135887f02eef2d5a13b8"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/web/chef-hero-apron-320.webp",
+    "file": "/media/chef/hero-portrait-320.webp",
+    "role": "Ключевой портрет Шеф4: Евгений в полосатом фартуке, 320 px",
+    "bytes": 14858,
+    "sha256": "aaed3fa3205028e808b1a6823349f583bc40238e20d0d78da683f7c3f6b39a32"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/web/chef-hero-apron-576.webp",
+    "file": "/media/chef/hero-portrait-576.webp",
+    "role": "Ключевой портрет Шеф4: Евгений в полосатом фартуке, 576 px",
+    "bytes": 32766,
+    "sha256": "233743a2aff02e4773941283d598a41de09c466022d7b2ac8d183cf21e804a81"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/chef-hero-apron.jpg",
+    "file": "/media/chef/hero-portrait-original.jpg",
+    "role": "Главный портрет: оригинальный JPEG без повторного сжатия",
+    "processing": "Original JPEG copied byte-for-byte; approved crop applied only through CSS",
+    "width": 576,
+    "height": 1280,
+    "bytes": 57075,
+    "sha256": "49f2c6542adae8b16fd4bd72f9b2eb12d203144a52cb11c612a6104beb5c8f31"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/event-formats/private-dinner-wide-v2.png",
+    "generatedSource": "output/service-renders/originals/dinner-desktop.png",
+    "file": "/media/chef/renders/dinner-desktop.webp",
+    "role": "Полный фон формата dinner, desktop: окружение дорисовано по запросу пользователя",
+    "processing": "Built-in image_gen outpainting; WebP quality 94; native render resolution; no crop in the exported file",
+    "width": 1672,
+    "height": 941,
+    "bytes": 243128,
+    "sha256": "bcf8e1fc5702d699127e43a799f778e675174ab4faa6dcc9cb272af29a06dfdc"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/event-formats/private-dinner-wide-v2.png",
+    "generatedSource": "output/service-renders/originals/dinner-desktop.png",
+    "file": "/media/chef/renders/dinner-desktop-1024.webp",
+    "role": "Полный фон формата dinner, desktop: окружение дорисовано по запросу пользователя",
+    "processing": "Built-in image_gen outpainting; WebP quality 94; proportional downsize to 1024px; no crop in the exported file",
+    "width": 1024,
+    "height": 577,
+    "bytes": 125104,
+    "sha256": "3878b7bf09df0007d38c2d1df2fd0f9b6573c38f1798cd197b9c3e03f4ff1728"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/event-formats/private-dinner-wide-v2.png",
+    "generatedSource": "output/service-renders/originals/dinner-mobile.png",
+    "file": "/media/chef/renders/dinner-mobile.webp",
+    "role": "Полный фон формата dinner, mobile: окружение дорисовано по запросу пользователя",
+    "processing": "Built-in image_gen outpainting; WebP quality 94; native render resolution; no crop in the exported file",
+    "width": 852,
+    "height": 1846,
+    "bytes": 234562,
+    "sha256": "7e5a3bf472e2e47b9b319027a4019bc97b48cee42f1143ac1c6730ec557dcaab"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/event-formats/private-dinner-wide-v2.png",
+    "generatedSource": "output/service-renders/originals/dinner-mobile.png",
+    "file": "/media/chef/renders/dinner-mobile-512.webp",
+    "role": "Полный фон формата dinner, mobile: окружение дорисовано по запросу пользователя",
+    "processing": "Built-in image_gen outpainting; WebP quality 94; proportional downsize to 512px; no crop in the exported file",
+    "width": 512,
+    "height": 1110,
+    "bytes": 114282,
+    "sha256": "b2081a3f6d181b108f9bf95c400f195a170286f08aa862dea8c2865fcfaab63c"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/event-formats/private-event-outdoor-crepes.png",
+    "generatedSource": "output/service-renders/originals/events-desktop.png",
+    "file": "/media/chef/renders/events-desktop.webp",
+    "role": "Полный фон формата events, desktop: окружение дорисовано по запросу пользователя",
+    "processing": "Built-in image_gen outpainting; WebP quality 94; native render resolution; no crop in the exported file",
+    "width": 1672,
+    "height": 941,
+    "bytes": 358408,
+    "sha256": "4c3b2dad91b70665236626f406f8512663eb44b36f3925610e24dd65eca372f7"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/event-formats/private-event-outdoor-crepes.png",
+    "generatedSource": "output/service-renders/originals/events-desktop.png",
+    "file": "/media/chef/renders/events-desktop-1024.webp",
+    "role": "Полный фон формата events, desktop: окружение дорисовано по запросу пользователя",
+    "processing": "Built-in image_gen outpainting; WebP quality 94; proportional downsize to 1024px; no crop in the exported file",
+    "width": 1024,
+    "height": 577,
+    "bytes": 182530,
+    "sha256": "ecb49d6a3f84f9aa1d0f885e3a55e91b342968d5fc86e1f68cddb5a97d6445a4"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/event-formats/private-event-outdoor-crepes.png",
+    "generatedSource": "output/service-renders/originals/events-mobile.png",
+    "file": "/media/chef/renders/events-mobile.webp",
+    "role": "Полный фон формата events, mobile: окружение дорисовано по запросу пользователя",
+    "processing": "Built-in image_gen outpainting; WebP quality 94; native render resolution; no crop in the exported file",
+    "width": 853,
+    "height": 1844,
+    "bytes": 367990,
+    "sha256": "a8fba28ccbe64a9fa97ff839b9a4b71cc62170aa58bfba550fc03250ff9c7ef0"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/event-formats/private-event-outdoor-crepes.png",
+    "generatedSource": "output/service-renders/originals/events-mobile.png",
+    "file": "/media/chef/renders/events-mobile-512.webp",
+    "role": "Полный фон формата events, mobile: окружение дорисовано по запросу пользователя",
+    "processing": "Built-in image_gen outpainting; WebP quality 94; proportional downsize to 512px; no crop in the exported file",
+    "width": 512,
+    "height": 1107,
+    "bytes": 181008,
+    "sha256": "54f791214d11796f39e9b21851e81b029712c23137da4f48f447f961751ac545"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/event-formats/masterclass.jpg",
+    "generatedSource": "output/service-renders/originals/masterclass-desktop.png",
+    "file": "/media/chef/renders/masterclass-desktop.webp",
+    "role": "Полный фон формата masterclass, desktop: окружение дорисовано по запросу пользователя",
+    "processing": "Built-in image_gen outpainting; WebP quality 94; native render resolution; no crop in the exported file",
+    "width": 1672,
+    "height": 941,
+    "bytes": 333822,
+    "sha256": "2946f8d38c54b4fea4b60a38c563f5f8e052e89e7a403dbc23b779612c7327a0"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/event-formats/masterclass.jpg",
+    "generatedSource": "output/service-renders/originals/masterclass-desktop.png",
+    "file": "/media/chef/renders/masterclass-desktop-1024.webp",
+    "role": "Полный фон формата masterclass, desktop: окружение дорисовано по запросу пользователя",
+    "processing": "Built-in image_gen outpainting; WebP quality 94; proportional downsize to 1024px; no crop in the exported file",
+    "width": 1024,
+    "height": 577,
+    "bytes": 153692,
+    "sha256": "64b66b272026562c249d92047f8d912df2d33ee37226de8cb1ccd3472ff2780a"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/event-formats/masterclass.jpg",
+    "generatedSource": "output/service-renders/originals/masterclass-mobile.png",
+    "file": "/media/chef/renders/masterclass-mobile.webp",
+    "role": "Полный фон формата masterclass, mobile: окружение дорисовано по запросу пользователя",
+    "processing": "Built-in image_gen outpainting; WebP quality 94; native render resolution; no crop in the exported file",
+    "width": 830,
+    "height": 1896,
+    "bytes": 330360,
+    "sha256": "473a2de8fc5e2b077519f4a1be641ed109c904e0cb43c563088813697c837884"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/event-formats/masterclass.jpg",
+    "generatedSource": "output/service-renders/originals/masterclass-mobile.png",
+    "file": "/media/chef/renders/masterclass-mobile-512.webp",
+    "role": "Полный фон формата masterclass, mobile: окружение дорисовано по запросу пользователя",
+    "processing": "Built-in image_gen outpainting; WebP quality 94; proportional downsize to 512px; no crop in the exported file",
+    "width": 512,
+    "height": 1170,
+    "bytes": 153514,
+    "sha256": "989a21651afa233f18ff02011e39ce0d6381a7afc414ca087b7520566f5f775e"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/event-formats/private-dinner-wide-v2.png",
+    "generatedSource": "output/service-renders/originals/dinner-square.png",
+    "file": "/media/chef/renders/dinner-square.webp",
+    "role": "Полный фон формата dinner, square: окружение дорисовано по запросу пользователя",
+    "processing": "Built-in image_gen outpainting; WebP quality 94; native render resolution; no crop in the exported file",
+    "width": 1327,
+    "height": 1185,
+    "bytes": 215000,
+    "sha256": "08bd032c5a150ec911e7924275d4bc44c295824e90ba271dc676ad6c08c8c27f"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/event-formats/private-dinner-wide-v2.png",
+    "generatedSource": "output/service-renders/originals/dinner-square.png",
+    "file": "/media/chef/renders/dinner-square-1024.webp",
+    "role": "Полный фон формата dinner, square: окружение дорисовано по запросу пользователя",
+    "processing": "Built-in image_gen outpainting; WebP quality 94; proportional downsize to 1024px; no crop in the exported file",
+    "width": 1024,
+    "height": 915,
+    "bytes": 146858,
+    "sha256": "18866038403db82c9eb0c7547ec82e51f6d4ab152e08dd9de0dbbe9337c0e547"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/event-formats/private-event-outdoor-crepes.png",
+    "generatedSource": "output/service-renders/originals/events-square.png",
+    "file": "/media/chef/renders/events-square.webp",
+    "role": "Полный фон формата events, square: окружение дорисовано по запросу пользователя",
+    "processing": "Built-in image_gen outpainting; WebP quality 94; native render resolution; no crop in the exported file",
+    "width": 1327,
+    "height": 1186,
+    "bytes": 403776,
+    "sha256": "f744c1f00ebf57be88d038520d3f5118b27bcf4f50cb83d49005088cf4f40e07"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/event-formats/private-event-outdoor-crepes.png",
+    "generatedSource": "output/service-renders/originals/events-square.png",
+    "file": "/media/chef/renders/events-square-1024.webp",
+    "role": "Полный фон формата events, square: окружение дорисовано по запросу пользователя",
+    "processing": "Built-in image_gen outpainting; WebP quality 94; proportional downsize to 1024px; no crop in the exported file",
+    "width": 1024,
+    "height": 916,
+    "bytes": 275772,
+    "sha256": "fdf35357618950097bd1b84ae97b85855c7af92b3caae7f9d8654a4dc1ddbe4e"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/event-formats/masterclass.jpg",
+    "generatedSource": "output/service-renders/originals/masterclass-square.png",
+    "file": "/media/chef/renders/masterclass-square.webp",
+    "role": "Полный фон формата masterclass, square: окружение дорисовано по запросу пользователя",
+    "processing": "Built-in image_gen outpainting; WebP quality 94; native render resolution; no crop in the exported file",
+    "width": 1327,
+    "height": 1185,
+    "bytes": 350274,
+    "sha256": "668418039d12131a173f4a5e5ba16c7dd1a1cdb3a1ccea88131cb73b676a0d2f"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/event-formats/masterclass.jpg",
+    "generatedSource": "output/service-renders/originals/masterclass-square.png",
+    "file": "/media/chef/renders/masterclass-square-1024.webp",
+    "role": "Полный фон формата masterclass, square: окружение дорисовано по запросу пользователя",
+    "processing": "Built-in image_gen outpainting; WebP quality 94; proportional downsize to 1024px; no crop in the exported file",
+    "width": 1024,
+    "height": 915,
+    "bytes": 219306,
+    "sha256": "8b39570ff95c14b983a7763881e0976ff8daca5b01472222e3ac27337f510429"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/masterchef/evgen-masterchef-user-2026-09-11.jpg",
+    "file": "/media/chef/masterchef-1280.jpg",
+    "role": "Знакомство после хиро и история шефа: фото с МастерШефа целиком",
+    "width": 1280,
+    "height": 1160,
+    "processing": "Оригинальный JPEG скопирован без изменения, обрезки или увеличения",
+    "bytes": 124413,
+    "sha256": "08c08eeb53099e4e5315de12ad7e3ced1f89afd58f6aa30963655409170faf3b"
+  },
+  {
+    "source": "public/media/chef/finished-dish.webp",
+    "generatedSource": "output/process-letter/originals/conversation.png",
+    "file": "/media/chef/letter/conversation.webp",
+    "role": "Иллюстрированный этап: Разговор о пожеланиях",
+    "processing": "Built-in image_gen illustration; watercolor and pencil series; WebP quality 90; native render resolution; no crop",
+    "width": 1536,
+    "height": 1024,
+    "bytes": 425312,
+    "sha256": "7533d512069da5af70e059e2ef1d4b8faedbd4e9b3a34937de1b4c68313e342d"
+  },
+  {
+    "source": "public/media/chef/finished-dish.webp",
+    "generatedSource": "output/process-letter/originals/conversation.png",
+    "file": "/media/chef/letter/conversation-768.webp",
+    "role": "Иллюстрированный этап: Разговор о пожеланиях — адаптивная версия",
+    "processing": "Built-in image_gen illustration; watercolor and pencil series; WebP quality 88; proportional downsize to 768px; no crop",
+    "width": 768,
+    "height": 512,
+    "bytes": 107298,
+    "sha256": "97183b0701462f10631835f3312674c416614e11cf88fdf4747e803f32639791"
+  },
+  {
+    "source": "public/media/chef/finished-dish.webp",
+    "generatedSource": "output/process-letter/originals/menu.png",
+    "file": "/media/chef/letter/menu.webp",
+    "role": "Иллюстрированный этап: Составление меню",
+    "processing": "Built-in image_gen illustration; watercolor and pencil series; WebP quality 90; native render resolution; no crop",
+    "width": 1536,
+    "height": 1024,
+    "bytes": 418806,
+    "sha256": "bacd7c7193678b6804787ee4094a4a35014e95e6d22c6c07fb75de0af673723c"
+  },
+  {
+    "source": "public/media/chef/finished-dish.webp",
+    "generatedSource": "output/process-letter/originals/menu.png",
+    "file": "/media/chef/letter/menu-768.webp",
+    "role": "Иллюстрированный этап: Составление меню — адаптивная версия",
+    "processing": "Built-in image_gen illustration; watercolor and pencil series; WebP quality 88; proportional downsize to 768px; no crop",
+    "width": 768,
+    "height": 512,
+    "bytes": 111578,
+    "sha256": "0d489af7a3336015ba6653c0fa19b3e723182b8962024f7ff3cdabf3b4e5e9b0"
+  },
+  {
+    "source": "public/media/chef/finished-dish.webp",
+    "generatedSource": "output/process-letter/originals/preparation.png",
+    "file": "/media/chef/letter/preparation.webp",
+    "role": "Иллюстрированный этап: Подготовка на кухне",
+    "processing": "Built-in image_gen illustration; watercolor and pencil series; WebP quality 90; native render resolution; no crop",
+    "width": 1536,
+    "height": 1024,
+    "bytes": 436606,
+    "sha256": "5b512005cb1f188be1993e31d5d344862471b592d792609eda17e30f5ee03801"
+  },
+  {
+    "source": "public/media/chef/finished-dish.webp",
+    "generatedSource": "output/process-letter/originals/preparation.png",
+    "file": "/media/chef/letter/preparation-768.webp",
+    "role": "Иллюстрированный этап: Подготовка на кухне — адаптивная версия",
+    "processing": "Built-in image_gen illustration; watercolor and pencil series; WebP quality 88; proportional downsize to 768px; no crop",
+    "width": 768,
+    "height": 512,
+    "bytes": 115000,
+    "sha256": "cc39ef1d8864044eb18d5ac588e905434faad2b3bbf73672766c0121641bee1f"
+  },
+  {
+    "source": "public/media/chef/finished-dish.webp",
+    "generatedSource": "output/process-letter/originals/evening.png",
+    "file": "/media/chef/letter/evening.webp",
+    "role": "Иллюстрированный этап: Вечер за общим столом",
+    "processing": "Built-in image_gen illustration; watercolor and pencil series; WebP quality 90; native render resolution; no crop",
+    "width": 1536,
+    "height": 1024,
+    "bytes": 497436,
+    "sha256": "3fd192a72d1a37ac3e281a9017ec645fb810883e3003c57dbbb70189e95bb180"
+  },
+  {
+    "source": "public/media/chef/finished-dish.webp",
+    "generatedSource": "output/process-letter/originals/evening.png",
+    "file": "/media/chef/letter/evening-768.webp",
+    "role": "Иллюстрированный этап: Вечер за общим столом — адаптивная версия",
+    "processing": "Built-in image_gen illustration; watercolor and pencil series; WebP quality 88; proportional downsize to 768px; no crop",
+    "width": 768,
+    "height": 512,
+    "bytes": 129752,
+    "sha256": "b26896ce85a2f8ea10d536764bab2aa8780d0cd2136af89d5366622285039712"
+  },
+  {
+    "source": "public/media/chef/finished-dish.webp",
+    "compositionReference": "output/process-letter/originals/conversation.png",
+    "generatedSource": "output/process-letter/photoreal/originals/conversation.png",
+    "file": "/media/chef/letter/conversation-photo.webp",
+    "role": "Фотореалистичный рендер этапа: Разговор о пожеланиях",
+    "processing": "Built-in image_gen photorealistic generation; real chef identity reference and previous illustration composition; WebP quality 90; native render resolution; no crop; generated scene, not a documentary photograph",
+    "width": 1536,
+    "height": 1024,
+    "bytes": 234040,
+    "sha256": "3adab0fd2b9987b467c2856eb3a2c11490890a27a093420333ad0920e45c3eb2"
+  },
+  {
+    "source": "public/media/chef/finished-dish.webp",
+    "compositionReference": "output/process-letter/originals/conversation.png",
+    "generatedSource": "output/process-letter/photoreal/originals/conversation.png",
+    "file": "/media/chef/letter/conversation-photo-768.webp",
+    "role": "Фотореалистичный рендер этапа: Разговор о пожеланиях — адаптивная версия",
+    "processing": "Built-in image_gen photorealistic generation; real chef identity reference and previous illustration composition; WebP quality 88; proportional downsize to 768px; no crop; generated scene, not a documentary photograph",
+    "width": 768,
+    "height": 512,
+    "bytes": 79268,
+    "sha256": "acf8954618cee27e67edfd3d1df89027d3d7fae46514c1a3c43b915f86cbf5cb"
+  },
+  {
+    "source": "public/media/chef/finished-dish.webp",
+    "compositionReference": "output/process-letter/originals/menu.png",
+    "generatedSource": "output/process-letter/photoreal/originals/menu.png",
+    "file": "/media/chef/letter/menu-photo.webp",
+    "role": "Фотореалистичный рендер этапа: Составление меню",
+    "processing": "Built-in image_gen photorealistic generation; real chef identity reference and previous illustration composition; WebP quality 90; native render resolution; no crop; generated scene, not a documentary photograph",
+    "width": 1536,
+    "height": 1024,
+    "bytes": 230448,
+    "sha256": "a7330b6a01c1ab5fd8bca1fd98c36f9c8927550e29a5e5067d4a25cc8f251575"
+  },
+  {
+    "source": "public/media/chef/finished-dish.webp",
+    "compositionReference": "output/process-letter/originals/menu.png",
+    "generatedSource": "output/process-letter/photoreal/originals/menu.png",
+    "file": "/media/chef/letter/menu-photo-768.webp",
+    "role": "Фотореалистичный рендер этапа: Составление меню — адаптивная версия",
+    "processing": "Built-in image_gen photorealistic generation; real chef identity reference and previous illustration composition; WebP quality 88; proportional downsize to 768px; no crop; generated scene, not a documentary photograph",
+    "width": 768,
+    "height": 512,
+    "bytes": 79066,
+    "sha256": "99b7b605144dfed11ea3d90d1b3bdb9f13b9382f23b0c10cb4a67a1817e2c6aa"
+  },
+  {
+    "source": "public/media/chef/finished-dish.webp",
+    "compositionReference": "output/process-letter/originals/preparation.png",
+    "generatedSource": "output/process-letter/photoreal/originals/preparation.png",
+    "file": "/media/chef/letter/preparation-photo.webp",
+    "role": "Фотореалистичный рендер этапа: Подготовка на кухне",
+    "processing": "Built-in image_gen photorealistic generation; real chef identity reference and previous illustration composition; WebP quality 90; native render resolution; no crop; generated scene, not a documentary photograph",
+    "width": 1536,
+    "height": 1024,
+    "bytes": 264100,
+    "sha256": "7a29f733aceefbac634fa6110309d1eea304d684c0877c04933eb1968bdd63a9"
+  },
+  {
+    "source": "public/media/chef/finished-dish.webp",
+    "compositionReference": "output/process-letter/originals/preparation.png",
+    "generatedSource": "output/process-letter/photoreal/originals/preparation.png",
+    "file": "/media/chef/letter/preparation-photo-768.webp",
+    "role": "Фотореалистичный рендер этапа: Подготовка на кухне — адаптивная версия",
+    "processing": "Built-in image_gen photorealistic generation; real chef identity reference and previous illustration composition; WebP quality 88; proportional downsize to 768px; no crop; generated scene, not a documentary photograph",
+    "width": 768,
+    "height": 512,
+    "bytes": 89708,
+    "sha256": "be6ede8e3442d822da75d4b843b92250b14def047ecd51fa84a08ce8dc0d7f21"
+  },
+  {
+    "source": "public/media/chef/finished-dish.webp",
+    "compositionReference": "output/process-letter/originals/evening.png",
+    "generatedSource": "output/process-letter/photoreal/originals/evening.png",
+    "file": "/media/chef/letter/evening-photo.webp",
+    "role": "Фотореалистичный рендер этапа: Вечер за общим столом",
+    "processing": "Built-in image_gen photorealistic generation; real chef identity reference and previous illustration composition; WebP quality 90; native render resolution; no crop; generated scene, not a documentary photograph",
+    "width": 1536,
+    "height": 1024,
+    "bytes": 337566,
+    "sha256": "a0f57317359e8573798c9c197a36487855b22d6ad0160fde0622483fbbe583a0"
+  },
+  {
+    "source": "public/media/chef/finished-dish.webp",
+    "compositionReference": "output/process-letter/originals/evening.png",
+    "generatedSource": "output/process-letter/photoreal/originals/evening.png",
+    "file": "/media/chef/letter/evening-photo-768.webp",
+    "role": "Фотореалистичный рендер этапа: Вечер за общим столом — адаптивная версия",
+    "processing": "Built-in image_gen photorealistic generation; real chef identity reference and previous illustration composition; WebP quality 88; proportional downsize to 768px; no crop; generated scene, not a documentary photograph",
+    "width": 768,
+    "height": 512,
+    "bytes": 111984,
+    "sha256": "f2a7463ff87e8695ba423fe63a0f22564360a7588aaf69e9e965b0626332099a"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/hero-instagram/hero-27.webp",
+    "file": "/media/chef/letter/conversation-real.webp",
+    "role": "Разговор: Евгений общается с гостями за столом",
+    "processing": "Original archive photograph copied byte-for-byte; no retouching or generation",
+    "width": 1200,
+    "height": 938,
+    "bytes": 61544,
+    "sha256": "54b9657d8acb3412b875a51dcce394ed66e8a54bddb68f2fe208e58340bf9f20"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/hero-instagram/hero-27.webp",
+    "file": "/media/chef/letter/conversation-real-768.webp",
+    "role": "Разговор: Евгений общается с гостями за столом",
+    "processing": "WebP quality 90, proportional resize to 768px; no retouching, crop, upscaling or generation",
+    "width": 768,
+    "height": 601,
+    "bytes": 56288,
+    "sha256": "ddae6b8f4604cca891adb51d12b74c287640e76c12a7081e5d58d0bf84963529"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/hero-instagram/hero-38.webp",
+    "file": "/media/chef/letter/menu-real.webp",
+    "role": "Меню: Евгений и коллега пробуют блюда",
+    "processing": "Original archive photograph copied byte-for-byte; no retouching or generation",
+    "width": 1200,
+    "height": 790,
+    "bytes": 68998,
+    "sha256": "aa4f58ac9bf2d5ca7d4f38640851a6e3717114e664010e513e4ef4e9691f2546"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/hero-instagram/hero-38.webp",
+    "file": "/media/chef/letter/menu-real-768.webp",
+    "role": "Меню: Евгений и коллега пробуют блюда",
+    "processing": "WebP quality 90, proportional resize to 768px; no retouching, crop, upscaling or generation",
+    "width": 768,
+    "height": 506,
+    "bytes": 60794,
+    "sha256": "a20db18ba1223eea7acc50ee0f746fb63b4f0e732f37efd4c04add73869a424f"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/hero-instagram/hero-10.webp",
+    "file": "/media/chef/letter/preparation-real-768.webp",
+    "role": "Подготовка: Евгений с продуктами и посудой за рабочим столом",
+    "processing": "WebP quality 90, proportional resize to 768px; no retouching, crop, upscaling or generation",
+    "width": 768,
+    "height": 511,
+    "bytes": 46224,
+    "sha256": "1d5927c3af7fd11d7ea48832a6b73f2c8fd9278132e5ed7cad6e4adaca8bda12"
+  },
+  {
+    "source": "/Users/dmitro/Documents/ChatGPT/Шеф4/public/media/hero-instagram/hero-29.webp",
+    "file": "/media/chef/letter/evening-real-768.webp",
+    "role": "Подача: Евгений раскладывает блюдо по тарелкам",
+    "processing": "WebP quality 90, proportional resize to 768px; no retouching, crop, upscaling or generation",
+    "width": 768,
+    "height": 621,
+    "bytes": 55952,
+    "sha256": "84709fd0f57c6ae2b8c1c7e6a5f09421684d9e2903117e2f595dfc8697806a60"
+  },
+  {
+    "source": "output/menu-photos/02-duck-shiitake-ingredients.avif",
+    "sourceUrl": "https://static.wixstatic.com/media/3c79df_dc411df1769d4dd592f25156c965e193~mv2.jpg/v1/fill/w_1480,h_1110,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/3c79df_dc411df1769d4dd592f25156c965e193~mv2.jpg",
+    "sourcePage": "https://www.geertkookt.nl/post/eendenborst-rodewijnsaus",
+    "credit": "Geert Kookt",
+    "role": "Выбор продуктов: утиные грудки, шиитаке, морковь, шалот и травы",
+    "file": "/media/chef/letter/menu/duck-ingredients.webp",
+    "license": "Third-party photograph selected by the user; reuse license not verified",
+    "processing": "WebP quality 88, method 6, sharp YUV; proportional resize without upscaling where needed; no retouching, file crop or generation",
+    "width": 1200,
+    "height": 900,
+    "bytes": 270494,
+    "sha256": "9679641ec34a74a625729ae374e33426f93b883eeb8fd7dcd844eb5cf6a26c9c"
+  },
+  {
+    "source": "output/menu-photos/02-duck-shiitake-ingredients.avif",
+    "sourceUrl": "https://static.wixstatic.com/media/3c79df_dc411df1769d4dd592f25156c965e193~mv2.jpg/v1/fill/w_1480,h_1110,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/3c79df_dc411df1769d4dd592f25156c965e193~mv2.jpg",
+    "sourcePage": "https://www.geertkookt.nl/post/eendenborst-rodewijnsaus",
+    "credit": "Geert Kookt",
+    "role": "Выбор продуктов: утиные грудки, шиитаке, морковь, шалот и травы",
+    "file": "/media/chef/letter/menu/duck-ingredients-600.webp",
+    "license": "Third-party photograph selected by the user; reuse license not verified",
+    "processing": "WebP quality 86, method 6, sharp YUV; proportional resize without upscaling where needed; no retouching, file crop or generation",
+    "width": 600,
+    "height": 450,
+    "bytes": 73720,
+    "sha256": "8f837135071fde6014cebbf94bf72bc4692b5c8dbd1f1c7bc16691c727d50bfd"
+  },
+  {
+    "source": "output/menu-photos/03-vegetables-shiitake.png",
+    "sourceUrl": "https://multimedia.paginasamarillas.es/adsContentSrv/231615519-0-pmRyhPHCxT/fa106b82-5830-4866-b535-bf6633575a01/NEOSANTACATALINA-FOTO2_800x0.png",
+    "sourcePage": "https://www.paginasamarillas.es/f/palma/el-neo-tapas-cocktails-santa-catalina_231615519_000000001.html",
+    "credit": "El Neo / Páginas Amarillas",
+    "role": "Выбор продуктов: грибы шиитаке, овощи и зелень на доске",
+    "file": "/media/chef/letter/menu/vegetables.webp",
+    "license": "Third-party photograph selected by the user; reuse license not verified",
+    "processing": "WebP quality 88, method 6, sharp YUV; proportional resize without upscaling where needed; no retouching, file crop or generation",
+    "width": 800,
+    "height": 919,
+    "bytes": 279148,
+    "sha256": "1a401ab6c7d330fc963138369de15ade2049946ac719f60b631ae77dac0b1424"
+  },
+  {
+    "source": "output/menu-photos/03-vegetables-shiitake.png",
+    "sourceUrl": "https://multimedia.paginasamarillas.es/adsContentSrv/231615519-0-pmRyhPHCxT/fa106b82-5830-4866-b535-bf6633575a01/NEOSANTACATALINA-FOTO2_800x0.png",
+    "sourcePage": "https://www.paginasamarillas.es/f/palma/el-neo-tapas-cocktails-santa-catalina_231615519_000000001.html",
+    "credit": "El Neo / Páginas Amarillas",
+    "role": "Выбор продуктов: грибы шиитаке, овощи и зелень на доске",
+    "file": "/media/chef/letter/menu/vegetables-400.webp",
+    "license": "Third-party photograph selected by the user; reuse license not verified",
+    "processing": "WebP quality 86, method 6, sharp YUV; proportional resize without upscaling where needed; no retouching, file crop or generation",
+    "width": 400,
+    "height": 460,
+    "bytes": 71788,
+    "sha256": "3f7529d84a97848a64d96e848510abd56c722f57ba4012f3b15a62e8b3dce89f"
+  },
+  {
+    "source": "output/menu-photos/04-duck-in-pan-saveur.jpg",
+    "sourceUrl": "https://www.saveur.com/uploads/2019/03/18/6IOLDXG4MHZTCQUO5EQGPVPBEU-1024x683.jpg?format=auto&optimize=high&width=1440",
+    "sourcePage": "https://www.saveur.com/gallery/easy-does-it-how-to-sear-duck-breast/",
+    "credit": "Penny De Los Santos / Saveur",
+    "role": "Выбор продуктов: переворот утиной грудки лопаткой на сковороде",
+    "file": "/media/chef/letter/menu/duck-pan.webp",
+    "license": "Third-party photograph selected by the user; reuse license not verified",
+    "processing": "WebP quality 88, method 6, sharp YUV; proportional resize without upscaling where needed; no retouching, file crop or generation",
+    "width": 1024,
+    "height": 683,
+    "bytes": 128300,
+    "sha256": "5e34cc77d381280741e6c0fc2c5797fa5b60cade6e47ec8a60c75618bff5792f"
+  },
+  {
+    "source": "output/menu-photos/04-duck-in-pan-saveur.jpg",
+    "sourceUrl": "https://www.saveur.com/uploads/2019/03/18/6IOLDXG4MHZTCQUO5EQGPVPBEU-1024x683.jpg?format=auto&optimize=high&width=1440",
+    "sourcePage": "https://www.saveur.com/gallery/easy-does-it-how-to-sear-duck-breast/",
+    "credit": "Penny De Los Santos / Saveur",
+    "role": "Выбор продуктов: переворот утиной грудки лопаткой на сковороде",
+    "file": "/media/chef/letter/menu/duck-pan-512.webp",
+    "license": "Third-party photograph selected by the user; reuse license not verified",
+    "processing": "WebP quality 86, method 6, sharp YUV; proportional resize without upscaling where needed; no retouching, file crop or generation",
+    "width": 512,
+    "height": 342,
+    "bytes": 35108,
+    "sha256": "83fc4577425ec7263e273b5363953d018ea0a438aebdf9ec76e67b129e0c83f8"
+  },
+  {
+    "source": "output/menu-references/recipe-notes-pexels.jpg",
+    "sourceUrl": "https://images.pexels.com/photos/8715616/pexels-photo-8715616.jpeg?auto=compress&w=1800",
+    "sourcePage": "https://www.pexels.com/photo/woman-holding-notebook-with-handwritten-ingredients-8715616/",
+    "credit": "Katya Wolf / Pexels",
+    "role": "Продумываю меню: тетрадь с ингредиентами и кулинарными заметками; иллюстративный референс",
+    "file": "/media/chef/letter/menu-planning.webp",
+    "license": "Pexels License, https://www.pexels.com/license/; verified 2026-09-30",
+    "processing": "WebP quality 88, method 6, sharp YUV; proportional resize to 1600px; no retouching, file crop or generation",
+    "width": 1600,
+    "height": 1067,
+    "bytes": 74386,
+    "sha256": "ce17acbd8bb4cd5ce6ea50ce40072a0e47e752c57e73941cb9ea624296ecdbc0"
+  },
+  {
+    "source": "output/menu-references/recipe-notes-pexels.jpg",
+    "sourceUrl": "https://images.pexels.com/photos/8715616/pexels-photo-8715616.jpeg?auto=compress&w=1800",
+    "sourcePage": "https://www.pexels.com/photo/woman-holding-notebook-with-handwritten-ingredients-8715616/",
+    "credit": "Katya Wolf / Pexels",
+    "role": "Продумываю меню: тетрадь с ингредиентами и кулинарными заметками; иллюстративный референс",
+    "file": "/media/chef/letter/menu-planning-768.webp",
+    "license": "Pexels License, https://www.pexels.com/license/; verified 2026-09-30",
+    "processing": "WebP quality 86, method 6, sharp YUV; proportional resize to 768px; no retouching, file crop or generation",
+    "width": 768,
+    "height": 512,
+    "bytes": 23862,
+    "sha256": "c0bfff8bd67e5aebb916c8ff2d8944b7534d0c8fe2059590219085c5430ee7c9"
+  },
+  {
+    "source": "/Users/dmitro/.codex/generated_images/01a0f2d3-2ec5-7691-8317-ecefafd2a466/exec-30df1f32-5dd9-4fda-8c97-e243cc715a6c.png",
+    "reference": "/Users/dmitro/Desktop/Biotrofi/output/unique-styles-21-30/23-cinematic.png",
+    "file": "/media/chef/letter/conversation-reference.png",
+    "role": "Фотографическая подложка утверждённого макета №23, без надписей и элементов интерфейса",
+    "processing": "Built-in imagegen removed only mockup typography and rail; rendered text and controls are real HTML",
+    "width": 1122,
+    "height": 1402,
+    "bytes": 1707185,
+    "sha256": "4798a26cc8fe86b8a7c2211da7f108481a28fff272a2755fd1641de32fa913aa"
+  },
+  {
+    "source": "output/evening-references/07-jw-marriott.jpg",
+    "sourceUrl": "https://cache.marriott.com/is/image/marriotts7prod/jw-hktkl-private-villa-23067%3AClassic-Hor?fit=constrain&wid=1300",
+    "sourcePage": "https://www.marriott.com/en-us/hotels/hktkl-jw-marriott-khao-lak-resort-and-spa/rooms/premium-rooms/",
+    "credit": "JW Marriott Khao Lak Resort & Spa / Marriott",
+    "role": "Этот вечер — ваш: ужин на террасе виллы у бассейна, шеф готовит рядом; иллюстративный референс, выбранный пользователем",
+    "file": "/media/chef/letter/evening-villa.webp",
+    "license": "Third-party photograph selected by the user; reuse license not verified",
+    "processing": "WebP quality 88, method 6, sharp YUV; original dimensions; no retouching, file crop or generation",
+    "width": 1300,
+    "height": 868,
+    "bytes": 169886,
+    "sha256": "48ac0574099000316b73b2aa121cdc41027650e753c42b351593e8d51962ddca"
+  },
+  {
+    "source": "output/evening-references/07-jw-marriott.jpg",
+    "sourceUrl": "https://cache.marriott.com/is/image/marriotts7prod/jw-hktkl-private-villa-23067%3AClassic-Hor?fit=constrain&wid=1300",
+    "sourcePage": "https://www.marriott.com/en-us/hotels/hktkl-jw-marriott-khao-lak-resort-and-spa/rooms/premium-rooms/",
+    "credit": "JW Marriott Khao Lak Resort & Spa / Marriott",
+    "role": "Этот вечер — ваш: ужин на террасе виллы у бассейна, шеф готовит рядом; иллюстративный референс, выбранный пользователем",
+    "file": "/media/chef/letter/evening-villa-768.webp",
+    "license": "Third-party photograph selected by the user; reuse license not verified",
+    "processing": "WebP quality 86, method 6, sharp YUV; proportional resize to 768px; no retouching, file crop or generation",
+    "width": 768,
+    "height": 513,
+    "bytes": 66610,
+    "sha256": "e282749e77f6db8fdb8a0ff602369664826cca478446325d14a0b6d832da17c9"
+  },
+  {
+    "source": "output/evening-chef-v4/evening-chef-instagram.png",
+    "sourcePage": "https://www.theselenegreece.com/retreats",
+    "credit": "Selene Greece source photograph; Evgeny Instagram identity references; edited using OpenAI imagegen",
+    "role": "Этот вечер — ваш: фотомонтаж выбранной сцены с Евгением по Instagram-референсам",
+    "license": "User-requested AI composite from third-party source photograph and public chef references; source reuse license not verified",
+    "generated": true,
+    "generator": "built-in imagegen",
+    "prompt": "output/evening-chef-v4/prompt.txt",
+    "referencePosts": [
+      "https://www.instagram.com/evg.chef/reel/DFWBk1hseiK/",
+      "https://www.instagram.com/evg.chef/p/DLGRhlXsv6z/",
+      "https://www.instagram.com/vaselloo/p/DKIDgQvNGfn/"
+    ],
+    "file": "/media/chef/letter/evening-chef.webp",
+    "processing": "WebP quality 90, method 6, sharp YUV; proportional sizing; AI person replacement",
+    "width": 1449,
+    "height": 1086,
+    "bytes": 130162,
+    "sha256": "19a42dd9acafcb4f07bac4fa90f2f86adbb93ca63755c1be698c2eb6fa64bb54"
+  },
+  {
+    "source": "output/evening-chef-v4/evening-chef-instagram.png",
+    "sourcePage": "https://www.theselenegreece.com/retreats",
+    "credit": "Selene Greece source photograph; Evgeny Instagram identity references; edited using OpenAI imagegen",
+    "role": "Этот вечер — ваш: фотомонтаж выбранной сцены с Евгением по Instagram-референсам",
+    "license": "User-requested AI composite from third-party source photograph and public chef references; source reuse license not verified",
+    "generated": true,
+    "generator": "built-in imagegen",
+    "prompt": "output/evening-chef-v4/prompt.txt",
+    "referencePosts": [
+      "https://www.instagram.com/evg.chef/reel/DFWBk1hseiK/",
+      "https://www.instagram.com/evg.chef/p/DLGRhlXsv6z/",
+      "https://www.instagram.com/vaselloo/p/DKIDgQvNGfn/"
+    ],
+    "file": "/media/chef/letter/evening-chef-768.webp",
+    "processing": "WebP quality 88, method 6, sharp YUV; proportional sizing; AI person replacement",
+    "width": 768,
+    "height": 576,
+    "bytes": 49440,
+    "sha256": "678305f6b86ab12589e5d2ba97db32038a5c72bf3ec49b8f2ee457814e45a989"
+  },
+  {
+    "source": "output/evening-chef-v5/evening-chef-wine.png",
+    "sourcePage": "https://www.theselenegreece.com/retreats",
+    "credit": "Selene Greece source photograph; Evgeny Instagram identity references; edited using OpenAI imagegen",
+    "role": "Этот вечер — ваш: Евгений наливает красное вино; фотомонтаж по выбранной сцене и Instagram-референсам",
+    "license": "User-requested AI composite from third-party source photograph and public chef references; source reuse license not verified",
+    "generated": true,
+    "generator": "built-in imagegen",
+    "prompt": "output/evening-chef-v5/prompt.txt",
+    "referencePosts": [
+      "https://www.instagram.com/evg.chef/reel/DFWBk1hseiK/",
+      "https://www.instagram.com/evg.chef/p/DLGRhlXsv6z/",
+      "https://www.instagram.com/vaselloo/p/DKIDgQvNGfn/"
+    ],
+    "file": "/media/chef/letter/evening-chef-wine.webp",
+    "processing": "Local imagegen edit: replace handheld water carafe with wine bottle, wine and receiving stemmed glass; WebP quality 90, method 6, sharp YUV",
+    "width": 1448,
+    "height": 1086,
+    "bytes": 129312,
+    "sha256": "58d279723abdb23ba9f6af1cefb0b96f3cfcb71c0820cbcdeccd9245c56b4fa0",
+    "parentImage": "output/evening-chef-v4/evening-chef-instagram.png"
+  },
+  {
+    "source": "output/evening-chef-v5/evening-chef-wine.png",
+    "sourcePage": "https://www.theselenegreece.com/retreats",
+    "credit": "Selene Greece source photograph; Evgeny Instagram identity references; edited using OpenAI imagegen",
+    "role": "Этот вечер — ваш: Евгений наливает красное вино; фотомонтаж по выбранной сцене и Instagram-референсам",
+    "license": "User-requested AI composite from third-party source photograph and public chef references; source reuse license not verified",
+    "generated": true,
+    "generator": "built-in imagegen",
+    "prompt": "output/evening-chef-v5/prompt.txt",
+    "referencePosts": [
+      "https://www.instagram.com/evg.chef/reel/DFWBk1hseiK/",
+      "https://www.instagram.com/evg.chef/p/DLGRhlXsv6z/",
+      "https://www.instagram.com/vaselloo/p/DKIDgQvNGfn/"
+    ],
+    "file": "/media/chef/letter/evening-chef-wine-768.webp",
+    "processing": "Local imagegen edit: replace handheld water carafe with wine bottle, wine and receiving stemmed glass; WebP quality 88, method 6, sharp YUV",
+    "width": 768,
+    "height": 576,
+    "bytes": 49138,
+    "sha256": "a16e137ffc5040e42b8d464be4e7d6948facf91998e30a06d89bae8b89264654",
+    "parentImage": "output/evening-chef-v4/evening-chef-instagram.png"
+  },
+  {
+    "source": "output/pasta-scroll-chat/pasta-machine.jpeg",
+    "file": "/media/chef/letter/pasta-machine.jpg",
+    "role": "Утверждённая пользователем машинка для пасты и текстура ленты прокрутки",
+    "processing": "Original approved JPEG; rendered and animated with Canvas; no photo or story changes",
+    "width": 572,
+    "height": 1024,
+    "bytes": 29975,
+    "sha256": "cef20eb6cdb4876b077473012344c998a91815629949ef02d50335ebd63e9086"
+  },
+  {
+    "source": "output/about-motion-study-2026-10-02/backgrounds/round-02/02-glass.png",
+    "file": "/media/chef/about-smoked-glass.webp",
+    "role": "Утверждённый пользователем фон секции «О шефе»: дымчатое рифлёное стекло",
+    "generated": true,
+    "generator": "built-in imagegen",
+    "prompt": "docs/about-glass.prompt.txt",
+    "processing": "Approved image exported to WebP, quality 86, method 6, sharp YUV; no visual edits",
+    "width": 1024,
+    "height": 1536,
+    "bytes": 28938,
+    "sha256": "615faa60d76e1ff5429032693714eeb7af17a9d225716fbe8371a60906e2d445"
+  },
+  {
+    "source": "/Users/dmitro/Downloads/Азура/Azuravideo.mp4",
+    "file": "/media/chef/hero-cooking.mp4",
+    "role": "Маленькое видео в коллаже Hero: шеф готовит, 4.6 секунды, первая сцена с двумя поварами удалена",
+    "processing": "Source frames [222,312), [533,564), [722,739) at 30 fps; H.264 CRF 23, 540x960, silent, faststart",
+    "width": 540,
+    "height": 960,
+    "bytes": 803552,
+    "sha256": "6190d46b7b93a67fd36ce5e11f4124adb2f5a39c70d3288eded19be09ebc5971",
+    "duration": 4.6
+  },
+  {
+    "source": "/Users/dmitro/Downloads/Азура/Azuravideo.mp4",
+    "file": "/media/chef/hero-cooking-poster.webp",
+    "role": "Постер маленького видео Hero: мидии на огне",
+    "processing": "First frame of hero-cooking.mp4; WebP quality 88",
+    "width": 540,
+    "height": 960,
+    "bytes": 34606,
+    "sha256": "46548af5c71b3b4758e87df07ee1b48985fd882f06b7c2ae19afcac821cb19a7"
+  }
+]

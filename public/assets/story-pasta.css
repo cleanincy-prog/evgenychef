@@ -1,0 +1,12 @@
+/* The pasta replaces only the story's reading rail, without resizing the cards. */
+.story-pasta { position: fixed; display: block; z-index: 9; pointer-events: none; }
+.story-pasta[hidden] { display: none; }
+.story-scenes.is-pasta-ready > .story-step::before,
+.story-scenes.is-pasta-ready > .story-step::after { opacity: 0; }
+.story-scenes.is-pasta-ready > .story-step > .story-number,
+.story-scenes.is-pasta-ready > .story-step > .story-next { display: none; }
+@media print {
+  .story-pasta { display: none; }
+  .story-scenes.is-pasta-ready > .story-step::before,
+  .story-scenes.is-pasta-ready > .story-step::after { opacity: 1; }
+}

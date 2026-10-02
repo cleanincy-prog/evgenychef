@@ -1,3 +1,9 @@
+# Текущая опубликованная основа — Biotrofi, 3 октября 2026
+
+Пользователь выбрал готовую версию из проекта Biotrofi для evgenychef.com. Этот выпуск переносит её без новых визуальных решений. Актуальные компоненты и поведение описаны в README.md, CONTENT_ADAPTATION.md, PROCESS_LETTER.md, QA.md и PREVIEW.md. Цвета, типографика и адаптивная геометрия находятся в public/assets/local.css, hero-collage.css, bao-motion.css, story-timeline.css и about-glass.css; происхождение медиа — src/media-manifest.json. Записи ниже описывают предыдущую реализацию и сохраняются как история.
+
+---
+
 ## Размытие Hero 6 px — 2026-09-22
 
 | Элемент | Источник | Принцип | Ограничение | Реализация |

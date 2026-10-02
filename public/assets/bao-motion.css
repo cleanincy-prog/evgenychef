@@ -1,0 +1,251 @@
+/* Native section scrolling and timings measured on BAO London.
+   Content taller than a viewport remains freely readable inside its snap area. */
+:root { --header-height: 47px; --nav-ink: #fafaf8; --page-ease: cubic-bezier(.33, 0, .25, 1); }
+html.native-scroll, .native-scroll body { height: 100%; overflow: hidden; scroll-padding-top: 0; }
+.native-scroll #main {
+  height: 100lvh;
+  max-height: 100lvh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+  overscroll-behavior-y: contain;
+  overflow-anchor: none;
+  outline: none;
+}
+.native-scroll.desktop-safari #main { scroll-snap-type: none; }
+.native-scroll [data-snap] { scroll-snap-align: start; scroll-snap-stop: always; scroll-margin: 0; }
+.native-scroll.scroll-locked #main { overflow-y: hidden; }
+.native-scroll.is-navigating #main { scroll-snap-type: none; scroll-behavior: auto; overflow-y: hidden; }
+
+/* The homepage header stays in place while the content scrolls underneath. */
+.native-scroll .site-header {
+  position: fixed; inset: 0 0 auto; height: var(--header-height); z-index: 100;
+  color: var(--nav-ink); border-bottom: 1px solid currentColor;
+  background: transparent; transform: none; transition: color .2s linear, border-color .2s linear;
+}
+.native-scroll .nav-ice-curve { display: none; }
+/* Restore the original white haze while the header sits over the hero. */
+.native-scroll.is-hero-view:not(.menu-open) .site-header {
+  background: transparent; color: var(--espresso); border-bottom-color: transparent;
+}
+.native-scroll.is-hero-view:not(.menu-open) .nav-ice-curve {
+  display: block; height: calc(var(--header-height) + 48px);
+}
+.native-scroll .header-inner { height: 100%; padding-block: 0; }
+.native-scroll .header-links, .native-scroll .header-actions, .native-scroll .header-inner .wordmark { color: inherit; }
+.native-scroll .header-inner .button.compact { padding: 7px 17px; }
+.native-scroll .menu-toggle span { background: currentColor; }
+.native-scroll.menu-open .site-header { color: var(--charcoal); background: var(--white); }
+.native-scroll .mobile-menu {
+  position: absolute; top: var(--header-height); height: calc(100dvh - var(--header-height));
+  padding: 0 0 max(24px, env(safe-area-inset-bottom)); overflow-y: auto;
+  overscroll-behavior: contain; background: var(--white); color: var(--charcoal);
+  box-shadow: none; transform: translateX(-100%); transition: transform .3s ease-in-out;
+}
+.native-scroll .mobile-menu.is-open { transform: translateX(0); }
+.native-scroll .mobile-menu a, .native-scroll .mobile-menu > button {
+  display: flex; width: 100%; padding: 18px 24px; margin: 0; text-align: left;
+  border-bottom: 1px solid #2c262266; font: 400 24px/1.5 var(--font-heading);
+}
+.formats-dropdown {
+  position: absolute; top: var(--header-height); left: 0; right: 0;
+  height: 0; overflow: hidden; visibility: hidden; background: var(--white); color: var(--charcoal);
+  transition: height .3s ease-in-out, visibility 0s .3s;
+}
+.has-formats.is-open .formats-dropdown { height: 104px; visibility: visible; border-bottom: 1px solid currentColor; transition-delay: 0s; }
+.formats-dropdown-items {
+  max-width: 960px; margin: 0 auto; padding: 32px; display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 24px; opacity: 0; transform: translateY(-10px); transition: opacity .2s ease-out, transform .2s ease-out;
+}
+.has-formats.is-open .formats-dropdown-items { opacity: 1; transform: none; transition-delay: .3s; }
+.formats-dropdown-items a { font: 400 23px/1.5 var(--font-heading); }
+.mobile-submenu {
+  position: absolute; inset: var(--header-height) 0 auto; height: calc(100dvh - var(--header-height));
+  display: flex; flex-direction: column; overflow-y: auto; overscroll-behavior: contain;
+  background: var(--white); color: var(--charcoal); visibility: hidden; transform: translateX(100%);
+  transition: transform .3s ease-in-out, visibility 0s .3s;
+}
+.mobile-submenu.is-open { transform: translateX(0); visibility: visible; transition-delay: 0s; }
+.mobile-submenu a { padding: 18px 24px; border-bottom: 1px solid #2c262266; font: 400 24px/1.5 var(--font-heading); }
+.submenu-back { padding: 20px 24px; margin-top: auto; border-top: 1px solid #2c262266; }
+.submenu-back svg { width: 24px; height: 24px; }
+
+/* The photos stay in their existing composition; only the entrance changes. */
+.native-scroll .hero { margin-top: 0; min-height: 100lvh; height: 100lvh; }
+.native-scroll .hero-frame .hero-content { height: 100lvh; min-height: 100lvh; }
+.native-scroll .hero-background { transform: none; will-change: auto; }
+.native-scroll .hero-center .hero-enter,
+.native-scroll .hero-frame h1 .line-mask > span { animation: none; }
+.native-scroll .scroll-cue { bottom: 20px; height: 20px; pointer-events: none; }
+.native-scroll .scroll-cue svg { animation: bao-bounce 1s infinite; }
+@keyframes bao-bounce {
+  0%, 100% { transform: translateY(-25%); animation-timing-function: cubic-bezier(.8, 0, 1, 1); }
+  50% { transform: none; animation-timing-function: cubic-bezier(0, 0, .2, 1); }
+}
+
+/* Remove the old pinned 550vh track. Each format is a real section. */
+.native-scroll #services { position: relative; background: var(--charcoal); }
+.native-scroll .sq-track, .native-scroll .sq-sticky { display: contents; }
+.native-scroll .sq-intro { min-height: 100lvh; }
+.native-scroll .sq-panel { min-height: 100lvh; isolation: isolate; }
+.native-scroll .site-header ~ #main .sq-nav {
+  position: sticky; top: calc(var(--header-height) + 20px); z-index: 60;
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  width: min(720px, calc(100% - 48px)); height: 56px;
+  margin: 0 auto -56px; color: var(--white);
+  border-radius: 12px; background: #201b1773; backdrop-filter: blur(12px);
+}
+.native-scroll .sq-nav button { opacity: .65; }
+.native-scroll .sq-nav button[aria-current="true"] { opacity: 1; }
+.native-scroll .sq-progress { margin: 0 10px; }
+.native-scroll .sq-progress > span { transition: transform .125s ease-in; }
+.native-scroll .sq-content { padding-top: 150px; }
+.service-transition { position: fixed; inset: 0; z-index: 40; overflow: hidden; pointer-events: none; background: var(--charcoal); }
+.service-transition .sq-panel { position: absolute; inset: 0; width: 100%; height: 100%; margin: 0; }
+.service-transition .motion-reveal, .service-transition .motion-cta { opacity: 1; transform: none; transition: none; }
+
+.native-scroll .about-section, .native-scroll .ingredients-section { min-height: 100lvh; }
+.native-scroll .contact-section { min-height: 100lvh; }
+.native-scroll .produce-frame img { height: 100%; top: 0; transform: none; }
+
+/* Keep the existing story composition, with one chapter per snap area. */
+.journey--cards { padding: 0; }
+.journey--cards .journey-container { width: 100%; max-width: none; padding: 0; }
+.journey--cards .letter-heading {
+  min-height: 100lvh; max-width: 1248px; margin: 0 auto;
+  padding: 96px 56px; align-content: center; align-items: center;
+}
+.journey--cards .process-cards { display: block; margin: 0; }
+.journey--cards .process-card { min-height: 100lvh; margin: 0; }
+.journey--cards .process-card-content { min-height: inherit; align-items: end; }
+.journey--cards .process-card--light .process-card-content { align-items: center; }
+.journey--cards .process-caption { padding-block: 96px 64px; }
+.journey--cards .letter-footer { max-width: 1248px; margin: 0 auto; padding: 48px 56px; }
+
+/* Photographic chapters share the meeting card's gradient and light captions. */
+.ingredients-section--photo {
+  position: relative; isolation: isolate; overflow: hidden; display: flex; align-items: flex-end;
+  min-height: 100lvh; padding: 0; background: #151b15; color: #fffdf5;
+}
+.ingredients-photo { position: absolute; inset: 0; margin: 0; }
+.ingredients-photo img { object-position: 50% 28%; }
+.ingredients-section--photo .ingredients-copy {
+  position: relative; z-index: 2; width: min(56%, 760px); margin-left: auto;
+  padding: 200px clamp(32px, 4vw, 64px) 64px;
+}
+.ingredients-section--photo .eyebrow { color: #f3f0e4; font-weight: 400; letter-spacing: .09em; }
+.ingredients-section--photo .editorial-heading { font-size: clamp(43px, 4.9vw, 66px); line-height: 1.02; letter-spacing: -.03em; }
+.ingredients-section--photo .editorial-heading em { color: #e3e7cd; }
+.ingredients-section--photo .body-copy, .ingredients-section--photo .product-list p { color: #fcfaf0; font-weight: 400; }
+.ingredients-section--photo .product-list { margin-top: 26px; }
+.ingredients-section--photo .product-list article { border-color: #fcfaf040; }
+.ingredients-section--photo .product-list article > span { color: #e3e7cd; }
+.contact-section { align-items: flex-end; }
+.contact-inner { padding-block: 192px 64px; }
+.contact-section h2 em { color: #e3e7cd; }
+.contact-inner > div > p:not(.eyebrow):not(.contact-handle) { color: #fcfaf0; }
+
+/* Text enters once, after its section is 80% visible. */
+.native-scroll .motion-reveal {
+  opacity: 0; transform: translateY(10px);
+  transition: opacity .3s ease-in-out, transform .3s ease-in-out;
+}
+.native-scroll .motion-reveal.is-revealed { opacity: 1; transform: none; }
+.native-scroll .motion-cta { opacity: 0; transition: opacity .3s ease-in-out .5s; }
+.native-scroll .is-revealed .motion-cta { opacity: 1; }
+.native-scroll .motion-reveal:focus-within, .native-scroll .motion-cta:focus-within { opacity: 1; transform: none; transition-delay: 0s; }
+
+/* BAO's booking drawer geometry, applied to the existing detail window. */
+.native-scroll .sheet {
+  inset: auto 0 0; width: min(99vw, 1280px); height: 90dvh; max-height: 90dvh;
+  margin: 0 auto; border-radius: 12px 12px 0 0;
+}
+.native-scroll .sheet[open] { animation: none; }
+
+@media (max-width: 767px) {
+  :root { --header-height: 48px; }
+  .formats-dropdown { display: none; }
+  .native-scroll .site-header { background: var(--white); color: var(--charcoal); }
+  .native-scroll .header-inner { grid-template-columns: 42px 1fr 42px; gap: 0; padding: 0 10px; }
+  .native-scroll .header-inner .wordmark { grid-column: 2; grid-row: 1; justify-self: center; font-size: 19px; }
+  .native-scroll .menu-toggle { grid-column: 1; grid-row: 1; }
+  .native-scroll .hero-frame { --hero-portrait-height: min(calc((75cqw - .5px) * 1102 / 936), calc(100lvh - 390px)); }
+  .native-scroll .hero-identity { grid-row: 1 / span 6; margin-bottom: 22px; padding-top: 64px; }
+  .native-scroll .hero-frame h1 { font-size: clamp(44px, 13vw, 60px); }
+  .native-scroll .site-header ~ #main .sq-nav { top: calc(var(--header-height) + 12px); width: calc(100% - 32px); height: 50px; margin-bottom: -50px; }
+  .native-scroll .sq-nav button { padding-inline: 4px; font-size: 8px; }
+  .native-scroll .sq-panel { min-height: 100lvh; }
+  .native-scroll .sq-content { padding: 140px 24px 40px; }
+  /* Fit the complete biography beneath the fixed header, including browser chrome. */
+  .native-scroll .about-section.section-space {
+    height: 100svh; min-height: min-content;
+    padding-block: calc(var(--header-height) + 14px) max(14px, env(safe-area-inset-bottom));
+  }
+  .native-scroll .about-section > .container {
+    height: 100%; min-height: min-content; display: grid; grid-template-rows: minmax(min-content, 1fr) auto; gap: 14px;
+    padding-inline: 20px;
+  }
+  .native-scroll .about-grid { min-height: min-content; grid-template-rows: auto minmax(112px, 1fr) auto; gap: 12px; }
+  .native-scroll .about-heading .editorial-heading { font-size: clamp(28px, 7.8vw, 36px); line-height: 1.06; }
+  .native-scroll .about-photo {
+    display: grid; grid-template-rows: minmax(0, 1fr) auto; gap: 6px;
+    height: 100%; min-height: 112px; align-self: stretch; contain: size;
+  }
+  .native-scroll .about-portrait { height: 100%; min-height: 0; object-fit: contain; }
+  .native-scroll .about-grid figcaption { margin: 0; font-size: 8px; line-height: 1.35; letter-spacing: .08em; text-align: center; }
+  .native-scroll .about-copy .body-copy { margin: 0; font-size: clamp(13px, 3.5vw, 15px); line-height: 1.45; }
+  .native-scroll .about-copy .body-copy + .body-copy { margin-top: 8px; }
+  .native-scroll .about-copy .bio-note { margin-top: 10px; font-size: 8px; line-height: 1.4; letter-spacing: .12em; }
+  .native-scroll .about-facts { margin: 0; padding-top: 12px; }
+  .native-scroll .about-facts .numbers-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; }
+  .native-scroll .about-facts .numbers-grid > div { padding-left: 8px; }
+  .native-scroll .about-facts .number { margin-bottom: 5px; font-size: 28px; }
+  .native-scroll .about-facts .number--text { font-size: 19px; line-height: 1.05; }
+  .native-scroll .about-facts .numbers-grid p:last-child { font-size: 9px; line-height: 1.4; letter-spacing: 0; }
+  .journey--cards .letter-heading { display: flex; flex-direction: column; justify-content: center; align-items: stretch; padding: 88px 24px 64px; }
+  .journey--cards .process-card-content { align-items: end; }
+  .journey--cards .process-card--light .process-card-content { justify-content: center; padding-block: 72px 40px; gap: 24px; }
+  .journey--cards .process-caption { padding: 96px 24px 40px; }
+  .journey--cards .process-card--light .process-caption { padding: 0 24px; }
+  .journey--cards .letter-footer { padding: 32px 24px; }
+  .journey--cards .process-card--taste .process-caption { padding-top: max(300px, 43lvh); }
+  .ingredients-section--photo .ingredients-copy { width: 100%; padding: max(280px, 36lvh) 24px 40px; }
+  .ingredients-section--photo .editorial-heading { font-size: 40px; }
+  .ingredients-section--photo .product-list article { padding-block: 17px; }
+  .ingredients-photo img { object-position: 40% 0; }
+  .contact-inner { padding-block: 140px 40px; }
+  .native-scroll .sheet { height: 95dvh; max-height: 95dvh; }
+}
+@media (max-height: 740px) and (max-width: 767px) {
+  .native-scroll .hero-frame {
+    --hero-screen-height: max(640px, 100lvh);
+    --hero-portrait-height: min(calc((75cqw - .5px) * 1102 / 936), calc(var(--hero-screen-height) - 460px));
+  }
+  .native-scroll .hero, .native-scroll .hero-frame .hero-content { height: var(--hero-screen-height); min-height: var(--hero-screen-height); }
+  .native-scroll .hero-identity { align-self: start; padding-top: 72px; margin-bottom: 0; }
+  .native-scroll .hero-portrait { width: calc(var(--hero-portrait-height) * 936 / 1102); justify-self: center; }
+}
+@media (max-height: 660px) and (max-width: 767px) {
+  /* Share the photo row with the facts so short phones retain a useful portrait. */
+  .native-scroll .about-section > .container {
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
+    grid-template-rows: auto minmax(min-content, 1fr) auto; gap: 12px 16px;
+  }
+  .native-scroll .about-grid { display: contents; }
+  .native-scroll .about-heading { grid-area: 1 / 1 / 2 / -1; }
+  .native-scroll .about-photo { grid-area: 2 / 1 / 3 / 2; }
+  .native-scroll .about-copy { grid-area: 3 / 1 / 4 / -1; }
+  .native-scroll .about-grid figcaption { font-size: 7px; letter-spacing: .04em; }
+  .native-scroll .about-facts { grid-area: 2 / 2 / 3 / 3; align-self: center; border-top: 0; padding: 0; }
+  .native-scroll .about-facts .numbers-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px 8px; }
+  .native-scroll .about-facts .number { font-size: 25px; }
+  .native-scroll .about-facts .number--text { font-size: 17px; }
+}
+@media (max-height: 600px) and (min-width: 768px) {
+  .native-scroll .hero, .native-scroll .hero-frame .hero-content { height: 720px; min-height: 720px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .native-scroll #main { scroll-behavior: auto; scroll-snap-type: none; }
+  .native-scroll .motion-reveal, .native-scroll .motion-cta { opacity: 1; transform: none; transition: none; }
+}
