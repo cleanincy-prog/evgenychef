@@ -380,7 +380,7 @@ export const heroImages = [
   }
 ];
 
-// The user's Azura cooking edit sits in the lower collage, below the portrait.
+// The user's Azura cooking edit sits 40% larger over the collage's bottom-right corner.
 export const heroVideo = {
   index: 49,
   src: '/media/chef/hero-cooking.mp4',
@@ -389,7 +389,7 @@ export const heroVideo = {
   height: 960,
 };
 
-// Reserve actual cells for the portrait: 63 media tiles + wide spans + portrait = grid area.
+// Reserve actual cells for the portrait; the live tile covers the trailing gap from outside grid flow.
 // Desktop: 63 + 15 + (3 × 4) = 10 × 9. Mobile: 63 + 9 + (6 × 4) = 8 × 12.
 export const heroCollageWideDesktop = new Set([4, 5, 8, 12, 15, 18, 22, 25, 28, 32, 35, 38, 42, 45, 48]);
 export const heroCollageWideCompact = new Set([1, 7, 23, 26, 29, 33, 36, 42, 49]);
