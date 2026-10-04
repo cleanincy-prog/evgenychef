@@ -143,10 +143,7 @@ html.native-scroll, .native-scroll body { height: 100%; overflow: hidden; scroll
 .ingredients-section--photo .product-list { margin-top: 26px; }
 .ingredients-section--photo .product-list article { border-color: #fcfaf040; }
 .ingredients-section--photo .product-list article > span { color: #e3e7cd; }
-.contact-section { align-items: flex-end; }
-.contact-inner { padding-block: 192px 64px; }
 .contact-section h2 em { color: #e3e7cd; }
-.contact-inner > div > p:not(.eyebrow):not(.contact-handle) { color: #fcfaf0; }
 
 /* Text enters once, after its section is 80% visible. */
 .native-scroll .motion-reveal {
@@ -223,7 +220,6 @@ html.native-scroll, .native-scroll body { height: 100%; overflow: hidden; scroll
   .ingredients-section--photo .editorial-heading { font-size: 40px; }
   .ingredients-section--photo .product-list article { padding-block: 17px; }
   .ingredients-photo img { object-position: 40% 0; }
-  .contact-inner { padding-block: 140px max(40px, env(safe-area-inset-bottom)); }
   .native-scroll .sheet { height: 95dvh; max-height: 95dvh; }
 }
 @media (max-height: 660px) and (max-width: 767px) {

@@ -1,0 +1,171 @@
+[
+  {
+    "width": 1440,
+    "height": 900,
+    "top": {
+      "sectionHeight": 900,
+      "sectionTop": 0.171875,
+      "horizontalOverflow": false,
+      "photoFillsBlock": true,
+      "photoPosition": "50% 18%",
+      "buttonVisible": true,
+      "buttonBottom": 836.171875,
+      "href": "https://www.instagram.com/evg.chef/"
+    },
+    "bottom": null,
+    "errors": []
+  },
+  {
+    "width": 1280,
+    "height": 720,
+    "top": {
+      "sectionHeight": 720,
+      "sectionTop": 0.171875,
+      "horizontalOverflow": false,
+      "photoFillsBlock": true,
+      "photoPosition": "50% 18%",
+      "buttonVisible": true,
+      "buttonBottom": 656.171875,
+      "href": "https://www.instagram.com/evg.chef/"
+    },
+    "bottom": null,
+    "errors": []
+  },
+  {
+    "width": 1024,
+    "height": 768,
+    "top": {
+      "sectionHeight": 768,
+      "sectionTop": 0.171875,
+      "horizontalOverflow": false,
+      "photoFillsBlock": true,
+      "photoPosition": "50% 18%",
+      "buttonVisible": true,
+      "buttonBottom": 704.171875,
+      "href": "https://www.instagram.com/evg.chef/"
+    },
+    "bottom": null,
+    "errors": []
+  },
+  {
+    "width": 768,
+    "height": 1024,
+    "top": {
+      "sectionHeight": 1024,
+      "sectionTop": 0.109375,
+      "horizontalOverflow": false,
+      "photoFillsBlock": true,
+      "photoPosition": "50% 18%",
+      "buttonVisible": true,
+      "buttonBottom": 960.109375,
+      "href": "https://www.instagram.com/evg.chef/"
+    },
+    "bottom": null,
+    "errors": []
+  },
+  {
+    "width": 390,
+    "height": 844,
+    "top": {
+      "sectionHeight": 844,
+      "sectionTop": 0.390625,
+      "horizontalOverflow": false,
+      "photoFillsBlock": true,
+      "photoPosition": "50% 0px",
+      "buttonVisible": true,
+      "buttonBottom": 812.390625,
+      "href": "https://www.instagram.com/evg.chef/"
+    },
+    "bottom": null,
+    "errors": []
+  },
+  {
+    "width": 430,
+    "height": 932,
+    "top": {
+      "sectionHeight": 932,
+      "sectionTop": -0.3125,
+      "horizontalOverflow": false,
+      "photoFillsBlock": true,
+      "photoPosition": "50% 0px",
+      "buttonVisible": true,
+      "buttonBottom": 899.6875,
+      "href": "https://www.instagram.com/evg.chef/"
+    },
+    "bottom": null,
+    "errors": []
+  },
+  {
+    "width": 320,
+    "height": 568,
+    "top": {
+      "sectionHeight": 568,
+      "sectionTop": -0.359375,
+      "horizontalOverflow": false,
+      "photoFillsBlock": true,
+      "photoPosition": "50% 0px",
+      "buttonVisible": true,
+      "buttonBottom": 543.640625,
+      "href": "https://www.instagram.com/evg.chef/"
+    },
+    "bottom": null,
+    "errors": []
+  },
+  {
+    "width": 320,
+    "height": 480,
+    "top": {
+      "sectionHeight": 501.390625,
+      "sectionTop": 0.140625,
+      "horizontalOverflow": false,
+      "photoFillsBlock": true,
+      "photoPosition": "50% 0px",
+      "buttonVisible": true,
+      "buttonBottom": 477.53125,
+      "href": "https://www.instagram.com/evg.chef/"
+    },
+    "bottom": {
+      "sectionHeight": 501.390625,
+      "sectionTop": -21.859375,
+      "horizontalOverflow": false,
+      "photoFillsBlock": true,
+      "photoPosition": "50% 0px",
+      "buttonVisible": true,
+      "buttonBottom": 455.53125,
+      "href": "https://www.instagram.com/evg.chef/"
+    },
+    "errors": []
+  },
+  {
+    "width": 844,
+    "height": 390,
+    "top": {
+      "sectionHeight": 390,
+      "sectionTop": 0.265625,
+      "horizontalOverflow": false,
+      "photoFillsBlock": true,
+      "photoPosition": "50% 12%",
+      "buttonVisible": true,
+      "buttonBottom": 366.265625,
+      "href": "https://www.instagram.com/evg.chef/"
+    },
+    "bottom": null,
+    "errors": []
+  },
+  {
+    "width": 375,
+    "height": 812,
+    "top": {
+      "sectionHeight": 812,
+      "sectionTop": 0.390625,
+      "horizontalOverflow": false,
+      "photoFillsBlock": true,
+      "photoPosition": "50% 0px",
+      "buttonVisible": true,
+      "buttonBottom": 780.390625,
+      "href": "https://www.instagram.com/evg.chef/"
+    },
+    "bottom": null,
+    "errors": []
+  }
+]

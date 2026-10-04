@@ -129,8 +129,15 @@ const html = `<!doctype html>
   </div>
 
   <section id="contact" class="contact-section grain" aria-labelledby="contact-title">
-    ${image('plating.webp', '', 'cover', 'width="1200" height="969"')}
-    <div class="contact-shade"></div><div class="container centered contact-inner"><div data-reveal><p class="eyebrow">Начнём с разговора</p><h2 id="contact-title">Обсудим<br><em>ваш вечер.</em></h2><p>Напишите мне о поводе, дате и количестве гостей.<br>Вместе найдём подходящий формат.</p></div><div data-reveal>${button('Написать в Instagram', chef.instagram, '', 'target="_blank" rel="noopener noreferrer"')}<p class="contact-handle">@evg.chef</p></div></div>
+    <figure class="contact-photo">${image('portrait.webp', 'Евгений Гребеник улыбается, стоя со скрещёнными руками на открытой террасе', '', 'width="972" height="1200"')}</figure>
+    <div class="contact-shade" aria-hidden="true"></div>
+    <div class="container contact-inner">
+      <div class="contact-copy">
+        <div class="contact-heading" data-reveal><p class="eyebrow">Начнём с разговора</p><h2 id="contact-title">Обсудим<br><em>ваш вечер.</em></h2></div>
+        <p class="contact-message" data-reveal>Напишите мне о поводе, дате и количестве гостей.<br>Вместе найдём подходящий формат.</p>
+        <div class="contact-actions" data-reveal>${button('Написать в Instagram', chef.instagram, '', 'target="_blank" rel="noopener noreferrer"')}<p class="contact-handle">@evg.chef</p></div>
+      </div>
+    </div>
   </section>
 </main>
 
