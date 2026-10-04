@@ -22,7 +22,7 @@ const chapters = [
 ];
 
 function ingredients() {
-  return `<div class="story-body"><p>Выбор продукта — такая же часть моей работы, как приготовление. Свежесть и качество мяса, рыбы и морепродуктов задают вкус задолго до того, как я начинаю готовить.</p></div>
+  return `<div class="story-body"><p>Выбор продукта — такая же важная часть моей работы, как приготовление. Свежесть и качество мяса, рыбы и морепродуктов задают вкус задолго до того, как я начинаю готовить.</p></div>
     <dl class="story-products">${products.map((product, i) => `<div><dt><span>${['Лофу', 'Зиги', 'Фермы'][i]}</span>${escape(product.title)}</dt><dd>${escape(product.text)}</dd></div>`).join('')}</dl>
     <div class="story-ingredient-details">
       <figure>${photo('letter/menu/vegetables.webp', 'letter/menu/vegetables-400.webp', 800, 919, 'Грибы шиитаке, овощи и зелень на деревянной доске', 'story-detail-photo', '(max-width:767px) 40vw, 180px')}<figcaption>Сезонные овощи</figcaption></figure>
