@@ -50,7 +50,8 @@ function filmControls() {
 export function renderProcess() {
   return `<section id="process" class="journey--cinematic" aria-labelledby="process-title" data-preview="cinematic-story-side-notes-v9">
     <h2 id="process-title" class="sr-only">От разговора — к вашему столу. Как рождается ваш вечер.</h2>
-    <div class="story-scenes">${chapters.map((chapter, i) => `<div class="story-step">
+    <div class="story-scenes">${chapters.map((chapter, i) => `<div class="story-step story-step--${chapter.kind}">
+      <div class="story-ambient" aria-hidden="true"></div>
       <span class="story-number" aria-hidden="true">${number(i)}</span>
       <article id="${chapter.id}" class="process-card story-scene story-scene--${chapter.kind}" aria-labelledby="${chapter.id}-title">
       <div class="story-media">${chapter.media}</div><div class="story-shade" aria-hidden="true"></div>

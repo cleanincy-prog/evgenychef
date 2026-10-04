@@ -115,8 +115,7 @@ function initPasta() {
     const center = railX - left;
     const ox = center + 210 * scale;
     const oy = 8 - 80 * scale;
-    // Match the machine's backdrop to the existing cream gutter.
-    ctx.fillStyle = '#f6f3ec'; ctx.fillRect(0, 0, width, machineBottom + 7);
+    // Keep the canvas transparent so the smoked glass remains visible around it.
     ctx.save(); ctx.translate(ox, oy); ctx.scale(-scale, scale);
     ctx.drawImage(body, 0, 0);
     crank(reduced.matches ? 0 : progress * 7 * Math.PI * 2);
