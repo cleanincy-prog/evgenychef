@@ -118,7 +118,6 @@ all('.sq-copy .button-row').forEach(element => element.classList.add('motion-cta
 function reveal(element) {
   if (element.matches('.motion-reveal')) element.classList.add('is-revealed');
   all('.motion-reveal', element).forEach(child => child.classList.add('is-revealed'));
-  all('[data-count]', element).forEach(counts.animate);
 }
 const revealObserver = new IntersectionObserver(entries => {
   for (const entry of entries) {
@@ -134,6 +133,37 @@ const revealObserver = new IntersectionObserver(entries => {
 const revealSections = new Set();
 for (const element of reveals) revealSections.add(element.closest('.hero, .sq-intro, .sq-panel, .process-card, .ingredients-section--photo') || element);
 revealSections.forEach(element => revealObserver.observe(element));
+
+// Counters have their own visibility lifecycle, independent of one-time reveals.
+const counterGroups = all('.about-facts [data-reveal]').map(element => ({
+  element, figures: all('[data-count]', element),
+})).filter(group => group.figures.length);
+const visibleCounterGroups = new Set();
+let pageActive = true;
+function resetCounterGroup(group) {
+  if (!visibleCounterGroups.delete(group)) return;
+  group.figures.forEach(counts.reset);
+}
+function resetCounters() { counterGroups.forEach(resetCounterGroup); }
+function syncCounters() {
+  if (document.hidden || !pageActive) { resetCounters(); return; }
+  const viewport = main.getBoundingClientRect();
+  const top = Math.max(viewport.top, header.getBoundingClientRect().bottom);
+  const height = viewport.bottom - top;
+  for (const group of counterGroups) {
+    const bounds = group.element.getBoundingClientRect();
+    const visible = Math.min(bounds.bottom, viewport.bottom) - Math.max(bounds.top, top);
+    // Full exit rearms the count; small scrolls around the start threshold do not.
+    if (visible <= 0) resetCounterGroup(group);
+    else if (bounds.height > 0 && visible >= Math.min(bounds.height, height) * .8 - 1 && !visibleCounterGroups.has(group)) {
+      visibleCounterGroups.add(group);
+      reveal(group.element);
+      group.figures.forEach(counts.animate);
+    }
+  }
+}
+const counterObserver = new IntersectionObserver(syncCounters, { root: main, threshold: [0, .8, 1] });
+counterGroups.forEach(group => counterObserver.observe(group.element));
 
 function revealVisibleSections() {
   if (document.hidden) return;
@@ -158,6 +188,7 @@ function syncScroll() {
   scrollFrame = null;
   // Some embedded views resume before IntersectionObserver delivers a new entry.
   revealVisibleSections();
+  syncCounters();
   const storyBounds = dinnerStory?.getBoundingClientRect();
   root.classList.toggle('is-story-reading', (openingStoryAnchor
     || (!!storyBounds && storyBounds.top < main.clientHeight && storyBounds.bottom > header.offsetHeight)));
@@ -449,9 +480,9 @@ window.addEventListener('popstate', restoreHash);
 window.addEventListener('hashchange', restoreHash);
 window.addEventListener('resize', () => { cancelTransition(); syncScroll(); });
 window.addEventListener('pagehide', cancelTransition);
-window.addEventListener('pagehide', counts.finish);
-window.addEventListener('pageshow', () => { cancelTransition(); syncLock(); syncScroll(); });
-document.addEventListener('visibilitychange', () => { if (!document.hidden) syncScroll(); });
+window.addEventListener('pagehide', () => { pageActive = false; resetCounters(); });
+window.addEventListener('pageshow', () => { pageActive = true; cancelTransition(); syncLock(); syncScroll(); });
+document.addEventListener('visibilitychange', () => { if (document.hidden) resetCounters(); else syncScroll(); });
 mobile.addEventListener('change', () => closeMenu());
 reducedMotion.addEventListener('change', () => {
   cancelTransition();

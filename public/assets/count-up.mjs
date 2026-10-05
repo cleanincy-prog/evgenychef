@@ -1,7 +1,7 @@
-// Runs once when a figure is revealed; the HTML retains its final value without JS.
+// Runs once per visible visit; the controller resets it after leaving the screen.
+// The HTML retains its final value without JavaScript.
 export function createCountUp({
   prefersReducedMotion = () => false,
-  now = () => performance.now(),
   requestFrame = callback => requestAnimationFrame(callback),
   cancelFrame = id => cancelAnimationFrame(id),
 } = {}) {
@@ -15,6 +15,14 @@ export function createCountUp({
     active.clear();
   }
 
+  function reset(element) {
+    const state = active.get(element);
+    if (state) { cancelFrame(state.frame); active.delete(element); }
+    const target = Number(element.dataset.count);
+    if (Number.isFinite(target)) element.textContent = String(target);
+    delete element.dataset.counted;
+  }
+
   function animate(element) {
     if (element.dataset.counted) return;
     const target = Number(element.dataset.count);
@@ -25,13 +33,15 @@ export function createCountUp({
       return;
     }
 
-    const start = now();
-    const state = { target, frame: 0 };
+    const state = { target, frame: 0, start: null };
     active.set(element, state);
     element.textContent = '0';
     function step(timestamp) {
+      if (active.get(element) !== state) return;
       if (prefersReducedMotion()) { finish(); return; }
-      const progress = Math.max(0, Math.min(1, (timestamp - start) / 1600));
+      // A delayed first frame must not skip the animation on a busy mobile page.
+      if (state.start === null) state.start = timestamp;
+      const progress = Math.max(0, Math.min(1, (timestamp - state.start) / 1600));
       element.textContent = String(Math.round(target * (1 - (1 - progress) ** 3)));
       if (progress < 1) state.frame = requestFrame(step);
       else active.delete(element);
@@ -39,5 +49,5 @@ export function createCountUp({
     state.frame = requestFrame(step);
   }
 
-  return { animate, finish };
+  return { animate, finish, reset };
 }

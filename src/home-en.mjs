@@ -18,7 +18,6 @@ export const homeEnglish = {
   "Евгений Гребеник · «МастерШеф. Профессионалы»": "Evgen Grebenik · MasterChef: The Professionals",
   "В основе моей кухни — опыт лучших кулинарных школ Франции, Швейцарии и Германии, путь к которым мне открыла победа в «МастерШеф. Профессионалы». Полученные знания я переосмыслил в своей кухне — современной, европейской, с авторским характером.": "My cooking draws on experience at leading culinary schools in France, Switzerland and Germany, an opportunity opened by winning MasterChef: The Professionals. I have made that knowledge my own through contemporary European cooking with a personal character.",
   "Сегодня на Кипре я готовлю для частных ужинов и приватных мероприятий, а на мастер-классах делюсь своим опытом и подходом к приготовлению.": "Today, I cook for private dinners and events in Cyprus, and share my experience and approach to cooking through classes.",
-  "Франция · Швейцария · Германия": "France · Switzerland · Germany",
   "лет в гастрономии": "years in gastronomy",
   "лет работы шеф-поваром": "years as a chef",
   "Ваши вкусы": "Your tastes",

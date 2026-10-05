@@ -202,7 +202,6 @@ html.native-scroll, .native-scroll body { height: 100%; overflow: hidden; scroll
   .native-scroll .about-grid figcaption { margin: 0; font-size: 8px; line-height: 1.35; letter-spacing: .08em; text-align: center; }
   .native-scroll .about-copy .body-copy { margin: 0; font-size: clamp(13px, 3.5vw, 15px); line-height: 1.45; }
   .native-scroll .about-copy .body-copy + .body-copy { margin-top: 8px; }
-  .native-scroll .about-copy .bio-note { margin-top: 10px; font-size: 8px; line-height: 1.4; letter-spacing: .12em; }
   .native-scroll .about-facts { margin: 0; padding-top: 12px; }
   .native-scroll .about-facts .numbers-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 10px; }
   .native-scroll .about-facts .numbers-grid > div { padding-left: 8px; }

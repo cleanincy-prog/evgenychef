@@ -177,7 +177,6 @@ em { font-weight: 300; }
 .about-photo { grid-area: photo; align-self: center; min-width: 0; }
 .about-portrait { display: block; width: 100%; height: auto; border-radius: 4px; }
 .about-grid figcaption { margin-top: 20px; font-size: 10px; color: var(--secondary); line-height: 1.8; }
-.bio-note { color: var(--secondary); margin-block: 30px 0; font-size: 10px; }
 .about-facts { margin-top: 96px; padding-top: 40px; border-top: 1px solid #2c26221a; }
 .ingredient-marquee { padding-block: 36px; background: var(--cream); overflow: hidden; }
 .ingredient-marquee > div { display: flex; align-items: center; width: max-content; }
@@ -349,7 +348,6 @@ html.lenis, html.lenis body { height: auto; }
   .about-facts { margin-top: 56px; padding-top: 32px; }
   .about-facts .numbers-grid { gap: 32px 16px; }
   .editorial-heading { font-size: clamp(2rem,8.5vw,3.3rem); }
-  .bio-note { font-size: 9px; }
   .ingredient-marquee { padding-block: 30px; }
   .ingredients-grid { grid-template-columns: 1fr; gap: 60px; }
   .produce-frame { width: 88%; }

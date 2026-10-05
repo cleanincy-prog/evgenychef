@@ -98,7 +98,7 @@ const html = `<!doctype html>
       <div class="about-grid">
         <div class="about-heading" data-reveal><h2 id="about-title" class="editorial-heading">Мой опыт —<br><em>для вашего вечера.</em></h2></div>
         <figure class="about-photo" data-reveal>${image('masterchef-1280.jpg', 'Евгений Гребеник в поварском кителе с конвертом победителя на «МастерШеф. Профессионалы»', 'about-portrait', 'width="1280" height="1160"')}<figcaption class="voice-mono">Евгений Гребеник · «МастерШеф. Профессионалы»</figcaption></figure>
-        <div class="about-copy" data-reveal>${chef.biography.map(p=>`<p class="body-copy">${p}</p>`).join('')}<p class="bio-note voice-mono">Франция · Швейцария · Германия</p></div>
+        <div class="about-copy" data-reveal>${chef.biography.map(p=>`<p class="body-copy">${p}</p>`).join('')}</div>
       </div>
       <div class="about-facts" role="group" aria-label="Опыт и подход">
         <div class="numbers-grid">
