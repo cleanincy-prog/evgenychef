@@ -85,7 +85,7 @@
   .hero-frame[data-hero-intro="pending"] .hero-bottom,
   .hero-frame[data-hero-intro="pending"] .scroll-cue,
   .hero-frame[data-hero-intro="pending"] .hero-portrait,
-  .hero-frame[data-hero-intro="pending"] .hero-shade { animation: hero-intro-fallback 0s 2200ms backwards; }
+  .hero-frame[data-hero-intro="pending"] .hero-shade { animation: hero-intro-fallback 0s 3200ms backwards; }
   .hero-frame[data-hero-intro="running"] .collage-tile { z-index: var(--intro-layer, 0); animation: hero-photo-in calc(var(--intro-duration) * var(--hero-photo-tempo)) cubic-bezier(.2, .6, .32, 1) calc(var(--intro-delay) * var(--hero-photo-tempo)) backwards; }
   .hero-frame[data-hero-intro="running"] .hero-collage-grid { transform-origin: left center; animation: hero-field-expand calc(500ms * var(--hero-photo-tempo)) cubic-bezier(.4, 0, .2, 1) calc(420ms * var(--hero-photo-tempo)) backwards; }
   /* The portrait lands last, exactly when the text reveal begins. */
@@ -103,6 +103,7 @@
   .hero-frame[data-hero-intro="running"] .hero-story { display: block; }
   .hero-frame[data-hero-intro="running"] .hero-story-shot { animation: hero-story-fly calc(var(--story-flight) * var(--hero-photo-tempo)) cubic-bezier(.45, 0, .2, 1) calc(var(--story-depart) * var(--hero-photo-tempo)) forwards; }
   .hero-frame[data-hero-intro="running"] .hero-story-shot img { animation: hero-story-arrive calc(120ms * var(--hero-photo-tempo)) cubic-bezier(.22, .61, .36, 1) calc(var(--story-delay) * var(--hero-photo-tempo)) backwards; }
+  .hero-frame[data-hero-suspended] :is(.hero-collage-grid, .hero-softened, .hero-identity, .hero-bottom, .scroll-cue, .hero-portrait, .hero-shade, .collage-tile, .hero-story-shot, .hero-story-shot img) { animation-play-state: paused; }
 }
 @keyframes hero-intro-fallback { from { opacity: 0; } to { opacity: 1; } }
 @keyframes hero-field-expand { from { transform: scale(var(--intro-field-scale)); } to { transform: scale(1); } }

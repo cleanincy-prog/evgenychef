@@ -32,6 +32,7 @@ export const renderHomepage = ({ production = false } = {}) => `<!doctype html>
   <link rel="preload" href="/assets/fonts/b0947914c9718a1e-s.0l.9lak812di~.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/assets/fonts/01e4147cff8141ee-s.p.10ked.7w885.g.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="${heroImages[62].src}" as="image" imagesrcset="${heroImages[62].srcSet}" imagesizes="(max-width: 620px) 60vw, 29vw" fetchpriority="high">
+  <link rel="modulepreload" href="/assets/hero-collage.js">
   <link rel="stylesheet" href="/assets/reference.css">
   <link rel="stylesheet" href="/assets/local.css">
   <link rel="stylesheet" href="/assets/process.css">

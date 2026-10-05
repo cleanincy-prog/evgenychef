@@ -54,12 +54,18 @@ if (ribbon && storyScroller) {
   const scenes = [...ribbon.querySelectorAll('.story-step')];
   const animations = new Set();
   const revealed = new WeakSet();
+  const pendingReveals = new Set();
   let frame = 0;
 
   function drawProgress() {
     frame = 0;
     if (document.hidden) return;
     const viewport = storyScroller.getBoundingClientRect();
+    for (const element of pendingReveals) {
+      const bounds = element.getBoundingClientRect();
+      const visible = Math.min(bounds.bottom, viewport.bottom - 48) - Math.max(bounds.top, viewport.top);
+      if (bounds.height > 0 && visible >= Math.min(bounds.height, viewport.height - 48) * .12) revealCopy(element);
+    }
     const readingPoint = viewport.top + viewport.height * .55;
     // Read geometry together, then write styles without interleaving layout work.
     const positions = scenes.map(scene => ({ scene, bounds: scene.getBoundingClientRect() }));
@@ -85,25 +91,33 @@ if (ribbon && storyScroller) {
     const leader = noteLeaders.get(element);
     if (leader) leader.dataset.storyReveal = state;
   }
+  function revealCopy(element) {
+    if (revealed.has(element)) return;
+    revealed.add(element);
+    pendingReveals.delete(element);
+    revealObserver.unobserve(element);
+    revealState(element, 'shown');
+    if (motionPreference.matches || document.hidden || !element.animate) return;
+    const leader = noteLeaders.get(element);
+    // Notes and their connector lines fade in place, keeping the diagram aligned.
+    const keyframes = leader ? [{ opacity: 0 }, { opacity: 1 }] : [
+      { opacity: 0, transform: 'translate3d(0, 22px, 0)' },
+      { opacity: 1, transform: 'translate3d(0, 0, 0)' },
+    ];
+    for (const target of leader ? [element, leader] : [element]) {
+      const animation = target.animate(keyframes, { duration: 850, easing: 'cubic-bezier(.22, 1, .36, 1)' });
+      // WKWebView can leave a freshly created animation pending at time zero.
+      const startTime = document.timeline?.currentTime;
+      if (typeof startTime === 'number') animation.startTime = startTime;
+      animations.add(animation);
+      const timeout = setTimeout(() => animation.cancel(), 1200);
+      const settled = () => { clearTimeout(timeout); animations.delete(animation); };
+      animation.finished.then(settled, settled);
+    }
+  }
   const revealObserver = new IntersectionObserver(entries => {
     for (const entry of entries) {
-      if (!entry.isIntersecting || entry.intersectionRatio < .12 || revealed.has(entry.target)) continue;
-      const element = entry.target;
-      revealed.add(element);
-      revealObserver.unobserve(element);
-      revealState(element, 'shown');
-      if (motionPreference.matches || document.hidden || !element.animate) continue;
-      const leader = noteLeaders.get(element);
-      // Notes and their connector lines fade in place, keeping the diagram aligned.
-      const keyframes = leader ? [{ opacity: 0 }, { opacity: 1 }] : [
-        { opacity: 0, transform: 'translate3d(0, 22px, 0)' },
-        { opacity: 1, transform: 'translate3d(0, 0, 0)' },
-      ];
-      for (const target of leader ? [element, leader] : [element]) {
-        const animation = target.animate(keyframes, { duration: 850, easing: 'cubic-bezier(.22, 1, .36, 1)' });
-        animations.add(animation);
-        animation.finished.then(() => animations.delete(animation), () => animations.delete(animation));
-      }
+      if (entry.isIntersecting && entry.intersectionRatio >= .12) revealCopy(entry.target);
     }
   }, { root: storyScroller, rootMargin: '0px 0px -48px 0px', threshold: .12 });
   function startReveals() {
@@ -111,13 +125,15 @@ if (ribbon && storyScroller) {
       // Without JavaScript or with reduced motion, all copy remains visible.
       if (motionPreference.matches || !element.animate || revealed.has(element)) continue;
       revealState(element, 'pending');
+      pendingReveals.add(element);
       revealObserver.observe(element);
     }
+    scheduleProgress();
   }
-  // Fonts and the initial fragment scroll must settle before watching the copy.
-  const pageLoaded = document.readyState === 'complete' ? Promise.resolve()
-    : new Promise(resolve => window.addEventListener('load', resolve, { once: true }));
-  Promise.all([pageLoaded, document.fonts.ready]).then(() => {
+  // Do not wait for every image/video on the page: embedded views can defer them.
+  let fontTimeout;
+  Promise.race([document.fonts.ready, new Promise(resolve => { fontTimeout = setTimeout(resolve, 1200); })]).then(() => {
+    clearTimeout(fontTimeout);
     requestAnimationFrame(() => requestAnimationFrame(startReveals));
   });
 
@@ -130,6 +146,7 @@ if (ribbon && storyScroller) {
     const target = event.target.closest('[data-story-reveal]');
     if (target) {
       revealed.add(target);
+      pendingReveals.delete(target);
       revealObserver.unobserve(target);
       revealState(target, 'shown');
     }
@@ -138,6 +155,7 @@ if (ribbon && storyScroller) {
     cancelReveals();
     if (motionPreference.matches) {
       revealObserver.disconnect();
+      pendingReveals.clear();
       for (const element of revealTargets) revealState(element, 'shown');
     }
     for (const scene of scenes) scene.style.removeProperty('--story-drift');
@@ -146,6 +164,7 @@ if (ribbon && storyScroller) {
   storyScroller.addEventListener('scroll', scheduleProgress, { passive: true });
   window.addEventListener('resize', scheduleProgress, { passive: true });
   window.addEventListener('load', scheduleProgress, { once: true });
+  window.addEventListener('pageshow', scheduleProgress);
   document.addEventListener('visibilitychange', () => {
     if (document.hidden) {
       cancelAnimationFrame(frame);

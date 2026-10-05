@@ -125,6 +125,7 @@ const revealObserver = new IntersectionObserver(entries => {
     const required = Math.min(entry.boundingClientRect.height, main.clientHeight) * .8;
     if (entry.isIntersecting && entry.intersectionRect.height >= required - 1) {
       reveal(entry.target);
+      revealSections.delete(entry.target);
       revealObserver.unobserve(entry.target);
     }
   }
@@ -133,6 +134,20 @@ const revealSections = new Set();
 for (const element of reveals) revealSections.add(element.closest('.hero, .sq-intro, .sq-panel, .process-card, .ingredients-section--photo') || element);
 revealSections.forEach(element => revealObserver.observe(element));
 
+function revealVisibleSections() {
+  if (document.hidden) return;
+  const viewport = main.getBoundingClientRect();
+  for (const element of revealSections) {
+    const bounds = element.getBoundingClientRect();
+    const visible = Math.min(bounds.bottom, viewport.bottom) - Math.max(bounds.top, viewport.top);
+    if (bounds.height > 0 && visible >= Math.min(bounds.height, viewport.height) * .8 - 1) {
+      reveal(element);
+      revealSections.delete(element);
+      revealObserver.unobserve(element);
+    }
+  }
+}
+
 function updateService(index) {
   activeService = index;
   serviceButtons.forEach((button, i) => button.setAttribute('aria-current', String(i === index)));
@@ -140,6 +155,8 @@ function updateService(index) {
 }
 function syncScroll() {
   scrollFrame = null;
+  // Some embedded views resume before IntersectionObserver delivers a new entry.
+  revealVisibleSections();
   const storyBounds = dinnerStory?.getBoundingClientRect();
   root.classList.toggle('is-story-reading', (openingStoryAnchor
     || (!!storyBounds && storyBounds.top < main.clientHeight && storyBounds.bottom > header.offsetHeight)));
@@ -184,6 +201,17 @@ function setHash(element) {
   if (element.id && location.hash !== hash) history.pushState(null, '', hash);
 }
 function cancelTransition() { transition?.finish(); }
+function animateOnce(element, keyframes, timing) {
+  if (!element.animate || document.hidden) return { finished: Promise.resolve(), cancel() {} };
+  const animation = element.animate(keyframes, timing);
+  const startTime = document.timeline?.currentTime;
+  if (typeof startTime === 'number') animation.startTime = startTime;
+  // A stalled WebView animation must not leave a drawer or navigation locked.
+  const timeout = setTimeout(() => animation.cancel(), timing.duration + (timing.delay || 0) + 300);
+  const settled = () => clearTimeout(timeout);
+  animation.finished.then(settled, settled);
+  return animation;
+}
 function panelSnapshot(panel) {
   const clone = panel.cloneNode(true);
   clone.removeAttribute('id');
@@ -228,8 +256,8 @@ function jumpToService(index, horizontal = false) {
   updateService(index);
   setHash(incoming);
   const animations = [
-    oldPanel.animate([{ transform: 'translateX(0)' }, { transform: `translateX(${-direction * 100}%)` }], routeTiming),
-    newPanel.animate([{ transform: `translateX(${direction * 100}%)` }, { transform: 'translateX(0)' }], routeTiming),
+    animateOnce(oldPanel, [{ transform: 'translateX(0)' }, { transform: `translateX(${-direction * 100}%)` }], routeTiming),
+    animateOnce(newPanel, [{ transform: `translateX(${direction * 100}%)` }, { transform: 'translateX(0)' }], routeTiming),
   ];
   const current = { finish() {
     if (transition !== current) return;
@@ -301,8 +329,8 @@ function openDialog(dialog, trigger) {
   }
   syncLock();
   if (!reducedMotion.matches && !mobile.matches && !document.hidden) {
-    dialog.animate([{ transform: 'translateY(100vh)' }, { transform: 'translateY(0)' }], { duration: 400, delay: 200, easing: 'ease-in-out', fill: 'backwards' });
-    dialog.animate([{ opacity: 0 }, { opacity: 1 }], { duration: 200, delay: 200, fill: 'backwards' });
+    animateOnce(dialog, [{ transform: 'translateY(100vh)' }, { transform: 'translateY(0)' }], { duration: 400, delay: 200, easing: 'ease-in-out', fill: 'backwards' });
+    animateOnce(dialog, [{ opacity: 0 }, { opacity: 1 }], { duration: 200, delay: 200, fill: 'backwards' });
   }
 }
 async function closeDialog(dialog, restore = true) {
@@ -312,8 +340,8 @@ async function closeDialog(dialog, restore = true) {
   dialog.getAnimations().forEach(animation => animation.cancel());
   if (!reducedMotion.matches && !mobile.matches && !document.hidden) {
     const animations = [
-      dialog.animate([{ transform: 'translateY(0)' }, { transform: 'translateY(100vh)' }], { duration: 600, easing: 'ease-in-out', fill: 'forwards' }),
-      dialog.animate([{ opacity: 1 }, { opacity: 0 }], { duration: 400, fill: 'forwards' }),
+      animateOnce(dialog, [{ transform: 'translateY(0)' }, { transform: 'translateY(100vh)' }], { duration: 600, easing: 'ease-in-out', fill: 'forwards' }),
+      animateOnce(dialog, [{ opacity: 1 }, { opacity: 0 }], { duration: 400, fill: 'forwards' }),
     ];
     await Promise.allSettled(animations.map(animation => animation.finished));
     animations.forEach(animation => animation.cancel());
@@ -422,6 +450,7 @@ window.addEventListener('resize', () => { cancelTransition(); syncScroll(); });
 window.addEventListener('pagehide', cancelTransition);
 window.addEventListener('pagehide', counts.finish);
 window.addEventListener('pageshow', () => { cancelTransition(); syncLock(); syncScroll(); });
+document.addEventListener('visibilitychange', () => { if (!document.hidden) syncScroll(); });
 mobile.addEventListener('change', () => closeMenu());
 reducedMotion.addEventListener('change', () => {
   cancelTransition();
