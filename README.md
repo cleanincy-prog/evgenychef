@@ -47,3 +47,7 @@ node scripts/check.mjs --http  # Проверить работающий сер�
 ## Публикация на evgenychef.com
 
 Основной домен: https://evgenychef.com/. GitHub: https://github.com/cleanincy-prog/evgenychef, ветка `main`. Хостинг — существующий публичный Sites-проект из `.openai/hosting.json`. GitHub сам не запускает деплой: точный commit также сохраняется в source repository Sites, затем публикуется архив `dist` этого commit. Публикация выполняется workflow из Sites Hosting. История предыдущей реализации сохранена. Подробности выпуска и отката: `docs/DEPLOYMENT_2026-10-03.md`.
+
+## SEO и Google
+
+[Аудит, поисковые запросы, источники и процедура Search Console](docs/SEO_2026-10-05.md). `npm run check:seo` проверяет production-индексацию, canonical, sitemap, владение и структурированные данные.

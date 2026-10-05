@@ -3,7 +3,7 @@
 /* Keep the approved portrait crop intact while the surrounding rows fill the hero. */
 .hero-collage-grid, .hero-frame .hero-content { display: grid; grid-template-columns: repeat(var(--collage-columns), minmax(0, 1fr)); grid-template-rows: repeat(2, minmax(0, 1fr)) repeat(4, minmax(0, calc((var(--hero-portrait-height) - 6px) / 4))) repeat(3, minmax(0, 1fr)); gap: 2px; }
 .hero-collage-grid { position: absolute; inset: 0; z-index: 0; grid-auto-flow: dense; }
-.hero-softened { position: absolute; inset: 0; z-index: 99; display: block; width: 100%; height: 100%; pointer-events: none; }
+.hero-softened { position: absolute; inset: 0; z-index: 98; display: block; width: 100%; height: 100%; pointer-events: none; }
 .hero-softened[data-css-blur] { filter: blur(1.5px); }
 .hero-frame[data-hero-intro="complete"][data-hero-snapshot="ready"] .collage-tile:not(.collage-tile--video) { visibility: hidden; }
 .hero-frame[data-hero-intro="complete"]:not([data-hero-snapshot="ready"]) .collage-tile:not(.collage-tile--video) img { filter: blur(1.5px); }
@@ -12,23 +12,25 @@
 .collage-tile { position: relative; overflow: hidden; min-width: 0; min-height: 0; }
 .collage-tile--wide-desktop { grid-column: span 2; }
 .collage-tile img { position: absolute; width: 100%; height: 100%; object-fit: cover; object-position: center; }
-/* Keep this live tile above the static snapshot and tint, like the main portrait. */
-.hero-frame .collage-tile--video { position: absolute; grid-area: auto; right: 0; bottom: 0; width: calc((100% - 18px) / 10 * 1.4); height: calc((100% - var(--hero-portrait-height) - 10px) / 5 * 1.4); z-index: 101; background: #2c2622; }
+/* Reserve the final grid cell for playback, above the snapshot and under the shared tint. */
+.hero-frame .collage-tile--video { grid-column: -2 / -1; grid-row: -2 / -1; z-index: 99; background: #2c2622; }
 .hero-frame .collage-tile--video img,
 .collage-tile--video video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 50% 40%; }
 .collage-tile--video video { opacity: 0; }
 .collage-tile--video[data-video-ready] video { opacity: 1; }
+.hero-frame:is([data-hero-intro="complete"], [data-hero-intro="revealing"]) .collage-tile--video :is(img, video) { filter: blur(1.5px); }
 .hero-frame .hero-content { pointer-events: none; }
 .hero-frame .hero-content a, .hero-frame .hero-content button { pointer-events: auto; }
-.hero-video-toggle { position: absolute; z-index: 1; right: 4px; bottom: 4px; display: grid; place-items: center; width: 28px; height: 28px; padding: 0; border: 1px solid #fafaf840; border-radius: 50%; background: #2c2622aa; color: #fafaf8; cursor: pointer; }
+.hero-video-toggle { position: absolute; z-index: 1; inset: 0; display: block; width: 100%; height: 100%; padding: 0; border: 0; border-radius: 0; background: transparent; color: #fafaf8; cursor: pointer; }
+.hero-video-toggle::before { content: ''; position: absolute; right: 4px; bottom: 4px; width: 28px; height: 28px; border: 1px solid #fafaf840; border-radius: 50%; background: #2c2622aa; }
 .hero-video-toggle[hidden] { display: none; }
-.hero-video-toggle svg { grid-area: 1 / 1; width: 18px; height: 18px; }
+.hero-video-toggle svg { position: absolute; right: 9px; bottom: 9px; width: 18px; height: 18px; }
 .hero-video-pause, .collage-tile--video[data-video-playing] .hero-video-play { display: none; }
 .collage-tile--video[data-video-playing] .hero-video-pause { display: block; }
-.hero-video-toggle:focus-visible { outline-offset: -3px; }
+.collage-tile--video[data-video-playing] .hero-video-toggle { opacity: 0; }
+.collage-tile--video .hero-video-toggle:focus-visible { opacity: 1; outline-offset: -3px; }
 @media (hover: hover) {
-  .collage-tile--video[data-video-playing] .hero-video-toggle { opacity: 0; }
-  .collage-tile--video:hover .hero-video-toggle, .collage-tile--video:focus-within .hero-video-toggle { opacity: 1; }
+  .collage-tile--video:hover .hero-video-toggle { opacity: 1; }
 }
 .hero-story { display: none; position: absolute; z-index: 2; inset: 0; overflow: hidden; pointer-events: none; }
 .hero-story-shot { position: absolute; right: 6%; top: 50%; width: min(29%, 36svh); transform: translateY(-50%); transform-origin: center; margin: 0; }
@@ -71,7 +73,7 @@
   .hero-frame .scroll-cue { bottom: 10px; }
   .collage-tile--wide-desktop { grid-column: auto; }
   .collage-tile--wide-compact { grid-column: span 2; }
-  .hero-frame .collage-tile--video { width: calc((100% - 14px) / 8 * 2.8 + 2.8px); height: calc((100% - var(--hero-portrait-height) - 16px) / 8 * 1.4); }
+  .hero-frame .collage-tile--video { grid-column: -3 / -1; }
   .hero-story-shot { right: 3%; width: min(63%, 38svh); }
 }
 

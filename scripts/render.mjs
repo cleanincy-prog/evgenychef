@@ -1,5 +1,6 @@
 import { writeFile } from 'node:fs/promises';
 import { chef, formats } from '../src/content.mjs';
+import { renderSeoHead } from '../src/seo.mjs';
 import { serviceRenders } from '../src/service-renders.mjs';
 import { renderProcess } from '../src/process.mjs';
 import { heroImages, heroVideo, heroStoryShots, heroCollageWideDesktop, heroCollageWideCompact, heroIntroStyles } from '../src/hero-collage.mjs';
@@ -20,20 +21,13 @@ const collageImage = (entry, sizes, priority = 'auto') => `<img src="${entry.src
 const collageVideo = () => `<img src="${heroVideo.poster}" width="${heroVideo.width}" height="${heroVideo.height}" alt="" loading="eager" decoding="async"><video data-hero-video data-src="${heroVideo.src}" poster="${heroVideo.poster}" width="${heroVideo.width}" height="${heroVideo.height}" muted loop playsinline preload="none" aria-hidden="true" tabindex="-1"></video><button type="button" class="hero-video-toggle" aria-label="Воспроизвести видео с шефом" hidden><svg class="hero-video-pause" viewBox="0 0 20 20" aria-hidden="true"><path d="M7 5v10M13 5v10" fill="none" stroke="currentColor" stroke-width="2"/></svg><svg class="hero-video-play" viewBox="0 0 20 20" aria-hidden="true"><path d="m7 4 9 6-9 6Z" fill="currentColor"/></svg></button>`;
 const dialog = (id, label, content) => `<dialog id="${id}" class="sheet" aria-labelledby="${id}-title" data-lenis-prevent><div class="sheet-top"><a href="#top" class="wordmark" data-close>${chef.wordmark}</a><button type="button" class="close-sheet voice-mono" data-close aria-label="Закрыть окно">Закрыть <span aria-hidden="true">×</span></button></div><div class="sheet-inner">${content}</div></dialog>`;
 
-const html = `<!doctype html>
+export const renderHomepage = ({ production = false } = {}) => `<!doctype html>
 <html lang="ru" class="cormorant_garamond_5cf6ee7e-module__oQQLIW__variable dm_sans_3d80eddf-module__18Q8-q__variable">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="robots" content="noindex,nofollow">
   <meta name="theme-color" content="#2c2622">
-  <title>${chef.title}</title>
-  <meta name="description" content="${chef.description}">
-  <meta property="og:title" content="${chef.title}">
-  <meta property="og:description" content="${chef.description}">
-  <meta property="og:type" content="website">
-  <meta property="og:locale" content="ru_RU">
-  <meta property="og:image" content="/media/chef/hero.webp">
+  ${renderSeoHead({ production })}
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="preload" href="/assets/fonts/b0947914c9718a1e-s.0l.9lak812di~.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/assets/fonts/01e4147cff8141ee-s.p.10ked.7w885.g.woff2" as="font" type="font/woff2" crossorigin>
@@ -145,5 +139,5 @@ ${formats.filter(f=>f.id === 'dinner').map(f=>dialog(`details-${f.id}`,f.title,`
 </body>
 </html>`;
 
-await writeFile(new URL('../public/index.html', import.meta.url), html.replace(/[ \t]+$/gm, ''));
+await writeFile(new URL('../public/index.html', import.meta.url), renderHomepage().replace(/[ \t]+$/gm, ''));
 console.log(`Rendered homepage: ${formats.length} formats, 6 cinematic chapters, original photographs and preparation video.`);
