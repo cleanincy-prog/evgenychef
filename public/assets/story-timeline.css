@@ -58,17 +58,16 @@
 .story-step--menu, .story-scene--menu { --scene-photo: url("../media/chef/letter/menu-planning.webp"); }
 .story-scene--menu .story-photo { object-position: center top; }
 .story-step--ingredients, .story-scene--ingredients { --scene-photo: url("../media/chef/letter/menu/duck-ingredients.webp"); }
-.story-scene--ingredients { min-height: 0; padding-top: 72%; }
-.story-scene--ingredients .story-media { height: 100%; -webkit-mask-image: none; mask-image: none; }
-.story-scene--ingredients .story-photo { height: calc(108 * var(--story-unit)); object-position: center top; }
-.story-scene--ingredients .story-shade { background: linear-gradient(180deg, transparent calc(36 * var(--story-unit)), #151b15c2 calc(64 * var(--story-unit)), #151b15ed calc(90 * var(--story-unit)), #151b15e6 100%); }
+.story-scene--ingredients { min-height: 0; padding-top: clamp(54px, calc(12 * var(--story-unit)), 84px); }
+.story-scene--ingredients .story-shade { background: #151b15e6; }
 .story-scene--ingredients h3 { font-size: clamp(38px, calc(10.4 * var(--story-unit)), 74px); }
 .story-products { margin-top: 26px; max-width: none; gap: 22px; }
 .story-products dt { font-size: clamp(15px, calc(2.5 * var(--story-unit)), 19px); }
-.story-products dt > span { display: block; margin-bottom: 4px; color: var(--story-accent); font-size: 10px; }
 .story-products dd { margin: 5px 0 0; color: var(--story-muted); font-size: clamp(14px, calc(2.3 * var(--story-unit)), 17px); line-height: 1.55; }
 .story-ingredient-details { position: static; display: grid; grid-template-columns: 1fr 1fr; width: 100%; margin-top: 26px; gap: 14px; }
-.story-detail-photo { height: calc(27 * var(--story-unit)); border-radius: 5px; }
+.story-detail-photo { display: block; height: auto; aspect-ratio: 3 / 2; border-radius: 5px; }
+.story-ingredient-main { grid-column: 1 / -1; }
+.story-ingredient-main .story-detail-photo { aspect-ratio: 4 / 3; }
 .story-ingredient-details figcaption { font-size: clamp(10px, calc(1.8 * var(--story-unit)), 13px); }
 .story-step--taste, .story-scene--taste { --scene-photo: url("../media/chef/letter/menu/duck-pan.webp"); }
 .story-scene--taste { min-height: 0; padding: clamp(54px, calc(12 * var(--story-unit)), 84px) clamp(10px, calc(3 * var(--story-unit)), 20px) clamp(36px, calc(8 * var(--story-unit)), 56px); }

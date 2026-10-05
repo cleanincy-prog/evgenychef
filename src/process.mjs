@@ -11,8 +11,7 @@ const chapters = [
     media: '<img class="story-photo" src="/media/chef/letter/conversation-reference.png" width="1122" height="1402" alt="Евгений общается с гостями за столом на террасе" loading="lazy" decoding="async">' },
   { id: 'letter-menu', name: 'Продумываю меню', label: 'От пожеланий — к сочетаниям', source: 1, kind: 'menu',
     media: photo('letter/menu-planning.webp', 'letter/menu-planning-768.webp', 1600, 1067, 'Руки листают тетрадь с ингредиентами и кулинарными заметками') },
-  { id: 'ingredients', name: 'Магия начинается с выбора', label: 'Кипр · Продукты для вашего меню', kind: 'ingredients',
-    media: photo('letter/menu/duck-ingredients.webp', 'letter/menu/duck-ingredients-600.webp', 1200, 900, 'Утиные грудки, шиитаке, морковь, шалот и травы перед приготовлением') },
+  { id: 'ingredients', name: 'Магия начинается с выбора', label: 'Кипр · Продукты для вашего меню', kind: 'ingredients', media: '' },
   { id: 'menu', name: 'Собираю вкус', label: 'Каждый продукт играет свою роль', kind: 'taste',
     media: photo('letter/menu/duck-pan.webp', 'letter/menu/duck-pan-512.webp', 1024, 683, '', 'story-photo story-photo--texture') },
   { id: 'letter-preparation', name: 'Подготовку беру на себя', label: 'Работа на кухне · Видео Евгения', source: 2, kind: 'preparation',
@@ -23,10 +22,11 @@ const chapters = [
 
 function ingredients() {
   return `<div class="story-body"><p>Выбор продукта — такая же важная часть моей работы, как приготовление. Свежесть и качество мяса, рыбы и морепродуктов задают вкус задолго до того, как я начинаю готовить.</p></div>
-    <dl class="story-products">${products.map((product, i) => `<div><dt><span>${['Лофу', 'Зиги', 'Фермы'][i]}</span>${escape(product.title)}</dt><dd>${escape(product.text)}</dd></div>`).join('')}</dl>
+    <dl class="story-products">${products.map(product => `<div><dt>${escape(product.title)}</dt><dd>${escape(product.text)}</dd></div>`).join('')}</dl>
     <div class="story-ingredient-details">
-      <figure>${photo('letter/menu/vegetables.webp', 'letter/menu/vegetables-400.webp', 800, 919, 'Грибы шиитаке, овощи и зелень на деревянной доске', 'story-detail-photo', '(max-width:767px) 40vw, 180px')}<figcaption>Сезонные овощи</figcaption></figure>
-      <figure>${photo('letter/menu/duck-pan.webp', 'letter/menu/duck-pan-512.webp', 1024, 683, 'Утиную грудку с румяной кожицей переворачивают на сковороде', 'story-detail-photo', '(max-width:767px) 40vw, 180px')}<figcaption>Начало приготовления</figcaption></figure>
+      <figure class="story-ingredient-main">${photo('letter/menu/duck-ingredients.webp', 'letter/menu/duck-ingredients-600.webp', 1200, 900, 'Утиные грудки, шиитаке, морковь, шалот и травы перед приготовлением', 'story-detail-photo', '(max-width:767px) 72vw, 566px')}</figure>
+      <figure>${photo('letter/menu/vegetables.webp', 'letter/menu/vegetables-400.webp', 800, 919, 'Грибы шиитаке, овощи и зелень на деревянной доске', 'story-detail-photo', '(max-width:767px) 35vw, 280px')}<figcaption>Сезонные овощи</figcaption></figure>
+      <figure>${photo('letter/menu/duck-pan.webp', 'letter/menu/duck-pan-512.webp', 1024, 683, 'Утиную грудку с румяной кожицей переворачивают на сковороде', 'story-detail-photo', '(max-width:767px) 35vw, 280px')}<figcaption>Начало приготовления</figcaption></figure>
     </div>`;
 }
 function plate() {
