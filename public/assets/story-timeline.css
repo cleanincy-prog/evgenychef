@@ -64,7 +64,7 @@
 .story-products { margin-top: 26px; max-width: none; gap: 22px; }
 .story-products dt { font-size: clamp(15px, calc(2.5 * var(--story-unit)), 19px); }
 .story-products dd { margin: 5px 0 0; color: var(--story-muted); font-size: clamp(14px, calc(2.3 * var(--story-unit)), 17px); line-height: 1.55; }
-.story-ingredient-details { position: static; display: grid; grid-template-columns: 1fr 1fr; width: 100%; margin-top: 26px; gap: 14px; }
+.story-ingredient-details { position: static; display: grid; grid-template-columns: 1fr 1fr; width: 100%; margin: 0 0 26px; gap: 14px; }
 .story-detail-photo { display: block; height: auto; aspect-ratio: 3 / 2; border-radius: 5px; }
 .story-ingredient-main { grid-column: 1 / -1; }
 .story-ingredient-main .story-detail-photo { aspect-ratio: 4 / 3; }

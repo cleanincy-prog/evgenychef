@@ -22,8 +22,10 @@ const chapters = [
 
 function ingredients() {
   return `<div class="story-body"><p>Выбор продукта — такая же важная часть моей работы, как приготовление. Свежесть и качество мяса, рыбы и морепродуктов задают вкус задолго до того, как я начинаю готовить.</p></div>
-    <dl class="story-products">${products.map(product => `<div><dt>${escape(product.title)}</dt><dd>${escape(product.text)}</dd></div>`).join('')}</dl>
-    <div class="story-ingredient-details">
+    <dl class="story-products">${products.map(product => `<div><dt>${escape(product.title)}</dt><dd>${escape(product.text)}</dd></div>`).join('')}</dl>`;
+}
+function ingredientPhotos() {
+  return `<div class="story-ingredient-details">
       <figure class="story-ingredient-main">${photo('letter/menu/duck-ingredients.webp', 'letter/menu/duck-ingredients-600.webp', 1200, 900, 'Утиные грудки, шиитаке, морковь, шалот и травы перед приготовлением', 'story-detail-photo', '(max-width:767px) 72vw, 566px')}</figure>
       <figure>${photo('letter/menu/vegetables.webp', 'letter/menu/vegetables-400.webp', 800, 919, 'Грибы шиитаке, овощи и зелень на деревянной доске', 'story-detail-photo', '(max-width:767px) 35vw, 280px')}<figcaption>Сезонные овощи</figcaption></figure>
       <figure>${photo('letter/menu/duck-pan.webp', 'letter/menu/duck-pan-512.webp', 1024, 683, 'Утиную грудку с румяной кожицей переворачивают на сковороде', 'story-detail-photo', '(max-width:767px) 35vw, 280px')}<figcaption>Начало приготовления</figcaption></figure>
@@ -57,7 +59,7 @@ export function renderProcess() {
       <div class="story-media">${chapter.media}</div><div class="story-shade" aria-hidden="true"></div>
       ${i > 0 ? '<div class="story-divider" aria-hidden="true"></div>' : ''}
       <p class="story-scene-label">${chapter.label}</p>
-      <div class="story-copy"><h3 id="${chapter.id}-title">${chapter.name}</h3>
+      <div class="story-copy">${chapter.kind === 'ingredients' ? ingredientPhotos() : ''}<h3 id="${chapter.id}-title">${chapter.name}</h3>
         ${chapter.kind === 'ingredients' ? ingredients() : chapter.kind === 'taste' ? '<p class="story-body">Сочность, свежесть, сладость и кислинка дополняют друг друга.</p>' : `<div class="story-body">${paragraphs(stages[chapter.source].text)}</div>`}
         ${chapter.kind === 'preparation' ? `${filmControls()}<noscript><p class="story-film-fallback"><a href="/media/chef/preparation.mp4">Смотреть видео подготовки</a></p></noscript>` : ''}
         ${chapter.kind === 'evening' ? `<a class="story-contact" href="${chef.instagram}" target="_blank" rel="noopener noreferrer">Расскажите мне о вечере <span aria-hidden="true">↗</span></a>` : ''}
