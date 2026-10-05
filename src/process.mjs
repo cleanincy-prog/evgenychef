@@ -15,7 +15,7 @@ const chapters = [
   { id: 'menu', name: 'Собираю вкус', label: 'Каждый продукт играет свою роль', kind: 'taste',
     media: photo('letter/menu/duck-pan.webp', 'letter/menu/duck-pan-512.webp', 1024, 683, '', 'story-photo story-photo--texture') },
   { id: 'letter-preparation', name: 'Подготовку беру на себя', label: 'Работа на кухне · Видео Евгения', source: 2, kind: 'preparation',
-    media: `<img class="story-photo story-photo--film-backdrop" src="/media/chef/preparation-poster.webp" width="540" height="960" alt="" loading="lazy" decoding="async"><video class="story-film" id="preparation-film" src="/media/chef/preparation.mp4" poster="/media/chef/preparation-poster.webp" width="540" height="960" playsinline controls preload="none" aria-label="Евгений раскладывает инструменты и делает заготовки на кухне" data-letter-video><a href="/media/chef/preparation.mp4">Смотреть видео подготовки</a></video>` },
+    media: `<img class="story-photo story-photo--film-backdrop" src="/media/chef/preparation-poster.webp" width="540" height="960" alt="" loading="lazy" decoding="async"><video class="story-film" id="preparation-film" src="/media/chef/preparation.mp4" poster="/media/chef/preparation-poster.webp" width="540" height="960" playsinline loop preload="none" aria-label="Евгений раскладывает инструменты и делает заготовки на кухне" data-letter-video><a href="/media/chef/preparation.mp4">Смотреть видео подготовки</a></video>` },
   { id: 'letter-evening', name: 'Этот вечер — ваш', label: 'Время за вашим столом', source: 3, kind: 'evening',
     media: photo('letter/evening-chef-wine.webp', 'letter/evening-chef-wine-768.webp', 1448, 1086, 'Иллюстрация: Евгений наливает вино гостю за ужином при свечах на террасе виллы') },
 ];
@@ -27,8 +27,8 @@ function ingredients() {
 function ingredientPhotos() {
   return `<div class="story-ingredient-details">
       <figure class="story-ingredient-main">${photo('letter/menu/duck-ingredients.webp', 'letter/menu/duck-ingredients-600.webp', 1200, 900, 'Утиные грудки, шиитаке, морковь, шалот и травы перед приготовлением', 'story-detail-photo', '(max-width:767px) 72vw, 566px')}</figure>
-      <figure>${photo('letter/menu/vegetables.webp', 'letter/menu/vegetables-400.webp', 800, 919, 'Грибы шиитаке, овощи и зелень на деревянной доске', 'story-detail-photo', '(max-width:767px) 35vw, 280px')}<figcaption>Сезонные овощи</figcaption></figure>
-      <figure>${photo('letter/menu/duck-pan.webp', 'letter/menu/duck-pan-512.webp', 1024, 683, 'Утиную грудку с румяной кожицей переворачивают на сковороде', 'story-detail-photo', '(max-width:767px) 35vw, 280px')}<figcaption>Начало приготовления</figcaption></figure>
+      <figure>${photo('letter/menu/vegetables.webp', 'letter/menu/vegetables-400.webp', 800, 919, 'Грибы шиитаке, овощи и зелень на деревянной доске', 'story-detail-photo', '(max-width:767px) 35vw, 280px')}</figure>
+      <figure>${photo('letter/menu/duck-pan.webp', 'letter/menu/duck-pan-512.webp', 1024, 683, '', 'story-detail-photo', '(max-width:767px) 35vw, 280px')}</figure>
     </div>`;
 }
 function plate() {
@@ -43,9 +43,7 @@ function tasteDiagram() {
 }
 function filmControls() {
   return `<div class="story-film-controls" hidden>
-    <button type="button" class="story-play" aria-controls="preparation-film" aria-label="Смотреть видео подготовки" data-film-play><svg viewBox="0 0 24 24" aria-hidden="true"><path class="film-play-icon" d="m9 5 11 7-11 7Z" fill="currentColor"/><path class="film-pause-icon" d="M8 5v14M16 5v14" fill="none" stroke="currentColor" stroke-width="3"/></svg><span data-play-label>Смотреть видео</span></button>
-    <button type="button" class="story-sound" data-film-sound aria-label="Выключить звук" aria-pressed="false">Звук <span data-sound-label>вкл.</span></button>
-    <a href="/media/chef/preparation.mp4" target="_blank" rel="noopener" aria-label="Открыть видео подготовки в отдельной вкладке">Открыть видео ↗</a>
+    <button type="button" class="story-sound" aria-controls="preparation-film" data-film-sound aria-label="Выключить звук" aria-pressed="false">Звук <span data-sound-label>вкл.</span></button>
     <span class="sr-only" role="status" data-film-status></span>
   </div>`;
 }

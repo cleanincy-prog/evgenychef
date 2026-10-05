@@ -112,10 +112,12 @@ try {
       await page.goBack();
       await page.waitForFunction(()=>location.hash==='#format-dinner');
       await scrollTo(page,'#letter-preparation',true);
-      await page.locator('[data-film-play]').click();
+      assert.equal(await page.locator('[data-film-play]').count(),0,'preparation Play button should be absent');
       await page.waitForFunction(()=>!document.querySelector('[data-letter-video]').paused||!!document.querySelector('[data-film-status]').textContent);
-      const media=await page.locator('[data-letter-video]').evaluate(v=>({playing:!v.paused,inline:v.hasAttribute('playsinline'),error:v.error?.code||null}));
+      const media=await page.locator('[data-letter-video]').evaluate(v=>({playing:!v.paused,inline:v.hasAttribute('playsinline'),muted:v.muted,controls:v.controls,loop:v.loop,error:v.error?.code||null}));
       assert(media.inline); assert(media.playing,'video did not start: '+JSON.stringify(media));
+      assert(!media.muted,'audio should start after the menu interaction');
+      assert(!media.controls); assert(media.loop);
       await page.locator('[data-film-sound]').click();
       assert(await page.locator('[data-letter-video]').evaluate(v=>v.muted));
       await scrollTo(page,'#contact');

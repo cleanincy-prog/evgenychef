@@ -1,49 +1,85 @@
 import { uiText } from './ui-language.mjs';
-// Playback starts on a deliberate click and stops when the chapter leaves view.
+// Start when the chapter enters view. Browsers may require a gesture for audio.
 const chapter = document.querySelector('.story-scene--preparation');
 const video = chapter?.querySelector('[data-letter-video]');
 if (video) {
   const controls = chapter.querySelector('.story-film-controls');
-  const play = controls.querySelector('[data-film-play]');
   const sound = controls.querySelector('[data-film-sound]');
   const status = controls.querySelector('[data-film-status]');
   let request = 0;
+  let pending = 0;
   let visible = false;
+  let pageActive = true;
+  let soundRequested = true;
+  let audibleBlocked = false;
+  const canPlay = () => visible && pageActive && !document.hidden;
   video.controls = false;
   controls.hidden = false;
   function syncControls() {
-    const playing = !video.paused && !video.ended;
-    chapter.classList.toggle('is-film-playing', playing);
-    play.setAttribute('aria-label', playing ? uiText('Приостановить видео подготовки', 'Pause the preparation video') : uiText('Смотреть видео подготовки', 'Watch the preparation video'));
-    controls.querySelector('[data-play-label]').textContent = playing ? uiText('Пауза', 'Pause') : uiText('Смотреть видео', 'Watch video');
     sound.setAttribute('aria-pressed', String(video.muted));
     sound.setAttribute('aria-label', video.muted ? uiText('Включить звук', 'Unmute') : uiText('Выключить звук', 'Mute'));
     controls.querySelector('[data-sound-label]').textContent = video.muted ? uiText('выкл.', 'off') : uiText('вкл.', 'on');
   }
-  function pause() { request += 1; video.pause(); syncControls(); }
-  play.addEventListener('click', async () => {
-    if (!video.paused) return pause();
+  function pause() {
+    request += 1;
+    pending = 0;
+    video.pause();
+    syncControls();
+  }
+  async function start(fromGesture = false) {
+    if (!canPlay() || (pending && !fromGesture)) return;
+    const muted = !soundRequested || (audibleBlocked && !fromGesture);
+    if (!video.paused && video.muted === muted) return;
     const current = ++request;
+    pending = current;
     status.textContent = '';
-    if (video.ended) video.currentTime = 0;
+    // Set muted and call play synchronously within the trusted gesture on iOS.
+    video.muted = muted;
     try {
-      await video.play();
-      if (current !== request || document.hidden || !visible) video.pause();
+      try {
+        await video.play();
+        if (current === request && !video.muted) audibleBlocked = false;
+      } catch (error) {
+        if (current !== request || !canPlay()) return;
+        if (muted || error.name !== 'NotAllowedError') throw error;
+        audibleBlocked = true;
+        video.muted = true;
+        await video.play();
+        if (current === request) status.textContent = uiText('Коснитесь страницы, чтобы включить звук.', 'Tap the page to enable sound.');
+      }
     } catch {
-      status.textContent = uiText('Не удалось запустить видео. Попробуйте ещё раз или откройте его в отдельной вкладке.', 'The video could not start. Please try again or open it in a separate tab.');
+      if (current === request && canPlay()) status.textContent = uiText('Видео временно недоступно.', 'The video is temporarily unavailable.');
+    } finally {
+      if (pending === current) pending = 0;
+      if (!canPlay()) video.pause();
+      syncControls();
     }
+  }
+  sound.addEventListener('click', () => {
+    soundRequested = video.muted;
+    audibleBlocked = false;
+    if (soundRequested) start(true);
+    else { video.muted = true; start(); }
     syncControls();
   });
-  sound.addEventListener('click', () => { video.muted = !video.muted; syncControls(); });
-  ['play', 'pause', 'ended', 'volumechange'].forEach(event => video.addEventListener(event, syncControls));
+  function enableAudio(event) {
+    if (!event.isTrusted || !soundRequested || event.target.closest?.('[data-film-sound]')) return;
+    if (event.type === 'keydown' && (event.altKey || event.ctrlKey || event.metaKey || ['Shift', 'Control', 'Alt', 'Meta', 'Escape'].includes(event.key))) return;
+    audibleBlocked = false;
+    start(true);
+  }
+  ['click', 'touchend', 'keydown'].forEach(event => document.addEventListener(event, enableAudio, { passive: true }));
+  ['play', 'playing'].forEach(event => video.addEventListener(event, () => { if (!canPlay()) video.pause(); }));
+  video.addEventListener('volumechange', syncControls);
   const headerHeight = Math.ceil(document.querySelector('.site-header')?.getBoundingClientRect().height || 0);
   new IntersectionObserver(([entry]) => {
     visible = entry.isIntersecting && entry.intersectionRect.height > 1;
-    if (!visible) pause();
+    if (visible) start(); else pause();
   }, { root: document.querySelector('#main'), rootMargin: `-${headerHeight}px 0px 0px 0px`,
     threshold: [0, .01] }).observe(chapter);
-  document.addEventListener('visibilitychange', () => { if (document.hidden) pause(); });
-  window.addEventListener('pagehide', pause);
+  document.addEventListener('visibilitychange', () => { if (document.hidden) pause(); else start(); });
+  window.addEventListener('pagehide', () => { pageActive = false; pause(); });
+  window.addEventListener('pageshow', () => { pageActive = true; start(); });
   syncControls();
 }
 

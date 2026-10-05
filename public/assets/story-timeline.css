@@ -68,7 +68,6 @@
 .story-detail-photo { display: block; height: auto; aspect-ratio: 3 / 2; border-radius: 5px; }
 .story-ingredient-main { grid-column: 1 / -1; }
 .story-ingredient-main .story-detail-photo { aspect-ratio: 4 / 3; }
-.story-ingredient-details figcaption { font-size: clamp(10px, calc(1.8 * var(--story-unit)), 13px); }
 .story-step--taste, .story-scene--taste { --scene-photo: url("../media/chef/letter/menu/duck-pan.webp"); }
 .story-scene--taste { min-height: 0; padding: clamp(54px, calc(12 * var(--story-unit)), 84px) clamp(10px, calc(3 * var(--story-unit)), 20px) clamp(36px, calc(8 * var(--story-unit)), 56px); }
 .story-scene--taste .story-shade { background: linear-gradient(180deg, #414b4033, #151b15e6 calc(96 * var(--story-unit)), #151b15f2 100%), radial-gradient(ellipse at 55% 24%, #66726373, transparent 68%); }
@@ -101,10 +100,7 @@
 .story-scene--preparation .story-shade { background: linear-gradient(180deg, transparent calc(78 * var(--story-unit)), #151b1533 calc(90 * var(--story-unit)), #151b15db calc(108 * var(--story-unit)), #151b15e6 calc(125 * var(--story-unit))); }
 .story-scene--preparation h3 { font-size: clamp(40px, calc(11.5 * var(--story-unit)), 82px); }
 .story-film-controls { margin-top: 20px; gap: 8px 18px; font-size: clamp(12px, calc(2.1 * var(--story-unit)), 16px); }
-.story-film-controls button, .story-film-controls a { color: var(--story-ink); }
-.story-play svg { border-color: #fff3d680; background: #fff3d614; }
-.story-film-controls a { color: var(--story-muted); }
-.story-film-controls [data-play-label] { min-width: 8.5em; text-align: left; }
+.story-film-controls button { color: var(--story-ink); }
 .story-step--evening, .story-scene--evening { --scene-photo: url("../media/chef/letter/evening-chef-wine.webp"); }
 .story-scene--evening .story-photo { object-position: 45% top; }
 .story-scene--evening h3 { max-width: 10ch; }
