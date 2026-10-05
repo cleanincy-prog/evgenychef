@@ -5,7 +5,7 @@ import { chef, formats } from '../src/content.mjs';
 import { renderSeoHead } from '../src/seo.mjs';
 import { pages, pageFor, homePath, servicePath } from '../src/pages.mjs';
 import { localizeHomepage } from '../src/home-locale.mjs';
-import { languageLink, renderServicePage, renderServiceFooter } from '../src/service-pages.mjs';
+import { languageLink, renderServicePage } from '../src/service-pages.mjs';
 import { serviceRenders } from '../src/service-renders.mjs';
 import { renderProcess } from '../src/process.mjs';
 import { heroImages, heroVideo, heroStoryShots, heroCollageWideDesktop, heroCollageWideCompact, heroIntroStyles } from '../src/hero-collage.mjs';
@@ -139,12 +139,10 @@ const html = `<!doctype html>
     <div class="container contact-inner">
       <div class="contact-copy">
         <div class="contact-heading" data-reveal><p class="eyebrow">Начнём с разговора</p><h2 id="contact-title">Обсудим<br><em>ваш вечер.</em></h2></div>
-        <p class="contact-message" data-reveal>Напишите мне о поводе, дате и количестве гостей.<br>Вместе найдём подходящий формат.</p>
         <div class="contact-actions" data-reveal>${button('Написать в Instagram', chef.instagram, '', 'target="_blank" rel="noopener noreferrer"')}<p class="contact-handle">@evg.chef</p></div>
       </div>
     </div>
   </section>
-  ${renderServiceFooter(page)}
 </main>
 
 ${formats.filter(f=>f.id === 'dinner').map(f=>dialog(`details-${f.id}`,f.title,`<div class="sheet-grid"><div><p class="eyebrow">Формат встречи</p><h2 id="details-${f.id}-title">${f.title}</h2><p class="sheet-lead">${f.lead}</p><p class="body-copy">${f.description}</p><ol class="detail-list">${f.details.map((p,i)=>`<li><span class="voice-mono">${number(i)}</span><p>${p}</p></li>`).join('')}</ol><p class="service-detail-link"><a class="link-underline" href="${servicePath(f.id, language)}">Все подробности ужина ${arrow}</a></p>${button('Обсудить встречу', '#contact', '', 'data-close')}</div><figure>${formatImage(f, 'sheet-photo', '(max-width: 767px) calc(100vw - 48px), (max-width: 1279px) 43vw, 501px')}</figure></div>`)).join('')}

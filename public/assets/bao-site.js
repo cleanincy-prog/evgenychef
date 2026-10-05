@@ -105,7 +105,7 @@ root.classList.toggle('is-story-reading', openingStoryAnchor);
 root.classList.add('native-scroll');
 root.classList.toggle('desktop-safari', desktopSafari);
 
-const screens = all('.hero, .about-section, .sq-intro, .sq-panel, .letter-heading, .process-card, .letter-footer, .ingredients-section, .contact-section, .site-index');
+const screens = all('.hero, .about-section, .sq-intro, .sq-panel, .letter-heading, .process-card, .letter-footer, .ingredients-section, .contact-section');
 for (const screen of screens) {
   screen.dataset.snap = '';
   screen.dataset.navTone = screen.matches('.hero, .sq-intro, .sq-panel, .process-card:not(.process-card--light), .ingredients-section--photo, .contact-section') ? 'light' : 'dark';

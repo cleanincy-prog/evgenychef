@@ -204,7 +204,6 @@ em { font-weight: 300; }
 .contact-section .eyebrow { color: #fafaf8bb; }
 .contact-section h2 { font-size: clamp(2.75rem,7vw,6rem); line-height: 1.05; margin-bottom: 30px; }
 .contact-section h2 em { color: var(--stone); }
-.contact-message { color: #fcfaf0; line-height: 1.8; font-size: 15px; margin-bottom: 36px; }
 .contact-handle { color: #fafaf899; font-size: 12px; letter-spacing: .08em; margin-top: 20px; }
 .sheet { position: fixed; inset: 0; width: 100%; height: 100%; max-width: none; max-height: none; border: 0; background: var(--warm-white, #fafaf8); color: var(--charcoal); padding: 0; overflow-y: auto; overscroll-behavior: contain; }
 .sheet::backdrop { background: #2c262280; -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px); }
@@ -366,7 +365,6 @@ html.lenis, html.lenis body { height: auto; }
   .contact-section h2 { font-size: clamp(42px, 11vw, 58px); margin-bottom: 22px; }
   .contact-photo img { object-position: 50% 0; }
   .contact-shade { background: linear-gradient(0deg, #151b15ed, #151b15a6 34%, #151b151a 68%, transparent 84%); }
-  .contact-message { margin-bottom: 26px; font-size: 14px; line-height: 1.65; }
   .contact-handle { margin-top: 14px; }
   .sheet-top { padding: 20px 24px; }
   .sheet-top .wordmark { font-size: 16px; letter-spacing: .15em; }
@@ -379,7 +377,6 @@ html.lenis, html.lenis body { height: auto; }
   .contact-inner { padding-block: max(190px, calc(var(--viewport-small-height) * 0.32)) max(24px, env(safe-area-inset-bottom)); }
   .contact-section .eyebrow { margin-bottom: 10px; }
   .contact-section h2 { font-size: 38px; margin-bottom: 18px; }
-  .contact-message { font-size: 13px; margin-bottom: 20px; }
   .contact-handle { margin-top: 10px; }
 }
 @media (max-height: 540px) and (min-width: 768px) {
@@ -387,7 +384,6 @@ html.lenis, html.lenis body { height: auto; }
   .contact-photo img { object-position: 50% 12%; }
   .contact-section .eyebrow { margin-bottom: 14px; }
   .contact-section h2 { font-size: clamp(36px, 5.2vw, 44px); margin-bottom: 18px; }
-  .contact-message { font-size: 14px; line-height: 1.6; margin-bottom: 22px; }
   .contact-handle { margin-top: 12px; }
 }
 @media (max-height:700px) and (max-width:767px) {

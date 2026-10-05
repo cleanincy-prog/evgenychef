@@ -1,5 +1,5 @@
-import { chef, formats } from './content.mjs';
-import { homePath, servicePath, alternatePath, pageFor } from './pages.mjs';
+import { chef } from './content.mjs';
+import { homePath, alternatePath } from './pages.mjs';
 import { renderSeoHead, pageImage, escapeAttribute as escape } from './seo.mjs';
 
 const arrow = '<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6" stroke="currentColor" stroke-width="1.4"/></svg>';
@@ -8,32 +8,17 @@ const labels = {
     contents: 'Об этой встрече', questions: 'Перед встречей', discuss: 'Обсудим ваши планы',
     note: 'Напишите дату, место на Кипре и количество гостей. Расскажите о поводе и пожеланиях к еде.',
     services: 'Ужины, мероприятия и мастер-классы',
-    introduction: 'Персональное меню, приготовление и подача — для вашего вечера с шефом Евгением Гребеником.',
-    navigation: 'Подробно об услугах', skip: 'К содержимому', caption: 'Евгений Гребеник · Кипр' },
+    skip: 'К содержимому', caption: 'Евгений Гребеник · Кипр' },
   en: { home: 'Private chef in Cyprus', language: 'Русский', contact: 'Message on Instagram',
     contents: 'About this experience', questions: 'Before we meet', discuss: 'Let’s discuss your plans',
     note: 'Share the date, location in Cyprus and number of guests. Tell me about the occasion and the food you enjoy.',
     services: 'Dinners, private events and cooking classes',
-    introduction: 'A personal menu, cooking and serving — for your evening with chef Evgen Grebenik.',
-    navigation: 'Explore the services', skip: 'Skip to content', caption: 'Evgen Grebenik · Cyprus' },
+    skip: 'Skip to content', caption: 'Evgen Grebenik · Cyprus' },
 };
 export function languageLink(page, className = 'language-link') {
   const language = page.language === 'ru' ? 'en' : 'ru';
   return `<a class="${className}" href="${alternatePath(page, language)}" lang="${language}" hreflang="${language}">${labels[page.language].language}</a>`;
 }
-export function renderServiceFooter(page) {
-  const t = labels[page.language];
-  return `<footer class="site-index" id="explore" aria-labelledby="explore-title"><div class="container">
-    <div class="site-index-heading"><h2 id="explore-title">${t.home}</h2>${languageLink(page)}</div>
-    <p>${t.introduction}</p>
-    <nav aria-label="${t.navigation}">${formats.map(format => {
-      const other = pageFor(servicePath(format.id, page.language));
-      return `<a href="${other.path}"${page.path === other.path ? ' aria-current="page"' : ''}>${escape(other.h1)} <span aria-hidden="true">↗</span></a>`;
-    }).join('')}</nav>
-    <a class="site-index-home" href="${homePath(page.language)}">${chef.wordmark}</a>
-  </div></footer>`;
-}
-
 export function renderServicePage(page, { production = false } = {}) {
   const t = labels[page.language];
   const image = pageImage(page);
@@ -74,7 +59,6 @@ export function renderServicePage(page, { production = false } = {}) {
       </div>
     </div>
   </main>
-  ${renderServiceFooter(page)}
 </body>
 </html>`;
 }

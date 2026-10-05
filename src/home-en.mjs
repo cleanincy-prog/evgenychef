@@ -99,8 +99,6 @@ export const homeEnglish = {
   "Начнём с разговора": "Let's start with a conversation",
   "Обсудим": "Let's plan",
   "ваш вечер.": "your evening.",
-  "Напишите мне о поводе, дате и количестве гостей.": "Tell me the occasion, date and number of guests.",
-  "Вместе найдём подходящий формат.": "Together, we will find the right format.",
   "Написать в Instagram": "Message on Instagram",
   "Закрыть": "Close",
   "Формат встречи": "Gathering format",
