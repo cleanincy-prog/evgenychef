@@ -8,7 +8,7 @@ const menu = document.querySelector('#mobile-menu');
 const toggle = document.querySelector('.menu-toggle');
 const reducedMotion = matchMedia('(prefers-reduced-motion: reduce)');
 const counts = createCountUp({ prefersReducedMotion: () => reducedMotion.matches });
-const mobile = matchMedia('(max-width: 767px)');
+const mobile = matchMedia('(max-width: 1023px)');
 const dinnerStory = document.querySelector('.dinner-story');
 let openingStoryAnchor = !!targetForHash(location.hash)?.closest('.dinner-story');
 const all = (selector, context = document) => [...context.querySelectorAll(selector)];
@@ -23,6 +23,7 @@ let transition = null;
 let dialogTrigger = null;
 let restoreDialogFocus = true;
 let closingDialog = null;
+let dialogBackdrop = null;
 let scrollFrame;
 let submenuOpen = false;
 let dropdownBlockedUntil = 0;
@@ -246,6 +247,7 @@ function syncLock() {
   const locked = menuOpen || !!document.querySelector('dialog[open]');
   root.classList.toggle('scroll-locked', locked);
   main.inert = locked;
+  header.inert = !!document.querySelector('.sheet-fallback[open]');
 }
 function closeMenu(restoreFocus = false) {
   if (!menuOpen) return;
@@ -283,19 +285,32 @@ function openDialog(dialog, trigger) {
   closeMenu();
   dialogTrigger = trigger;
   restoreDialogFocus = true;
-  dialog.showModal();
+  if (typeof dialog.showModal === 'function') {
+    dialog.showModal();
+  } else {
+    dialog.classList.add('sheet-fallback');
+    dialog.setAttribute('open', '');
+    dialog.setAttribute('role', 'dialog');
+    dialog.setAttribute('aria-modal', 'true');
+    dialogBackdrop = document.createElement('div');
+    dialogBackdrop.className = 'sheet-fallback-backdrop';
+    dialogBackdrop.setAttribute('aria-hidden', 'true');
+    dialogBackdrop.addEventListener('click', () => closeDialog(dialog));
+    document.body.append(dialogBackdrop);
+    dialog.querySelector('[data-close]')?.focus({ preventScroll: true });
+  }
   syncLock();
-  if (!reducedMotion.matches) {
+  if (!reducedMotion.matches && !mobile.matches && !document.hidden) {
     dialog.animate([{ transform: 'translateY(100vh)' }, { transform: 'translateY(0)' }], { duration: 400, delay: 200, easing: 'ease-in-out', fill: 'backwards' });
     dialog.animate([{ opacity: 0 }, { opacity: 1 }], { duration: 200, delay: 200, fill: 'backwards' });
   }
 }
 async function closeDialog(dialog, restore = true) {
-  if (!dialog?.open || closingDialog) return;
+  if (!dialog?.hasAttribute('open') || closingDialog) return;
   closingDialog = dialog;
   restoreDialogFocus = restore;
   dialog.getAnimations().forEach(animation => animation.cancel());
-  if (!reducedMotion.matches) {
+  if (!reducedMotion.matches && !mobile.matches && !document.hidden) {
     const animations = [
       dialog.animate([{ transform: 'translateY(0)' }, { transform: 'translateY(100vh)' }], { duration: 600, easing: 'ease-in-out', fill: 'forwards' }),
       dialog.animate([{ opacity: 1 }, { opacity: 0 }], { duration: 400, fill: 'forwards' }),
@@ -303,7 +318,14 @@ async function closeDialog(dialog, restore = true) {
     await Promise.allSettled(animations.map(animation => animation.finished));
     animations.forEach(animation => animation.cancel());
   }
-  dialog.close();
+  if (dialog.classList.contains('sheet-fallback')) {
+    dialog.removeAttribute('open');
+    dialog.removeAttribute('aria-modal');
+    dialogBackdrop?.remove();
+    dialogBackdrop = null;
+    dialog.dispatchEvent(new Event('close'));
+  } else dialog.close();
+  syncLock();
   closingDialog = null;
 }
 for (const dialog of all('dialog')) {
@@ -353,6 +375,17 @@ document.addEventListener('click', async event => {
   }
 });
 document.addEventListener('keydown', event => {
+  const fallbackDialog = document.querySelector('.sheet-fallback[open]');
+  if (fallbackDialog && event.key === 'Escape') {
+    event.preventDefault(); closeDialog(fallbackDialog); return;
+  }
+  if (fallbackDialog && event.key === 'Tab') {
+    const items = all('a[href], button, [tabindex="0"]', fallbackDialog).filter(element => !element.disabled && element.getClientRects().length);
+    const first = items[0], last = items[items.length - 1];
+    if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last?.focus(); }
+    else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first?.focus(); }
+    return;
+  }
   if (event.key === 'Escape' && submenuOpen) { event.preventDefault(); showSubmenu(false); return; }
   if (event.key === 'Escape' && menuOpen) { event.preventDefault(); closeMenu(true); return; }
   if (event.key === 'Escape' && formatGroup.classList.contains('is-open')) {
@@ -363,9 +396,9 @@ document.addEventListener('keydown', event => {
     return;
   }
   if (menuOpen && event.key === 'Tab') {
-    const focusable = all('a, button', header).filter(element => element.getClientRects().length && !element.closest('[inert]'));
+    const focusable = all('a, button', header).filter(element => element.getClientRects().length && getComputedStyle(element).visibility !== 'hidden' && !element.closest('[inert]'));
     const first = focusable[0];
-    const last = focusable.at(-1);
+    const last = focusable[focusable.length - 1];
     if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last.focus(); }
     else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
     return;
@@ -388,6 +421,7 @@ window.addEventListener('hashchange', restoreHash);
 window.addEventListener('resize', () => { cancelTransition(); syncScroll(); });
 window.addEventListener('pagehide', cancelTransition);
 window.addEventListener('pagehide', counts.finish);
+window.addEventListener('pageshow', () => { cancelTransition(); syncLock(); syncScroll(); });
 mobile.addEventListener('change', () => closeMenu());
 reducedMotion.addEventListener('change', () => {
   cancelTransition();

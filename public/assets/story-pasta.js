@@ -71,7 +71,13 @@ function initPasta() {
     ctx.fillStyle = cap;
     ctx.beginPath(); ctx.ellipse(x, y, 6, 10, 0, 0, Math.PI * 2); ctx.fill();
     ctx.save(); ctx.translate(tipX, tipY + 2); ctx.rotate(Math.sin(angle) * .12);
-    ctx.beginPath(); ctx.roundRect(-18, -110, 36, 112, 13); ctx.clip();
+    // The rounded handle also renders in iOS / Android WebViews without roundRect.
+    ctx.beginPath();
+    ctx.moveTo(-5, -110); ctx.lineTo(5, -110); ctx.quadraticCurveTo(18, -110, 18, -97);
+    ctx.lineTo(18, -11); ctx.quadraticCurveTo(18, 2, 5, 2);
+    ctx.lineTo(-5, 2); ctx.quadraticCurveTo(-18, 2, -18, -11);
+    ctx.lineTo(-18, -97); ctx.quadraticCurveTo(-18, -110, -5, -110);
+    ctx.closePath(); ctx.clip();
     ctx.drawImage(source, 267, 55, 39, 116, -18, -110, 36, 112);
     ctx.restore();
   }

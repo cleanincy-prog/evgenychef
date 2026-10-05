@@ -1,5 +1,5 @@
 /* Scale every photo motion together so the collage assembles over two seconds. */
-.hero-frame { --intro-field-scale: .56; --collage-columns: 10; --collage-rows: 9; --hero-portrait-height: calc((30cqw - 1.4px) * 1102 / 936); --hero-photo-tempo: 2.1; --hero-reveal-delay: 2000ms; --hero-reveal-duration: 650ms; isolation: isolate; container-type: inline-size; min-height: 0; overflow-anchor: none; }
+.hero-frame { --hero-unit: 1vw; --intro-field-scale: .56; --collage-columns: 10; --collage-rows: 9; --hero-portrait-height: calc((calc(30 * var(--hero-unit)) - 1.4px) * 1102 / 936); --hero-photo-tempo: 2.1; --hero-reveal-delay: 2000ms; --hero-reveal-duration: 650ms; isolation: isolate; container-type: inline-size; min-height: 0; overflow-anchor: none; }
 /* Keep the approved portrait crop intact while the surrounding rows fill the hero. */
 .hero-collage-grid, .hero-frame .hero-content { display: grid; grid-template-columns: repeat(var(--collage-columns), minmax(0, 1fr)); grid-template-rows: repeat(2, minmax(0, 1fr)) repeat(4, minmax(0, calc((var(--hero-portrait-height) - 6px) / 4))) repeat(3, minmax(0, 1fr)); gap: 2px; }
 .hero-collage-grid { position: absolute; inset: 0; z-index: 0; grid-auto-flow: dense; }
@@ -8,7 +8,7 @@
 .hero-frame[data-hero-intro="complete"][data-hero-snapshot="ready"] .collage-tile:not(.collage-tile--video) { visibility: hidden; }
 .hero-frame[data-hero-intro="complete"]:not([data-hero-snapshot="ready"]) .collage-tile:not(.collage-tile--video) img { filter: blur(1.5px); }
 .hero-frame[data-hero-intro="revealing"]:not([data-hero-snapshot="ready"]) .collage-tile:not(.collage-tile--video) img { filter: blur(1.5px); }
-.hero-frame .hero-content { height: max(720px, 100svh, calc(var(--hero-portrait-height) + 300px)); min-height: 0; max-width: none; padding: 0; }
+.hero-frame .hero-content { height: max(720px, var(--viewport-small-height), calc(var(--hero-portrait-height) + 300px)); min-height: 0; max-width: none; padding: 0; }
 .collage-tile { position: relative; overflow: hidden; min-width: 0; min-height: 0; }
 .collage-tile--wide-desktop { grid-column: span 2; }
 .collage-tile img { position: absolute; width: 100%; height: 100%; object-fit: cover; object-position: center; }
@@ -33,7 +33,7 @@
   .collage-tile--video:hover .hero-video-toggle { opacity: 1; }
 }
 .hero-story { display: none; position: absolute; z-index: 2; inset: 0; overflow: hidden; pointer-events: none; }
-.hero-story-shot { position: absolute; right: 6%; top: 50%; width: min(29%, 36svh); transform: translateY(-50%); transform-origin: center; margin: 0; }
+.hero-story-shot { position: absolute; right: 6%; top: 50%; width: min(29%, calc(var(--viewport-small-height) * 0.36)); transform: translateY(-50%); transform-origin: center; margin: 0; }
 .hero-story-shot img { display: block; width: 100%; height: auto; }
 /* Tint only the collage; the original portrait sits above both background effects. */
 .hero-frame .hero-shade { z-index: 100; pointer-events: none; background: #1d1a17a6; }
@@ -58,9 +58,9 @@
 .motion-ready .hero-frame h1 .line-mask > span { animation: none; }
 
 @media (max-width: 767px) {
-  .hero-frame { --intro-field-scale: .42; --collage-columns: 8; --collage-rows: 12; --hero-portrait-height: calc((75cqw - .5px) * 1102 / 936); }
+  .hero-frame { --intro-field-scale: .42; --collage-columns: 8; --collage-rows: 12; --hero-portrait-height: calc((calc(75 * var(--hero-unit)) - .5px) * 1102 / 936); }
   .hero-collage-grid, .hero-frame .hero-content { grid-template-rows: repeat(6, minmax(0, 1fr)) repeat(4, minmax(0, calc((var(--hero-portrait-height) - 6px) / 4))) repeat(2, minmax(0, 1fr)); }
-  .hero-frame .hero-content { height: max(840px, 100svh, calc(var(--hero-portrait-height) + 560px)); }
+  .hero-frame .hero-content { height: max(840px, var(--viewport-small-height), calc(var(--hero-portrait-height) + 560px)); }
   .hero-identity { grid-column: 1 / -1; grid-row: 2 / span 5; align-self: end; justify-self: center; width: calc(100% - 48px); max-width: 360px; margin: 0 0 24px; }
   .hero-frame .hero-kicker { gap: 10px; margin-bottom: 18px; }
   .hero-frame .hero-kicker p { font-size: 9px; letter-spacing: .12em; }
@@ -74,7 +74,7 @@
   .collage-tile--wide-desktop { grid-column: auto; }
   .collage-tile--wide-compact { grid-column: span 2; }
   .hero-frame .collage-tile--video { grid-column: -3 / -1; }
-  .hero-story-shot { right: 3%; width: min(63%, 38svh); }
+  .hero-story-shot { right: 3%; width: min(63%, calc(var(--viewport-small-height) * 0.38)); }
 }
 
 /* The collage settles first; one opacity curve then reveals the complete composition. */
@@ -120,3 +120,5 @@
   80% { opacity: 1; }
   100% { opacity: 0; transform: translate(var(--story-x), calc(-50% + var(--story-y))) scale(var(--story-scale)); }
 }
+
+@supports (width: 1cqw) { .hero-frame { --hero-unit: 1cqw; } }

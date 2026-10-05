@@ -16,7 +16,7 @@
   display: block; height: calc(var(--header-height) + 48px);
 }
 .native-scroll .about-glass.section-space {
-  min-height: 100svh; padding-block: max(108px, 13svh) max(36px, 6svh);
+  min-height: var(--viewport-small-height); padding-block: max(108px, calc(var(--viewport-small-height) * 0.13)) max(36px, calc(var(--viewport-small-height) * 0.06));
 }
 .about-glass > .container { position: relative; max-width: 1160px; padding-inline: clamp(32px, 5vw, 72px); }
 .about-glass .about-grid { grid-template-columns: minmax(0, 1.14fr) minmax(0, .86fr); gap: 30px 10%; }
@@ -36,7 +36,7 @@
 
 @media (max-width: 767px) {
   .native-scroll .about-glass.section-space {
-    height: 100svh; min-height: min-content;
+    height: var(--viewport-small-height); min-height: min-content;
     padding-block: calc(var(--header-height) + 57px) max(19px, env(safe-area-inset-bottom));
   }
   .native-scroll .about-glass > .container {

@@ -1,12 +1,12 @@
 /* Native section scrolling and timings measured on BAO London.
    Content taller than a viewport remains freely readable inside its snap area. */
-:root { --header-height: 47px; --nav-ink: #fafaf8; --page-ease: cubic-bezier(.33, 0, .25, 1); }
+:root { --header-bar-height: 47px; --header-height: var(--header-bar-height); --nav-ink: #fafaf8; --page-ease: cubic-bezier(.33, 0, .25, 1); }
 /* The nested scrollport must end above visible mobile browser controls.
    Large viewport units hide bottom-aligned content when those controls are open. */
 html.native-scroll, .native-scroll body { height: 100%; overflow: hidden; scroll-padding-top: 0; }
 .native-scroll #main {
-  height: 100dvh;
-  max-height: 100dvh;
+  height: var(--viewport-height);
+  max-height: var(--viewport-height);
   overflow-y: auto;
   overflow-x: hidden;
   scroll-snap-type: y mandatory;
@@ -40,7 +40,7 @@ html.native-scroll, .native-scroll body { height: 100%; overflow: hidden; scroll
 .native-scroll .menu-toggle span { background: currentColor; }
 .native-scroll.menu-open .site-header { color: var(--charcoal); background: var(--white); }
 .native-scroll .mobile-menu {
-  position: absolute; top: var(--header-height); height: calc(100dvh - var(--header-height));
+  position: absolute; top: var(--header-height); height: calc(var(--viewport-height) - var(--header-height));
   padding: 0 0 max(24px, env(safe-area-inset-bottom)); overflow-y: auto;
   overscroll-behavior: contain; background: var(--white); color: var(--charcoal);
   box-shadow: none; transform: translateX(-100%); transition: transform .3s ease-in-out;
@@ -63,7 +63,7 @@ html.native-scroll, .native-scroll body { height: 100%; overflow: hidden; scroll
 .has-formats.is-open .formats-dropdown-items { opacity: 1; transform: none; transition-delay: .3s; }
 .formats-dropdown-items a { font: 400 23px/1.5 var(--font-heading); }
 .mobile-submenu {
-  position: absolute; inset: var(--header-height) 0 auto; height: calc(100dvh - var(--header-height));
+  position: absolute; inset: var(--header-height) 0 auto; height: calc(var(--viewport-height) - var(--header-height));
   display: flex; flex-direction: column; overflow-y: auto; overscroll-behavior: contain;
   background: var(--white); color: var(--charcoal); visibility: hidden; transform: translateX(100%);
   transition: transform .3s ease-in-out, visibility 0s .3s;
@@ -74,8 +74,8 @@ html.native-scroll, .native-scroll body { height: 100%; overflow: hidden; scroll
 .submenu-back svg { width: 24px; height: 24px; }
 
 /* The photos stay in their existing composition; only the entrance changes. */
-.native-scroll .hero { margin-top: 0; min-height: 100dvh; height: 100dvh; }
-.native-scroll .hero-frame .hero-content { height: 100dvh; min-height: 100dvh; }
+.native-scroll .hero { margin-top: 0; min-height: var(--viewport-height); height: var(--viewport-height); }
+.native-scroll .hero-frame .hero-content { height: var(--viewport-height); min-height: var(--viewport-height); }
 .native-scroll .hero-background { transform: none; will-change: auto; }
 .native-scroll .hero-center .hero-enter,
 .native-scroll .hero-frame h1 .line-mask > span { animation: none; }
@@ -89,14 +89,14 @@ html.native-scroll, .native-scroll body { height: 100%; overflow: hidden; scroll
 /* Remove the old pinned 550vh track. Each format is a real section. */
 .native-scroll #services { position: relative; background: var(--charcoal); }
 .native-scroll .sq-track, .native-scroll .sq-sticky { display: contents; }
-.native-scroll .sq-intro { min-height: 100dvh; }
-.native-scroll .sq-panel { min-height: 100dvh; isolation: isolate; }
+.native-scroll .sq-intro { min-height: var(--viewport-height); }
+.native-scroll .sq-panel { min-height: var(--viewport-height); isolation: isolate; }
 .native-scroll .site-header ~ #main .sq-nav {
   position: sticky; top: calc(var(--header-height) + 20px); z-index: 60;
   display: grid; grid-template-columns: repeat(3, 1fr);
   width: min(720px, calc(100% - 48px)); height: 56px;
   margin: 0 auto -56px; color: var(--white);
-  border-radius: 12px; background: #201b1773; backdrop-filter: blur(12px);
+  border-radius: 12px; background: #201b1773; -webkit-backdrop-filter: blur(12px); backdrop-filter: blur(12px);
 }
 .native-scroll .sq-nav button { opacity: .65; }
 .native-scroll .sq-nav button[aria-current="true"] { opacity: 1; }
@@ -107,19 +107,19 @@ html.native-scroll, .native-scroll body { height: 100%; overflow: hidden; scroll
 .service-transition .sq-panel { position: absolute; inset: 0; width: 100%; height: 100%; margin: 0; }
 .service-transition .motion-reveal, .service-transition .motion-cta { opacity: 1; transform: none; transition: none; }
 
-.native-scroll .about-section, .native-scroll .ingredients-section { min-height: 100dvh; }
-.native-scroll .contact-section { min-height: 100dvh; }
+.native-scroll .about-section, .native-scroll .ingredients-section { min-height: var(--viewport-height); }
+.native-scroll .contact-section { min-height: var(--viewport-height); }
 .native-scroll .produce-frame img { height: 100%; top: 0; transform: none; }
 
 /* Keep the existing story composition, with one chapter per snap area. */
 .journey--cards { padding: 0; }
 .journey--cards .journey-container { width: 100%; max-width: none; padding: 0; }
 .journey--cards .letter-heading {
-  min-height: 100dvh; max-width: 1248px; margin: 0 auto;
+  min-height: var(--viewport-height); max-width: 1248px; margin: 0 auto;
   padding: 96px 56px; align-content: center; align-items: center;
 }
 .journey--cards .process-cards { display: block; margin: 0; }
-.journey--cards .process-card { min-height: 100dvh; margin: 0; }
+.journey--cards .process-card { min-height: var(--viewport-height); margin: 0; }
 .journey--cards .process-card-content { min-height: inherit; align-items: end; }
 .journey--cards .process-card--light .process-card-content { align-items: center; }
 .journey--cards .process-caption { padding-block: 96px 64px; }
@@ -128,7 +128,7 @@ html.native-scroll, .native-scroll body { height: 100%; overflow: hidden; scroll
 /* Photographic chapters share the meeting card's gradient and light captions. */
 .ingredients-section--photo {
   position: relative; isolation: isolate; overflow: hidden; display: flex; align-items: flex-end;
-  min-height: 100dvh; padding: 0; background: #151b15; color: #fffdf5;
+  min-height: var(--viewport-height); padding: 0; background: #151b15; color: #fffdf5;
 }
 .ingredients-photo { position: absolute; inset: 0; margin: 0; }
 .ingredients-photo img { object-position: 50% 28%; }
@@ -157,13 +157,13 @@ html.native-scroll, .native-scroll body { height: 100%; overflow: hidden; scroll
 
 /* BAO's booking drawer geometry, applied to the existing detail window. */
 .native-scroll .sheet {
-  inset: auto 0 0; width: min(99vw, 1280px); height: 90dvh; max-height: 90dvh;
+  inset: auto 0 0; width: min(99vw, 1280px); height: calc(var(--viewport-height) * 0.9); max-height: calc(var(--viewport-height) * 0.9);
   margin: 0 auto; border-radius: 12px 12px 0 0;
 }
 .native-scroll .sheet[open] { animation: none; }
 
 @media (max-width: 767px) {
-  :root { --header-height: 48px; }
+  :root { --header-bar-height: 48px; }
   .formats-dropdown { display: none; }
   .native-scroll .site-header { background: var(--white); color: var(--charcoal); }
   .native-scroll .header-inner { grid-template-columns: 42px 1fr 42px; gap: 0; padding: 0 10px; }
@@ -172,8 +172,8 @@ html.native-scroll, .native-scroll body { height: 100%; overflow: hidden; scroll
   /* Height media queries use the large viewport on phones. Keep the copy space
      stable while the visible viewport and the portrait shrink with browser UI. */
   .native-scroll .hero-frame {
-    --hero-screen-height: max(640px, 100dvh);
-    --hero-portrait-height: min(calc((75cqw - .5px) * 1102 / 936), calc(var(--hero-screen-height) - 490px));
+    --hero-screen-height: max(640px, var(--viewport-height));
+    --hero-portrait-height: min(calc((calc(75 * var(--hero-unit)) - .5px) * 1102 / 936), calc(var(--hero-screen-height) - 490px));
   }
   .native-scroll .hero, .native-scroll .hero-frame .hero-content { height: var(--hero-screen-height); min-height: var(--hero-screen-height); }
   .native-scroll .hero-identity { grid-row: 1 / span 6; align-self: start; margin-bottom: 0; padding-top: 72px; }
@@ -181,11 +181,11 @@ html.native-scroll, .native-scroll body { height: 100%; overflow: hidden; scroll
   .native-scroll .hero-frame h1 { font-size: clamp(44px, 13vw, 60px); }
   .native-scroll .site-header ~ #main .sq-nav { top: calc(var(--header-height) + 12px); width: calc(100% - 32px); height: 50px; margin-bottom: -50px; }
   .native-scroll .sq-nav button { padding-inline: 4px; font-size: 8px; }
-  .native-scroll .sq-panel { min-height: 100dvh; }
+  .native-scroll .sq-panel { min-height: var(--viewport-height); }
   .native-scroll .sq-content { padding: 140px 24px max(40px, env(safe-area-inset-bottom)); }
   /* Fit the complete biography beneath the fixed header, including browser chrome. */
   .native-scroll .about-section.section-space {
-    height: 100svh; min-height: min-content;
+    height: var(--viewport-small-height); min-height: min-content;
     padding-block: calc(var(--header-height) + 14px) max(14px, env(safe-area-inset-bottom));
   }
   .native-scroll .about-section > .container {
@@ -215,12 +215,12 @@ html.native-scroll, .native-scroll body { height: 100%; overflow: hidden; scroll
   .journey--cards .process-caption { padding: 96px 24px 40px; }
   .journey--cards .process-card--light .process-caption { padding: 0 24px; }
   .journey--cards .letter-footer { padding: 32px 24px; }
-  .journey--cards .process-card--taste .process-caption { padding-top: max(300px, 43dvh); }
-  .ingredients-section--photo .ingredients-copy { width: 100%; padding: max(280px, 36dvh) 24px 40px; }
+  .journey--cards .process-card--taste .process-caption { padding-top: max(300px, calc(var(--viewport-height) * 0.43)); }
+  .ingredients-section--photo .ingredients-copy { width: 100%; padding: max(280px, calc(var(--viewport-height) * 0.36)) 24px 40px; }
   .ingredients-section--photo .editorial-heading { font-size: 40px; }
   .ingredients-section--photo .product-list article { padding-block: 17px; }
   .ingredients-photo img { object-position: 40% 0; }
-  .native-scroll .sheet { height: 95dvh; max-height: 95dvh; }
+  .native-scroll .sheet { height: calc(var(--viewport-height) * 0.95); max-height: calc(var(--viewport-height) * 0.95); }
 }
 @media (max-height: 660px) and (max-width: 767px) {
   /* Share the photo row with the facts so short phones retain a useful portrait. */
