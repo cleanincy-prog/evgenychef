@@ -33,7 +33,7 @@ export const homeEnglish = {
   "Мастер-классы": "Cooking classes",
   "Частный ужин": "Private dinner",
   "Мероприятия": "Events",
-  "Ваш вечер. Авторский ужин в 7 подач.": "Your evening. A signature dinner in 7 courses.",
+  "Ваш вечер. Авторский ужин.": "Your evening. A signature dinner.",
   "Меню составлю по вашим вкусам, приготовление и подачу возьму на себя, а вы сможете насладиться авторским ужином в 7 подач.": "I will create a menu around your tastes, take care of the cooking and serving, and leave you to enjoy a signature dinner in 7 courses.",
   "Обсудить встречу": "Plan your gathering",
   "Подробнее": "Learn more",
