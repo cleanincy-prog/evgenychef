@@ -1,5 +1,6 @@
 // Native section snapping. Wheel and touch input stay entirely with the browser.
 import { createCountUp } from './count-up.mjs';
+import { uiText } from './ui-language.mjs';
 
 const root = document.documentElement;
 const main = document.querySelector('#main');
@@ -43,7 +44,7 @@ const formatGroup = desktopFormats.parentElement;
 formatGroup.classList.add('has-formats');
 const dropdown = document.createElement('nav');
 dropdown.className = 'formats-dropdown';
-dropdown.setAttribute('aria-label', 'Выбор формата');
+dropdown.setAttribute('aria-label', uiText('Выбор формата', 'Choose an experience'));
 dropdown.id = 'desktop-formats';
 const dropdownItems = document.createElement('div');
 dropdownItems.className = 'formats-dropdown-items';
@@ -74,13 +75,13 @@ mobileFormatsLink.replaceWith(mobileFormats);
 const submenu = document.createElement('nav');
 submenu.id = 'mobile-formats';
 submenu.className = 'mobile-submenu';
-submenu.setAttribute('aria-label', 'Выбор формата');
+submenu.setAttribute('aria-label', uiText('Выбор формата', 'Choose an experience'));
 submenu.setAttribute('aria-hidden', 'true');
 submenu.inert = true;
 const backButton = document.createElement('button');
 backButton.type = 'button';
 backButton.className = 'submenu-back';
-backButton.setAttribute('aria-label', 'Вернуться в меню');
+backButton.setAttribute('aria-label', uiText('Вернуться в меню', 'Back to the menu'));
 backButton.innerHTML = '<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M20 12H5m6-6-6 6 6 6" stroke="currentColor" stroke-width="1.4"/></svg>';
 submenu.append(...formatLinks(), backButton);
 header.append(submenu);
@@ -104,7 +105,7 @@ root.classList.toggle('is-story-reading', openingStoryAnchor);
 root.classList.add('native-scroll');
 root.classList.toggle('desktop-safari', desktopSafari);
 
-const screens = all('.hero, .about-section, .sq-intro, .sq-panel, .letter-heading, .process-card, .letter-footer, .ingredients-section, .contact-section');
+const screens = all('.hero, .about-section, .sq-intro, .sq-panel, .letter-heading, .process-card, .letter-footer, .ingredients-section, .contact-section, .site-index');
 for (const screen of screens) {
   screen.dataset.snap = '';
   screen.dataset.navTone = screen.matches('.hero, .sq-intro, .sq-panel, .process-card:not(.process-card--light), .ingredients-section--photo, .contact-section') ? 'light' : 'dark';
@@ -286,7 +287,7 @@ function closeMenu(restoreFocus = false) {
   menu.inert = true;
   menu.setAttribute('aria-hidden', 'true');
   toggle.setAttribute('aria-expanded', 'false');
-  toggle.setAttribute('aria-label', 'Открыть меню');
+  toggle.setAttribute('aria-label', uiText('Открыть меню', 'Open menu'));
   root.classList.remove('menu-open');
   syncLock();
   if (restoreFocus) toggle.focus({ preventScroll: true });
@@ -301,7 +302,7 @@ toggle.addEventListener('click', () => {
   menu.inert = false;
   menu.setAttribute('aria-hidden', 'false');
   toggle.setAttribute('aria-expanded', 'true');
-  toggle.setAttribute('aria-label', 'Закрыть меню');
+  toggle.setAttribute('aria-label', uiText('Закрыть меню', 'Close menu'));
   root.classList.add('menu-open');
   syncLock();
   menu.getBoundingClientRect();

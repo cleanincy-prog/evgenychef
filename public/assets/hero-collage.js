@@ -1,4 +1,5 @@
 // Шеф4 photo order with a two-second assembly and bounded preparation time.
+import { uiText } from './ui-language.mjs';
 
 const frame = document.querySelector('.hero-frame');
 // Keep entrance opacity separate from the parent's scroll-driven opacity.
@@ -22,7 +23,7 @@ if (video) {
   function updateButton() {
     const playing = !video.paused && !video.ended;
     tile.toggleAttribute('data-video-playing', playing);
-    toggle.setAttribute('aria-label', playing ? 'Приостановить видео с шефом' : 'Воспроизвести видео с шефом');
+    toggle.setAttribute('aria-label', playing ? uiText('Приостановить видео с шефом', 'Pause the chef video') : uiText('Воспроизвести видео с шефом', 'Play the chef video'));
   }
   function syncVideo() {
     const wantsPlayback = userChoice ?? (!reducedMotion.matches && !navigator.connection?.saveData);

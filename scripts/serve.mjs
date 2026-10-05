@@ -33,12 +33,20 @@ const server = createServer(async (request, response) => {
     }
     const url = new URL(request.url, `http://127.0.0.1:${port}`);
     const pathname = decodeURIComponent(url.pathname);
-    const file = resolve(root, '.' + (pathname === '/' ? '/index.html' : pathname));
+    let file = resolve(root, '.' + (pathname === '/' ? '/index.html' : pathname));
     if (!file.startsWith(root + sep)) {
       response.writeHead(403);
       return response.end('Forbidden');
     }
-    const info = await stat(file);
+    let info = await stat(file);
+    if (info.isDirectory()) {
+      if (!pathname.endsWith('/')) {
+        response.writeHead(308, { Location: `${url.pathname}/${url.search}` });
+        return response.end();
+      }
+      file = resolve(file, 'index.html');
+      info = await stat(file);
+    }
     if (!info.isFile()) throw Object.assign(new Error(), { code: 'ENOENT' });
     const headers = {
       'Content-Type': types[extname(file)] || 'application/octet-stream',
@@ -67,7 +75,7 @@ const server = createServer(async (request, response) => {
     createReadStream(file).pipe(response);
   } catch (error) {
     response.writeHead(error.code === 'ENOENT' ? 404 : 400, { 'Content-Type': 'text/plain; charset=utf-8' });
-    response.end(error.code === 'ENOENT' ? 'Not found. This project includes only the homepage.' : 'Bad request');
+    response.end(error.code === 'ENOENT' ? 'Not found.' : 'Bad request');
   }
 });
 

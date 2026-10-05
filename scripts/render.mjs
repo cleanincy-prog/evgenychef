@@ -1,6 +1,11 @@
-import { writeFile } from 'node:fs/promises';
+import { mkdir, writeFile } from 'node:fs/promises';
+import { resolve, dirname } from 'node:path';
+import { fileURLToPath, pathToFileURL } from 'node:url';
 import { chef, formats } from '../src/content.mjs';
 import { renderSeoHead } from '../src/seo.mjs';
+import { pages, pageFor, homePath, servicePath } from '../src/pages.mjs';
+import { localizeHomepage } from '../src/home-locale.mjs';
+import { languageLink, renderServicePage, renderServiceFooter } from '../src/service-pages.mjs';
 import { serviceRenders } from '../src/service-renders.mjs';
 import { renderProcess } from '../src/process.mjs';
 import { heroImages, heroVideo, heroStoryShots, heroCollageWideDesktop, heroCollageWideCompact, heroIntroStyles } from '../src/hero-collage.mjs';
@@ -21,13 +26,15 @@ const collageImage = (entry, sizes, priority = 'auto') => `<img src="${entry.src
 const collageVideo = () => `<img src="${heroVideo.poster}" width="${heroVideo.width}" height="${heroVideo.height}" alt="" loading="eager" decoding="async"><video data-hero-video data-src="${heroVideo.src}" poster="${heroVideo.poster}" width="${heroVideo.width}" height="${heroVideo.height}" muted loop playsinline preload="none" aria-hidden="true" tabindex="-1"></video><button type="button" class="hero-video-toggle" aria-label="Воспроизвести видео с шефом" hidden><svg class="hero-video-pause" viewBox="0 0 20 20" aria-hidden="true"><path d="M7 5v10M13 5v10" fill="none" stroke="currentColor" stroke-width="2"/></svg><svg class="hero-video-play" viewBox="0 0 20 20" aria-hidden="true"><path d="m7 4 9 6-9 6Z" fill="currentColor"/></svg></button>`;
 const dialog = (id, label, content) => `<dialog id="${id}" class="sheet" aria-labelledby="${id}-title" data-lenis-prevent><div class="sheet-top"><a href="#top" class="wordmark" data-close>${chef.wordmark}</a><button type="button" class="close-sheet voice-mono" data-close aria-label="Закрыть окно">Закрыть <span aria-hidden="true">×</span></button></div><div class="sheet-inner">${content}</div></dialog>`;
 
-export const renderHomepage = ({ production = false } = {}) => `<!doctype html>
-<html lang="ru" class="cormorant_garamond_5cf6ee7e-module__oQQLIW__variable dm_sans_3d80eddf-module__18Q8-q__variable">
+export const renderHomepage = ({ production = false, language = 'ru' } = {}) => {
+const page = pageFor(homePath(language));
+const html = `<!doctype html>
+<html lang="${language}" class="cormorant_garamond_5cf6ee7e-module__oQQLIW__variable dm_sans_3d80eddf-module__18Q8-q__variable">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <meta name="theme-color" content="#2c2622">
-  ${renderSeoHead({ production })}
+  ${renderSeoHead({ production, page })}
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="preload" href="/assets/fonts/b0947914c9718a1e-s.0l.9lak812di~.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/assets/fonts/01e4147cff8141ee-s.p.10ked.7w885.g.woff2" as="font" type="font/woff2" crossorigin>
@@ -42,6 +49,7 @@ export const renderHomepage = ({ production = false } = {}) => `<!doctype html>
   <link rel="stylesheet" href="/assets/story-pasta.css">
   <link rel="stylesheet" href="/assets/about-glass.css">
   <link rel="stylesheet" href="/assets/browser-compat.css">
+  <link rel="stylesheet" href="/assets/service-pages.css">
   <script type="module" src="/assets/viewport.js"></script>
   <script type="module" src="/assets/hero-collage.js"></script>
   <script type="module" src="/assets/bao-site.js"></script>
@@ -56,11 +64,11 @@ export const renderHomepage = ({ production = false } = {}) => `<!doctype html>
   <nav class="header-inner" aria-label="Основная навигация">
     <ul class="header-links"><li><a href="#services" class="link-underline voice-mono">Форматы</a></li><li><a href="#about" class="link-underline voice-mono">О шефе</a></li><li><a href="#ingredients" class="link-underline voice-mono">Продукты</a></li></ul>
     <a class="wordmark" href="#top" aria-label="Евгений Гребеник — к началу">${chef.wordmark}</a>
-    <div class="header-actions"><a href="#process" class="link-underline voice-mono">Как всё проходит</a>${button('Обсудить вечер', '#contact', 'compact')}</div>
+    <div class="header-actions"><a href="#process" class="link-underline voice-mono">Как всё проходит</a>${languageLink(page)}${button('Обсудить вечер', '#contact', 'compact')}</div>
     <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="mobile-menu" aria-label="Открыть меню"><span></span><span></span></button>
   </nav>
   <nav id="mobile-menu" class="mobile-menu" aria-label="Мобильная навигация" hidden>
-    <a href="#services">Форматы</a><a href="#about">О шефе</a><a href="#process">Как всё проходит</a><a href="#ingredients">Продукты</a><a href="#menu">Персональное меню</a><a href="#contact">Обсудить вечер ${arrow}</a>
+    <a href="#services">Форматы</a><a href="#about">О шефе</a><a href="#process">Как всё проходит</a><a href="#ingredients">Продукты</a><a href="#menu">Персональное меню</a><a href="#contact">Обсудить вечер ${arrow}</a>${languageLink(page)}
   </nav>
 </header>
 <main id="main" tabindex="-1">
@@ -113,7 +121,7 @@ export const renderHomepage = ({ production = false } = {}) => `<!doctype html>
         <nav class="sq-nav" aria-label="Выбор формата">${formats.map((f,i)=>`<button type="button" data-service-jump="${i}" aria-label="Показать формат: ${f.nav}" class="voice-mono">${f.nav}</button>`).join('')}<span class="sq-progress" aria-hidden="true"><span></span></span></nav>
         ${formats.map((f,i)=>`<article class="sq-panel" id="format-${f.id}" data-service="${i}">
           <figure class="sq-photo">${sceneImage(f)}</figure><div class="sq-shade" aria-hidden="true"></div>
-          <div class="sq-content container"><div class="sq-copy"><h3>${f.title}<em>${f.subtitle}</em></h3><p class="service-description">${f.description}</p><div class="button-row">${button('Обсудить встречу', '#contact', 'light')}${f.id === 'dinner' ? button('Подробнее', `#details-${f.id}`, 'glass', `data-dialog="details-${f.id}"`) : ''}</div></div></div>
+          <div class="sq-content container"><div class="sq-copy"><h3>${f.title}<em>${f.subtitle}</em></h3><p class="service-description">${f.description}</p><div class="button-row">${button('Обсудить встречу', '#contact', 'light')}${f.id === 'dinner' ? button('Подробнее', `#details-${f.id}`, 'glass', `data-dialog="details-${f.id}"`) : button('Подробнее', servicePath(f.id, language), 'glass')}</div></div></div>
         </article>`).join('')}
       </div>
     </div>
@@ -136,11 +144,27 @@ export const renderHomepage = ({ production = false } = {}) => `<!doctype html>
       </div>
     </div>
   </section>
+  ${renderServiceFooter(page)}
 </main>
 
-${formats.filter(f=>f.id === 'dinner').map(f=>dialog(`details-${f.id}`,f.title,`<div class="sheet-grid"><div><p class="eyebrow">Формат встречи</p><h2 id="details-${f.id}-title">${f.title}</h2><p class="sheet-lead">${f.lead}</p><p class="body-copy">${f.description}</p><ol class="detail-list">${f.details.map((p,i)=>`<li><span class="voice-mono">${number(i)}</span><p>${p}</p></li>`).join('')}</ol>${button('Обсудить встречу', '#contact', '', 'data-close')}</div><figure>${formatImage(f, 'sheet-photo', '(max-width: 767px) calc(100vw - 48px), (max-width: 1279px) 43vw, 501px')}</figure></div>`)).join('')}
+${formats.filter(f=>f.id === 'dinner').map(f=>dialog(`details-${f.id}`,f.title,`<div class="sheet-grid"><div><p class="eyebrow">Формат встречи</p><h2 id="details-${f.id}-title">${f.title}</h2><p class="sheet-lead">${f.lead}</p><p class="body-copy">${f.description}</p><ol class="detail-list">${f.details.map((p,i)=>`<li><span class="voice-mono">${number(i)}</span><p>${p}</p></li>`).join('')}</ol><p class="service-detail-link"><a class="link-underline" href="${servicePath(f.id, language)}">Все подробности ужина ${arrow}</a></p>${button('Обсудить встречу', '#contact', '', 'data-close')}</div><figure>${formatImage(f, 'sheet-photo', '(max-width: 767px) calc(100vw - 48px), (max-width: 1279px) 43vw, 501px')}</figure></div>`)).join('')}
 </body>
 </html>`;
+return localizeHomepage(html, language);
+};
 
-await writeFile(new URL('../public/index.html', import.meta.url), renderHomepage().replace(/[ \t]+$/gm, ''));
-console.log(`Rendered homepage: ${formats.length} formats, 6 cinematic chapters, original photographs and preparation video.`);
+export async function writePages(directory, { production = false } = {}) {
+  for (const page of pages) {
+    const html = page.kind === 'home'
+      ? renderHomepage({ production, language: page.language })
+      : renderServicePage(page, { production });
+    const destination = resolve(directory, `.${page.path}`, 'index.html');
+    await mkdir(dirname(destination), { recursive: true });
+    await writeFile(destination, html.replace(/[ \t]+$/gm, ''));
+  }
+}
+
+if (process.argv[1] && import.meta.url === pathToFileURL(resolve(process.argv[1])).href) {
+  await writePages(fileURLToPath(new URL('../public/', import.meta.url)));
+  console.log(`Rendered ${pages.length} pages in Russian and English.`);
+}

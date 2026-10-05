@@ -1,3 +1,4 @@
+import { uiText } from './ui-language.mjs';
 // Playback starts on a deliberate click and stops when the chapter leaves view.
 const chapter = document.querySelector('.story-scene--preparation');
 const video = chapter?.querySelector('[data-letter-video]');
@@ -13,11 +14,11 @@ if (video) {
   function syncControls() {
     const playing = !video.paused && !video.ended;
     chapter.classList.toggle('is-film-playing', playing);
-    play.setAttribute('aria-label', playing ? 'Приостановить видео подготовки' : 'Смотреть видео подготовки');
-    controls.querySelector('[data-play-label]').textContent = playing ? 'Пауза' : 'Смотреть видео';
+    play.setAttribute('aria-label', playing ? uiText('Приостановить видео подготовки', 'Pause the preparation video') : uiText('Смотреть видео подготовки', 'Watch the preparation video'));
+    controls.querySelector('[data-play-label]').textContent = playing ? uiText('Пауза', 'Pause') : uiText('Смотреть видео', 'Watch video');
     sound.setAttribute('aria-pressed', String(video.muted));
-    sound.setAttribute('aria-label', video.muted ? 'Включить звук' : 'Выключить звук');
-    controls.querySelector('[data-sound-label]').textContent = video.muted ? 'выкл.' : 'вкл.';
+    sound.setAttribute('aria-label', video.muted ? uiText('Включить звук', 'Unmute') : uiText('Выключить звук', 'Mute'));
+    controls.querySelector('[data-sound-label]').textContent = video.muted ? uiText('выкл.', 'off') : uiText('вкл.', 'on');
   }
   function pause() { request += 1; video.pause(); syncControls(); }
   play.addEventListener('click', async () => {
@@ -29,7 +30,7 @@ if (video) {
       await video.play();
       if (current !== request || document.hidden || !visible) video.pause();
     } catch {
-      status.textContent = 'Не удалось запустить видео. Попробуйте ещё раз или откройте его в отдельной вкладке.';
+      status.textContent = uiText('Не удалось запустить видео. Попробуйте ещё раз или откройте его в отдельной вкладке.', 'The video could not start. Please try again or open it in a separate tab.');
     }
     syncControls();
   });
