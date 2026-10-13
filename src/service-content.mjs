@@ -17,7 +17,7 @@ export const serviceContent = {
         {
           "heading": "Авторский ужин в 7 подач",
           "paragraphs": [
-            "Семь подач — формат этого ужина. Конкретные блюда я подбираю после знакомства с вашими пожеланиями. Продумываю продукты и сочетания между ними, чтобы каждое блюдо стало частью общего меню. Любимый вкус может стать отправной точкой, а не обязательным повторением знакомого рецепта.",
+            "Авторский ужин в семь подач — один из возможных форматов. Если вы представляете встречу иначе, расскажите о своём запросе: обсудим меню, подачу и организацию под вашу задачу. Конкретные блюда я подбираю после знакомства с вашими пожеланиями, продумываю продукты и сочетания между ними.",
             "Мой подход — современная европейская кухня с авторским характером. При этом в центре остаются ваши вкусы. Меню рождается для конкретной встречи: сначала мы обсуждаем, что хочется получить от ужина, затем я перевожу эти пожелания в блюда."
           ]
         },
@@ -43,6 +43,10 @@ export const serviceContent = {
         }
       ],
       "faq": [
+        {
+          "question": "Сколько стоит частный ужин на Кипре?",
+          "answer": "Стоимость рассчитываю индивидуально под ваш запрос. Для расчёта обсудим дату, место, количество гостей, меню, формат и организационные детали. Напишите мне в Instagram @evg.chef, каким вы представляете свой ужин."
+        },
         {
           "question": "Что входит в частный ужин?",
           "answer": "Я составляю персональное меню в 7 подач, закупаю продукты, готовлю и подаю блюда. Детали будущей встречи обсуждаем вместе."
@@ -77,7 +81,7 @@ export const serviceContent = {
         {
           "heading": "A personal menu in seven courses",
           "paragraphs": [
-            "Seven courses define the format of this dinner. The dishes themselves take shape around your tastes. I choose ingredients and think through how their flavours work together across the menu. A favourite ingredient can become the starting point for a dish we have not yet discussed.",
+            "A seven-course dinner is one possible format. If you have a different gathering in mind, tell me about it: we can discuss the menu, service and arrangements around your request. The dishes take shape around your tastes, with ingredients and flavours considered across the menu.",
             "My cooking is contemporary European, with my own approach to flavour and presentation. Your preferences remain central to the menu. We begin with what you would enjoy, and I turn those ideas into the dishes for your evening."
           ]
         },
@@ -103,6 +107,10 @@ export const serviceContent = {
         }
       ],
       "faq": [
+        {
+          "question": "How much does a private dinner in Cyprus cost?",
+          "answer": "Each dinner is quoted individually. To prepare a quote, we discuss the date, location, number of guests, menu, format and arrangements. Message me on Instagram at @evg.chef with the dinner you have in mind."
+        },
         {
           "question": "What does a private dinner include?",
           "answer": "I create the personal seven-course menu, shop for ingredients, cook and serve the dishes. We discuss the details of your gathering together."
@@ -140,7 +148,7 @@ export const serviceContent = {
           "heading": "Персональное меню для вашего повода",
           "paragraphs": [
             "У меню нет обязательного набора закусок, одинакового для всех мероприятий. Я отталкиваюсь от ваших пожеланий: что вы любите, что хотели бы предложить гостям и чего не должно быть среди блюд. Затем продумываю продукты, сочетания вкусов и подачу.",
-            "Если вы пока знаете только повод встречи, этого достаточно для начала. Необязательно заранее выбирать каждое блюдо. Обсудим идею, а я предложу, как выразить её через еду. Если есть конкретное пожелание, начнём с него и разовьём меню дальше."
+            "Если вы пока знаете только повод встречи, этого достаточно для начала. Можно обратиться с любым запросом на частного шефа или организацию гастрономического мероприятия на Кипре. Формат, масштаб, меню и организационные детали обсуждаем индивидуально. Необязательно заранее выбирать каждое блюдо: начнём с вашей идеи."
           ]
         },
         {
@@ -158,6 +166,10 @@ export const serviceContent = {
         }
       ],
       "faq": [
+        {
+          "question": "Как рассчитывается стоимость мероприятия?",
+          "answer": "Готового прайса для всех мероприятий нет: стоимость рассчитываю под конкретный запрос. Расскажите о дате, месте, количестве гостей, поводе, меню и нужной организации. Обсудить задачу и расчёт можно в Instagram @evg.chef."
+        },
         {
           "question": "Какие блюда вы готовите для мероприятия?",
           "answer": "Подбираю закуски и блюда, которые удобно есть за разговором. Конкретное меню составляю после обсуждения повода и ваших вкусов."
@@ -193,7 +205,7 @@ export const serviceContent = {
           "heading": "A personal menu for your occasion",
           "paragraphs": [
             "The menu begins with your tastes. We discuss ingredients you enjoy, dishes you would like to offer your guests and anything you would prefer to leave out. I then think through the ingredients, flavour combinations and presentation for the gathering you have described.",
-            "You do not need to choose every dish before contacting me. Knowing the occasion is enough to begin the conversation. If you already have a specific idea, we can use that as a starting point and develop the menu from there."
+            "Knowing the occasion is enough to begin the conversation. You are welcome to bring any request for a private chef or a food event in Cyprus. We discuss the format, scale, menu and arrangements individually. You do not need to choose every dish before contacting me: we can start with your idea."
           ]
         },
         {
@@ -211,6 +223,10 @@ export const serviceContent = {
         }
       ],
       "faq": [
+        {
+          "question": "How is a private event priced?",
+          "answer": "There is no single price list for every event: each request is quoted individually. Tell me the date, location, number of guests, occasion, menu preferences and arrangements you need. Contact @evg.chef on Instagram to discuss your event and quote."
+        },
         {
           "question": "What food do you prepare for private events?",
           "answer": "I choose dishes and appetisers that are easy to enjoy while talking. The specific menu follows our discussion of your occasion and preferences."
@@ -267,6 +283,10 @@ export const serviceContent = {
       ],
       "faq": [
         {
+          "question": "Сколько стоит кулинарный мастер-класс?",
+          "answer": "Стоимость рассчитываю индивидуально под вашу встречу. Для расчёта обсудим тему, формат, дату, место и количество участников. Расскажите о своих пожеланиях в Instagram @evg.chef — с них начнём подготовку программы и расчёта."
+        },
+        {
           "question": "Участники готовят сами или только смотрят?",
           "answer": "Готовим вместе. Я показываю техники и приёмы, объясняю их и помогаю разобраться в процессе приготовления."
         },
@@ -319,6 +339,10 @@ export const serviceContent = {
         }
       ],
       "faq": [
+        {
+          "question": "How much does a cooking class cost?",
+          "answer": "Each class is quoted individually. We discuss the topic, format, date, location and number of participants before preparing the quote. Message @evg.chef on Instagram with your interests so we can plan the session and its cost."
+        },
         {
           "question": "Will I cook or only watch the chef?",
           "answer": "We cook together. I demonstrate techniques, explain how they work and help you understand the cooking process as we go."
