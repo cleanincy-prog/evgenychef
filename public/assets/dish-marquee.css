@@ -1,4 +1,4 @@
-/* A photographic continuation of the existing text marquee, on its original background. */
+/* Square cooking films continue the existing text marquee on its original background. */
 .sq-intro.sq-intro--dishes {
   --dish-size: clamp(230px, 31vh, 340px);
   --dish-gap: clamp(24px, 3vw, 64px);
@@ -43,11 +43,14 @@
   width: var(--dish-size);
   height: var(--dish-size);
 }
-.dish-marquee-item img {
+.dish-marquee-item video {
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
   user-select: none;
   -webkit-user-drag: none;
 }

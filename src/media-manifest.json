@@ -1885,5 +1885,80 @@
     "height": 640,
     "bytes": 123986,
     "sha256": "b43384084d387d52fecb194bec7aad9d5afab87d076f7540f0d098a30a2fe2ad"
+  },
+  {
+    "source": "https://www.pexels.com/video/chef-using-pastry-bag-to-put-vegan-cream-on-chocolate-cookies-10964544/",
+    "author": "Konstantin Klimov",
+    "license": "https://www.pexels.com/license/",
+    "file": "/media/chef/cooking-reel/cream-piping.mp4",
+    "role": "Крем из кондитерского мешка — декоративный стоковый ролик",
+    "processing": "0.2–6.7 s; crop=1080:1080:0:660; H.264, CRF 23, 720×720, 25 fps, yuv420p, faststart, no audio; original colours",
+    "width": 720,
+    "height": 720,
+    "durationSeconds": 6.52,
+    "bytes": 780911,
+    "sha256": "9769c8fb752dfb1153b86ecfee9e715fc970e2764604300aa90aea96b45d3228"
+  },
+  {
+    "source": "https://www.pexels.com/video/chef-using-pastry-bag-to-put-vegan-cream-on-chocolate-cookies-10964544/",
+    "author": "Konstantin Klimov",
+    "license": "https://www.pexels.com/license/",
+    "file": "/media/chef/cooking-reel/cream-piping.webp",
+    "role": "Крем из кондитерского мешка — постер",
+    "processing": "Frame from prepared square MP4; WebP quality 85; steak poster at 6.4 s, others at 0.12 s",
+    "width": 720,
+    "height": 720,
+    "bytes": 54654,
+    "sha256": "59fdf08367dfb5945177b5bc05f232fbc22dd8933490b7b0e5be7b273d7c0ab0"
+  },
+  {
+    "source": "https://www.pexels.com/video/flipping-a-steak-in-a-pan-grill-3196347/",
+    "author": "Pressmaster",
+    "license": "https://www.pexels.com/license/",
+    "file": "/media/chef/cooking-reel/steak-turning.mp4",
+    "role": "Переворот стейка — декоративный стоковый ролик",
+    "processing": "1.8–9.8 s; crop=2160:2160:1050:0; H.264, CRF 23, 720×720, 25 fps, yuv420p, faststart, no audio; original colours",
+    "width": 720,
+    "height": 720,
+    "durationSeconds": 8,
+    "bytes": 2038887,
+    "sha256": "4fdb0414ecd180c586c0ef6d5d3cff6973e3ea7c1b45830748f4551830da2902"
+  },
+  {
+    "source": "https://www.pexels.com/video/flipping-a-steak-in-a-pan-grill-3196347/",
+    "author": "Pressmaster",
+    "license": "https://www.pexels.com/license/",
+    "file": "/media/chef/cooking-reel/steak-turning.webp",
+    "role": "Переворот стейка — постер",
+    "processing": "Frame from prepared square MP4; WebP quality 85; steak poster at 6.4 s, others at 0.12 s",
+    "width": 720,
+    "height": 720,
+    "bytes": 69318,
+    "sha256": "19a85b76c6b2b7ee650b59890a2c807558bcb487445947f919aaed5f96db18c0"
+  },
+  {
+    "source": "https://www.pexels.com/video/close-up-of-a-delicious-appetizers-on-a-plate-6658171/",
+    "author": "Kaboompics",
+    "license": "https://www.pexels.com/license/",
+    "file": "/media/chef/cooking-reel/canape-finishing.mp4",
+    "role": "Украшение канапе — декоративный стоковый ролик",
+    "processing": "0–8.32 s; crop=1440:1440:320:0; H.264, CRF 23, 720×720, 25 fps, yuv420p, faststart, no audio; original colours",
+    "width": 720,
+    "height": 720,
+    "durationSeconds": 8.32,
+    "bytes": 589154,
+    "sha256": "1c1d630d383e7248ec99ebc9343e2a6440a80a62b01eb93b9335294d5e649db2"
+  },
+  {
+    "source": "https://www.pexels.com/video/close-up-of-a-delicious-appetizers-on-a-plate-6658171/",
+    "author": "Kaboompics",
+    "license": "https://www.pexels.com/license/",
+    "file": "/media/chef/cooking-reel/canape-finishing.webp",
+    "role": "Украшение канапе — постер",
+    "processing": "Frame from prepared square MP4; WebP quality 85; steak poster at 6.4 s, others at 0.12 s",
+    "width": 720,
+    "height": 720,
+    "bytes": 35838,
+    "sha256": "d69be12e0f9c14a349c572b381a5792b7ce83cc9b8db5ef30dbbaa6ac33de3d4"
   }
 ]
