@@ -32,7 +32,7 @@ function ingredientPhotos() {
     </div>`;
 }
 function plate() {
-  return `<figure class="story-plate" aria-describedby="taste-notes"><div class="story-plate-image"><img src="/media/chef/atlas-plate-820.webp" srcset="/media/chef/atlas-plate-410.webp 410w, /media/chef/atlas-plate-820.webp 820w" sizes="(max-width:520px) 60vw, 300px" width="820" height="844" loading="lazy" decoding="async" alt="Блюдо Atlas: утка, овощи и шиитаке, пюре из фенхеля и батата, чипсы и соус с юдзу">${flavorNotes.map((note, i) => `<span class="story-plate-point" data-taste-point="${note.id}" style="--x:${note.x * 100}%;--y:${note.y * 100}%" aria-hidden="true">${i + 1}</span>`).join('')}</div><figcaption>Atlas · Одно блюдо, четыре акцента</figcaption></figure>`;
+  return `<figure class="story-plate" aria-describedby="taste-notes"><div class="story-plate-image"><img src="/media/chef/atlas-plate-820.webp" srcset="/media/chef/atlas-plate-410.webp 410w, /media/chef/atlas-plate-820.webp 820w" sizes="(max-width:520px) 60vw, 300px" width="820" height="844" loading="lazy" decoding="async" alt="Блюдо Atlas: утка, овощи и шиитаке, пюре из фенхеля и батата, чипсы и соус с юдзу">${flavorNotes.map((note, i) => `<span class="story-plate-point" data-taste-point="${note.id}" style="--x:${note.x * 100}%;--y:${note.y * 100}%" aria-hidden="true">${i + 1}</span>`).join('')}</div></figure>`;
 }
 function tasteDiagram() {
   return `<div class="story-taste-diagram">
@@ -43,7 +43,7 @@ function tasteDiagram() {
 }
 function filmControls() {
   return `<div class="story-film-controls" hidden>
-    <button type="button" class="story-sound" aria-controls="preparation-film" data-film-sound aria-label="Выключить звук" aria-pressed="false">Звук <span data-sound-label>вкл.</span></button>
+    <button type="button" class="story-sound" aria-controls="preparation-film" data-film-sound aria-label="Выключить звук" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4V5Z"/><path class="story-sound-waves" d="M15 8a6 6 0 0 1 0 8m3-11a10 10 0 0 1 0 14"/><path class="story-sound-muted" d="m16 9 6 6m0-6-6 6"/></svg></button>
     <span class="sr-only" role="status" data-film-status></span>
   </div>`;
 }

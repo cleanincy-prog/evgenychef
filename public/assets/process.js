@@ -18,7 +18,6 @@ if (video) {
   function syncControls() {
     sound.setAttribute('aria-pressed', String(video.muted));
     sound.setAttribute('aria-label', video.muted ? uiText('Включить звук', 'Unmute') : uiText('Выключить звук', 'Mute'));
-    controls.querySelector('[data-sound-label]').textContent = video.muted ? uiText('выкл.', 'off') : uiText('вкл.', 'on');
   }
   function pause() {
     request += 1;
@@ -119,7 +118,7 @@ if (ribbon && storyScroller) {
     if (!frame) frame = requestAnimationFrame(drawProgress);
   }
 
-  const revealTargets = [...ribbon.querySelectorAll('.story-copy > h3, .story-body > p, .story-copy > p.story-body, .story-products > div, .story-ingredient-details > figure, [data-taste-note], .story-plate figcaption, .story-film-controls, .story-contact')];
+  const revealTargets = [...ribbon.querySelectorAll('.story-copy > h3, .story-body > p, .story-copy > p.story-body, .story-products > div, .story-ingredient-details > figure, [data-taste-note], .story-film-controls, .story-contact')];
   const noteLeaders = new Map([...ribbon.querySelectorAll('[data-taste-note]')].map(note => [
     note, ribbon.querySelector(`[data-taste-leader="${note.dataset.tasteNote}"]`),
   ]));
