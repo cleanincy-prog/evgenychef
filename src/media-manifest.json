@@ -1639,7 +1639,7 @@
   },
   {
     "source": "/Users/dmitro/.codex/generated_images/01a0f2d3-2ec5-7691-8317-ecefafd2a466/exec-30df1f32-5dd9-4fda-8c97-e243cc715a6c.png",
-    "reference": "/Users/dmitro/Desktop/Biotrofi/output/unique-styles-21-30/23-cinematic.png",
+    "reference": "output/unique-styles-21-30/23-cinematic.png",
     "file": "/media/chef/letter/conversation-reference.png",
     "role": "Фотографическая подложка утверждённого макета №23, без надписей и элементов интерфейса",
     "processing": "Built-in imagegen removed only mockup typography and rail; rendered text and controls are real HTML",
@@ -1679,7 +1679,7 @@
   {
     "source": "output/evening-chef-v4/evening-chef-instagram.png",
     "sourcePage": "https://www.theselenegreece.com/retreats",
-    "credit": "Selene Greece source photograph; Evgeny Instagram identity references; edited using OpenAI imagegen",
+    "credit": "Selene Greece source photograph; Instagram identity references for Evgen Grebenik; edited using OpenAI imagegen",
     "role": "Этот вечер — ваш: фотомонтаж выбранной сцены с Евгением по Instagram-референсам",
     "license": "User-requested AI composite from third-party source photograph and public chef references; source reuse license not verified",
     "generated": true,
@@ -1700,7 +1700,7 @@
   {
     "source": "output/evening-chef-v4/evening-chef-instagram.png",
     "sourcePage": "https://www.theselenegreece.com/retreats",
-    "credit": "Selene Greece source photograph; Evgeny Instagram identity references; edited using OpenAI imagegen",
+    "credit": "Selene Greece source photograph; Instagram identity references for Evgen Grebenik; edited using OpenAI imagegen",
     "role": "Этот вечер — ваш: фотомонтаж выбранной сцены с Евгением по Instagram-референсам",
     "license": "User-requested AI composite from third-party source photograph and public chef references; source reuse license not verified",
     "generated": true,
@@ -1721,7 +1721,7 @@
   {
     "source": "output/evening-chef-v5/evening-chef-wine.png",
     "sourcePage": "https://www.theselenegreece.com/retreats",
-    "credit": "Selene Greece source photograph; Evgeny Instagram identity references; edited using OpenAI imagegen",
+    "credit": "Selene Greece source photograph; Instagram identity references for Evgen Grebenik; edited using OpenAI imagegen",
     "role": "Этот вечер — ваш: Евгений наливает красное вино; фотомонтаж по выбранной сцене и Instagram-референсам",
     "license": "User-requested AI composite from third-party source photograph and public chef references; source reuse license not verified",
     "generated": true,
@@ -1743,7 +1743,7 @@
   {
     "source": "output/evening-chef-v5/evening-chef-wine.png",
     "sourcePage": "https://www.theselenegreece.com/retreats",
-    "credit": "Selene Greece source photograph; Evgeny Instagram identity references; edited using OpenAI imagegen",
+    "credit": "Selene Greece source photograph; Instagram identity references for Evgen Grebenik; edited using OpenAI imagegen",
     "role": "Этот вечер — ваш: Евгений наливает красное вино; фотомонтаж по выбранной сцене и Instagram-референсам",
     "license": "User-requested AI composite from third-party source photograph and public chef references; source reuse license not verified",
     "generated": true,
