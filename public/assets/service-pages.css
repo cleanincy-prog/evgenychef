@@ -4,6 +4,9 @@
 .service-detail-link { margin-block: 24px; }
 .service-detail-link a { display: inline-flex; align-items: center; gap: 12px; min-height: 44px; }
 .service-detail-link svg { width: 22px; height: 22px; }
+.service-title-link { display: inline-block; min-height: 44px; color: inherit; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: .15em; }
+.service-title-link:hover { text-decoration-thickness: 2px; }
+.service-title-link:focus-visible, .article-related a:focus-visible { outline: 2px solid currentColor; outline-offset: 5px; }
 .service-document { background: var(--white); color: var(--charcoal); }
 .detail-header { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding-block: 24px; border-bottom: 1px solid #2c262226; }
 .detail-header nav { display: flex; align-items: center; gap: 24px; font-size: 13px; }
@@ -31,6 +34,10 @@
 .article-questions dl > div { border-top: 1px solid #2c262226; padding-block: 24px 8px; }
 .article-questions dt { font: 400 23px/1.35 var(--font-heading); margin-bottom: 12px; }
 .article-questions dd { margin-left: 0; }
+.article-related ul { list-style: none; margin: 0; padding: 0; }
+.article-related li + li { margin-top: 20px; }
+.article-related a { display: inline-flex; align-items: center; min-height: 44px; font-size: 16px; line-height: 1.85; text-decoration: underline; text-underline-offset: 4px; }
+.article-related a:hover { text-decoration-thickness: 2px; }
 .article-contact { padding-top: 32px; border-top: 1px solid #2c262226; }
 .article-contact .article-handle { font-size: 12px; margin: 16px 0 0; }
 .service-document .button { font-size: 13px; min-height: 48px; }

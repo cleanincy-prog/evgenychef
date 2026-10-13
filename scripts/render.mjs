@@ -118,14 +118,14 @@ const html = `<!doctype html>
     <div class="sq-track" style="--panel-count:${formats.length}">
       <div class="sq-sticky">
         <div class="sq-intro sq-intro--dishes">
-          <div class="sq-intro-content"><h2 id="services-title" class="display">Какой будет<br><em>ваш вечер?</em></h2><p>Собрать близких, встретиться с друзьями<br>или приготовить ужин вместе.</p></div>
+          <div class="sq-intro-content"><h2 id="services-title" class="display">Какой будет<br><em>ваш вечер?</em></h2><p>Частный шеф на Кипре: ужин дома,<br>приватное мероприятие или мастер-класс.</p></div>
           ${renderDishMarquee()}
           <div class="sq-marquee" aria-hidden="true"><div class="animate-marquee">${Array(2).fill('<div class="sq-marquee-group"><span>Приватный ужин</span><i></i><span>Частные мероприятия</span><i></i><span>Мастер-классы</span><i></i></div>').join('')}</div></div>
         </div>
         <nav class="sq-nav" aria-label="Выбор формата">${formats.map((f,i)=>`<button type="button" data-service-jump="${i}" aria-label="Показать формат: ${f.nav}" class="voice-mono">${f.nav}</button>`).join('')}<span class="sq-progress" aria-hidden="true"><span></span></span></nav>
         ${formats.map((f,i)=>`<article class="sq-panel" id="format-${f.id}" data-service="${i}">
           <figure class="sq-photo">${sceneImage(f)}</figure><div class="sq-shade" aria-hidden="true"></div>
-          <div class="sq-content container"><div class="sq-copy"><h3>${f.title}<em>${f.subtitle}</em></h3><p class="service-description">${f.description}</p><div class="button-row">${button('Обсудить встречу', '#contact', 'light')}${f.id === 'dinner' ? button('Подробнее', `#details-${f.id}`, 'glass', `data-dialog="details-${f.id}"`) : button('Подробнее', servicePath(f.id, language), 'glass')}</div></div></div>
+          <div class="sq-content container"><div class="sq-copy"><h3><a class="service-title-link" href="${servicePath(f.id, language)}">${f.title}</a><em>${f.subtitle}</em></h3><p class="service-description">${f.description}</p><div class="button-row">${button('Обсудить встречу', '#contact', 'light')}${f.id === 'dinner' ? button('Подробнее', `#details-${f.id}`, 'glass', `data-dialog="details-${f.id}"`) : button('Подробнее', servicePath(f.id, language), 'glass')}</div></div></div>
         </article>`).join('')}
       </div>
     </div>

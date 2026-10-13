@@ -12,11 +12,13 @@ export const homeTitles = {
     description: 'Evgen Grebenik, private chef in Cyprus. Personal seven-course dinners, private events and cooking classes, with menus shaped around your tastes.',
   },
 };
+// Date of the latest substantive content edit, never the build or deployment time.
+const contentUpdated = '2026-10-13';
 export const pages = languages.flatMap(language => [
-  { kind: 'home', language, path: homePath(language), ...homeTitles[language] },
+  { kind: 'home', language, path: homePath(language), lastModified: contentUpdated, ...homeTitles[language] },
   ...formats.map(format => ({
     kind: 'service', language, path: servicePath(format.id, language),
-    serviceId: format.id, format, ...serviceContent[format.id][language],
+    serviceId: format.id, format, lastModified: contentUpdated, ...serviceContent[format.id][language],
   })),
 ]);
 export const pageFor = path => {

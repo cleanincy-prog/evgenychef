@@ -1,5 +1,5 @@
 import { chef } from './content.mjs';
-import { homePath, alternatePath } from './pages.mjs';
+import { homePath, alternatePath, pages } from './pages.mjs';
 import { renderSeoHead, pageImage, escapeAttribute as escape } from './seo.mjs';
 
 const arrow = '<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M4 12h15m-6-6 6 6-6 6" stroke="currentColor" stroke-width="1.4"/></svg>';
@@ -7,12 +7,22 @@ const labels = {
   ru: { home: 'Частный шеф на Кипре', language: 'English', contact: 'Написать в Instagram',
     contents: 'Об этой встрече', questions: 'Перед встречей', discuss: 'Обсудим ваши планы',
     note: 'Напишите дату, место на Кипре и количество гостей. Расскажите о поводе и пожеланиях к еде.',
-    services: 'Ужины, мероприятия и мастер-классы',
+    services: 'Ужины, мероприятия и мастер-классы', otherFormats: 'Выберите другой формат',
+    formatNotes: {
+      dinner: 'Авторский ужин в 7 подач на вашей кухне, с персональным меню, приготовлением и подачей.',
+      events: 'Закуски и блюда для встречи, на которой хочется свободно общаться с гостями.',
+      masterclass: 'Готовим вместе, разбираем техники и пробуем приготовленное за общим столом.',
+    },
     skip: 'К содержимому', caption: 'Евгений Гребеник · Кипр' },
   en: { home: 'Private chef in Cyprus', language: 'Русский', contact: 'Message on Instagram',
     contents: 'About this experience', questions: 'Before we meet', discuss: 'Let’s discuss your plans',
     note: 'Share the date, location in Cyprus and number of guests. Tell me about the occasion and the food you enjoy.',
-    services: 'Dinners, private events and cooking classes',
+    services: 'Dinners, private events and cooking classes', otherFormats: 'Choose another experience',
+    formatNotes: {
+      dinner: 'A personal seven-course dinner, cooked and served in your kitchen.',
+      events: 'Dishes and appetisers for a gathering where conversation comes first.',
+      masterclass: 'Cook together, explore techniques and taste what you have made around one table.',
+    },
     skip: 'Skip to content', caption: 'Evgen Grebenik · Cyprus' },
 };
 export function languageLink(page, className = 'language-link') {
@@ -23,6 +33,7 @@ export function renderServicePage(page, { production = false } = {}) {
   const t = labels[page.language];
   const image = pageImage(page);
   const format = page.format;
+  const related = pages.filter(other => other.kind === 'service' && other.language === page.language && other.serviceId !== page.serviceId);
   const srcset = `/media/chef/${format.small} 768w, ${format.medium ? `/media/chef/${format.medium} 1536w, ` : ''}${image.src} ${image.width}w`;
   const contact = `<a class="button" href="${chef.instagram}" target="_blank" rel="noopener noreferrer"><span>${t.contact}</span>${arrow}</a>`;
   return `<!doctype html>
@@ -50,10 +61,11 @@ export function renderServicePage(page, { production = false } = {}) {
         <figure class="article-photo"><img src="${image.src}" srcset="${srcset}" sizes="(max-width:767px) calc(100vw - 48px), 44vw" width="${image.width}" height="${image.height}" alt="${escape(image.alt)}" loading="eager" decoding="async" fetchpriority="high"><figcaption>${t.caption}</figcaption></figure>
       </section>
       <div class="article-layout">
-        <aside class="article-index"><p>${t.contents}</p><nav aria-label="${t.contents}">${page.sections.map((section, index) => `<a href="#section-${index + 1}">${escape(section.heading)}</a>`).join('')}<a href="#questions">${t.questions}</a></nav></aside>
+        <aside class="article-index"><p>${t.contents}</p><nav aria-label="${t.contents}">${page.sections.map((section, index) => `<a href="#section-${index + 1}">${escape(section.heading)}</a>`).join('')}<a href="#questions">${t.questions}</a><a href="#other-formats">${t.otherFormats}</a></nav></aside>
         <article class="article-copy" aria-labelledby="service-title">
           ${page.sections.map((section, index) => `<section id="section-${index + 1}"><h2>${escape(section.heading)}</h2>${section.paragraphs.map(paragraph => `<p>${escape(paragraph)}</p>`).join('')}</section>`).join('\n')}
           <section class="article-questions" id="questions" aria-labelledby="questions-title"><h2 id="questions-title">${t.questions}</h2><dl>${page.faq.map(item => `<div><dt>${escape(item.question)}</dt><dd>${escape(item.answer)}</dd></div>`).join('')}</dl></section>
+          <section class="article-related" id="other-formats" aria-labelledby="other-formats-title"><h2 id="other-formats-title">${t.otherFormats}</h2><ul>${related.map(other => `<li><a href="${other.path}">${escape(other.h1)}</a><p>${escape(t.formatNotes[other.serviceId])}</p></li>`).join('')}</ul></section>
           <section class="article-contact" id="contact"><h2>${t.discuss}</h2><p>${t.note}</p>${contact}<p class="article-handle">@evg.chef</p></section>
         </article>
       </div>

@@ -29,6 +29,13 @@ export const serviceContent = {
           ]
         },
         {
+          "heading": "Продукты и пример моей кухни",
+          "paragraphs": [
+            "За ягнёнком я еду в деревню Лофу, за рыбой и морепродуктами — в Зиги, а сезонные овощи и фрукты выбираю у фермеров. Продукты подбираю под задуманные блюда: их свежесть и качество задают вкус ещё до приготовления.",
+            "Один из примеров моей кухни — утка с хрустящей кожицей, овощами и шиитаке, пюре из фенхеля и батата, чипсами и соусом с юдзу. В этом блюде сочетаются сочность мяса, свежесть овощей, сладость пюре и кислинка соуса. Это пример подхода к вкусу; конкретные семь подач для вашего ужина мы обсуждаем отдельно."
+          ]
+        },
+        {
           "heading": "Расскажите о вашей встрече",
           "paragraphs": [
             "Напишите мне в Instagram @evg.chef: укажите желаемую дату, место на Кипре, количество гостей и повод. Если уже есть пожелания к меню, добавьте их в сообщение. Начнём с разговора о вашем вечере и обсудим детали частного ужина."
@@ -79,6 +86,13 @@ export const serviceContent = {
           "paragraphs": [
             "I select and shop for the ingredients, cook in your kitchen and serve the dishes. Preparation that needs more time begins before the dinner. We discuss the location and the kitchen in advance so that we can plan the cooking around the place where you will gather.",
             "During the evening, my part is the cooking and service. Yours is time at the table with your guests. If you are looking for a private chef in Cyprus for a dinner at home, this is the format we can discuss together."
+          ]
+        },
+        {
+          "heading": "Ingredients and an example of my cooking",
+          "paragraphs": [
+            "I go to Lofou for lamb, to Zygi for fish and seafood, and to farmers for seasonal fruit and vegetables. I choose the ingredients for the dishes I have in mind: their freshness and quality shape the flavour before cooking begins.",
+            "One example of my cooking is duck with crisp skin, vegetables and shiitake mushrooms, fennel and sweet potato purées, crisps and a yuzu sauce. The dish brings together succulent meat, fresh vegetables, the sweetness of the purées and the acidity of the sauce. It illustrates my approach to flavour; we discuss the seven courses for your own dinner separately."
           ]
         },
         {

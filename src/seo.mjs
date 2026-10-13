@@ -96,4 +96,4 @@ export const renderRobots = ({ production = false } = {}) => production
   : 'User-agent: *\nDisallow: /\n';
 
 // Real canonical pages only. Do not infer lastmod from a build timestamp.
-export const renderSitemap = () => `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${pages.map(page => `  <url><loc>${absolute(page.path)}</loc></url>`).join('\n')}\n</urlset>\n`;
+export const renderSitemap = () => `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${pages.map(page => `  <url><loc>${absolute(page.path)}</loc><lastmod>${page.lastModified}</lastmod></url>`).join('\n')}\n</urlset>\n`;

@@ -63,6 +63,15 @@ for (const page of pages) {
     assert(body.includes(escapeAttribute(page.h1)));
     assert(page.sections.length >= 3 && page.faq.length >= 3);
     for (const paragraph of page.sections.flatMap(section => section.paragraphs)) assert(body.includes(escapeAttribute(paragraph)), 'Service information must be rendered without JavaScript');
+    for (const related of pages.filter(other => other.kind === 'service' && other.language === page.language && other.serviceId !== page.serviceId)) {
+      assert(body.includes(`href="${related.path}"`), `${page.path}: missing direct link to related service ${related.path}`);
+    }
+  } else {
+    // Service detail URLs must remain reachable outside a closed dialog, with JS disabled.
+    const visibleDocument = body.replace(/<dialog\b[\s\S]*?<\/dialog>/g, '');
+    for (const service of pages.filter(other => other.kind === 'service' && other.language === page.language)) {
+      assert(visibleDocument.includes(`href="${service.path}"`), `${page.path}: no direct service link to ${service.path}`);
+    }
   }
 
   if (preview) {
@@ -122,7 +131,12 @@ if (preview) {
   assert(robots.includes(`Sitemap: ${site.origin}/sitemap.xml`));
   const sitemap = await readFile(resolve(root, 'sitemap.xml'), 'utf8');
   assert.deepEqual([...sitemap.matchAll(/<loc>(.*?)<\/loc>/g)].map(match => match[1]), pages.map(page => absolute(page.path)));
-  assert(!/lastmod|changefreq|priority/.test(sitemap));
+  assert(!/changefreq|priority/.test(sitemap));
+  assert.deepEqual([...sitemap.matchAll(/<lastmod>(.*?)<\/lastmod>/g)].map(match => match[1]), pages.map(page => page.lastModified));
+  for (const page of pages) {
+    assert(/^\d{4}-\d{2}-\d{2}$/.test(page.lastModified), 'Use an explicit content modification date');
+    assert.equal(new Date(`${page.lastModified}T00:00:00Z`).toISOString().slice(0, 10), page.lastModified, 'Sitemap dates must be valid');
+  }
 }
 if (process.argv.includes('--http')) {
   const base = process.env.PREVIEW_URL || 'http://127.0.0.1:5173';
