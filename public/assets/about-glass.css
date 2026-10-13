@@ -33,6 +33,24 @@
 .about-glass .numbers-grid .number--text { font-size: 29px; }
 .about-glass .numbers-grid p:last-child { color: #bcb8ae; font-size: 11px; line-height: 1.55; }
 
+/* A short biography ends with its content, even on a tall desktop viewport. */
+@media (min-width: 768px) {
+  .about-glass.section-space,
+  .native-scroll .about-glass.section-space {
+    min-height: 0;
+    padding-block: clamp(108px, 8vw, 144px) clamp(44px, 4vw, 72px);
+  }
+  .about-glass > .container { max-width: 1480px; }
+  .about-glass .about-grid { column-gap: 8%; }
+  .about-glass .about-heading .editorial-heading { font-size: clamp(42px, 4.25vw, 72px); }
+  .about-glass .about-photo { max-width: 490px; }
+  .about-glass .about-copy .body-copy { max-width: 60ch; font-size: clamp(15px, 1.25vw, 18px); }
+  .about-glass .about-copy .body-copy:last-child { margin-bottom: 0; }
+  .about-glass .about-facts { margin-top: clamp(32px, 3vw, 48px); }
+  .about-glass .numbers-grid .number { font-size: clamp(36px, 2.5vw, 46px); }
+  .about-glass .numbers-grid .number--text { font-size: clamp(26px, 2.1vw, 34px); }
+}
+
 @media (max-width: 767px) {
   .native-scroll .about-glass.section-space {
     height: var(--viewport-small-height); min-height: min-content;
@@ -87,4 +105,7 @@
   .native-scroll .about-glass .about-facts .numbers-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px 6px; }
   .native-scroll .about-glass .about-facts .number { font-size: 25px; }
   .native-scroll .about-glass .about-facts .number--text { font-size: 17px; }
+}
+@media (max-width: 359px) and (max-height: 660px) {
+  .native-scroll .about-glass > .container { grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr); }
 }

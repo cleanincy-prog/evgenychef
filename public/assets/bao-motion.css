@@ -155,6 +155,14 @@ html.native-scroll, .native-scroll body { height: 100%; overflow: hidden; scroll
 .native-scroll .is-revealed .motion-cta { opacity: 1; }
 .native-scroll .motion-reveal:focus-within, .native-scroll .motion-cta:focus-within { opacity: 1; transform: none; transition-delay: 0s; }
 
+/* The short introduction follows the biography without another empty screen. */
+@media (min-width: 768px) {
+  .native-scroll .sq-intro { min-height: 0; padding-block: clamp(88px, 7vw, 120px) 44px; gap: 44px; }
+  .native-scroll .sq-intro.sq-intro--dishes { min-height: 0; grid-template-rows: auto auto auto; }
+  .native-scroll .sq-intro-content { padding: 0 24px; opacity: 1; transform: none; }
+  .native-scroll .sq-marquee { position: relative; inset: auto; width: 100%; }
+}
+
 /* BAO's booking drawer geometry, applied to the existing detail window. */
 .native-scroll .sheet {
   inset: auto 0 0; width: min(99vw, 1280px); height: calc(var(--viewport-height) * 0.9); max-height: calc(var(--viewport-height) * 0.9);
