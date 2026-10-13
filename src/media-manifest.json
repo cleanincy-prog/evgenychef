@@ -1805,5 +1805,85 @@
     "height": 960,
     "bytes": 34606,
     "sha256": "46548af5c71b3b4758e87df07ee1b48985fd882f06b7c2ae19afcac821cb19a7"
+  },
+  {
+    "source": "/media/chef/collage/hero-45-384.webp",
+    "file": "/media/chef/dishes/ceramic-dessert-320.webp",
+    "role": "Производный фоторендер настоящего блюда для ленты форматов",
+    "processing": "Built-in image_gen: isolate source dish with true alpha, warm studio light; reconstruct plate rim where cropped. Resize only to WebP quality 88, alpha 100.",
+    "width": 320,
+    "height": 320,
+    "bytes": 35268,
+    "sha256": "db2e010432ad1cf52c771b3a1b60a4bf3a78a4ff79f7fa4fb7c8733d4cfa80a1"
+  },
+  {
+    "source": "/media/chef/collage/hero-45-384.webp",
+    "file": "/media/chef/dishes/ceramic-dessert-640.webp",
+    "role": "Производный фоторендер настоящего блюда для ленты форматов",
+    "processing": "Built-in image_gen: isolate source dish with true alpha, warm studio light; reconstruct plate rim where cropped. Resize only to WebP quality 88, alpha 100.",
+    "width": 640,
+    "height": 640,
+    "bytes": 121256,
+    "sha256": "7d1c07b2df56d16a69d2487ad7f5e974529cd8ebee6bc2178ad249053de23a17"
+  },
+  {
+    "source": "/media/chef/collage/hero-50-384.webp",
+    "file": "/media/chef/dishes/garden-plate-320.webp",
+    "role": "Производный фоторендер настоящего блюда для ленты форматов",
+    "processing": "Built-in image_gen: isolate source dish with true alpha, warm studio light; reconstruct plate rim where cropped. Resize only to WebP quality 88, alpha 100.",
+    "width": 320,
+    "height": 320,
+    "bytes": 22064,
+    "sha256": "adeadacc05fd05fb4d4f62bafdfb7f66f2303569af0260a94937b4b75d59246e"
+  },
+  {
+    "source": "/media/chef/collage/hero-50-384.webp",
+    "file": "/media/chef/dishes/garden-plate-640.webp",
+    "role": "Производный фоторендер настоящего блюда для ленты форматов",
+    "processing": "Built-in image_gen: isolate source dish with true alpha, warm studio light; reconstruct plate rim where cropped. Resize only to WebP quality 88, alpha 100.",
+    "width": 640,
+    "height": 640,
+    "bytes": 60542,
+    "sha256": "7da4830451825c6f0e8360777cf20c291a14c35df54c987d3b9f0f51c809b524"
+  },
+  {
+    "source": "/media/chef/collage/hero-62-384.webp",
+    "file": "/media/chef/dishes/roast-plate-320.webp",
+    "role": "Производный фоторендер настоящего блюда для ленты форматов",
+    "processing": "Built-in image_gen: isolate source dish with true alpha, warm studio light; reconstruct plate rim where cropped. Resize only to WebP quality 88, alpha 100.",
+    "width": 320,
+    "height": 320,
+    "bytes": 41098,
+    "sha256": "517422b9ab605c600284180777816ed737bf7c12e749ca2e56d801270c8a0fe7"
+  },
+  {
+    "source": "/media/chef/collage/hero-62-384.webp",
+    "file": "/media/chef/dishes/roast-plate-640.webp",
+    "role": "Производный фоторендер настоящего блюда для ленты форматов",
+    "processing": "Built-in image_gen: isolate source dish with true alpha, warm studio light; reconstruct plate rim where cropped. Resize only to WebP quality 88, alpha 100.",
+    "width": 640,
+    "height": 640,
+    "bytes": 128114,
+    "sha256": "3d261d24c6cad2b765530d78acab02df047e98c2fd1c64f78e2d8ad0f7da5251"
+  },
+  {
+    "source": "/media/chef/collage/hero-41-384.webp",
+    "file": "/media/chef/dishes/turquoise-bowl-320.webp",
+    "role": "Производный фоторендер настоящего блюда для ленты форматов",
+    "processing": "Built-in image_gen: isolate source dish with true alpha, warm studio light; reconstruct plate rim where cropped. Resize only to WebP quality 88, alpha 100.",
+    "width": 320,
+    "height": 320,
+    "bytes": 37790,
+    "sha256": "9ac2092ecaed044e6d8b471abb84c33225aaee4b6a2bcf75ca279060c92b1732"
+  },
+  {
+    "source": "/media/chef/collage/hero-41-384.webp",
+    "file": "/media/chef/dishes/turquoise-bowl-640.webp",
+    "role": "Производный фоторендер настоящего блюда для ленты форматов",
+    "processing": "Built-in image_gen: isolate source dish with true alpha, warm studio light; reconstruct plate rim where cropped. Resize only to WebP quality 88, alpha 100.",
+    "width": 640,
+    "height": 640,
+    "bytes": 123986,
+    "sha256": "b43384084d387d52fecb194bec7aad9d5afab87d076f7540f0d098a30a2fe2ad"
   }
 ]

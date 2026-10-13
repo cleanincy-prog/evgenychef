@@ -8,6 +8,7 @@ import { localizeHomepage } from '../src/home-locale.mjs';
 import { languageLink, renderServicePage } from '../src/service-pages.mjs';
 import { serviceRenders } from '../src/service-renders.mjs';
 import { renderProcess } from '../src/process.mjs';
+import { renderDishMarquee } from '../src/dish-marquee.mjs';
 import { heroImages, heroVideo, heroStoryShots, heroCollageWideDesktop, heroCollageWideCompact, heroIntroStyles } from '../src/hero-collage.mjs';
 
 const escape = value => String(value).replaceAll('&', '&amp;').replaceAll('"', '&quot;').replaceAll('<', '&lt;').replaceAll('>', '&gt;');
@@ -50,11 +51,13 @@ const html = `<!doctype html>
   <link rel="stylesheet" href="/assets/about-glass.css">
   <link rel="stylesheet" href="/assets/browser-compat.css">
   <link rel="stylesheet" href="/assets/service-pages.css">
+  <link rel="stylesheet" href="/assets/dish-marquee.css">
   <script type="module" src="/assets/viewport.js"></script>
   <script type="module" src="/assets/hero-collage.js"></script>
   <script type="module" src="/assets/bao-site.js"></script>
   <script type="module" src="/assets/process.js"></script>
   <script type="module" src="/assets/story-pasta.js"></script>
+  <script type="module" src="/assets/dish-marquee.js"></script>
   <noscript><style>.hero-frame[data-hero-intro="pending"] .hero-collage-grid, .hero-frame[data-hero-intro="pending"] .hero-identity, .hero-frame[data-hero-intro="pending"] .hero-bottom, .hero-frame[data-hero-intro="pending"] .scroll-cue, .hero-frame[data-hero-intro="pending"] .hero-shade, .hero-frame[data-hero-intro="pending"] .hero-portrait { animation: none; }</style></noscript>
 </head>
 <body id="top">
@@ -114,7 +117,8 @@ const html = `<!doctype html>
   <section id="services" aria-labelledby="services-title">
     <div class="sq-track" style="--panel-count:${formats.length}">
       <div class="sq-sticky">
-        <div class="sq-intro">
+        <div class="sq-intro sq-intro--dishes">
+          ${renderDishMarquee()}
           <div class="sq-intro-content"><h2 id="services-title" class="display">Какой будет<br><em>ваш вечер?</em></h2><p>Собрать близких, встретиться с друзьями<br>или приготовить ужин вместе.</p></div>
           <div class="sq-marquee" aria-hidden="true"><div class="animate-marquee">${Array(2).fill('<div class="sq-marquee-group"><span>Приватный ужин</span><i></i><span>Частные мероприятия</span><i></i><span>Мастер-классы</span><i></i></div>').join('')}</div></div>
         </div>
