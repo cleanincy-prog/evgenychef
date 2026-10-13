@@ -1,4 +1,4 @@
-const clips = ['cream-piping', 'steak-turning', 'canape-finishing'];
+const clips = ['welcome-canapes', 'tartare-finishing', 'soup-finishing', 'shrimp-flame', 'steak-turning', 'berry-predessert', 'cream-piping'];
 
 // Decorative footage: the duplicated loop must not repeat screen-reader content.
 export function renderDishMarquee() {

@@ -50,7 +50,7 @@ if (section) {
     section.dataset.marqueeRunning = String(running);
     updateButton();
     videos.forEach(video => {
-      if (visible && !reducedMotion.matches && !video.hasAttribute('src') && !failed.has(video)) {
+      if (visible && nearby.has(video) && !reducedMotion.matches && !video.hasAttribute('src') && !failed.has(video)) {
         video.muted = true;
         video.preload = 'auto';
         video.src = video.dataset.src;
