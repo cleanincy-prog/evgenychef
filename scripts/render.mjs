@@ -118,8 +118,8 @@ const html = `<!doctype html>
     <div class="sq-track" style="--panel-count:${formats.length}">
       <div class="sq-sticky">
         <div class="sq-intro sq-intro--dishes">
-          ${renderDishMarquee()}
           <div class="sq-intro-content"><h2 id="services-title" class="display">Какой будет<br><em>ваш вечер?</em></h2><p>Собрать близких, встретиться с друзьями<br>или приготовить ужин вместе.</p></div>
+          ${renderDishMarquee()}
           <div class="sq-marquee" aria-hidden="true"><div class="animate-marquee">${Array(2).fill('<div class="sq-marquee-group"><span>Приватный ужин</span><i></i><span>Частные мероприятия</span><i></i><span>Мастер-классы</span><i></i></div>').join('')}</div></div>
         </div>
         <nav class="sq-nav" aria-label="Выбор формата">${formats.map((f,i)=>`<button type="button" data-service-jump="${i}" aria-label="Показать формат: ${f.nav}" class="voice-mono">${f.nav}</button>`).join('')}<span class="sq-progress" aria-hidden="true"><span></span></span></nav>
