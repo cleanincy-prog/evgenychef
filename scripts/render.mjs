@@ -3,7 +3,7 @@ import { resolve, dirname } from 'node:path';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 import { chef, formats } from '../src/content.mjs';
 import { renderSeoHead } from '../src/seo.mjs';
-import { pages, pageFor, homePath, servicePath } from '../src/pages.mjs';
+import { pages, pageFor, homePath } from '../src/pages.mjs';
 import { localizeHomepage } from '../src/home-locale.mjs';
 import { languageLink, renderServicePage } from '../src/service-pages.mjs';
 import { serviceRenders } from '../src/service-renders.mjs';
@@ -125,7 +125,7 @@ const html = `<!doctype html>
         <nav class="sq-nav" aria-label="Выбор формата">${formats.map((f,i)=>`<button type="button" data-service-jump="${i}" aria-label="Показать формат: ${f.nav}" class="voice-mono">${f.nav}</button>`).join('')}<span class="sq-progress" aria-hidden="true"><span></span></span></nav>
         ${formats.map((f,i)=>`<article class="sq-panel" id="format-${f.id}" data-service="${i}">
           <figure class="sq-photo">${sceneImage(f)}</figure><div class="sq-shade" aria-hidden="true"></div>
-          <div class="sq-content container"><div class="sq-copy"><h3><a class="service-title-link" href="${servicePath(f.id, language)}">${f.title}</a><em>${f.subtitle}</em></h3><p class="service-description">${f.description}</p><div class="button-row">${button('Обсудить встречу', '#contact', 'light')}${f.id === 'dinner' ? button('Подробнее', `#details-${f.id}`, 'glass', `data-dialog="details-${f.id}"`) : button('Подробнее', servicePath(f.id, language), 'glass')}</div></div></div>
+          <div class="sq-content container"><div class="sq-copy"><h3>${f.title}<em>${f.subtitle}</em></h3><p class="service-description">${f.description}</p><div class="button-row">${button('Обсудить встречу', '#contact', 'light')}${f.id === 'dinner' ? button('Подробнее', `#details-${f.id}`, 'glass', `data-dialog="details-${f.id}"`) : ''}</div></div></div>
         </article>`).join('')}
       </div>
     </div>
@@ -149,7 +149,7 @@ const html = `<!doctype html>
   </section>
 </main>
 
-${formats.filter(f=>f.id === 'dinner').map(f=>dialog(`details-${f.id}`,f.title,`<div class="sheet-grid"><div><p class="eyebrow">Формат встречи</p><h2 id="details-${f.id}-title">${f.title}</h2><p class="sheet-lead">${f.lead}</p><p class="body-copy">${f.description}</p><ol class="detail-list">${f.details.map((p,i)=>`<li><span class="voice-mono">${number(i)}</span><p>${p}</p></li>`).join('')}</ol><p class="service-detail-link"><a class="link-underline" href="${servicePath(f.id, language)}">Все подробности ужина ${arrow}</a></p>${button('Обсудить встречу', '#contact', '', 'data-close')}</div><figure>${formatImage(f, 'sheet-photo', '(max-width: 767px) calc(100vw - 48px), (max-width: 1279px) 43vw, 501px')}</figure></div>`)).join('')}
+${formats.filter(f=>f.id === 'dinner').map(f=>dialog(`details-${f.id}`,f.title,`<div class="sheet-grid"><div><p class="eyebrow">Формат встречи</p><h2 id="details-${f.id}-title">${f.title}</h2><p class="sheet-lead">${f.lead}</p><p class="body-copy">${f.description}</p><ol class="detail-list">${f.details.map((p,i)=>`<li><span class="voice-mono">${number(i)}</span><p>${p}</p></li>`).join('')}</ol>${button('Обсудить встречу', '#contact', '', 'data-close')}</div><figure>${formatImage(f, 'sheet-photo', '(max-width: 767px) calc(100vw - 48px), (max-width: 1279px) 43vw, 501px')}</figure></div>`)).join('')}
 </body>
 </html>`;
 return localizeHomepage(html, language);

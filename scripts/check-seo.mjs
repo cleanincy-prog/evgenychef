@@ -67,10 +67,11 @@ for (const page of pages) {
       assert(body.includes(`href="${related.path}"`), `${page.path}: missing direct link to related service ${related.path}`);
     }
   } else {
-    // Service detail URLs must remain reachable outside a closed dialog, with JS disabled.
-    const visibleDocument = body.replace(/<dialog\b[\s\S]*?<\/dialog>/g, '');
-    for (const service of pages.filter(other => other.kind === 'service' && other.language === page.language)) {
-      assert(visibleDocument.includes(`href="${service.path}"`), `${page.path}: no direct service link to ${service.path}`);
+    // The owner removed homepage entry points; public service URLs remain in the sitemap.
+    const servicePaths = new Set(pages.filter(other => other.kind === 'service').map(service => service.path));
+    for (const [, href] of body.matchAll(/<a\b[^>]*\bhref="([^"]+)"/g)) {
+      const target = new URL(href.replaceAll('&amp;', '&'), absolute(page.path));
+      assert(target.origin !== site.origin || !servicePaths.has(target.pathname), `${page.path}: unexpected service link ${href}`);
     }
   }
 

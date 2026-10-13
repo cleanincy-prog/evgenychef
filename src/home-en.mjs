@@ -125,6 +125,5 @@ export const homeEnglish = {
   "Евгений Гребеник улыбается, стоя со скрещёнными руками на открытой террасе": "Evgen Grebenik smiling with his arms crossed on an open terrace",
   "Закрыть окно": "Close dialog",
   "Русский": "Русский",
-  "Все подробности ужина": "Full dinner details",
   "Приостановить движение лент": "Pause marquee motion"
 };

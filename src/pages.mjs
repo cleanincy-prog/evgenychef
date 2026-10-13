@@ -14,8 +14,9 @@ export const homeTitles = {
 };
 // Date of the latest substantive content edit, never the build or deployment time.
 const contentUpdated = '2026-10-13';
+const homeUpdated = '2026-10-14';
 export const pages = languages.flatMap(language => [
-  { kind: 'home', language, path: homePath(language), lastModified: contentUpdated, ...homeTitles[language] },
+  { kind: 'home', language, path: homePath(language), lastModified: homeUpdated, ...homeTitles[language] },
   ...formats.map(format => ({
     kind: 'service', language, path: servicePath(format.id, language),
     serviceId: format.id, format, lastModified: contentUpdated, ...serviceContent[format.id][language],

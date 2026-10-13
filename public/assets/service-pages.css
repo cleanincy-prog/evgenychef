@@ -1,12 +1,7 @@
 /* Extends the approved detail sheet's typography, text/photo grid and palette. */
 .language-link { display: inline-flex; align-items: center; min-height: 44px; padding-inline: 8px; font-size: 13px; text-decoration: underline; text-underline-offset: 5px; white-space: nowrap; }
 .header-actions { gap: 16px; }
-.service-detail-link { margin-block: 24px; }
-.service-detail-link a { display: inline-flex; align-items: center; gap: 12px; min-height: 44px; }
-.service-detail-link svg { width: 22px; height: 22px; }
-.service-title-link { display: inline-block; min-height: 44px; color: inherit; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: .15em; }
-.service-title-link:hover { text-decoration-thickness: 2px; }
-.service-title-link:focus-visible, .article-related a:focus-visible { outline: 2px solid currentColor; outline-offset: 5px; }
+.article-related a:focus-visible { outline: 2px solid currentColor; outline-offset: 5px; }
 .service-document { background: var(--white); color: var(--charcoal); }
 .detail-header { display: flex; align-items: center; justify-content: space-between; gap: 24px; padding-block: 24px; border-bottom: 1px solid #2c262226; }
 .detail-header nav { display: flex; align-items: center; gap: 24px; font-size: 13px; }
