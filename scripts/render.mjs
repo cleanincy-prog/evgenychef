@@ -47,7 +47,6 @@ const html = `<!doctype html>
   <link rel="stylesheet" href="/assets/hero-collage.css">
   <link rel="stylesheet" href="/assets/bao-motion.css">
   <link rel="stylesheet" href="/assets/story-timeline.css">
-  <link rel="stylesheet" href="/assets/story-pasta.css">
   <link rel="stylesheet" href="/assets/about-glass.css">
   <link rel="stylesheet" href="/assets/browser-compat.css">
   <link rel="stylesheet" href="/assets/service-pages.css">
@@ -56,7 +55,6 @@ const html = `<!doctype html>
   <script type="module" src="/assets/hero-collage.js"></script>
   <script type="module" src="/assets/bao-site.js"></script>
   <script type="module" src="/assets/process.js"></script>
-  <script type="module" src="/assets/story-pasta.js"></script>
   <script type="module" src="/assets/dish-marquee.js"></script>
   <noscript><style>.hero-frame[data-hero-intro="pending"] .hero-collage-grid, .hero-frame[data-hero-intro="pending"] .hero-identity, .hero-frame[data-hero-intro="pending"] .hero-bottom, .hero-frame[data-hero-intro="pending"] .scroll-cue, .hero-frame[data-hero-intro="pending"] .hero-shade, .hero-frame[data-hero-intro="pending"] .hero-portrait { animation: none; }</style></noscript>
 </head>

@@ -1763,16 +1763,6 @@
     "parentImage": "output/evening-chef-v4/evening-chef-instagram.png"
   },
   {
-    "source": "output/pasta-scroll-chat/pasta-machine.jpeg",
-    "file": "/media/chef/letter/pasta-machine.jpg",
-    "role": "Утверждённая пользователем машинка для пасты и текстура ленты прокрутки",
-    "processing": "Original approved JPEG; rendered and animated with Canvas; no photo or story changes",
-    "width": 572,
-    "height": 1024,
-    "bytes": 29975,
-    "sha256": "cef20eb6cdb4876b077473012344c998a91815629949ef02d50335ebd63e9086"
-  },
-  {
     "source": "output/about-motion-study-2026-10-02/backgrounds/round-02/02-glass.png",
     "file": "/media/chef/about-smoked-glass.webp",
     "role": "Утверждённый пользователем фон секции «О шефе»: дымчатое рифлёное стекло",
