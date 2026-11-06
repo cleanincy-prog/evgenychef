@@ -8,7 +8,7 @@
   mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent), linear-gradient(180deg, transparent, #000 8%, #000 91%, transparent);
   mask-composite: intersect;
 }
-#menu .duck-visual video { display: block; width: 100%; height: 100%; object-fit: contain; }
+#menu .duck-visual video { display: block; width: 100%; height: 100%; object-fit: contain; pointer-events: none; }
 #menu .duck-notes { display: contents; margin: 0; }
 #menu .duck-note { position: relative; z-index: 2; min-width: 0; }
 #menu .duck-note dt { margin: 0; color: var(--story-ink); font: 400 23px/1.15 var(--font-heading); font-size: clamp(18px, 4.8cqw, 26px); }
@@ -22,13 +22,6 @@
 #menu .duck-arrows .duck-arrow-outline { stroke: #172018; stroke-opacity: .85; stroke-width: 4.2; }
 #menu .duck-arrows .duck-arrow-head { stroke-width: 2.6; }
 #menu .duck-arrows .duck-arrow-head.duck-arrow-outline { stroke-width: 4.6; }
-#menu .duck-foot { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 4px 16px; margin-top: 24px; }
-#menu .duck-credit { max-width: 38ch; margin: 0; color: #bdc5b1; font: 400 11px/1.5 var(--font-body); }
-#menu .duck-credit a { text-decoration: underline; text-underline-offset: 3px; }
-#menu .duck-toggle { display: inline-flex; align-items: center; gap: 10px; min-height: 44px; padding: 6px 0; background: none; border: 0; color: #e8e8d8; font: 400 14px/1.4 var(--font-body); cursor: pointer; }
-#menu .duck-toggle[hidden] { display: none; }
-#menu .duck-toggle svg { width: 17px; height: 17px; fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linejoin: round; }
-#menu .duck-stage :is(button,a):focus-visible { outline: 2px solid #fff6df; outline-offset: 5px; }
 @container (max-width: 300px) {
   #menu .duck-diagram { column-gap: 12px; row-gap: 20px; }
 }

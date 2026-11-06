@@ -5,19 +5,12 @@ function setupDuckPlating(chapter) {
   const diagram = chapter.querySelector('.duck-diagram');
   const film = chapter.querySelector('video');
   const svg = chapter.querySelector('.duck-arrows');
-  const control = chapter.querySelector('.duck-toggle');
-  const label = control.querySelector('[data-duck-control]');
-  const icon = control.querySelector('[data-duck-icon]');
   const reduced = matchMedia('(prefers-reduced-motion: reduce)');
-  const en = document.documentElement.lang === 'en';
-  const copy = en
-    ? { play: 'Play', pause: 'Pause', replay: 'Replay', playLabel: 'Play the plating video', pauseLabel: 'Pause the plating video', replayLabel: 'Replay the plating video' }
-    : { play: 'Смотреть', pause: 'Пауза', replay: 'Повторить', playLabel: 'Воспроизвести видео подачи', pauseLabel: 'Приостановить видео подачи', replayLabel: 'Повторить видео подачи' };
   const keys = ['duck', 'puree', 'sauce', 'physalis'];
   const groups = Object.fromEntries(keys.map(key => [key, svg.querySelector(`[data-duck-arrow="${key}"]`)]));
   const notes = Object.fromEntries(keys.map(key => [key, diagram.querySelector(`[data-duck-note="${key}"]`)]));
   let data = { fps: 29.97002997002997, frames: 1, tracks: Object.fromEntries(keys.map(key => [key, [groups[key].dataset.firstPoint.split(',').map(Number)]])) };
-  let visible = false, manuallyPaused = false, animation = 0, geometry = null, playPending = false;
+  let visible = false, animation = 0, geometry = null, playPending = false;
 
   function measure() {
     const box = diagram.getBoundingClientRect(), media = film.getBoundingClientRect();
@@ -56,12 +49,6 @@ function setupDuckPlating(chapter) {
     }
     chapter.dataset.trackedFrame = String(index);
   }
-  function syncControl() {
-    const state = film.ended ? 'replay' : film.paused ? 'play' : 'pause';
-    label.textContent = copy[state];
-    control.setAttribute('aria-label', copy[`${state}Label`]);
-    icon.setAttribute('d', film.ended ? 'M4 11a8 8 0 1 1 2 7M4 5v6h6' : film.paused ? 'm8 5 11 7-11 7Z' : 'M8 5v14M16 5v14');
-  }
   function frameLoop(_now, metadata) {
     animation = 0;
     draw(metadata?.mediaTime ?? film.currentTime);
@@ -76,21 +63,16 @@ function setupDuckPlating(chapter) {
   async function play() {
     if (playPending) return;
     playPending = true;
-    try { await film.play(); } catch { syncControl(); }
+    try { await film.play(); } catch { /* Keep the poster when autoplay is unavailable. */ }
     finally { playPending = false; }
   }
   function visibility() {
     if (!visible || document.hidden) film.pause();
-    else if (!manuallyPaused && !film.ended && !reduced.matches && film.paused) play();
+    else if (!film.ended && !reduced.matches && film.paused) play();
   }
-  control.addEventListener('click', () => {
-    if (film.ended) { manuallyPaused = false; film.currentTime = 0; play(); }
-    else if (film.paused) { manuallyPaused = false; play(); }
-    else { manuallyPaused = true; film.pause(); }
-  });
-  film.addEventListener('play', () => { syncControl(); if (!animation) frameLoop(); });
-  film.addEventListener('pause', () => { stopFrames(); draw(film.currentTime); syncControl(); });
-  film.addEventListener('ended', () => { draw(film.currentTime); syncControl(); });
+  film.addEventListener('play', () => { if (!animation) frameLoop(); });
+  film.addEventListener('pause', () => { stopFrames(); draw(film.currentTime); });
+  film.addEventListener('ended', () => draw(film.currentTime));
   film.addEventListener('seeked', () => draw(film.currentTime));
   film.addEventListener('loadeddata', measure);
   const resize = new ResizeObserver(measure);
@@ -105,9 +87,7 @@ function setupDuckPlating(chapter) {
   document.fonts.ready.then(measure);
   film.muted = true;
   film.controls = false;
-  control.hidden = false;
   measure();
-  syncControl();
   // The first measured arrows work immediately; a failed track request cannot disable playback.
   fetch(chapter.dataset.tracks).then(response => {
     if (!response.ok) throw new Error('Duck tracks unavailable');
