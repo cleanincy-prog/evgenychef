@@ -1,5 +1,18 @@
 // Complete build-time translation of the approved Russian homepage.
 export const homeEnglish = {
+  "Сочность, мягкость и аромат складываются в одно блюдо.": "Juiciness, softness and aroma come together in one dish.",
+  "Соус": "Sauce",
+  "Связывает мясо и гарнир": "Brings the duck and purée together",
+  "Сочность и насыщенный вкус": "Juiciness and rich flavour",
+  "Картофельное пюре": "Mashed potatoes",
+  "Нежная, бархатная текстура": "A soft, velvety texture",
+  "Физалис": "Physalis",
+  "Кисло-сладкий акцент": "A sweet and tangy accent",
+  "Повар завершает подачу утки с картофельным пюре": "A chef finishes plating duck with mashed potatoes",
+  "Посмотреть видео": "Watch the video",
+  "Видео: DC Studio /": "Video: DC Studio /",
+  "Воспроизвести видео подачи": "Play the plating video",
+  "Смотреть": "Play",
   "К содержимому": "Skip to content",
   "Форматы": "Formats",
   "О шефе": "About the chef",

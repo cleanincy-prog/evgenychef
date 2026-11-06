@@ -1,4 +1,5 @@
-import { chef, stages, products, flavorNotes } from './content.mjs';
+import { chef, stages, products } from './content.mjs';
+import { renderDuckPlating } from './duck-plating.mjs';
 
 const escape = value => String(value).replaceAll('&', '&amp;').replaceAll('"', '&quot;').replaceAll('<', '&lt;').replaceAll('>', '&gt;');
 const arrow = '<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 4v15m-6-6 6 6 6-6" stroke="currentColor" stroke-width="1.3"/></svg>';
@@ -31,16 +32,6 @@ function ingredientPhotos() {
       <figure>${photo('letter/menu/duck-pan.webp', 'letter/menu/duck-pan-512.webp', 1024, 683, '', 'story-detail-photo', '(max-width:767px) 35vw, 280px')}</figure>
     </div>`;
 }
-function plate() {
-  return `<figure class="story-plate" aria-describedby="taste-notes"><div class="story-plate-image"><img src="/media/chef/atlas-plate-820.webp" srcset="/media/chef/atlas-plate-410.webp 410w, /media/chef/atlas-plate-820.webp 820w" sizes="(max-width:520px) 60vw, 300px" width="820" height="844" loading="lazy" decoding="async" alt="Блюдо Atlas: утка, овощи и шиитаке, пюре из фенхеля и батата, чипсы и соус с юдзу">${flavorNotes.map((note, i) => `<span class="story-plate-point" data-taste-point="${note.id}" style="--x:${note.x * 100}%;--y:${note.y * 100}%" aria-hidden="true">${i + 1}</span>`).join('')}</div></figure>`;
-}
-function tasteDiagram() {
-  return `<div class="story-taste-diagram">
-    ${plate()}
-    <ol class="story-notes" id="taste-notes" role="list">${flavorNotes.map((note, i) => `<li data-taste-note="${note.id}"><div class="story-note-heading"><span aria-hidden="true">${i + 1}</span><h4>${escape(note.title)}</h4></div><p>${escape(note.text)}</p></li>`).join('')}</ol>
-    <svg class="story-taste-leaders" aria-hidden="true">${flavorNotes.map(note => `<path data-taste-leader="${note.id}"/>`).join('')}</svg>
-  </div>`;
-}
 function filmControls() {
   return `<div class="story-film-controls" hidden>
     <button type="button" class="story-sound" aria-controls="preparation-film" data-film-sound aria-label="Выключить звук" aria-pressed="false"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 5 6 9H3v6h3l5 4V5Z"/><path class="story-sound-waves" d="M15 8a6 6 0 0 1 0 8m3-11a10 10 0 0 1 0 14"/><path class="story-sound-muted" d="m16 9 6 6m0-6-6 6"/></svg></button>
@@ -58,11 +49,11 @@ export function renderProcess() {
       ${i > 0 ? '<div class="story-divider" aria-hidden="true"></div>' : ''}
       <p class="story-scene-label">${chapter.label}</p>
       <div class="story-copy">${chapter.kind === 'ingredients' ? ingredientPhotos() : ''}<h3 id="${chapter.id}-title">${chapter.name}</h3>
-        ${chapter.kind === 'ingredients' ? ingredients() : chapter.kind === 'taste' ? '<p class="story-body">Сочность, свежесть, сладость и кислинка дополняют друг друга.</p>' : `<div class="story-body">${paragraphs(stages[chapter.source].text)}</div>`}
+        ${chapter.kind === 'ingredients' ? ingredients() : chapter.kind === 'taste' ? '<p class="story-body">Сочность, мягкость и аромат складываются в одно блюдо.</p>' : `<div class="story-body">${paragraphs(stages[chapter.source].text)}</div>`}
         ${chapter.kind === 'preparation' ? `${filmControls()}<noscript><p class="story-film-fallback"><a href="/media/chef/preparation.mp4">Смотреть видео подготовки</a></p></noscript>` : ''}
         ${chapter.kind === 'evening' ? `<a class="story-contact" href="${chef.instagram}" target="_blank" rel="noopener noreferrer">Расскажите мне о вечере <span aria-hidden="true">↗</span></a>` : ''}
       </div>
-      ${chapter.kind === 'taste' ? tasteDiagram() : ''}
+      ${chapter.kind === 'taste' ? renderDuckPlating() : ''}
       </article>
       <a class="story-next" href="#${chapters[i + 1]?.id || 'contact'}" aria-label="${i < 5 ? `Следующий этап: ${chapters[i + 1].name}` : 'Перейти к контактам'}">${arrow}<span>${i < 5 ? `${number(i + 1)} · ${chapters[i + 1].name}` : 'Начнём с вашего «хочу»'}</span></a>
     </div>`).join('')}</div>

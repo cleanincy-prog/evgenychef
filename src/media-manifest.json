@@ -2060,5 +2060,29 @@
     "height": 720,
     "bytes": 28496,
     "sha256": "94cb729a5180e7700b6c4bf4c6f9bc6603b9fb5856cfe8f9394e7bc7acda6c62"
+  },
+  {
+    "source": "https://www.vecteezy.com/video/37762716-cook-seasoning-grilled-duck-breast-meat-with-mashed-potatoes-close-up-slow-motion-footage",
+    "file": "/media/chef/duck-plating/video.mp4",
+    "role": "Выбранная подача утки: одно последнее движение руки, 255 кадров, 8.5085 s, без звука",
+    "license": "Vecteezy Free License; downloaded 2026-10-20, attribution alongside video",
+    "bytes": 8096455,
+    "sha256": "e3141c85a683de18eea9ac9cf77d3a9a3b2f49b14938aa6051a00a27c3e3b445"
+  },
+  {
+    "source": "https://www.vecteezy.com/video/37762716-cook-seasoning-grilled-duck-breast-meat-with-mashed-potatoes-close-up-slow-motion-footage",
+    "file": "/media/chef/duck-plating/poster.webp",
+    "role": "Первый кадр видео подачи утки",
+    "license": "Vecteezy Free License; downloaded 2026-10-20, attribution alongside video",
+    "bytes": 226976,
+    "sha256": "0b526c56e461b4ecd9912da3047f285eee27fbd76f8901ac3b2221369f013322"
+  },
+  {
+    "source": "https://www.vecteezy.com/video/37762716-cook-seasoning-grilled-duck-breast-meat-with-mashed-potatoes-close-up-slow-motion-footage",
+    "file": "/media/chef/duck-plating/tracks.json",
+    "role": "Четыре траектории стрелок в координатах 1920×1080, 255 кадров",
+    "license": "Vecteezy Free License; downloaded 2026-10-20, attribution alongside video",
+    "bytes": 18749,
+    "sha256": "538674d486147ef47ee3292c2981da87a5e0e5829a4017db2b8bb6a54f0d6a1f"
   }
 ]

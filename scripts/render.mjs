@@ -51,11 +51,13 @@ const html = `<!doctype html>
   <link rel="stylesheet" href="/assets/browser-compat.css">
   <link rel="stylesheet" href="/assets/service-pages.css">
   <link rel="stylesheet" href="/assets/dish-marquee.css">
+  <link rel="stylesheet" href="/assets/duck-plating.css">
   <script type="module" src="/assets/viewport.js"></script>
   <script type="module" src="/assets/hero-collage.js"></script>
   <script type="module" src="/assets/bao-site.js"></script>
   <script type="module" src="/assets/process.js"></script>
   <script type="module" src="/assets/dish-marquee.js"></script>
+  <script type="module" src="/assets/duck-plating.js"></script>
   <noscript><style>.hero-frame[data-hero-intro="pending"] .hero-collage-grid, .hero-frame[data-hero-intro="pending"] .hero-identity, .hero-frame[data-hero-intro="pending"] .hero-bottom, .hero-frame[data-hero-intro="pending"] .scroll-cue, .hero-frame[data-hero-intro="pending"] .hero-shade, .hero-frame[data-hero-intro="pending"] .hero-portrait { animation: none; }</style></noscript>
 </head>
 <body id="top">

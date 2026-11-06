@@ -39,11 +39,13 @@
   <link rel="stylesheet" href="/assets/browser-compat.css">
   <link rel="stylesheet" href="/assets/service-pages.css">
   <link rel="stylesheet" href="/assets/dish-marquee.css">
+  <link rel="stylesheet" href="/assets/duck-plating.css">
   <script type="module" src="/assets/viewport.js"></script>
   <script type="module" src="/assets/hero-collage.js"></script>
   <script type="module" src="/assets/bao-site.js"></script>
   <script type="module" src="/assets/process.js"></script>
   <script type="module" src="/assets/dish-marquee.js"></script>
+  <script type="module" src="/assets/duck-plating.js"></script>
   <noscript><style>.hero-frame[data-hero-intro="pending"] .hero-collage-grid, .hero-frame[data-hero-intro="pending"] .hero-identity, .hero-frame[data-hero-intro="pending"] .hero-bottom, .hero-frame[data-hero-intro="pending"] .scroll-cue, .hero-frame[data-hero-intro="pending"] .hero-shade, .hero-frame[data-hero-intro="pending"] .hero-portrait { animation: none; }</style></noscript>
 </head>
 <body id="top">
@@ -188,14 +190,22 @@
       <div class="story-divider" aria-hidden="true"></div>
       <p class="story-scene-label">Каждый продукт играет свою роль</p>
       <div class="story-copy"><h3 id="menu-title">Собираю вкус</h3>
-        <p class="story-body">Сочность, свежесть, сладость и кислинка дополняют друг друга.</p>
+        <p class="story-body">Сочность, мягкость и аромат складываются в одно блюдо.</p>
 
 
       </div>
-      <div class="story-taste-diagram">
-    <figure class="story-plate" aria-describedby="taste-notes"><div class="story-plate-image"><img src="/media/chef/atlas-plate-820.webp" srcset="/media/chef/atlas-plate-410.webp 410w, /media/chef/atlas-plate-820.webp 820w" sizes="(max-width:520px) 60vw, 300px" width="820" height="844" loading="lazy" decoding="async" alt="Блюдо Atlas: утка, овощи и шиитаке, пюре из фенхеля и батата, чипсы и соус с юдзу"><span class="story-plate-point" data-taste-point="duck" style="--x:21.83%;--y:46.56%" aria-hidden="true">1</span><span class="story-plate-point" data-taste-point="vegetables" style="--x:65%;--y:32%" aria-hidden="true">2</span><span class="story-plate-point" data-taste-point="puree" style="--x:31.71%;--y:76.78%" aria-hidden="true">3</span><span class="story-plate-point" data-taste-point="sauce" style="--x:52.44%;--y:76.9%" aria-hidden="true">4</span></div></figure>
-    <ol class="story-notes" id="taste-notes" role="list"><li data-taste-note="duck"><div class="story-note-heading"><span aria-hidden="true">1</span><h4>Утка</h4></div><p>Сочное мясо и хрустящая кожица.</p></li><li data-taste-note="vegetables"><div class="story-note-heading"><span aria-hidden="true">2</span><h4>Овощи и грибы</h4></div><p>Свежесть овощей, насыщенность грибов и хруст чипсов.</p></li><li data-taste-note="puree"><div class="story-note-heading"><span aria-hidden="true">3</span><h4>Два пюре</h4></div><p>Фенхель даёт нежность, батат — сладость.</p></li><li data-taste-note="sauce"><div class="story-note-heading"><span aria-hidden="true">4</span><h4>Соус с юдзу</h4></div><p>Объединяет вкусы и добавляет кислинку.</p></li></ol>
-    <svg class="story-taste-leaders" aria-hidden="true"><path data-taste-leader="duck"/><path data-taste-leader="vegetables"/><path data-taste-leader="puree"/><path data-taste-leader="sauce"/></svg>
+      <div class="duck-stage" data-duck-plating data-tracks="/media/chef/duck-plating/tracks.json">
+    <div class="duck-diagram">
+      <div class="duck-visual"><video id="duck-film" width="1920" height="1080" muted playsinline controls preload="none" src="/media/chef/duck-plating/video.mp4" poster="/media/chef/duck-plating/poster.webp" aria-label="Повар завершает подачу утки с картофельным пюре" aria-describedby="duck-notes">
+        <a href="/media/chef/duck-plating/video.mp4">Посмотреть видео</a>
+      </video></div>
+      <dl class="duck-notes" id="duck-notes"><div class="duck-note duck-note--sauce" data-duck-note="sauce"><dt>Соус</dt><dd>Связывает мясо и гарнир</dd></div><div class="duck-note duck-note--duck" data-duck-note="duck"><dt>Утка</dt><dd>Сочность и насыщенный вкус</dd></div><div class="duck-note duck-note--puree" data-duck-note="puree"><dt>Картофельное пюре</dt><dd>Нежная, бархатная текстура</dd></div><div class="duck-note duck-note--physalis" data-duck-note="physalis"><dt>Физалис</dt><dd>Кисло-сладкий акцент</dd></div></dl>
+      <svg class="duck-arrows" aria-hidden="true"><g data-duck-arrow="sauce" data-first-point="573.688,382.329"><path class="duck-arrow-outline" data-line/><path data-line/><path class="duck-arrow-head duck-arrow-outline" data-head/><path class="duck-arrow-head" data-head/></g><g data-duck-arrow="duck" data-first-point="933.579,432.568"><path class="duck-arrow-outline" data-line/><path data-line/><path class="duck-arrow-head duck-arrow-outline" data-head/><path class="duck-arrow-head" data-head/></g><g data-duck-arrow="puree" data-first-point="855.268,542.091"><path class="duck-arrow-outline" data-line/><path data-line/><path class="duck-arrow-head duck-arrow-outline" data-head/><path class="duck-arrow-head" data-head/></g><g data-duck-arrow="physalis" data-first-point="1498.362,669.252"><path class="duck-arrow-outline" data-line/><path data-line/><path class="duck-arrow-head duck-arrow-outline" data-head/><path class="duck-arrow-head" data-head/></g></svg>
+    </div>
+    <div class="duck-foot">
+      <p class="duck-credit">Видео: DC Studio / <a href="https://www.vecteezy.com/free-videos/slow-motion" target="_blank" rel="noopener noreferrer">Slow Motion Stock Videos by Vecteezy</a></p>
+      <button class="duck-toggle" type="button" aria-controls="duck-film" aria-label="Воспроизвести видео подачи" hidden><span data-duck-control>Смотреть</span><svg viewBox="0 0 24 24" aria-hidden="true"><path data-duck-icon d="m8 5 11 7-11 7Z"/></svg></button>
+    </div>
   </div>
       </article>
       <a class="story-next" href="#letter-preparation" aria-label="Следующий этап: Подготовку беру на себя"><svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 4v15m-6-6 6 6 6-6" stroke="currentColor" stroke-width="1.3"/></svg><span>05 · Подготовку беру на себя</span></a>

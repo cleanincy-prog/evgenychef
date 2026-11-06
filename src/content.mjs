@@ -81,8 +81,8 @@ export const products = [
 
 // The four descriptions approved with the Atlas plate in Шеф4.
 export const flavorNotes = [
-  { id: 'duck', title: 'Утка', text: 'Сочное мясо и хрустящая кожица.', x: .2183, y: .4656 },
-  { id: 'vegetables', title: 'Овощи и грибы', text: 'Свежесть овощей, насыщенность грибов и хруст чипсов.', x: .65, y: .32 },
-  { id: 'puree', title: 'Два пюре', text: 'Фенхель даёт нежность, батат — сладость.', x: .3171, y: .7678 },
-  { id: 'sauce', title: 'Соус с юдзу', text: 'Объединяет вкусы и добавляет кислинку.', x: .5244, y: .769 }
+  { id: 'sauce', title: 'Соус', text: 'Связывает мясо и гарнир' },
+  { id: 'duck', title: 'Утка', text: 'Сочность и насыщенный вкус' },
+  { id: 'puree', title: 'Картофельное пюре', text: 'Нежная, бархатная текстура' },
+  { id: 'physalis', title: 'Физалис', text: 'Кисло-сладкий акцент' }
 ];

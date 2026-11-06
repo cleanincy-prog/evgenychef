@@ -47,7 +47,10 @@ assert(!/biotrofi|Dimitris|FRSPH|Michelin|€|contact@|\/api\/|_next\/|connect.f
 assert(html.includes('В основе моей кухни — опыт лучших кулинарных школ Франции, Швейцарии и Германии'),'Latest biography missing');
 assert(html.includes('https://www.instagram.com/evg.chef/'),'Verified contact missing');
 assert(!(await readdir(root)).some(name=>['about','blog','plan'].includes(name)),'Unexpected subpage');
-for (const match of html.matchAll(/href="(https?:[^\"]+)"/g)) assert.equal(new URL(match[1]).hostname,'www.instagram.com','Unexpected external navigation');
+for (const match of html.matchAll(/href="(https?:[^\"]+)"/g)) {
+  const url = new URL(match[1]);
+  assert(url.hostname === 'www.instagram.com' || url.href === 'https://www.vecteezy.com/free-videos/slow-motion', 'Unexpected external navigation');
+}
 if (process.argv.includes('--http')) {
   const base = process.env.PREVIEW_URL || 'http://127.0.0.1:5173';
   for (const file of ['/',...referenced,...importedModules]) {

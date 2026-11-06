@@ -41,7 +41,7 @@ for (const page of pages) {
   for (const match of body.matchAll(/href="([^"]+)"/g)) {
     const target = new URL(match[1].replaceAll('&amp;', '&'), absolute(page.path));
     if (target.origin !== site.origin) {
-      assert.equal(target.hostname, 'www.instagram.com', 'Only the verified contact is external');
+      assert(target.hostname === 'www.instagram.com' || target.href === 'https://www.vecteezy.com/free-videos/slow-motion', 'Only the verified contact and required video attribution are external');
       continue;
     }
     if (target.pathname.startsWith('/media/')) {
